@@ -13,16 +13,19 @@
 - Items marked `[TBD@Sx]` are undecided until stage Sx. Refuse to implement anything that depends
   on an undecided item; tell me which item blocks you.
 - `docs/pipeline_runbook.md` is my working guide. Use only the stage prompt I give you from it.
+- If a runbook prompt and the protocol disagree, follow the protocol and report the conflict.
 
 ## Scope
 - Build only the stage I request. When it is done, stop. Never start the next stage on your own.
-- No graph surgery, matched controls, or intervention code before I say the pilot gate has passed.
+- No graph surgery, matched controls, or intervention code until Gate D6 has returned GREEN or
+  YELLOW and protocol §21 is marked [FROZEN].
 
 ## Experimental agents
 - The four experimental agents are local Ollama models. You are NOT one of them.
 - No communication, voting, debate, judge, shared memory, or shared outputs between agents.
-- Agents must never receive: R1/R2, Type_B, gold bridge, gold answers, Tq, evaluator labels,
-  relation-pair names, or another agent's output (protocol §9.3).
+- Agents must never receive: R1/R2, the identity of any gold bridge, gold answers, Tq, B_q,
+  evaluator labels, BioHopR's relation-type string, or another agent's output (protocol §9.3).
+  The question text itself (which names node types) is allowed.
 - The agent-facing KG tools must never read evaluation files (protocol §10).
 
 ## Data

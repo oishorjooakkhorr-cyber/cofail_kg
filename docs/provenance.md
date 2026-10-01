@@ -19,10 +19,10 @@ before citing · then `IN ZOTERO` → `CITED` as you go.
 | S1 | Frozen protocol and gates before data | Pre-registration practice | Nosek et al. (2018), PNAS | BACKGROUND | VERIFY |
 | S2–S3 | Dataset, templates, relation types | Data | Kim, Abdulle & Wu (2025), BioHopR, Findings of ACL 2025 | DATA | ✔ |
 | S4 | Knowledge graph | Data | Chandak, Huang & Zitnik (2023), PrimeKG, Scientific Data 10:67 | DATA | ✔ |
-| S5–S6 | Field-role verification; mapping by gold reproduction; ambiguity tags | — | — | OWN | — |
+| S5–S6 | Field-role verification; mapping by gold reproduction (hop-1 and hop-2 scores); mechanical ambiguity rule | — | — | OWN | — |
 | S7 | Answer set = execute the question's relation pattern over the KG | Evaluation convention | Yih et al. (2016), WebQSP, ACL 2016 | DESIGN | VERIFY |
 | S7 | Departure from BioHopR's single-bridge answer definition | Contrast | Kim et al. (2025) §3.1 | DATA | ✔ |
-| S8–S9 | Consistency check; saturation rule | — | — | OWN | — |
+| S7–S9 | Query grouping; consistency check; mapping confirmation; saturation rule | — | — | OWN | — |
 | S10 | Stratified deterministic sampling | — | — | STANDARD | — |
 | S11 | Function-based graph tools incl. neighbor listing and neighbor counts | Tool interface | Jin et al. (2024), Graph-CoT, Findings of ACL 2024 | DESIGN | ✔ title/venue · VERIFY authors |
 | S11 | Relation-then-entity exploration | Agent design | Sun et al. (2024), Think-on-Graph, ICLR 2024 | DESIGN | VERIFY |

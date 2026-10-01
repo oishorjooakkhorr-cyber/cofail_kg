@@ -262,7 +262,7 @@ Do not propose scientific changes. Report problems only, each with its section n
 - **Real open question**: bring it to your supervisor (or a planning chat) before S2; log the answer.
 - **Not an issue**: note why in `progress.md`.
 
-Check that the TBD list matches: S2, S4, S5, S6, S9, S21, and `[PROVISIONAL]` §21.
+Check that the TBD list matches: S2, S4, S5, S6, S9, S21, and `[PROVISIONAL]` §21 (frozen at S29).
 
 **Decide.** Protocol v1.0 accepted (with any wording fixes).
 
@@ -295,14 +295,16 @@ Then create:
 - scripts/02_download_biohopr.py: downloads the pinned revision to data/raw/biohopr/ and
   writes data/raw/biohopr/metadata.json (repo, revision, download time, row count, file SHA256).
 - src/cofail_kg/data/biohopr_loader.py: loads the raw file; keeps every original field
-  unchanged; adds query_id = "BH2_" + zero-padded row index within the pinned revision, and
+  unchanged; adds row_id = "BH2_" + zero-padded row index within the pinned revision, and
   row_sha256 = SHA256 of the row's JSON with sorted keys.
-- tests/test_biohopr_loader.py: loads, row count equals the metadata, query_id unique,
-  original fields unchanged, rerun gives identical query_id and row_sha256.
+- tests/test_biohopr_loader.py: loads, row count equals the metadata, row_id unique,
+  original fields unchanged, rerun gives identical row_id and row_sha256.
 - results/diagnostics/biohopr/inspection_20.md: 20 rows (seed 42), showing every field and
   the first 5 answers of each row plus its answer count.
 
 Do not interpret field roles (which field is the query entity or the bridge). That is S5.
+Also report how many rows have a 2-hop question text that contains the hop1 field's text
+(protocol §9.3 check: the bridge name must not appear in the question), with examples.
 ```
 
 **Expect back.** Row count, field list, the revision hash, candidate question fields, the
@@ -311,7 +313,7 @@ inspection file.
 **Evaluate.**
 1. Row count: the paper reports 7,633 2-hop questions. If Claude reports something else, find out why before continuing.
 2. Open the dataset viewer on Hugging Face. Pick 5 rows from `inspection_20.md` and compare every field with the viewer.
-3. Run the loader twice; the test for identical `query_id` and `row_sha256` must pass.
+3. Run the loader twice; the test for identical `row_id` and `row_sha256` must pass.
 4. Read the candidate question fields. Choose the one whose text asks for **all** answers of the 2-hop question (e.g., "Name all …").
 5. In `inspection_20.md`, look at `hop1`, `hop2` and the questions. Write down in `progress.md` which field *seems* to be the starting entity. You verify it at S5; do not rely on names.
 
@@ -328,7 +330,7 @@ Log both.
 
 ## S3 — BioHopR diagnostics (no PrimeKG needed)
 
-**Goal.** Know the dataset's shape before designing limits: answer-set sizes, relation-pair
+**Goal.** Know the dataset's shape before designing limits: answer-set sizes, relation-type
 counts, and duplicate questions.
 
 **Prompt.**
@@ -338,8 +340,8 @@ Implement dataset diagnostics for BioHopR 2-hop rows. Do not use PrimeKG.
 Create src/cofail_kg/data/diagnostics.py and scripts/03_biohopr_diagnostics.py producing,
 in results/diagnostics/biohopr/:
 1. answer_sizes.csv and answer_sizes.png: distribution of answer-list length
-   (min, p25, median, mean, p75, p90, p95, p99, max), overall and per relation pair.
-2. relation_pairs.csv: count of rows per relation pair (use the dataset's own type fields).
+   (min, p25, median, mean, p75, p90, p95, p99, max), overall and per relation type.
+2. relation_types.csv: count of rows per relation type (use the dataset's own type fields).
 3. largest_answers.csv: the 20 rows with the most answers.
 4. duplicate_questions.csv: group rows by identical 2-hop question text; for each group with
    more than one row, report how many distinct bridges (hop1 values) and distinct answer
@@ -349,7 +351,7 @@ Add tests on a tiny synthetic table. Do not choose any threshold.
 ```
 
 **Evaluate.**
-1. Compare `relation_pairs.csv` with the 12 counts in protocol §3.1 (from the paper). Small differences need an explanation; large ones mean something is wrong.
+1. Compare `relation_types.csv` with the 12 counts in protocol §3.1 (from the paper). Small differences need an explanation; large ones mean something is wrong.
 2. Note the answer-size **median, p90 and p99** in `progress.md`. You need them at S21: each answer costs roughly 15–25 output tokens in the JSON format, so the output limit must cover realistic answer lists.
 3. Open `duplicate_questions.csv`. If identical question texts appear with different bridges and different answer lists, you have direct evidence of the single-bridge label problem. Note the count; it is a useful sentence for the thesis ("N question texts occur with more than one gold bridge").
 
@@ -420,7 +422,8 @@ Report load time and peak memory for the full graph.
 4. Check that the four BioHopR node types (drug, disease, gene/protein, effect/phenotype) exist under the type names PrimeKG uses.
 5. Check the canonical ID column is unique (Claude's report) and the metadata JSON contains the hashes.
 
-**Decide.** Protocol §3.2: release, canonical ID column, edge-storage convention. Protocol §10:
+**Decide.** Protocol §3.2: release, canonical ID column, edge-storage convention and edge
+convention. Protocol §3.3: the type map (BioHopR types → PrimeKG node types). Protocol §10:
 whether `get_neighbors` needs a `direction` argument (only if edges are stored one-way **and**
 relations are asymmetric). Log all.
 
@@ -439,7 +442,7 @@ the answers connect — instead of trusting field names.
 ```text
 Verify BioHopR field roles against PrimeKG. Protocol §3.1 and §4 apply.
 
-Take a stratified sample: 5 rows per relation pair (all rows if fewer), seed 42.
+Take a stratified sample: 5 rows per relation type (all rows if fewer), seed 42.
 For each row:
 1. Resolve the hop1 and hop2 names to PrimeKG nodes using the index's exact-name rules and
    the row's own type fields. Record ambiguous or missing names.
@@ -447,10 +450,12 @@ For each row:
 3. Check what fraction of the answer names are neighbors of hop1, and what fraction are
    neighbors of hop2 (any relation).
 Write results/semantics/field_roles.csv (one line per row) and a summary stating, per
-relation pair, the evidence for "query = hop2, bridge = hop1" versus the alternative.
+relation type, the evidence for "query = hop2, bridge = hop1" versus the alternative.
+
+Also confirm protocol §9.3: no 2-hop question text contains the name of its bridge.
 
 State a conclusion only if at least 95% of resolvable rows support the same roles in every
-relation pair. Otherwise stop and report the conflicting rows. Do not guess.
+relation type. Otherwise stop and report the conflicting rows. Do not guess.
 ```
 
 **Evaluate.**
@@ -468,57 +473,55 @@ relation pair. Otherwise stop and report the conflicting rows. Do not guess.
 
 ## S6 — Relation mapping and ambiguity tags → Gate D1
 
-**Goal.** Map each BioHopR relation to the exact PrimeKG labels that reproduce BioHopR's answers,
-and tag which relations are worded ambiguously — all before any agent exists.
+**Goal.** Find, from BioHopR's own answers, which PrimeKG labels each hop uses; compute the
+ambiguity tags by code. No agent exists yet, and no manual judgment is needed.
 
-**Prompt, part 1.**
+**Prompt.**
 ```text
-Implement protocol §5.1 and prepare §5.2. Use the field roles frozen at S5.
+Implement protocol §5 exactly. Use the field roles frozen at S5 and the type map from S4.
 
-For each of the 12 relation pairs:
-1. List every PrimeKG relation label (with display label) connecting the required node types
-   for hop 1 and for hop 2.
-2. Validation sample: up to 30 rows per pair (all if fewer), seed 42.
-3. For each candidate label set per hop (single labels, and unions of labels that connect the
-   same types), compute T_q^{b*} per protocol §6 and the exact-reproduction rate
-   (share of rows with T_q^{b*} == A*_q).
-4. Propose the mapping using the selection rule in §5.1. If there is a tie or the best rate is
-   below 90%, mark the pair UNRESOLVED and do not choose.
+For each of the 12 relation types:
+1. List hop-1 candidate labels (connecting Type_S and Type_B) and hop-2 candidate labels
+   (connecting Type_B and Type_T), from PrimeKG's `relation` column, with display labels for
+   information.
+2. Draw the validation sample exactly as §5.1 says (SHA256("42" + row_id) ordering, first 30
+   rows whose query entity and bridge resolve); report how many rows were skipped as unresolved.
+3. For every non-empty subset of candidates, compute the hop-1 score and the hop-2 score (§5.1).
+4. Select per hop by §5.1 (highest score, then smallest set). If a tie remains, mark the hop
+   UNRESOLVED and do not choose.
+5. Compute the ambiguity tag per relation type by the §5.2 rule.
+6. Compute the D1 quantities from docs/decision_rules.md and the D1 outcome.
 
 Write:
-- results/semantics/relation_mapping_candidates.csv (every candidate and its rate)
+- results/semantics/relation_mapping_candidates.csv (every candidate set, both scores)
 - results/semantics/relation_mapping_proposed.json
-- results/semantics/ambiguity_judgments.csv with columns:
-  relation_pair, hop, question_wording_for_this_hop, candidate_label, display_label,
-  connects_types, in_accepted_set, judgment
-  (one line per PrimeKG label connecting the hop's types; leave "judgment" EMPTY)
-- the D1 quantities from docs/decision_rules.md.
-
-Do not fill judgments. Do not freeze anything.
+- results/semantics/relation_ambiguity_tags.csv
+- results/semantics/d1_report.md
+Do not freeze anything.
 ```
 
 **Evaluate.**
-1. For each pair, look at the proposed labels and rate. Does the label make biomedical sense for the question wording?
-2. For every pair below 90%: ask Claude to print 2 failing rows with the difference between `T_q^{b*}` and `A*_q`. Common causes: wrong field role, direction, a missing second label, or name-normalization failures. Fixing a *cause* is allowed; lowering the threshold is not.
-3. **Fill in the ambiguity judgments yourself.** For each line, read only the question wording for that hop and ask: *"Could a biomedical expert reading this wording reasonably mean this PrimeKG relation?"* Write `PLAUSIBLE` or `NOT_PLAUSIBLE`. Judge from wording and label meaning only. If you want robustness, ask your supervisor to fill a copy blind and compare.
-4. Apply D1.
+1. For each relation type, look at the selected labels. Do they make biomedical sense for the
+   question wording? (A sanity check only; the scores decide.)
+2. For every type that fails D1, ask Claude to print two failing rows with the difference between
+   reached targets and BioHopR's list. Common causes: field roles, edge storage, name normalization.
+   Fixing a cause is allowed; lowering a threshold is not.
+3. For any UNRESOLVED hop (a tie), decide yourself from the failing rows; log it.
+4. Look at the ambiguity tags: how many relation types are NONE? That is the size of your
+   "clear wording" pile later.
 
-**Prompt, part 2 (after you filled the judgments and D1 says PROCEED).**
+**Prompt, part 2 (after D1 says PROCEED).**
 ```text
-Using results/semantics/ambiguity_judgments.csv as I filled it, and the mapping I approved:
-1. Write results/semantics/relation_mapping.json (final, with a SHA256 in its header).
-2. Compute the ambiguity tag per relation pair (protocol §5.2) and write
-   results/semantics/relation_ambiguity_tags.csv.
-3. Mark pairs that failed D1 as excluded.
-Do not change any judgment or mapping.
+Freeze the mapping I approved: write results/semantics/relation_mapping.json with a SHA256 in
+its header, mark excluded relation types, and recompute relation_ambiguity_tags.csv from the
+frozen mapping. Change nothing else.
 ```
 
-**Decide.** Gate **D1** outcome; mapping frozen; ambiguity tags frozen; excluded pairs listed.
-Log all, with the numbers.
+**Decide.** Gate **D1**; mapping frozen; tags frozen; excluded types listed. Log all, with numbers.
 
-**Commit.** `S6: relation mapping and ambiguity tags frozen (D1: PROCEED)`
+**Commit.** `S6: relation mapping and ambiguity tags (D1: PROCEED)`
 
-**Provenance.** Own design (mapping procedure, ambiguity tags).
+**Provenance.** Own (mapping procedure, ambiguity rule).
 
 ---
 
@@ -526,60 +529,66 @@ Log all, with the numbers.
 
 ## S7 — Reference sets
 
-**Goal.** For every query, compute the valid bridges, question-valid answers, and gold-bridge
-targets exactly as protocol §6 defines them.
+**Goal.** Group rows into queries and compute the valid bridges and question-valid answers exactly
+as protocol §4 and §6 define them.
 
 **Prompt.**
 ```text
-Implement protocol §6 for all 2-hop queries in relation pairs that passed D1.
+Implement protocol §0.3 (query definition), §4 and §6 for all relation types that passed D1.
 
 Create src/cofail_kg/evaluation/reference_sets.py and scripts/07_build_reference_sets.py.
+1. Group BioHopR rows into queries: one query per unique (query entity, relation type);
+   query_id = row_id of the lowest-index row. Record the row_ids of each query.
+2. Normalize per §12: s (filter Type_S), each gold bridge (Type_B), each gold answer (Type_T).
+3. Compute T_q(b), B_q (bridges with non-empty T_q(b)), dead-end bridges, T_q, and T_q^{B*}
+   with the frozen relation_mapping.json and the §3.2 edge convention.
 Output to data/processed/:
-- reference_queries.parquet: query_id, s, b_star, Type_B, Type_T, relation_pair, |B_q|,
-  |T_q|, |T_q^{b*}|, |A*_q|
-- reference_targets.parquet: one row per (query_id, bridge, target) for every b in B_q
-  and t in T_q(b)
-- gold_normalized.parquet: A*_q per query after protocol §12 normalization, with
-  unresolved gold names listed
-Use the frozen relation_mapping.json. Exclude t = s and b = s.
-Tests on a synthetic graph: one bridge; several bridges; a target reachable through two
-bridges; a query with no valid bridge; type filtering.
-None of these files may be imported by agent-facing code.
+- reference_queries.parquet: query_id, row_ids, s, gold bridges, Type_S/B/T, relation type,
+  sizes of B_q, dead-end set, T_q, T_q^{B*}, A*_q; unresolved names listed
+- reference_targets.parquet: one row per (query_id, bridge, target) for b in B_q, t in T_q(b)
+Tests on a synthetic graph: one bridge; several bridges; a target via two bridges; a dead-end
+bridge (excluded from B_q); no valid bridge; two rows of the same query merged correctly;
+type filtering. Nothing agent-facing may import these files.
 ```
 
 **Evaluate.**
-1. Pick one SINGLE-bridge and one MULTI-bridge query from the output. For each, use `scripts/inspect_kg.py` to list the query entity's neighbors through the R1 label(s) and filter to `Type_B` — compare with `|B_q|`.
-2. For one bridge of the multi-bridge query, list its R2 neighbors of `Type_T` — compare with the rows in `reference_targets.parquet` for that bridge.
-3. Check `|T_q^{b*}|` against `|A*_q|` for 5 queries: equal in most (this is what D1 established).
+1. Pick one SINGLE-bridge and one MULTI-bridge query. With `scripts/inspect_kg.py`, list the query
+   entity's neighbors through the R1 label(s) of type Type_B; compare with the bridges in the output.
+2. For one bridge, list its R2 neighbors of type Type_T; compare with `reference_targets.parquet`.
+3. Find a query built from two or more rows (if any) and check its gold answers are the union.
 
 **Decide.** Nothing.
 
-**Commit.** `S7: reference sets`
+**Commit.** `S7: queries and reference sets`
 
-**Provenance.** Row "Answer set by executing the query pattern" (Yih et al., 2016).
+**Provenance.** Row "answer set by executing the query pattern" (Yih et al., 2016).
 
 ---
 
 ## S8 — Query validation
 
-**Goal.** Label every query CONSISTENT/INCONSISTENT, single/multi-bridge, and measure saturation.
+**Goal.** Label every query CONSISTENT/INCONSISTENT, count its bridges, and measure saturation.
 
 **Prompt.**
 ```text
-Implement protocol §7.1.
+Implement protocol §7.1 exactly.
 Create src/cofail_kg/evaluation/query_validation.py and scripts/08_validate_queries.py.
-For each query compute: status (CONSISTENT / INCONSISTENT with exactly one reason code in
-the priority order listed in §7.1), bridge multiplicity, and saturation share =
-|T_q| / (number of PrimeKG nodes of Type_T).
-Write results/diagnostics/query_validation.csv and query_validation_summary.json with
-counts by status, reason, relation pair, bridge multiplicity, and ambiguity tag.
+For each query: CONSISTENT/INCONSISTENT (the three conditions of §7.1), all applicable reason
+codes plus the primary reason in the §7.1 order, bridge multiplicity (NO_BRIDGE / SINGLE_BRIDGE /
+MULTI_BRIDGE), dead-end bridge count, and saturation share.
+Mark whether the query contains any S6 validation-sample row (needed for D2 step 1).
+Write results/diagnostics/query_validation.csv and query_validation_summary.json with counts by
+status, primary reason, relation type, multiplicity, and ambiguity tag.
+Tests: one synthetic case per reason code; a case where several codes apply (primary chosen by
+order); a gold bridge that resolves but is not in B_q (GOLD_BRIDGE_NOT_VALID).
 Do not exclude anything.
 ```
 
 **Evaluate.**
-1. Read the summary. What share is CONSISTENT overall and per pair?
-2. Open 5 INCONSISTENT queries with the most common reason and look at the differing entities. Is there a pattern (e.g., a naming problem) that is a bug rather than a real discrepancy? A bug gets fixed (bug-found prompt); a real discrepancy stays.
-3. Look at 5 CONSISTENT MULTI-bridge queries: how many bridges do they typically have?
+1. What share is CONSISTENT overall and per relation type?
+2. Open 5 INCONSISTENT queries with the most common primary reason. A pattern that looks like a
+   bug (e.g., a naming problem) gets the bug-found prompt; a real discrepancy stays.
+3. Look at 5 CONSISTENT MULTI_BRIDGE queries: how many bridges do they typically have?
 
 **Decide.** Nothing yet.
 
@@ -589,34 +598,39 @@ Do not exclude anything.
 
 ---
 
-## S9 — Dataset feasibility and inclusion → Gate D2
+## S9 — Mapping confirmation, saturation, feasibility → Gate D2
 
-**Goal.** Fix the saturation threshold, then check there are enough usable queries.
+**Goal.** Confirm each mapping on queries it was not chosen from, fix the saturation threshold,
+then check there are enough usable queries.
 
-**Prompt, part 1 (before you see D2).**
+**Prompt, part 1.**
 ```text
-Do not compute Gate D2 yet.
-From results/diagnostics/query_validation.csv, report for CONSISTENT queries in PASS pairs:
-the distribution of the saturation share (p50, p90, p95, p99, max), and a table of how many
-queries would be excluded at thresholds 30%, 50%, 70% and 90%, overall and per relation pair.
+Do not compute D2 step 3 yet.
+1. D2 step 1: for each relation type that passed D1, the CONSISTENT share among queries that
+   contain no S6 validation-sample row. Flag types below 80%.
+2. For CONSISTENT queries in confirmed types: the saturation-share distribution (p50, p90, p95,
+   p99, max) and how many queries would be excluded at θ = 0.30, 0.50, 0.70, 0.90, overall and per
+   relation type.
 ```
 
-**Evaluate and decide (threshold).** The default is 50% (protocol §7.2). Keep it unless the
-table shows it removes a whole relation pair for no good reason. Decide **now**, log it, and only
-then run part 2.
+**Evaluate and decide.**
+1. Any type below 80%? Investigate it now (mapping, edge storage, names). You may revise its
+   mapping (log it) and rerun S7–S8, because no agent exists yet. Otherwise exclude the type.
+2. Choose θ (recommended 0.50). Keep it unless the table shows it removes a whole relation type for
+   no good reason. Write θ into protocol §7.2 and log it **before** part 2.
 
 **Prompt, part 2.**
 ```text
-Using saturation threshold <X>% (now frozen in protocol §7.2 by me), compute the primary
-population and Gate D2 exactly as in docs/decision_rules.md. Report N_P, per-pair counts,
-single/multi counts, and the D2 outcome. Write data/processed/primary_population.csv.
+Using θ = <X> (now in protocol §7.2), compute the primary population (§7.2) and D2 step 3
+exactly as in docs/decision_rules.md, in the stated order. Report N_P, K, per-type counts,
+single/multi counts, and the outcome. Write data/processed/primary_population.csv.
 ```
 
-**Decide.** Gate **D2** outcome. Log with the numbers.
+**Decide.** Gate **D2**. Log with the numbers.
 
 **Commit.** `S9: primary population (D2: <outcome>)`
 
-**Provenance.** Own (saturation rule).
+**Provenance.** Own (saturation rule, mapping confirmation).
 
 ---
 
@@ -646,7 +660,7 @@ the SHA256 ordering rule of §8 step 4.
    python -c "import json;s=lambda f:{json.loads(l)['query_id'] for l in open('data/processed/manifests/'+f)};a,b,c,d=s('screening.jsonl'),s('smoke.jsonl'),s('pilot.jsonl'),s('expansion.jsonl');print(len(a&b),len(a&c),len(b&c),len(c&d))"
    ```
    All zeros.
-3. Read `sampling_report.md`: single/multi mix close to 25/75; every PASS pair represented.
+3. Read `sampling_report.md`: single/multi mix close to 25/75; every PASS type represented.
 4. Read 10 pilot questions to get a feel for what the agents will face.
 
 **Decide.** Manifests frozen (hashes in `configs/pilot.yaml`). Log.
@@ -675,7 +689,9 @@ Create src/cofail_kg/agents/kg_env.py:
 - get_neighbors(entity_id, relation, neighbor_type=None, page=1): neighbors sorted by
   ascending canonical ID; returns items (id, name, type), relation, total_count, page,
   page_size, has_more. <Add a direction argument ONLY if protocol §10 says so after S4.>
-- Structured error results for unknown IDs, unknown relations, bad page numbers.
+- Error results use exactly the fixed templates in protocol §10 (unknown ID, unknown
+  relation, page out of range); they echo only the agent's own arguments.
+- "Successful call" as defined in §10 (empty results are successful).
 - A call budget: after the budget is used, every call returns
   "Tool budget exhausted. Give your final answer now."
 - page_size and budget come from configuration; they are frozen at S21. Use page_size=50
@@ -684,7 +700,7 @@ Create src/cofail_kg/agents/kg_env.py:
 
 Create src/cofail_kg/agents/tool_schemas.py: JSON function definitions for the two tools
 (the format Ollama's chat API accepts). Descriptions must be neutral: they describe what
-the tool does and must not mention any BioHopR relation, relation pair, or answer.
+the tool does and must not mention any BioHopR relation, relation type, or answer.
 
 Rules: this module must not import anything from cofail_kg.evaluation or read any file in
 data/processed/. Add a test that fails if it does.
@@ -830,8 +846,8 @@ Create src/cofail_kg/agents/prompts.py containing the system prompt and user tem
 below VERBATIM, with a PROMPT_VERSION constant "P1". <paste the two texts above>
 
 Create src/cofail_kg/agents/run_agent.py: run_episode(query, model_config, env_config) that
-1. builds the two messages from the query's question field (S2) and its starting entity
-   (field roles from S5) — nothing else from the dataset row;
+1. builds the two messages from the query's question field (S2) and the PrimeKG name and ID of
+   its query entity s (from S7, protocol §9.3) — nothing else from the dataset;
 2. calls the model with the tool schemas from S11;
 3. executes ONLY native tool calls through KGEnvironment and appends their results as tool
    messages; tool-call-looking text inside a normal message is NOT executed and is recorded
@@ -876,7 +892,7 @@ Do not change any existing behavior. Add tests/test_leakage.py and run it.
 
 For the 20 screening queries (no model calls needed; build the messages only):
 1. Assert that the system and user messages contain none of: the gold bridge's name or ID,
-   any gold answer name or ID, any R1/R2 label, the relation-pair name.
+   any gold answer name or ID, any R1/R2 label, the relation-type name.
 2. Assert that kg_env.py, tool_schemas.py, prompts.py and run_agent.py import nothing from
    cofail_kg.evaluation and read no file under data/processed/ (static check of imports and
    file paths).
@@ -972,6 +988,11 @@ Tests (synthetic traces), one per case:
 - KG_UNSUPPORTED (entity appeared, no path from s)
 - UNGROUNDED (never appeared)
 - an entity on page 2 of a list the agent never opened (UNGROUNDED)
+- the answer x = s (PATH_INVALID, WRONG_HOP_COUNT)
+- an only path of length 4 (primary path found by breadth-first search; WRONG_HOP_COUNT)
+- an UNRESOLVED answer (Label B = NOT_APPLICABLE)
+- INVARIANT: across all tests and the real episode, assert no answer is both OFF_QUESTION
+  and SUPPORTED
 - hop-1 statuses: CLEAN, MIXED, WRONG, NONE; H1(x, i) for a mixed trace
 Run on the S14 real episode and print each answer's labels and primary path.
 ```
@@ -1020,7 +1041,7 @@ capability yourself; availability changes). Pull them with `ollama pull`.
 **Prompt.**
 ```text
 Create scripts/20_screen_models.py using the S14 runner and S16–S19 evaluation.
-Screening settings (provisional, recorded in the output): num_ctx 8192, page_size 50,
+Screening configuration (protocol §9.1, frozen): num_ctx 8192, num_predict 4096, page_size 50,
 budget 30, temperature 0, seed 42, episode timeout 10 minutes, prompt P1, tools T1.
 Candidates: <list of Ollama tags>.
 Run every candidate on the 20 screening queries (one model loaded at a time).
@@ -1193,7 +1214,8 @@ Then run the smoke manifest (4 queries × 4 agents = 16 episodes) as run_id "smo
 Halfway through, I will stop the process; tell me the exact moment to press Ctrl+C.
 Then restart the same command and confirm completion without duplicates.
 Produce results/runs/smoke_panel/analysis/ and an audit sheet
-results/runs/smoke_panel/audit_sheet.csv listing 8 episodes (2 per agent) with columns:
+results/runs/smoke_panel/audit_sheet.csv listing the 8 episodes chosen by the protocol §19.1
+audit-selection rule, with columns:
 episode, answer_id, label_A, label_B, primary_path, my_label_A, my_label_B, notes
 (leave my_* empty).
 ```
@@ -1274,7 +1296,7 @@ Tables:
 3. Co-failure: CF3^Q, CF4^Q (all / grounded / hop-1-clean), CF3^BH, CF4^BH, PCF_REL3/4,
    PCF_NODE3/4, PCF_SHORTCUT3; pairwise error agreement matrix.
 4. Chance baselines: N1 and N2 for CF3 and CF3^{Q,H1}: observed, null mean, 95th percentile, p.
-5. Strata: all co-failure metrics by ambiguity tag, by SINGLE/MULTI bridge, by relation pair.
+5. Strata: all co-failure metrics by ambiguity tag, by SINGLE/MULTI bridge, by relation type.
 6. Ordering: distribution of chosen bridge ranks; FIRST_SEEN_PAGE of shared wrong answers.
 7. Case sheets: for EVERY query with CF3^{Q,H1}=1, one page: the question, each co-failing
    agent's primary path to the shared entity, reason codes, the shared node's degree
@@ -1304,6 +1326,10 @@ interpretation flags. Do not modify anything.
 **Evaluate.** Recompute the outcome yourself from the table — it takes five minutes and it is your
 decision, not Claude's.
 
+**If GREEN or YELLOW — freeze Phase 2 now.** Before S30, revise protocol §21 using what the
+pilot showed (which mechanisms occur), mark it `[FROZEN]`, and log that it was frozen after
+seeing pilot data. D7 depends on this frozen rule.
+
 **Decide.** Record in the decision log: outcome, all five quantities, both flags, and the next
 step (S30 expansion, or descriptive write-up). Discuss with your supervisor before starting Phase I.
 
@@ -1313,9 +1339,8 @@ step (S30 expansion, or descriptive write-up). Discuss with your supervisor befo
 
 # Part 10 — Phase I: After the pilot (provisional)
 
-These stages depend on the pilot. Before starting them, revise protocol §21 using what the pilot
-showed (which mechanisms actually occur), mark it `[FROZEN]`, and log the change as made **after**
-seeing pilot data. Prompts below are templates.
+These stages depend on the pilot. Protocol §21 is frozen at S29 (after D6, before S30); the
+prompts below are templates to be adjusted to that frozen version.
 
 ## S30 — Expand to 500 → Gate D7
 
@@ -1394,7 +1419,7 @@ Apply D8; log it. If scaling, repeat S30–S36 on new manifests drawn with the s
 
 ```text
 Produce the final tables:
-1. Dataset: CONSISTENT/INCONSISTENT by reason; SINGLE/MULTI; relation pairs; ambiguity tags;
+1. Dataset: CONSISTENT/INCONSISTENT by reason; SINGLE/MULTI; relation types; ambiguity tags;
    saturation.
 2. Agent behavior: hop-1 statuses; bridge ranks; Label A and Label B distributions; benchmark F1.
 3. Co-failure: CF3/CF4 (Q, grounded, H1, BH); PCF; pairwise agreement; N1 and N2 baselines.

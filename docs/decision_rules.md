@@ -1,175 +1,178 @@
 # CoFail-KG — Decision Rules
 
-**Version:** 1.0 · Frozen before the data each gate judges is seen.
+**Version:** 1.1 (S1 audit fixes) · Frozen before the data each gate judges exists.
 
-These are **feasibility criteria**, not significance tests. They decide whether the project has
-enough of the phenomenon to continue, and what to do next. Thresholds were chosen from the sample
-sizes the later stages need (explained under each gate).
+These are **feasibility criteria**, not significance tests. They decide whether there is enough of
+the phenomenon to continue, and what to do next. "§" refers to `docs/frozen_pilot_protocol.md`.
 
 ## Rules for the rules
 
-1. A threshold may be changed only **before** the gate's input data exists, with a dated entry in
-   `docs/decision_log.md`.
-2. After the data exists, thresholds are fixed. If you disagree with the outcome, record the
-   disagreement and any follow-up analysis as **exploratory**.
-3. Claude Code computes the quantities and applies the rules mechanically. It reports the outcome;
-   it never changes a threshold.
-4. Every gate outcome is recorded in `docs/decision_log.md` with the numbers that produced it.
+1. A threshold may change only **before** the gate's input data exists, with a dated
+   `docs/decision_log.md` entry.
+2. After the data exists, thresholds are fixed. Disagreement and any extra analysis are recorded as
+   **exploratory**.
+3. Claude Code computes the quantities and applies the rules mechanically, in the stated order. It
+   never changes a threshold.
+4. Every outcome is logged with the numbers that produced it.
+5. Within a gate, outcomes are checked **in the order listed**; the first match wins.
 
 ---
 
-## D1 — Semantics and relation-mapping gate (end of S6)
+## D1 — Relation-mapping gate (end of S6)
 
-**Input.** For each of the 12 BioHopR relation pairs, a validation sample of up to 30 rows
-(all rows if fewer; seed 42), and the exact-reproduction rate of the chosen mapping:
-the share of rows where `T_q^{b*} = A*_q`.
+**Input.** Per relation type, the hop-1 and hop-2 scores of the selected mapping on the §5.1
+validation sample, and the count of unresolved rows.
 
 | Outcome | Rule | Action |
 |---|---|---|
-| Pair PASS | Reproduction rate ≥ 90% | Pair enters the primary population |
-| Pair FAIL | Reproduction rate < 90% | Investigate for up to 2 working days (field roles, direction, alternative labels). If still < 90%, the pair is excluded (decision-log entry). |
-| **Global PROCEED** | ≥ 6 of 12 pairs PASS **and** PASS pairs cover ≥ 70% of 2-hop rows | Continue to S7 |
-| **Global STOP** | Otherwise | Do not continue. Re-check the PrimeKG release, field roles (S5) and edge direction (S4). A systematic mismatch usually means the wrong PrimeKG release. |
+| Type PASS | Hop-1 score ≥ 90% **and** hop-2 score ≥ 90% | Type may enter the primary population |
+| Type FAIL | Otherwise | Investigate up to 2 working days (field roles, edge storage, labels). If still failing, exclude the type (decision-log entry). |
+| **Global STOP** | Fewer than 6 of 12 types PASS, **or** PASS types cover < 70% of 2-hop rows | Do not continue. Re-check PrimeKG release (S4), field roles (S5), edge storage. |
+| **Global PROCEED** | Otherwise | Continue to S7 |
 
-Why 90%: BioHopR's answers were generated from PrimeKG by a deterministic procedure, so the right
-release and mapping should reproduce them almost exactly. A lower rate signals a version or
-interpretation mismatch, which would contaminate every later measurement.
-
----
-
-## D2 — Dataset feasibility gate (S9)
-
-**Input.** `N_P` = size of the primary population (CONSISTENT ∧ not SATURATED ∧ PASS pair);
-per-pair counts; single/multi-bridge counts.
-
-| Outcome | Rule | Action |
-|---|---|---|
-| **GREEN** | `N_P ≥ 650` **and** ≥ 5 relation pairs each with ≥ 20 eligible queries | Continue as planned |
-| **YELLOW** | `150 ≤ N_P < 650`, **or** fewer than 5 pairs with ≥ 20 eligible | Continue; expansion (D6) limited to what is available; note reduced coverage |
-| **RED** | `N_P < 150` | Stop before building agents. Revisit PrimeKG release, mapping, saturation threshold (decision-log entry for any change). |
-
-Why 650: screening (20) + smoke (4) + pilot (100) + expansion reserve (400) = 524 queries, plus
-margin for strata that run out.
-
-**Saturation threshold (decided at this gate).** Default: exclude queries where `T_q` covers more
-than 50% of all PrimeKG nodes of `Type_T`. Before looking at the D2 outcome, inspect the
-distribution of this coverage share and confirm or change the default (decision-log entry).
+Why 90%: BioHopR was generated deterministically from PrimeKG, so the right release and mapping
+should reproduce it almost exactly.
 
 ---
 
-## D3 — Model selection gate (S20–S21)
+## D2 — Mapping confirmation and dataset feasibility (S9)
 
-**Input.** Screening results for each candidate model on the 20 screening queries.
+**Step 1 — Mapping confirmation (per PASS type).** Among the type's queries that contain no
+validation-sample row, compute the CONSISTENT share.
+- ≥ 80% → the type is confirmed.
+- < 80% → revisit that type's mapping (decision-log entry) and rerun S7–S8. Allowed only before S14;
+  after S14 mappings never change, and an unconfirmed type is excluded.
 
-A model **passes** if all of the following hold:
+**Step 2 — Saturation threshold.** Inspect the saturation-share distribution (S9 part 1) and fix θ
+(§7.2) **before** computing step 3.
+
+**Step 3 — Feasibility.** `N_P` = size of the primary population (§7.2); `K` = number of relation
+types with ≥ 20 primary-population queries.
+
+| Order | Outcome | Rule | Action |
+|---|---|---|---|
+| 1 | **RED** | `N_P < 150` | Stop before building agents. Revisit release, mapping, θ (decision-log entry for any change). |
+| 2 | **GREEN** | `N_P ≥ 650` **and** `K ≥ 5` | Continue as planned |
+| 3 | **YELLOW** | Otherwise | Continue; expansion limited to available queries; note reduced coverage |
+
+Why 650: the sets need 20 + 4 + 100 + 400 = 524 queries, plus margin for strata that run out.
+
+---
+
+## D3 — Model selection (S20–S21)
+
+**Input.** Each candidate model run on the 20 screening queries with the **screening
+configuration** (§9.1).
+
+**Definitions.**
+- *Attempted call:* every native tool call, plus every `TEXT_TOOL_CALL` (tool-call-like text that
+  was not executed).
+- *Well-formed call:* a native call naming one of the two tools, whose arguments parse and match
+  the schema types.
+- *Family:* the developer lineage stated on the model card (e.g. Qwen, Llama, Mistral, Granite, Phi).
+- *Competence:* share of screening queries with at least one answer that is question-valid and
+  `SUPPORTED`.
+
+A model **passes** if all hold:
 
 | Criterion | Threshold |
 |---|---|
-| Tool-call validity (well-formed calls / attempted calls) | ≥ 90% |
-| Valid final JSON (after the single allowed re-prompt) | ≥ 90% of episodes |
-| Competence floor: at least one `SUPPORTED` question-valid answer | ≥ 40% of screening queries |
+| Well-formed calls / attempted calls | ≥ 90% |
+| Episodes with status SUCCESS | ≥ 90% |
+| Competence | ≥ 40% |
 | Median episode wall time | ≤ 5 minutes |
-| Runs at the chosen `num_ctx` without out-of-memory errors | 20 of 20 episodes |
+| `ERROR` episodes caused by out-of-memory | 0 of 20 |
 
-**Selection.** From passing models, choose four that maximize family diversity (at least 3
-distinct model families; prefer 4). Ties: higher competence, then lower latency.
+**Selection.** From passing models, choose four maximizing the number of distinct families (at
+least 3; prefer 4); ties by higher competence, then lower median wall time.
 
 | Situation | Action |
 |---|---|
 | ≥ 4 pass | Freeze four (S21) |
-| < 4 pass | Screen additional candidates (at most 2 more rounds) |
-| Still < 4 after 2 rounds | Decision-log entry: either run with 3 agents (CF3 becomes the strict metric; CF4 is not computed) or relax one named criterion with justification |
-
-Why 40%: models below this rarely produce grounded answers, so their "failures" would mostly be
-incompetence rather than correlated error.
+| < 4 pass | Screen more candidates (at most 2 more rounds) |
+| Still < 4 | Consult supervisor. The agent count is frozen at 4 (§9.2); changing it requires a protocol revision. |
 
 ---
 
-## D4 — Panel smoke-test gate (S25)
+## D4 — Panel smoke test (S25)
 
-**Input.** 4 smoke queries × 4 agents = 16 episodes, plus your manual audit of 8 episodes.
+**Input.** 4 smoke queries × 4 agents = 16 episodes; the §19.1 verification tests; your manual
+audit of the 8 episodes chosen by §19.1 audit selection.
 
-**PASS** requires all of:
-
-- all 16 episodes end in an explicit status (success, `PARSE_FAIL`, timeout, or error) — no silent failures;
-- ≥ 14 of 16 episodes produce valid final JSON;
+**PASS** requires all:
+- every episode ends in one of the §9.5 statuses (no unrecorded failures);
+- ≥ 14 of 16 episodes have status SUCCESS;
 - the leakage test passes;
-- trace-graph reconstruction matches the raw tool log for all 16 episodes;
-- the manual audit of 8 episodes finds **zero** Label A or Label B errors;
-- the kill-and-resume test completes without duplicated or missing episodes.
+- the reconstruction check passes for all 16 episodes;
+- the kill-and-resume test passes;
+- the manual audit finds zero Label A or Label B errors;
+- no answer is both OFF_QUESTION and SUPPORTED.
 
-**FAIL** → fix the implementation (definitions unchanged), rerun the same 16 episodes, re-audit.
+**FAIL** → fix the implementation (no definition changes), rerun the same 16 episodes, re-audit.
 
 ---
 
 ## D5 — Pre-run freeze check (S26)
 
-The 100-query pilot may start only if:
-
-- neither `frozen_pilot_protocol.md` nor this file contains a `[TBD@Sx]` item with x ≤ 26;
-- all tests pass on a clean git working tree, and the commit hash is recorded;
-- PrimeKG SHA256 and BioHopR revision match the recorded values;
-- the four model digests match those frozen at S21;
-- the pilot manifest hash matches the one produced at S10.
+The pilot may start only if all hold:
+- no `[TBD@Sx]` with x ≤ 26 remains in the protocol;
+- all tests pass on a clean working tree; the commit hash is recorded;
+- the KG fingerprint and BioHopR revision equal the recorded values;
+- the four model digests equal those frozen at S21;
+- the SHA256 of `data/processed/manifests/pilot.jsonl` equals the value in `manifests.sha256`.
 
 ---
 
-## D6 — Pilot decision gate (S29)
+## D6 — Pilot decision (S29)
 
-### Quantities (computed on the 100 pilot queries)
+### Quantities (100 pilot queries × 4 agents)
 
 | Symbol | Definition |
 |---|---|
-| `E` | Technical failure rate: episodes ending in crash, timeout, or `PARSE_FAIL`, divided by 400 |
-| `H` | Share of queries where ≥ 3 of 4 agents **found R1** (`H1_CLEAN` or `H1_MIXED`, protocol §14.3) |
-| `N` | Number of queries with **CF3^{Q,H1} = 1** (protocol §16.1) |
-| `O > null` | Observed restricted CF3 total exceeds the 95th percentile of null N1 (protocol §17) |
-| `P` | Number of distinct relation pairs among the `N` queries |
+| `E` | Technical failures (§9.5) / episodes run |
+| `H` | Share of queries where ≥ 3 of 4 agents **found R1** (§14.3) |
+| `N` | Number of queries with CF3^{Q,H1} = 1 (§16.1) |
+| `O > null` | Observed CF3 total exceeds the N1 95th percentile (§17) |
+| `P` | Number of distinct relation types among the `N` queries |
 
-### Outcomes — checked in this order; the first match wins
+### Outcomes
 
 | Order | Outcome | Rule | Action |
 |---|---|---|---|
-| 1 | **HOLD** | `E > 15%` | Not a scientific outcome. Fix the implementation, rerun only the failed episodes with the identical frozen configuration, recompute, re-apply D6. |
-| 2 | **RED** | `H < 20%` **or** `N < 3` **or** not `O > null` | Do not build intervention machinery. Write up the descriptive results. Possible exploratory follow-ups: closed-book comparison, bridge-preference analysis. |
-| 3 | **GREEN** | `H ≥ 40%` **and** `N ≥ 10` **and** `O > null` **and** `P ≥ 3` | Expand to 500 queries (S30); proceed toward Phase 2. |
-| 4 | **YELLOW** | Anything else | Expand to 500 queries (S30); Phase 2 remains exploratory unless D7 is CONFIRMATORY. |
+| 1 | **HOLD** | `E > 15%` | Not a scientific outcome. Fix the implementation, rerun only failed episodes with the identical frozen configuration, re-apply D6. |
+| 2 | **RED** | `H < 20%` **or** `N < 3` **or** not `O > null` | No intervention work. Descriptive write-up; exploratory follow-ups optional. |
+| 3 | **GREEN** | `H ≥ 40%` **and** `N ≥ 10` **and** `O > null` **and** `P ≥ 3` | Freeze §21 (S29); expand to 500 (S30) |
+| 4 | **YELLOW** | Otherwise | Freeze §21 (S29); expand to 500 (S30); Phase 2 exploratory unless D7 is CONFIRMATORY |
 
-Why these numbers: with four agents, `H ≥ 40%` leaves roughly 40 of 100 queries for the structural
-analysis; `N ≥ 10` in 100 projects to about 50 cases in 500, enough to form intervention and
-control groups; `N < 3` means the phenomenon is too rare to study with this budget.
+The pilot **passes** if D6 is GREEN or YELLOW.
+
+Why these numbers: `H ≥ 40%` leaves roughly 40 of 100 queries for structural analysis; `N ≥ 10`
+projects to about 50 cases in 500; `N < 3` is too rare to study with this budget.
 
 ### Interpretation flags (reported, not gates)
-
-- **Ordering flag:** observed agreement exceeds N1 but not N2 → "consistent with a shared-ordering
-  effect"; must be reported with the result.
-- **Ambiguity flag:** if more than 70% of the `N` cases come from pairs tagged `R1_AMBIGUOUS`,
-  `R2_AMBIGUOUS` or `BOTH_AMBIGUOUS`, report that co-failure is concentrated where wording is
-  ambiguous (weaker evidence for a structural effect).
+- **Ordering flag:** observed agreement exceeds N1 but not N2.
+- **Ambiguity flag:** more than 70% of the `N` queries belong to relation types tagged
+  `R1_AMBIGUOUS`, `R2_AMBIGUOUS` or `BOTH_AMBIGUOUS`.
 
 ---
 
-## D7 — Expansion and intervention-feasibility gate (after S30)
+## D7 — Expansion and intervention feasibility (after S30)
 
-Same quantities as D6, computed on all 500 queries, plus `C` = number of intervention candidates
-meeting the protocol §21 candidate rule **with** an available matched control.
+Same quantities as D6 on all 500 queries (`E` = technical failures / episodes run), plus
+`C` = number of candidates meeting the §21 candidate rule (frozen at S29) **with** a matched control.
 
 | Order | Outcome | Rule | Action |
 |---|---|---|---|
 | 1 | HOLD | `E > 15%` | As in D6 |
-| 2 | **DESCRIPTIVE** | `N < 15` **or** not `O > null` **or** `C < 8` | No confirmatory surgery. Thesis reports the observational study; up to 5 surgery cases may be run as illustrative exploratory examples. |
-| 3 | **CONFIRMATORY** | `N ≥ 30` **and** `O > null` **and** `P ≥ 4` **and** `C ≥ 20` | Freeze the Phase 2 design (protocol §21) and run the intervention study on all eligible candidates. |
-| 4 | **EXPLORATORY** | Anything else | Run the intervention study on available candidates; label all intervention results exploratory. |
+| 2 | **DESCRIPTIVE** | `N < 15` **or** not `O > null` **or** `C < 8` | No confirmatory surgery; up to 5 illustrative exploratory cases |
+| 3 | **CONFIRMATORY** | `N ≥ 30` **and** `O > null` **and** `P ≥ 4` **and** `C ≥ 20` | Run the intervention study on all eligible candidates |
+| 4 | **EXPLORATORY** | Otherwise | Run on available candidates; label results exploratory |
 
 ---
 
 ## D8 — Final scale decision (S37)
 
-Scale beyond 500 queries only if D7 was CONFIRMATORY or EXPLORATORY **and** at least one of:
-
-- fewer than 10 cases per intervention mechanism (e.g., `SHORTCUT`, `WRONG_RELATION_HOP2`);
-- relation-pair coverage < 5 pairs among intervention cases;
-- estimated compute for the larger run fits within the remaining thesis schedule (write the
-  estimate in the decision log first).
-
-Otherwise stay at 500.
+Scale beyond 500 queries only if D7 was CONFIRMATORY or EXPLORATORY **and**
+(a) fewer than 10 cases exist for at least one §21 mechanism, **or** (b) intervention cases cover
+fewer than 5 relation types — **and** (c) the compute estimate for the larger run, written in the
+decision log first, fits the remaining schedule. Otherwise stay at 500.
