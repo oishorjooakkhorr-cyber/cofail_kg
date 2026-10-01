@@ -1,13 +1,13 @@
 # Progress — CoFail-KG
 
 ## Current stage
-S0 — not started
+S1 — Protocol audit (not started)
 
 ## Completed stages
-(none)
+- S0 — Environment and repository skeleton — COMPLETE 2026-10-01 19:51:45 +06:00 (commit dfa8cb9)
 
 ## Latest commit
-—
+dfa8cb9 — S0: project skeleton and governing docs
 
 ## Numbers to remember (filled as you go)
 - BioHopR revision (S2):
@@ -26,4 +26,4 @@ S0 — not started
 (none)
 
 ## Next action
-Start S0 in docs/pipeline_runbook.md.
+Start S1 in docs/pipeline_runbook.md.
