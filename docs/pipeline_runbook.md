@@ -613,7 +613,7 @@ Do not compute D2 step 3 yet.
 1. D2 step 1: for each relation type that passed D1, the CONSISTENT share among queries that
    contain no S6 validation-sample row. Flag types below 80% and types with no such queries
    (UNCONFIRMABLE).
-2. For CONSISTENT queries in confirmed types: the saturation-share distribution (p50, p90, p95,
+2. For CONSISTENT queries in confirmed or UNCONFIRMABLE types: the saturation-share distribution (p50, p90, p95,
    p99, max) and how many queries would be excluded at θ = 0.30, 0.50, 0.70, 0.90, overall and per
    relation type.
 ```
@@ -1119,7 +1119,8 @@ Do not interpret.
 **Evaluate — manual reading (plan 2–3 hours).**
 1. Read at least one full episode per model.
 2. Check Label A and Label B by hand for 6 answers across models.
-3. Any episode with prompt tokens above 90% of `num_ctx` risks lost context: return to S21 (log it).
+3. Any episode with prompt tokens above 90% of `num_ctx`, or any OUT_OF_MEMORY error: apply the
+   protocol §9.1 re-selection rule with the S22 measurements (log it).
 4. Systematic technical problems (a model never calls tools; JSON always fails): return to S21 (log it).
 
 **Decide.** Proceed, or return to S21. Log.
@@ -1205,7 +1206,7 @@ Implement src/cofail_kg/agents/panel_runner.py and scripts/25_run_panel.py:
 - Verifies model digests and config hashes before starting; refuses to run on mismatch.
 - Checkpoints after every episode; on restart skips every completed episode — a record with
   ANY §9.5 status, including failures (protocol §19) — and never overwrites. Failed episodes
-  are rerun only through the HOLD procedure, as new attempts under a new run ID.
+  are rerun only in the cases protocol §19 allows, as new attempts under a new run ID.
 - Writes a progress file (episodes done / total, failures so far).
 - After the run: evaluation (S16–S19, S23, S24) → results/runs/<run_id>/analysis/.
 Tests: resume after a simulated crash (no duplicates, nothing missing), digest mismatch
@@ -1365,7 +1366,7 @@ You apply D7 yourself and log it.
 ```text
 Using only the frozen 500-query analysis, list every query meeting the protocol §21 candidate
 rule (frozen at S29). For each: shared entity, the shared feature chosen by the §21 rule, its
-mechanism (SHORTCUT / WRONG_RELATION_HOP1 / WRONG_RELATION_HOP2 / OFF_PATH_NODE), whether a
+mechanism (SHORTCUT / WRONG_TURN_HOP1 / WRONG_TURN_HOP2 / OFF_PATH_NODE), whether a
 valid route (§21) remains after blocking it, and up to 3 matched-control candidates by the §21
 matching rule. Write results/interventions/candidates.csv. Do not select cases; list all.
 ```
@@ -1443,8 +1444,8 @@ Each table in results/reports/final/ as CSV and Markdown, with the commit hash t
 | Symptom | Likely cause | What to do |
 |---|---|---|
 | A model writes tool calls as text instead of calling tools | The model or its Ollama template lacks native tool support | It is recorded as `TEXT_TOOL_CALL` and not executed. If frequent, the model fails D3; choose another. |
-| `prompt_eval_count` close to `num_ctx` | Long tool outputs fill the context; Ollama may drop earlier messages | Before the pilot: raise `num_ctx` or lower `page_size` (S21, log it). During the pilot: do not change; report affected episodes. |
-| Out-of-memory from Ollama | `num_ctx` too large for 8 GB VRAM | Lower `num_ctx` or choose a smaller model (S21). |
+| `prompt_eval_count` close to `num_ctx` | Long tool outputs fill the context; Ollama may drop earlier messages | Before S26: apply the protocol §9.1 re-selection rule (log it). From S26 on: do not change; report affected episodes. |
+| Out-of-memory from Ollama | `num_ctx` too large for 8 GB VRAM | Before S26: apply the protocol §9.1 re-selection rule; if no value fits, choose another model through Gate D3 (S21). Log it. |
 | PrimeKG loading is slow or uses too much RAM | 8 million rows in pandas | Ask Claude to load from the parquet cache with only the needed columns; keep one index object alive per run. |
 | Claude says a test "should" be changed to pass | The code or the test is wrong | Use the bug-found prompt: ask which one is wrong and why, before any change. |
 | Claude proposes changing a definition | Normal eagerness | Use the "Claude proposes changing the science" prompt. |

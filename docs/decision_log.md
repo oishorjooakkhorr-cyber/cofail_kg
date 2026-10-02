@@ -29,3 +29,9 @@ Decision: Replace protocol and decision rules v1.1 with v1.2; runbook and CLAUDE
 Why: The re-audit found five serious problems (agent inputs vs the data/processed ban; undefined observed totals for the chance baselines; CONSISTENT without all gold names; query grouping key; path tie-break) plus many precision gaps. Every item is resolved in docs/S1_audit_response.md.
 Data seen before deciding: none
 Changes to protocol or decision rules: see docs/S1_audit_response.md (re-audit section) and docs/CHANGES.md
+
+## 2026-10-02 — S1 — Four consistency fixes after the narrow check
+Decision: UNCONFIRMABLE types kept in the primary population; reruns allowed via HOLD, D4 FAIL or the code-change rule; final runtime values re-selectable after S22 only by the §9.1 rules, before S26; §21 mechanisms renamed WRONG_TURN_HOP1/2.
+Why: The narrow check found four places where v1.2 sections disagreed.
+Data seen before deciding: none
+Changes to protocol or decision rules: protocol §7.2, §9.1, §19, §21; runbook S9, S22, S25, S31, troubleshooting.

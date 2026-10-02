@@ -265,7 +265,7 @@ word or phrase, the name of a gold bridge or of a gold answer at least 4 charact
 |---|---|---|
 | Saturation threshold θ | Recommended 0.50 | `[TBD@S9]` |
 | Absolute cap on the size of T_q | None (hub-heavy queries are relevant) | `[FROZEN]` |
-| **Primary population** | CONSISTENT ∧ not SATURATED ∧ not LEAKY_QUESTION ∧ relation type passed Gate D1 ∧ relation type confirmed in Gate D2 step 1 | `[FROZEN]` |
+| **Primary population** | CONSISTENT ∧ not SATURATED ∧ not LEAKY_QUESTION ∧ relation type passed Gate D1 ∧ relation type confirmed or UNCONFIRMABLE in Gate D2 step 1 | `[FROZEN]` |
 | INCONSISTENT and LEAKY_QUESTION queries | Reported in the dataset table; never sampled | `[FROZEN]` |
 
 **Source.** Own.
@@ -336,6 +336,10 @@ the queries not yet drawn:
 - Timeout: 3 × the slowest chosen model's median screening episode time, at least 10 minutes.
 
 Models: four, chosen by Gate D3 `[TBD@S21]`, recorded by tag, digest and quantization.
+
+**Re-selection `[FROZEN]`:** if S22 shows any episode with prompt tokens above 90% of `num_ctx`, or
+any OUT_OF_MEMORY error, the final values are chosen again with the same rules, using the S22
+measurements in place of the screening ones. Allowed only before S26; logged.
 
 ### 9.2 Independence and agent count `[FROZEN]`
 
@@ -663,7 +667,7 @@ BioHopR revision, git commit, timestamps, full trace, raw final output, episode 
 - An episode is **completed** once its record exists with any status (§9.5). Resuming a run never
   reruns completed episodes.
 - Records are write-once.
-- **Reruns** (only through Gate D6/D7 HOLD): a new run ID; for each (query, agent), analysis uses
+- **Reruns** (only through Gate D6/D7 HOLD, a Gate D4 FAIL, or the code-change rule below): a new run ID; for each (query, agent), analysis uses
   the latest attempt; every attempt is kept; `E` is computed on latest attempts.
 - **Code changes during a run:** stop the run first. Episodes completed under the earlier commit are
   used only if a decision-log entry explains why the fix cannot have affected them; otherwise they
@@ -700,8 +704,9 @@ frozen after seeing pilot data). Fan-out is analyzed descriptively (§15) and is
 intervention mechanism.
 
 - **Valid route:** a path `s → b → t` in the (modified) graph with r1 ∈ R1, b ∈ B_q, r2 ∈ R2, t ∈ T_q.
-- **Mechanisms:** `SHORTCUT`, `WRONG_RELATION_HOP1`, `WRONG_RELATION_HOP2` (from §16.3 wrong-turn
-  events), and `OFF_PATH_NODE` (from §16.3 PCF_NODE).
+- **Mechanisms:** `SHORTCUT`, `WRONG_TURN_HOP1` and `WRONG_TURN_HOP2` (§16.3 wrong-turn events at
+  step 1 and step 2, on primary paths of any length — distinct from the length-2 reason codes of
+  §14.2), and `OFF_PATH_NODE` (from §16.3 PCF_NODE).
 - **Candidate:** a CONSISTENT pilot or expansion **query** with CF3^{Q,H1} = 1, or a PCF event shared
   by ≥ 3 agents, whose shared feature can be blocked while at least one valid route remains. If a
   query has several features, the one shared by the most agents is used (ties: the earliest on the
