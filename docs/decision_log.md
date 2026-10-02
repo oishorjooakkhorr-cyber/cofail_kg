@@ -35,3 +35,9 @@ Decision: UNCONFIRMABLE types kept in the primary population; reruns allowed via
 Why: The narrow check found four places where v1.2 sections disagreed.
 Data seen before deciding: none
 Changes to protocol or decision rules: protocol §7.2, §9.1, §19, §21; runbook S9, S22, S25, S31, troubleshooting.
+
+## 2026-10-02 — S2 — BioHopR revision and question-text field fixed
+Decision: BioHopR revision `08f06692c3900347e7405ba55ff6a6d330f55ddb` (from data/raw/biohopr/metadata.json; also in configs/frozen_hashes.yaml as `biohopr_revision`). Question text given to agents: field `hop2_question_multi`, verbatim.
+Why: The revision is the dataset commit downloaded at S2 (7,633 2-hop records; the 12 relation-type counts match the paper exactly). `hop2_question_multi` is the only 2-hop field that asks for all answers ("Name all …"); `hop2_question` and `prompt` are single-answer forms.
+Data seen before deciding: S2 inspection outputs (field list, results/diagnostics/biohopr/inspection_20.md, hop1_in_question.csv, question-field candidates with examples). No agent outputs.
+Changes to protocol or decision rules: protocol §3.1 (Revision and Question-text rows filled in; status [TBD@S2] → [FROZEN] at S2).

@@ -96,9 +96,9 @@ decision gate.
 | Item | Value | Status |
 |---|---|---|
 | Source | Hugging Face dataset `knowlab-research/BioHopR` | `[FROZEN]` |
-| Revision | Dataset commit hash recorded at download | `[TBD@S2]` |
+| Revision | Dataset commit hash recorded at download: `08f06692c3900347e7405ba55ff6a6d330f55ddb` | `[FROZEN]` at S2 |
 | Subset | 2-hop questions (7,633 in the paper) | `[FROZEN]` |
-| Question text given to agents | The multi-answer 2-hop question field, verbatim | `[TBD@S2]` field name |
+| Question text given to agents | The multi-answer 2-hop question field, verbatim: `hop2_question_multi` | `[FROZEN]` at S2 |
 | Field roles | Working hypothesis: `hop2` = query entity, `hop1` = bridge, `answer` = gold targets | `[TBD@S5]` |
 
 **Field-role verification rule `[FROZEN]` (S5).** Sample 5 rows per relation type (all if fewer),
