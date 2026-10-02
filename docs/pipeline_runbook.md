@@ -23,7 +23,11 @@ cofail-kg/
 │   ├── pipeline_runbook.md            ← this file (your guide)
 │   ├── provenance.md                  ← which idea came from where
 │   ├── decision_log.md                ← every decision, dated
-│   └── progress.md                    ← where you are
+│   ├── progress.md                    ← where you are (incl. the "fix at stage" list)
+│   ├── CHANGES.md                     ← one-page summary of protocol changes
+│   └── S1_audit_response.md           ← how every audit item was resolved
+├── configs/
+│   └── frozen_hashes.yaml             ← every frozen hash (created at S2, filled stage by stage)
 ```
 
 ## 0.2 The loop you repeat for every stage
@@ -69,6 +73,8 @@ Audit the stage you just implemented:
 5. Look for silent exception handling, hard-coded values that should come from config,
    non-deterministic ordering, and anything that could leak evaluation data to agents.
 6. List design choices beyond the specification (CLAUDE.md, Provenance).
+Following protocol §0.3, report as problems only issues that could change a scientific result or
+a gate outcome; list engineering observations separately and briefly.
 Report findings only. Do not fix anything.
 ```
 
@@ -152,7 +158,7 @@ Changes to protocol: <section numbers, or "none">
 | S19 | Per-agent metrics | — | §15 |
 | **Phase F — Models** | | | |
 | S20 | Model screening | — | §9.1 |
-| S21 | Freeze models and engineering limits | **D3** | §9.1, §10 |
+| S21 | Freeze models and engineering limits | **D3** | §9.1 |
 | S22 | Single-agent smoke test | — | — |
 | **Phase G — Panel metrics and smoke** | | | |
 | S23 | Co-failure metrics | — | §16 |
@@ -252,7 +258,8 @@ Report:
    reach the experimental agents.
 6. Any contradiction between sections.
 
-Do not propose scientific changes. Report problems only, each with its section number.
+Following protocol §0.3, report only problems that could change a scientific result or a gate
+outcome. Do not propose scientific changes. Report problems only, each with its section number.
 ```
 
 **Expect back.** A numbered list of issues with section numbers.
@@ -262,11 +269,12 @@ Do not propose scientific changes. Report problems only, each with its section n
 - **Real open question**: bring it to your supervisor (or a planning chat) before S2; log the answer.
 - **Not an issue**: note why in `progress.md`.
 
-Check that the TBD list matches: S2, S4, S5, S6, S9, S21, and `[PROVISIONAL]` §21 (frozen at S29).
+Check that the TBD list matches: S2, S4, S5, S6, S9, S11, S14, S21, and `[PROVISIONAL]` §21
+(frozen at S29).
 
-**Decide.** Protocol v1.0 accepted (with any wording fixes).
+**Decide.** The current protocol version is accepted (with any wording fixes).
 
-**Commit.** `git commit -am "S1: protocol audited, v1.0 accepted"` (plus decision-log entry).
+**Commit.** `git commit -am "S1: protocol audited"` (plus decision-log entry).
 
 **Provenance.** None.
 
@@ -276,51 +284,47 @@ Check that the TBD list matches: S2, S4, S5, S6, S9, S21, and `[PROVISIONAL]` §
 
 ## S2 — BioHopR loader
 
-**Goal.** Download BioHopR once, freeze its revision, and load it into a clean internal format
-without changing any original field.
+**Goal.** Download BioHopR once, freeze its revision, and load it without changing any field.
 
 **Prompt.**
 ```text
-Implement ONLY the BioHopR data layer. Protocol §3.1 applies.
+Implement ONLY the BioHopR data layer. Protocol §0.4 (row, row_id) and §3.1 apply.
 
 Before coding:
 1. Inspect the Hugging Face dataset knowlab-research/BioHopR: splits, row count, every field
-   name and type. Record the dataset revision (commit hash) using huggingface_hub.
-2. Determine from the data how 1-hop and 2-hop questions are stored (separate rows, or both
-   in the same row). Do not assume.
+   name and type. Get the dataset revision (commit hash) with huggingface_hub.
+2. Determine from the data how 1-hop and 2-hop questions are stored (separate rows, or both in
+   the same row). Do not assume. Report which records count as 2-hop records.
 3. Identify which field holds the multi-answer 2-hop question text. Report candidates with
    examples; do not choose silently.
 
 Then create:
-- scripts/02_download_biohopr.py: downloads the pinned revision to data/raw/biohopr/ and
-  writes data/raw/biohopr/metadata.json (repo, revision, download time, row count, file SHA256).
-- src/cofail_kg/data/biohopr_loader.py: loads the raw file; keeps every original field
-  unchanged; adds row_id = "BH2_" + zero-padded row index within the pinned revision, and
-  row_sha256 = SHA256 of the row's JSON with sorted keys.
-- tests/test_biohopr_loader.py: loads, row count equals the metadata, row_id unique,
-  original fields unchanged, rerun gives identical row_id and row_sha256.
-- results/diagnostics/biohopr/inspection_20.md: 20 rows (seed 42), showing every field and
-  the first 5 answers of each row plus its answer count.
+- scripts/02_download_biohopr.py: downloads the pinned revision to data/raw/biohopr/, writes
+  data/raw/biohopr/metadata.json (repo, revision, download time, row count, file SHA256), and
+  creates configs/frozen_hashes.yaml with the key biohopr_revision (protocol §3.4) if absent.
+- src/cofail_kg/data/biohopr_loader.py: loads the raw file; keeps every original field unchanged;
+  adds row_id = "BH2_" + the record's 0-based position among the 2-hop records, zero-padded to
+  5 digits, and row_sha256 = SHA256 of the record's JSON with sorted keys.
+- tests/test_biohopr_loader.py: row count equals the metadata; row_id unique and 5-digit padded;
+  original fields unchanged; a rerun gives identical row_id and row_sha256.
+- results/diagnostics/biohopr/inspection_20.md: 20 rows (seed 42) with every field, the first 5
+  answers of each row and its answer count.
+Also report how many rows have a 2-hop question text containing the hop1 field's text (input to
+the LEAKY_QUESTION check, protocol §7.1), with examples.
 
 Do not interpret field roles (which field is the query entity or the bridge). That is S5.
-Also report how many rows have a 2-hop question text that contains the hop1 field's text
-(protocol §9.3 check: the bridge name must not appear in the question), with examples.
 ```
 
-**Expect back.** Row count, field list, the revision hash, candidate question fields, the
-inspection file.
+**Expect back.** Row count, field list, revision hash, candidate question fields, inspection file.
 
 **Evaluate.**
-1. Row count: the paper reports 7,633 2-hop questions. If Claude reports something else, find out why before continuing.
-2. Open the dataset viewer on Hugging Face. Pick 5 rows from `inspection_20.md` and compare every field with the viewer.
-3. Run the loader twice; the test for identical `row_id` and `row_sha256` must pass.
-4. Read the candidate question fields. Choose the one whose text asks for **all** answers of the 2-hop question (e.g., "Name all …").
-5. In `inspection_20.md`, look at `hop1`, `hop2` and the questions. Write down in `progress.md` which field *seems* to be the starting entity. You verify it at S5; do not rely on names.
+1. Row count: the paper reports 7,633 2-hop questions. Any difference needs an explanation first.
+2. Compare 5 rows of `inspection_20.md` field by field with the Hugging Face dataset viewer.
+3. The rerun test (identical `row_id` and `row_sha256`) passes.
+4. Choose the question field: the one asking for **all** answers ("Name all …").
+5. Note in `progress.md` which field *seems* to be the starting entity (verified at S5).
 
-**Decide.**
-- Protocol §3.1 revision → fill in the hash.
-- Protocol §3.1 question field → fill in the field name.
-Log both.
+**Decide.** Protocol §3.1 revision and question field. Log both.
 
 **Commit.** `S2: BioHopR loader, revision pinned`
 
@@ -365,69 +369,68 @@ Add tests on a tiny synthetic table. Do not choose any threshold.
 
 ## S4 — PrimeKG ingestion and index
 
-**Goal.** Freeze the exact PrimeKG release, understand its columns and edge storage, and build a
-fast deterministic index plus a small inspection tool for yourself.
+**Goal.** Freeze the PrimeKG release, understand its columns and edge storage, build a fast
+deterministic index, and give yourself a small inspection tool.
 
-**Do by hand first.** Download PrimeKG's edge file (`kg.csv`) — and the node file if the release
-provides one — from the PrimeKG page on Harvard Dataverse. Put them in `data/raw/primekg/`. Write
-the release version / DOI and the download date into `progress.md`. Downloading by hand makes you
-certain which release you have.
+**Do by hand first.** Download PrimeKG's edge file (`kg.csv`), plus the node file if the release
+has one, from the PrimeKG page on Harvard Dataverse into `data/raw/primekg/`. Create
+`data/cache/primekg_release.json` yourself with the release version / DOI and the download date
+(protocol §3.4: this file is not part of the fingerprint).
 
 **Prompt.**
 ```text
-Implement ONLY the PrimeKG ingestion and index layer. Protocol §3.2 applies.
+Implement ONLY the PrimeKG ingestion and index layer. Protocol §3.2–§3.4 apply.
 Raw files are in data/raw/primekg/.
 
 Before coding, inspect the raw files and report:
-1. Column names and 5 example rows.
-2. Total row count.
-3. Which column is a unique node identifier across the whole graph (check uniqueness;
-   do not assume).
-4. Distinct relation labels and display labels, each with its row count and the
-   (source type, target type) pairs it connects.
-5. Edge storage: for a random sample of 10,000 rows (seed 42), how often the reverse row
-   (same relation, endpoints swapped) also exists.
+1. Column names and 5 example rows; total row count.
+2. Which column is a unique node identifier across the whole graph (check; do not assume).
+3. Every distinct label (relation) and display label, with row counts and the
+   (source type, target type) pairs each connects.
+4. Edge storage: for a random sample of 10,000 rows (seed 42), how often the reverse row
+   (same label, endpoints swapped) exists — overall and per label.
+5. The distinct node types (for the protocol §3.3 type map).
 
 Then implement:
-- scripts/04_prepare_primekg.py: computes SHA256 of every raw file; writes node and edge
-  tables to data/cache/ as parquet; writes data/cache/primekg_metadata.json (hashes, row
-  counts, columns, canonical ID column, edge-storage finding, release info I will fill in).
-- src/cofail_kg/kg/primekg_index.py with a class that loads the cache and offers:
-    get_node(node_id) -> id, name, type, source
-    find_by_name(name) -> list of nodes (exact match after lower-case, NFKC, whitespace collapse)
-    relations_of(node_id) -> for each relation: label, neighbor types, neighbor count
-    neighbors(node_id, relation=None, neighbor_type=None) -> sorted by canonical node ID
-  All outputs deterministic. No edge is dropped, merged, or reversed silently.
-- scripts/inspect_kg.py: a small command-line tool FOR ME (not for agents), e.g.
+- scripts/04_prepare_primekg.py: SHA256 of every raw file; node and edge tables as parquet in
+  data/cache/; data/cache/primekg_metadata.json written by the script only (hashes, row counts,
+  columns, canonical ID column, edge-storage findings). Add kg_fingerprint = SHA256 of that
+  metadata file to configs/frozen_hashes.yaml. Never edit the metadata file afterwards.
+- src/cofail_kg/kg/primekg_index.py: a class loading the cache, offering
+    get_node(node_id); find_by_name(name, node_type=None) (exact match after lower-case, NFKC,
+    whitespace collapse); relations_of(node_id) (label, display labels, neighbor types, unique
+    neighbor count); neighbors(node_id, label=None, neighbor_type=None) sorted by numeric ID;
+    degree(node_id) (unique neighbors, all labels).
+  Make the edge convention a single configurable component (protocol §3.2) used by every
+  traversal, defaulting to "either direction".
+- scripts/inspect_kg.py: a command-line tool FOR ME (not for agents):
     python scripts/inspect_kg.py node "Troglitazone"
     python scripts/inspect_kg.py relations <node_id>
     python scripts/inspect_kg.py neighbors <node_id> --relation <label>
 - tests/test_primekg_index.py on a tiny synthetic graph.
-
-Report load time and peak memory for the full graph.
+Report load time and peak memory.
 ```
 
 **Evaluate.**
-1. Open the first rows yourself:
+1. Look at the raw rows yourself:
    ```powershell
    python -c "import pandas as pd; print(pd.read_csv('data/raw/primekg/kg.csv', nrows=5).T)"
    ```
-2. **Row count check.** The PrimeKG paper reports about 4.05 million relationships. About 8.1 million rows means each relationship is stored in both directions; this should agree with Claude's reverse-row finding.
-3. **Release check using a published number.** The BioHopR paper states that Troglitazone has 202 side effects listed in PrimeKG. Run:
+2. **Row count:** about 4.05 million relationships in the paper; about 8.1 million rows means both directions are stored (should agree with Claude's reverse-row finding).
+3. **Release check:** the BioHopR paper says Troglitazone has 202 side effects in PrimeKG.
    ```powershell
    python scripts/inspect_kg.py node "Troglitazone"
    python scripts/inspect_kg.py relations <the ID it prints>
    ```
-   Find the side-effect relation's neighbor count. **About 202 → your release matches BioHopR's.** Far from 202 → you probably have a different release; resolve this before S5.
-4. Check that the four BioHopR node types (drug, disease, gene/protein, effect/phenotype) exist under the type names PrimeKG uses.
-5. Check the canonical ID column is unique (Claude's report) and the metadata JSON contains the hashes.
+   About 202 on the side-effect label → your release matches. Far off → resolve before S5.
+4. The four BioHopR types exist as PrimeKG node types (the type map).
+5. The canonical ID column is unique; `frozen_hashes.yaml` contains `kg_fingerprint`.
 
-**Decide.** Protocol §3.2: release, canonical ID column, edge-storage convention and edge
-convention. Protocol §3.3: the type map (BioHopR types → PrimeKG node types). Protocol §10:
-whether `get_neighbors` needs a `direction` argument (only if edges are stored one-way **and**
-relations are asymmetric). Log all.
+**Decide.** Protocol §3.2: release, canonical ID column, edge storage, **edge convention** (list
+any directional labels stored one way; otherwise "either direction"); §3.3: type map; §10: whether
+`get_neighbors` gets a `direction` argument (only if directional labels were listed). Log all.
 
-**Commit.** `S4: PrimeKG frozen and indexed` (raw and cache files stay out of git).
+**Commit.** `S4: PrimeKG frozen and indexed`
 
 **Provenance.** Row "PrimeKG" (Chandak et al., 2023).
 
@@ -435,35 +438,29 @@ relations are asymmetric). Log all.
 
 ## S5 — Field-semantics verification
 
-**Goal.** Prove from data which BioHopR field is the query entity, which is the bridge, and how
-the answers connect — instead of trusting field names.
+**Goal.** Prove from data which BioHopR field is the query entity, which is the bridge, and how the
+answers connect.
 
 **Prompt.**
 ```text
-Verify BioHopR field roles against PrimeKG. Protocol §3.1 and §4 apply.
+Apply the field-role verification rule of protocol §3.1 exactly (5 rows per relation type,
+SHA256("42" + row_id) ordering, 95% in every relation type). Use the type map from S4 and
+the reference normalization policy (§12).
 
-Take a stratified sample: 5 rows per relation type (all rows if fewer), seed 42.
-For each row:
-1. Resolve the hop1 and hop2 names to PrimeKG nodes using the index's exact-name rules and
-   the row's own type fields. Record ambiguous or missing names.
-2. Check whether an edge connects hop1 and hop2, and with which relation labels.
-3. Check what fraction of the answer names are neighbors of hop1, and what fraction are
-   neighbors of hop2 (any relation).
-Write results/semantics/field_roles.csv (one line per row) and a summary stating, per
-relation type, the evidence for "query = hop2, bridge = hop1" versus the alternative.
-
-Also confirm protocol §9.3: no 2-hop question text contains the name of its bridge.
-
-State a conclusion only if at least 95% of resolvable rows support the same roles in every
-relation type. Otherwise stop and report the conflicting rows. Do not guess.
+For each sampled row:
+1. Resolve the hop1 and hop2 names to PrimeKG nodes; record unresolved or ambiguous names.
+2. Find which labels connect hop1 and hop2.
+3. Measure what share of the answer names are neighbors of hop1 and of hop2.
+Write results/semantics/field_roles.csv and a per-relation-type summary of the evidence.
+State a conclusion only if the §3.1 rule is met; otherwise stop and report conflicting rows.
 ```
 
 **Evaluate.**
-1. Read the summary: which role assignment does the evidence support, and how strongly?
-2. Hand-check 3 rows with `scripts/inspect_kg.py`: find the supposed query entity, list its neighbors through the relation Claude found, confirm the supposed bridge is among them, then list the bridge's neighbors and confirm several gold answers appear.
-3. Look at the unresolvable names. A few are normal; many suggest a release mismatch (go back to S4 check 3).
+1. Which role assignment does the evidence support, and how strongly?
+2. Hand-check 3 rows with `scripts/inspect_kg.py`: the query entity's neighbors include the bridge; the bridge's neighbors include several gold answers.
+3. Many unresolvable names suggest a release mismatch (back to S4 check 3).
 
-**Decide.** Protocol §3.1 field roles → frozen. Log.
+**Decide.** Protocol §3.1 field roles. Log.
 
 **Commit.** `S5: field roles verified`
 
@@ -487,8 +484,8 @@ For each of the 12 relation types:
 2. Draw the validation sample exactly as §5.1 says (SHA256("42" + row_id) ordering, first 30
    rows whose query entity and bridge resolve); report how many rows were skipped as unresolved.
 3. For every non-empty subset of candidates, compute the hop-1 score and the hop-2 score (§5.1).
-4. Select per hop by §5.1 (highest score, then smallest set). If a tie remains, mark the hop
-   UNRESOLVED and do not choose.
+4. Select per hop by §5.1 (highest score, then smallest set). If a tie remains, report it as a
+   TIE and do not choose.
 5. Compute the ambiguity tag per relation type by the §5.2 rule.
 6. Compute the D1 quantities from docs/decision_rules.md and the D1 outcome.
 
@@ -506,15 +503,16 @@ Do not freeze anything.
 2. For every type that fails D1, ask Claude to print two failing rows with the difference between
    reached targets and BioHopR's list. Common causes: field roles, edge storage, name normalization.
    Fixing a cause is allowed; lowering a threshold is not.
-3. For any UNRESOLVED hop (a tie), decide yourself from the failing rows; log it.
+3. For any TIE, decide yourself from the failing rows; log it.
 4. Look at the ambiguity tags: how many relation types are NONE? That is the size of your
    "clear wording" pile later.
 
 **Prompt, part 2 (after D1 says PROCEED).**
 ```text
-Freeze the mapping I approved: write results/semantics/relation_mapping.json with a SHA256 in
-its header, mark excluded relation types, and recompute relation_ambiguity_tags.csv from the
-frozen mapping. Change nothing else.
+Freeze the mapping I approved: write results/semantics/relation_mapping.json, mark excluded
+relation types, recompute relation_ambiguity_tags.csv from the frozen mapping, and add
+relation_mapping = SHA256 of relation_mapping.json to configs/frozen_hashes.yaml.
+Change nothing else.
 ```
 
 **Decide.** Gate **D1**; mapping frozen; tags frozen; excluded types listed. Log all, with numbers.
@@ -534,12 +532,16 @@ as protocol §4 and §6 define them.
 
 **Prompt.**
 ```text
-Implement protocol §0.3 (query definition), §4 and §6 for all relation types that passed D1.
+Implement protocol §0.4 (query definition), §4, §6 and §12 (reference policy) for all relation
+types that passed D1.
 
 Create src/cofail_kg/evaluation/reference_sets.py and scripts/07_build_reference_sets.py.
-1. Group BioHopR rows into queries: one query per unique (query entity, relation type);
-   query_id = row_id of the lowest-index row. Record the row_ids of each query.
-2. Normalize per §12: s (filter Type_S), each gold bridge (Type_B), each gold answer (Type_T).
+1. Resolve each row's query entity (reference policy, Type_S). Group rows by (resolved node s,
+   relation type); a row whose query entity does not resolve forms its own query.
+   query_id = row_id of the lowest-index row. Record each query's row_ids and question texts.
+2. Resolve each gold bridge (Type_B) and gold answer (Type_T) with the reference policy.
+   Implement the protocol §12 REFERENCE policy in src/cofail_kg/evaluation/normalize.py (the agent
+   policy comes at S16).
 3. Compute T_q(b), B_q (bridges with non-empty T_q(b)), dead-end bridges, T_q, and T_q^{B*}
    with the frozen relation_mapping.json and the §3.2 edge convention.
 Output to data/processed/:
@@ -548,7 +550,8 @@ Output to data/processed/:
 - reference_targets.parquet: one row per (query_id, bridge, target) for b in B_q, t in T_q(b)
 Tests on a synthetic graph: one bridge; several bridges; a target via two bridges; a dead-end
 bridge (excluded from B_q); no valid bridge; two rows of the same query merged correctly;
-type filtering. Nothing agent-facing may import these files.
+type filtering; two names resolving to one node grouped together; an unresolvable query entity
+forming its own query. Nothing agent-facing may import these files.
 ```
 
 **Evaluate.**
@@ -573,14 +576,15 @@ type filtering. Nothing agent-facing may import these files.
 ```text
 Implement protocol §7.1 exactly.
 Create src/cofail_kg/evaluation/query_validation.py and scripts/08_validate_queries.py.
-For each query: CONSISTENT/INCONSISTENT (the three conditions of §7.1), all applicable reason
-codes plus the primary reason in the §7.1 order, bridge multiplicity (NO_BRIDGE / SINGLE_BRIDGE /
-MULTI_BRIDGE), dead-end bridge count, and saturation share.
+For each query: CONSISTENT/INCONSISTENT (the five conditions of §7.1), all applicable reason
+codes (NA where §7.1 says so) plus the primary reason in the §7.1 order, bridge multiplicity,
+dead-end bridge count, the LEAKY_QUESTION flag, and saturation share.
 Mark whether the query contains any S6 validation-sample row (needed for D2 step 1).
 Write results/diagnostics/query_validation.csv and query_validation_summary.json with counts by
 status, primary reason, relation type, multiplicity, and ambiguity tag.
-Tests: one synthetic case per reason code; a case where several codes apply (primary chosen by
-order); a gold bridge that resolves but is not in B_q (GOLD_BRIDGE_NOT_VALID).
+Tests: one synthetic case per reason code; several codes at once (primary by order); a gold
+bridge that resolves but is not in B_q; an unmapped gold name with the rest matching (must be
+INCONSISTENT); differing question texts; a question naming its bridge (LEAKY_QUESTION).
 Do not exclude anything.
 ```
 
@@ -607,15 +611,16 @@ then check there are enough usable queries.
 ```text
 Do not compute D2 step 3 yet.
 1. D2 step 1: for each relation type that passed D1, the CONSISTENT share among queries that
-   contain no S6 validation-sample row. Flag types below 80%.
+   contain no S6 validation-sample row. Flag types below 80% and types with no such queries
+   (UNCONFIRMABLE).
 2. For CONSISTENT queries in confirmed types: the saturation-share distribution (p50, p90, p95,
    p99, max) and how many queries would be excluded at θ = 0.30, 0.50, 0.70, 0.90, overall and per
    relation type.
 ```
 
 **Evaluate and decide.**
-1. Any type below 80%? Investigate it now (mapping, edge storage, names). You may revise its
-   mapping (log it) and rerun S7–S8, because no agent exists yet. Otherwise exclude the type.
+1. Any type below 80%? Follow D2 step 1: revise its mapping (log it, re-apply D1 to that type,
+   rerun S7–S8, repeat step 1) or exclude it (log it). Both are allowed because no agent exists yet.
 2. Choose θ (recommended 0.50). Keep it unless the table shows it removes a whole relation type for
    no good reason. Write θ into protocol §7.2 and log it **before** part 2.
 
@@ -634,38 +639,43 @@ single/multi counts, and the outcome. Write data/processed/primary_population.cs
 
 ---
 
-## S10 — Sampling manifests
+## S10 — Sampling manifests and agent-input sheets
 
-**Goal.** Draw the screening, smoke, pilot, and expansion sets exactly as protocol §8 says.
+**Goal.** Draw the screening, smoke, pilot and expansion sets exactly as protocol §8 says, and
+write the separate agent-input sheets the agents will read.
 
 **Prompt.**
 ```text
 Implement protocol §8 exactly.
 Create src/cofail_kg/data/sampling.py and scripts/10_make_samples.py.
-Input: data/processed/primary_population.csv.
-Output to data/processed/manifests/:
-- screening.jsonl (20), smoke.jsonl (4), pilot.jsonl (100), expansion.jsonl (400)
-  each line: query_id, relation_pair, bridge multiplicity, ambiguity tag, |T_q| bin
-- sampling_report.md: counts per stratum for each set, and any stratum that ran out
-- manifests.sha256: SHA256 of each manifest
-Fill configs/pilot.yaml with: seed, set sizes, manifest paths and hashes.
-Tests: determinism (same inputs give byte-identical manifests), disjointness, sizes,
-the SHA256 ordering rule of §8 step 4.
+Input: data/processed/primary_population.csv and the S7 reference data.
+Outputs:
+- data/processed/manifests/screening.jsonl, smoke.jsonl, pilot.jsonl, expansion.jsonl —
+  each line: query_id, relation_type, multiplicity, ambiguity_tag, tq_size_bin
+- data/agent_inputs/screening.jsonl, smoke.jsonl, pilot.jsonl, expansion.jsonl — each line has
+  EXACTLY the four fields query_id, question_text, start_name, start_id (protocol §8)
+- data/processed/manifests/sampling_report.md: counts per stratum per set, and any shortfall
+- the SHA256 of every manifest and sheet added to configs/frozen_hashes.yaml (manifests key)
+Fill configs/pilot.yaml with the seed, set sizes and file paths.
+Tests: byte-identical outputs on rerun; disjoint sets; sizes and shortfall rule; floors applied
+within each multiplicity group; largest-remainder ties broken by relation-type name; the
+SHA256("42" + query_id) ordering of §8 step 3; agent-input lines have exactly four fields.
 ```
 
 **Evaluate.**
-1. Run the script twice; `manifests.sha256` must be identical.
-2. Check disjointness yourself:
+1. Run the script twice; the hashes in `frozen_hashes.yaml` must not change.
+2. Disjointness:
    ```powershell
    python -c "import json;s=lambda f:{json.loads(l)['query_id'] for l in open('data/processed/manifests/'+f)};a,b,c,d=s('screening.jsonl'),s('smoke.jsonl'),s('pilot.jsonl'),s('expansion.jsonl');print(len(a&b),len(a&c),len(b&c),len(c&d))"
    ```
    All zeros.
-3. Read `sampling_report.md`: single/multi mix close to 25/75; every PASS type represented.
-4. Read 10 pilot questions to get a feel for what the agents will face.
+3. `sampling_report.md`: single/multi mix close to 25/75 in the pilot; every PASS type represented.
+4. Open `data/agent_inputs/pilot.jsonl`: each line has only the four fields. Read 10 questions to
+   get a feel for what the agents will face.
 
-**Decide.** Manifests frozen (hashes in `configs/pilot.yaml`). Log.
+**Decide.** Confirm the 25/75 default (protocol §8); manifests frozen. Log.
 
-**Commit.** `S10: sampling manifests frozen`
+**Commit.** `S10: sampling manifests and agent-input sheets`
 
 **Provenance.** None new.
 
@@ -675,129 +685,121 @@ the SHA256 ordering rule of §8 step 4.
 
 ## S11 — KG tools
 
-**Goal.** Build the only door the agents have into PrimeKG: `inspect_entity` and `get_neighbors`,
-deterministic, paginated, logged, and blind to evaluation data.
+**Goal.** Build the only door the agents have into PrimeKG: deterministic, paginated, logged, and
+blind to evaluation data.
 
 **Prompt.**
 ```text
-Implement ONLY the agent-facing KG environment. Protocol §10 applies exactly.
+Implement ONLY the agent-facing KG environment. Protocol §10 applies exactly, using the edge
+convention component from S4.
 
 Create src/cofail_kg/agents/kg_env.py:
-- class KGEnvironment built on the PrimeKG index from S4 (read-only).
-- inspect_entity(entity_id): id, name, type, and relations touching it, each with label,
-  neighbor type(s), neighbor count. Relations sorted alphabetically.
-- get_neighbors(entity_id, relation, neighbor_type=None, page=1): neighbors sorted by
-  ascending canonical ID; returns items (id, name, type), relation, total_count, page,
-  page_size, has_more. <Add a direction argument ONLY if protocol §10 says so after S4.>
-- Error results use exactly the fixed templates in protocol §10 (unknown ID, unknown
-  relation, page out of range); they echo only the agent's own arguments.
-- "Successful call" as defined in §10 (empty results are successful).
-- A call budget: after the budget is used, every call returns
-  "Tool budget exhausted. Give your final answer now."
-- page_size and budget come from configuration; they are frozen at S21. Use page_size=50
-  and budget=30 ONLY inside tests.
-- Every call is appended to an in-memory call log (arguments, full result, timestamp).
+- class KGEnvironment on the read-only PrimeKG index.
+- inspect_entity(entity_id): id, name, type; for each label touching it: label, display label(s),
+  neighbor type(s), unique neighbor count. Labels sorted alphabetically.
+- get_neighbors(entity_id, relation, neighbor_type=None, page=1): items (id, name, type, display
+  label) sorted by numeric ID; total_count, page, page_size, has_more. Empty results are a
+  successful page 1 with total_count 0. <Add a direction argument ONLY if protocol §10 says so.>
+- Errors use exactly the §10 templates and echo only the agent's own arguments.
+- A call budget; once used, every call returns the §10 budget message.
+- page_size and budget come from the configuration object (screening values 50/30 are in
+  protocol §9.1; final values come at S21).
+- An in-memory call log: arguments, full result, success flag, timestamp.
 
-Create src/cofail_kg/agents/tool_schemas.py: JSON function definitions for the two tools
-(the format Ollama's chat API accepts). Descriptions must be neutral: they describe what
-the tool does and must not mention any BioHopR relation, relation type, or answer.
+Create src/cofail_kg/agents/tool_schemas.py: the two tools as JSON function definitions for
+Ollama's chat API (tool version T1). Descriptions must be neutral (protocol §10) — draft them and
+show them to me for approval.
 
-Rules: this module must not import anything from cofail_kg.evaluation or read any file in
-data/processed/. Add a test that fails if it does.
-
-Tests (synthetic graph): relation listing and counts; neighbor-type filter; ordering;
-page 1 + page 2 union equals the full list with no duplicates; last page has_more=false;
-errors; budget exhaustion; the import-isolation test.
+The module must not import cofail_kg.evaluation or open files under data/processed/ — add a test.
+Tests (synthetic graph): listing and counts; neighbor-type filter; ordering; pages 1+2 union equals
+the full list with no duplicates; last page; empty list; each error template; budget exhaustion;
+import isolation.
+After my approval of the descriptions, add tools = SHA256 of tool_schemas.py to
+configs/frozen_hashes.yaml.
 ```
 
 **Evaluate.**
-1. Open a Python shell and try the tools on a real node (the query entity of one screening query):
+1. Try the tools on a real entity (the query entity of one screening query):
    ```python
    from cofail_kg.kg.primekg_index import PrimeKGIndex   # use the actual class name
    from cofail_kg.agents.kg_env import KGEnvironment
    env = KGEnvironment(PrimeKGIndex(), page_size=50, budget=30)
    print(env.inspect_entity("<id>"))
-   p1 = env.get_neighbors("<id>", "<a relation from the list>", page=1)
+   p1 = env.get_neighbors("<id>", "<a label from the list>", page=1)
    print(p1["total_count"], p1["has_more"], [x["id"] for x in p1["items"]][:5])
    ```
 2. Compare `total_count` with `python scripts/inspect_kg.py neighbors <id> --relation <label>`.
-3. Request pages until `has_more` is false; confirm the union has exactly `total_count` items and IDs are ascending.
-4. Read the tool descriptions in `tool_schemas.py`. Do they hint at any answer or relation choice? They must not.
+3. Page through until `has_more` is false; the union has exactly `total_count` items in ascending ID order.
+4. Read the tool descriptions: do they hint at any answer or relation choice? They must not.
 
-**Decide.** Approve the tool description wording (it is part of the method). Log it as tool
-version "T1".
+**Decide.** Approve the tool descriptions as **T1** (protocol §10). Log.
 
 **Commit.** `S11: KG environment and tool schemas (T1)`
 
-**Provenance.** Rows "Graph-CoT", "Think-on-Graph" (design), own (pagination, ordering, budget).
+**Provenance.** Rows "Graph-CoT", "Think-on-Graph" (design); own (pagination, ordering, budget).
 
 ---
 
 ## S12 — Trace and trace graph
 
-**Goal.** Record everything an agent sees and does, and turn it into the trace graph that all
-path labels are computed from.
+**Goal.** Record everything an agent sees and does, and turn it into the trace graph all path
+labels come from.
 
 **Prompt.**
 ```text
-Implement protocol §11.
+Implement protocol §11 and the primary-path order of §14.2.
 Create src/cofail_kg/agents/trace.py:
-- An episode record (JSON) with every field listed in protocol §19, the full message list,
-  and the full tool-call log.
-- A write-once saver: results/runs/<run_id>/<query_id>__<agent_id>.json; refuses to
-  overwrite an existing file.
-- build_trace_graph(record): directed edges (u, relation, v) for each neighbor v on each
-  returned page of each successful get_neighbors call — nothing else.
-- appeared_entities(record): every entity returned by any tool call (neighbors, and subjects
-  of successful inspect_entity calls).
-- simple_paths(trace_graph, s, x, max_len=3): all simple directed paths, ordered by length,
-  then by the index of the tool call that created the last edge.
-Tests with hand-written synthetic episode records: the graph contains exactly the returned
-page items; unreturned pages add nothing; paths found and ordered correctly; saver refuses
-to overwrite.
+- The episode record (JSON) with every field of protocol §19, all messages and the call log.
+- A write-once saver: results/runs/<run_id>/<query_id>__<agent_id>__a<attempt>.json; refuses to
+  overwrite.
+- build_trace_graph(record): edges (u, label, v) for each neighbor on each returned page of each
+  successful get_neighbors call, oriented per the edge convention, each with its creation index
+  (the first successful call that returned it).
+- appeared_entities(record): every entity returned by any successful call (neighbors and
+  inspect_entity subjects).
+- paths(trace_graph, s, x): all simple paths of length ≤ 3, and the primary path (shortest path of
+  any length, ordered exactly by §14.2: length, then largest creation index, then the sequence of
+  (numeric node ID, label) pairs).
+Tests with hand-written records: only returned page items become edges; creation indexes; parallel
+edges with different labels are both kept and ordered by §14.2; numeric (not string) ID order;
+saver refuses to overwrite.
 ```
 
-**Evaluate.**
-1. Read one synthetic test case and draw its trace graph on paper; compare with what the test asserts.
-2. Confirm the saver refuses to overwrite: run the relevant test, and read the code path.
-
-**Decide.** Nothing.
+**Evaluate.** Draw one test case's trace graph on paper and compare with the test's assertions,
+including the parallel-edge case.
 
 **Commit.** `S12: trace and trace graph`
 
-**Provenance.** Row "KG-TRACES" (path-level traces), own (construction rules).
+**Provenance.** Row "KG-TRACES" (path-level traces); own (construction rules).
 
 ---
 
 ## S13 — Ollama client
 
-**Goal.** A thin, reliable wrapper around Ollama's chat API that records everything needed for
-reproducibility.
+**Goal.** A thin, reliable wrapper around Ollama's chat API that records what reproducibility needs.
 
 **You need first.** Ollama running (`ollama list` works). Pull one small model for testing and
-check it supports tools: `ollama show <model>` must list **tools** under Capabilities.
+check that `ollama show <model>` lists **tools** under Capabilities.
 
 **Prompt.**
 ```text
 Implement src/cofail_kg/agents/ollama_client.py:
-- chat(model, messages, tools, options) using Ollama's local HTTP API.
-- options: temperature, seed, num_ctx, num_predict — all passed explicitly every call.
-- Returns: the raw response, parsed assistant message, native tool calls (if any),
-  prompt_eval_count, eval_count, latency.
-- get_model_identity(model): tag, digest, quantization, parameter size (from the API).
-- Timeout per request from configuration. Retries ONLY for connection errors, at most 2,
-  logged. Never retry because of the content of a model reply.
-- Unit tests with a mocked HTTP layer.
-- scripts/13_test_ollama.py: exactly one real plain call and one real tool-call call
-  (a dummy tool "add(a, b)"), printing the identity, token counts, latency, and whether a
-  native tool call came back.
+- chat(model, messages, tools, options) via Ollama's local HTTP API; options temperature, seed,
+  num_ctx, num_predict always passed explicitly.
+- Returns the raw response, the assistant message, native tool calls, prompt_eval_count,
+  eval_count, latency.
+- get_model_identity(model): tag, digest, quantization, parameter size.
+- Classify failures into the protocol §9.5 ERROR causes (OUT_OF_MEMORY, CONNECTION, RUNTIME,
+  OTHER); document how OUT_OF_MEMORY is detected.
+- Request timeout from configuration. Retries (engineering choice): connection errors only, at
+  most 2, logged; never retry because of reply content.
+- Unit tests with a mocked HTTP layer, including each error cause.
+- scripts/13_test_ollama.py: one plain call and one tool call (dummy tool add(a, b)), printing
+  identity, token counts, latency, and whether a native tool call came back.
 ```
 
-**Evaluate.**
-1. Run `python scripts/13_test_ollama.py`. You must see the model digest, token counts, and a native tool call for the `add` tool.
-2. If the tool call arrives as plain text instead of a native tool call, that model is unsuitable (see S14 rule on native calls).
-
-**Decide.** Nothing.
+**Evaluate.** Run `python scripts/13_test_ollama.py`: you see the digest, token counts, and a
+native tool call. (Whether a model is usable is decided later by Gate D3, not here.)
 
 **Commit.** `S13: Ollama client`
 
@@ -807,10 +809,10 @@ Implement src/cofail_kg/agents/ollama_client.py:
 
 ## S14 — Agent prompt and runner
 
-**Goal.** One complete episode: question in, tool calls executed, JSON answer out, full trace saved.
+**Goal.** One complete episode: the question in, tool calls executed, JSON answer out, full trace saved.
 
-**The system prompt (draft — review it, then give it to Claude).** Placeholders in braces are
-filled from configuration.
+**The P1 template (draft — review it, then give it to Claude).** `{PAGE_SIZE}` and `{BUDGET}` are
+filled from the configuration; the template itself is what gets hashed (protocol §9.3).
 
 ```text
 You are a biomedical knowledge-graph agent. You answer questions by exploring a knowledge graph
@@ -832,84 +834,82 @@ Rules:
    {"status": "no_answer", "answers": []}
 ```
 
-User message template:
+User message template (protocol §9.3):
 ```text
 {QUESTION}
-Starting entity: {NAME} (PrimeKG ID: {ID})
+Starting entity: {START_NAME} (PrimeKG ID: {START_ID})
 ```
 
 **Prompt.**
 ```text
-Implement the agent runner. Protocol §9.3 and §9.4 apply exactly.
+Implement the agent runner. Protocol §9.2–§9.5 apply exactly.
 
-Create src/cofail_kg/agents/prompts.py containing the system prompt and user template I give
-below VERBATIM, with a PROMPT_VERSION constant "P1". <paste the two texts above>
+1. src/cofail_kg/agents/prompts.py: the P1 template and the user template I give below, VERBATIM,
+   with PROMPT_VERSION = "P1" and a function returning the template's SHA256. <paste both texts>
+2. src/cofail_kg/agents/run_agent.py: run_episode(query_id, agent_config, run_config) that
+   - reads the query's line from the agent-input sheet (data/agent_inputs/<set>.jsonl) — the ONLY
+     data file it may open besides the PrimeKG cache;
+   - builds the two messages from question_text, start_name and start_id;
+   - executes ONLY native tool calls through KGEnvironment; records TEXT_TOOL_CALL per §9.5
+     without executing it;
+   - stops per §9.4 (final message rules, budget message, one extra turn after it);
+   - parses per §9.4 (string or integer IDs, fences, extra keys, empty lists, one fixed re-prompt);
+   - assigns the status per §9.5 with its precedence (TIMEOUT, ERROR with cause, PARSE_FAIL,
+     SUCCESS);
+   - saves the record with the S12 saver, attempt 1.
+Tests with a mocked client: normal episode; budget exhaustion; tool calls after the budget message
+ignored; fenced JSON with a language tag; integer IDs; "answered" with an empty list; parse failure
+then success; PARSE_FAIL; timeout during the re-prompt (TIMEOUT wins); TEXT_TOOL_CALL detection and
+non-execution.
 
-Create src/cofail_kg/agents/run_agent.py: run_episode(query, model_config, env_config) that
-1. builds the two messages from the query's question field (S2) and the PrimeKG name and ID of
-   its query entity s (from S7, protocol §9.3) — nothing else from the dataset;
-2. calls the model with the tool schemas from S11;
-3. executes ONLY native tool calls through KGEnvironment and appends their results as tool
-   messages; tool-call-looking text inside a normal message is NOT executed and is recorded
-   as TEXT_TOOL_CALL;
-4. loops until the model sends a message without tool calls, the budget is exhausted (then
-   allows exactly one more model turn), or the episode timeout is reached;
-5. parses the final message per protocol §9.4, with exactly one fixed re-prompt if parsing
-   fails (text in §9.4, verbatim);
-6. saves the episode record with the S12 saver. Status: SUCCESS, PARSE_FAIL, TIMEOUT, or
-   ERROR (with the exception text).
-
-Tests with a mocked Ollama client: a normal episode; budget exhaustion; parse failure then
-success after re-prompt; parse failure twice (PARSE_FAIL); timeout; text tool call not executed.
-
-Then run ONE real episode: the first query in screening.jsonl, with the test model from S13,
-page_size 50, budget 30, num_ctx 8192. Print the path of the saved record.
+Then run ONE real episode: the first query of the screening sheet, with the test model from S13 and
+the full screening configuration of protocol §9.1 (num_ctx 8192, num_predict 4096, page size 50,
+budget 30, timeout 10 minutes). Print the record's path.
 ```
 
 **Evaluate — read the real episode record line by line.**
-1. The user message contains only the question and the starting entity. No relation names, no answers.
-2. Every tool call is well-formed and its result matches what `scripts/inspect_kg.py` shows for the same call.
-3. You can follow the agent's route: which relation it chose first, which bridge, which targets.
-4. The final JSON parsed; answer IDs appear in earlier tool results.
-5. Token counts are recorded; `prompt_eval_count` is well below `num_ctx`.
+1. The user message contains only the question and the starting-entity line.
+2. Every tool call is well-formed, and its result matches `scripts/inspect_kg.py` for the same call.
+3. You can follow the route: first label chosen, bridge(s), targets.
+4. The final JSON parsed; answer IDs appeared in earlier tool results.
+5. Token counts are recorded; the prompt token count is well below `num_ctx`.
 
-**Decide.** Approve the system prompt and user template as **P1**. Log them (they are part of the
-method and go in the thesis appendix).
+**Decide.** Approve the template as **P1** (protocol §9.3). Add `prompt` = template SHA256 to
+`configs/frozen_hashes.yaml`. Log it; the text goes in the thesis appendix.
 
 **Commit.** `S14: agent runner and prompt P1`
 
-**Provenance.** Row "ReAct" (reason–act loop), own (prompt, parsing rules).
+**Provenance.** Row "ReAct" (loop); own (prompt, parsing rules).
 
 ---
 
 ## S15 — Leakage audit
 
-**Goal.** Prove that nothing from the evaluation side reaches the agents.
+**Goal.** Prove nothing from the evaluation side reaches the agents.
 
 **Prompt.**
 ```text
-Do not change any existing behavior. Add tests/test_leakage.py and run it.
-
-For the 20 screening queries (no model calls needed; build the messages only):
-1. Assert that the system and user messages contain none of: the gold bridge's name or ID,
-   any gold answer name or ID, any R1/R2 label, the relation-type name.
-2. Assert that kg_env.py, tool_schemas.py, prompts.py and run_agent.py import nothing from
-   cofail_kg.evaluation and read no file under data/processed/ (static check of imports and
-   file paths).
-3. Assert that for 10 random (entity, relation) pairs, get_neighbors returns exactly the same
-   IDs as the index's neighbors() (no filtering).
-Also print, for one screening query, the exact system and user messages the agent receives.
-Report which assertions passed.
+Do not change existing behavior. Implement the leakage test of protocol §19.1 exactly as
+tests/test_leakage.py and run it on the screening and smoke queries (messages only; no model calls).
+It must check:
+(a) system prompt and starting-entity line contain none of: R1/R2 labels, any gold bridge or gold
+    answer name or ID, names of other B_q or T_q members, the relation-type string, evaluator label
+    names — case-insensitive whole-word matching; names shorter than 4 characters listed for my
+    manual review instead;
+(b) agent-facing modules (kg_env, tool_schemas, prompts, run_agent) import nothing from
+    cofail_kg.evaluation and open no files except data/agent_inputs/ and the PrimeKG cache;
+(c) every agent-input sheet line has exactly the four §8 fields;
+(d) for 10 random (entity, label) pairs, get_neighbors returns exactly the index's neighbors.
+Print the exact system and user messages for one screening query.
+Report each check's result and the list of short names for manual review.
 ```
 
-Note: relation labels and answer entities *will* appear inside tool results — that is the graph
-itself, not leakage. The test checks the prompt and the code paths.
+Note: labels and answer entities *will* appear inside tool results and may appear in the question
+text itself. That is the task, not leakage; questions that name their own bridge or answers were
+already excluded at S8 (LEAKY_QUESTION).
 
-**Evaluate.**
-1. All assertions pass.
-2. Read the printed messages yourself, slowly. Ask: "Could an agent learn anything from this that it should find with the tools?"
-
-**Decide.** Nothing, unless something leaks — then fix before any further stage.
+**Evaluate.** All checks pass. Read the printed messages slowly: could an agent learn anything it
+should find with the tools? Review the short-name list.
 
 **Commit.** `S15: leakage audit passes`
 
@@ -926,14 +926,15 @@ They are tested on synthetic data plus the real episode from S14.
 
 **Prompt.**
 ```text
-Implement protocol §12 exactly in src/cofail_kg/evaluation/normalize.py.
-Input: an agent's parsed answer list and the query's Type_T. Output per item: resolved
-node ID or UNRESOLVED with reason (AMBIGUOUS_NAME / NO_MATCH), resolution method
-(ID / EXACT_NAME / EXACT_NAME_TYPE_FILTER), NAME_ID_MISMATCH flag; duplicates removed
-after resolution (report how many).
+Implement the AGENT policy of protocol §12 in src/cofail_kg/evaluation/normalize.py (the
+reference policy already exists from S7; do not change it).
+Input: an agent's parsed answer list and the query's Type_T. Output per item: resolved node ID or
+UNRESOLVED with reason (AMBIGUOUS_NAME / NO_MATCH), resolution method (ID / NAME_TARGET_TYPE /
+NAME_UNIQUE_ANY_TYPE), NAME_ID_MISMATCH flag; duplicates removed after resolution (report how many).
 No fuzzy or embedding matching.
-Tests: valid ID; invalid ID with a matching name; name matching two nodes where only one has
-Type_T; name matching two nodes of Type_T; no match; ID and name disagreeing; duplicates.
+Tests: string ID; integer ID; invalid ID with a matching name; a name matching two nodes where
+exactly one has Type_T; a name matching two nodes of Type_T (UNRESOLVED); a name matching exactly
+one node of another type (resolves to it); no match; ID and name disagreeing; duplicates.
 Run it on the S14 real episode and print the result.
 ```
 
@@ -954,7 +955,7 @@ Implement protocol §13 exactly in src/cofail_kg/evaluation/answer_labels.py.
 Input: resolved answers, the query's reference sets (S7) and A*_q.
 Priority exactly as in §13. Output one label per answer.
 Tests: GOLD; GOLD_BRIDGE_EXTRA; ALT_VALID; OFF_QUESTION; UNRESOLVED; an entity in both
-T_q^{b*} and A*_q (must be GOLD); an entity reachable through two bridges.
+T_q^{B*} and A*_q (must be GOLD); an entity reachable through two bridges.
 Run it on the S14 real episode and print each answer with its label.
 ```
 
@@ -988,7 +989,10 @@ Tests (synthetic traces), one per case:
 - KG_UNSUPPORTED (entity appeared, no path from s)
 - UNGROUNDED (never appeared)
 - an entity on page 2 of a list the agent never opened (UNGROUNDED)
-- the answer x = s (PATH_INVALID, WRONG_HOP_COUNT)
+- the answer x = s, in a fixture where s appeared (PATH_INVALID, WRONG_HOP_COUNT); and x = s
+  where s never appeared (UNGROUNDED)
+- a length-1 path to a wrong-type node (WRONG_TARGET_TYPE and WRONG_HOP_COUNT)
+- H1 when the answer itself is the Type_B neighbor of s (H1 = 0, since b must differ from x)
 - an only path of length 4 (primary path found by breadth-first search; WRONG_HOP_COUNT)
 - an UNRESOLVED answer (Label B = NOT_APPLICABLE)
 - INVARIANT: across all tests and the real episode, assert no answer is both OFF_QUESTION
@@ -1033,36 +1037,33 @@ Run on the S14 real episode and print the row.
 
 **Goal.** Measure candidate models against Gate D3 on the 20 screening queries.
 
-**You need first.** Choose 6–8 candidates. Requirements: `ollama show <model>` lists **tools**;
-the model fits your GPU (with 8 GB VRAM, roughly ≤ 9B parameters at 4-bit quantization); several
-different model families (for example Qwen, Llama, Mistral, Granite, Phi — check each one's tool
-capability yourself; availability changes). Pull them with `ollama pull`.
+**You need first.** Choose 6–8 candidates: `ollama show <model>` lists **tools**; the model fits
+your GPU (with 8 GB VRAM, roughly ≤ 9B parameters at 4-bit quantization); several model families
+(for example Qwen, Llama, Mistral, Granite, Phi — check each one's tool capability yourself). Pull
+them with `ollama pull`.
 
 **Prompt.**
 ```text
-Create scripts/20_screen_models.py using the S14 runner and S16–S19 evaluation.
-Screening configuration (protocol §9.1, frozen): num_ctx 8192, num_predict 4096, page_size 50,
-budget 30, temperature 0, seed 42, episode timeout 10 minutes, prompt P1, tools T1.
+Create scripts/20_screen_models.py using the S14 runner and S16–S19 evaluation, with the screening
+configuration of protocol §9.1 exactly.
 Candidates: <list of Ollama tags>.
-Run every candidate on the 20 screening queries (one model loaded at a time).
-Save episode records (write-once) under results/runs/screening/.
-Write to results/diagnostics/screening/:
-- screening_table.csv: per model — tool-call validity, valid-JSON rate, share of queries
-  with ≥1 SUPPORTED question-valid answer, median and max wall time, OOM/errors count,
-  max prompt_eval_count, median tool calls used, share of episodes hitting the budget,
-  model family, digest,
-- the D3 pass/fail per criterion.
+Run every candidate on the 20 screening queries, one model loaded at a time. Save episode records
+(write-once) under results/runs/screening/.
+Write results/diagnostics/screening/screening_table.csv with, per model, every Gate D3 quantity
+exactly as D3 defines it: well-formed / attempted calls (attempted includes TEXT_TOOL_CALL),
+share of SUCCESS episodes, competence, median wall time, number of ERROR episodes with cause
+OUT_OF_MEMORY — plus, for S21: largest prompt_eval_count, median tool calls used, share of
+episodes that hit the budget, family, digest. Add the D3 pass/fail per criterion.
 Do not select models.
 ```
 
 **Evaluate.**
 1. Read `screening_table.csv` against D3.
-2. For each passing model, open 2 episode records and read them. Numbers can pass while behavior is odd (e.g., one model always answers with the first 5 items it sees).
-3. Note max `prompt_eval_count` and the budget-hit share; you need them at S21.
+2. For each passing model, read 2 episode records. Numbers can pass while behavior is odd (e.g., always answering with the first 5 items seen).
 
-**Decide.** Nothing frozen yet (next stage).
+**Decide.** Nothing frozen yet (S21).
 
-**Commit.** `S20: model screening` (commits the table; episode records stay in `results/runs/screening/`, which is backed up but not committed).
+**Commit.** `S20: model screening` (the table only; records in `results/runs/screening/` are backed up, not committed).
 
 **Provenance.** Row "each model" (technical report or model card).
 
@@ -1070,32 +1071,29 @@ Do not select models.
 
 ## S21 — Freeze models and engineering limits → Gate D3
 
-**Goal.** Choose the four agents and freeze every runtime number the pilot uses.
+**Goal.** Choose the four agents and set every final runtime value, using the rules in protocol §9.1.
 
-**Decide (you), using these rules — write every value and its reason in the decision log:**
-
-| Value | Rule |
-|---|---|
-| Four models | Gate D3: passing models, maximize family diversity, then competence, then speed |
-| `num_ctx` | ≥ 1.25 × the largest `prompt_eval_count` any chosen model reached in screening, rounded up to a power of 2; must still run without OOM on your GPU. If it cannot fit, lower `page_size` instead. |
-| `page_size` | 50 unless context does not fit (then 25) |
-| Tool budget | About 2 × the median tool calls used by the chosen models in screening, between 20 and 40. If > 20% of screening episodes hit the budget, raise it (within 40). |
-| `num_predict` (max output tokens per turn) | Enough for the S3 answer-size p90 at ~25 tokens per answer, rounded up (e.g., p90 = 100 answers → 4096) |
-| Episode timeout | 3 × the slowest chosen model's median screening wall time, at least 10 minutes |
+**Decide (you).**
+1. Apply Gate D3 to choose four models.
+2. Apply the §9.1 rules for `num_ctx`, page size, budget, `num_predict` and timeout. If any chosen
+   model's largest screening prompt count exceeds 0.8 × 8192, first run this prompt:
+   ```text
+   Rerun 5 screening queries for <model> with num_ctx 16384 (other screening settings unchanged)
+   as run ID screening_ctx16k, and report the largest prompt_eval_count and any OUT_OF_MEMORY.
+   ```
+3. Write each value and the rule that produced it in the decision log. Fill protocol §9.1's
+   `[TBD@S21]` items.
 
 **Prompt (after deciding).**
 ```text
-Write configs/models.yaml with these four agents: <agent_id, Ollama tag> ×4, and record each
-model's digest, quantization, parameter size and family from get_model_identity().
-Write the runtime values into configs/pilot.yaml: num_ctx <>, page_size <>, budget <>,
-num_predict <>, episode_timeout <>, temperature 0, seed 42, prompt P1, tools T1.
-Add a check function that fails if any installed model's digest differs from models.yaml.
+Write configs/models.yaml with the four agents (agent_id, Ollama tag) and each model's digest,
+quantization, parameter size and family from get_model_identity(); add the models entry to
+configs/frozen_hashes.yaml. Write the final runtime values into configs/pilot.yaml. Add a check
+that fails if an installed model's digest differs from frozen_hashes.yaml.
 Do not change protocol files.
 ```
 
-Then fill protocol §9.1 and §10 `[TBD@S21]` items yourself.
-
-**Evaluate.** `git diff configs/`: exactly the values you decided. Run the digest check.
+**Evaluate.** `git diff configs/` shows exactly your values; the digest check passes.
 
 **Commit.** `S21: models and runtime frozen (D3)`
 
@@ -1105,25 +1103,24 @@ Then fill protocol §9.1 and §10 `[TBD@S21]` items yourself.
 
 ## S22 — Single-agent smoke test
 
-**Goal.** See the four frozen agents behave on real questions with the final settings, and
-exercise the evaluation code on real traces.
+**Goal.** See the four frozen agents on real questions with the final settings, and exercise the
+evaluation code on real traces.
 
 **Prompt.**
 ```text
-Run each of the four frozen agents on 16 screening queries (as many SINGLE_BRIDGE as the
-screening set has, up to 8; the rest MULTI_BRIDGE), with the frozen configuration.
-Save records under results/runs/smoke_single/. Then run S16–S19 evaluation on all 64
-episodes and write results/diagnostics/smoke_single_summary.md: per model — status counts,
-Label A and Label B distributions, reason-code counts, hop-1 statuses, early-stop share,
-budget-hit share, max prompt tokens vs num_ctx.
+Run each of the four frozen agents on all 20 screening queries with the final configuration, as
+run ID smoke_single. Run S16–S19 evaluation on all 80 episodes and write
+results/diagnostics/smoke_single_summary.md: per model — status counts (with ERROR causes),
+Label A and Label B distributions, reason codes, hop-1 statuses, early-stop share, budget-hit share,
+largest prompt tokens versus num_ctx. Assert that no answer is both OFF_QUESTION and SUPPORTED.
 Do not interpret.
 ```
 
 **Evaluate — manual reading (plan 2–3 hours).**
 1. Read at least one full episode per model.
-2. For 6 answers across models, check Label A and Label B by hand against the trace.
-3. Check no episode came close to `num_ctx` (prompt tokens > 90% of `num_ctx` means silent context loss risk → go back to S21 and adjust, with a log entry).
-4. Any systematic technical problem (a model never calls tools, JSON always fails) → back to S21 (model choice), log it.
+2. Check Label A and Label B by hand for 6 answers across models.
+3. Any episode with prompt tokens above 90% of `num_ctx` risks lost context: return to S21 (log it).
+4. Systematic technical problems (a model never calls tools; JSON always fails): return to S21 (log it).
 
 **Decide.** Proceed, or return to S21. Log.
 
@@ -1156,7 +1153,9 @@ Tests with toy data:
 - UNRESOLVED answers never counted
 - three agents take the same wrong relation at the same node → PCF_REL3=1
 - shared off-path node → PCF_NODE3=1
-- pairwise agreement on a hand-computed example
+- pairwise agreement on a hand-computed example; a pair with no shared-error queries → NA
+- a primary path violating both hops → two wrong-turn events
+- PCF_NODE ignores s and the answer itself
 ```
 
 **Evaluate.** Read the toy tests and confirm each expected value against protocol §16 yourself.
@@ -1171,17 +1170,18 @@ Tests with toy data:
 
 **Prompt.**
 ```text
-Implement protocol §17 exactly in src/cofail_kg/evaluation/null_models.py:
-nulls N1 (uniform over C_iq) and N2 (page-1 restricted), 10,000 trials, seed 42,
-per-query null probabilities, aggregate null distribution of totals, 95th percentile,
-exceedance p, for CF3 and CF4, overall and hop-1-clean subset.
-Use independent, seeded random streams per query so results do not depend on query order.
+Implement protocol §17 exactly in src/cofail_kg/evaluation/null_models.py: nulls N1, N1-H1 and
+N2, each with its own pool, observed set and observed total (O_N1, O_H1, O_N2) as in the §17
+table; 10,000 trials; the §17 random-number scheme (SeedSequence([42, h, v]), agents in ascending
+order, Generator.choice without replacement on pools sorted by numeric ID); per-query null
+probabilities; aggregate totals, 95th percentile and p — for the 3-agent and 4-agent versions.
 
 Tests:
 - REQUIRED: all agents give the same single wrong answer, each saw 200 other wrong
   candidates of Type_T → null CF3 probability is small (< 0.01)
-- tiny pools (each agent's pool has exactly its answer) → null probability 1
-- k_iq never exceeds |C_iq| (assert)
+- tiny pools: every agent's pool contains only the same single entity, which each agent
+  answered → null probability 1
+- each observed set is a subset of its pool, for N1, N1-H1 and N2 (assert)
 - determinism: same seed, same result; query order shuffled, same result
 - aggregate: hand-checkable case with two queries
 ```
@@ -1203,14 +1203,16 @@ Implement src/cofail_kg/agents/panel_runner.py and scripts/25_run_panel.py:
 - Runs the four frozen agents on a manifest, one model at a time (all queries for agent 1,
   then agent 2, ...). Agents never share state (protocol §9.2).
 - Verifies model digests and config hashes before starting; refuses to run on mismatch.
-- Checkpoints after every episode; on restart skips completed episodes (by file existence
-  and a completed-status check) and never overwrites.
+- Checkpoints after every episode; on restart skips every completed episode — a record with
+  ANY §9.5 status, including failures (protocol §19) — and never overwrites. Failed episodes
+  are rerun only through the HOLD procedure, as new attempts under a new run ID.
 - Writes a progress file (episodes done / total, failures so far).
 - After the run: evaluation (S16–S19, S23, S24) → results/runs/<run_id>/analysis/.
 Tests: resume after a simulated crash (no duplicates, nothing missing), digest mismatch
 refusal, write-once.
 
-Then run the smoke manifest (4 queries × 4 agents = 16 episodes) as run_id "smoke_panel".
+Then run the smoke manifest (4 queries × 4 agents = 16 episodes) as run_id "smoke_panel",
+and run the protocol §19.1 leakage test on the smoke queries.
 Halfway through, I will stop the process; tell me the exact moment to press Ctrl+C.
 Then restart the same command and confirm completion without duplicates.
 Produce results/runs/smoke_panel/analysis/ and an audit sheet
@@ -1222,6 +1224,7 @@ episode, answer_id, label_A, label_B, primary_path, my_label_A, my_label_B, note
 
 **Evaluate — your manual audit.**
 1. Do the kill-and-resume exactly as instructed; check the episode count is 16 with no duplicates.
+   (If audit selection finds fewer than 8 eligible episodes, audit all that exist — protocol §19.1.)
 2. Fill `my_label_A` and `my_label_B` for every answer in the audit sheet by reading the traces. Any disagreement is either your mistake or a bug — resolve it (bug-found prompt).
 3. Check all D4 conditions.
 
@@ -1240,12 +1243,12 @@ episode, answer_id, label_A, label_B, primary_path, my_label_A, my_label_B, note
 **Prompt.**
 ```text
 Do not modify anything. Check every condition of Gate D5 in docs/decision_rules.md:
-1. List any [TBD@Sx] with x ≤ 26 remaining in the protocol or decision rules.
+1. List any unfilled [TBD@Sx] with x ≤ 26, and any unconfirmed [DEFAULT] with stage ≤ 26.
 2. Run the full test suite.
 3. git status must be clean; print the commit hash.
-4. Recompute PrimeKG SHA256 and BioHopR revision; compare with recorded values.
-5. Compare installed model digests with configs/models.yaml.
-6. Recompute the pilot manifest hash; compare with configs/pilot.yaml.
+4. Recompute every hash listed in configs/frozen_hashes.yaml (KG fingerprint, relation mapping,
+   tool schema, prompt template, pilot manifest, pilot agent-input sheet) and compare.
+5. Compare the BioHopR revision and the installed model digests with frozen_hashes.yaml.
 Report PASS/FAIL per condition and the overall D5 result.
 ```
 
@@ -1271,7 +1274,7 @@ ask. If the process stops, tell me the resume command; do not edit anything.
 
 **While it runs.**
 - Check `progress` occasionally. A few failures are normal.
-- If failures pile up with the same error (e.g., every episode of one model times out), **stop**. This is a technical problem: fix it with the bug-found prompt (no definition changes), log it, and resume. Episodes that already completed stay.
+- If failures pile up with the same error (e.g., every episode of one model times out), **stop the run first**. Fix it with the bug-found prompt (no definition changes) and follow protocol §19 "code changes during a run": earlier episodes are kept only if a decision-log entry explains why the fix cannot have affected them; otherwise they are rerun as new attempts under the new commit.
 - Back up `results/runs/pilot_v1/` after each session.
 
 **Evaluate.** 400 episode records exist (or failures are explicitly recorded). No duplicates.
@@ -1295,13 +1298,16 @@ Tables:
    UNGROUNDED rate; benchmark P/R/F1; hop-1 statuses; early-stop share; budget-hit share.
 3. Co-failure: CF3^Q, CF4^Q (all / grounded / hop-1-clean), CF3^BH, CF4^BH, PCF_REL3/4,
    PCF_NODE3/4, PCF_SHORTCUT3; pairwise error agreement matrix.
-4. Chance baselines: N1 and N2 for CF3 and CF3^{Q,H1}: observed, null mean, 95th percentile, p.
+4. Chance baselines: N1 vs O_N1, N1-H1 vs O_H1, N2 vs O_N2 (protocol §17): observed total,
+   null mean, 95th percentile, p — 3-agent and 4-agent versions.
 5. Strata: all co-failure metrics by ambiguity tag, by SINGLE/MULTI bridge, by relation type.
-6. Ordering: distribution of chosen bridge ranks; FIRST_SEEN_PAGE of shared wrong answers.
+6. Ordering: distribution of explored-bridge ranks (§15); FIRST_SEEN_PAGE of shared wrong answers;
+   list sizes (fan-out) on the primary paths of shared wrong answers.
 7. Case sheets: for EVERY query with CF3^{Q,H1}=1, one page: the question, each co-failing
    agent's primary path to the shared entity, reason codes, the shared node's degree
    percentile, ambiguity tag.
-Also compute the D6 quantities (E, H, N, O vs null, P) but do not state the outcome.
+Also compute the D6 quantities (E on latest attempts, H, N, O_H1 vs N1-H1, P) and both
+interpretation flags, but do not state the outcome.
 ```
 
 **Evaluate — the most important reading of the project.**
@@ -1342,14 +1348,15 @@ step (S30 expansion, or descriptive write-up). Discuss with your supervisor befo
 These stages depend on the pilot. Protocol §21 is frozen at S29 (after D6, before S30); the
 prompts below are templates to be adjusted to that frozen version.
 
-## S30 — Expand to 500 → Gate D7
+## S30 — Run the expansion reserve → Gate D7
 
 ```text
-Run scripts/25_run_panel.py --manifest expansion --run-id pilot_v1 (same run, adding the 400
-expansion queries). Everything frozen stays identical; verify with the S26 checks first.
-Then regenerate the report for all 500 queries (S28 script) and compute D7's quantities,
-including C = candidates meeting protocol §21's candidate rule with an available matched
-control. Do not state the outcome.
+First repeat the S26 checks, adding the expansion manifest and expansion agent-input sheet hashes
+from configs/frozen_hashes.yaml. Then run scripts/25_run_panel.py --manifest expansion
+--run-id expansion_v1. Everything frozen stays identical.
+Regenerate the report over pilot + expansion queries (S28 script) and compute D7's quantities,
+including C = number of candidate queries meeting the protocol §21 candidate rule (frozen at S29)
+with a matched control. Do not state the outcome.
 ```
 You apply D7 yourself and log it.
 
@@ -1357,14 +1364,13 @@ You apply D7 yourself and log it.
 
 ```text
 Using only the frozen 500-query analysis, list every query meeting the protocol §21 candidate
-rule. For each: shared entity, shared structural feature (edge, relation branch at a node, or
-off-path node), mechanism (SHORTCUT / WRONG_RELATION_HOP1 / WRONG_RELATION_HOP2 / off-path
-node / fan-out), whether a SUPPORTED route remains after blocking it, and up to 3 matched-
-control candidates per the §21 matching rule. Write results/interventions/candidates.csv.
-Do not select cases; list all.
+rule (frozen at S29). For each: shared entity, the shared feature chosen by the §21 rule, its
+mechanism (SHORTCUT / WRONG_RELATION_HOP1 / WRONG_RELATION_HOP2 / OFF_PATH_NODE), whether a
+valid route (§21) remains after blocking it, and up to 3 matched-control candidates by the §21
+matching rule. Write results/interventions/candidates.csv. Do not select cases; list all.
 ```
-You freeze: included mechanisms, candidate list, one control per case (the closest match by the
-§21 rule — decide the tie-break rule before looking at any outcomes). Log.
+You choose one control per case: the closest by the §21 rule (if tied, the one with the smaller
+numeric node ID — written in the decision log before any intervention runs).
 
 ## S32 — Surgery overlay
 
@@ -1380,7 +1386,7 @@ results; nothing else changes; no overlay leaks into other queries.
 
 ```text
 For each frozen candidate, build the treatment overlay and the control overlay from
-results/interventions/candidates.csv. Verify for both: a SUPPORTED route to T_q remains,
+results/interventions/candidates.csv. Verify for both: a valid route (protocol §21) remains,
 only the intended edges are removed. Write results/interventions/manifest.jsonl.
 ```
 
@@ -1413,7 +1419,8 @@ the "observed facts" section.
 
 ## S37 — Final scale decision → Gate D8
 
-Apply D8; log it. If scaling, repeat S30–S36 on new manifests drawn with the same procedure.
+Apply D8; log it. If scaling, draw new sets with the protocol §8 algorithm from queries not yet
+drawn (D8), then repeat S30–S36.
 
 ## S38 — Final analysis and thesis tables
 

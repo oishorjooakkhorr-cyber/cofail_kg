@@ -23,7 +23,10 @@ S0
 - Pilot commit hash (S26):
 
 ## Known issues
-(none)
+## Fix at stage (deferred from the S1 audits)
+- S13: how OUT_OF_MEMORY is detected (engineering; decided in code and documented).
+- S29: final freeze of protocol §21 (mechanism list, control tie-break), using pilot results.
+- Every stage: Claude Code lists its engineering choices at the end; record any that matter here.
 
 ## Next action
 Start S0 in docs/pipeline_runbook.md.
