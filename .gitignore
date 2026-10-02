@@ -9,3 +9,5 @@ data/cache/*
 results/runs/*
 !results/runs/.gitkeep
 src/*.egg-info/
+.pytest_cache/
+.claude/settings.local.json
