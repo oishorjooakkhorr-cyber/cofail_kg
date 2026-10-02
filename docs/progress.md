@@ -1,10 +1,11 @@
 # Progress — CoFail-KG
 
 ## Current stage
-S0 — not started
+S2 — BioHopR loader
 
 ## Completed stages
 S0
+S1
 
 ## Latest commit
 —
@@ -29,4 +30,4 @@ S0
 - Every stage: Claude Code lists its engineering choices at the end; record any that matter here.
 
 ## Next action
-Start S0 in docs/pipeline_runbook.md.
+Start S2 in docs/pipeline_runbook.md
