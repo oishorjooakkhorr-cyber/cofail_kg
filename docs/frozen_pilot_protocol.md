@@ -48,6 +48,7 @@ gate outcome.**
 | **n** | Number of agents: 4 (§9.2). |
 | **Episode** | One agent answering one query once. A rerun of the same (query, agent) is a new **attempt** (§19). |
 | **Primary population** | The queries eligible for sampling (§7.2). |
+| **Answer set** | BioHopR answer lists are treated as sets: order and repeated names are ignored. Every comparison of answer lists in this protocol is a set comparison. |
 
 **Source.** Own.
 
@@ -189,7 +190,7 @@ first 30 rows whose query entity and bridge both resolve (all such rows if fewer
 - **Hop-1 score:** share of rows where an edge between the row's `s` and its bridge has a label in
   the set (edge convention §3.2).
 - **Hop-2 score:** share of rows where the targets reached from the row's bridge through the set
-  (type Type_T, excluding `s`) exactly equal the row's resolved answer list. A row with any answer
+  (type Type_T, excluding `s`) exactly equal the row's resolved answer set (§0.4). A row with any answer
   name that does not resolve counts as not matching.
 
 **Selection, per hop:** highest score; ties broken by the smallest set; any remaining tie is

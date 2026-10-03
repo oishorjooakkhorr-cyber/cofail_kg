@@ -41,3 +41,9 @@ Decision: BioHopR revision `08f06692c3900347e7405ba55ff6a6d330f55ddb` (from data
 Why: The revision is the dataset commit downloaded at S2 (7,633 2-hop records; the 12 relation-type counts match the paper exactly). `hop2_question_multi` is the only 2-hop field that asks for all answers ("Name all …"); `hop2_question` and `prompt` are single-answer forms.
 Data seen before deciding: S2 inspection outputs (field list, results/diagnostics/biohopr/inspection_20.md, hop1_in_question.csv, question-field candidates with examples). No agent outputs.
 Changes to protocol or decision rules: protocol §3.1 (Revision and Question-text rows filled in; status [TBD@S2] → [FROZEN] at S2).
+
+## 2026-10-02 — S3 — Answer lists compared as sets
+Decision: All comparisons of BioHopR answer lists are set comparisons (order and repeats ignored).
+Why: Order in BioHopR answer lists has no meaning; the old wording ("answer list") could be read as order-sensitive, which would affect the S6 mapping scores.
+Data seen before deciding: none
+Changes to protocol or decision rules: protocol §0.4 (new term), §5.1 wording; runbook S3 item 4.

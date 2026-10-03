@@ -349,7 +349,9 @@ in results/diagnostics/biohopr/:
 3. largest_answers.csv: the 20 rows with the most answers.
 4. duplicate_questions.csv: group rows by identical 2-hop question text; for each group with
    more than one row, report how many distinct bridges (hop1 values) and distinct answer
-   lists it has.
+   sets it has. Compare answer lists as sets (order and repeated names ignored; names compared
+   as exact strings), per protocol §0.4.
+   Also report how many rows contain the same answer name more than once.
 5. summary.json with the key numbers.
 Add tests on a tiny synthetic table. Do not choose any threshold.
 ```
