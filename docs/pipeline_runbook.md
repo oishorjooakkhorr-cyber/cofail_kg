@@ -488,7 +488,9 @@ ambiguity tags by code. No agent exists yet, and no manual judgment is needed.
 
 **Prompt.**
 ```text
-Implement protocol §5 exactly. Use the field roles frozen at S5 and the type map from S4.
+Implement protocol §5 exactly, including the answer-construction rule of §5.3. Use the field
+roles frozen at S5, the type map from S4, and the §12 reference policy in
+src/cofail_kg/evaluation/normalize.py (v1.3.3, with the disease-suffix retry).
 
 For each of the 12 relation types:
 1. List hop-1 candidate labels (connecting Type_S and Type_B) and hop-2 candidate labels
@@ -496,17 +498,29 @@ For each of the 12 relation types:
    information.
 2. Draw the validation sample exactly as §5.1 says (SHA256("42" + row_id) ordering, first 30
    rows whose query entity and bridge resolve); report how many rows were skipped as unresolved.
-3. For every non-empty subset of candidates, compute the hop-1 score and the hop-2 score (§5.1).
-4. Select per hop by §5.1 (highest score, then smallest set). If a tie remains, report it as a
-   TIE and do not choose.
-5. Compute the ambiguity tag per relation type by the §5.2 rule.
-6. Compute the D1 quantities from docs/decision_rules.md and the D1 outcome.
+3. For every non-empty subset of hop-1 candidates, compute the hop-1 score (§5.1). Select hop 1
+   by §5.1 (highest score, then smallest set). If a tie remains, report it as a TIE and do not
+   choose; then report the UNION hop-2 scores of step 4 for each tied hop-1 set.
+4. For every non-empty subset of hop-2 candidates, compute the hop-2 score under BOTH
+   constructions (§5.1): BRIDGE (targets of the row's bridge) and UNION (targets of every Type_B
+   node reached from s through the selected hop-1 set). Select hop 2 separately under each
+   construction by §5.1 (highest score, then smallest set; a remaining tie is reported as a TIE).
+5. Adopt the answer construction by §5.3: a construction passes if its selected hop-2 score
+   reaches the D1 hop-2 threshold (90%); exactly one passes -> adopt it; both pass -> BRIDGE;
+   neither passes -> the type fails D1 on hop 2 (report both scores). The type's R2 and hop-2
+   score are those of the adopted construction.
+6. Compute the ambiguity tag per relation type by the §5.2 rule, using the adopted R2.
+7. Compute the D1 quantities from docs/decision_rules.md and the D1 outcome, using the adopted
+   construction's hop-2 score.
 
 Write:
-- results/semantics/relation_mapping_candidates.csv (every candidate set, both scores)
-- results/semantics/relation_mapping_proposed.json
+- results/semantics/relation_mapping_candidates.csv (every candidate set; hop-1 score, and the
+  BRIDGE and UNION hop-2 scores)
+- results/semantics/relation_mapping_proposed.json (per type: R1, R2 and hop-2 score under each
+  construction, adopted construction, and why)
 - results/semantics/relation_ambiguity_tags.csv
-- results/semantics/d1_report.md
+- results/semantics/d1_report.md (per type: both hop-2 scores and the adopted construction; D1
+  counts reported overall and split by construction, BRIDGE / UNION)
 Do not freeze anything.
 ```
 
@@ -519,16 +533,20 @@ Do not freeze anything.
 3. For any TIE, decide yourself from the failing rows; log it.
 4. Look at the ambiguity tags: how many relation types are NONE? That is the size of your
    "clear wording" pile later.
+5. Check each type's adopted construction against §5.3 (BRIDGE if both pass). How many types are
+   BRIDGE and how many UNION?
 
 **Prompt, part 2 (after D1 says PROCEED).**
 ```text
-Freeze the mapping I approved: write results/semantics/relation_mapping.json, mark excluded
-relation types, recompute relation_ambiguity_tags.csv from the frozen mapping, and add
+Freeze the mapping I approved: write results/semantics/relation_mapping.json (per relation type:
+R1, R2 and the adopted answer construction, BRIDGE or UNION), mark excluded relation types,
+recompute relation_ambiguity_tags.csv from the frozen mapping, and add
 relation_mapping = SHA256 of relation_mapping.json to configs/frozen_hashes.yaml.
 Change nothing else.
 ```
 
-**Decide.** Gate **D1**; mapping frozen; tags frozen; excluded types listed. Log all, with numbers.
+**Decide.** Gate **D1**; mapping and answer constructions frozen (§5.3 result); tags frozen;
+excluded types listed. Log all, with numbers.
 
 **Commit.** `S6: relation mapping and ambiguity tags (D1: PROCEED)`
 
@@ -552,19 +570,24 @@ Create src/cofail_kg/evaluation/reference_sets.py and scripts/07_build_reference
 1. Resolve each row's query entity (reference policy, Type_S). Group rows by (resolved node s,
    relation type); a row whose query entity does not resolve forms its own query.
    query_id = row_id of the lowest-index row. Record each query's row_ids and question texts.
-2. Resolve each gold bridge (Type_B) and gold answer (Type_T) with the reference policy.
-   Implement the protocol §12 REFERENCE policy in src/cofail_kg/evaluation/normalize.py (the agent
-   policy comes at S16).
+2. Resolve each gold bridge (Type_B) and gold answer (Type_T) with the reference policy in
+   src/cofail_kg/evaluation/normalize.py (§12 v1.3.3, with the disease-suffix retry; already
+   implemented — do not change it; the agent policy comes at S16).
 3. Compute T_q(b), B_q (bridges with non-empty T_q(b)), dead-end bridges, T_q, and T_q^{B*}
-   with the frozen relation_mapping.json and the §3.2 edge convention.
+   with the frozen relation_mapping.json and the §3.2 edge convention. Then set the construction
+   reference G_q from the relation type's frozen answer construction (§5.3, §6): G_q = T_q^{B*}
+   for BRIDGE, G_q = T_q for UNION.
 Output to data/processed/:
 - reference_queries.parquet: query_id, row_ids, s, gold bridges, Type_S/B/T, relation type,
-  sizes of B_q, dead-end set, T_q, T_q^{B*}, A*_q; unresolved names listed
+  answer construction (BRIDGE / UNION), sizes of B_q, dead-end set, T_q, T_q^{B*}, G_q, A*_q;
+  unresolved names listed, and names resolved only by the disease-suffix retry flagged
 - reference_targets.parquet: one row per (query_id, bridge, target) for b in B_q, t in T_q(b)
+Report all counts overall and split by construction (BRIDGE / UNION).
 Tests on a synthetic graph: one bridge; several bridges; a target via two bridges; a dead-end
 bridge (excluded from B_q); no valid bridge; two rows of the same query merged correctly;
 type filtering; two names resolving to one node grouped together; an unresolvable query entity
-forming its own query. Nothing agent-facing may import these files.
+forming its own query; G_q = T_q^{B*} for a BRIDGE type and G_q = T_q for a UNION type.
+Nothing agent-facing may import these files.
 ```
 
 **Evaluate.**
@@ -572,6 +595,8 @@ forming its own query. Nothing agent-facing may import these files.
    entity's neighbors through the R1 label(s) of type Type_B; compare with the bridges in the output.
 2. For one bridge, list its R2 neighbors of type Type_T; compare with `reference_targets.parquet`.
 3. Find a query built from two or more rows (if any) and check its gold answers are the union.
+4. For one query of a UNION type (if any), check G_q equals T_q; for one BRIDGE-type query, check
+   G_q equals T_q^{B*}.
 
 **Decide.** Nothing.
 
