@@ -47,3 +47,12 @@ Decision: All comparisons of BioHopR answer lists are set comparisons (order and
 Why: Order in BioHopR answer lists has no meaning; the old wording ("answer list") could be read as order-sensitive, which would affect the S6 mapping scores.
 Data seen before deciding: none
 Changes to protocol or decision rules: protocol §0.4 (new term), §5.1 wording; runbook S3 item 4.
+
+## 2026-10-12 — S4 — Surrounding whitespace in name lookup
+Decision: The researcher approved trimming leading and trailing whitespace as well as collapsing
+internal whitespace for S4 name lookup. Original node names remain unchanged in the cache.
+Why: Clarifies the open §12 normalization detail noted for S5; names such as "acne " must match "acne".
+Data seen before deciding: docs/progress.md and docs/S4_findings.md; the researcher was shown
+the "acne " example and answered "Yes—trim surrounding spaces too". No agent outputs.
+Changes to protocol or decision rules: none in this implementation. The approval is recorded here;
+the explicit clarification of protocol §12 remains for the researcher to authorize with the S4 updates.
