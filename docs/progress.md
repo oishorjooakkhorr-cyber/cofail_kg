@@ -122,7 +122,9 @@ The §3.3 identity type map was confirmed and frozen with researcher approval on
 The researcher subsequently authorized S4 completion. Final checks passed: 45 tests,
 raw-input/cache validation, frozen metadata SHA256 comparison, and the 17-neighbour real check.
 Answer construction resolved (option C, 2026-10-12). No S5 work has been performed.
-Runbook S6/S7 steps still describe only T_q^{B*}; align them with protocol §5.3 before S6.
+DONE (2026-10-13, 4d18892): runbook S6/S7 aligned with protocol §5.3 (BRIDGE and UNION scored,
+construction adopted per type, BRIDGE if both pass, G_q at S7, results split by construction).
+BEFORE S8/S17: update the remaining T_q^{B*} wording in runbook S8 and S17.
 Field-role support defined in protocol §3.1 (v1.3.1, 2026-10-13); runbook S5 step 3 matches.
 DECIDED (v1.3.2, 2026-10-13): global-stop policy if drug:effect/phenotype:disease (5 rows, no
 disjoint preview evidence) fails S5 — a single failing type is excluded (FAIL in Gate D1); S5
@@ -139,5 +141,6 @@ deficiency (disease)" (84142) and "insomnia (disease)" (32033) — the same " (d
 pattern as the 135 S2 rows. Decided (v1.3.3, 2026-10-13): §12 now retries a disease-typed name
 with " (disease)" appended (exactly one match only); all 152 such answer names in 115 rows
 resolve; the S5 outcome is unchanged.
-BEFORE S6: implement the §12 suffix retry in name resolution, with tests.
+DONE (2026-10-13, 4d18892): §12 suffix retry implemented in src/cofail_kg/evaluation/normalize.py
+(reference policy), 7 unit tests; all 152 previously unresolved answer names now resolve.
 S6 has not started. Start S6 in docs/pipeline_runbook.md when instructed.
