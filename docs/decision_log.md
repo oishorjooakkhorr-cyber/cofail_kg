@@ -226,3 +226,25 @@ bc5d3fd2…); the three hand-checks; earlier, results/diagnostics/s5_field_role_
 (exploratory, disjoint rows). No agent outputs.
 Changes to protocol: §3.1 Field roles row ([TBD@S5] → [FROZEN] at S5). Header unchanged (1.3.2),
 following the S2 and S4 precedent of filling [TBD@Sx] values without a version change.
+
+## 2026-10-13 — S5 — Disease-suffix name fallback (§12, protocol v1.3.3)
+Decision: In the §12 reference policy, if no node of the filter type matches and the filter type
+is disease, retry once with " (disease)" appended to the normalized name; accept only if exactly
+one disease node matches, otherwise unresolved. The §12 agent policy applies the same retry when
+matching names against Type_T = disease, before the any-type fallback. Disease-typed only.
+Why: 152 answer names in 115 rows (43 distinct strings, all with a trailing space) do not resolve
+under §12 as written, and all 152 resolve to exactly one disease node with " (disease)" appended.
+They are in effect/phenotype:drug:disease (59 of 215 rows) and gene/protein:drug:disease (56 of
+462 rows). Under §5.1 those rows would count as not matching for a naming reason. No hop2 or hop1
+name is affected.
+Sensitivity check: under the new rule the three S5 rows with unresolved answers (BH2_04897,
+BH2_05290, BH2_05493) all resolve fully and still support the roles; gene/protein:drug:disease
+becomes 5/5 resolvable and supporting, effect/phenotype:drug:disease stays 5/5. The S5 outcome
+(ROLES_SUPPORTED, 0 failing types) is unchanged. Verified by re-running the S5 row analysis on
+those rows with the retry.
+Data seen before deciding: results/diagnostics/suffix_preview* (exploratory, all 7,633 rows);
+docs/S4_findings.md Report 2, including its simulated hop-2 scores for these two types (0.73 and
+0.80); the S5 results (results/semantics/field_roles*). No agent outputs. S6 has not run.
+Unchanged: the 2026-10-12 trimming decision; decision_rules.md; all thresholds.
+Changes to protocol: §12 reference policy (retry sentence) and agent policy step 2 (same retry
+for Type_T = disease, before the any-type fallback); header v1.3.3. Logged in docs/CHANGES.md.

@@ -62,3 +62,12 @@ more than 1% of the 7,633 2-hop rows. Sample, ordering, 95% threshold and Suppor
 unchanged; the runbook S5 prompt matches. `decision_rules.md` Gate D1 now lists the §3.1 failure as
 a Type FAIL trigger, with no 2-day investigation (re-admission after seeing the S5 sample would be
 post hoc). Decision log: "S4 — Field-role failure handling (§3.1, protocol v1.3.2)".
+
+## Amendment 2026-10-13 (S5) — disease-suffix name fallback (protocol v1.3.3)
+
+Protocol version 1.3.2 → **1.3.3 (2026-10-13)**. §12 name resolution gains one retry: when no
+disease node matches a name, " (disease)" is appended and the name is accepted if exactly one
+disease node then matches. It applies to the reference policy and, for Type_T = disease, to the
+agent policy before its any-type fallback. It fixes 152 BioHopR answer names (115 rows) that drop
+PrimeKG's " (disease)" suffix. Trimming, thresholds and decision rules are unchanged. Decision log:
+"S5 — Disease-suffix name fallback (§12, protocol v1.3.3)".

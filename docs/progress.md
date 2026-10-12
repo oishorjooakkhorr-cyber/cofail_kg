@@ -61,8 +61,9 @@ S5 — completed 2026-10-13: field roles verified (hop2 = query entity, hop1 = b
   Results: results/semantics/field_roles* (code commit 5ae77f6). 20 new tests; 74 pass.
 
 ## Latest commit
-`S5: field roles verified` (this update). Code: 5ae77f6 (S5 field-role verification code).
-Earlier: edc9b3e (protocol v1.3.2, field-role failure handling);
+`S5: amend protocol to v1.3.3 - disease-suffix name fallback (§12)` (this update).
+Earlier: 962637b (team update for S4 and S5); ea4b980 (S5 field roles verified); 5ae77f6 (S5
+field-role verification code); edc9b3e (protocol v1.3.2, field-role failure handling);
 48b47cb (protocol v1.3.1, field-role support definition); b48952f (protocol v1.3,
 answer construction option C); 7998bb3 (S4 completion checkpoint); a0578b2 (index and CLI),
 d09c66b (preparation).
@@ -135,6 +136,8 @@ S6 note: the unresolved answer names in the S5 sample ("autism" in BH2_04897, "v
 deficiency" in BH2_05290, "insomnia" in BH2_05493) are not type mismatches: they match no
 PrimeKG node of any type, but PrimeKG has disease nodes "autism (disease)" (84310), "vitamin A
 deficiency (disease)" (84142) and "insomnia (disease)" (32033) — the same " (disease)" suffix
-pattern as the 135 S2 rows. Under §12 as written they stay unresolved, so under §5.1 their rows
-count as not matching in the hop-2 score. Not decided: whether this needs any action.
+pattern as the 135 S2 rows. Decided (v1.3.3, 2026-10-13): §12 now retries a disease-typed name
+with " (disease)" appended (exactly one match only); all 152 such answer names in 115 rows
+resolve; the S5 outcome is unchanged.
+BEFORE S6: implement the §12 suffix retry in name resolution, with tests.
 S6 has not started. Start S6 in docs/pipeline_runbook.md when instructed.

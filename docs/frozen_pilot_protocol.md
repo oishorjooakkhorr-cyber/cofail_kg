@@ -1,6 +1,6 @@
 # CoFail-KG — Frozen Pilot Protocol
 
-**Version:** 1.3.2 (2026-10-13) · **Owner:** the researcher · **Implemented by:** Claude Code (read-only for Claude)
+**Version:** 1.3.3 (2026-10-13) · **Owner:** the researcher · **Implemented by:** Claude Code (read-only for Claude)
 **What changed since v1.0:** see `docs/CHANGES.md` (one page).
 
 This file is the single source of truth for every scientific rule in the project. Claude Code
@@ -529,13 +529,18 @@ Two policies, because reference names and agent answers need different handling.
 an exact name match after lower-casing, Unicode NFKC normalization, collapsing internal
 whitespace to a single space, and trimming leading and trailing whitespace,
 considering **only nodes of the filter type**. Exactly one → that node; none or several →
-unresolved.
+unresolved. If no node matches and the filter type is disease, retry once with " (disease)"
+appended to the normalized name: exactly one → that node; otherwise unresolved. (BioHopR drops
+PrimeKG's " (disease)" suffix from some answer names, leaving a trailing space; decision log
+2026-10-13.)
 
 **Agent policy** (each item of an agent's answer list):
 1. **ID:** a string or integer, whitespace-trimmed, equal to a canonical ID → that node. If the given
    name differs from the node's name, log `NAME_ID_MISMATCH` (the ID wins).
 2. **Name:** otherwise, exact match as above. If exactly one matching node has type Type_T → that
-   node. Else, if exactly one node matches in total (of any type) → that node (it will be labeled
+   node. If Type_T is disease and no disease node matches, the reference policy's disease-suffix
+   retry is applied first (exactly one → that node), before the any-type fallback that follows.
+   Else, if exactly one node matches in total (of any type) → that node (it will be labeled
    by §13–14, typically OFF_QUESTION with WRONG_TARGET_TYPE). Otherwise `UNRESOLVED (AMBIGUOUS_NAME)`.
 3. Otherwise `UNRESOLVED (NO_MATCH)`.
 
