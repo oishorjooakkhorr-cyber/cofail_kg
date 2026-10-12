@@ -7,6 +7,7 @@ CoFail-KG is a research project studying co-failure of independent local LLM age
 ### Python
 
 - Tested on **Python 3.14.7** (Windows 11).
+- S4 partial implementation also verified on **Python 3.13.7** (Windows).
 - Supported: **Python >= 3.12** (`requires-python` in `pyproject.toml`). The pinned dependencies in
   `requirements.lock` need 3.12 or newer, and networkx 3.7 does not install on Python 3.14.1
   specifically.
@@ -32,9 +33,8 @@ the same packages without versions; use it only if you deliberately want newer v
 python -m pytest -q
 ```
 
-- On a fresh clone, expect **17 passed, 1 skipped**. The skipped test checks the real BioHopR
-  file and runs only once that file has been downloaded (next section).
-- After downloading BioHopR, expect **18 passed**.
+- One test checks the real BioHopR file and skips until it has been downloaded (next section).
+- S4 unit tests use tiny synthetic graphs and do not require the full PrimeKG download.
 
 ### Get the data
 
@@ -51,7 +51,27 @@ revision `08f06692c3900347e7405ba55ff6a6d330f55ddb` into `data/raw/biohopr/`. It
 against the Hub's SHA256, writes `data/raw/biohopr/metadata.json`, and refuses to overwrite files
 that differ. The pinned revision is also recorded in `configs/frozen_hashes.yaml`.
 
-**PrimeKG**: not used yet. Download instructions will be added with pipeline stage S4.
+**PrimeKG (S4 partial implementation)**: place `kg.csv` and `nodes.csv` from the downloaded
+PrimeKG archive into `data/raw/primekg/`. The current inputs are from Harvard Dataverse,
+DOI `10.7910/DVN/IXA7BM`; the existing release record names v2.1. Keep release details in
+`data/cache/primekg_release.json` separately from machine-written cache metadata.
+
+```bash
+python scripts/04_prepare_primekg.py
+python scripts/inspect_kg.py node "Troglitazone"
+python scripts/inspect_kg.py relations 14813
+python scripts/inspect_kg.py neighbors 14813 --relation drug_effect
+```
+
+Preparation hashes every raw input, verifies endpoint metadata, and creates node/edge Parquet
+tables plus deterministic metadata. Reruns verify the existing cache and refuse changed inputs.
+The inspection CLI returns complete JSON and writes load timing to stderr. Name lookup trims
+surrounding whitespace and collapses internal whitespace, following the researcher's S4 decision.
+
+S4 protocol confirmation is pending: use `--freeze` on the preparation command only after that
+confirmation, to record `kg_fingerprint` in `configs/frozen_hashes.yaml`. See
+`docs/S4_implementation.md` for results and the remaining items. Troglitazone has 17 direct
+side-effect neighbours; the older runbook's 202 check still awaits correction.
 
 ### Regenerate results
 
@@ -62,6 +82,8 @@ complete. Scripts are numbered by stage and run from the repository root.
 |---|---|---|
 | S2 | `python scripts/02_download_biohopr.py` | `data/raw/biohopr/` (not in git) |
 | S2 | `python scripts/02_inspect_biohopr.py` | `results/diagnostics/biohopr/inspection_20.md`, `hop1_in_question.csv` |
+| S3 | `python scripts/03_biohopr_diagnostics.py` | `results/diagnostics/biohopr/` |
+| S4 | `python scripts/04_prepare_primekg.py` | PrimeKG cache and metadata under `data/cache/` (not in git) |
 
 The S2 inspection outputs are committed. After running the script, `git diff` should be empty.
 
@@ -84,4 +106,5 @@ The S2 inspection outputs are committed. After running the script, `git diff` sh
   `knowlab-research/BioHopR`. Its dataset card declares the **MIT** license. This repository does
   not redistribute the dataset, but `results/diagnostics/biohopr/` quotes a sample of its rows.
 - **PrimeKG** — the biomedical knowledge graph that BioHopR is built from and that the agents will
-  query. Its source and license terms will be recorded when it is added (stage S4).
+  query. The S4 input source is Harvard Dataverse, DOI `10.7910/DVN/IXA7BM`; raw data and cached
+  tables are not redistributed by this repository. Source license terms remain to be recorded.

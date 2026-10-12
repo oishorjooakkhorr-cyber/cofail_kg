@@ -1,0 +1,60 @@
+{
+  "elapsed_seconds": 25.42778520000138,
+  "index_load_seconds": 6.570306600002368,
+  "memory_measurement": "Actual Python process peak working set; includes imports, index load, queries and independent chunked raw-CSV verification.",
+  "process_peak_working_set_bytes": 923447296,
+  "python": "3.13.7",
+  "raw_csv_relation_checks": 4,
+  "relations": [
+    {
+      "display_labels": [
+        "synergistic interaction"
+      ],
+      "label": "drug_drug",
+      "neighbor_count": 1129,
+      "neighbor_types": [
+        "drug"
+      ]
+    },
+    {
+      "display_labels": [
+        "side effect"
+      ],
+      "label": "drug_effect",
+      "neighbor_count": 17,
+      "neighbor_types": [
+        "effect/phenotype"
+      ]
+    },
+    {
+      "display_labels": [
+        "enzyme",
+        "target",
+        "transporter"
+      ],
+      "label": "drug_protein",
+      "neighbor_count": 30,
+      "neighbor_types": [
+        "gene/protein"
+      ]
+    },
+    {
+      "display_labels": [
+        "indication"
+      ],
+      "label": "indication",
+      "neighbor_count": 2,
+      "neighbor_types": [
+        "disease"
+      ]
+    }
+  ],
+  "side_effect_count": 17,
+  "troglitazone": {
+    "id": "14813",
+    "name": "Troglitazone",
+    "source": "DrugBank",
+    "source_id": "DB00197",
+    "type": "drug"
+  }
+}
