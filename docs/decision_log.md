@@ -161,3 +161,22 @@ Changes to protocol or decision rules: protocol §5.1 (hop-2 score per construct
 order), new §5.3 (construction rule, tie rule, split reporting), §6 (G_q; source note), §7.1
 (condition 5; GOLD_MISSING_FROM_KG and EXTRA_TARGETS use G_q), §13 (rules 3–4 use G_q).
 decision_rules.md unchanged. Logged in docs/CHANGES.md.
+
+## 2026-10-13 — S4 — Field-role support defined (§3.1, protocol v1.3.1)
+Decision: Add a "Support" definition to the §3.1 field-role verification rule. A sampled row is
+resolvable if hop2 resolves as Type_S, hop1 as Type_B, and at least half (and at least one) of
+its distinct answer names resolve as Type_T; unresolvable rows are reported and left out of the
+95% denominator. A resolvable row supports the working hypothesis if hop2 and hop1 are adjacent,
+at least one resolved answer is a Type_T neighbour of hop1, and every resolved answer is a
+Type_T neighbour of hop1 or of another Type_B neighbour of hop2 (s never counts). Any label
+counts; labels are selected at S6. S5 reports per-row answer and reach counts and does not
+determine the answer construction (§5.3, S6).
+Why: The previous wording assumed BRIDGE answers (answers are neighbours of the stored bridge),
+so S5 would stop on UNION rows whose field roles are correct.
+Data seen before deciding: docs/S4_findings.md Report 2, and
+results/diagnostics/s5_field_role_preview.csv (55 rows at positions 6–10 per relation type,
+disjoint from the S5 sample, exploratory). The S5 sample itself was not viewed. No agent outputs.
+Unchanged: the 5-row sample, the SHA256("42" + row_id) ordering, the 95% threshold and the
+every-relation-type rule.
+Changes to protocol or decision rules: protocol §3.1 (new Support paragraph); header v1.3.1;
+runbook S5 prompt step 3. decision_rules.md unchanged. Logged in docs/CHANGES.md.

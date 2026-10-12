@@ -2,7 +2,7 @@
 
 ## Current stage
 S4 complete — PrimeKG frozen and indexed. Answer construction decided (option C, 2026-10-12).
-S5 has not started.
+Field-role support defined (protocol v1.3.1, 2026-10-13). S5 has not started.
 
 ## Completed stages
 S0
@@ -43,10 +43,18 @@ S4 — completed 2026-10-12: ingestion, index, inspection CLI, protocol fields a
   without --freeze on the local raw files, gave metadata SHA256 bc5d3fd2…2e95 = frozen
   kg_fingerprint exactly. Bookkeeping note: local primekg_release.json records download date
   2026-10-12; the S4 report records 2026-10-10. Not part of the fingerprint; left as is.
+  Field-role support AMENDED 2026-10-13 (protocol v1.3.1): §3.1 now defines resolvable rows
+  (hop2, hop1 and at least half, and at least one, of the answer names resolve) and support
+  (hop2–hop1 adjacent; ≥1 answer via hop1; every answer via hop1 or another bridge of hop2).
+  Runbook S5 step 3 updated to match; decision log and CHANGES.md updated. Sample, ordering,
+  95% threshold and every-type rule unchanged.
+  Exploratory evidence seen before this decision: results/diagnostics/s5_field_role_preview.csv
+  (55 rows, positions 6–10 per type, disjoint from the S5 sample; S5 sample not viewed).
 
 ## Latest commit
-S4 completion checkpoint: `S4: PrimeKG frozen and indexed` (this update).
-Implementation commits: a0578b2 (index and CLI), d09c66b (preparation).
+`S4: amend protocol to v1.3.1 - field-role support definition (§3.1)` (this update).
+Earlier: b48952f (protocol v1.3, answer construction option C); 7998bb3 (S4 completion
+checkpoint); a0578b2 (index and CLI), d09c66b (preparation).
 
 ## Numbers to remember (filled as you go)
 - BioHopR revision (S2): 08f06692c3900347e7405ba55ff6a6d330f55ddb (BioHopR.json SHA256 1adda2f23d305c394537e7b56d3e972b2d8f4141ae716ede54e0d08876eb527d)
@@ -103,4 +111,11 @@ The researcher subsequently authorized S4 completion. Final checks passed: 45 te
 raw-input/cache validation, frozen metadata SHA256 comparison, and the 17-neighbour real check.
 Answer construction resolved (option C, 2026-10-12). No S5 work has been performed.
 Runbook S6/S7 steps still describe only T_q^{B*}; align them with protocol §5.3 before S6.
-Start S5 in docs/pipeline_runbook.md when instructed.
+Field-role support defined in protocol §3.1 (v1.3.1, 2026-10-13); runbook S5 step 3 matches.
+OPEN (not decided):
+- Global-stop policy if drug:effect/phenotype:disease (5 rows, no disjoint preview evidence)
+  fails S5.
+- S6 label-set question for disease:effect/phenotype:drug: the S4 single-label-pair simulation
+  (S4_findings.md Report 2: 32/36 rows follow neither construction) and the any-label preview
+  (5/5 rows: every answer via the stored bridge) disagree.
+S5 has not started. Start S5 in docs/pipeline_runbook.md when instructed.

@@ -43,3 +43,12 @@ all bridges. Each relation type now adopts one construction at S6: **BRIDGE** (`
 CONSISTENT and Label A compare against the adopted one, `G_q` (§6, §7.1, §13). `T_q` stays the
 correctness reference for every type. Results are reported split by construction. Decision log:
 "S4 — Answer construction: option C, per relation type".
+
+## Amendment 2026-10-13 (S4) — field-role support defined (protocol v1.3.1)
+
+Protocol version 1.3 → **1.3.1 (2026-10-13)**. §3.1 now defines when a sampled row is resolvable
+(hop2 and hop1 resolve; at least half, and at least one, of its answer names resolve) and when it
+supports the field roles (hop2–hop1 adjacent; at least one answer via hop1; every answer via hop1
+or another bridge of hop2). This lets UNION rows pass S5 when their roles are correct. The sample,
+ordering, 95% threshold and every-type rule are unchanged; runbook S5 step 3 matches. Decision
+log: "S4 — Field-role support defined (§3.1, protocol v1.3.1)".

@@ -1,6 +1,6 @@
 # CoFail-KG — Frozen Pilot Protocol
 
-**Version:** 1.3 (2026-10-12) · **Owner:** the researcher · **Implemented by:** Claude Code (read-only for Claude)
+**Version:** 1.3.1 (2026-10-13) · **Owner:** the researcher · **Implemented by:** Claude Code (read-only for Claude)
 **What changed since v1.0:** see `docs/CHANGES.md` (one page).
 
 This file is the single source of truth for every scientific rule in the project. Claude Code
@@ -106,6 +106,17 @@ decision gate.
 ordered by `SHA256("42" + row_id)`. For each, test which field connects to which in PrimeKG and
 which field the answers are neighbors of. The roles are accepted only if at least 95% of resolvable
 sampled rows support the same roles in **every** relation type; otherwise stop and investigate.
+
+**Support `[FROZEN]`.** Graph checks use the §3.2 edge convention, the §3.3 type map and the §12
+reference policy, with any label (labels are selected at S6). A sampled row is **resolvable** if
+`hop2` resolves as Type_S, `hop1` as Type_B, and at least half (and at least one) of its distinct
+answer names resolve as Type_T; otherwise it is reported as unresolved and left out of the 95%
+denominator. A resolvable row **supports** the working hypothesis if (1) `hop2` and `hop1` are
+adjacent; (2) at least one resolved answer is a Type_T neighbour of `hop1`; and (3) every resolved
+answer is a Type_T neighbour of `hop1` or of another Type_B neighbour of `hop2`; `s` itself never
+counts as reachable (§6). Per row, S5 reports total, resolved and unresolved answers and the counts
+reachable via the stored bridge, only via another bridge, and via neither. S5 does not determine
+the answer construction (§5.3, S6).
 
 The 12 relation types and their row counts in the paper: Drug:Protein:Disease 3029 ·
 Disease:Drug:Phenotype 949 · Disease:Protein:Drug 899 · Protein:Disease:Drug 577 ·

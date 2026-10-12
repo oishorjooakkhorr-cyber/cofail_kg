@@ -461,7 +461,7 @@ the reference normalization policy (§12).
 For each sampled row:
 1. Resolve the hop1 and hop2 names to PrimeKG nodes; record unresolved or ambiguous names.
 2. Find which labels connect hop1 and hop2.
-3. Measure what share of the answer names are neighbors of hop1 and of hop2.
+3. Test support as defined in protocol §3.1 and report the per-row counts listed there.
 Write results/semantics/field_roles.csv and a per-relation-type summary of the evidence.
 State a conclusion only if the §3.1 rule is met; otherwise stop and report conflicting rows.
 ```
