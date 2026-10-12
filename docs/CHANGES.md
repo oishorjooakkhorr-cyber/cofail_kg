@@ -33,3 +33,13 @@ attempts, random-number details, rate denominators, audit selection, naming ("re
 The protocol fixes only what can change a scientific result or a gate outcome. Engineering details
 are decided in code, tested, and reported by Claude Code at the end of each stage. Audits report
 only scientific problems.
+
+## Amendment 2026-10-12 (S4) — answer construction per relation type (protocol v1.3)
+
+Protocol version 1.2 → **1.3 (2026-10-12)**. This one changes a rule, not only its wording. S4 found that BioHopR builds most answer lists from
+the stored bridge only, but one relation type (disease:drug:effect/phenotype) from the union over
+all bridges. Each relation type now adopts one construction at S6: **BRIDGE** (`T_q^{B*}`) or
+**UNION** (`T_q`), whichever reaches 90% on the hop-2 score; BRIDGE if both do (§5.1, new §5.3).
+CONSISTENT and Label A compare against the adopted one, `G_q` (§6, §7.1, §13). `T_q` stays the
+correctness reference for every type. Results are reported split by construction. Decision log:
+"S4 — Answer construction: option C, per relation type".

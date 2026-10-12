@@ -141,3 +141,23 @@ side-effect neighbours; documentation diff checks passed.
 Changes to protocol or decision rules: none beyond the previously authorized S4 edits.
 The reverse-sample coverage limitation and inferred download date remain documented.
 No S5 work, answer-construction decision, push or merge is included in this closure.
+
+## 2026-10-12 — S4 — Answer construction: option C, per relation type
+Decision: Adopt option C of docs/S4_findings.md Report 2. At S6 each relation type is scored
+under two answer constructions, BRIDGE (stored bridge's targets, T_q^{B*}) and UNION (union over
+all valid bridges, T_q), and adopts the one whose hop-2 score reaches the D1 threshold (90%).
+Tie rule: if both reach 90%, BRIDGE (T_q^{B*}) is adopted. Neither → the type fails D1 on hop 2.
+§7.1 condition 5 and §13 Label A use the adopted construction's reference G_q; all results
+are reported overall and split by construction.
+Why: S4 found that BioHopR builds answer lists per stored bridge in most types but as the
+union over all bridges in disease:drug:effect/phenotype (611 rows). Option C keeps every type
+that follows either construction, at the cost of GOLD meaning different things across types.
+The tie rule was fixed by the researcher before any S6 result was computed.
+Data seen before deciding: docs/S4_findings.md Report 2, which includes a preliminary simulation
+on 30-row samples: per-type hop-2 scores under both constructions, CONSISTENT counts and
+multi-bridge pool sizes. Those label pairs were the investigator's, not the S6 mapping.
+No S6 outputs and no agent outputs.
+Changes to protocol or decision rules: protocol §5.1 (hop-2 score per construction; selection
+order), new §5.3 (construction rule, tie rule, split reporting), §6 (G_q; source note), §7.1
+(condition 5; GOLD_MISSING_FROM_KG and EXTRA_TARGETS use G_q), §13 (rules 3–4 use G_q).
+decision_rules.md unchanged. Logged in docs/CHANGES.md.

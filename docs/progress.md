@@ -1,7 +1,8 @@
 # Progress — CoFail-KG
 
 ## Current stage
-S4 complete — PrimeKG frozen and indexed. S5 has not started; answer-construction decision pending.
+S4 complete — PrimeKG frozen and indexed. Answer construction decided (option C, 2026-10-12).
+S5 has not started.
 
 ## Completed stages
 S0
@@ -34,7 +35,14 @@ S4 — completed 2026-10-12: ingestion, index, inspection CLI, protocol fields a
   7,370/7,633 BioHopR answer lists reproduced exactly from kg.csv. The paper's "202 side effects"
   for Troglitazone is a 2-hop answer-list size (KG has 17), not a release mismatch.
   nodes.tab identical to kg.csv's node set (no isolated nodes; same per-type counts).
-  OPEN DESIGN QUESTION — answer construction (options A/B/C in S4_findings.md): decide before S5.
+  Answer construction DECIDED 2026-10-12: option C (S4_findings.md Report 2). Per relation type at
+  S6: BRIDGE (T_q^{B*}) or UNION (T_q), whichever reaches 90% on hop 2; BRIDGE if both (tie rule
+  fixed before S6 results). Protocol §5.1, §5.3 (new), §6, §7.1, §13 amended; decision log and
+  CHANGES.md updated.
+  Cache reproduction check 2026-10-12 (researcher's machine): this branch's prepare script, run
+  without --freeze on the local raw files, gave metadata SHA256 bc5d3fd2…2e95 = frozen
+  kg_fingerprint exactly. Bookkeeping note: local primekg_release.json records download date
+  2026-10-12; the S4 report records 2026-10-10. Not part of the fingerprint; left as is.
 
 ## Latest commit
 S4 completion checkpoint: `S4: PrimeKG frozen and indexed` (this update).
@@ -93,4 +101,6 @@ with researcher authorization on 2026-10-12. The kg_fingerprint freeze is comple
 The §3.3 identity type map was confirmed and frozen with researcher approval on 2026-10-12.
 The researcher subsequently authorized S4 completion. Final checks passed: 45 tests,
 raw-input/cache validation, frozen metadata SHA256 comparison, and the 17-neighbour real check.
-Resolve answer construction before S5. No S5 work has been performed.
+Answer construction resolved (option C, 2026-10-12). No S5 work has been performed.
+Runbook S6/S7 steps still describe only T_q^{B*}; align them with protocol §5.3 before S6.
+Start S5 in docs/pipeline_runbook.md when instructed.

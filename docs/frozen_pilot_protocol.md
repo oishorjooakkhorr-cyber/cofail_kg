@@ -1,6 +1,6 @@
 # CoFail-KG — Frozen Pilot Protocol
 
-**Version:** 1.2 · **Owner:** the researcher · **Implemented by:** Claude Code (read-only for Claude)
+**Version:** 1.3 (2026-10-12) · **Owner:** the researcher · **Implemented by:** Claude Code (read-only for Claude)
 **What changed since v1.0:** see `docs/CHANGES.md` (one page).
 
 This file is the single source of truth for every scientific rule in the project. Claude Code
@@ -205,13 +205,20 @@ first 30 rows whose query entity and bridge both resolve (all such rows if fewer
 **Scores** (per candidate set, on the validation sample):
 - **Hop-1 score:** share of rows where an edge between the row's `s` and its bridge has a label in
   the set (edge convention §3.2).
-- **Hop-2 score:** share of rows where the targets reached from the row's bridge through the set
-  (type Type_T, excluding `s`) exactly equal the row's resolved answer set (§0.4). A row with any answer
-  name that does not resolve counts as not matching.
+- **Hop-2 score**, computed once per answer construction (§5.3):
+  - **BRIDGE:** share of rows where the targets reached from the row's bridge through the set
+    (type Type_T, excluding `s`) exactly equal the row's resolved answer set (§0.4).
+  - **UNION:** share of rows where the targets reached from the row's `s` through the selected
+    hop-1 set `R1` to any node of type Type_B other than `s`, and from there through the set
+    (type Type_T, excluding `s`), exactly equal the row's resolved answer set (§0.4).
+
+  In both, a row with any answer name that does not resolve counts as not matching.
 
 **Selection, per hop:** highest score; ties broken by the smallest set; any remaining tie is
-reported as a TIE and the researcher decides (decision-log entry). The mapping is chosen only from
-BioHopR gold data, never from agent outputs.
+reported as a TIE and the researcher decides (decision-log entry). Hop 1 is selected first; hop 2 is
+then selected separately under each construction. The relation type's hop-2 set `R2` and hop-2
+score are those of its adopted construction (§5.3); this is the hop-2 score Gate D1 uses. The
+mapping is chosen only from BioHopR gold data, never from agent outputs.
 
 ### 5.2 Relation-ambiguity tags `[FROZEN]` rule, computed at S6
 
@@ -220,6 +227,27 @@ connects the same two node types. Computed by code; no manual judgment.
 
 Tag per relation type: `NONE`, `R1_AMBIGUOUS`, `R2_AMBIGUOUS`, or `BOTH_AMBIGUOUS`. Tags never
 change an answer set; they only split co-failure reporting. Limitation (thesis): the rule is coarse.
+
+### 5.3 Answer construction `[FROZEN]` rule, result `[TBD@S6]`
+
+BioHopR builds answer lists in one of two ways, and the way differs between relation types
+(`docs/S4_findings.md`, Report 2):
+
+- **BRIDGE:** the targets of the row's stored bridge only.
+- **UNION:** the targets of every valid bridge of the query entity.
+
+Each relation type adopts one construction at S6, using the two hop-2 scores of §5.1:
+
+1. A construction **passes** if its hop-2 score reaches the Gate D1 hop-2 threshold (90%,
+   `docs/decision_rules.md` D1).
+2. If exactly one construction passes, it is adopted.
+3. If both pass, **BRIDGE** is adopted. This tie rule was fixed before any S6 result.
+4. If neither passes, the relation type fails Gate D1 on hop 2; both scores are reported.
+
+**Reporting.** Every query carries its relation type's construction. Because `GOLD` (§13) means a
+different thing under each construction, all results are reported overall and split by
+construction (BRIDGE / UNION), alongside the ambiguity-tag split of §5.2. The split is descriptive
+and changes no gate.
 
 **Source.** Own.
 
@@ -234,11 +262,16 @@ With the edge convention of §3.2:
   Bridges reachable through R1 with empty `T_q(b)` are **dead ends**: counted, not valid.
 - **Question-valid answers:** `T_q = ⋃ T_q(b)` over `b ∈ B_q`
 - **Gold-bridge targets:** `T_q^{B*} = ⋃ T_q(b)` over `b ∈ B*_q`
+- **Construction reference:** `G_q = T_q^{B*}` if the query's relation type adopted BRIDGE (§5.3);
+  `G_q = T_q` if it adopted UNION.
 
-`T_q` is the correctness reference. `A*_q` is kept for benchmark comparison.
+`T_q` is the correctness reference. `A*_q` is kept for benchmark comparison. `G_q` is what
+`A*_q` must equal for the query to be CONSISTENT (§7.1).
 
 **Source.** Cite: answer set obtained by executing the question's query pattern over the KG, as in
-WebQSP (Yih et al., 2016, VERIFY). Departure from BioHopR's single-bridge answers: Own.
+WebQSP (Yih et al., 2016, VERIFY). BioHopR's own answer lists follow either the stored bridge only
+or the union over all bridges, depending on relation type (`docs/S4_findings.md`, Report 2); using
+`T_q` as the correctness reference for every type, and `G_q` per type, is Own.
 
 ---
 
@@ -251,7 +284,7 @@ WebQSP (Yih et al., 2016, VERIFY). Departure from BioHopR's single-bridge answer
 2. all rows of the query have identical question text;
 3. every gold bridge resolves and is in `B_q`;
 4. every gold answer name resolves;
-5. `A*_q` exactly equals `T_q^{B*}`.
+5. `A*_q` exactly equals `G_q` (§6): `T_q^{B*}` for a BRIDGE type, `T_q` for a UNION type (§5.3).
 
 Consequence: for every CONSISTENT query, `A*_q ⊆ T_q`.
 
@@ -266,8 +299,8 @@ is the first applicable in this order. If `QUERY_NOT_FOUND` applies, the codes t
 | `BRIDGE_NOT_FOUND` | Some gold bridge name does not resolve |
 | `GOLD_BRIDGE_NOT_VALID` | Some gold bridge resolves but is not in `B_q` |
 | `GOLD_UNMAPPED` | Some gold answer name does not resolve |
-| `GOLD_MISSING_FROM_KG` | `A*_q ∖ T_q^{B*}` is non-empty |
-| `EXTRA_TARGETS` | `T_q^{B*} ∖ A*_q` is non-empty |
+| `GOLD_MISSING_FROM_KG` | `A*_q ∖ G_q` is non-empty |
+| `EXTRA_TARGETS` | `G_q ∖ A*_q` is non-empty |
 
 **Bridge multiplicity:** `NO_BRIDGE` (B_q empty), `SINGLE_BRIDGE` (one), `MULTI_BRIDGE` (two or more).
 
@@ -506,9 +539,13 @@ Computed only for primary-population queries. First matching rule wins:
 |---|---|---|
 | 1 | `UNRESOLVED` | Normalization failed |
 | 2 | `GOLD` | `x ∈ A*_q` |
-| 3 | `GOLD_BRIDGE_EXTRA` | `x ∈ T_q^{B*}` and `x ∉ A*_q` — always empty for CONSISTENT queries; any occurrence is a bug |
-| 4 | `ALT_VALID` | `x ∈ T_q` and `x ∉ T_q^{B*}` |
+| 3 | `GOLD_BRIDGE_EXTRA` | `x ∈ G_q` and `x ∉ A*_q` — always empty for CONSISTENT queries; any occurrence is a bug |
+| 4 | `ALT_VALID` | `x ∈ T_q` and `x ∉ G_q` |
 | 5 | `OFF_QUESTION` | `x ∉ T_q` (includes `x = s`) |
+
+`G_q` is the construction reference (§6). For a UNION type `G_q = T_q`, so `ALT_VALID` cannot
+occur and every question-valid answer is `GOLD`. Label A counts are reported split by
+construction (§5.3).
 
 **Question-valid** = GOLD, GOLD_BRIDGE_EXTRA or ALT_VALID; for primary-population queries this is
 exactly `x ∈ T_q`.
