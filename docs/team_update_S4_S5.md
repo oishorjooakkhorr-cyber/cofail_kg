@@ -2,7 +2,7 @@
 
 **Date:** 13 October 2026
 **Branch:** `codex/s4-primekg-complete` (everything below is pushed to GitHub)
-**Protocol version now:** v1.3.2 (was v1.2)
+**Protocol version now:** v1.3.3 (was v1.2)
 
 ---
 
@@ -15,6 +15,8 @@
 - **S5 is done.** All 12 relation types passed the field-role check at 100%. The field roles are
   now frozen: `hop2` = the question's starting entity, `hop1` = the bridge, `answer` = the correct
   answers.
+- **We fixed a naming problem before S6.** 152 BioHopR answer names were missing PrimeKG's
+  " (disease)" ending, so they couldn't be matched. They now match.
 - Every rule change was **written down, dated and explained** in `docs/decision_log.md` and
   `docs/CHANGES.md`. Every change was made **before** seeing the results it could affect.
 
@@ -168,10 +170,43 @@ been rejected.
 
 ---
 
+## Decision 6 — Matching names that lost their " (disease)" ending (protocol v1.3.3)
+
+**The problem.** PrimeKG names some diseases with an ending, for example "insomnia **(disease)**".
+BioHopR cut that ending off and left a space behind, so its answer reads `"insomnia "`. Our
+name-matching rule (§12) looks for an exact match, so these answers matched **nothing** in PrimeKG.
+
+**How big it is** (we counted all 7,633 rows):
+- **152 answer names in 115 rows** don't match. All 43 distinct names end with that leftover space.
+- **All 152 match exactly one PrimeKG disease** once " (disease)" is added back.
+- Only two relation types are affected: `effect/phenotype:drug:disease` (**27%** of its rows) and
+  `gene/protein:drug:disease` (12%). Start entities and bridges are never affected.
+
+**Why it had to be fixed.** At S6, a row with even one unmatched answer counts as "not matching".
+In the S4 estimate these two types scored only 0.73 and 0.80, below the 90% bar. Without the fix,
+they could fail Gate D1 because of a **typing artefact in BioHopR**, not because of anything
+scientific.
+
+**The fix.** If a disease name matches nothing, try it once more with " (disease)" added. Accept
+it **only if exactly one** disease node matches; otherwise it stays unmatched. Drugs, genes and
+phenotypes are never touched, and the same rule applies when we match the agents' answers, so gold
+answers and agent answers are treated alike.
+
+**Why it is safe.**
+- **It can't pick a wrong node:** an ambiguous name stays unmatched, as before.
+- **It doesn't change what counts as a correct answer.** It only finds the node the name was always
+  meant to be.
+- **S5 is unaffected.** We re-ran the S5 check on the three affected S5 rows with the new rule. All
+  three still support the roles, so S5 still passes, 12/12.
+- **It was decided before S6 ran**, and the decision log lists everything we had seen, including
+  the 0.73 and 0.80 estimates.
+
+---
+
 ## How we kept this scientifically honest
 
-- **Every rule was decided before its results existed.** Option C before S6, the S5 definitions
-  before S5.
+- **Every rule was decided before the results it affects existed.** Option C and the name fix
+  before S6, and the S5 definitions before S5.
 - **Everything we had looked at is disclosed.** Each decision-log entry has a "Data seen before
   deciding" line, including the exploratory preview.
 - **Thresholds were never loosened.** The 95% (S5) and 90% (D1) bars are unchanged.
@@ -190,20 +225,19 @@ been rejected.
 | `edc9b3e` | Protocol v1.3.2: field-role failure handling, plus the Gate D1 update in `decision_rules.md` |
 | `5ae77f6` | S5 code (field-role check and its 20 tests) |
 | `ea4b980` | S5 results and the frozen field roles |
+| `962637b` | This team update (first version) |
+| `1b2d5d8` | Protocol v1.3.3: " (disease)" name fix, plus the name-count script and results |
 
 All tests pass (74). No force-pushes. `main` was not touched.
 
-**Please pull the branch** and read `docs/CHANGES.md` for the three protocol amendments.
+**Please pull the branch** and read `docs/CHANGES.md` for the four protocol amendments.
 
 ---
 
 ## Still open, before S6
 
-1. **The " (disease)" name suffix.** Some BioHopR answers (for example "insomnia") match PrimeKG
-   only as "insomnia **(disease)**". Under the current name-matching rule, these stay unmatched, and
-   their rows count as "not matching" in the S6 score. This could unfairly push a type below 90%.
-   **Next step:** count how many rows this affects per type, then decide on a fix **before** S6,
-   as we did above.
+1. **Put the name fix into the code.** The rulebook now requires the " (disease)" retry, but the
+   name-matching code doesn't do it yet. It needs to be added, with tests, before S6.
 2. **Runbook S6/S7 steps** still describe only BRIDGE answers. They need a small update to match
    option C.
 3. **Graphify graph** (`graphify-out/`) was made before v1.3, so it needs regenerating.
