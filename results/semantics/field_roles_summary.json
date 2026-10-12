@@ -1,0 +1,162 @@
+{
+  "failing_coverage": 0.0,
+  "failing_rows_in_dataset": 0,
+  "failing_types": [],
+  "per_type": {
+    "disease:drug:effect/phenotype": {
+      "conflicting_rows": [],
+      "fail_reason": "",
+      "outcome": "PASS",
+      "resolvable": 5,
+      "rows_in_dataset": 949,
+      "sampled": 5,
+      "support_share": 1.0,
+      "supporting": 5,
+      "unresolved": 0,
+      "unresolved_rows": []
+    },
+    "disease:drug:gene/protein": {
+      "conflicting_rows": [],
+      "fail_reason": "",
+      "outcome": "PASS",
+      "resolvable": 5,
+      "rows_in_dataset": 381,
+      "sampled": 5,
+      "support_share": 1.0,
+      "supporting": 5,
+      "unresolved": 0,
+      "unresolved_rows": []
+    },
+    "disease:effect/phenotype:drug": {
+      "conflicting_rows": [],
+      "fail_reason": "",
+      "outcome": "PASS",
+      "resolvable": 5,
+      "rows_in_dataset": 36,
+      "sampled": 5,
+      "support_share": 1.0,
+      "supporting": 5,
+      "unresolved": 0,
+      "unresolved_rows": []
+    },
+    "disease:gene/protein:drug": {
+      "conflicting_rows": [],
+      "fail_reason": "",
+      "outcome": "PASS",
+      "resolvable": 5,
+      "rows_in_dataset": 899,
+      "sampled": 5,
+      "support_share": 1.0,
+      "supporting": 5,
+      "unresolved": 0,
+      "unresolved_rows": []
+    },
+    "drug:disease:effect/phenotype": {
+      "conflicting_rows": [],
+      "fail_reason": "",
+      "outcome": "PASS",
+      "resolvable": 5,
+      "rows_in_dataset": 213,
+      "sampled": 5,
+      "support_share": 1.0,
+      "supporting": 5,
+      "unresolved": 0,
+      "unresolved_rows": []
+    },
+    "drug:disease:gene/protein": {
+      "conflicting_rows": [],
+      "fail_reason": "",
+      "outcome": "PASS",
+      "resolvable": 5,
+      "rows_in_dataset": 321,
+      "sampled": 5,
+      "support_share": 1.0,
+      "supporting": 5,
+      "unresolved": 0,
+      "unresolved_rows": []
+    },
+    "drug:effect/phenotype:disease": {
+      "conflicting_rows": [],
+      "fail_reason": "",
+      "outcome": "PASS",
+      "resolvable": 5,
+      "rows_in_dataset": 5,
+      "sampled": 5,
+      "support_share": 1.0,
+      "supporting": 5,
+      "unresolved": 0,
+      "unresolved_rows": []
+    },
+    "drug:gene/protein:disease": {
+      "conflicting_rows": [],
+      "fail_reason": "",
+      "outcome": "PASS",
+      "resolvable": 5,
+      "rows_in_dataset": 3029,
+      "sampled": 5,
+      "support_share": 1.0,
+      "supporting": 5,
+      "unresolved": 0,
+      "unresolved_rows": []
+    },
+    "effect/phenotype:disease:drug": {
+      "conflicting_rows": [],
+      "fail_reason": "",
+      "outcome": "PASS",
+      "resolvable": 5,
+      "rows_in_dataset": 546,
+      "sampled": 5,
+      "support_share": 1.0,
+      "supporting": 5,
+      "unresolved": 0,
+      "unresolved_rows": []
+    },
+    "effect/phenotype:drug:disease": {
+      "conflicting_rows": [],
+      "fail_reason": "",
+      "outcome": "PASS",
+      "resolvable": 5,
+      "rows_in_dataset": 215,
+      "sampled": 5,
+      "support_share": 1.0,
+      "supporting": 5,
+      "unresolved": 0,
+      "unresolved_rows": []
+    },
+    "gene/protein:disease:drug": {
+      "conflicting_rows": [],
+      "fail_reason": "",
+      "outcome": "PASS",
+      "resolvable": 5,
+      "rows_in_dataset": 577,
+      "sampled": 5,
+      "support_share": 1.0,
+      "supporting": 5,
+      "unresolved": 0,
+      "unresolved_rows": []
+    },
+    "gene/protein:drug:disease": {
+      "conflicting_rows": [],
+      "fail_reason": "",
+      "outcome": "PASS",
+      "resolvable": 4,
+      "rows_in_dataset": 462,
+      "sampled": 5,
+      "support_share": 1.0,
+      "supporting": 4,
+      "unresolved": 1,
+      "unresolved_rows": [
+        "BH2_05493"
+      ]
+    }
+  },
+  "provenance": {
+    "biohopr_revision": "08f06692c3900347e7405ba55ff6a6d330f55ddb",
+    "git_commit": "5ae77f6b929aca5896ef0a6bedc7840e9ae559cb",
+    "kg_fingerprint": "bc5d3fd2f12aeb29398fe4684c83d8c65c7bd5c1edf704573322295bdc6b2e95",
+    "protocol_version": "1.3.2",
+    "run_time_utc": "2026-10-12T18:44:40+00:00"
+  },
+  "rule_outcome": "ROLES_SUPPORTED",
+  "total_rows": 7633
+}

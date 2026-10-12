@@ -203,3 +203,26 @@ prompt, final sentence. decision_rules.md Gate D1 "Type FAIL" row: new trigger "
 protocol §3.1 field-role rule at S5"; such a type is already excluded at S5 and the 2-day
 investigation does not apply to it (re-admission after seeing the S5 sample would be post hoc).
 Nothing else in decision_rules.md changed. Logged in docs/CHANGES.md.
+
+## 2026-10-13 — S5 — Field roles verified
+Decision: Accept the BioHopR field roles: hop2 = query entity, hop1 = bridge, answer = gold
+targets (protocol §3.1 Field roles row, [FROZEN] at S5).
+Why: Under the §3.1 rule (v1.3.2), all 12 relation types PASS with 100% of resolvable sampled rows
+supporting the roles; rule outcome ROLES_SUPPORTED; 0 failing types, so no exclusion. 60 rows
+sampled (5 per type), 59 resolvable: BH2_05493 (gene/protein:drug:disease) is unresolvable, its
+only answer name not found. 5 rows are supported only through other bridges of hop2 (UNION-style
+answers): 3 in disease:drug:effect/phenotype, 2 in effect/phenotype:drug:disease. Hand-checks
+with scripts/inspect_kg.py agree with the table: BH2_00004 (Zinc sulfate –drug_effect→ Nausea;
+29/29 answers among Nausea's disease neighbours), BH2_06128 (pleural empyema
+–disease_phenotype_positive→ Pleural effusion; 44/44 among its drug neighbours), BH2_04078
+(hyperargininemia –indication→ Phenylbutyric acid; 33/33 among its effect/phenotype
+neighbours). Assumptions:
+distinct answer names counted as raw strings (§0.4); counting after §12 normalization gives the
+same counts in all 60 rows, so the choice changed nothing. A bridge resolving to the query entity
+is not covered by §3.1 and never occurred.
+Data seen before deciding: results/semantics/field_roles.csv, field_roles_summary.md and
+field_roles_summary.json, produced by commit 5ae77f6 (BioHopR revision 08f06692…, kg_fingerprint
+bc5d3fd2…); the three hand-checks; earlier, results/diagnostics/s5_field_role_preview.csv
+(exploratory, disjoint rows). No agent outputs.
+Changes to protocol: §3.1 Field roles row ([TBD@S5] → [FROZEN] at S5). Header unchanged (1.3.2),
+following the S2 and S4 precedent of filling [TBD@Sx] values without a version change.

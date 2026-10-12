@@ -1,9 +1,7 @@
 # Progress — CoFail-KG
 
 ## Current stage
-S4 complete — PrimeKG frozen and indexed. Answer construction decided (option C, 2026-10-12).
-Field-role support defined (protocol v1.3.1) and failure handling decided (v1.3.2), 2026-10-13.
-S5 has not started.
+S5 complete — field roles verified (2026-10-13). S6 has not started.
 
 ## Completed stages
 S0
@@ -55,10 +53,17 @@ S4 — completed 2026-10-12: ingestion, index, inspection CLI, protocol fields a
   type is excluded (FAIL in Gate D1) instead of stopping S5; S5 stops if more than one type fails
   or the failing types cover more than 1% of the 7,633 rows. Decided before S5 ran, with the same
   exploratory evidence; S5 sample not viewed.
+S5 — completed 2026-10-13: field roles verified (hop2 = query entity, hop1 = bridge,
+  answer = gold targets; protocol §3.1 [FROZEN] at S5). All 12 relation types PASS at 100%;
+  rule outcome ROLES_SUPPORTED; 0 failing types. 60 rows sampled, 59 resolvable (BH2_05493
+  unresolvable). 5 rows supported only through other bridges (3 disease:drug:effect/phenotype,
+  2 effect/phenotype:drug:disease). Hand-checks BH2_00004, BH2_06128, BH2_04078 agree.
+  Results: results/semantics/field_roles* (code commit 5ae77f6). 20 new tests; 74 pass.
 
 ## Latest commit
-`S4: amend protocol to v1.3.2 - field-role failure handling (§3.1)` (this update).
-Earlier: 48b47cb (protocol v1.3.1, field-role support definition); b48952f (protocol v1.3,
+`S5: field roles verified` (this update). Code: 5ae77f6 (S5 field-role verification code).
+Earlier: edc9b3e (protocol v1.3.2, field-role failure handling);
+48b47cb (protocol v1.3.1, field-role support definition); b48952f (protocol v1.3,
 answer construction option C); 7998bb3 (S4 completion checkpoint); a0578b2 (index and CLI),
 d09c66b (preparation).
 
@@ -125,4 +130,11 @@ OPEN (not decided):
 - S6 label-set question for disease:effect/phenotype:drug: the S4 single-label-pair simulation
   (S4_findings.md Report 2: 32/36 rows follow neither construction) and the any-label preview
   (5/5 rows: every answer via the stored bridge) disagree.
-S5 has not started. Start S5 in docs/pipeline_runbook.md when instructed.
+S5 completed 2026-10-13 (field roles verified; decision log).
+S6 note: the unresolved answer names in the S5 sample ("autism" in BH2_04897, "vitamin A
+deficiency" in BH2_05290, "insomnia" in BH2_05493) are not type mismatches: they match no
+PrimeKG node of any type, but PrimeKG has disease nodes "autism (disease)" (84310), "vitamin A
+deficiency (disease)" (84142) and "insomnia (disease)" (32033) — the same " (disease)" suffix
+pattern as the 135 S2 rows. Under §12 as written they stay unresolved, so under §5.1 their rows
+count as not matching in the hop-2 score. Not decided: whether this needs any action.
+S6 has not started. Start S6 in docs/pipeline_runbook.md when instructed.
