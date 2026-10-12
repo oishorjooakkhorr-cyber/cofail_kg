@@ -419,12 +419,21 @@ Report load time and peak memory.
    python -c "import pandas as pd; print(pd.read_csv('data/raw/primekg/kg.csv', nrows=5).T)"
    ```
 2. **Row count:** about 4.05 million relationships in the paper; about 8.1 million rows means both directions are stored (should agree with Claude's reverse-row finding).
-3. **Release check:** the BioHopR paper says Troglitazone has 202 side effects in PrimeKG.
+3. **Release check:** compare the raw-file checksums with the publisher's records and record
+   the evidence. The verified `kg.csv` (Dataverse file 6180620) has MD5
+   `aac8191d4fbc5bf09cdf8c3c78b4e75f`; the supplied `nodes.csv` matches the publisher's MD5
+   `7f9ab4109c54049e819ecd14e15a6038` (researcher website verification recorded in
+   `results/diagnostics/primekg/inspection.md`). Then check the index:
    ```powershell
    python scripts/inspect_kg.py node "Troglitazone"
    python scripts/inspect_kg.py relations <the ID it prints>
+   python scripts/inspect_kg.py neighbors 14813 --relation drug_effect --neighbor-type effect/phenotype
    ```
-   About 202 on the side-effect label → your release matches. Far off → resolve before S5.
+   Expect **17 unique direct side-effect neighbours** for Troglitazone (node 14813).
+   The 202 in BioHopR row 4518 is the distinct two-hop answer set reached from type 2 diabetes
+   mellitus through 49 drugs via `indication` then `drug_effect`, not Troglitazone's own
+   direct neighbours. See `docs/S4_findings.md`, Report 1 §§3–4. A checksum or direct-count
+   mismatch must be investigated before S5; a neighbour count alone does not identify a release.
 4. The four BioHopR types exist as PrimeKG node types (the type map).
 5. The canonical ID column is unique; `frozen_hashes.yaml` contains `kg_fingerprint`.
 

@@ -120,21 +120,37 @@ Disease:Phenotype:Drug 36 · Drug:Phenotype:Disease 5.
 | Item | Value | Status |
 |---|---|---|
 | Source | PrimeKG on Harvard Dataverse (`kg.csv`, plus node file if distributed) | `[FROZEN]` |
-| Release | Chosen at S4 (Troglitazone check). If Gate D1 later stops on a version mismatch, the release is revisited with a decision-log entry. | `[TBD@S4]` |
-| Canonical node ID | PrimeKG's unique node index (expected `x_index` / `y_index`), written as a decimal string; compared numerically when ordering | `[TBD@S4]` confirm columns |
-| Edge storage | Whether each relationship appears once or in both directions | `[TBD@S4]` |
-| **Edge convention** | How an edge may be traversed. Default: an edge between u and v with label r can be traversed in either direction. If S4 finds labels whose meaning is directional and stored one-way, the S4 decision-log entry lists them with their allowed direction. **The same convention is used by the reference sets (§6), the tools (§10) and the trace graph (§11).** | `[TBD@S4]` |
+| Release | PrimeKG v2.1, Harvard Dataverse DOI `10.7910/DVN/IXA7BM`, using the verified `kg.csv` (file 6180620) and supplied `nodes.csv`; publisher-checksum evidence and the direct-neighbour sanity check are recorded below and in the S4 inspection report. If Gate D1 later stops on a version mismatch, the release is revisited with a decision-log entry. | `[FROZEN]` at S4 |
+| Canonical node ID | Confirmed: `x_index` / `y_index` in the edge file correspond to the unique `node_index` in the node file; written as a decimal string and compared numerically when ordering | `[FROZEN]` at S4 |
+| Edge storage | All 10,000 randomly sampled rows (seed 42) have a reverse row with the same relation and swapped endpoints. The sample covers 28 of 30 labels; exposure_cellcomp and exposure_molfunc are unsampled. This establishes the sampled finding, not that every graph row or label has a reverse. | `[FROZEN]` at S4 |
+| **Edge convention** | An edge between u and v with label r can be traversed in either direction, regardless of whether a reverse row is stored. No directional exceptions are adopted. **The same convention is used by the reference sets (§6), the tools (§10) and the trace graph (§11).** | `[FROZEN]` at S4 |
 | Substitution | Never replace PrimeKG with a different or newer graph | `[FROZEN]` |
+
+**S4 release check.** Compare the raw files with the publisher's checksums and record the
+release evidence. For the verified kg.csv (Dataverse file 6180620), Troglitazone (node 14813)
+has **17 unique direct `drug_effect` neighbours** of type `effect/phenotype`. The previously
+expected 202 is the BioHopR row 4518 two-hop answer set: the distinct side effects reached
+from type 2 diabetes mellitus through 49 drugs via `indication` then `drug_effect`.
+It is not Troglitazone's direct-neighbour count. See `docs/S4_findings.md`, Report 1 §§3–4.
+This correction does not select an answer-construction policy for other protocol sections.
 
 The PrimeKG paper reports about 4.05 million relationships; about twice as many rows means both
 directions are stored.
 
 **Source.** Cite: Chandak, Huang & Zitnik (2023) ✔.
 
-### 3.3 Type map `[TBD@S4]`
+### 3.3 Type map `[FROZEN]` at S4
 
-A one-to-one map from BioHopR's four types (drug, disease, gene/protein, effect/phenotype) to
-PrimeKG `node_type` values. Expected to be identical strings.
+A verified one-to-one map from BioHopR's four types to PrimeKG `node_type` values:
+
+| BioHopR type | PrimeKG node type |
+|---|---|
+| `drug` | `drug` |
+| `disease` | `disease` |
+| `gene/protein` | `gene/protein` |
+| `effect/phenotype` | `effect/phenotype` |
+
+All four exact labels exist in the inspected PrimeKG files; no renaming is required.
 
 ### 3.4 Frozen hashes `[FROZEN]`
 
@@ -409,7 +425,8 @@ its display label(s), neighbor node type(s), and the number of unique neighbors.
 
 **`get_neighbors(entity_id, relation, neighbor_type=None, page=1)`** → neighbors through that label
 (each with ID, name, type, display label), plus `total_count`, `page`, `page_size`, `has_more`.
-A `direction` argument exists only if §3.2 lists directional labels `[TBD@S4]`.
+No `direction` argument is used: §3.2 fixes either-direction traversal with no directional
+exceptions (`[FROZEN]` at S4).
 
 Tool descriptions (wording of the tool schemas, version `T1`) `[TBD@S11]`: neutral; they describe
 what each tool does and never mention BioHopR relations, relation types or answers.
@@ -460,7 +477,8 @@ subject of `inspect_entity`.
 Two policies, because reference names and agent answers need different handling.
 
 **Reference policy** (query entity, gold bridges, gold answers; with the filter type given in §4):
-an exact name match after lower-casing, Unicode NFKC normalization and whitespace collapsing,
+an exact name match after lower-casing, Unicode NFKC normalization, collapsing internal
+whitespace to a single space, and trimming leading and trailing whitespace,
 considering **only nodes of the filter type**. Exactly one → that node; none or several →
 unresolved.
 

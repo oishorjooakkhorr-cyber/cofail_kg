@@ -215,10 +215,12 @@ Python `random.Random(42).sample`, 10,000 rows without replacement; reverse iden
 ```
 
 The full kg.csv MD5 matches the published value recorded in `docs/S4_findings.md`.
-The nodes.csv MD5 begins with the published prefix `7f9ab410` recorded there;
-the earlier report does not record the full published node-file digest.
-An attempt to retrieve fresh Harvard Dataverse API metadata on 2026-10-12 returned HTTP 403,
-so this run does not independently confirm the full published nodes.csv checksum.
+On 2026-10-12 the researcher supplied the full nodes.csv MD5 from the publisher's website:
+`7f9ab4109c54049e819ecd14e15a6038`. A fresh local MD5 calculation matches exactly.
+This resolves the checksum check through researcher-provided website verification.
+The automated Harvard Dataverse metadata request returned HTTP 403; it did not supply
+the published checksum used in this comparison.
 Unlike the earlier `nodes.tab` inspection, this archive supplies `nodes.csv`; the standard CSV parser reproduces every node field in `kg.csv`, including node 98266.
 
-This inspection computes candidate S4 values. It does not fill the protocol or freeze the graph fingerprint.
+This inspection originally computed candidate S4 values. The researcher subsequently approved
+the protocol entries and fingerprint freeze; see `docs/decision_log.md` and `docs/S4_implementation.md`.

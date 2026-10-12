@@ -1,7 +1,7 @@
 # Progress — CoFail-KG
 
 ## Current stage
-S4 — PrimeKG ingestion and index (engineering implemented; protocol confirmation and freeze pending)
+S4 complete — PrimeKG frozen and indexed. S5 has not started; answer-construction decision pending.
 
 ## Completed stages
 S0
@@ -17,14 +17,18 @@ S3 — BioHopR diagnostics. 27/27 tests pass; audit found no science/gate proble
   Answer-size median 11, p90 102, p99 325.36.
   Duplicate question texts: 0 (exact and normalised).
 
-S4 (in progress) — ingestion, index, inspection CLI and tests implemented.
+S4 — completed 2026-10-12: ingestion, index, inspection CLI, protocol fields and fingerprint finalized.
   45/45 tests pass. Implementation report: docs/S4_implementation.md.
   Raw inspection: results/diagnostics/primekg/inspection.md; 8,100,498 rows, 129,375 nodes.
   10,000/10,000 sampled rows have a reverse; 28/30 labels sampled (two rare labels unsampled).
-  Cached tables and machine-written metadata exist locally; kg_fingerprint is not frozen yet.
+  Cached tables and machine-written metadata exist locally; kg_fingerprint was written by
+  the preparation script with researcher authorization on 2026-10-12 and independently
+  checked against the metadata SHA256.
   Real Troglitazone checks match raw CSV exactly. Load 6.57 s; verification process peak 880.7 MiB.
-  The supplied nodes.csv matches all kg.csv node fields. Its full remote checksum was not
-  freshly verified (Dataverse API HTTP 403); its MD5 matches the prefix in the earlier report.
+  The supplied nodes.csv matches all kg.csv node fields. On 2026-10-12 the researcher supplied
+  its full MD5 from the publisher's website: 7f9ab4109c54049e819ecd14e15a6038.
+  A fresh local calculation matches exactly, resolving the checksum check through
+  researcher-provided website verification (the automated Dataverse request returned HTTP 403).
   Earlier release/answer-construction investigation: docs/S4_findings.md.
   Release verified: kg.csv MD5 matches Dataverse file 6180620 (same file in v1.0/2.0/2.1);
   7,370/7,633 BioHopR answer lists reproduced exactly from kg.csv. The paper's "202 side effects"
@@ -33,7 +37,8 @@ S4 (in progress) — ingestion, index, inspection CLI and tests implemented.
   OPEN DESIGN QUESTION — answer construction (options A/B/C in S4_findings.md): decide before S5.
 
 ## Latest commit
-a0578b2 (S4 index and CLI; preparation in d09c66b). S4 remains partially complete.
+S4 completion checkpoint: `S4: PrimeKG frozen and indexed` (this update).
+Implementation commits: a0578b2 (index and CLI), d09c66b (preparation).
 
 ## Numbers to remember (filled as you go)
 - BioHopR revision (S2): 08f06692c3900347e7405ba55ff6a6d330f55ddb (BioHopR.json SHA256 1adda2f23d305c394537e7b56d3e972b2d8f4141ae716ede54e0d08876eb527d)
@@ -45,7 +50,7 @@ a0578b2 (S4 index and CLI; preparation in d09c66b). S4 remains partially complet
   - Answer list length range 1–890.
 - Answer size median / p90 / p99 (S3): 11 / 102 / 325.36 (numpy linear percentiles; list length = set size on every row)
 - Duplicate question texts with >1 bridge (S3): 0 — no question text occurs twice (exact or normalised)
-- PrimeKG release, download date, row count (S4): candidate v2.1, DOI 10.7910/DVN/IXA7BM;
+- PrimeKG release, download date, row count (S4): frozen v2.1, DOI 10.7910/DVN/IXA7BM;
   existing release file records 2026-10-10 (inferred archive date); 8,100,498 rows.
 - Troglitazone side-effect count (S4 check, paper says 202): 17 direct neighbours, confirmed
   by the new index and independent raw CSV scan. The prior findings explain the 202 as two-hop.
@@ -66,7 +71,8 @@ S2 engineering observations (none can change a result as things stand):
 ## Fix at stage (deferred from the S1 audits)
 - S5: some BioHopR answer names have trailing spaces. Resolved by researcher on 2026-10-12:
   trim leading/trailing whitespace as well as collapse internal whitespace (decision log).
-  Implemented in S4 name lookup; explicit protocol §12 wording still awaits authorized editing.
+  Implemented in S4 name lookup; explicit protocol §12 wording finalized with researcher
+  authorization on 2026-10-12.
   162 answer strings (45 distinct names) in 120 rows, all trailing, none leading. Examples:
   'acne ', 'atrial fibrillation ', "Kaposi's sarcoma ". BH2_05031 and BH2_05040 contain both
   'myocardial infarction ' and 'myocardial infarction' (two names under exact comparison, §0.4).
@@ -75,6 +81,16 @@ S2 engineering observations (none can change a result as things stand):
 - Every stage: Claude Code lists its engineering choices at the end; record any that matter here.
 
 ## Next action
-Review docs/S4_implementation.md; confirm computed S4 protocol values and authorize the
-corrected release check/whitespace wording. Then freeze kg_fingerprint with
-`python scripts/04_prepare_primekg.py --freeze`. Resolve answer construction before S5.
+The release check in protocol §3.2 and runbook S4 was corrected with researcher authorization
+on 2026-10-12: publisher checksums plus 17 direct neighbours, with the 202 two-hop count explained.
+The canonical node ID row in protocol §3.2 was confirmed and frozen with researcher approval
+on 2026-10-12: x_index/y_index correspond to node_index; decimal strings, numeric ordering.
+The edge-storage sample finding (including the unsampled-label limitation) and either-direction
+convention with no exceptions were frozen with researcher approval on 2026-10-12; §10 now
+explicitly has no direction argument.
+The v2.1 release in §3.2 and explicit whitespace-trimming wording in §12 were finalized
+with researcher authorization on 2026-10-12. The kg_fingerprint freeze is complete.
+The §3.3 identity type map was confirmed and frozen with researcher approval on 2026-10-12.
+The researcher subsequently authorized S4 completion. Final checks passed: 45 tests,
+raw-input/cache validation, frozen metadata SHA256 comparison, and the 17-neighbour real check.
+Resolve answer construction before S5. No S5 work has been performed.

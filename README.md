@@ -7,7 +7,7 @@ CoFail-KG is a research project studying co-failure of independent local LLM age
 ### Python
 
 - Tested on **Python 3.14.7** (Windows 11).
-- S4 partial implementation also verified on **Python 3.13.7** (Windows).
+- S4 also verified on **Python 3.13.7** (Windows).
 - Supported: **Python >= 3.12** (`requires-python` in `pyproject.toml`). The pinned dependencies in
   `requirements.lock` need 3.12 or newer, and networkx 3.7 does not install on Python 3.14.1
   specifically.
@@ -51,7 +51,7 @@ revision `08f06692c3900347e7405ba55ff6a6d330f55ddb` into `data/raw/biohopr/`. It
 against the Hub's SHA256, writes `data/raw/biohopr/metadata.json`, and refuses to overwrite files
 that differ. The pinned revision is also recorded in `configs/frozen_hashes.yaml`.
 
-**PrimeKG (S4 partial implementation)**: place `kg.csv` and `nodes.csv` from the downloaded
+**PrimeKG (S4)**: place `kg.csv` and `nodes.csv` from the downloaded
 PrimeKG archive into `data/raw/primekg/`. The current inputs are from Harvard Dataverse,
 DOI `10.7910/DVN/IXA7BM`; the existing release record names v2.1. Keep release details in
 `data/cache/primekg_release.json` separately from machine-written cache metadata.
@@ -68,10 +68,12 @@ tables plus deterministic metadata. Reruns verify the existing cache and refuse 
 The inspection CLI returns complete JSON and writes load timing to stderr. Name lookup trims
 surrounding whitespace and collapses internal whitespace, following the researcher's S4 decision.
 
-S4 protocol confirmation is pending: use `--freeze` on the preparation command only after that
-confirmation, to record `kg_fingerprint` in `configs/frozen_hashes.yaml`. See
-`docs/S4_implementation.md` for results and the remaining items. Troglitazone has 17 direct
-side-effect neighbours; the older runbook's 202 check still awaits correction.
+S4 is complete: its protocol fields are finalized and `kg_fingerprint` is recorded in
+`configs/frozen_hashes.yaml`. Use `--freeze` when reproducing to check the prepared metadata
+against that write-once fingerprint; differing values are rejected. See
+`docs/S4_implementation.md` for results and limitations. Troglitazone has 17 direct
+side-effect neighbours; the corrected release check explains 202 as a two-hop answer set.
+The A/B/C answer-construction decision remains pending before S5.
 
 ### Regenerate results
 

@@ -56,3 +56,88 @@ Data seen before deciding: docs/progress.md and docs/S4_findings.md; the researc
 the "acne " example and answered "Yes—trim surrounding spaces too". No agent outputs.
 Changes to protocol or decision rules: none in this implementation. The approval is recorded here;
 the explicit clarification of protocol §12 remains for the researcher to authorize with the S4 updates.
+
+## 2026-10-12 — S4 — Correct the release-check interpretation
+Decision: With the researcher's explicit instruction to fix the protocol/runbook, replace the
+expected 202 direct Troglitazone side effects with publisher-checksum verification and a
+sanity check of 17 unique direct drug_effect neighbours for the verified kg.csv.
+Why: The existing S4 findings reproduce the 202 as the two-hop answer set in BioHopR row 4518,
+via 49 drugs indicated for type 2 diabetes mellitus; it is not Troglitazone's direct degree.
+Data seen before deciding: docs/S4_findings.md Report 1 §§3–4; S4 index and independent raw-CSV
+checks; publisher kg.csv checksum recorded in the findings; full nodes.csv checksum supplied
+by the researcher from the website and matched locally. No experimental agent outputs.
+Changes to protocol or decision rules: protocol §3.2 release-check wording and runbook S4
+Evaluate item 3. S4 release/ID/storage/convention/type-map fields remain pending; no fingerprint
+was written, no answer-construction option was selected, and decision_rules.md was not changed.
+
+## 2026-10-12 — S4 — PrimeKG fingerprint written
+Decision: Following the researcher's explicit authorization to update frozen_hashes.yaml,
+run `python scripts/04_prepare_primekg.py --freeze` to validate the existing inputs/cache
+and write kg_fingerprint once through code.
+Why: Record the exact prepared graph for subsequent reproducibility checks.
+Data seen before deciding: S4 inspection and implementation reports, raw-file checksum
+verification, and the corrected release check. No experimental agent outputs.
+Result: `bc5d3fd2f12aeb29398fe4684c83d8c65c7bd5c1edf704573322295bdc6b2e95`,
+independently matched to the metadata SHA256. The BioHopR revision is unchanged.
+Changes to protocol or decision rules: none; remaining S4 protocol fields and the
+answer-construction decision remain pending.
+
+## 2026-10-12 — S4 — Canonical node ID confirmed
+Decision: With explicit researcher approval, record x_index/y_index in the edge file as
+corresponding to the unique node_index in the node file; return IDs as decimal strings
+and order them numerically. Mark only the canonical node ID row [FROZEN] at S4.
+Why: The S4 inspection verified these columns rather than assuming their identity.
+Data seen before deciding: S4 inspection of 129,375 unique node indices and consistent
+edge endpoint metadata; existing index implementation and tests. No experimental agent outputs.
+Changes to protocol or decision rules: protocol §3.2 canonical node ID row only.
+No code, raw data, metadata or frozen hash changes were needed.
+
+## 2026-10-12 — S4 — Edge storage and traversal finalized
+Decision: With explicit researcher approval, freeze the sampled edge-storage finding:
+10,000/10,000 sampled rows (seed 42) have same-relation reverse rows; 28/30 labels are
+represented, with exposure_cellcomp and exposure_molfunc unsampled. Do not infer that
+every graph row or label has a reverse. Adopt either-direction traversal for all labels,
+with no directional exceptions, and no direction argument in the §10 tools.
+Why: Record the prescribed inspection evidence with its limits and finalize the existing
+default navigation rule consistently across reference sets, tools and trace graphs.
+Data seen before deciding: S4 inspection report and the explanation of annotations 2 and 3
+shown to the researcher. No experimental agent outputs.
+Changes to protocol or decision rules: protocol §3.2 Edge storage and Edge convention rows
+marked [FROZEN] at S4; §10 direction-argument decision finalized. No code, raw data,
+metadata, frozen hashes or answer-construction policy changes.
+
+## 2026-10-12 — S4 — Release and whitespace wording finalized
+Decision: With explicit researcher approval, freeze PrimeKG v2.1, DOI 10.7910/DVN/IXA7BM,
+using the verified kg.csv (file 6180620) and supplied nodes.csv. Explicitly record the
+previously approved leading/trailing whitespace trimming in §12, alongside lower-casing,
+NFKC normalization and internal whitespace collapse.
+Why: Finalize the verified release and document the implemented name-normalization rule.
+Data seen before deciding: S4 findings and inspection report, publisher-checksum comparisons,
+17-neighbour real-data check, and the researcher's prior whitespace approval.
+Changes to protocol or decision rules: protocol §3.2 Release row marked [FROZEN] at S4;
+§12 reference-policy wording clarified. No code, data or frozen hashes changed.
+The type map remains pending explanation and approval. S4 closure and the completion
+commit are deferred at the researcher's request; no answer-construction option was chosen.
+
+## 2026-10-12 — S4 — Type map finalized
+Decision: With researcher approval following the type-map explanation, freeze the identity
+mapping from BioHopR to PrimeKG for drug, disease, gene/protein and effect/phenotype.
+Why: All four exact node-type labels exist in the inspected graph; no renaming is needed.
+Data seen before deciding: S4 node-type inventory and the four-row mapping shown to the
+researcher. No experimental agent outputs.
+Changes to protocol or decision rules: protocol §3.3 filled with the explicit mapping and
+marked [FROZEN] at S4. No code, data or frozen hashes changed. S4 closure and the completion
+commit remain deferred; no answer-construction option was chosen.
+
+## 2026-10-12 — S4 — Stage completed
+Decision: The researcher authorized completing S4 while leaving the A/B/C answer-construction
+decision pending before S5. Mark S4 complete and save a local completion commit.
+Why: The ingestion/index requirements, approved protocol entries and fingerprint freeze
+are complete; final verification passed.
+Data seen before deciding: S4 completion requirements explained to the researcher.
+Validation at closure: 45 tests passed; raw inputs and cache validated; frozen metadata
+SHA256 matched independently; BioHopR revision unchanged; Troglitazone returned 17 direct
+side-effect neighbours; documentation diff checks passed.
+Changes to protocol or decision rules: none beyond the previously authorized S4 edits.
+The reverse-sample coverage limitation and inferred download date remain documented.
+No S5 work, answer-construction decision, push or merge is included in this closure.

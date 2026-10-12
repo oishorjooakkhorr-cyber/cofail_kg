@@ -1,8 +1,11 @@
-# S4 partial implementation — 2026-10-12
+# S4 completion report — 2026-10-12
 
-The ingestion, index, inspection CLI and tests are implemented. S4 remains in progress:
-the researcher has not yet filled its protocol fields or authorized the corrected release
-check. The cache was prepared without `--freeze`; `kg_fingerprint` is not yet written.
+S4 is complete: ingestion, index, inspection CLI, tests, protocol fields and fingerprint
+are finalized. The researcher authorized closure after reviewing the remaining decisions.
+The release-check wording was corrected
+with researcher authorization on 2026-10-12. The cache was initially prepared without
+`--freeze`; the researcher subsequently authorized freezing, and the preparation script
+wrote `kg_fingerprint` on 2026-10-12. Its value matches an independent metadata SHA256 check.
 
 ## 1. Files created or changed
 
@@ -16,6 +19,8 @@ check. The cache was prepared without `--freeze`; `kg_fingerprint` is not yet wr
   and endpoint-type counts, node-type counts, reverse sample and raw checksums.
 - `results/diagnostics/primekg/runtime.json`: real graph verification and measurements.
 - `README.md`, `docs/progress.md`, `docs/decision_log.md`, this report.
+- `docs/frozen_pilot_protocol.md`, `docs/pipeline_runbook.md`: approved S4 findings and decisions.
+- `configs/frozen_hashes.yaml`: machine-written kg_fingerprint.
 - Local, gitignored data: extracted `data/raw/primekg/kg.csv` and `nodes.csv`, and generated
   `data/cache/primekg_nodes.parquet`, `primekg_edges.parquet`, `primekg_metadata.json`.
 
@@ -27,6 +32,9 @@ including the previously reported quoting case at index 98266. There are no isol
 
 - Baseline: 27 passed.
 - Final `python -m pytest -q`: **45 passed**, including 18 new S4 tests.
+- Closure verification: revalidated raw inputs/cache, independently matched metadata SHA256
+  to the frozen fingerprint, preserved the BioHopR revision, and rechecked the 17 direct
+  Troglitazone side-effect neighbours. Documentation diff checks passed.
 - Tests cover duplicate/reverse/self edges, isolated nodes, ambiguous names, Unicode and
   whitespace normalization, numeric ordering, relation vs display-label filtering, unique
   counts, shared traversal policy, raw preservation, conflicting nodes, cache corruption,
@@ -62,7 +70,7 @@ Troglitazone is canonical node `14813`, DrugBank ID `DB00197`. Relation summarie
 
 - Use the supplied archive's kg.csv and distributed nodes.csv as the two raw inputs.
   The archive is retained, and extracted raw bytes are never rewritten by preparation.
-- Use the protocol §3.2 default, traversal in either direction, for this partial implementation.
+- Use the finalized protocol §3.2 convention, traversal in either direction.
   No directional exception has been adopted.
 - Keep the existing `data/cache/primekg_release.json`: version 2.1, DOI 10.7910/DVN/IXA7BM,
   download date 2026-10-10. Its date is explicitly recorded as inferred from the archive's
@@ -95,20 +103,27 @@ All of the following are routine engineering choices, with no new literature met
 ## 6. Anything the researcher should inspect by hand
 
 1. Review `results/diagnostics/primekg/inspection.md` and the real CLI example above.
-2. Confirm the S4 values for protocol §3.2–§3.3: existing v2.1 release choice; canonical
-   x_index/y_index (node_index in the node file); observed reverse storage; the existing
-   either-direction traversal default; identity mapping for drug, disease, gene/protein
-   and effect/phenotype. Under this default §10 needs no direction argument.
-3. Authorize correcting the Troglitazone release check in the protocol/runbook: kg.csv has
-   the full MD5 recorded in the previous findings and 17 direct side-effect neighbours.
-   The earlier report explains 202 as the two-hop answer set. Also record the approved
-   whitespace clarification in §12.
-4. After those confirmations, run `python scripts/04_prepare_primekg.py --freeze`.
-   Candidate metadata SHA256:
+2. Canonical IDs were confirmed and frozen in protocol §3.2 with researcher approval on
+   2026-10-12: x_index/y_index correspond to node_index, returned as decimal strings and
+   ordered numerically. The sampled reverse-storage finding (with its limitation),
+   either-direction traversal with no exceptions, and no direction argument in §10 were
+   also finalized with researcher approval on 2026-10-12. The v2.1 release choice in §3.2
+   is now frozen with researcher approval. The §3.3 identity mapping for drug, disease,
+   gene/protein and effect/phenotype was also confirmed and frozen with researcher approval
+   on 2026-10-12. The researcher subsequently authorized S4 closure and its local completion
+   commit after final verification.
+3. Release-check correction completed with researcher authorization on 2026-10-12:
+   protocol §3.2 and runbook S4 now use publisher checksums and 17 direct side-effect
+   neighbours, explaining 202 as the two-hop answer set. Explicit wording for the approved
+   whitespace clarification in §12 was also finalized with authorization on 2026-10-12.
+4. Completed with researcher authorization on 2026-10-12:
+   `python scripts/04_prepare_primekg.py --freeze` validated the existing raw inputs and cache
+   and wrote the fingerprint. Frozen metadata SHA256:
    `bc5d3fd2f12aeb29398fe4684c83d8c65c7bd5c1edf704573322295bdc6b2e95`.
-5. The nodes.csv MD5 matches the published prefix in the earlier findings. A fresh request
-   to the Harvard Dataverse metadata API returned HTTP 403, so the full published node-file
-   digest was not independently checked here. Local node consistency is fully verified.
+5. Resolved on 2026-10-12: the researcher supplied the full nodes.csv MD5 from the
+   publisher's website, `7f9ab4109c54049e819ecd14e15a6038`. A fresh local MD5 calculation
+   matches exactly. This is researcher-provided website verification; the automated
+   Dataverse metadata request still returned HTTP 403. Local node consistency is fully verified.
 6. The prescribed reverse sample covers 28 of the 30 relation labels, all 10,000 matches.
    The rare exposure_cellcomp and exposure_molfunc labels have no sampled rows; the sample
    alone does not prove reverse storage for those labels or for every graph row.
