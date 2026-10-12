@@ -52,3 +52,13 @@ supports the field roles (hop2–hop1 adjacent; at least one answer via hop1; ev
 or another bridge of hop2). This lets UNION rows pass S5 when their roles are correct. The sample,
 ordering, 95% threshold and every-type rule are unchanged; runbook S5 step 3 matches. Decision
 log: "S4 — Field-role support defined (§3.1, protocol v1.3.1)".
+
+## Amendment 2026-10-13 (S4) — field-role failure handling (protocol v1.3.2)
+
+Protocol version 1.3.1 → **1.3.2 (2026-10-13)**. A relation type that fails the §3.1 field-role
+rule (below 95% support, or no resolvable sampled row) is now excluded and counts as FAIL in Gate
+D1, instead of stopping S5. S5 still stops if more than one type fails or the failing types cover
+more than 1% of the 7,633 2-hop rows. Sample, ordering, 95% threshold and Support definition are
+unchanged; the runbook S5 prompt matches. `decision_rules.md` Gate D1 now lists the §3.1 failure as
+a Type FAIL trigger, with no 2-day investigation (re-admission after seeing the S5 sample would be
+post hoc). Decision log: "S4 — Field-role failure handling (§3.1, protocol v1.3.2)".

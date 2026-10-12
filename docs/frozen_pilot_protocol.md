@@ -1,6 +1,6 @@
 # CoFail-KG — Frozen Pilot Protocol
 
-**Version:** 1.3.1 (2026-10-13) · **Owner:** the researcher · **Implemented by:** Claude Code (read-only for Claude)
+**Version:** 1.3.2 (2026-10-13) · **Owner:** the researcher · **Implemented by:** Claude Code (read-only for Claude)
 **What changed since v1.0:** see `docs/CHANGES.md` (one page).
 
 This file is the single source of truth for every scientific rule in the project. Claude Code
@@ -105,7 +105,12 @@ decision gate.
 **Field-role verification rule `[FROZEN]` (S5).** Sample 5 rows per relation type (all if fewer),
 ordered by `SHA256("42" + row_id)`. For each, test which field connects to which in PrimeKG and
 which field the answers are neighbors of. The roles are accepted only if at least 95% of resolvable
-sampled rows support the same roles in **every** relation type; otherwise stop and investigate.
+sampled rows support the same roles in **every** relation type not excluded under the failure rule
+below. A relation type in which fewer than 95% of resolvable sampled rows support the roles fails
+the field-role rule. A failing type is excluded from all later stages (decision-log entry) and
+counts as FAIL in Gate D1. S5 stops and investigates instead if more than one relation type fails,
+or if the failing types together cover more than 1% of the 7,633 2-hop rows. A type with no
+resolvable sampled row is reported and treated as failing.
 
 **Support `[FROZEN]`.** Graph checks use the §3.2 edge convention, the §3.3 type map and the §12
 reference policy, with any label (labels are selected at S6). A sampled row is **resolvable** if

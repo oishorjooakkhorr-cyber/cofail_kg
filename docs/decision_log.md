@@ -180,3 +180,26 @@ Unchanged: the 5-row sample, the SHA256("42" + row_id) ordering, the 95% thresho
 every-relation-type rule.
 Changes to protocol or decision rules: protocol §3.1 (new Support paragraph); header v1.3.1;
 runbook S5 prompt step 3. decision_rules.md unchanged. Logged in docs/CHANGES.md.
+
+## 2026-10-13 — S4 — Field-role failure handling (§3.1, protocol v1.3.2)
+Decision: A relation type in which fewer than 95% of resolvable sampled rows support the field
+roles fails the §3.1 rule; a single small failing type is excluded from all later stages
+(decision-log entry) and counts as FAIL in Gate D1, rather than stopping S5. Safeguard: S5 stops
+and investigates instead if more than one relation type fails, or if the failing types together
+cover more than 1% of the 7,633 2-hop rows. A type with no resolvable sampled row is reported and
+treated as failing.
+Why: Under "every relation type", a 5-row type (drug:effect/phenotype:disease, all of whose rows
+are in the S5 sample) could halt the whole study, while Gate D1 already excludes failing types
+individually.
+Data seen before deciding: docs/S4_findings.md Report 2, and
+results/diagnostics/s5_field_role_preview.csv (55 rows at positions 6–10 per relation type,
+disjoint from the S5 sample, exploratory). The S5 sample has still not been viewed; the decision
+was made before S5 ran. No agent outputs.
+Unchanged: the 5-row sample, the SHA256("42" + row_id) ordering, the 95% threshold and the
+Support definition.
+Changes to protocol or decision rules: protocol §3.1 (failure handling replaces "otherwise stop
+and investigate"; acceptance sentence limited to types not excluded); header v1.3.2; runbook S5
+prompt, final sentence. decision_rules.md Gate D1 "Type FAIL" row: new trigger "failed the
+protocol §3.1 field-role rule at S5"; such a type is already excluded at S5 and the 2-day
+investigation does not apply to it (re-admission after seeing the S5 sample would be post hoc).
+Nothing else in decision_rules.md changed. Logged in docs/CHANGES.md.

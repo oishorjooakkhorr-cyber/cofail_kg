@@ -22,7 +22,7 @@ number of validation rows, and unresolved-row counts.
 
 | Outcome | Rule | Action |
 |---|---|---|
-| Type FAIL | Fewer than 10 validation rows, **or** a hop has no candidate label, **or** hop-1 score < 90%, **or** hop-2 score < 90% | Investigate up to 2 working days (field roles, edge storage, release). If still failing, exclude the type (decision-log entry). |
+| Type FAIL | Fewer than 10 validation rows, **or** a hop has no candidate label, **or** hop-1 score < 90%, **or** hop-2 score < 90%, **or** failed the protocol §3.1 field-role rule at S5 | Investigate up to 2 working days (field roles, edge storage, release). If still failing, exclude the type (decision-log entry). A type that failed the §3.1 field-role rule is already excluded at S5; the 2-day investigation does not apply to it, because re-admitting it after seeing the S5 sample would be a post-hoc decision. |
 | Type PASS | Otherwise | Type may enter the primary population |
 | **Global STOP** | Fewer than 6 of 12 types PASS, **or** PASS types cover < 70% of 2-hop rows | Do not continue. Re-check release (S4), field roles (S5), edge convention. |
 | **Global PROCEED** | Otherwise | Continue to S7 |

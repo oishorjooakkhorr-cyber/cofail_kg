@@ -463,7 +463,9 @@ For each sampled row:
 2. Find which labels connect hop1 and hop2.
 3. Test support as defined in protocol §3.1 and report the per-row counts listed there.
 Write results/semantics/field_roles.csv and a per-relation-type summary of the evidence.
-State a conclusion only if the §3.1 rule is met; otherwise stop and report conflicting rows.
+Apply the §3.1 failure rule: list each failing relation type (including any with no resolvable
+sampled row) with its conflicting rows, for exclusion; if more than one type fails, or the failing
+types together cover more than 1% of the 7,633 2-hop rows, stop and report conflicting rows.
 ```
 
 **Evaluate.**
