@@ -1,0 +1,42 @@
+{
+  "excluded_types": {
+    "drug:effect/phenotype:disease": {
+      "adopted_R2": null,
+      "adopted_construction": null,
+      "authority": "User instruction: if still failing after permitted D1 investigation, mark excluded and recompute global D1.",
+      "decision_date": "2026-10-13",
+      "hop2_threshold": 0.9,
+      "investigation_evidence": "results/semantics/s6_failed_type_investigation/evidence.json",
+      "investigation_report": "results/semantics/s6_failed_type_investigation/report.md",
+      "investigation_sha256": "19b188ea6fadfb453b42d1df03c89904832e0a0a586f900eec3b3d638558f7b7",
+      "mapping_frozen": false,
+      "minimum_validation_rows": 10,
+      "reason_codes": [
+        "INSUFFICIENT_VALIDATION_ROWS",
+        "HOP2_REPRODUCTION_BELOW_THRESHOLD"
+      ],
+      "status": "EXCLUDED",
+      "tie_disposition": "RETAIN_UNRESOLVED",
+      "tied_candidates": [
+        {
+          "BRIDGE_matches": 0,
+          "R2": [
+            "disease_phenotype_negative"
+          ],
+          "UNION_matches": 0,
+          "denominator": 5
+        },
+        {
+          "BRIDGE_matches": 0,
+          "R2": [
+            "disease_phenotype_positive"
+          ],
+          "UNION_matches": 0,
+          "denominator": 5
+        }
+      ],
+      "validation_rows": 5
+    }
+  },
+  "scope": "Only this type is excluded by this decision. Other failing types retain their previous review status."
+}

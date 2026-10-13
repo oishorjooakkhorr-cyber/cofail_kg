@@ -303,3 +303,60 @@ This records the disposition of the tie only. It does not approve the proposed m
 decide exclusions, authorize the second prompt, or freeze any result. The original generated
 reports and scores are preserved; their computation-time `NEEDS_DECISION` flag predates this
 human disposition. Changes to protocol, decision rules and frozen hashes: none.
+
+## 2026-10-13 — S6 — Exclude drug:effect/phenotype:disease after D1 investigation
+
+Authorization: the researcher explicitly requested that both tied candidates and their scores
+remain logged; two failing validation rows with complete reference/reached/extra/missing disease
+sets be shown before final exclusion; the five-row sample and permitted D1 causes be investigated;
+and, if still failing, the type be excluded and global D1 recomputed. Threshold reductions and
+freezing a mapping for this type were expressly prohibited.
+
+Investigation: the pinned 7,633-row BioHopR file contains exactly five records of this type
+(BH2_00000 through BH2_00004), matching the protocol's dataset count. All five query entities,
+bridges and answer sets resolve; zero rows are skipped. Fresh field-role checks support all five.
+Hop 1 (`drug_effect`) scores 5/5. Each query has exactly one valid phenotype bridge, so BRIDGE
+and UNION coincide for every row.
+
+| Hop-2 candidate set | BRIDGE exact reproduction | UNION exact reproduction |
+|---|---:|---:|
+| disease_phenotype_negative | 0/5 (0%) | 0/5 (0%) |
+| disease_phenotype_positive | 0/5 (0%) | 0/5 (0%) |
+| both labels together | 0/5 (0%) | 0/5 (0%) |
+
+The two singleton sets remain tied after the smallest-set rule; neither is selected.
+The two-label set does not break the tie because it has the same score and larger size.
+
+Storage/release checks: a fresh scan of all 8,100,498 raw kg.csv rows reproduced the full
+candidate results for all five rows. Outgoing-only, incoming-only, either-direction and
+cached-index sets agree for the inspected paths. Raw kg.csv and nodes.csv SHA256s match frozen
+metadata; metadata matches kg_fingerprint; raw MD5s match the publisher checksums recorded
+at S4. BioHopR's file hash and pinned revision match. No field-role, normalization, edge-storage,
+or local release-integrity defect was found. The upstream generation cause of the smaller
+BioHopR gold sets is not established; no speculative correction is adopted.
+
+Evidence presented before exclusion: the first two validation rows in prescribed hash order,
+with complete named disease sets and IDs in
+`results/semantics/s6_failed_type_investigation/report.md`:
+- BH2_00004, Zinc sulfate → Nausea: 29 reference diseases; positive reaches 89 (60 extra,
+  0 missing), negative reaches 0 (0 extra, 29 missing), under both constructions.
+- BH2_00003, Zinc chloride → Decreased circulating copper concentration: 3 reference diseases
+  (IRIDA syndrome, MEDNIK syndrome, COG2-CDG); positive reaches those plus aceruloplasminemia
+  and familial benign copper deficiency (2 extra, 0 missing); negative reaches none (3 missing).
+
+Decision under the researcher's conditional authorization: **EXCLUDE
+drug:effect/phenotype:disease**. The permitted checks are complete, and it still fails both
+the minimum-ten-row rule and the 90% hop-2 rule. D1 permits investigation for up to two working
+days; it does not require delaying a supported conclusion for the full period. Preserve the
+unresolved tie, with no adopted R2 or construction. Record the exclusion in
+`results/semantics/relation_type_exclusions.json`.
+
+Recomputed global D1: **PROCEED**, 9 of the original 12 types PASS, covering 7,377 of the
+original 7,633 rows (96.65%). Exclusion does not reduce the denominators. Eight passing types
+propose BRIDGE; one proposes UNION. The other two FAIL types are not finally excluded by this
+decision and await their own review. Current quantities: `results/semantics/d1_after_exclusion.json`.
+
+Changes to protocol, thresholds, scientific definitions, frozen hashes or mappings: none.
+Original S6 computation outputs are preserved. No S7 or agent execution. Analytical assertions
+checked the five-row count, resolution/support, raw/index agreement, all candidate scores and
+global recomputation; no application code changed, so the unchanged unit suite was not rerun.

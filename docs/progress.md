@@ -4,6 +4,8 @@
 S6 first prompt computed (2026-10-13): D1 PROCEED, 9/12 types PASS, 7,377/7,633 rows
 (96.65%). Proposed mappings only; researcher review remains, and nothing is frozen.
 The researcher chose to retain the failed five-row type's hop-2 tie unresolved (2026-10-13).
+After the authorized D1 investigation, `drug:effect/phenotype:disease` is EXCLUDED;
+the tie remains unresolved and no mapping is frozen. Recomputed D1 remains PROCEED.
 
 ## Completed stages
 S0
@@ -81,7 +83,14 @@ S5 — completed 2026-10-13: field roles verified (hop2 = query entity, hop1 = b
   `relation_ambiguity_tags.csv`, `d1_report.md`. See `docs/S6_implementation.md` for verification.
 - 114 tests pass. Eight raw-CSV mismatch checks agree; an independent existing-index check
   reproduces all 271 UNION targets of BH2_03879 (stored bridge alone reaches 86).
-- No `relation_mapping.json`, frozen hash, exclusion decision, protocol amendment or S7 work.
+- No `relation_mapping.json`, frozen hash, protocol amendment or S7 work.
+- Subsequent authorized investigation (2026-10-13): `drug:effect/phenotype:disease` EXCLUDED.
+  Exactly five records exist; all qualify, none are skipped. All candidate sets still score
+  0/5 under both constructions. Field roles, normalization, raw edge orientations and local
+  release integrity checked; no permitted correction found. Full named sets for two rows:
+  `results/semantics/s6_failed_type_investigation/report.md`; all five rows: `evidence.json`.
+  Exclusion registry: `results/semantics/relation_type_exclusions.json`; recomputed gate:
+  `results/semantics/d1_after_exclusion.json` and `.md`. Original denominators retained.
 
 ## Latest commit
 S6 calculation code: `2f2caf1`; this checkpoint records the first-prompt outputs and verification.
@@ -166,6 +175,7 @@ with " (disease)" appended (exactly one match only); all 152 such answer names i
 resolve; the S5 outcome is unchanged.
 DONE (2026-10-13, 4d18892): §12 suffix retry implemented in src/cofail_kg/evaluation/normalize.py
 (reference policy), 7 unit tests; all 152 previously unresolved answer names now resolve.
-S6 first prompt is computed; the researcher has dispositioned the tie by keeping it unresolved.
-Review `results/semantics/d1_report.md` and decide failure investigation/exclusions. Only after researcher approval
+S6 first prompt is computed; the five-row type is excluded after authorized investigation,
+with its tie kept unresolved. Review `results/semantics/d1_after_exclusion.md`; the two other
+failing types still need their separate investigation/exclusion decisions. Only after researcher approval
 and an explicit request for the second prompt should the mapping and hash be frozen.

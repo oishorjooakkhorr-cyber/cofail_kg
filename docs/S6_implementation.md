@@ -1,8 +1,10 @@
 # S6 first prompt — proposed relation mappings
 
 Computed 2026-10-13 from protocol v1.3.3 §5.1–5.3 and decision rules D1.
-The researcher requested only the first runbook prompt. No mapping, construction or ambiguity
-tag is frozen; no exclusion decision has been made, and S7 has not started.
+The initial request covered the first runbook prompt. No mapping, construction or ambiguity
+tag is frozen, and S7 has not started. Subsequently, the researcher authorized investigation
+and conditional exclusion of `drug:effect/phenotype:disease`; that investigation is complete
+and this one type is excluded. See `results/semantics/d1_after_exclusion.md` for current status.
 
 ## Result
 
@@ -102,7 +104,18 @@ Unadopted failed types have no accepted R2, so §5.2 cannot supply a tag for the
 
 ## Researcher review remaining
 
-The five-row type's tie is retained unresolved by researcher decision. Inspect the proposed
-labels and failing examples. Apply D1's failure
-investigation/exclusion procedure, and record any scientific decision. The second runbook
-prompt (approval, exclusions and freezing) remains outside this first-prompt execution.
+The five-row type's tie is retained unresolved by researcher decision. The subsequently
+authorized investigation checked all five rows and every candidate under both constructions;
+raw outgoing, incoming and cached results agree. Field roles and name resolution pass;
+raw checksums match the frozen/S4-verified release. Exactly five rows exist in the pinned
+dataset, so the minimum-ten requirement fails independently of the zero hop-2 scores.
+
+Full disease sets for two rows were presented before recording exclusion. The user's
+conditional authorization applies: this type is now EXCLUDED, with neither tied label
+selected. `relation_type_exclusions.json` records the decision, and `d1_after_exclusion.json`
+recomputes D1 as PROCEED, still 9/12 and 7,377/7,633 (96.65%); denominators are not reduced.
+Evidence: `results/semantics/s6_failed_type_investigation/report.md` and `evidence.json`.
+The upstream cause of smaller BioHopR gold sets remains unknown; no new rule is inferred.
+
+The two other failing types still require separate failure review. Mapping approval and
+freezing (the second prompt) remain outside the authorized work. No thresholds were changed.
