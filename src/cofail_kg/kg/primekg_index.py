@@ -121,6 +121,31 @@ class PrimeKGIndex:
             })
         return result
 
+    def candidate_labels(self, source_type: str, target_type: str) -> dict[str, list[str]]:
+        """All labels between two node types, with informational display labels (§5.1).
+
+        The frozen S4 convention is either-direction; candidate discovery checks both
+        stored orientations so a one-way stored edge is not lost.
+        """
+        source_ids = {int(i) for i, n in self._nodes.items() if n["type"] == source_type}
+        target_ids = {int(i) for i, n in self._nodes.items() if n["type"] == target_type}
+        edges = self._edges
+        mask = ((edges.x_index.isin(source_ids) & edges.y_index.isin(target_ids))
+                | (edges.x_index.isin(target_ids) & edges.y_index.isin(source_ids)))
+        pairs = edges.loc[mask, ["relation", "display_relation"]].drop_duplicates()
+        return {str(label): sorted(group.display_relation.unique())
+                for label, group in pairs.groupby("relation", observed=True, sort=True)}
+
+    def neighbors_by_label(self, node_id: str, neighbor_type: str) -> dict[str, set[str]]:
+        """Typed neighbour IDs grouped by relation under the shared edge convention (§5.1)."""
+        result: dict[str, set[str]] = defaultdict(set)
+        pairs = self._incident(node_id)[["neighbor_id", "relation"]].drop_duplicates()
+        for neighbor, label in pairs.itertuples(index=False, name=None):
+            neighbor = str(neighbor)
+            if self._nodes[neighbor]["type"] == neighbor_type:
+                result[str(label)].add(neighbor)
+        return dict(result)
+
     def degree(self, node_id: str | int) -> int:
         """Number of unique neighbours over all labels (§15)."""
         return self._incident(node_id).neighbor_id.nunique()

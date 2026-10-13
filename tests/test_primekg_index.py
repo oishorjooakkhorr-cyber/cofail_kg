@@ -33,6 +33,19 @@ def test_filters_use_relation_not_display_label(index):
     assert index.neighbors("10", "drug_effect", "gene/protein") == []
 
 
+def test_candidate_labels_cover_both_directions_and_keep_display_information(index):
+    assert index.candidate_labels("drug", "gene/protein") == {
+        "drug_protein": ["carrier", "enzyme", "target"]}
+    assert index.candidate_labels("gene/protein", "drug") == index.candidate_labels("drug", "gene/protein")
+    assert index.candidate_labels("drug", "disease") == {}
+
+
+def test_neighbors_by_label_uses_same_traversal_and_type_filter(index):
+    assert index.neighbors_by_label("10", "gene/protein") == {"drug_protein": {"2", "30"}}
+    assert index.neighbors_by_label("40", "drug") == {"drug_effect": {"10"}}
+    assert index.neighbors_by_label("99", "drug") == {}
+
+
 def test_neighbor_display_labels_belong_to_that_neighbor(index):
     neighbors = index.neighbors("10", "drug_protein")
     assert neighbors[0]["display_labels"] == ["enzyme", "target"]
