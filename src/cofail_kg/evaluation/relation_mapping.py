@@ -169,7 +169,9 @@ def score_type(rows, find, neighbors, candidates1, candidates2, *, s5_failed=Fal
     r2 = adopted["sets"][0] if adopted and adopted["status"] == "SELECTED" else None
     needs_decision = hop1["status"] == "TIE" or any(
         s[c]["status"] == "TIE" for s in scenarios for c in ("BRIDGE", "UNION"))
-    status = "FAIL" if reasons else "PENDING" if needs_decision else "PASS"
+    # Tied sets share the selected score. Only differing hop-1 scenarios can
+    # leave D1 unknown; label approval is a separate researcher decision.
+    status = "FAIL" if reasons else "PENDING" if None in constructions else "PASS"
     return {
         "rows_in_dataset": len(rows), "sample_size": n,
         "sample_row_ids": [r["row_id"] for r in sample], "skipped_unresolved": skipped,
@@ -190,6 +192,7 @@ def evaluate_d1(per_type):
     total_rows = sum(v["rows_in_dataset"] for v in per_type.values())
     pass_rows = sum(v["rows_in_dataset"] for v in passed)
     pending = any(v["needs_decision"] for v in per_type.values())
+    gate_pending = any(v["d1_status"] == "PENDING" for v in per_type.values())
     splits = {}
     for construction in ("BRIDGE", "UNION", "UNADOPTED"):
         group = [v for v in per_type.values() if (v["construction"] or "UNADOPTED") == construction]
@@ -202,7 +205,7 @@ def evaluate_d1(per_type):
         }
     return {
         "status": "NEEDS_DECISION" if pending else "COMPUTED",
-        "outcome": None if pending else "STOP" if len(passed) < 6 or 10 * pass_rows < 7 * total_rows else "PROCEED",
+        "outcome": None if gate_pending else "STOP" if len(passed) < 6 or 10 * pass_rows < 7 * total_rows else "PROCEED",
         "total_types": len(per_type), "total_rows": total_rows, "pass_types": len(passed),
         "fail_types": sum(v["d1_status"] == "FAIL" for v in per_type.values()),
         "pending_types": sum(v["d1_status"] == "PENDING" for v in per_type.values()),

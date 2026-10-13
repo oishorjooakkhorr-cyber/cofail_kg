@@ -60,6 +60,8 @@ def report_md(proposed, get_node):
              f"{d1['pass_types']}/{d1['total_types']} types PASS; {d1['fail_types']} FAIL; "
              f"{d1['pending_types']} pending. PASS types cover {d1['pass_rows']}/{d1['total_rows']} rows "
              f"({d1['pass_coverage']:.2%}). Global thresholds: at least 6 types and at least 70% row coverage.", "",
+             f"**Mapping review status: {d1['status']}.** A label-set tie can require researcher review "
+             "even when it cannot change any type's pass/fail status or the global D1 outcome.", "",
              "| Construction | Types | Dataset rows | PASS types | PASS rows | FAIL types | Pending |",
              "|---|---:|---:|---:|---:|---:|---:|"]
     for construction, v in d1["by_construction"].items():

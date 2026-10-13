@@ -129,7 +129,8 @@ def test_hop2_tie_is_reported_without_choosing_an_adopted_r2():
     result = score_type([row(i) for i in range(10)], find, same_targets, {"a": []}, {"x": [], "y": []})
     assert result["construction"] == "BRIDGE" and result["R2"] is None
     assert result["scenarios"][0]["BRIDGE"]["status"] == "TIE"
-    assert result["d1_status"] == "PENDING" and result["ambiguity_tag"] is None
+    assert result["d1_status"] == "PASS" and result["ambiguity_tag"] is None
+    assert result["needs_decision"]
 
 
 def test_unadopted_construction_tie_is_still_flagged_for_researcher():
@@ -185,3 +186,11 @@ def test_global_d1_does_not_issue_a_final_outcome_with_unresolved_ties():
     result = evaluate_d1({"t": {"d1_status": "PENDING", "needs_decision": True,
                                 "rows_in_dataset": 100, "construction": None}})
     assert result["outcome"] is None and result["status"] == "NEEDS_DECISION"
+
+
+def test_tie_in_definitely_failed_type_does_not_change_global_gate():
+    types = {f"t{i}": {"d1_status": "PASS" if i < 9 else "FAIL", "needs_decision": i == 11,
+                       "rows_in_dataset": 1, "construction": "BRIDGE" if i < 9 else None}
+             for i in range(12)}
+    result = evaluate_d1(types)
+    assert result["outcome"] == "PROCEED" and result["status"] == "NEEDS_DECISION"
