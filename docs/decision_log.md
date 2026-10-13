@@ -440,3 +440,60 @@ all-failed-type coverage, preservation of the five-row decision and protected SH
 No code changed; the investigation's 119-passing-test suite was not rerun for this metadata
 update. Routine engineering choice: archive previous current reports and add a separate
 exclusion decision report. Changes to protocol, decision rules or normalization: none.
+
+
+## 2026-10-13 — S6 — Approved mapping, constructions and ambiguity tags frozen
+
+Decision: execute S6 prompt part 2 on the nine passing proposals, retaining all three
+researcher-authorized exclusions. Authorization: the researcher requested "now execute
+the 2nd prompt" after the passing proposals and completed exclusion decisions were explained.
+No passing type has an unresolved label tie, so no further scientific choice was needed.
+Data seen before deciding: S6 proposals, D1 results, failure investigations, exploratory
+mixtures, and all three authorized exclusions (through commit ed00e1a).
+
+Created results/semantics/relation_mapping.json with all 12 types: nine accepted mappings
+and three explicit excluded entries. Accepted mappings retain the exact proposed R1, R2
+and construction. Excluded entries have null R1, R2 and construction; diagnostic candidate
+sets remain in the original proposals/investigations. The five-row type retains its
+RETAIN_UNRESOLVED tie disposition, with no candidate selected. The exclusions remain in
+force for the current analysis, including the researcher's "for the time being" qualification
+recorded in the exclusion registry and detailed report. No automatic re-admission.
+
+Recomputed results/semantics/relation_ambiguity_tags.csv from the final mapping and fresh
+PrimeKG candidate-label catalogs using the existing section 5.2 helper. Nine rows are FROZEN;
+three are EXCLUDED with no ambiguity tag because no mapping is accepted. Passing tags:
+NONE 2, R1_AMBIGUOUS 3, R2_AMBIGUOUS 2, BOTH_AMBIGUOUS 2. These agree with the proposals.
+Constructions: BRIDGE 8 (6,428 dataset rows), UNION 1 (949 rows).
+
+The existing write_once helper recorded relation_mapping in configs/frozen_hashes.yaml:
+2d609332b6a4ff48423bd7b2f1cb98d8d2d9cafc2fe80c20f7cee8184b8bb8c0
+This is SHA256 of the saved mapping file's exact bytes. Existing BioHopR revision and KG
+fingerprint values were preserved. The new mapping records proposal, exclusion-registry,
+protocol and decision-rule hashes and the source commit. Global D1 remains PROCEED:
+9/12 types, 7,377/7,633 rows (96.65%), with all 256 failing-type rows excluded and original
+denominators retained.
+
+Verification: 119 tests passed. Assert-based freeze checks verified all original S6
+source/input hashes, current proposal/exclusion-registry agreement, the absence of an
+existing freeze, every passing type's selection and section 5.3 construction rule, fresh
+candidate catalogs, regenerated tag counts, file readback and write-once hash equality.
+Original proposed tags are already preserved byte-for-byte in s6_attempt_01. The final
+mapping and tag rows were checked again from disk; Git index bytes were checked against
+the frozen mapping hash before commit.
+
+Real example: disease:drug:effect/phenotype freezes R1=[indication], R2=[drug_effect],
+construction=UNION, tag=R1_AMBIGUOUS. Its original validation scores were BRIDGE 15/30
+and UNION 30/30, so section 5.3 requires UNION.
+
+Assumptions: instruction to execute part 2 approves the previously reviewed nine proposals;
+all earlier exclusion decisions remain applicable. Routine engineering choices: retain the
+existing per_type JSON layout; explicitly represent excluded accepted-label fields as null;
+serialize compact UTF-8 with no trailing newline so Git line-ending conversion cannot alter
+the frozen mapping bytes; reuse existing ambiguity_tag and write_once helpers without new
+application code. Manual review: accepted mapping rows, excluded markers, and the recorded
+hash. No new scientific method, score, threshold, normalization or direction rule.
+
+Only the three part-2 artifacts and this required decision-log entry changed. Protocol,
+decision rules and historical first-prompt reports were not edited. Their pre-freeze status
+statements describe earlier snapshots; this entry and relation_mapping.json record the
+current freeze. No S7 work was started.
