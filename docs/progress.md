@@ -6,6 +6,10 @@ S6 first prompt computed (2026-10-13): D1 PROCEED, 9/12 types PASS, 7,377/7,633 
 The researcher chose to retain the failed five-row type's hop-2 tie unresolved (2026-10-13).
 After the authorized D1 investigation, `drug:effect/phenotype:disease` is EXCLUDED;
 the tie remains unresolved and no mapping is frozen. Recomputed D1 remains PROCEED.
+The two remaining failures were investigated (2026-10-13), with no permitted repair found.
+Exploratory mixture results and a node-identity conflict are documented in
+`results/semantics/s6_remaining_investigation/report.md`. Both still FAIL; final exclusion
+has not been recorded. Full test suite: 119 passed. Global D1 is unchanged.
 
 ## Completed stages
 S0
@@ -176,6 +180,7 @@ resolve; the S5 outcome is unchanged.
 DONE (2026-10-13, 4d18892): §12 suffix retry implemented in src/cofail_kg/evaluation/normalize.py
 (reference policy), 7 unit tests; all 152 previously unresolved answer names now resolve.
 S6 first prompt is computed; the five-row type is excluded after authorized investigation,
-with its tie kept unresolved. Review `results/semantics/d1_after_exclusion.md`; the two other
-failing types still need their separate investigation/exclusion decisions. Only after researcher approval
+with its tie kept unresolved. Review `results/semantics/d1_after_exclusion.md`; investigations
+of the two other failing types are complete, with final disposition still pending. Review
+`results/semantics/s6_remaining_investigation/report.md`. Only after researcher approval
 and an explicit request for the second prompt should the mapping and hash be frozen.

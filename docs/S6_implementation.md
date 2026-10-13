@@ -117,5 +117,24 @@ recomputes D1 as PROCEED, still 9/12 and 7,377/7,633 (96.65%); denominators are 
 Evidence: `results/semantics/s6_failed_type_investigation/report.md` and `evidence.json`.
 The upstream cause of smaller BioHopR gold sets remains unknown; no new rule is inferred.
 
-The two other failing types still require separate failure review. Mapping approval and
-freezing (the second prompt) remain outside the authorized work. No thresholds were changed.
+The two other failing types have now been investigated at the researcher's request
+(2026-10-13). Their original scores reproduce: disease:effect/phenotype:drug scores 3/30
+under both constructions; effect/phenotype:drug:disease scores 26/30 BRIDGE and 20/30 UNION.
+All available query/bridge pairs resolve (36/36 and 215/215); the prescribed cap explains
+the 30-row samples. Raw outgoing/incoming paths agree with the cache for all 60 sampled
+rows and all R2 subsets. Release checks pass. No implementation repair was identified.
+
+Exploratory categories (BOTH / BRIDGE-only / UNION-only / NEITHER) are 3/0/0/27 and
+17/9/3/1. The latter's either-construction 29/30 is an oracle diagnostic using reference
+answers, not a D1 pass or a validated row-wise rule. The former has one bridge per sampled
+row and only extra-target mismatches. BH2_05027 in the latter has an exact-name identity
+conflict: reference node 35852 versus reached node 33621. Section 12 correctly prioritizes
+the exact name; no suffix override or node merge was applied. This also explains the one
+unsupported row in the fresh S6-sample role check (29/30); original S5 remains PASS.
+
+Evidence and full named examples: results/semantics/s6_remaining_investigation/report.md,
+evidence.json, identity_check.json and mixtures.csv. Reproduction script:
+scripts/06_investigate_remaining.py (exclusive output creation). Full suite: 119 passed.
+The two types remain FAIL, pending final disposition; no additional exclusion was recorded.
+Global D1 remains PROCEED, 9/12 and 7,377/7,633. Mapping approval and freezing (the second
+prompt) remain outside the authorized work. No thresholds were changed.

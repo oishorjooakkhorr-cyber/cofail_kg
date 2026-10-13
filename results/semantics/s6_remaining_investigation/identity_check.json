@@ -1,0 +1,39 @@
+{
+  "row_id": "BH2_05027",
+  "raw_answer_names": [
+    "precursor T-cell acute lymphoblastic leukemia",
+    "acute lymphoblastic leukemia "
+  ],
+  "nodes": {
+    "35852": {
+      "id": "35852",
+      "source_id": "3541_870",
+      "type": "disease",
+      "name": "acute lymphoblastic leukemia",
+      "source": "MONDO_grouped"
+    },
+    "33621": {
+      "id": "33621",
+      "source_id": "4967",
+      "type": "disease",
+      "name": "acute lymphoblastic leukemia (disease)",
+      "source": "MONDO"
+    }
+  },
+  "resolution": {
+    "precursor T-cell acute lymphoblastic leukemia": {
+      "status": "resolved",
+      "node_id": "83769",
+      "via_suffix": false
+    },
+    "acute lymphoblastic leukemia ": {
+      "status": "resolved",
+      "node_id": "35852",
+      "via_suffix": false
+    }
+  },
+  "bridge_indication_reaches": {
+    "35852": false,
+    "33621": true
+  }
+}

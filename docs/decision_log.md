@@ -360,3 +360,46 @@ Changes to protocol, thresholds, scientific definitions, frozen hashes or mappin
 Original S6 computation outputs are preserved. No S7 or agent execution. Analytical assertions
 checked the five-row count, resolution/support, raw/index agreement, all candidate scores and
 global recomputation; no application code changed, so the unchanged unit suite was not rerun.
+
+## 2026-10-13 — S6 — Remaining failures investigated; mixtures exploratory
+
+Authorization: the researcher requested both remaining failed-type investigations and
+exploratory construction-mixture analysis. This entry records findings, not a new scientific
+rule or additional exclusion. Original S6 samples, thresholds and reference normalization
+were retained. Data seen: existing S6 outputs plus the new investigation artifacts below.
+
+Results: disease:effect/phenotype:drug remains FAIL at 3/30 under BRIDGE and UNION;
+effect/phenotype:drug:disease remains FAIL at 26/30 BRIDGE and 20/30 UNION. Both have 30
+validation rows and hop-1 30/30. All 36 and 215 available query/bridge pairs resolve; no
+sample rows or answers were lost to resolution. Original per-type scores reproduce.
+A scan of all 8,100,498 raw edges shows outgoing/incoming/cache agreement for all sampled
+paths and every R2 subset. Frozen input and S4 release checks pass.
+
+Mixture categories BOTH / BRIDGE-only / UNION-only / NEITHER: 3/0/0/27 for the first type,
+17/9/3/1 for the second. First type: every sampled query has one valid bridge; all failures
+have extra drugs and no missing drugs. Second type: UNION repairs three BRIDGE failures
+but introduces extra targets in nine otherwise-exact rows. Its 29/30 either-construction
+coverage is a reference-informed oracle diagnostic, not a validated selection rule or D1 pass.
+
+BH2_05027 explains the remaining second-type failure: the raw reference string
+"acute lymphoblastic leukemia " resolves exactly, after trimming, to MONDO_grouped node
+35852. The graph reaches MONDO node 33621, "acute lymphoblastic leukemia (disease)".
+Section 12 only retries the suffix after zero exact disease matches. No resolver bug is
+established and no substitution is applied. Similar names do not authorize merging IDs.
+Fresh support checks on the S6 samples support 30/30 and 29/30 respectively; the identity
+conflict explains the latter's unsupported row. These diagnostics do not replace the
+original frozen S5 samples, which passed 5/5 for both types.
+
+Disposition: investigation complete, both types still FAIL, no additional exclusions
+recorded in this request. Existing D1 remains PROCEED, 9/12 types and 7,377/7,633 rows
+(96.65%); original denominators retained. The five-row type remains excluded with its tie
+unresolved. No mapping is frozen and S7 is not started. Under the existing D1 rule,
+exclusion is the next action for types that remain failing; evidence is available for review.
+
+Artifacts: scripts/06_investigate_remaining.py, tests/test_s6_investigation.py, and
+results/semantics/s6_remaining_investigation/{report.md,evidence.json,identity_check.json,mixtures.csv}.
+Full suite: 119 passed. Runtime assertions checked original score/sample reproduction,
+resolution, raw-edge agreement, input hashes, and protected-file hashes. Routine engineering
+choices: cached typed neighbors, chunked raw scan, deterministic ID order, four descriptive
+categories, and exclusive output creation. No new scientific threshold or method adopted.
+Changes to protocol, decision rules, normalization, frozen hashes or mappings: none.
