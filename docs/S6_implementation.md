@@ -23,8 +23,10 @@ The five-row type has a hop-2 tie between `disease_phenotype_negative` and
 `disease_phenotype_positive` under both constructions. Both score zero; neither is chosen.
 The positive label reaches gold diseases plus extras in the inspected examples; the negative
 label misses the gold diseases. This cannot change the type's FAIL or global PROCEED.
-The researcher has been asked whether to retain the unresolved tie or choose the positive
-label for diagnostics. Choosing a diagnostic label would not make this type eligible.
+Researcher disposition (2026-10-13): **keep the failed type's tie unresolved**. Neither label
+is selected, including for diagnostics. This leaves the type's FAIL and global PROCEED unchanged.
+The generated outputs remain the original computation snapshot; their `NEEDS_DECISION` status
+predates this disposition. The decision log records the subsequent human decision.
 
 For `effect/phenotype:drug:disease`, the BRIDGE mismatches are BH2_05081, BH2_04897,
 BH2_05027 and BH2_04933. UNION reproduces three of these; BH2_05027 fails both.
@@ -100,6 +102,7 @@ Unadopted failed types have no accepted R2, so §5.2 cannot supply a tag for the
 
 ## Researcher review remaining
 
-Inspect the proposed labels, failing examples and the five-row type's tie. Apply D1's failure
+The five-row type's tie is retained unresolved by researcher decision. Inspect the proposed
+labels and failing examples. Apply D1's failure
 investigation/exclusion procedure, and record any scientific decision. The second runbook
 prompt (approval, exclusions and freezing) remains outside this first-prompt execution.

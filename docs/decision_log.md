@@ -282,3 +282,24 @@ and every candidate score is unchanged (candidate CSV byte-identical). No thresh
 
 Changes to protocol or decision rules: none. No `relation_mapping.json` or frozen hash written;
 no agent outputs, no S7 work. Details and engineering choices: `docs/S6_implementation.md`.
+
+## 2026-10-13 — S6 — Retain the failed type's unresolved tie
+
+Decision: The researcher selected "Keep the failed type’s tie unresolved (Recommended)" for
+`drug:effect/phenotype:disease`. Retain both `disease_phenotype_negative` and
+`disease_phenotype_positive` as tied hop-2 candidates under BRIDGE and UNION; choose neither,
+including for diagnostics. No construction or R2 is adopted for this failing type.
+
+Why: Both label sets score 0/5 under both constructions. The type also has fewer than the
+10 validation rows required by D1, so resolving the tie cannot change its FAIL. The global
+D1 outcome remains PROCEED (9/12 types PASS; 7,377/7,633 rows, 96.65%).
+
+Data seen before deciding: the first-prompt results and explanation that the positive label
+reaches the gold diseases plus extras while the negative label misses them in the checked
+examples. The researcher was explicitly told that neither option freezes a mapping or changes
+the FAIL result. No agent outputs.
+
+This records the disposition of the tie only. It does not approve the proposed mappings,
+decide exclusions, authorize the second prompt, or freeze any result. The original generated
+reports and scores are preserved; their computation-time `NEEDS_DECISION` flag predates this
+human disposition. Changes to protocol, decision rules and frozen hashes: none.

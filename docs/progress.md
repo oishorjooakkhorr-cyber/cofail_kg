@@ -3,7 +3,7 @@
 ## Current stage
 S6 first prompt computed (2026-10-13): D1 PROCEED, 9/12 types PASS, 7,377/7,633 rows
 (96.65%). Proposed mappings only; researcher review remains, and nothing is frozen.
-The failed five-row type has a reported hop-2 tie awaiting the researcher's disposition.
+The researcher chose to retain the failed five-row type's hop-2 tie unresolved (2026-10-13).
 
 ## Completed stages
 S0
@@ -73,6 +73,8 @@ S5 — completed 2026-10-13: field roles verified (hop2 = query entity, hop1 = b
   `effect/phenotype:drug:disease` (BRIDGE 26/30, UNION 20/30).
 - The five-row type ties positive/negative disease-phenotype labels at zero under both
   constructions. No label was chosen. The tie cannot change its FAIL or global PROCEED.
+  Researcher disposition (2026-10-13): keep the failed type's tie unresolved; no diagnostic
+  label selection. This disposition is recorded in the decision log.
 - Passing-type ambiguity tags: NONE 2, R1_AMBIGUOUS 3, R2_AMBIGUOUS 2, BOTH_AMBIGUOUS 2.
   Failed types have no adopted R2/construction and hence no computable tag.
 - Outputs: `results/semantics/relation_mapping_candidates.csv`, `relation_mapping_proposed.json`,
@@ -164,6 +166,6 @@ with " (disease)" appended (exactly one match only); all 152 such answer names i
 resolve; the S5 outcome is unchanged.
 DONE (2026-10-13, 4d18892): §12 suffix retry implemented in src/cofail_kg/evaluation/normalize.py
 (reference policy), 7 unit tests; all 152 previously unresolved answer names now resolve.
-S6 first prompt is computed. Review `results/semantics/d1_report.md`, disposition the failed
-five-row type's tie, and decide failure investigation/exclusions. Only after researcher approval
+S6 first prompt is computed; the researcher has dispositioned the tie by keeping it unresolved.
+Review `results/semantics/d1_report.md` and decide failure investigation/exclusions. Only after researcher approval
 and an explicit request for the second prompt should the mapping and hash be frozen.
