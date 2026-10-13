@@ -7,25 +7,36 @@ from collections import Counter
 ROOT = Path(__file__).resolve().parent.parent
 OUT = ROOT / 'graphify-out'
 graph = json.loads((OUT / 'graph.json').read_text(encoding='utf-8'))
+# The Markdown extractor can mistake label lists for links to nonexistent files.
+input_ids = {n['id'] for n in graph['nodes']}
+invalid_links = [e for e in graph['links'] if e['source'] not in input_ids or e['target'] not in input_ids]
+graph['links'] = [e for e in graph['links'] if e['source'] in input_ids and e['target'] in input_ids]
 previous_path=OUT/'documentation-extraction.json'
 if previous_path.exists():
     previous=json.loads(previous_path.read_text(encoding='utf-8'))
     previous_ids={n['id'] for n in previous['nodes']}
     previous_edges={(e['source'],e['target'],e.get('relation'),e.get('source_file'),e.get('source_location')) for e in previous['edges']}
-    graph['nodes']=[n for n in graph['nodes'] if n['id'] not in previous_ids]
-    graph['links']=[e for e in graph['links'] if (e['source'],e['target'],e.get('relation'),e.get('source_file'),e.get('source_location')) not in previous_edges]
+    graph['nodes']=[n for n in graph['nodes'] if n['id'] not in previous_ids or n.get('_origin') == 'ast']
+    # Clustering can reorient or merge document links; remove their old endpoints too.
+    graph['links']=[e for e in graph['links'] if e['source'] not in previous_ids
+                    and e['target'] not in previous_ids
+                    and (e['source'],e['target'],e.get('relation'),e.get('source_file'),e.get('source_location')) not in previous_edges]
 original_nodes = list(graph['nodes'])
 original_edges = list(graph['links'])
 nodes, edges = {}, {}
 documents = (['README.md', 'CLAUDE.md']
              + sorted(p.relative_to(ROOT).as_posix() for p in (ROOT/'docs').glob('*.md'))
-             + sorted(p.relative_to(ROOT).as_posix() for p in (ROOT/'results/diagnostics').rglob('*.md')))
+             + sorted(p.relative_to(ROOT).as_posix() for p in (ROOT/'results/diagnostics').rglob('*.md'))
+             + sorted(p.relative_to(ROOT).as_posix() for p in (ROOT/'results/semantics').rglob('*.md')))
 def slug(s):
     return re.sub('[^a-z0-9]+', '_', s.lower()).strip('_')
 def stem(p):
     return slug(str(Path(p).with_suffix('')).replace('\\', '/'))
 def node(p, label, line, kind='concept', entity=None, **extra):
     ident = stem(p) + '_' + slug(entity or label)
+    if kind == 'document':
+        ident = next((n['id'] for n in original_nodes if n.get('source_file') == p
+                      and n.get('file_type') == 'document' and n.get('label') == label), stem(p))
     nodes[ident] = dict(id=ident, label=label, file_type=kind, source_file=p,
                         source_location=f'L{line}', _origin='semantic', **extra)
     return ident
@@ -148,8 +159,8 @@ for cp,cnodes in code_by_file.items():
                 edge(cn['id'],protocol_sections[sec],'references',cp,ln,context='Code explicitly cites protocol section')
 
 fragment=dict(nodes=list(nodes.values()),edges=list(edges.values()),hyperedges=[],input_tokens=0,output_tokens=0,
-              extraction_metadata=dict(documents=documents,method='Document sections, explicit cross-references, named design concepts and provenance attributions; code references use existing AST IDs'))
-(OUT/'documentation-extraction.json').write_text(json.dumps(fragment,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+              extraction_metadata=dict(documents=documents,method='Document sections, explicit cross-references, named design concepts and provenance attributions; code references use existing AST IDs',
+                                       rejected_input_links=invalid_links))
 existing={n['id'] for n in graph['nodes']}
 graph['nodes'].extend(n for ident,n in nodes.items() if ident not in existing)
 keys={(e['source'],e['target'],e.get('relation'),e.get('source_file'),e.get('source_location')) for e in graph['links']}
@@ -160,5 +171,7 @@ assert all(e['source'] in ids and e['target'] in ids for e in graph['links'])
 assert all(n in graph['nodes'] for n in original_nodes)
 assert all(e in graph['links'] for e in original_edges)
 assert all(re.fullmatch('[a-z0-9_]+',n['id']) for n in nodes.values())
+(OUT/'documentation-extraction.json').write_text(json.dumps(fragment,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
 (OUT/'graph.json').write_text(json.dumps(graph,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+print(f'Rejected {len(invalid_links)} input links with missing endpoints; full records saved in extraction_metadata.rejected_input_links.')
 print(json.dumps(dict(document_count=len(documents),added_nodes=len(nodes),added_edges=len(edges),total_nodes=len(graph['nodes']),total_edges=len(graph['links']),types=dict(Counter(n['file_type'] for n in nodes.values())),doc_code_edges=sum(e['source'] not in nodes or e['target'] not in nodes for e in edges.values()),coverage={p:sum(n['source_file']==p for n in nodes.values()) for p in documents}),indent=2))
