@@ -1,0 +1,222 @@
+{
+  "all_query_graph_sets_verified": 7377,
+  "cli_checks": [
+    {
+      "check": "single",
+      "command": [
+        "F:\\Phitron Thesis\\cofail_kg\\venv\\Scripts\\python.exe",
+        "scripts/inspect_kg.py",
+        "neighbors",
+        "18365",
+        "--relation",
+        "drug_protein",
+        "--neighbor-type",
+        "gene/protein"
+      ],
+      "count": 1,
+      "ids": [
+        "4688"
+      ],
+      "query_id": "BH2_00016",
+      "stderr": "Loaded and verified index in 13.275s"
+    },
+    {
+      "check": "multi",
+      "command": [
+        "F:\\Phitron Thesis\\cofail_kg\\venv\\Scripts\\python.exe",
+        "scripts/inspect_kg.py",
+        "neighbors",
+        "33679",
+        "--relation",
+        "indication",
+        "--neighbor-type",
+        "drug"
+      ],
+      "count": 7,
+      "ids": [
+        "14652",
+        "14921",
+        "16085",
+        "17634",
+        "17987",
+        "20214",
+        "20298"
+      ],
+      "query_id": "BH2_04350",
+      "stderr": "Loaded and verified index in 13.633s"
+    },
+    {
+      "check": "targets",
+      "command": [
+        "F:\\Phitron Thesis\\cofail_kg\\venv\\Scripts\\python.exe",
+        "scripts/inspect_kg.py",
+        "neighbors",
+        "4688",
+        "--relation",
+        "disease_protein",
+        "--neighbor-type",
+        "disease"
+      ],
+      "count": 1,
+      "ids": [
+        "29969"
+      ],
+      "query_id": "BH2_00016",
+      "stderr": "Loaded and verified index in 13.285s"
+    }
+  ],
+  "examples": [
+    {
+      "A_star_q": [
+        "29969"
+      ],
+      "B_q": [
+        "4688"
+      ],
+      "G_q": [
+        "29969"
+      ],
+      "T_q": [
+        "29969"
+      ],
+      "T_q_gold_bridges": [
+        "29969"
+      ],
+      "construction": "BRIDGE",
+      "dead_end_bridges": [],
+      "gold_bridges": [
+        "4688"
+      ],
+      "name": "(1R)-2-[(Diaminomethylene)amino]-1-{4-[(4R)-4-(hydroxymethyl)-1,3,2-dioxaborolan-2-yl]phenyl}ethyl nicotinate",
+      "query_id": "BH2_00016",
+      "relation_type": "drug:gene/protein:disease",
+      "s": "18365"
+    },
+    {
+      "A_star_q": [
+        "22262",
+        "22859",
+        "22952",
+        "22966",
+        "22982",
+        "23000",
+        "23002",
+        "23094",
+        "23178",
+        "23183",
+        "23833",
+        "25201",
+        "26162",
+        "26262",
+        "33727",
+        "84374",
+        "84441",
+        "84452",
+        "84694",
+        "84853",
+        "85285",
+        "88527"
+      ],
+      "B_q": [
+        "16085",
+        "17987"
+      ],
+      "G_q": [
+        "22262",
+        "22859",
+        "22952",
+        "22966",
+        "22982",
+        "23000",
+        "23002",
+        "23094",
+        "23178",
+        "23183",
+        "23833",
+        "25201",
+        "26162",
+        "26262",
+        "33727",
+        "84374",
+        "84441",
+        "84452",
+        "84694",
+        "84853",
+        "85285",
+        "88527"
+      ],
+      "T_q": [
+        "22262",
+        "22859",
+        "22952",
+        "22966",
+        "22982",
+        "23000",
+        "23002",
+        "23094",
+        "23178",
+        "23183",
+        "23833",
+        "25201",
+        "26162",
+        "26262",
+        "33727",
+        "84374",
+        "84441",
+        "84452",
+        "84694",
+        "84853",
+        "85285",
+        "88527"
+      ],
+      "T_q_gold_bridges": [
+        "22262",
+        "22859",
+        "22952",
+        "22966",
+        "22982",
+        "23000",
+        "23002",
+        "23094",
+        "23178",
+        "23183",
+        "23833",
+        "25201",
+        "26162",
+        "26262",
+        "33727",
+        "84374",
+        "84441",
+        "84452",
+        "84694",
+        "84853",
+        "85285",
+        "88527"
+      ],
+      "construction": "UNION",
+      "dead_end_bridges": [
+        "14652",
+        "14921",
+        "17634",
+        "20214",
+        "20298"
+      ],
+      "gold_bridges": [
+        "16085"
+      ],
+      "name": "potassium deficiency disease",
+      "query_id": "BH2_04350",
+      "relation_type": "disease:drug:effect/phenotype",
+      "s": "33679"
+    }
+  ],
+  "input_source_hashes_verified": true,
+  "merged_queries": 0,
+  "output_sha256": {
+    "reference_queries.parquet": "7d3be769ac5abfa99e3da94a03a70b2ada03c3b8ca5a21a2b61184cc33e0ad07",
+    "reference_summary.json": "f9009e75a23e9c11dd131554a225038ad36256e13737d0612dde18f4f13c33d8",
+    "reference_targets.parquet": "3cc447fb262fc29d3f9cf1de1b589deef249ef2c2fe257272bebbf70e9310943"
+  },
+  "retained_rows_verified": 7377,
+  "target_rows_verified": 481617
+}

@@ -1,17 +1,16 @@
 # Progress — CoFail-KG
 
 ## Current stage
-S6 first prompt computed (2026-10-13): D1 PROCEED, 9/12 types PASS, 7,377/7,633 rows
-(96.65%). Proposed mappings only; researcher review remains, and nothing is frozen.
-The researcher chose to retain the failed five-row type's hop-2 tie unresolved (2026-10-13).
-After the authorized D1 investigation, `drug:effect/phenotype:disease` is EXCLUDED;
-the tie remains unresolved and no mapping is frozen. Recomputed D1 remains PROCEED.
-The two remaining failures were investigated (2026-10-13), with no permitted repair found.
-Exploratory mixture results and a node-identity conflict are documented in
-`results/semantics/s6_remaining_investigation/report.md`. Both are now EXCLUDED for the
-time being with researcher authorization (2026-10-13). Detailed reasons and boundaries:
-`results/semantics/s6_exclusion_decision_02/report.md`. All three FAIL types are excluded.
-Full investigation test suite: 119 passed. Global D1 is unchanged.
+S7 completed (2026-10-13): 7,377 queries from the 7,377 rows of the nine D1 PASS types.
+S6 mapping and ambiguity tags were frozen in ab67cf1; D1 remains PROCEED (9/12 types,
+96.65% dataset-row coverage). All three failed types remain excluded, covering 256 rows;
+the five-row type's tie remains unresolved. No automatic re-admission.
+S7 outputs: 6,673 SINGLE-bridge queries, 704 MULTI-bridge queries, no unresolved reference
+names, 57 disease-suffix resolution occurrences, and 481,617 query/bridge/target rows.
+All 7,377 query sets were independently checked against the cached edge tables; required
+inspection CLI checks pass. Full suite: 135 passed (16 new S7 tests). Details and engineering
+choices: `docs/S7_implementation.md`.
+S8 has not started; no query inclusion or new research decision was made at S7.
 
 ## Completed stages
 S0
@@ -172,6 +171,10 @@ RESOLVED BY S6 EVIDENCE (2026-10-13):
   3/30 sampled gold sets under either construction. S5 checks containment/support; S6 requires
   exact equality. Raw examples confirm additional reachable drugs, so those findings do not conflict.
 S5 completed 2026-10-13 (field roles verified; decision log).
+S6 completed 2026-10-13 (ab67cf1): approved mapping and ambiguity tags frozen;
+  8 BRIDGE types / 6,428 rows, 1 UNION type / 949 rows, three failed types excluded.
+S7 completed 2026-10-13: reference queries, targets and summary created and independently
+  checked. Implementation and verification: docs/S7_implementation.md.
 S6 note: the unresolved answer names in the S5 sample ("autism" in BH2_04897, "vitamin A
 deficiency" in BH2_05290, "insomnia" in BH2_05493) are not type mismatches: they match no
 PrimeKG node of any type, but PrimeKG has disease nodes "autism (disease)" (84310), "vitamin A
@@ -181,8 +184,7 @@ with " (disease)" appended (exactly one match only); all 152 such answer names i
 resolve; the S5 outcome is unchanged.
 DONE (2026-10-13, 4d18892): §12 suffix retry implemented in src/cofail_kg/evaluation/normalize.py
 (reference policy), 7 unit tests; all 152 previously unresolved answer names now resolve.
-S6 first prompt is computed; the five-row type is excluded after authorized investigation,
-with its tie kept unresolved. Review `results/semantics/d1_after_exclusion.md`; investigations
-of the two other failing types are complete, and both exclusions are now recorded. Review
-`results/semantics/s6_exclusion_decision_02/report.md`. Only after researcher approval
-and an explicit request for the second prompt should the mapping and hash be frozen.
+S6 mapping and hash were frozen with researcher authorization in ab67cf1 (decision log).
+S7 is complete; await the researcher's request for S8. Before implementing S8/S17, resolve
+the runbook's older gold-bridge-only comparison wording against protocol §7.1/§13, which
+already uses the construction reference G_q. Historical pre-freeze S6 reports remain intact.
