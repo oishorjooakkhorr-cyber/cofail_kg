@@ -5,8 +5,9 @@ the visualization library loads from unpkg.com, so viewing requires internet acc
 `graph.json` also supports Graphify's local query and path commands.
 
 This is a navigation aid for project code and documentation, not the biomedical PrimeKG.
-Historical reports remain in the graph. For the current S6 decision, consult the newest
-entry in `docs/decision_log.md` and `results/semantics/relation_mapping.json`.
+Historical reports remain in the graph. For the current S7 implementation and verification,
+consult `docs/S7_implementation.md` and `docs/progress.md`. The accepted S6 mapping is in
+`results/semantics/relation_mapping.json`, with its freeze recorded in `docs/decision_log.md`.
 
 ## Rebuild from a checkout
 
