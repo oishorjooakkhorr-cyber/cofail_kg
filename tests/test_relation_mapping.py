@@ -132,6 +132,13 @@ def test_hop2_tie_is_reported_without_choosing_an_adopted_r2():
     assert result["d1_status"] == "PENDING" and result["ambiguity_tag"] is None
 
 
+def test_unadopted_construction_tie_is_still_flagged_for_researcher():
+    result = run_score(["Target"], candidates2={"x": [], "y": []})
+    assert result["construction"] == "BRIDGE" and result["R2"] == ["x"]
+    assert result["scenarios"][0]["UNION"]["status"] == "TIE"
+    assert result["needs_decision"]
+
+
 @pytest.mark.parametrize("sample_count,fail_s5,candidates,reason", [
     (5, False, {"a": []}, "fewer than 10 validation rows"),
     (10, True, {"a": []}, "failed S5 field-role rule"),

@@ -168,7 +168,7 @@ def score_type(rows, find, neighbors, candidates1, candidates2, *, s5_failed=Fal
     adopted = scenarios[0][construction] if construction and len(scenarios) == 1 else None
     r2 = adopted["sets"][0] if adopted and adopted["status"] == "SELECTED" else None
     needs_decision = hop1["status"] == "TIE" or any(
-        s[s["construction"]]["status"] == "TIE" for s in scenarios if s["construction"])
+        s[c]["status"] == "TIE" for s in scenarios for c in ("BRIDGE", "UNION"))
     status = "FAIL" if reasons else "PENDING" if needs_decision else "PASS"
     return {
         "rows_in_dataset": len(rows), "sample_size": n,
