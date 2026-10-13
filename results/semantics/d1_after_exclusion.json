@@ -37,16 +37,16 @@
     "total_types": 12
   },
   "decision_date": "2026-10-13",
+  "decision_report": "results/semantics/s6_exclusion_decision_02/report.md",
   "denominator_policy": "Original 12 relation types and all 7,633 rows; excluded types do not reduce either denominator.",
   "excluded_types": [
-    "drug:effect/phenotype:disease"
-  ],
-  "exclusion_registry_sha256": "f2a1c2ab8e255870da0262321ee1991b2f4320157d69d24f4f4eb21e5fd5dacd",
-  "mapping_frozen": false,
-  "other_failed_types_pending_review": [
     "disease:effect/phenotype:drug",
+    "drug:effect/phenotype:disease",
     "effect/phenotype:drug:disease"
   ],
-  "review_note": "The failed type retains its numerical label tie, but the researcher has dispositioned it as RETAIN_UNRESOLVED; no label selection is pending for that type.",
+  "exclusion_registry_sha256": "b29a4666dec41c73d03d2cd908ae0007a643aff8c20d3634806dcc85039c4876",
+  "mapping_frozen": false,
+  "other_failed_types_pending_review": [],
+  "review_note": "All three FAIL types are now excluded with researcher authorization. The five-row tie remains RETAIN_UNRESOLVED; no candidate is adopted for it. The two additional types are excluded for the time being, with no automatic re-admission.",
   "source_proposal_sha256": "298215030415780873627965f82fbbbb16b6bf827cc2d8fd872f5f67ffa5dc08"
 }

@@ -403,3 +403,40 @@ resolution, raw-edge agreement, input hashes, and protected-file hashes. Routine
 choices: cached typed neighbors, chunked raw scan, deterministic ID order, four descriptive
 categories, and exclusive output creation. No new scientific threshold or method adopted.
 Changes to protocol, decision rules, normalization, frozen hashes or mappings: none.
+
+
+## 2026-10-13 — S6 — Authorize the two remaining exclusions for the time being
+
+Decision: EXCLUDE disease:effect/phenotype:drug and effect/phenotype:drug:disease
+from the current primary analysis. Researcher authorization: "okay u may exclude them
+for the time being but the report be detailed why they were excluded". Data seen before
+deciding: original S6 outputs and the completed investigation/mixture report at 4819ee8.
+
+Why: neither reaches the fixed 90% hop-2 reproduction requirement under either permitted
+construction after the D1 investigation. The first scores 3/30 under both, with all 27
+failures containing extra drugs. The second scores 26/30 BRIDGE and 20/30 UNION; its
+reference-informed either-construction 29/30 is exploratory and not a permitted type rule.
+BH2_05027 has a documented 35852-versus-33621 node-identity conflict, with no justified
+correction under frozen section 12. Both have 30 validation rows, hop-1 30/30 and original
+S5 PASS; insufficient samples and S5 failure are not their exclusion reasons. Raw edge
+orientations, cache, release integrity and all candidate subsets were investigated without
+finding a permitted repair. Full evidence and alternatives are detailed in
+results/semantics/s6_exclusion_decision_02/report.md.
+
+"For the time being" means current EXCLUDED status with evidence retained for later
+researcher review, not an expiry or automatic re-admission. No raw records are removed.
+Reconsideration requires an explicit documented researcher decision consistent with the
+frozen rules; post-result rule changes cannot be silently treated as the original analysis.
+
+All three FAIL types are now excluded (256 dataset rows). The original five-row exclusion
+is unchanged and its positive/negative tie stays unresolved. D1 recomputed with the existing
+evaluator: PROCEED, 9/12 types, 7,377/7,633 rows (96.65%); denominators unchanged. No excluded
+R2 or construction is adopted. No mapping or hash is frozen; S7 has not started.
+
+Updated current exclusion registry and D1 reports; previous versions archived under
+results/semantics/s6_exclusion_decision_02/previous/. Prior investigation artifacts and
+old decision entries are preserved. Verification assertions checked D1 recomputation,
+all-failed-type coverage, preservation of the five-row decision and protected SHA256s.
+No code changed; the investigation's 119-passing-test suite was not rerun for this metadata
+update. Routine engineering choice: archive previous current reports and add a separate
+exclusion decision report. Changes to protocol, decision rules or normalization: none.

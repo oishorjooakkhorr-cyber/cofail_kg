@@ -1,0 +1,52 @@
+{
+  "d1": {
+    "by_construction": {
+      "BRIDGE": {
+        "fail_types": 0,
+        "pass_rows": 6428,
+        "pass_types": 8,
+        "pending_types": 0,
+        "rows": 6428,
+        "types": 8
+      },
+      "UNADOPTED": {
+        "fail_types": 3,
+        "pass_rows": 0,
+        "pass_types": 0,
+        "pending_types": 0,
+        "rows": 256,
+        "types": 3
+      },
+      "UNION": {
+        "fail_types": 0,
+        "pass_rows": 949,
+        "pass_types": 1,
+        "pending_types": 0,
+        "rows": 949,
+        "types": 1
+      }
+    },
+    "fail_types": 3,
+    "outcome": "PROCEED",
+    "pass_coverage": 0.9664614175291497,
+    "pass_rows": 7377,
+    "pass_types": 9,
+    "pending_types": 0,
+    "status": "COMPUTED",
+    "total_rows": 7633,
+    "total_types": 12
+  },
+  "decision_date": "2026-10-13",
+  "denominator_policy": "Original 12 relation types and all 7,633 rows; excluded types do not reduce either denominator.",
+  "excluded_types": [
+    "drug:effect/phenotype:disease"
+  ],
+  "exclusion_registry_sha256": "f2a1c2ab8e255870da0262321ee1991b2f4320157d69d24f4f4eb21e5fd5dacd",
+  "mapping_frozen": false,
+  "other_failed_types_pending_review": [
+    "disease:effect/phenotype:drug",
+    "effect/phenotype:drug:disease"
+  ],
+  "review_note": "The failed type retains its numerical label tie, but the researcher has dispositioned it as RETAIN_UNRESOLVED; no label selection is pending for that type.",
+  "source_proposal_sha256": "298215030415780873627965f82fbbbb16b6bf827cc2d8fd872f5f67ffa5dc08"
+}

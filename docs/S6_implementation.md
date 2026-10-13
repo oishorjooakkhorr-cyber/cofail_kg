@@ -135,6 +135,11 @@ unsupported row in the fresh S6-sample role check (29/30); original S5 remains P
 Evidence and full named examples: results/semantics/s6_remaining_investigation/report.md,
 evidence.json, identity_check.json and mixtures.csv. Reproduction script:
 scripts/06_investigate_remaining.py (exclusive output creation). Full suite: 119 passed.
-The two types remain FAIL, pending final disposition; no additional exclusion was recorded.
+The researcher subsequently authorized exclusion of both types for the time being. Both
+are now EXCLUDED from the current primary analysis, with no automatic re-admission.
+Detailed decision report: results/semantics/s6_exclusion_decision_02/report.md. The prior
+investigation remains unchanged as a historical snapshot; its pending status is superseded.
+Current registry and D1 reports were updated, with prior versions archived beside the
+decision report. All three failing types are excluded; the five-row tie remains unresolved.
 Global D1 remains PROCEED, 9/12 and 7,377/7,633. Mapping approval and freezing (the second
 prompt) remain outside the authorized work. No thresholds were changed.
