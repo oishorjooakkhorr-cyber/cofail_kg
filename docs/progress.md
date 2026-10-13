@@ -1,7 +1,9 @@
 # Progress — CoFail-KG
 
 ## Current stage
-S5 complete — field roles verified (2026-10-13). S6 has not started.
+S6 first prompt computed (2026-10-13): D1 PROCEED, 9/12 types PASS, 7,377/7,633 rows
+(96.65%). Proposed mappings only; researcher review remains, and nothing is frozen.
+The failed five-row type has a reported hop-2 tie awaiting the researcher's disposition.
 
 ## Completed stages
 S0
@@ -60,8 +62,27 @@ S5 — completed 2026-10-13: field roles verified (hop2 = query entity, hop1 = b
   2 effect/phenotype:drug:disease). Hand-checks BH2_00004, BH2_06128, BH2_04078 agree.
   Results: results/semantics/field_roles* (code commit 5ae77f6). 20 new tests; 74 pass.
 
+## S6 first prompt — computed, not frozen
+- Implementation: `scripts/06_relation_mapping.py`, `src/cofail_kg/evaluation/relation_mapping.py`,
+  and two graph-index accessors. 335 validation rows; no skipped query/bridge rows and no
+  unresolved sampled answers under §12 v1.3.3.
+- D1: 9 types PASS, covering 7,377/7,633 rows (96.65%); global PROCEED. Eight passing types
+  adopt BRIDGE and one (`disease:drug:effect/phenotype`, 949 rows) adopts UNION.
+- FAIL: `disease:effect/phenotype:drug` (3/30 under either construction),
+  `drug:effect/phenotype:disease` (0/5 under either, also insufficient validation rows),
+  `effect/phenotype:drug:disease` (BRIDGE 26/30, UNION 20/30).
+- The five-row type ties positive/negative disease-phenotype labels at zero under both
+  constructions. No label was chosen. The tie cannot change its FAIL or global PROCEED.
+- Passing-type ambiguity tags: NONE 2, R1_AMBIGUOUS 3, R2_AMBIGUOUS 2, BOTH_AMBIGUOUS 2.
+  Failed types have no adopted R2/construction and hence no computable tag.
+- Outputs: `results/semantics/relation_mapping_candidates.csv`, `relation_mapping_proposed.json`,
+  `relation_ambiguity_tags.csv`, `d1_report.md`. See `docs/S6_implementation.md` for verification.
+- 114 tests pass. Eight raw-CSV mismatch checks agree; an independent existing-index check
+  reproduces all 271 UNION targets of BH2_03879 (stored bridge alone reaches 86).
+- No `relation_mapping.json`, frozen hash, exclusion decision, protocol amendment or S7 work.
+
 ## Latest commit
-`S5: amend protocol to v1.3.3 - disease-suffix name fallback (§12)` (this update).
+S6 calculation code: `2f2caf1`; this checkpoint records the first-prompt outputs and verification.
 Earlier: 962637b (team update for S4 and S5); ea4b980 (S5 field roles verified); 5ae77f6 (S5
 field-role verification code); edc9b3e (protocol v1.3.2, field-role failure handling);
 48b47cb (protocol v1.3.1, field-role support definition); b48952f (protocol v1.3,
@@ -82,7 +103,7 @@ d09c66b (preparation).
   existing release file records 2026-10-10 (inferred archive date); 8,100,498 rows.
 - Troglitazone side-effect count (S4 check, paper says 202): 17 direct neighbours, confirmed
   by the new index and independent raw CSV scan. The prior findings explain the 202 as two-hop.
-- D1 outcome (S6):
+- D1 outcome (S6 first prompt): PROCEED, 9 PASS / 3 FAIL; 96.65% row coverage. Not frozen.
 - N_P and D2 outcome (S9):
 - Max prompt tokens in screening (S20):
 - Frozen models and digests (S21):
@@ -121,7 +142,7 @@ with researcher authorization on 2026-10-12. The kg_fingerprint freeze is comple
 The §3.3 identity type map was confirmed and frozen with researcher approval on 2026-10-12.
 The researcher subsequently authorized S4 completion. Final checks passed: 45 tests,
 raw-input/cache validation, frozen metadata SHA256 comparison, and the 17-neighbour real check.
-Answer construction resolved (option C, 2026-10-12). No S5 work has been performed.
+Answer construction resolved (option C, 2026-10-12); S5 subsequently completed on 2026-10-13.
 DONE (2026-10-13, 4d18892): runbook S6/S7 aligned with protocol §5.3 (BRIDGE and UNION scored,
 construction adopted per type, BRIDGE if both pass, G_q at S7, results split by construction).
 BEFORE S8/S17: update the remaining T_q^{B*} wording in runbook S8 and S17.
@@ -129,10 +150,10 @@ Field-role support defined in protocol §3.1 (v1.3.1, 2026-10-13); runbook S5 st
 DECIDED (v1.3.2, 2026-10-13): global-stop policy if drug:effect/phenotype:disease (5 rows, no
 disjoint preview evidence) fails S5 — a single failing type is excluded (FAIL in Gate D1); S5
 stops only if more than one type fails or the failing types cover more than 1% of the rows.
-OPEN (not decided):
-- S6 label-set question for disease:effect/phenotype:drug: the S4 single-label-pair simulation
-  (S4_findings.md Report 2: 32/36 rows follow neither construction) and the any-label preview
-  (5/5 rows: every answer via the stored bridge) disagree.
+RESOLVED BY S6 EVIDENCE (2026-10-13):
+- `disease:effect/phenotype:drug` has only `drug_effect` as a hop-2 candidate; it reproduces
+  3/30 sampled gold sets under either construction. S5 checks containment/support; S6 requires
+  exact equality. Raw examples confirm additional reachable drugs, so those findings do not conflict.
 S5 completed 2026-10-13 (field roles verified; decision log).
 S6 note: the unresolved answer names in the S5 sample ("autism" in BH2_04897, "vitamin A
 deficiency" in BH2_05290, "insomnia" in BH2_05493) are not type mismatches: they match no
@@ -143,4 +164,6 @@ with " (disease)" appended (exactly one match only); all 152 such answer names i
 resolve; the S5 outcome is unchanged.
 DONE (2026-10-13, 4d18892): §12 suffix retry implemented in src/cofail_kg/evaluation/normalize.py
 (reference policy), 7 unit tests; all 152 previously unresolved answer names now resolve.
-S6 has not started. Start S6 in docs/pipeline_runbook.md when instructed.
+S6 first prompt is computed. Review `results/semantics/d1_report.md`, disposition the failed
+five-row type's tie, and decide failure investigation/exclusions. Only after researcher approval
+and an explicit request for the second prompt should the mapping and hash be frozen.

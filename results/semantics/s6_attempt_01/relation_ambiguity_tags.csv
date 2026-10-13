@@ -1,0 +1,13 @@
+relation_type,construction,R1,R2,ambiguity_tag,d1_status,mapping_status
+disease:drug:effect/phenotype,UNION,"[""indication""]","[""drug_effect""]",R1_AMBIGUOUS,PASS,PROPOSED
+disease:drug:gene/protein,BRIDGE,"[""indication""]","[""drug_protein""]",R1_AMBIGUOUS,PASS,PROPOSED
+disease:effect/phenotype:drug,,"[""disease_phenotype_positive""]",null,,FAIL,UNDETERMINED
+disease:gene/protein:drug,BRIDGE,"[""disease_protein""]","[""drug_protein""]",NONE,PASS,PROPOSED
+drug:disease:effect/phenotype,BRIDGE,"[""indication""]","[""disease_phenotype_positive""]",BOTH_AMBIGUOUS,PASS,PROPOSED
+drug:disease:gene/protein,BRIDGE,"[""indication""]","[""disease_protein""]",R1_AMBIGUOUS,PASS,PROPOSED
+drug:effect/phenotype:disease,,"[""drug_effect""]",null,,FAIL,UNDETERMINED
+drug:gene/protein:disease,BRIDGE,"[""drug_protein""]","[""disease_protein""]",NONE,PASS,PROPOSED
+effect/phenotype:disease:drug,BRIDGE,"[""disease_phenotype_positive""]","[""indication""]",BOTH_AMBIGUOUS,PASS,PROPOSED
+effect/phenotype:drug:disease,,"[""drug_effect""]",null,,FAIL,UNDETERMINED
+gene/protein:disease:drug,BRIDGE,"[""disease_protein""]","[""indication""]",R2_AMBIGUOUS,PASS,PROPOSED
+gene/protein:drug:disease,BRIDGE,"[""drug_protein""]","[""indication""]",R2_AMBIGUOUS,PASS,PROPOSED

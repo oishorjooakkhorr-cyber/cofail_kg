@@ -1,0 +1,157 @@
+{
+  "checks": [
+    {
+      "R2": [
+        "drug_effect"
+      ],
+      "agrees": true,
+      "bridge_name": "Pleural effusion",
+      "extra_count": 67,
+      "gold_count": 44,
+      "missing_count": 0,
+      "query_name": "pleural empyema (disease)",
+      "raw_reached_count": 111,
+      "relation_type": "disease:effect/phenotype:drug",
+      "row_id": "BH2_06128"
+    },
+    {
+      "R2": [
+        "drug_effect"
+      ],
+      "agrees": true,
+      "bridge_name": "Intellectual disability",
+      "extra_count": 6,
+      "gold_count": 14,
+      "missing_count": 0,
+      "query_name": "microcephaly-intellectual disability-phalangeal and neurological anomalies syndrome",
+      "raw_reached_count": 20,
+      "relation_type": "disease:effect/phenotype:drug",
+      "row_id": "BH2_06120"
+    },
+    {
+      "R2": [
+        "disease_phenotype_negative"
+      ],
+      "agrees": true,
+      "bridge_name": "Nausea",
+      "extra_count": 0,
+      "gold_count": 29,
+      "missing_count": 29,
+      "query_name": "Zinc sulfate",
+      "raw_reached_count": 0,
+      "relation_type": "drug:effect/phenotype:disease",
+      "row_id": "BH2_00004"
+    },
+    {
+      "R2": [
+        "disease_phenotype_negative"
+      ],
+      "agrees": true,
+      "bridge_name": "Decreased circulating copper concentration",
+      "extra_count": 0,
+      "gold_count": 3,
+      "missing_count": 3,
+      "query_name": "Zinc chloride",
+      "raw_reached_count": 0,
+      "relation_type": "drug:effect/phenotype:disease",
+      "row_id": "BH2_00003"
+    },
+    {
+      "R2": [
+        "disease_phenotype_positive"
+      ],
+      "agrees": true,
+      "bridge_name": "Nausea",
+      "extra_count": 60,
+      "gold_count": 29,
+      "missing_count": 0,
+      "query_name": "Zinc sulfate",
+      "raw_reached_count": 89,
+      "relation_type": "drug:effect/phenotype:disease",
+      "row_id": "BH2_00004"
+    },
+    {
+      "R2": [
+        "disease_phenotype_positive"
+      ],
+      "agrees": true,
+      "bridge_name": "Decreased circulating copper concentration",
+      "extra_count": 2,
+      "gold_count": 3,
+      "missing_count": 0,
+      "query_name": "Zinc chloride",
+      "raw_reached_count": 5,
+      "relation_type": "drug:effect/phenotype:disease",
+      "row_id": "BH2_00003"
+    },
+    {
+      "R2": [
+        "indication"
+      ],
+      "agrees": true,
+      "bridge_name": "Pergolide",
+      "extra_count": 0,
+      "gold_count": 4,
+      "missing_count": 2,
+      "query_name": "Thyroid follicular adenoma",
+      "raw_reached_count": 2,
+      "relation_type": "effect/phenotype:drug:disease",
+      "row_id": "BH2_05081"
+    },
+    {
+      "R2": [
+        "indication"
+      ],
+      "agrees": true,
+      "bridge_name": "Fluvoxamine",
+      "extra_count": 0,
+      "gold_count": 9,
+      "missing_count": 6,
+      "query_name": "Agoraphobia",
+      "raw_reached_count": 3,
+      "relation_type": "effect/phenotype:drug:disease",
+      "row_id": "BH2_04897"
+    }
+  ],
+  "d1": {
+    "by_construction": {
+      "BRIDGE": {
+        "fail_types": 0,
+        "pass_rows": 6428,
+        "pass_types": 8,
+        "pending_types": 0,
+        "rows": 6428,
+        "types": 8
+      },
+      "UNADOPTED": {
+        "fail_types": 3,
+        "pass_rows": 0,
+        "pass_types": 0,
+        "pending_types": 0,
+        "rows": 256,
+        "types": 3
+      },
+      "UNION": {
+        "fail_types": 0,
+        "pass_rows": 949,
+        "pass_types": 1,
+        "pending_types": 0,
+        "rows": 949,
+        "types": 1
+      }
+    },
+    "fail_types": 3,
+    "outcome": "PROCEED",
+    "pass_coverage": 0.9664614175291497,
+    "pass_rows": 7377,
+    "pass_types": 9,
+    "pending_types": 0,
+    "status": "NEEDS_DECISION",
+    "total_rows": 7633,
+    "total_types": 12
+  },
+  "method": "Independent raw kg.csv scan, both stored orientations; independent raw-node name resolution; BRIDGE diagnostics for first two mismatches of every best set in every failing type.",
+  "raw_checksums_match_frozen_metadata": true,
+  "raw_rows_scanned": 8100498,
+  "scientific_outputs_unchanged_after_reporting_fix": true
+}

@@ -248,3 +248,37 @@ docs/S4_findings.md Report 2, including its simulated hop-2 scores for these two
 Unchanged: the 2026-10-12 trimming decision; decision_rules.md; all thresholds.
 Changes to protocol: §12 reference policy (retry sentence) and agent policy step 2 (same retry
 for Type_T = disease, before the any-type fallback); header v1.3.3. Logged in docs/CHANGES.md.
+
+## 2026-10-13 — S6 — First-prompt computation (not a mapping approval)
+
+Scope authorized: run the first S6 prompt, explain progress, and ask the researcher for any
+needed scientific decision. No authorization to run the second prompt or freeze the mapping.
+
+Computed result: D1 PROCEED; 9 of 12 types PASS, covering 7,377/7,633 rows (96.65%).
+Eight passing types propose BRIDGE and one proposes UNION (`disease:drug:effect/phenotype`,
+949 rows). 335 validation rows; zero query/bridge skips and zero unresolved sampled answers.
+Passing tags: NONE 2, R1_AMBIGUOUS 3, R2_AMBIGUOUS 2, BOTH_AMBIGUOUS 2.
+
+Failing types: `disease:effect/phenotype:drug` (BRIDGE and UNION 3/30),
+`drug:effect/phenotype:disease` (both 0/5, also insufficient validation rows), and
+`effect/phenotype:drug:disease` (BRIDGE 26/30, UNION 20/30). Exclusions have not been decided.
+
+Researcher decision requested: the five-row type ties `disease_phenotype_negative` and
+`disease_phenotype_positive` at zero under both constructions. The positive label reaches gold
+diseases plus extras in the checked rows; the negative label misses them. The researcher was
+asked whether to retain the tie unresolved for this failing type or select positive for
+diagnostics. No choice was made by the assistant, and neither choice can change its FAIL.
+
+Evidence: the four `results/semantics/relation_mapping*`, ambiguity-tag and D1 report outputs;
+`results/diagnostics/s6_raw_spot_checks.json` (eight independent raw-CSV checks, all agree);
+`results/diagnostics/s6_union_example.json` (BH2_03879: 86 BRIDGE targets, 271 UNION targets,
+271 gold targets). Calculation commit `2f2caf1`. 114 tests pass.
+
+Engineering correction: the first run at `a7ffef5` conflated a pending label-tie decision with
+an unknown global D1 outcome. Because the only real tie is in a type already known to fail,
+the outcome is mechanically PROCEED. The correction is covered by regression tests; the
+first attempt is preserved in `results/semantics/s6_attempt_01/`. Every per-type JSON result
+and every candidate score is unchanged (candidate CSV byte-identical). No threshold changed.
+
+Changes to protocol or decision rules: none. No `relation_mapping.json` or frozen hash written;
+no agent outputs, no S7 work. Details and engineering choices: `docs/S6_implementation.md`.

@@ -1,0 +1,2640 @@
+{
+  "d1": {
+    "by_construction": {
+      "BRIDGE": {
+        "fail_types": 0,
+        "pass_rows": 6428,
+        "pass_types": 8,
+        "pending_types": 0,
+        "rows": 6428,
+        "types": 8
+      },
+      "UNADOPTED": {
+        "fail_types": 3,
+        "pass_rows": 0,
+        "pass_types": 0,
+        "pending_types": 0,
+        "rows": 256,
+        "types": 3
+      },
+      "UNION": {
+        "fail_types": 0,
+        "pass_rows": 949,
+        "pass_types": 1,
+        "pending_types": 0,
+        "rows": 949,
+        "types": 1
+      }
+    },
+    "fail_types": 3,
+    "outcome": "PROCEED",
+    "pass_coverage": 0.9664614175291497,
+    "pass_rows": 7377,
+    "pass_types": 9,
+    "pending_types": 0,
+    "status": "NEEDS_DECISION",
+    "total_rows": 7633,
+    "total_types": 12
+  },
+  "frozen": false,
+  "per_type": {
+    "disease:drug:effect/phenotype": {
+      "R1": [
+        "indication"
+      ],
+      "R2": [
+        "drug_effect"
+      ],
+      "ambiguity_tag": "R1_AMBIGUOUS",
+      "candidates": {
+        "hop1": {
+          "contraindication": [
+            "contraindication"
+          ],
+          "indication": [
+            "indication"
+          ],
+          "off-label use": [
+            "off-label use"
+          ]
+        },
+        "hop2": {
+          "drug_effect": [
+            "side effect"
+          ]
+        }
+      },
+      "construction": "UNION",
+      "d1_status": "PASS",
+      "fail_reasons": [],
+      "hop1": {
+        "diagnostics": [
+          {
+            "labels": [
+              "indication"
+            ],
+            "mismatch_row_ids": []
+          }
+        ],
+        "matches": 30,
+        "score": 1.0,
+        "sets": [
+          [
+            "indication"
+          ]
+        ],
+        "status": "SELECTED"
+      },
+      "hop2_score": 1.0,
+      "needs_decision": false,
+      "rows_in_dataset": 949,
+      "sample_row_ids": [
+        "BH2_04078",
+        "BH2_04282",
+        "BH2_03879",
+        "BH2_03920",
+        "BH2_03785",
+        "BH2_03991",
+        "BH2_03850",
+        "BH2_03619",
+        "BH2_04322",
+        "BH2_03856",
+        "BH2_03971",
+        "BH2_03750",
+        "BH2_04066",
+        "BH2_04477",
+        "BH2_03881",
+        "BH2_03762",
+        "BH2_04003",
+        "BH2_04104",
+        "BH2_03984",
+        "BH2_03837",
+        "BH2_04086",
+        "BH2_04266",
+        "BH2_03745",
+        "BH2_04425",
+        "BH2_03760",
+        "BH2_04083",
+        "BH2_03953",
+        "BH2_04007",
+        "BH2_04459",
+        "BH2_04417"
+      ],
+      "sample_size": 30,
+      "sample_unresolved_answers": [],
+      "scenarios": [
+        {
+          "BRIDGE": {
+            "diagnostics": [
+              {
+                "examples": [
+                  {
+                    "bridge_id": "15205",
+                    "extra_ids": [],
+                    "gold_count": 271,
+                    "missing_ids": [
+                      "22229",
+                      "22250",
+                      "22272",
+                      "22304",
+                      "22323",
+                      "22380",
+                      "22382",
+                      "22447",
+                      "22457",
+                      "22458",
+                      "22466",
+                      "22550",
+                      "22574",
+                      "22588",
+                      "22676",
+                      "22713",
+                      "22733",
+                      "22735",
+                      "22786",
+                      "22824",
+                      "22827",
+                      "22828",
+                      "22831",
+                      "22879",
+                      "22903",
+                      "22916",
+                      "22923",
+                      "22938",
+                      "22939",
+                      "22952",
+                      "22953",
+                      "22960",
+                      "22967",
+                      "22999",
+                      "23000",
+                      "23007",
+                      "23010",
+                      "23057",
+                      "23059",
+                      "23060",
+                      "23072",
+                      "23083",
+                      "23101",
+                      "23113",
+                      "23148",
+                      "23178",
+                      "23183",
+                      "23214",
+                      "23244",
+                      "23254",
+                      "23279",
+                      "23298",
+                      "23360",
+                      "23417",
+                      "23469",
+                      "23488",
+                      "23506",
+                      "23829",
+                      "23833",
+                      "23844",
+                      "23958",
+                      "24011",
+                      "24015",
+                      "24040",
+                      "24228",
+                      "24338",
+                      "24423",
+                      "24492",
+                      "24522",
+                      "24568",
+                      "24582",
+                      "24952",
+                      "25150",
+                      "25235",
+                      "25310",
+                      "25311",
+                      "25330",
+                      "25484",
+                      "25486",
+                      "25488",
+                      "25512",
+                      "25515",
+                      "25522",
+                      "25526",
+                      "25561",
+                      "25638",
+                      "25657",
+                      "25700",
+                      "25805",
+                      "26074",
+                      "26116",
+                      "26162",
+                      "26262",
+                      "26309",
+                      "26629",
+                      "26647",
+                      "26671",
+                      "26674",
+                      "26837",
+                      "26939",
+                      "26948",
+                      "26991",
+                      "26992",
+                      "27007",
+                      "33733",
+                      "33751",
+                      "84339",
+                      "84353",
+                      "84356",
+                      "84361",
+                      "84362",
+                      "84364",
+                      "84365",
+                      "84373",
+                      "84384",
+                      "84392",
+                      "84397",
+                      "84398",
+                      "84416",
+                      "84420",
+                      "84429",
+                      "84441",
+                      "84456",
+                      "84485",
+                      "84488",
+                      "84508",
+                      "84512",
+                      "84516",
+                      "84544",
+                      "84553",
+                      "84555",
+                      "84693",
+                      "84694",
+                      "84696",
+                      "84697",
+                      "84723",
+                      "84764",
+                      "84771",
+                      "84773",
+                      "84774",
+                      "84806",
+                      "84855",
+                      "84856",
+                      "84874",
+                      "84876",
+                      "84920",
+                      "84993",
+                      "85002",
+                      "85015",
+                      "85041",
+                      "85067",
+                      "85214",
+                      "85282",
+                      "85285",
+                      "85333",
+                      "85334",
+                      "85351",
+                      "85576",
+                      "86014",
+                      "86169",
+                      "86674",
+                      "86675",
+                      "86783",
+                      "87988",
+                      "88527",
+                      "88529",
+                      "88984",
+                      "89188",
+                      "89315",
+                      "89557",
+                      "90237",
+                      "90284",
+                      "90290",
+                      "90294",
+                      "90663",
+                      "90690",
+                      "90694",
+                      "92920",
+                      "93440",
+                      "93442",
+                      "93443",
+                      "93464",
+                      "93560",
+                      "93625",
+                      "94295"
+                    ],
+                    "query_id": "36937",
+                    "reached_count": 86,
+                    "row_id": "BH2_03879",
+                    "unresolved_answers": []
+                  },
+                  {
+                    "bridge_id": "14329",
+                    "extra_ids": [],
+                    "gold_count": 156,
+                    "missing_ids": [
+                      "22398",
+                      "22613",
+                      "22951",
+                      "23007",
+                      "23010",
+                      "23011",
+                      "23135",
+                      "23267",
+                      "23833",
+                      "23864",
+                      "24369",
+                      "24423",
+                      "24491",
+                      "25150",
+                      "25275",
+                      "25638",
+                      "25644",
+                      "26309",
+                      "26605",
+                      "26982",
+                      "84356",
+                      "84359",
+                      "84429",
+                      "84708",
+                      "85012",
+                      "85075",
+                      "85641",
+                      "88532",
+                      "93440"
+                    ],
+                    "query_id": "29113",
+                    "reached_count": 127,
+                    "row_id": "BH2_03920",
+                    "unresolved_answers": []
+                  }
+                ],
+                "labels": [
+                  "drug_effect"
+                ],
+                "mismatch_row_ids": [
+                  "BH2_03879",
+                  "BH2_03920",
+                  "BH2_03785",
+                  "BH2_03991",
+                  "BH2_03850",
+                  "BH2_03619",
+                  "BH2_03856",
+                  "BH2_03750",
+                  "BH2_03881",
+                  "BH2_03762",
+                  "BH2_04003",
+                  "BH2_04425",
+                  "BH2_03953",
+                  "BH2_04007",
+                  "BH2_04459"
+                ]
+              }
+            ],
+            "matches": 15,
+            "score": 0.5,
+            "sets": [
+              [
+                "drug_effect"
+              ]
+            ],
+            "status": "SELECTED"
+          },
+          "R1": [
+            "indication"
+          ],
+          "UNION": {
+            "diagnostics": [
+              {
+                "examples": [],
+                "labels": [
+                  "drug_effect"
+                ],
+                "mismatch_row_ids": []
+              }
+            ],
+            "matches": 30,
+            "score": 1.0,
+            "sets": [
+              [
+                "drug_effect"
+              ]
+            ],
+            "status": "SELECTED"
+          },
+          "construction": "UNION",
+          "why": "only UNION reaches 90%"
+        }
+      ],
+      "skipped_unresolved": []
+    },
+    "disease:drug:gene/protein": {
+      "R1": [
+        "indication"
+      ],
+      "R2": [
+        "drug_protein"
+      ],
+      "ambiguity_tag": "R1_AMBIGUOUS",
+      "candidates": {
+        "hop1": {
+          "contraindication": [
+            "contraindication"
+          ],
+          "indication": [
+            "indication"
+          ],
+          "off-label use": [
+            "off-label use"
+          ]
+        },
+        "hop2": {
+          "drug_protein": [
+            "carrier",
+            "enzyme",
+            "target",
+            "transporter"
+          ]
+        }
+      },
+      "construction": "BRIDGE",
+      "d1_status": "PASS",
+      "fail_reasons": [],
+      "hop1": {
+        "diagnostics": [
+          {
+            "labels": [
+              "indication"
+            ],
+            "mismatch_row_ids": []
+          }
+        ],
+        "matches": 30,
+        "score": 1.0,
+        "sets": [
+          [
+            "indication"
+          ]
+        ],
+        "status": "SELECTED"
+      },
+      "hop2_score": 1.0,
+      "needs_decision": false,
+      "rows_in_dataset": 381,
+      "sample_row_ids": [
+        "BH2_07610",
+        "BH2_07479",
+        "BH2_07383",
+        "BH2_07587",
+        "BH2_07343",
+        "BH2_07578",
+        "BH2_07409",
+        "BH2_07325",
+        "BH2_07632",
+        "BH2_07579",
+        "BH2_07273",
+        "BH2_07444",
+        "BH2_07485",
+        "BH2_07252",
+        "BH2_07487",
+        "BH2_07283",
+        "BH2_07496",
+        "BH2_07512",
+        "BH2_07353",
+        "BH2_07313",
+        "BH2_07550",
+        "BH2_07455",
+        "BH2_07450",
+        "BH2_07263",
+        "BH2_07315",
+        "BH2_07326",
+        "BH2_07616",
+        "BH2_07551",
+        "BH2_07302",
+        "BH2_07257"
+      ],
+      "sample_size": 30,
+      "sample_unresolved_answers": [],
+      "scenarios": [
+        {
+          "BRIDGE": {
+            "diagnostics": [
+              {
+                "examples": [],
+                "labels": [
+                  "drug_protein"
+                ],
+                "mismatch_row_ids": []
+              }
+            ],
+            "matches": 30,
+            "score": 1.0,
+            "sets": [
+              [
+                "drug_protein"
+              ]
+            ],
+            "status": "SELECTED"
+          },
+          "R1": [
+            "indication"
+          ],
+          "UNION": {
+            "diagnostics": [
+              {
+                "examples": [],
+                "labels": [
+                  "drug_protein"
+                ],
+                "mismatch_row_ids": []
+              }
+            ],
+            "matches": 30,
+            "score": 1.0,
+            "sets": [
+              [
+                "drug_protein"
+              ]
+            ],
+            "status": "SELECTED"
+          },
+          "construction": "BRIDGE",
+          "why": "both reach 90%; BRIDGE tie rule"
+        }
+      ],
+      "skipped_unresolved": []
+    },
+    "disease:effect/phenotype:drug": {
+      "R1": [
+        "disease_phenotype_positive"
+      ],
+      "R2": null,
+      "ambiguity_tag": null,
+      "candidates": {
+        "hop1": {
+          "disease_phenotype_negative": [
+            "phenotype absent"
+          ],
+          "disease_phenotype_positive": [
+            "phenotype present"
+          ]
+        },
+        "hop2": {
+          "drug_effect": [
+            "side effect"
+          ]
+        }
+      },
+      "construction": null,
+      "d1_status": "FAIL",
+      "fail_reasons": [
+        "hop-2 score below 90% under both constructions"
+      ],
+      "hop1": {
+        "diagnostics": [
+          {
+            "labels": [
+              "disease_phenotype_positive"
+            ],
+            "mismatch_row_ids": []
+          }
+        ],
+        "matches": 30,
+        "score": 1.0,
+        "sets": [
+          [
+            "disease_phenotype_positive"
+          ]
+        ],
+        "status": "SELECTED"
+      },
+      "hop2_score": null,
+      "needs_decision": false,
+      "rows_in_dataset": 36,
+      "sample_row_ids": [
+        "BH2_06128",
+        "BH2_06120",
+        "BH2_06135",
+        "BH2_06118",
+        "BH2_06121",
+        "BH2_06126",
+        "BH2_06124",
+        "BH2_06139",
+        "BH2_06112",
+        "BH2_06117",
+        "BH2_06116",
+        "BH2_06108",
+        "BH2_06106",
+        "BH2_06136",
+        "BH2_06111",
+        "BH2_06114",
+        "BH2_06105",
+        "BH2_06109",
+        "BH2_06110",
+        "BH2_06138",
+        "BH2_06133",
+        "BH2_06137",
+        "BH2_06131",
+        "BH2_06107",
+        "BH2_06129",
+        "BH2_06130",
+        "BH2_06122",
+        "BH2_06132",
+        "BH2_06113",
+        "BH2_06125"
+      ],
+      "sample_size": 30,
+      "sample_unresolved_answers": [],
+      "scenarios": [
+        {
+          "BRIDGE": {
+            "diagnostics": [
+              {
+                "examples": [
+                  {
+                    "bridge_id": "25150",
+                    "extra_ids": [
+                      "14106",
+                      "14111",
+                      "14155",
+                      "14165",
+                      "14204",
+                      "14207",
+                      "14229",
+                      "14251",
+                      "14271",
+                      "14313",
+                      "14602",
+                      "14606",
+                      "14711",
+                      "14713",
+                      "14758",
+                      "14770",
+                      "14794",
+                      "14799",
+                      "14852",
+                      "14871",
+                      "14914",
+                      "14919",
+                      "14945",
+                      "14975",
+                      "14982",
+                      "15002",
+                      "15012",
+                      "15014",
+                      "15076",
+                      "15077",
+                      "15111",
+                      "15138",
+                      "15150",
+                      "15176",
+                      "15187",
+                      "15287",
+                      "15288",
+                      "15292",
+                      "15308",
+                      "15333",
+                      "15378",
+                      "15428",
+                      "15443",
+                      "15447",
+                      "15481",
+                      "15494",
+                      "15562",
+                      "15805",
+                      "15822",
+                      "15985",
+                      "16512",
+                      "16575",
+                      "16753",
+                      "17152",
+                      "17174",
+                      "17335",
+                      "17558",
+                      "17728",
+                      "19324",
+                      "19356",
+                      "20215",
+                      "20344",
+                      "20351",
+                      "20360",
+                      "20433",
+                      "20456",
+                      "20657"
+                    ],
+                    "gold_count": 44,
+                    "missing_ids": [],
+                    "query_id": "37887",
+                    "reached_count": 111,
+                    "row_id": "BH2_06128",
+                    "unresolved_answers": []
+                  },
+                  {
+                    "bridge_id": "22675",
+                    "extra_ids": [
+                      "14025",
+                      "14164",
+                      "14560",
+                      "14686",
+                      "14981",
+                      "15856"
+                    ],
+                    "gold_count": 14,
+                    "missing_ids": [],
+                    "query_id": "30391",
+                    "reached_count": 20,
+                    "row_id": "BH2_06120",
+                    "unresolved_answers": []
+                  }
+                ],
+                "labels": [
+                  "drug_effect"
+                ],
+                "mismatch_row_ids": [
+                  "BH2_06128",
+                  "BH2_06120",
+                  "BH2_06135",
+                  "BH2_06118",
+                  "BH2_06121",
+                  "BH2_06126",
+                  "BH2_06124",
+                  "BH2_06139",
+                  "BH2_06112",
+                  "BH2_06117",
+                  "BH2_06116",
+                  "BH2_06108",
+                  "BH2_06106",
+                  "BH2_06136",
+                  "BH2_06111",
+                  "BH2_06114",
+                  "BH2_06105",
+                  "BH2_06110",
+                  "BH2_06138",
+                  "BH2_06133",
+                  "BH2_06137",
+                  "BH2_06131",
+                  "BH2_06107",
+                  "BH2_06130",
+                  "BH2_06122",
+                  "BH2_06132",
+                  "BH2_06125"
+                ]
+              }
+            ],
+            "matches": 3,
+            "score": 0.1,
+            "sets": [
+              [
+                "drug_effect"
+              ]
+            ],
+            "status": "SELECTED"
+          },
+          "R1": [
+            "disease_phenotype_positive"
+          ],
+          "UNION": {
+            "diagnostics": [
+              {
+                "examples": [
+                  {
+                    "bridge_id": "25150",
+                    "extra_ids": [
+                      "14106",
+                      "14111",
+                      "14155",
+                      "14165",
+                      "14204",
+                      "14207",
+                      "14229",
+                      "14251",
+                      "14271",
+                      "14313",
+                      "14602",
+                      "14606",
+                      "14711",
+                      "14713",
+                      "14758",
+                      "14770",
+                      "14794",
+                      "14799",
+                      "14852",
+                      "14871",
+                      "14914",
+                      "14919",
+                      "14945",
+                      "14975",
+                      "14982",
+                      "15002",
+                      "15012",
+                      "15014",
+                      "15076",
+                      "15077",
+                      "15111",
+                      "15138",
+                      "15150",
+                      "15176",
+                      "15187",
+                      "15287",
+                      "15288",
+                      "15292",
+                      "15308",
+                      "15333",
+                      "15378",
+                      "15428",
+                      "15443",
+                      "15447",
+                      "15481",
+                      "15494",
+                      "15562",
+                      "15805",
+                      "15822",
+                      "15985",
+                      "16512",
+                      "16575",
+                      "16753",
+                      "17152",
+                      "17174",
+                      "17335",
+                      "17558",
+                      "17728",
+                      "19324",
+                      "19356",
+                      "20215",
+                      "20344",
+                      "20351",
+                      "20360",
+                      "20433",
+                      "20456",
+                      "20657"
+                    ],
+                    "gold_count": 44,
+                    "missing_ids": [],
+                    "query_id": "37887",
+                    "reached_count": 111,
+                    "row_id": "BH2_06128",
+                    "unresolved_answers": []
+                  },
+                  {
+                    "bridge_id": "22675",
+                    "extra_ids": [
+                      "14025",
+                      "14164",
+                      "14560",
+                      "14686",
+                      "14981",
+                      "15856"
+                    ],
+                    "gold_count": 14,
+                    "missing_ids": [],
+                    "query_id": "30391",
+                    "reached_count": 20,
+                    "row_id": "BH2_06120",
+                    "unresolved_answers": []
+                  }
+                ],
+                "labels": [
+                  "drug_effect"
+                ],
+                "mismatch_row_ids": [
+                  "BH2_06128",
+                  "BH2_06120",
+                  "BH2_06135",
+                  "BH2_06118",
+                  "BH2_06121",
+                  "BH2_06126",
+                  "BH2_06124",
+                  "BH2_06139",
+                  "BH2_06112",
+                  "BH2_06117",
+                  "BH2_06116",
+                  "BH2_06108",
+                  "BH2_06106",
+                  "BH2_06136",
+                  "BH2_06111",
+                  "BH2_06114",
+                  "BH2_06105",
+                  "BH2_06110",
+                  "BH2_06138",
+                  "BH2_06133",
+                  "BH2_06137",
+                  "BH2_06131",
+                  "BH2_06107",
+                  "BH2_06130",
+                  "BH2_06122",
+                  "BH2_06132",
+                  "BH2_06125"
+                ]
+              }
+            ],
+            "matches": 3,
+            "score": 0.1,
+            "sets": [
+              [
+                "drug_effect"
+              ]
+            ],
+            "status": "SELECTED"
+          },
+          "construction": null,
+          "why": "neither construction reaches 90%"
+        }
+      ],
+      "skipped_unresolved": []
+    },
+    "disease:gene/protein:drug": {
+      "R1": [
+        "disease_protein"
+      ],
+      "R2": [
+        "drug_protein"
+      ],
+      "ambiguity_tag": "NONE",
+      "candidates": {
+        "hop1": {
+          "disease_protein": [
+            "associated with"
+          ]
+        },
+        "hop2": {
+          "drug_protein": [
+            "carrier",
+            "enzyme",
+            "target",
+            "transporter"
+          ]
+        }
+      },
+      "construction": "BRIDGE",
+      "d1_status": "PASS",
+      "fail_reasons": [],
+      "hop1": {
+        "diagnostics": [
+          {
+            "labels": [
+              "disease_protein"
+            ],
+            "mismatch_row_ids": []
+          }
+        ],
+        "matches": 30,
+        "score": 1.0,
+        "sets": [
+          [
+            "disease_protein"
+          ]
+        ],
+        "status": "SELECTED"
+      },
+      "hop2_score": 1.0,
+      "needs_decision": false,
+      "rows_in_dataset": 899,
+      "sample_row_ids": [
+        "BH2_06427",
+        "BH2_06505",
+        "BH2_06305",
+        "BH2_06865",
+        "BH2_06797",
+        "BH2_06279",
+        "BH2_06357",
+        "BH2_06651",
+        "BH2_06972",
+        "BH2_06385",
+        "BH2_06874",
+        "BH2_06421",
+        "BH2_06375",
+        "BH2_06801",
+        "BH2_06294",
+        "BH2_06808",
+        "BH2_06423",
+        "BH2_06518",
+        "BH2_06617",
+        "BH2_06215",
+        "BH2_06450",
+        "BH2_06965",
+        "BH2_06777",
+        "BH2_06470",
+        "BH2_06945",
+        "BH2_06860",
+        "BH2_06907",
+        "BH2_06741",
+        "BH2_06643",
+        "BH2_06186"
+      ],
+      "sample_size": 30,
+      "sample_unresolved_answers": [],
+      "scenarios": [
+        {
+          "BRIDGE": {
+            "diagnostics": [
+              {
+                "examples": [],
+                "labels": [
+                  "drug_protein"
+                ],
+                "mismatch_row_ids": []
+              }
+            ],
+            "matches": 30,
+            "score": 1.0,
+            "sets": [
+              [
+                "drug_protein"
+              ]
+            ],
+            "status": "SELECTED"
+          },
+          "R1": [
+            "disease_protein"
+          ],
+          "UNION": {
+            "diagnostics": [
+              {
+                "examples": [],
+                "labels": [
+                  "drug_protein"
+                ],
+                "mismatch_row_ids": []
+              }
+            ],
+            "matches": 30,
+            "score": 1.0,
+            "sets": [
+              [
+                "drug_protein"
+              ]
+            ],
+            "status": "SELECTED"
+          },
+          "construction": "BRIDGE",
+          "why": "both reach 90%; BRIDGE tie rule"
+        }
+      ],
+      "skipped_unresolved": []
+    },
+    "drug:disease:effect/phenotype": {
+      "R1": [
+        "indication"
+      ],
+      "R2": [
+        "disease_phenotype_positive"
+      ],
+      "ambiguity_tag": "BOTH_AMBIGUOUS",
+      "candidates": {
+        "hop1": {
+          "contraindication": [
+            "contraindication"
+          ],
+          "indication": [
+            "indication"
+          ],
+          "off-label use": [
+            "off-label use"
+          ]
+        },
+        "hop2": {
+          "disease_phenotype_negative": [
+            "phenotype absent"
+          ],
+          "disease_phenotype_positive": [
+            "phenotype present"
+          ]
+        }
+      },
+      "construction": "BRIDGE",
+      "d1_status": "PASS",
+      "fail_reasons": [],
+      "hop1": {
+        "diagnostics": [
+          {
+            "labels": [
+              "indication"
+            ],
+            "mismatch_row_ids": []
+          }
+        ],
+        "matches": 30,
+        "score": 1.0,
+        "sets": [
+          [
+            "indication"
+          ]
+        ],
+        "status": "SELECTED"
+      },
+      "hop2_score": 1.0,
+      "needs_decision": false,
+      "rows_in_dataset": 213,
+      "sample_row_ids": [
+        "BH2_07041",
+        "BH2_07198",
+        "BH2_07189",
+        "BH2_07178",
+        "BH2_07154",
+        "BH2_07230",
+        "BH2_07170",
+        "BH2_07063",
+        "BH2_07240",
+        "BH2_07251",
+        "BH2_07236",
+        "BH2_07095",
+        "BH2_07049",
+        "BH2_07071",
+        "BH2_07116",
+        "BH2_07105",
+        "BH2_07197",
+        "BH2_07069",
+        "BH2_07239",
+        "BH2_07227",
+        "BH2_07149",
+        "BH2_07112",
+        "BH2_07231",
+        "BH2_07085",
+        "BH2_07235",
+        "BH2_07040",
+        "BH2_07211",
+        "BH2_07094",
+        "BH2_07079",
+        "BH2_07247"
+      ],
+      "sample_size": 30,
+      "sample_unresolved_answers": [],
+      "scenarios": [
+        {
+          "BRIDGE": {
+            "diagnostics": [
+              {
+                "examples": [],
+                "labels": [
+                  "disease_phenotype_positive"
+                ],
+                "mismatch_row_ids": []
+              }
+            ],
+            "matches": 30,
+            "score": 1.0,
+            "sets": [
+              [
+                "disease_phenotype_positive"
+              ]
+            ],
+            "status": "SELECTED"
+          },
+          "R1": [
+            "indication"
+          ],
+          "UNION": {
+            "diagnostics": [
+              {
+                "examples": [],
+                "labels": [
+                  "disease_phenotype_positive"
+                ],
+                "mismatch_row_ids": []
+              }
+            ],
+            "matches": 30,
+            "score": 1.0,
+            "sets": [
+              [
+                "disease_phenotype_positive"
+              ]
+            ],
+            "status": "SELECTED"
+          },
+          "construction": "BRIDGE",
+          "why": "both reach 90%; BRIDGE tie rule"
+        }
+      ],
+      "skipped_unresolved": []
+    },
+    "drug:disease:gene/protein": {
+      "R1": [
+        "indication"
+      ],
+      "R2": [
+        "disease_protein"
+      ],
+      "ambiguity_tag": "R1_AMBIGUOUS",
+      "candidates": {
+        "hop1": {
+          "contraindication": [
+            "contraindication"
+          ],
+          "indication": [
+            "indication"
+          ],
+          "off-label use": [
+            "off-label use"
+          ]
+        },
+        "hop2": {
+          "disease_protein": [
+            "associated with"
+          ]
+        }
+      },
+      "construction": "BRIDGE",
+      "d1_status": "PASS",
+      "fail_reasons": [],
+      "hop1": {
+        "diagnostics": [
+          {
+            "labels": [
+              "indication"
+            ],
+            "mismatch_row_ids": []
+          }
+        ],
+        "matches": 30,
+        "score": 1.0,
+        "sets": [
+          [
+            "indication"
+          ]
+        ],
+        "status": "SELECTED"
+      },
+      "hop2_score": 1.0,
+      "needs_decision": false,
+      "rows_in_dataset": 321,
+      "sample_row_ids": [
+        "BH2_04617",
+        "BH2_04828",
+        "BH2_04657",
+        "BH2_04708",
+        "BH2_04824",
+        "BH2_04856",
+        "BH2_04650",
+        "BH2_04591",
+        "BH2_04846",
+        "BH2_04664",
+        "BH2_04610",
+        "BH2_04801",
+        "BH2_04794",
+        "BH2_04609",
+        "BH2_04832",
+        "BH2_04809",
+        "BH2_04729",
+        "BH2_04678",
+        "BH2_04722",
+        "BH2_04627",
+        "BH2_04654",
+        "BH2_04698",
+        "BH2_04653",
+        "BH2_04761",
+        "BH2_04570",
+        "BH2_04872",
+        "BH2_04823",
+        "BH2_04764",
+        "BH2_04633",
+        "BH2_04668"
+      ],
+      "sample_size": 30,
+      "sample_unresolved_answers": [],
+      "scenarios": [
+        {
+          "BRIDGE": {
+            "diagnostics": [
+              {
+                "examples": [],
+                "labels": [
+                  "disease_protein"
+                ],
+                "mismatch_row_ids": []
+              }
+            ],
+            "matches": 30,
+            "score": 1.0,
+            "sets": [
+              [
+                "disease_protein"
+              ]
+            ],
+            "status": "SELECTED"
+          },
+          "R1": [
+            "indication"
+          ],
+          "UNION": {
+            "diagnostics": [
+              {
+                "examples": [],
+                "labels": [
+                  "disease_protein"
+                ],
+                "mismatch_row_ids": []
+              }
+            ],
+            "matches": 30,
+            "score": 1.0,
+            "sets": [
+              [
+                "disease_protein"
+              ]
+            ],
+            "status": "SELECTED"
+          },
+          "construction": "BRIDGE",
+          "why": "both reach 90%; BRIDGE tie rule"
+        }
+      ],
+      "skipped_unresolved": []
+    },
+    "drug:effect/phenotype:disease": {
+      "R1": [
+        "drug_effect"
+      ],
+      "R2": null,
+      "ambiguity_tag": null,
+      "candidates": {
+        "hop1": {
+          "drug_effect": [
+            "side effect"
+          ]
+        },
+        "hop2": {
+          "disease_phenotype_negative": [
+            "phenotype absent"
+          ],
+          "disease_phenotype_positive": [
+            "phenotype present"
+          ]
+        }
+      },
+      "construction": null,
+      "d1_status": "FAIL",
+      "fail_reasons": [
+        "fewer than 10 validation rows",
+        "hop-2 score below 90% under both constructions"
+      ],
+      "hop1": {
+        "diagnostics": [
+          {
+            "labels": [
+              "drug_effect"
+            ],
+            "mismatch_row_ids": []
+          }
+        ],
+        "matches": 5,
+        "score": 1.0,
+        "sets": [
+          [
+            "drug_effect"
+          ]
+        ],
+        "status": "SELECTED"
+      },
+      "hop2_score": null,
+      "needs_decision": true,
+      "rows_in_dataset": 5,
+      "sample_row_ids": [
+        "BH2_00004",
+        "BH2_00003",
+        "BH2_00001",
+        "BH2_00000",
+        "BH2_00002"
+      ],
+      "sample_size": 5,
+      "sample_unresolved_answers": [],
+      "scenarios": [
+        {
+          "BRIDGE": {
+            "diagnostics": [
+              {
+                "examples": [
+                  {
+                    "bridge_id": "84409",
+                    "extra_ids": [],
+                    "gold_count": 29,
+                    "missing_ids": [
+                      "27426",
+                      "27502",
+                      "28257",
+                      "28547",
+                      "29457",
+                      "29923",
+                      "29924",
+                      "30177",
+                      "30230",
+                      "30309",
+                      "30653",
+                      "30753",
+                      "31024",
+                      "31384",
+                      "32231",
+                      "32249",
+                      "32274",
+                      "32280",
+                      "32298",
+                      "32304",
+                      "32327",
+                      "32338",
+                      "32395",
+                      "32399",
+                      "32417",
+                      "32422",
+                      "32501",
+                      "32503",
+                      "32520"
+                    ],
+                    "query_id": "14751",
+                    "reached_count": 0,
+                    "row_id": "BH2_00004",
+                    "unresolved_answers": []
+                  },
+                  {
+                    "bridge_id": "89055",
+                    "extra_ids": [],
+                    "gold_count": 3,
+                    "missing_ids": [
+                      "27983",
+                      "30928",
+                      "32379"
+                    ],
+                    "query_id": "14490",
+                    "reached_count": 0,
+                    "row_id": "BH2_00003",
+                    "unresolved_answers": []
+                  }
+                ],
+                "labels": [
+                  "disease_phenotype_negative"
+                ],
+                "mismatch_row_ids": [
+                  "BH2_00004",
+                  "BH2_00003",
+                  "BH2_00001",
+                  "BH2_00000",
+                  "BH2_00002"
+                ]
+              },
+              {
+                "examples": [
+                  {
+                    "bridge_id": "84409",
+                    "extra_ids": [
+                      "27210",
+                      "27691",
+                      "27699",
+                      "27702",
+                      "27723",
+                      "27774",
+                      "27813",
+                      "27832",
+                      "27838",
+                      "27842",
+                      "27843",
+                      "28017",
+                      "28070",
+                      "28269",
+                      "28426",
+                      "28505",
+                      "29024",
+                      "29034",
+                      "29427",
+                      "29854",
+                      "30274",
+                      "31072",
+                      "31388",
+                      "31674",
+                      "32598",
+                      "32600",
+                      "32603",
+                      "32713",
+                      "32717",
+                      "32749",
+                      "32796",
+                      "32811",
+                      "32815",
+                      "32820",
+                      "32875",
+                      "32905",
+                      "32928",
+                      "32930",
+                      "32932",
+                      "32933",
+                      "32943",
+                      "32999",
+                      "33018",
+                      "33020",
+                      "33091",
+                      "33106",
+                      "33119",
+                      "33121",
+                      "33122",
+                      "33207",
+                      "33284",
+                      "33297",
+                      "33318",
+                      "33362",
+                      "33400",
+                      "33431",
+                      "33454",
+                      "33457",
+                      "33462",
+                      "33543"
+                    ],
+                    "gold_count": 29,
+                    "missing_ids": [],
+                    "query_id": "14751",
+                    "reached_count": 89,
+                    "row_id": "BH2_00004",
+                    "unresolved_answers": []
+                  },
+                  {
+                    "bridge_id": "89055",
+                    "extra_ids": [
+                      "27772",
+                      "28458"
+                    ],
+                    "gold_count": 3,
+                    "missing_ids": [],
+                    "query_id": "14490",
+                    "reached_count": 5,
+                    "row_id": "BH2_00003",
+                    "unresolved_answers": []
+                  }
+                ],
+                "labels": [
+                  "disease_phenotype_positive"
+                ],
+                "mismatch_row_ids": [
+                  "BH2_00004",
+                  "BH2_00003",
+                  "BH2_00001",
+                  "BH2_00000",
+                  "BH2_00002"
+                ]
+              }
+            ],
+            "matches": 0,
+            "score": 0.0,
+            "sets": [
+              [
+                "disease_phenotype_negative"
+              ],
+              [
+                "disease_phenotype_positive"
+              ]
+            ],
+            "status": "TIE"
+          },
+          "R1": [
+            "drug_effect"
+          ],
+          "UNION": {
+            "diagnostics": [
+              {
+                "examples": [
+                  {
+                    "bridge_id": "84409",
+                    "extra_ids": [],
+                    "gold_count": 29,
+                    "missing_ids": [
+                      "27426",
+                      "27502",
+                      "28257",
+                      "28547",
+                      "29457",
+                      "29923",
+                      "29924",
+                      "30177",
+                      "30230",
+                      "30309",
+                      "30653",
+                      "30753",
+                      "31024",
+                      "31384",
+                      "32231",
+                      "32249",
+                      "32274",
+                      "32280",
+                      "32298",
+                      "32304",
+                      "32327",
+                      "32338",
+                      "32395",
+                      "32399",
+                      "32417",
+                      "32422",
+                      "32501",
+                      "32503",
+                      "32520"
+                    ],
+                    "query_id": "14751",
+                    "reached_count": 0,
+                    "row_id": "BH2_00004",
+                    "unresolved_answers": []
+                  },
+                  {
+                    "bridge_id": "89055",
+                    "extra_ids": [],
+                    "gold_count": 3,
+                    "missing_ids": [
+                      "27983",
+                      "30928",
+                      "32379"
+                    ],
+                    "query_id": "14490",
+                    "reached_count": 0,
+                    "row_id": "BH2_00003",
+                    "unresolved_answers": []
+                  }
+                ],
+                "labels": [
+                  "disease_phenotype_negative"
+                ],
+                "mismatch_row_ids": [
+                  "BH2_00004",
+                  "BH2_00003",
+                  "BH2_00001",
+                  "BH2_00000",
+                  "BH2_00002"
+                ]
+              },
+              {
+                "examples": [
+                  {
+                    "bridge_id": "84409",
+                    "extra_ids": [
+                      "27210",
+                      "27691",
+                      "27699",
+                      "27702",
+                      "27723",
+                      "27774",
+                      "27813",
+                      "27832",
+                      "27838",
+                      "27842",
+                      "27843",
+                      "28017",
+                      "28070",
+                      "28269",
+                      "28426",
+                      "28505",
+                      "29024",
+                      "29034",
+                      "29427",
+                      "29854",
+                      "30274",
+                      "31072",
+                      "31388",
+                      "31674",
+                      "32598",
+                      "32600",
+                      "32603",
+                      "32713",
+                      "32717",
+                      "32749",
+                      "32796",
+                      "32811",
+                      "32815",
+                      "32820",
+                      "32875",
+                      "32905",
+                      "32928",
+                      "32930",
+                      "32932",
+                      "32933",
+                      "32943",
+                      "32999",
+                      "33018",
+                      "33020",
+                      "33091",
+                      "33106",
+                      "33119",
+                      "33121",
+                      "33122",
+                      "33207",
+                      "33284",
+                      "33297",
+                      "33318",
+                      "33362",
+                      "33400",
+                      "33431",
+                      "33454",
+                      "33457",
+                      "33462",
+                      "33543"
+                    ],
+                    "gold_count": 29,
+                    "missing_ids": [],
+                    "query_id": "14751",
+                    "reached_count": 89,
+                    "row_id": "BH2_00004",
+                    "unresolved_answers": []
+                  },
+                  {
+                    "bridge_id": "89055",
+                    "extra_ids": [
+                      "27772",
+                      "28458"
+                    ],
+                    "gold_count": 3,
+                    "missing_ids": [],
+                    "query_id": "14490",
+                    "reached_count": 5,
+                    "row_id": "BH2_00003",
+                    "unresolved_answers": []
+                  }
+                ],
+                "labels": [
+                  "disease_phenotype_positive"
+                ],
+                "mismatch_row_ids": [
+                  "BH2_00004",
+                  "BH2_00003",
+                  "BH2_00001",
+                  "BH2_00000",
+                  "BH2_00002"
+                ]
+              }
+            ],
+            "matches": 0,
+            "score": 0.0,
+            "sets": [
+              [
+                "disease_phenotype_negative"
+              ],
+              [
+                "disease_phenotype_positive"
+              ]
+            ],
+            "status": "TIE"
+          },
+          "construction": null,
+          "why": "neither construction reaches 90%"
+        }
+      ],
+      "skipped_unresolved": []
+    },
+    "drug:gene/protein:disease": {
+      "R1": [
+        "drug_protein"
+      ],
+      "R2": [
+        "disease_protein"
+      ],
+      "ambiguity_tag": "NONE",
+      "candidates": {
+        "hop1": {
+          "drug_protein": [
+            "carrier",
+            "enzyme",
+            "target",
+            "transporter"
+          ]
+        },
+        "hop2": {
+          "disease_protein": [
+            "associated with"
+          ]
+        }
+      },
+      "construction": "BRIDGE",
+      "d1_status": "PASS",
+      "fail_reasons": [],
+      "hop1": {
+        "diagnostics": [
+          {
+            "labels": [
+              "drug_protein"
+            ],
+            "mismatch_row_ids": []
+          }
+        ],
+        "matches": 30,
+        "score": 1.0,
+        "sets": [
+          [
+            "drug_protein"
+          ]
+        ],
+        "status": "SELECTED"
+      },
+      "hop2_score": 1.0,
+      "needs_decision": false,
+      "rows_in_dataset": 3029,
+      "sample_row_ids": [
+        "BH2_02033",
+        "BH2_00461",
+        "BH2_01682",
+        "BH2_00488",
+        "BH2_00341",
+        "BH2_02570",
+        "BH2_02911",
+        "BH2_02789",
+        "BH2_02616",
+        "BH2_00189",
+        "BH2_01919",
+        "BH2_01463",
+        "BH2_02864",
+        "BH2_02695",
+        "BH2_01304",
+        "BH2_00569",
+        "BH2_02780",
+        "BH2_00833",
+        "BH2_00231",
+        "BH2_00693",
+        "BH2_00140",
+        "BH2_01061",
+        "BH2_01641",
+        "BH2_02422",
+        "BH2_00171",
+        "BH2_01108",
+        "BH2_02796",
+        "BH2_00301",
+        "BH2_01282",
+        "BH2_00874"
+      ],
+      "sample_size": 30,
+      "sample_unresolved_answers": [],
+      "scenarios": [
+        {
+          "BRIDGE": {
+            "diagnostics": [
+              {
+                "examples": [],
+                "labels": [
+                  "disease_protein"
+                ],
+                "mismatch_row_ids": []
+              }
+            ],
+            "matches": 30,
+            "score": 1.0,
+            "sets": [
+              [
+                "disease_protein"
+              ]
+            ],
+            "status": "SELECTED"
+          },
+          "R1": [
+            "drug_protein"
+          ],
+          "UNION": {
+            "diagnostics": [
+              {
+                "examples": [],
+                "labels": [
+                  "disease_protein"
+                ],
+                "mismatch_row_ids": []
+              }
+            ],
+            "matches": 30,
+            "score": 1.0,
+            "sets": [
+              [
+                "disease_protein"
+              ]
+            ],
+            "status": "SELECTED"
+          },
+          "construction": "BRIDGE",
+          "why": "both reach 90%; BRIDGE tie rule"
+        }
+      ],
+      "skipped_unresolved": []
+    },
+    "effect/phenotype:disease:drug": {
+      "R1": [
+        "disease_phenotype_positive"
+      ],
+      "R2": [
+        "indication"
+      ],
+      "ambiguity_tag": "BOTH_AMBIGUOUS",
+      "candidates": {
+        "hop1": {
+          "disease_phenotype_negative": [
+            "phenotype absent"
+          ],
+          "disease_phenotype_positive": [
+            "phenotype present"
+          ]
+        },
+        "hop2": {
+          "contraindication": [
+            "contraindication"
+          ],
+          "indication": [
+            "indication"
+          ],
+          "off-label use": [
+            "off-label use"
+          ]
+        }
+      },
+      "construction": "BRIDGE",
+      "d1_status": "PASS",
+      "fail_reasons": [],
+      "hop1": {
+        "diagnostics": [
+          {
+            "labels": [
+              "disease_phenotype_positive"
+            ],
+            "mismatch_row_ids": []
+          }
+        ],
+        "matches": 30,
+        "score": 1.0,
+        "sets": [
+          [
+            "disease_phenotype_positive"
+          ]
+        ],
+        "status": "SELECTED"
+      },
+      "hop2_score": 0.9333333333333333,
+      "needs_decision": false,
+      "rows_in_dataset": 546,
+      "sample_row_ids": [
+        "BH2_06004",
+        "BH2_05647",
+        "BH2_06016",
+        "BH2_05643",
+        "BH2_05590",
+        "BH2_05793",
+        "BH2_05634",
+        "BH2_06068",
+        "BH2_06060",
+        "BH2_05911",
+        "BH2_05686",
+        "BH2_05995",
+        "BH2_05843",
+        "BH2_05751",
+        "BH2_05858",
+        "BH2_05949",
+        "BH2_05964",
+        "BH2_05760",
+        "BH2_05746",
+        "BH2_05767",
+        "BH2_06090",
+        "BH2_05954",
+        "BH2_05598",
+        "BH2_05914",
+        "BH2_06086",
+        "BH2_05799",
+        "BH2_05727",
+        "BH2_05633",
+        "BH2_06015",
+        "BH2_06082"
+      ],
+      "sample_size": 30,
+      "sample_unresolved_answers": [],
+      "scenarios": [
+        {
+          "BRIDGE": {
+            "diagnostics": [
+              {
+                "examples": [
+                  {
+                    "bridge_id": "32524",
+                    "extra_ids": [],
+                    "gold_count": 2,
+                    "missing_ids": [
+                      "17112"
+                    ],
+                    "query_id": "23979",
+                    "reached_count": 1,
+                    "row_id": "BH2_05949",
+                    "unresolved_answers": []
+                  },
+                  {
+                    "bridge_id": "31298",
+                    "extra_ids": [],
+                    "gold_count": 2,
+                    "missing_ids": [
+                      "20274"
+                    ],
+                    "query_id": "94369",
+                    "reached_count": 1,
+                    "row_id": "BH2_06015",
+                    "unresolved_answers": []
+                  }
+                ],
+                "labels": [
+                  "indication"
+                ],
+                "mismatch_row_ids": [
+                  "BH2_05949",
+                  "BH2_06015"
+                ]
+              }
+            ],
+            "matches": 28,
+            "score": 0.9333333333333333,
+            "sets": [
+              [
+                "indication"
+              ]
+            ],
+            "status": "SELECTED"
+          },
+          "R1": [
+            "disease_phenotype_positive"
+          ],
+          "UNION": {
+            "diagnostics": [
+              {
+                "examples": [
+                  {
+                    "bridge_id": "27656",
+                    "extra_ids": [
+                      "14557",
+                      "14594",
+                      "14595",
+                      "14619",
+                      "14621",
+                      "14622",
+                      "15975",
+                      "15979",
+                      "16179",
+                      "16634",
+                      "16671",
+                      "18411",
+                      "18413",
+                      "20646"
+                    ],
+                    "gold_count": 1,
+                    "missing_ids": [],
+                    "query_id": "89391",
+                    "reached_count": 15,
+                    "row_id": "BH2_05686",
+                    "unresolved_answers": []
+                  },
+                  {
+                    "bridge_id": "27527",
+                    "extra_ids": [
+                      "14699",
+                      "15799",
+                      "17141"
+                    ],
+                    "gold_count": 1,
+                    "missing_ids": [],
+                    "query_id": "88994",
+                    "reached_count": 4,
+                    "row_id": "BH2_05843",
+                    "unresolved_answers": []
+                  }
+                ],
+                "labels": [
+                  "indication"
+                ],
+                "mismatch_row_ids": [
+                  "BH2_05686",
+                  "BH2_05843",
+                  "BH2_05964",
+                  "BH2_05760"
+                ]
+              }
+            ],
+            "matches": 26,
+            "score": 0.8666666666666667,
+            "sets": [
+              [
+                "indication"
+              ]
+            ],
+            "status": "SELECTED"
+          },
+          "construction": "BRIDGE",
+          "why": "only BRIDGE reaches 90%"
+        }
+      ],
+      "skipped_unresolved": []
+    },
+    "effect/phenotype:drug:disease": {
+      "R1": [
+        "drug_effect"
+      ],
+      "R2": null,
+      "ambiguity_tag": null,
+      "candidates": {
+        "hop1": {
+          "drug_effect": [
+            "side effect"
+          ]
+        },
+        "hop2": {
+          "contraindication": [
+            "contraindication"
+          ],
+          "indication": [
+            "indication"
+          ],
+          "off-label use": [
+            "off-label use"
+          ]
+        }
+      },
+      "construction": null,
+      "d1_status": "FAIL",
+      "fail_reasons": [
+        "hop-2 score below 90% under both constructions"
+      ],
+      "hop1": {
+        "diagnostics": [
+          {
+            "labels": [
+              "drug_effect"
+            ],
+            "mismatch_row_ids": []
+          }
+        ],
+        "matches": 30,
+        "score": 1.0,
+        "sets": [
+          [
+            "drug_effect"
+          ]
+        ],
+        "status": "SELECTED"
+      },
+      "hop2_score": null,
+      "needs_decision": false,
+      "rows_in_dataset": 215,
+      "sample_row_ids": [
+        "BH2_04902",
+        "BH2_05081",
+        "BH2_04881",
+        "BH2_04907",
+        "BH2_04897",
+        "BH2_04927",
+        "BH2_04943",
+        "BH2_04884",
+        "BH2_05054",
+        "BH2_05002",
+        "BH2_04941",
+        "BH2_04952",
+        "BH2_04984",
+        "BH2_04887",
+        "BH2_05038",
+        "BH2_05086",
+        "BH2_05039",
+        "BH2_04932",
+        "BH2_04982",
+        "BH2_05011",
+        "BH2_05017",
+        "BH2_05045",
+        "BH2_04931",
+        "BH2_05027",
+        "BH2_04933",
+        "BH2_05053",
+        "BH2_04885",
+        "BH2_04993",
+        "BH2_04889",
+        "BH2_04968"
+      ],
+      "sample_size": 30,
+      "sample_unresolved_answers": [],
+      "scenarios": [
+        {
+          "BRIDGE": {
+            "diagnostics": [
+              {
+                "examples": [
+                  {
+                    "bridge_id": "15490",
+                    "extra_ids": [],
+                    "gold_count": 4,
+                    "missing_ids": [
+                      "28017",
+                      "37768"
+                    ],
+                    "query_id": "25487",
+                    "reached_count": 2,
+                    "row_id": "BH2_05081",
+                    "unresolved_answers": []
+                  },
+                  {
+                    "bridge_id": "15073",
+                    "extra_ids": [],
+                    "gold_count": 9,
+                    "missing_ids": [
+                      "28313",
+                      "31912",
+                      "37717",
+                      "38242",
+                      "83763",
+                      "84310"
+                    ],
+                    "query_id": "84710",
+                    "reached_count": 3,
+                    "row_id": "BH2_04897",
+                    "unresolved_answers": []
+                  }
+                ],
+                "labels": [
+                  "indication"
+                ],
+                "mismatch_row_ids": [
+                  "BH2_05081",
+                  "BH2_04897",
+                  "BH2_05027",
+                  "BH2_04933"
+                ]
+              }
+            ],
+            "matches": 26,
+            "score": 0.8666666666666667,
+            "sets": [
+              [
+                "indication"
+              ]
+            ],
+            "status": "SELECTED"
+          },
+          "R1": [
+            "drug_effect"
+          ],
+          "UNION": {
+            "diagnostics": [
+              {
+                "examples": [
+                  {
+                    "bridge_id": "15859",
+                    "extra_ids": [
+                      "28764",
+                      "28849",
+                      "29078",
+                      "29945",
+                      "31380",
+                      "31850",
+                      "35916",
+                      "36000",
+                      "36223",
+                      "36581",
+                      "36644",
+                      "36881",
+                      "37144",
+                      "37273",
+                      "38031",
+                      "39470",
+                      "39880",
+                      "83755",
+                      "83756",
+                      "83757",
+                      "83758",
+                      "83825",
+                      "83899",
+                      "83938"
+                    ],
+                    "gold_count": 2,
+                    "missing_ids": [],
+                    "query_id": "22699",
+                    "reached_count": 26,
+                    "row_id": "BH2_04907",
+                    "unresolved_answers": []
+                  },
+                  {
+                    "bridge_id": "14881",
+                    "extra_ids": [
+                      "28313",
+                      "38242",
+                      "83763"
+                    ],
+                    "gold_count": 12,
+                    "missing_ids": [],
+                    "query_id": "22784",
+                    "reached_count": 15,
+                    "row_id": "BH2_04943",
+                    "unresolved_answers": []
+                  }
+                ],
+                "labels": [
+                  "indication"
+                ],
+                "mismatch_row_ids": [
+                  "BH2_04907",
+                  "BH2_04943",
+                  "BH2_05002",
+                  "BH2_04952",
+                  "BH2_04887",
+                  "BH2_05038",
+                  "BH2_05039",
+                  "BH2_04932",
+                  "BH2_05017",
+                  "BH2_05027"
+                ]
+              }
+            ],
+            "matches": 20,
+            "score": 0.6666666666666666,
+            "sets": [
+              [
+                "indication"
+              ]
+            ],
+            "status": "SELECTED"
+          },
+          "construction": null,
+          "why": "neither construction reaches 90%"
+        }
+      ],
+      "skipped_unresolved": []
+    },
+    "gene/protein:disease:drug": {
+      "R1": [
+        "disease_protein"
+      ],
+      "R2": [
+        "indication"
+      ],
+      "ambiguity_tag": "R2_AMBIGUOUS",
+      "candidates": {
+        "hop1": {
+          "disease_protein": [
+            "associated with"
+          ]
+        },
+        "hop2": {
+          "contraindication": [
+            "contraindication"
+          ],
+          "indication": [
+            "indication"
+          ],
+          "off-label use": [
+            "off-label use"
+          ]
+        }
+      },
+      "construction": "BRIDGE",
+      "d1_status": "PASS",
+      "fail_reasons": [],
+      "hop1": {
+        "diagnostics": [
+          {
+            "labels": [
+              "disease_protein"
+            ],
+            "mismatch_row_ids": []
+          }
+        ],
+        "matches": 30,
+        "score": 1.0,
+        "sets": [
+          [
+            "disease_protein"
+          ]
+        ],
+        "status": "SELECTED"
+      },
+      "hop2_score": 1.0,
+      "needs_decision": false,
+      "rows_in_dataset": 577,
+      "sample_row_ids": [
+        "BH2_03434",
+        "BH2_03185",
+        "BH2_03356",
+        "BH2_03148",
+        "BH2_03131",
+        "BH2_03329",
+        "BH2_03229",
+        "BH2_03469",
+        "BH2_03582",
+        "BH2_03124",
+        "BH2_03076",
+        "BH2_03443",
+        "BH2_03045",
+        "BH2_03239",
+        "BH2_03360",
+        "BH2_03211",
+        "BH2_03120",
+        "BH2_03418",
+        "BH2_03384",
+        "BH2_03218",
+        "BH2_03388",
+        "BH2_03449",
+        "BH2_03052",
+        "BH2_03426",
+        "BH2_03082",
+        "BH2_03034",
+        "BH2_03137",
+        "BH2_03583",
+        "BH2_03307",
+        "BH2_03379"
+      ],
+      "sample_size": 30,
+      "sample_unresolved_answers": [],
+      "scenarios": [
+        {
+          "BRIDGE": {
+            "diagnostics": [
+              {
+                "examples": [],
+                "labels": [
+                  "indication"
+                ],
+                "mismatch_row_ids": []
+              }
+            ],
+            "matches": 30,
+            "score": 1.0,
+            "sets": [
+              [
+                "indication"
+              ]
+            ],
+            "status": "SELECTED"
+          },
+          "R1": [
+            "disease_protein"
+          ],
+          "UNION": {
+            "diagnostics": [
+              {
+                "examples": [],
+                "labels": [
+                  "indication"
+                ],
+                "mismatch_row_ids": []
+              }
+            ],
+            "matches": 30,
+            "score": 1.0,
+            "sets": [
+              [
+                "indication"
+              ]
+            ],
+            "status": "SELECTED"
+          },
+          "construction": "BRIDGE",
+          "why": "both reach 90%; BRIDGE tie rule"
+        }
+      ],
+      "skipped_unresolved": []
+    },
+    "gene/protein:drug:disease": {
+      "R1": [
+        "drug_protein"
+      ],
+      "R2": [
+        "indication"
+      ],
+      "ambiguity_tag": "R2_AMBIGUOUS",
+      "candidates": {
+        "hop1": {
+          "drug_protein": [
+            "carrier",
+            "enzyme",
+            "target",
+            "transporter"
+          ]
+        },
+        "hop2": {
+          "contraindication": [
+            "contraindication"
+          ],
+          "indication": [
+            "indication"
+          ],
+          "off-label use": [
+            "off-label use"
+          ]
+        }
+      },
+      "construction": "BRIDGE",
+      "d1_status": "PASS",
+      "fail_reasons": [],
+      "hop1": {
+        "diagnostics": [
+          {
+            "labels": [
+              "drug_protein"
+            ],
+            "mismatch_row_ids": []
+          }
+        ],
+        "matches": 30,
+        "score": 1.0,
+        "sets": [
+          [
+            "drug_protein"
+          ]
+        ],
+        "status": "SELECTED"
+      },
+      "hop2_score": 1.0,
+      "needs_decision": false,
+      "rows_in_dataset": 462,
+      "sample_row_ids": [
+        "BH2_05366",
+        "BH2_05331",
+        "BH2_05290",
+        "BH2_05209",
+        "BH2_05493",
+        "BH2_05243",
+        "BH2_05265",
+        "BH2_05289",
+        "BH2_05162",
+        "BH2_05350",
+        "BH2_05205",
+        "BH2_05150",
+        "BH2_05320",
+        "BH2_05449",
+        "BH2_05491",
+        "BH2_05284",
+        "BH2_05347",
+        "BH2_05530",
+        "BH2_05279",
+        "BH2_05245",
+        "BH2_05539",
+        "BH2_05195",
+        "BH2_05189",
+        "BH2_05403",
+        "BH2_05255",
+        "BH2_05146",
+        "BH2_05336",
+        "BH2_05396",
+        "BH2_05213",
+        "BH2_05431"
+      ],
+      "sample_size": 30,
+      "sample_unresolved_answers": [],
+      "scenarios": [
+        {
+          "BRIDGE": {
+            "diagnostics": [
+              {
+                "examples": [],
+                "labels": [
+                  "indication"
+                ],
+                "mismatch_row_ids": []
+              }
+            ],
+            "matches": 30,
+            "score": 1.0,
+            "sets": [
+              [
+                "indication"
+              ]
+            ],
+            "status": "SELECTED"
+          },
+          "R1": [
+            "drug_protein"
+          ],
+          "UNION": {
+            "diagnostics": [
+              {
+                "examples": [],
+                "labels": [
+                  "indication"
+                ],
+                "mismatch_row_ids": []
+              }
+            ],
+            "matches": 30,
+            "score": 1.0,
+            "sets": [
+              [
+                "indication"
+              ]
+            ],
+            "status": "SELECTED"
+          },
+          "construction": "BRIDGE",
+          "why": "both reach 90%; BRIDGE tie rule"
+        }
+      ],
+      "skipped_unresolved": []
+    }
+  },
+  "provenance": {
+    "biohopr_revision": "08f06692c3900347e7405ba55ff6a6d330f55ddb",
+    "elapsed_seconds": 12.34,
+    "git_commit": "2f2caf18c15f969cda196bcaad32ea0401d24c51",
+    "kg_fingerprint": "bc5d3fd2f12aeb29398fe4684c83d8c65c7bd5c1edf704573322295bdc6b2e95",
+    "protocol_version": "1.3.3",
+    "run_time_utc": "2026-10-13T01:48:56+00:00",
+    "sha256": {
+      "configs/frozen_hashes.yaml": "6d88c898cd0a8207aae366ec940824cd6828f2fce41d04d6abba2f62b69d83fe",
+      "data/raw/biohopr/BioHopR.json": "1adda2f23d305c394537e7b56d3e972b2d8f4141ae716ede54e0d08876eb527d",
+      "docs/decision_rules.md": "c007b1afb96c2b1967fc3ba5964d0dcfdf0197ba0039d71a46c46febbe222175",
+      "docs/frozen_pilot_protocol.md": "a73346aa75bea142e426687af3b109d50c66703a61e2189a9b22f01ddd297582",
+      "results/semantics/field_roles_summary.json": "6c8e9400db47b9175c76b99588285ddc04a66fc7b6a6b08aaa83c3458fe7605f",
+      "scripts/06_relation_mapping.py": "6eaf9706921445fb74cbf899a6f305e6b1f81da29754a7cc7bd2b45a614bd3b8",
+      "src/cofail_kg/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "src/cofail_kg/agents/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "src/cofail_kg/analysis/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "src/cofail_kg/data/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "src/cofail_kg/data/biohopr_loader.py": "0ab1de558c393c1b5a68c3fba7c3e2b688c72b00f300951fe3b4826a92f41a2a",
+      "src/cofail_kg/data/diagnostics.py": "9c0ca21667702af80892daadf78991a13415f5efcef1b5af73bdcb8eff3d33e3",
+      "src/cofail_kg/data/field_roles.py": "2058c020f46649d2e009c1849fb5f59ace3ba787a7102efb3d859b69dc7818ee",
+      "src/cofail_kg/evaluation/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "src/cofail_kg/evaluation/normalize.py": "9f5dd89b93f9a89c2406fa47e2f9b0151e47307bd02d0cbb8b20b95b02e7c4e8",
+      "src/cofail_kg/evaluation/relation_mapping.py": "86130fd0e2ad4cdc0b0081a288c3e8711d85d57c3da36ae10cd62822699aa198",
+      "src/cofail_kg/kg/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "src/cofail_kg/kg/prepare.py": "0852293aee83bd7878417f33b71628ba8c10f1568065c2b77b510802f80d1eb1",
+      "src/cofail_kg/kg/primekg_index.py": "3d1545d07ba5553c75568b548ad0730b018b2e8fe0e436b205a08a5adbbb61a2",
+      "src/cofail_kg/utils/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "src/cofail_kg/utils/frozen_hashes.py": "c6f03344020be7fb85a62af5adc0dcb16807a89b574378bc0d3afe23d0ee75bf"
+    }
+  }
+}
