@@ -1,6 +1,22 @@
 # Progress — CoFail-KG
 
 ## Current stage
+S8 completed (2026-10-15, commit "S8: query validation"): §7.1 query validation for all 7,377 queries.
+7,362/7,377 CONSISTENT (BRIDGE 6,413/6,428, UNION 949/949); 692 CONSISTENT MULTI_BRIDGE.
+15 INCONSISTENT, all GOLD_MISSING_FROM_KG (12 effect/phenotype:disease:drug MULTI_BRIDGE rows
+with union-style gold, 3 gene/protein:drug:disease rows with the "acute lymphoblastic leukemia"
+name collision). 186 LEAKY_QUESTION (all CONSISTENT; all within the query entity's own name).
+Saturation max 0.0515. 270 queries
+contain an S6 validation row (30 per type). LEAKY_QUESTION interpretation decided by the
+researcher on 2026-10-15 and recorded in the decision log (with a correction entry for the data
+seen before deciding). 166 tests pass (31 new).
+Outputs: results/diagnostics/query_validation*; details: docs/S8_implementation.md.
+LEAKY_QUESTION note: all 186 flagged queries (2.5%) are flagged because a gold name appears inside
+the query entity's own name: an answer name in 120 (e.g. "Japanese spotted fever" / "Fever") and
+a bridge name in 66 (e.g. drug "CCR5 mAb" / bridge "CCR5"). No question names a bridge or answer
+outside the query entity's name. Rule kept as decided; no change.
+S9 has not started.
+
 S7 completed (2026-10-13): 7,377 queries from the 7,377 rows of the nine D1 PASS types.
 S6 mapping and ambiguity tags were frozen in ab67cf1; D1 remains PROCEED (9/12 types,
 96.65% dataset-row coverage). All three failed types remain excluded, covering 256 rows;

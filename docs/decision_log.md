@@ -497,3 +497,24 @@ Only the three part-2 artifacts and this required decision-log entry changed. Pr
 decision rules and historical first-prompt reports were not edited. Their pre-freeze status
 statements describe earlier snapshots; this entry and relation_mapping.json record the
 current freeze. No S7 work was started.
+
+## 2026-10-15 — S8 — LEAKY_QUESTION interpretation of §7.1
+Decision: A query is LEAKY_QUESTION if its question text contains the BioHopR string or the
+PrimeKG name of any gold bridge or gold answer, with the at-least-4-characters limit applied to
+both bridges and answers. Matching is case-insensitive whole-word or whole-phrase matching on
+§12-normalized text (lower-case, NFKC, collapse and trim whitespace) for both name and question
+text, with length measured after normalization and Unicode \w boundaries (the match is not
+preceded or followed by a word character).
+Why: The §7.1 wording does not say whether the 4-character limit applies to bridge names, nor
+whether "name" means the BioHopR string or the resolved PrimeKG node name.
+Data seen before deciding: none; decided during S8 planning, before any S8 output was computed.
+Changes to protocol or decision rules: none (interpretation of existing §7.1 wording).
+
+## 2026-10-15 — S8 — Correction: data seen before the LEAKY_QUESTION interpretation
+Decision: The "Data seen before deciding" line of the entry "2026-10-15 — S8 — LEAKY_QUESTION
+interpretation of §7.1" should read: the S2 diagnostic count of 76 rows (bridge appears as a
+whole word ≥4 chars), shown in the planning question; no S8 output.
+Why: The planning question that asked for the interpretation quoted this S2 count; the earlier
+entry recorded "none".
+Data seen before deciding: the S8 audit, which identified the omission.
+Changes to protocol or decision rules: none.
