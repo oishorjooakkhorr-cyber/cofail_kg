@@ -5,8 +5,10 @@ the visualization library loads from unpkg.com, so viewing requires internet acc
 `graph.json` also supports Graphify's local query and path commands.
 
 This is a navigation aid for project code and documentation, not the biomedical PrimeKG.
-Historical reports remain in the graph. For the current S7 implementation and verification,
-consult `docs/S7_implementation.md` and `docs/progress.md`. The accepted S6 mapping is in
+Historical reports remain in the graph. For completion through S10 and its evidence,
+consult `docs/S8_implementation.md`, `docs/S9_implementation.md`, `docs/S10_implementation.md`
+and `docs/progress.md`. Primary-population and sampling reports are included in the graph.
+S11 is deferred; its draft implementation was removed. The accepted S6 mapping is in
 `results/semantics/relation_mapping.json`, with its freeze recorded in `docs/decision_log.md`.
 
 ## Rebuild from a checkout
@@ -22,8 +24,9 @@ graphify cluster-only . --no-label
 ```
 
 The first command refreshes code symbols locally. The second regenerates documentation
-sections and explicit links from README, CLAUDE.md, docs, results/diagnostics and
-results/semantics, retaining the code graph. The last regenerates communities, the report
+sections and explicit links from README, CLAUDE.md, docs, results/diagnostics,
+results/semantics and the Markdown reports in data/processed and data/processed/manifests,
+retaining the code graph. The last regenerates communities, the report
 and HTML. These commands do not require an LLM API key or send the corpus to an LLM.
 Community names remain generic `Community N` labels.
 

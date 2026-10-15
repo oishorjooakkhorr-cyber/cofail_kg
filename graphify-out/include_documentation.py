@@ -26,6 +26,8 @@ original_edges = list(graph['links'])
 nodes, edges = {}, {}
 documents = (['README.md', 'CLAUDE.md']
              + sorted(p.relative_to(ROOT).as_posix() for p in (ROOT/'docs').glob('*.md'))
+             + sorted(p.relative_to(ROOT).as_posix() for p in (ROOT/'data/processed').glob('*.md'))
+             + sorted(p.relative_to(ROOT).as_posix() for p in (ROOT/'data/processed/manifests').glob('*.md'))
              + sorted(p.relative_to(ROOT).as_posix() for p in (ROOT/'results/diagnostics').rglob('*.md'))
              + sorted(p.relative_to(ROOT).as_posix() for p in (ROOT/'results/semantics').rglob('*.md')))
 def slug(s):
