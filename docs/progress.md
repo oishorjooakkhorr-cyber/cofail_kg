@@ -1,6 +1,10 @@
 # Progress — CoFail-KG
 
 ## Current stage
+S12 completed (2026-10-15): trace, trace graph, primary/simple paths and write-once episode
+records (`src/cofail_kg/agents/trace.py`); §14.2 tie-break per protocol v1.3.4. Suite: 249 passed
+(21 new). No model run. Next: S13, when requested by the researcher.
+
 S11 completed (2026-10-15); researcher approved wording B and authorized the commit.
 T1 schema source SHA256 is frozen under `tools`. The two tools use
 the S4 index with configured pagination/budgets, exact errors and full call logs.
@@ -8,6 +12,7 @@ Suite: 228 passed (43 new). Real screening entity MYO-029: 329 unique `drug_drug
 neighbors across seven pages, every item matching the inspection CLI. Details and
 approved wording: `docs/S11_implementation.md`; evidence: `results/diagnostics/s11_tools.json`.
 No model run. Next: S12, when requested by the researcher.
+S12 subsequently completed as recorded above.
 
 S10 completed (2026-10-15): seed 42; screening 20 (5 single/15 multi), smoke 4 (1/3),
 pilot 100 (25/75 default confirmed), expansion reserve 400 (100/300). No shortfalls;
@@ -235,3 +240,9 @@ when requested by the researcher. No experimental agents have been run.
 Before S17, check
 the runbook's older gold-bridge-only comparison wording against protocol §7.1/§13, which
 already uses the construction reference G_q. Historical pre-freeze S6 reports remain intact.
+S12 completed (2026-10-15): trace, trace graph, paths and write-once episode records in
+  src/cofail_kg/agents/trace.py; 249 tests pass (21 new). §14.2 tie-break pairs are
+  (source node, label) per edge (protocol v1.3.4, decision log 2026-10-15). Researcher confirmed
+  x = s: the length-0 path is the only simple path (coded WRONG_HOP_COUNT under §14.2).
+  No experimental agents have been run. Next action: S13 when requested by the researcher.
+Note for S14: on resume, count only final …__a<attempt>.json records and ignore leftover .tmp files.

@@ -1,6 +1,6 @@
 # CoFail-KG — Frozen Pilot Protocol
 
-**Version:** 1.3.3 (2026-10-13) · **Owner:** the researcher · **Implemented by:** Claude Code (read-only for Claude)
+**Version:** 1.3.4 (2026-10-15) · **Owner:** the researcher · **Implemented by:** Claude Code (read-only for Claude)
 **What changed since v1.0:** see `docs/CHANGES.md` (one page).
 
 This file is the single source of truth for every scientific rule in the project. Claude Code
@@ -597,6 +597,7 @@ accepted labels. (A SUPPORTED path's bridge is never a dead end, since it reache
 **Primary path:** among all directed paths from `s` to `x` in `TG_i`, the first by this total order:
 (1) fewer edges; (2) smaller largest creation index among its edges; (3) lexicographically smaller
 sequence of (numeric node ID, label) pairs along the path.
+Each edge u –r→ v contributes the pair (numeric ID of u, r), so the comparison runs s, r1, n1, r2, … (decision log 2026-10-15).
 
 **Codes**, assigned for the primary path and separately as the union over all simple paths of
 length ≤ 3:

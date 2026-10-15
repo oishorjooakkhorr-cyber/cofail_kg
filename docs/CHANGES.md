@@ -71,3 +71,10 @@ disease node then matches. It applies to the reference policy and, for Type_T = 
 agent policy before its any-type fallback. It fixes 152 BioHopR answer names (115 rows) that drop
 PrimeKG's " (disease)" suffix. Trimming, thresholds and decision rules are unchanged. Decision log:
 "S5 — Disease-suffix name fallback (§12, protocol v1.3.3)".
+
+## Amendment 2026-10-15 (S12) — primary-path tie-break pairing (protocol v1.3.4)
+
+Protocol version 1.3.3 → **1.3.4 (2026-10-15)**. §14.2 tie-break (3) now states that
+each edge u –r→ v contributes the pair (numeric u, r), so paths are compared in the
+order s, r1, n1, r2, …. Only paths of ≥ 3 edges can be affected (secondary path-level
+metrics). Decision log: "S12 — §14.2 tie-break pairing (protocol v1.3.4)".

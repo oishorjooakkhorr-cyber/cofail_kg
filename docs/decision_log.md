@@ -645,3 +645,14 @@ hash; kg_env.py is unchanged from that verified run.
 Final suite: 228 passed (43 S11 tests), including a new check that source bytes match
 the frozen identity. Exact option-B wording was checked before freezing. Protocol
 and decision rules are unchanged. S11 is complete; no model ran and S12 has not started.
+
+## 2026-10-15 — S12 — §14.2 tie-break pairing (protocol v1.3.4)
+
+§14.2 tie-break (3) compares a sequence of (numeric node ID, label) pairs, but a path
+has one more node than labels, so the pairing was not fixed. Researcher decision: each
+edge u –r→ v contributes (numeric u, r), the protocol's (u, r) step unit, so a path is
+compared in the order s, r1, n1, r2, …. For paths of ≤ 2 edges this gives the same
+result as (target node, label), because a creation-index tie needs a shared call. The
+readings can differ only for paths of ≥ 3 edges, which affect only the secondary
+path-level metrics. Decided before any agent run; no data seen.
+Changes to protocol: one clarifying line in §14.2; header 1.3.3 → 1.3.4.
