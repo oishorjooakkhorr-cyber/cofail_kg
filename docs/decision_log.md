@@ -541,3 +541,32 @@ Full suite: 170 passed (12 new part-2 tests). Independent CSV readback verified 
 membership against S8 predicates, uniqueness, per-type and multiplicity counts, checksum,
 and Gate D2. Source/input hashes and the pre-run decision-log hash are recorded in the
 summary. Historical S8 and S9 part-1 outputs are preserved unchanged.
+
+## 2026-10-15 — S10 — Confirm pilot default and freeze sampling artifacts
+
+Researcher authorization: "okay carry on the work of s10". Retained and confirmed
+the existing protocol §8 DEFAULT: pilot 100 queries, 25 SINGLE_BRIDGE / 75 MULTI_BRIDGE,
+seed 42. No quota, allocation, threshold or mapping rule was changed.
+
+Applied the frozen query-sampling algorithm to the 7,176-query primary population in
+screening → smoke → pilot → expansion order. Results: screening 20 (5 single/15 multi),
+smoke 4 (1/3), pilot 100 (25/75), expansion reserve 400 (100/300). No shortfalls.
+All 524 queries are distinct; all six pairwise intersections are empty. Pilot and
+expansion each contain all nine D1 PASS types. Type floors are applied separately
+within each multiplicity group; only two types have multi-bridge population queries.
+
+Created four evaluator manifests and four agent-input sheets. Agent lines contain
+exactly query_id, question_text, start_name and start_id, with canonical starting names
+from PrimeKG. No evaluator fields are present in agent sheets. Added SHA256 values for
+all eight JSONL artifacts under the write-once manifests key in frozen_hashes.yaml;
+existing BioHopR revision, KG fingerprint and mapping values are preserved.
+Filled configs/pilot.yaml; sampling report and source/input provenance are saved under
+data/processed/manifests/. Details: docs/S10_implementation.md.
+
+Verification: 183 tests passed (13 new). Two actual script runs produced byte-identical
+artifacts, config, report, provenance and frozen-hash file. Independent Fraction-based
+apportionment and SHA256 ordering reproduced every sampled ID; readback verified all
+field sets, question/start identity, pairwise disjointness and eight frozen hashes.
+Inspected the first ten pilot questions; no edits were made to sampled question texts.
+Protocol, decision rules, primary population and earlier results are unchanged.
+S10 is complete; S11 has not started.

@@ -1,0 +1,157 @@
+{
+  "base_frozen_inputs": {
+    "biohopr_revision": "08f06692c3900347e7405ba55ff6a6d330f55ddb",
+    "kg_fingerprint": "bc5d3fd2f12aeb29398fe4684c83d8c65c7bd5c1edf704573322295bdc6b2e95",
+    "relation_mapping": "2d609332b6a4ff48423bd7b2f1cb98d8d2d9cafc2fe80c20f7cee8184b8bb8c0"
+  },
+  "frozen_manifests": {
+    "data/agent_inputs/expansion.jsonl": "290f4323fa80005a6ffc24c3077dd793566d82d4f3995dc26a39961f7306bc4b",
+    "data/agent_inputs/pilot.jsonl": "4c6190d844e8d3a2f14173db9fffa4fd9dd456e5e4cc3b487ea8c4a2ff982361",
+    "data/agent_inputs/screening.jsonl": "4624021f742d1f7a8ece8ef8545033b5481c1de7ec62fba554f952d74f04ba27",
+    "data/agent_inputs/smoke.jsonl": "08610aa6e3331b331ffd78213fab4e88bfda93a15bebe417a113bb3b009df68e",
+    "data/processed/manifests/expansion.jsonl": "2cfc09e132e77f5a4c9eeb3b4957692051f7c9fc32cc97ecd0cd37de0e602689",
+    "data/processed/manifests/pilot.jsonl": "102a1cb1133ae7ea3bf36972965101c3842b26b231739363b53e7250714a28d4",
+    "data/processed/manifests/screening.jsonl": "58421a410eb32413b7af7dfa157ef4a430b5ccf7e087dc1f8d60d597730c12b9",
+    "data/processed/manifests/smoke.jsonl": "f6295231dbbe9822ccb0254e0b0bdfac35f4be993abe0283eb3db124eb0d27a9"
+  },
+  "git_commit": "a80cea144d381aa74a7205f4d2e5c98be5407832",
+  "input_queries": 7176,
+  "seed": 42,
+  "sets": {
+    "expansion": {
+      "by_multiplicity": {
+        "MULTI_BRIDGE": 300,
+        "SINGLE_BRIDGE": 100
+      },
+      "per_type_floor": 1,
+      "requested_quotas": {
+        "MULTI_BRIDGE": 300,
+        "SINGLE_BRIDGE": 100
+      },
+      "sampled": 400,
+      "shortfall": 0,
+      "strata": {
+        "MULTI_BRIDGE": {
+          "disease:drug:effect/phenotype": 264,
+          "effect/phenotype:disease:drug": 36
+        },
+        "SINGLE_BRIDGE": {
+          "disease:drug:effect/phenotype": 5,
+          "disease:drug:gene/protein": 6,
+          "disease:gene/protein:drug": 13,
+          "drug:disease:effect/phenotype": 4,
+          "drug:disease:gene/protein": 6,
+          "drug:gene/protein:disease": 43,
+          "effect/phenotype:disease:drug": 7,
+          "gene/protein:disease:drug": 9,
+          "gene/protein:drug:disease": 7
+        }
+      },
+      "target_size": 400
+    },
+    "pilot": {
+      "by_multiplicity": {
+        "MULTI_BRIDGE": 75,
+        "SINGLE_BRIDGE": 25
+      },
+      "per_type_floor": 1,
+      "requested_quotas": {
+        "MULTI_BRIDGE": 75,
+        "SINGLE_BRIDGE": 25
+      },
+      "sampled": 100,
+      "shortfall": 0,
+      "strata": {
+        "MULTI_BRIDGE": {
+          "disease:drug:effect/phenotype": 65,
+          "effect/phenotype:disease:drug": 10
+        },
+        "SINGLE_BRIDGE": {
+          "disease:drug:effect/phenotype": 2,
+          "disease:drug:gene/protein": 2,
+          "disease:gene/protein:drug": 3,
+          "drug:disease:effect/phenotype": 2,
+          "drug:disease:gene/protein": 2,
+          "drug:gene/protein:disease": 8,
+          "effect/phenotype:disease:drug": 2,
+          "gene/protein:disease:drug": 2,
+          "gene/protein:drug:disease": 2
+        }
+      },
+      "target_size": 100
+    },
+    "screening": {
+      "by_multiplicity": {
+        "MULTI_BRIDGE": 15,
+        "SINGLE_BRIDGE": 5
+      },
+      "per_type_floor": 0,
+      "requested_quotas": {
+        "MULTI_BRIDGE": 15,
+        "SINGLE_BRIDGE": 5
+      },
+      "sampled": 20,
+      "shortfall": 0,
+      "strata": {
+        "MULTI_BRIDGE": {
+          "disease:drug:effect/phenotype": 13,
+          "effect/phenotype:disease:drug": 2
+        },
+        "SINGLE_BRIDGE": {
+          "disease:drug:effect/phenotype": 0,
+          "disease:drug:gene/protein": 0,
+          "disease:gene/protein:drug": 1,
+          "drug:disease:effect/phenotype": 0,
+          "drug:disease:gene/protein": 0,
+          "drug:gene/protein:disease": 2,
+          "effect/phenotype:disease:drug": 0,
+          "gene/protein:disease:drug": 1,
+          "gene/protein:drug:disease": 1
+        }
+      },
+      "target_size": 20
+    },
+    "smoke": {
+      "by_multiplicity": {
+        "MULTI_BRIDGE": 3,
+        "SINGLE_BRIDGE": 1
+      },
+      "per_type_floor": 0,
+      "requested_quotas": {
+        "MULTI_BRIDGE": 3,
+        "SINGLE_BRIDGE": 1
+      },
+      "sampled": 4,
+      "shortfall": 0,
+      "strata": {
+        "MULTI_BRIDGE": {
+          "disease:drug:effect/phenotype": 3,
+          "effect/phenotype:disease:drug": 0
+        },
+        "SINGLE_BRIDGE": {
+          "disease:drug:effect/phenotype": 0,
+          "disease:drug:gene/protein": 0,
+          "disease:gene/protein:drug": 0,
+          "drug:disease:effect/phenotype": 0,
+          "drug:disease:gene/protein": 0,
+          "drug:gene/protein:disease": 1,
+          "effect/phenotype:disease:drug": 0,
+          "gene/protein:disease:drug": 0,
+          "gene/protein:drug:disease": 0
+        }
+      },
+      "target_size": 4
+    }
+  },
+  "sha256": {
+    "data/cache/primekg_nodes.parquet": "ec43d05e4dd0570d73772a0289166360d90f3e1c79225f4ec840a5fd644dbb17",
+    "data/processed/primary_population.csv": "24a876a1bcca9e4e4fc5d273460212b47e38d95b0949c1770096fb46b79b41b8",
+    "data/processed/primary_population_summary.json": "e8053027a3c8bc77d36fd8801700260e8225b80f4c33a197e38d74f07fb1be1e",
+    "data/processed/reference_queries.parquet": "7d3be769ac5abfa99e3da94a03a70b2ada03c3b8ca5a21a2b61184cc33e0ad07",
+    "docs/decision_rules.md": "c007b1afb96c2b1967fc3ba5964d0dcfdf0197ba0039d71a46c46febbe222175",
+    "docs/frozen_pilot_protocol.md": "70a8c4d3fff0f2296e97a500a9e8953ee7fea9aa258e5a9ec3a0c225eb71c4e4",
+    "scripts/10_make_samples.py": "01814efe32aa9e1ede44b555f75072b72fcd8423557b088482b0fa7c8c2b0465",
+    "src/cofail_kg/data/sampling.py": "49ac93b4eb97905b13792a8eec650bef88c89d80c0c0eb7cce650c695adab5e4",
+    "src/cofail_kg/utils/frozen_hashes.py": "c6f03344020be7fb85a62af5adc0dcb16807a89b574378bc0d3afe23d0ee75bf"
+  }
+}

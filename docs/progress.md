@@ -1,6 +1,38 @@
 # Progress — CoFail-KG
 
 ## Current stage
+S10 completed (2026-10-15): seed 42; screening 20 (5 single/15 multi), smoke 4 (1/3),
+pilot 100 (25/75 default confirmed), expansion reserve 400 (100/300). No shortfalls;
+524 unique queries and all six pairwise overlaps zero. Pilot/expansion represent all
+nine passing types. Four evaluator manifests and four agent-input sheets created;
+all eight SHA256s frozen under `manifests`, configs/pilot.yaml filled. Second script
+run is byte-identical; independent allocation/identity/hash checks pass. Suite: 183 passed.
+Report: `data/processed/manifests/sampling_report.md`; details: `docs/S10_implementation.md`.
+Next: S11 (KG tools); await researcher request.
+
+S9 completed (2026-10-15): researcher selected θ = 0.50, frozen in protocol §7.2 and
+recorded before computation. Primary population N_P = 7,176 (6,575 SINGLE_BRIDGE,
+601 MULTI_BRIDGE); K = 9 types with ≥20 queries; Gate D2 GREEN. Excluded 15
+INCONSISTENT and 186 LEAKY_QUESTION queries, no overlap; zero saturation exclusions.
+Outputs: `data/processed/primary_population.csv`, `primary_population_summary.json`,
+`primary_population_report.md`. Full suite: 170 passed. Details: `docs/S9_implementation.md`.
+S10 subsequently completed as recorded above.
+
+S9 part 1 completed (2026-10-15): all nine D1 PASS types CONFIRMED on queries outside
+the S6 validation sample (lowest consistency 506/516 = 98.0620%). No mapping decision
+required. Saturation maximum 5.1527%; zero exclusions at θ = 0.30, 0.50, 0.70, 0.90.
+Evidence: `results/diagnostics/s9_decision_evidence/decision_evidence.md` (plus CSV/JSON tables).
+Full suite: 158 passed. Details: `docs/S9_part1_implementation.md`.
+Researcher subsequently chose θ = 0.50; part 2 completed as recorded above.
+
+S8 outputs generated and verified locally (2026-10-15): 7,377 queries, 7,362 CONSISTENT,
+15 INCONSISTENT (all primary GOLD_MISSING_FROM_KG; 3 also EXTRA_TARGETS), 186 leakage
+flags, and 270 queries overlapping S6 validation. Full suite: 152 passed (17 new S8 tests).
+Evidence: `results/diagnostics/query_validation.csv` and `query_validation_summary.json`;
+ten graph spot-checks: `results/diagnostics/s8_verification.json`. See `docs/S8_implementation.md`.
+S9 is complete as recorded above; θ = 0.50 and the primary population are now fixed.
+The S7 details below describe the preceding verified checkpoint.
+
 S7 completed (2026-10-13): 7,377 queries from the 7,377 rows of the nine D1 PASS types.
 S6 mapping and ambiguity tags were frozen in ab67cf1; D1 remains PROCEED (9/12 types,
 96.65% dataset-row coverage). All three failed types remain excluded, covering 256 rows;
@@ -10,9 +42,14 @@ names, 57 disease-suffix resolution occurrences, and 481,617 query/bridge/target
 All 7,377 query sets were independently checked against the cached edge tables; required
 inspection CLI checks pass. Full suite: 135 passed (16 new S7 tests). Details and engineering
 choices: `docs/S7_implementation.md`.
-S8 has not started; no query inclusion or new research decision was made at S7.
+No query inclusion or new research decision was made at S7.
 
 ## Completed stages
+S10 — completed 2026-10-15: four disjoint sets, default pilot 25/75 confirmed;
+  manifests/sheets frozen, all requested sizes met. See docs/S10_implementation.md.
+S9 — completed 2026-10-15: θ = 0.50, N_P = 7,176, K = 9, Gate D2 GREEN.
+S8 — Query validation completed and outputs verified locally 2026-10-15; 7,362/7,377
+  CONSISTENT, 15 INCONSISTENT, 186 leakage flags. See docs/S8_implementation.md.
 S0
 S1
 S2 — BioHopR loader. 18/18 tests pass (incl. real-file test); audit found no science/gate problems.
@@ -120,7 +157,7 @@ d09c66b (preparation).
 - Troglitazone side-effect count (S4 check, paper says 202): 17 direct neighbours, confirmed
   by the new index and independent raw CSV scan. The prior findings explain the 202 as two-hop.
 - D1 outcome (S6 first prompt): PROCEED, 9 PASS / 3 FAIL; 96.65% row coverage. Not frozen.
-- N_P and D2 outcome (S9):
+- N_P and D2 outcome (S9): 7,176; K = 9; GREEN; θ = 0.50 (2026-10-15).
 - Max prompt tokens in screening (S20):
 - Frozen models and digests (S21):
 - Pilot commit hash (S26):
@@ -161,7 +198,7 @@ raw-input/cache validation, frozen metadata SHA256 comparison, and the 17-neighb
 Answer construction resolved (option C, 2026-10-12); S5 subsequently completed on 2026-10-13.
 DONE (2026-10-13, 4d18892): runbook S6/S7 aligned with protocol §5.3 (BRIDGE and UNION scored,
 construction adopted per type, BRIDGE if both pass, G_q at S7, results split by construction).
-BEFORE S8/S17: update the remaining T_q^{B*} wording in runbook S8 and S17.
+S8 uses protocol G_q correctly; before S17, check any remaining gold-bridge-only wording.
 Field-role support defined in protocol §3.1 (v1.3.1, 2026-10-13); runbook S5 step 3 matches.
 DECIDED (v1.3.2, 2026-10-13): global-stop policy if drug:effect/phenotype:disease (5 rows, no
 disjoint preview evidence) fails S5 — a single failing type is excluded (FAIL in Gate D1); S5
@@ -185,6 +222,8 @@ resolve; the S5 outcome is unchanged.
 DONE (2026-10-13, 4d18892): §12 suffix retry implemented in src/cofail_kg/evaluation/normalize.py
 (reference policy), 7 unit tests; all 152 previously unresolved answer names now resolve.
 S6 mapping and hash were frozen with researcher authorization in ab67cf1 (decision log).
-S7 is complete; await the researcher's request for S8. Before implementing S8/S17, resolve
+S10 completed and verified locally (2026-10-15). Next action: S11 KG tools when requested
+by the researcher. No experimental agents have been run.
+Before S17, check
 the runbook's older gold-bridge-only comparison wording against protocol §7.1/§13, which
 already uses the construction reference G_q. Historical pre-freeze S6 reports remain intact.

@@ -1,1 +1,34 @@
-# filled in at a later stage — see docs/pipeline_runbook.md
+seed: 42
+sets:
+  screening:
+    target_size: 20
+    size: 20
+    single: 5
+    multi: 15
+    per_type_floor: 0
+    manifest: data/processed/manifests/screening.jsonl
+    agent_inputs: data/agent_inputs/screening.jsonl
+  smoke:
+    target_size: 4
+    size: 4
+    single: 1
+    multi: 3
+    per_type_floor: 0
+    manifest: data/processed/manifests/smoke.jsonl
+    agent_inputs: data/agent_inputs/smoke.jsonl
+  pilot:
+    target_size: 100
+    size: 100
+    single: 25
+    multi: 75
+    per_type_floor: 1
+    manifest: data/processed/manifests/pilot.jsonl
+    agent_inputs: data/agent_inputs/pilot.jsonl
+  expansion:
+    target_size: 400
+    size: 400
+    single: 100
+    multi: 300
+    per_type_floor: 1
+    manifest: data/processed/manifests/expansion.jsonl
+    agent_inputs: data/agent_inputs/expansion.jsonl
