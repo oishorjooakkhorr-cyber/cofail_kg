@@ -1,9 +1,18 @@
 # Progress — CoFail-KG
 
 ## Current stage
+S13 completed (2026-10-15): local Ollama HTTP client, explicit generation options,
+identity, error classification, bounded logged connection retries and diagnostic script.
+Suite: 294 passed (45 new). Real installed qwen3:4b (Q4_K_M, 4.0B) returned `Hello!`
+and native `add(a=2,b=3)`; full digest stable before/after. Counts: 16/209 plain,
+146/295 tool (prompt/generated); latency 46.914/3.111 s. Details:
+`docs/S13_implementation.md`; evidence: `results/diagnostics/s13_ollama.json`.
+Only synthetic model calls; no biomedical episode or Gate D3 choice.
+Next: S14, when requested by the researcher.
+
 S12 completed (2026-10-15): trace, trace graph, primary/simple paths and write-once episode
 records (`src/cofail_kg/agents/trace.py`); §14.2 tie-break per protocol v1.3.4. Suite: 249 passed
-(21 new). No model run. Next: S13, when requested by the researcher.
+(21 new). No model run. S13 subsequently completed as recorded above.
 
 S11 completed (2026-10-15); researcher approved wording B and authorized the commit.
 T1 schema source SHA256 is frozen under `tools`. The two tools use

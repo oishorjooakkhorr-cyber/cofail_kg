@@ -656,3 +656,28 @@ result as (target node, label), because a creation-index tie needs a shared call
 readings can differ only for paths of ≥ 3 edges, which affect only the secondary
 path-level metrics. Decided before any agent run; no data seen.
 Changes to protocol: one clarifying line in §14.2; header 1.3.3 → 1.3.4.
+
+## 2026-10-15 — S13 — Ollama client and synthetic software check
+
+Researcher requested: "Run the prompt of s13". Implemented only the S13 client,
+HTTP timeout config, mocked tests and two-call diagnostic per the runbook and
+protocol §9.1, §9.5, §19. No scientific decision was needed or made.
+
+Used the existing installed qwen3:4b, 4.0B, Q4_K_M; native tools advertised by
+the local server. Full digest before/after both calls:
+359d7dd4bcdab3d86b87d73ac27966f4dbb9f5efdfcc75d34a8764a09474fae7.
+Plain reply: Hello! (16 prompt/209 generated tokens, 46.914 s). Native dummy
+tool call: add(a=2,b=3) (146/295 tokens, 3.111 s). Both sent temperature 0,
+seed 42, num_ctx 8192, num_predict 4096. Complete requests/raw responses:
+results/diagnostics/s13_ollama.json. No biomedical inputs or evaluation data used.
+
+Engineering choices (including exact OOM phrases, 120-second HTTP timeout,
+CONNECTION classification for transport timeouts without retry, and fixed two
+connection-only retries) are documented in docs/S13_implementation.md. They do
+not choose S21 final settings. Episode TIMEOUT precedence remains the S14 runner's
+responsibility. Gate D3 remains unassessed; configs/models.yaml remains unfilled.
+
+Tests: 294 passed (45 new). Full suite run outside sandbox after four existing
+S12 hard-link tests hit sandbox permissions; tests/code were not weakened.
+Protocol, decision rules, earlier data/artifacts and frozen hashes unchanged.
+S13 complete; S14 not started.
