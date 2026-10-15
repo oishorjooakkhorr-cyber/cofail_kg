@@ -607,3 +607,41 @@ upstream interpretation requires; recalculation reproduced all saved leakage/sta
 S9 evidence/population and all eight frozen S10 sample hashes remain unchanged.
 This is an implementation/history reconciliation, not a new scientific choice.
 Details: docs/S8_reconciliation.md; machine comparison: checkpoint/comparison.json.
+
+## 2026-10-15 — S11 implementation — T1 approval pending
+
+Researcher requested S11 implementation and questions where their decisions are
+needed. Implemented only the agent-facing KG environment and proposed T1 schemas,
+using protocol §3.2, §9.1 and §10. Configuration remains explicit; screening values
+50/30 were used for verification, without selecting final S21 values.
+
+Verification: 227 tests passed (42 new); fresh-process isolation checks reject
+evaluation imports and processed/results file reads. Real screening query BH2_02033
+(MYO-029, ID 19601) returned 329 unique drug_drug neighbors across seven pages;
+every item matched the existing researcher inspection CLI. Full call log and source
+hashes: results/diagnostics/s11_tools.json. An intentional in-memory pagination
+mutation was detected by the test; disk source was unchanged.
+
+T1 descriptions and all engineering choices are recorded in docs/S11_implementation.md.
+Approval is explicitly pending, not inferred from the request to implement. No
+`tools` entry was added to frozen_hashes.yaml. Protocol, decision rules, prior frozen
+hashes and earlier artifacts remain unchanged. No experimental models ran; S12
+has not started. Finalize S11 after researcher approval of the concrete wording.
+
+## 2026-10-15 — S11 complete — T1 wording B approved and frozen
+
+After reviewing alternatives A/B/C and their neutrality, the researcher instructed:
+"okay lock B, and commit". Applied option B exactly to both tool descriptions;
+parameter descriptions are unchanged. The wording describes ordering, result
+fields and pagination without directing relation, node-type or answer selection.
+The approved text is reproduced in docs/S11_implementation.md.
+
+Used the existing write_once helper to add the SHA256 of tool_schemas.py as `tools`:
+fe95093be50073aca922360645240d4410737fb39f11061aa1f5f2df0a8b0bab.
+All earlier frozen values are preserved. Repeating the same freeze changes no bytes.
+The original real-graph evidence remains unchanged with its historical draft-schema
+hash; kg_env.py is unchanged from that verified run.
+
+Final suite: 228 passed (43 S11 tests), including a new check that source bytes match
+the frozen identity. Exact option-B wording was checked before freezing. Protocol
+and decision rules are unchanged. S11 is complete; no model ran and S12 has not started.

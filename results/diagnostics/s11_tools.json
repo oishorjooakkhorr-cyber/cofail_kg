@@ -1,0 +1,2880 @@
+{
+  "call_log": [
+    {
+      "arguments": {
+        "entity_id": "19601"
+      },
+      "elapsed_seconds": 0.013615899999422254,
+      "result": {
+        "id": "19601",
+        "name": "MYO-029",
+        "relations": [
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "label": "drug_drug",
+            "neighbor_count": 329,
+            "neighbor_types": [
+              "drug"
+            ]
+          },
+          {
+            "display_labels": [
+              "target"
+            ],
+            "label": "drug_protein",
+            "neighbor_count": 1,
+            "neighbor_types": [
+              "gene/protein"
+            ]
+          }
+        ],
+        "type": "drug"
+      },
+      "success": true,
+      "timestamp": "2026-10-15T01:29:36.181662+00:00",
+      "tool": "inspect_entity"
+    },
+    {
+      "arguments": {
+        "entity_id": "19601",
+        "neighbor_type": null,
+        "page": 1,
+        "relation": "drug_drug"
+      },
+      "elapsed_seconds": 0.26881589999902644,
+      "result": {
+        "has_more": true,
+        "items": [
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "14058",
+            "name": "Diethylstilbestrol",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "14147",
+            "name": "Conjugated estrogens",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "14211",
+            "name": "Estrone",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "14235",
+            "name": "Estradiol",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "14270",
+            "name": "Ethinylestradiol",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "14363",
+            "name": "Estrone sulfate",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "14479",
+            "name": "Estradiol acetate",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "14480",
+            "name": "Estradiol benzoate",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "14481",
+            "name": "Estradiol cypionate",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "14483",
+            "name": "Estradiol valerate",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "14517",
+            "name": "Synthetic Conjugated Estrogens, A",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "14518",
+            "name": "Synthetic Conjugated Estrogens, B",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "14519",
+            "name": "Esterified estrogens",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "14624",
+            "name": "Tibolone",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "14700",
+            "name": "Tildrakizumab",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "14746",
+            "name": "Trastuzumab deruxtecan",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "14814",
+            "name": "Chlorotrianisene",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "15008",
+            "name": "Trastuzumab emtansine",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "15507",
+            "name": "Mestranol",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "15563",
+            "name": "Tocilizumab",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "15564",
+            "name": "AVE9633",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "15565",
+            "name": "Coltuximab ravtansine",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "15594",
+            "name": "Brentuximab vedotin",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "15612",
+            "name": "Siltuximab",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "15662",
+            "name": "Sarilumab",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "15676",
+            "name": "Lorvotuzumab mertansine",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "15681",
+            "name": "Polatuzumab vedotin",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "15689",
+            "name": "Mirvetuximab Soravtansine",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "15863",
+            "name": "Sacituzumab govitecan",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "15887",
+            "name": "Certolizumab pegol",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "15901",
+            "name": "Evolocumab",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "15971",
+            "name": "Omalizumab",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "15973",
+            "name": "TNX-901",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "15976",
+            "name": "TB-402",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "16022",
+            "name": "IMC-1C11",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "16226",
+            "name": "Rituximab",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "16227",
+            "name": "Ibritumomab tiuxetan",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "16228",
+            "name": "Tositumomab",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "16229",
+            "name": "Ofatumumab",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "16230",
+            "name": "Obinutuzumab",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "16232",
+            "name": "Ocrelizumab",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "16285",
+            "name": "Alemtuzumab",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "16329",
+            "name": "Technetium Tc-99m arcitumomab",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "16363",
+            "name": "Dienestrol",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "16375",
+            "name": "Estriol",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "16376",
+            "name": "Quinestrol",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "16397",
+            "name": "Hexestrol",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "16410",
+            "name": "Polyestradiol phosphate",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "16414",
+            "name": "Zeranol",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "16480",
+            "name": "Depatuxizumab mafodotin",
+            "type": "drug"
+          }
+        ],
+        "page": 1,
+        "page_size": 50,
+        "total_count": 329
+      },
+      "success": true,
+      "timestamp": "2026-10-15T01:29:36.195431+00:00",
+      "tool": "get_neighbors"
+    },
+    {
+      "arguments": {
+        "entity_id": "19601",
+        "neighbor_type": null,
+        "page": 2,
+        "relation": "drug_drug"
+      },
+      "elapsed_seconds": 0.22573190000002796,
+      "result": {
+        "has_more": true,
+        "items": [
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "16510",
+            "name": "Bevacizumab",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "16511",
+            "name": "Ranibizumab",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "16519",
+            "name": "Brolucizumab",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "16557",
+            "name": "Epratuzumab",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "16558",
+            "name": "Inotuzumab ozogamicin",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "16671",
+            "name": "Emicizumab",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "16823",
+            "name": "Muromonab",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "16824",
+            "name": "Catumaxomab",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "17042",
+            "name": "Ramucirumab",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "17225",
+            "name": "Abciximab",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "17351",
+            "name": "Trastuzumab",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "17352",
+            "name": "IGN311",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "17355",
+            "name": "Pertuzumab",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "17358",
+            "name": "Margetuximab",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "17359",
+            "name": "Efalizumab",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "17360",
+            "name": "Antithymocyte immunoglobulin (rabbit)",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "17403",
+            "name": "Capromab pendetide",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "17417",
+            "name": "Natalizumab",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "17422",
+            "name": "Vedolizumab",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "17534",
+            "name": "Basiliximab",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "17535",
+            "name": "Daclizumab",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "17545",
+            "name": "Gemtuzumab ozogamicin",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "17552",
+            "name": "Equol",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "17584",
+            "name": "Adalimumab",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "17585",
+            "name": "Infliximab",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "17586",
+            "name": "Afelimomab",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "17601",
+            "name": "Golimumab",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "17605",
+            "name": "Cetuximab",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "17606",
+            "name": "Human immunoglobulin G",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "17607",
+            "name": "Palivizumab",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "17613",
+            "name": "Siplizumab",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "17711",
+            "name": "Panitumumab",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "17712",
+            "name": "Matuzumab",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "17718",
+            "name": "Necitumumab",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "17719",
+            "name": "Zalutumumab",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "17885",
+            "name": "Galiximab",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "17893",
+            "name": "Olaratumab",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "17945",
+            "name": "Eculizumab",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "17946",
+            "name": "Ravulizumab",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "17950",
+            "name": "Dulaglutide",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "17955",
+            "name": "Teprotumumab",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "17958",
+            "name": "Cixutumumab",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "17991",
+            "name": "Ipilimumab",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "17992",
+            "name": "Tremelimumab",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "18040",
+            "name": "Leronlimab",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "18042",
+            "name": "Ibalizumab",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "18128",
+            "name": "Eldelumab",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "18159",
+            "name": "Fontolizumab",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "18160",
+            "name": "Emapalumab",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "18229",
+            "name": "Briakinumab",
+            "type": "drug"
+          }
+        ],
+        "page": 2,
+        "page_size": 50,
+        "total_count": 329
+      },
+      "success": true,
+      "timestamp": "2026-10-15T01:29:36.464310+00:00",
+      "tool": "get_neighbors"
+    },
+    {
+      "arguments": {
+        "entity_id": "19601",
+        "neighbor_type": null,
+        "page": 3,
+        "relation": "drug_drug"
+      },
+      "elapsed_seconds": 0.2203215999998065,
+      "result": {
+        "has_more": true,
+        "items": [
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "18230",
+            "name": "Ustekinumab",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "18283",
+            "name": "Belimumab",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "18391",
+            "name": "Girentuximab",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "18410",
+            "name": "Caplacizumab",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "18416",
+            "name": "Canakinumab",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "18418",
+            "name": "Gevokizumab",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "18592",
+            "name": "RI 624",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "18613",
+            "name": "Bivatuzumab",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "18770",
+            "name": "Lucatumumab",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "18771",
+            "name": "Dacetuzumab",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "18798",
+            "name": "Reslizumab",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "18799",
+            "name": "Mepolizumab",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "19177",
+            "name": "Benralizumab",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "19286",
+            "name": "Eptinezumab",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "19287",
+            "name": "Fremanezumab",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "19288",
+            "name": "Galcanezumab",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "19330",
+            "name": "Dupilumab",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "19348",
+            "name": "Lebrikizumab",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "19349",
+            "name": "Oregovomab",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "19351",
+            "name": "Lanadelumab",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "19548",
+            "name": "Plozalizumab",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "19560",
+            "name": "PRO-542",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "19564",
+            "name": "Farletuzumab",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "19569",
+            "name": "CR002",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "19571",
+            "name": "Guselkumab",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "19599",
+            "name": "Lexatumumab",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "19602",
+            "name": "CT-011",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "19603",
+            "name": "Nivolumab",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "19604",
+            "name": "Pembrolizumab",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "19605",
+            "name": "Cemiplimab",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "19606",
+            "name": "Camrelizumab",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "19614",
+            "name": "Atezolizumab",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "19615",
+            "name": "Durvalumab",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "19616",
+            "name": "Avelumab",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "19618",
+            "name": "Sifalimumab",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "19620",
+            "name": "Blinatumomab",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "19621",
+            "name": "Amatuximab",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "19623",
+            "name": "Urelumab",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "19624",
+            "name": "Lumiliximab",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "19630",
+            "name": "Sotatercept",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "19631",
+            "name": "Glembatumumab vedotin",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "19633",
+            "name": "XmAb 2513",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "19638",
+            "name": "Clenoliximab",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "19641",
+            "name": "Elotuzumab",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "19643",
+            "name": "Carotuximab",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "19645",
+            "name": "Inebilizumab",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "19648",
+            "name": "Tafasitamab",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "19660",
+            "name": "Sibrotuzumab",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "19671",
+            "name": "Denosumab",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "19997",
+            "name": "Labetuzumab",
+            "type": "drug"
+          }
+        ],
+        "page": 3,
+        "page_size": 50,
+        "total_count": 329
+      },
+      "success": true,
+      "timestamp": "2026-10-15T01:29:36.690108+00:00",
+      "tool": "get_neighbors"
+    },
+    {
+      "arguments": {
+        "entity_id": "19601",
+        "neighbor_type": null,
+        "page": 4,
+        "relation": "drug_drug"
+      },
+      "elapsed_seconds": 0.21222119999947608,
+      "result": {
+        "has_more": true,
+        "items": [
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "20158",
+            "name": "Daratumumab",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "20159",
+            "name": "Isatuximab",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "20160",
+            "name": "Secukinumab",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "20161",
+            "name": "Ixekizumab",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "20162",
+            "name": "Alirocumab",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "20164",
+            "name": "Asfotase alfa",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "20166",
+            "name": "Risankizumab",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "20176",
+            "name": "Erenumab",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "20189",
+            "name": "Romosozumab",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "20194",
+            "name": "Mogamulizumab",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "20441",
+            "name": "Brodalumab",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "20536",
+            "name": "Raxibacumab",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "20537",
+            "name": "Obiltoxaximab",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "20580",
+            "name": "Bezlotoxumab",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "20586",
+            "name": "Dinutuximab",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "20631",
+            "name": "Burosumab",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "20642",
+            "name": "Luspatercept",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "20646",
+            "name": "Eftrenonacog alfa",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "20720",
+            "name": "Methallenestril",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "20737",
+            "name": "Epimestrol",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "20740",
+            "name": "Moxestrol",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "20783",
+            "name": "Biochanin A",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "20784",
+            "name": "Formononetin",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "20811",
+            "name": "Idarucizumab",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "20870",
+            "name": "Anthrax immune globulin human",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "20871",
+            "name": "Antilymphocyte immunoglobulin (horse)",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "20904",
+            "name": "Sirukumab",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "20954",
+            "name": "Rozanolixizumab",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "20955",
+            "name": "Bleselumab",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "20960",
+            "name": "Ebola Zaire vaccine (live, attenuated)",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "21037",
+            "name": "Indium In-111 satumomab pendetide",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "21038",
+            "name": "Digoxin Immune Fab (Ovine)",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "21040",
+            "name": "Pexelizumab",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "21041",
+            "name": "Bectumomab",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "21042",
+            "name": "Adecatumumab",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "21043",
+            "name": "Bavituximab",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "21044",
+            "name": "Rozrolimupab",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "21045",
+            "name": "XTL-001",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "21046",
+            "name": "NAV 1800",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "21047",
+            "name": "Otelixizumab",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "21048",
+            "name": "AMG 108",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "21049",
+            "name": "Iratumumab",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "21050",
+            "name": "Enokizumab",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "21051",
+            "name": "Veltuzumab",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "21052",
+            "name": "IPH 2101",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "21053",
+            "name": "Nimotuzumab",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "21054",
+            "name": "BIIB015",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "21055",
+            "name": "Sonepcizumab",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "21056",
+            "name": "Motavizumab",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "21058",
+            "name": "Apolizumab",
+            "type": "drug"
+          }
+        ],
+        "page": 4,
+        "page_size": 50,
+        "total_count": 329
+      },
+      "success": true,
+      "timestamp": "2026-10-15T01:29:36.910476+00:00",
+      "tool": "get_neighbors"
+    },
+    {
+      "arguments": {
+        "entity_id": "19601",
+        "neighbor_type": null,
+        "page": 5,
+        "relation": "drug_drug"
+      },
+      "elapsed_seconds": 0.23822149999978137,
+      "result": {
+        "has_more": true,
+        "items": [
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "21059",
+            "name": "Lerdelimumab",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "21060",
+            "name": "Teplizumab",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "21061",
+            "name": "Volociximab",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "21062",
+            "name": "Tetanus Immune Globulin",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "21063",
+            "name": "Human Varicella-Zoster Immune Globulin",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "21064",
+            "name": "Conatumumab",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "21065",
+            "name": "Tabalumab",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "21066",
+            "name": "Ficlatuzumab",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "21067",
+            "name": "Figitumumab",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "21068",
+            "name": "Bapineuzumab",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "21070",
+            "name": "Onartuzumab",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "21071",
+            "name": "Solanezumab",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "21072",
+            "name": "Lampalizumab",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "21073",
+            "name": "Dalotuzumab",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "21074",
+            "name": "Emibetuzumab",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "21075",
+            "name": "Ublituximab",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "21076",
+            "name": "Ligelizumab",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "21077",
+            "name": "Seribantumab",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "21078",
+            "name": "Landogrozumab",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "21079",
+            "name": "Vadastuximab Talirine",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "21080",
+            "name": "Varlilumab",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "21081",
+            "name": "Crenezumab",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "21082",
+            "name": "Rilotumumab",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "21083",
+            "name": "Anifrolumab",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "21084",
+            "name": "Gantenerumab",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "21085",
+            "name": "Visilizumab",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "21087",
+            "name": "Patritumab",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "21088",
+            "name": "Fulranumab",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "21089",
+            "name": "Tarextumab",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "21090",
+            "name": "Duligotuzumab",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "21091",
+            "name": "Simtuzumab",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "21092",
+            "name": "Fasinumab",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "21093",
+            "name": "Tralokinumab",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "21094",
+            "name": "Etrolizumab",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "21095",
+            "name": "Ganitumab",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "21096",
+            "name": "Etaracizumab",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "21097",
+            "name": "Inclacumab",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "21098",
+            "name": "Ascrinvacumab",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "21099",
+            "name": "Aducanumab",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "21100",
+            "name": "GS-5745",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "21101",
+            "name": "Vanucizumab",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "21102",
+            "name": "Labetuzumab govitecan",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "21103",
+            "name": "Tanezumab",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "21104",
+            "name": "Ensituximab",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "21105",
+            "name": "Fezakinumab",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "21106",
+            "name": "Dusigitumab",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "21107",
+            "name": "Fresolimumab",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "21108",
+            "name": "Indusatumab vedotin",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "21109",
+            "name": "Bococizumab",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "21110",
+            "name": "Promestriene",
+            "type": "drug"
+          }
+        ],
+        "page": 5,
+        "page_size": 50,
+        "total_count": 329
+      },
+      "success": true,
+      "timestamp": "2026-10-15T01:29:37.122751+00:00",
+      "tool": "get_neighbors"
+    },
+    {
+      "arguments": {
+        "entity_id": "19601",
+        "neighbor_type": null,
+        "page": 6,
+        "relation": "drug_drug"
+      },
+      "elapsed_seconds": 0.26218510000035167,
+      "result": {
+        "has_more": true,
+        "items": [
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "21111",
+            "name": "Mavrilimumab",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "21112",
+            "name": "Blosozumab",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "21113",
+            "name": "Bimagrumab",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "21114",
+            "name": "Tovetumab",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "21115",
+            "name": "Lumretuzumab",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "21116",
+            "name": "Intetumumab",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "21117",
+            "name": "Carlumab",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "21118",
+            "name": "Demcizumab",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "21119",
+            "name": "Abituzumab",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "21120",
+            "name": "Ecromeximab",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "21121",
+            "name": "Naptumomab Estafenatox",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "21122",
+            "name": "Crotedumab",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "21123",
+            "name": "Concizumab",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "21124",
+            "name": "Depatuxizumab",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "21125",
+            "name": "Rontalizumab",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "21126",
+            "name": "Clazakizumab",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "21127",
+            "name": "Ozanezumab",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "21128",
+            "name": "Bimekizumab",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "21129",
+            "name": "Milatuzumab",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "21130",
+            "name": "Robatumumab",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "21131",
+            "name": "Rovalpituzumab Tesirine",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "21132",
+            "name": "Namilumab",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "21133",
+            "name": "Racotumomab",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "21134",
+            "name": "Tregalizumab",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "21135",
+            "name": "Olokizumab",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "21137",
+            "name": "Edrecolomab",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "21141",
+            "name": "Nebacumab",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "21146",
+            "name": "Human cytomegalovirus immune globulin",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "21147",
+            "name": "Sulesomab",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "21148",
+            "name": "Besilesomab",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "21152",
+            "name": "Fanolesomab",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "21155",
+            "name": "Lecanemab",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "21156",
+            "name": "Setrusumab",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "21157",
+            "name": "Gancotamab",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "21158",
+            "name": "Anetumab ravtansine",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "21159",
+            "name": "Icrucumab",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "21160",
+            "name": "Codrituzumab",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "21161",
+            "name": "Xentuzumab",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "21162",
+            "name": "Lintuzumab",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "21163",
+            "name": "Vobarilizumab",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "21164",
+            "name": "Parsatuzumab",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "21165",
+            "name": "Emactuzumab",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "21166",
+            "name": "Bevacizumab zirconium Zr-89",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "21167",
+            "name": "Refanezumab",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "21168",
+            "name": "Bermekimab",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "21169",
+            "name": "Pamrevlumab",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "21170",
+            "name": "Opicinumab",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "21171",
+            "name": "Dalantercept",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "21172",
+            "name": "Pateclizumab",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "21173",
+            "name": "Gremubamab",
+            "type": "drug"
+          }
+        ],
+        "page": 6,
+        "page_size": 50,
+        "total_count": 329
+      },
+      "success": true,
+      "timestamp": "2026-10-15T01:29:37.361018+00:00",
+      "tool": "get_neighbors"
+    },
+    {
+      "arguments": {
+        "entity_id": "19601",
+        "neighbor_type": null,
+        "page": 7,
+        "relation": "drug_drug"
+      },
+      "elapsed_seconds": 0.26140980000127456,
+      "result": {
+        "has_more": false,
+        "items": [
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "21174",
+            "name": "Apomab",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "21175",
+            "name": "Ipafricept",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "21176",
+            "name": "Abrilumab",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "21177",
+            "name": "Frovocimab",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "21178",
+            "name": "Tezepelumab",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "21179",
+            "name": "Tigatuzumab",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "21180",
+            "name": "Telisotuzumab vedotin",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "21181",
+            "name": "Utomilumab",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "21182",
+            "name": "Zolbetuximab",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "21183",
+            "name": "Ponezumab",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "21184",
+            "name": "Asunercept",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "21185",
+            "name": "Suvratoxumab",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "21186",
+            "name": "Mitazalimab",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "21187",
+            "name": "Nemolizumab",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "21189",
+            "name": "Gedivumab",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "21190",
+            "name": "Valanafusp alfa",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "21191",
+            "name": "Sofituzumab vedotin",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "21192",
+            "name": "Evinacumab",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "21193",
+            "name": "Istiratumab",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "21194",
+            "name": "Pidilizumab",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "21195",
+            "name": "GMA-161",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "21196",
+            "name": "Ladiratuzumab vedotin",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "21197",
+            "name": "Tomaralimab",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "21198",
+            "name": "Vesencumab",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "21199",
+            "name": "Pinatuzumab vedotin",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "21200",
+            "name": "Lulizumab pegol",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "21201",
+            "name": "Lorukafusp alfa",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "21202",
+            "name": "Naratuximab emtansine",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "id": "21203",
+            "name": "Zenocutuzumab",
+            "type": "drug"
+          }
+        ],
+        "page": 7,
+        "page_size": 50,
+        "total_count": 329
+      },
+      "success": true,
+      "timestamp": "2026-10-15T01:29:37.623268+00:00",
+      "tool": "get_neighbors"
+    }
+  ],
+  "calls_used": 8,
+  "cli_match": true,
+  "first_five_ids": [
+    "14058",
+    "14147",
+    "14211",
+    "14235",
+    "14270"
+  ],
+  "inspection": {
+    "id": "19601",
+    "name": "MYO-029",
+    "relations": [
+      {
+        "display_labels": [
+          "synergistic interaction"
+        ],
+        "label": "drug_drug",
+        "neighbor_count": 329,
+        "neighbor_types": [
+          "drug"
+        ]
+      },
+      {
+        "display_labels": [
+          "target"
+        ],
+        "label": "drug_protein",
+        "neighbor_count": 1,
+        "neighbor_types": [
+          "gene/protein"
+        ]
+      }
+    ],
+    "type": "drug"
+  },
+  "kg_fingerprint": "bc5d3fd2f12aeb29398fe4684c83d8c65c7bd5c1edf704573322295bdc6b2e95",
+  "last_five_ids": [
+    "21199",
+    "21200",
+    "21201",
+    "21202",
+    "21203"
+  ],
+  "page_count": 7,
+  "page_sizes": [
+    50,
+    50,
+    50,
+    50,
+    50,
+    50,
+    29
+  ],
+  "query_id": "BH2_02033",
+  "relation": "drug_drug",
+  "source_sha256": {
+    "src/cofail_kg/agents/kg_env.py": "76d49a1e716ec145e933b6a6aaa6751f844429baf1efd9bd8a7f9fb394acc757",
+    "src/cofail_kg/agents/tool_schemas.py": "7004aa0316d4a83c413e6b32026f54c7a64b75218752b2a7dfe4d54c42ed8eda"
+  },
+  "start_id": "19601",
+  "start_name": "MYO-029",
+  "tool_config": {
+    "budget": 30,
+    "page_size": 50
+  },
+  "total_count": 329,
+  "unique_numeric_order": true
+}

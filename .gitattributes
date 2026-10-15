@@ -10,3 +10,5 @@
 # Preserve exact bytes of S10 artifacts whose SHA256 values are frozen.
 /data/processed/manifests/*.jsonl -text
 /data/agent_inputs/*.jsonl -text
+# Preserve the exact source bytes used for the S11 tool-schema identity.
+/src/cofail_kg/agents/tool_schemas.py -text

@@ -1,6 +1,14 @@
 # Progress — CoFail-KG
 
 ## Current stage
+S11 completed (2026-10-15); researcher approved wording B and authorized the commit.
+T1 schema source SHA256 is frozen under `tools`. The two tools use
+the S4 index with configured pagination/budgets, exact errors and full call logs.
+Suite: 228 passed (43 new). Real screening entity MYO-029: 329 unique `drug_drug`
+neighbors across seven pages, every item matching the inspection CLI. Details and
+approved wording: `docs/S11_implementation.md`; evidence: `results/diagnostics/s11_tools.json`.
+No model run. Next: S12, when requested by the researcher.
+
 S10 completed (2026-10-15): seed 42; screening 20 (5 single/15 multi), smoke 4 (1/3),
 pilot 100 (25/75 default confirmed), expansion reserve 400 (100/300). No shortfalls;
 524 unique queries and all six pairwise overlaps zero. Pilot/expansion represent all
@@ -8,7 +16,7 @@ nine passing types. Four evaluator manifests and four agent-input sheets created
 all eight SHA256s frozen under `manifests`, configs/pilot.yaml filled. Second script
 run is byte-identical; independent allocation/identity/hash checks pass. Suite: 183 passed.
 Report: `data/processed/manifests/sampling_report.md`; details: `docs/S10_implementation.md`.
-Next: S11 (KG tools); await researcher request.
+S11 subsequently completed with approved T1 wording B as recorded above.
 
 S9 completed (2026-10-15): researcher selected θ = 0.50, frozen in protocol §7.2 and
 recorded before computation. Primary population N_P = 7,176 (6,575 SINGLE_BRIDGE,
@@ -222,8 +230,8 @@ resolve; the S5 outcome is unchanged.
 DONE (2026-10-13, 4d18892): §12 suffix retry implemented in src/cofail_kg/evaluation/normalize.py
 (reference policy), 7 unit tests; all 152 previously unresolved answer names now resolve.
 S6 mapping and hash were frozen with researcher authorization in ab67cf1 (decision log).
-S10 completed and verified locally (2026-10-15). Next action: S11 KG tools when requested
-by the researcher. No experimental agents have been run.
+S11 completed with approved and frozen T1 wording B (2026-10-15). Next action: S12
+when requested by the researcher. No experimental agents have been run.
 Before S17, check
 the runbook's older gold-bridge-only comparison wording against protocol §7.1/§13, which
 already uses the construction reference G_q. Historical pre-freeze S6 reports remain intact.
