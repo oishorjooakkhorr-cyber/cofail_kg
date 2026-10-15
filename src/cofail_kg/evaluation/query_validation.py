@@ -3,11 +3,13 @@
 import re
 from collections import Counter
 
+from cofail_kg.kg.primekg_index import normalize_name
+
 REASONS = ("QUERY_NOT_FOUND", "QUESTION_TEXT_MISMATCH", "BRIDGE_NOT_FOUND",
            "GOLD_BRIDGE_NOT_VALID", "GOLD_UNMAPPED", "GOLD_MISSING_FROM_KG", "EXTRA_TARGETS")
 
 
-def validate_queries(queries, target_counts, sample_ids, ambiguity_tags):
+def validate_queries(queries, target_counts, sample_ids, ambiguity_tags, node_names=None):
     records = []
     for q in sorted(queries, key=lambda q: q["query_id"]):
         denominator = target_counts.get(q["Type_T"], 0)
@@ -24,9 +26,13 @@ def validate_queries(queries, target_counts, sample_ids, ambiguity_tags):
             "NA" if source_missing else bool(reference - gold))))
         reasons = [k for k in REASONS if flags[k] is True]
         names = sorted(set(q["gold_bridge_names"] + q["gold_answer_names"]))
-        leaked = [name for name in names if len(name) >= 4 and any(
-            re.search(r"(?<!\w)" + re.escape(name) + r"(?!\w)", text, re.IGNORECASE)
-            for text in q["question_texts"])]
+        if node_names is not None:
+            names = sorted(set(names) | {node_names[n] for n in set(q["gold_bridges"]) | gold})
+        # Researcher S8 interpretation: normalized raw and resolved graph names, ≥4 characters.
+        texts = [normalize_name(text) for text in q["question_texts"]]
+        leaked = [name for name in names if len(normalize_name(name)) >= 4 and any(
+            re.search(r"(?<!\w)" + re.escape(normalize_name(name)) + r"(?!\w)", text)
+            for text in texts)]
         bridges = len(q["B_q"])
         overlap = sorted(set(q["row_ids"]) & sample_ids)
         records.append({

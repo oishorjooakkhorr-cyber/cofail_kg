@@ -1,0 +1,14 @@
+{
+  "github_checkpoint": "64366538c055be2d0af906105b3da9373431440b",
+  "queries_compared": 7377,
+  "different_queries_by_s9_input_field": {
+    "status": 0,
+    "primary_reason": 0,
+    "leaky_question": 0,
+    "saturation_share": 0,
+    "contains_s6_validation_row": 0,
+    "bridge_multiplicity": 0
+  },
+  "approved_raw_and_graph_name_leakage_recalculation": "PASS: all 7377 labels unchanged",
+  "s9_and_s10_outputs_changed": false
+}

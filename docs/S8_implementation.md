@@ -1,5 +1,9 @@
 # S8 — Query validation
 
+Publishing note: a later GitHub S8 checkpoint was reconciled without changing any saved
+S9/S10 input labels or sample hashes; see `docs/S8_reconciliation.md` for the preserved
+checkpoint and the approved leakage-matching refinement.
+
 Completed locally 2026-10-15 using protocol §6, §7.1 and the frozen §12 lookup policy.
 No S9 inclusion, mapping revision, saturation threshold or Gate D2 decision was made.
 

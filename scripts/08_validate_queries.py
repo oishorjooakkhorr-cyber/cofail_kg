@@ -97,7 +97,8 @@ def main(argv=None):
     actual_rows = [row for q in queries for row in q["row_ids"]]
     if len(actual_rows) != len(set(actual_rows)) or set(actual_rows) != expected_rows:
         raise ValueError("S7 rows do not cover D1 PASS rows exactly once")
-    records = validate_queries(queries, counts, sample_ids, tags)
+    node_names = {str(n["node_index"]):n["node_name"] for n in nodes}
+    records = validate_queries(queries, counts, sample_ids, tags, node_names)
     summary = summarize(records)
     paths = ["data/processed/reference_queries.parquet", "data/processed/reference_summary.json",
              "data/cache/primekg_nodes.parquet", "results/semantics/relation_mapping_proposed.json",

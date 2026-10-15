@@ -498,6 +498,27 @@ decision rules and historical first-prompt reports were not edited. Their pre-fr
 statements describe earlier snapshots; this entry and relation_mapping.json record the
 current freeze. No S7 work was started.
 
+## 2026-10-15 — S8 — LEAKY_QUESTION interpretation of §7.1
+Decision: A query is LEAKY_QUESTION if its question text contains the BioHopR string or the
+PrimeKG name of any gold bridge or gold answer, with the at-least-4-characters limit applied to
+both bridges and answers. Matching is case-insensitive whole-word or whole-phrase matching on
+§12-normalized text (lower-case, NFKC, collapse and trim whitespace) for both name and question
+text, with length measured after normalization and Unicode \w boundaries (the match is not
+preceded or followed by a word character).
+Why: The §7.1 wording does not say whether the 4-character limit applies to bridge names, nor
+whether "name" means the BioHopR string or the resolved PrimeKG node name.
+Data seen before deciding: none; decided during S8 planning, before any S8 output was computed.
+Changes to protocol or decision rules: none (interpretation of existing §7.1 wording).
+
+## 2026-10-15 — S8 — Correction: data seen before the LEAKY_QUESTION interpretation
+Decision: The "Data seen before deciding" line of the entry "2026-10-15 — S8 — LEAKY_QUESTION
+interpretation of §7.1" should read: the S2 diagnostic count of 76 rows (bridge appears as a
+whole word ≥4 chars), shown in the planning question; no S8 output.
+Why: The planning question that asked for the interpretation quoted this S2 count; the earlier
+entry recorded "none".
+Data seen before deciding: the S8 audit, which identified the omission.
+Changes to protocol or decision rules: none.
+
 ## 2026-10-15 — S9 — Researcher freezes saturation threshold before feasibility
 
 Decision: θ = 0.50 (50%), frozen in protocol §7.2 before calculating D2 step 3.
@@ -570,3 +591,19 @@ field sets, question/start identity, pairwise disjointness and eight frozen hash
 Inspected the first ten pilot questions; no edits were made to sampled question texts.
 Protocol, decision rules, primary population and earlier results are unchanged.
 S10 is complete; S11 has not started.
+
+## 2026-10-15 — Publishing through S10 — Reconcile upstream S8 checkpoint
+
+Fetching GitHub before the authorized push found S8 commit 6436653. Its leakage
+interpretation entries are preserved above. All nine upstream files are preserved
+byte-for-byte under results/diagnostics/s8_github_checkpoint/, and the original commit
+is retained in the merge history. The active local schema is retained for compatibility
+with the completed S9/S10 pipeline; the checkpoint's tests remain in that snapshot.
+
+Compared every query on all S9 input fields: 7,377/7,377 agree on status, primary reason,
+leakage, saturation, validation-sample overlap and multiplicity. Updated active leakage
+matching to include normalized raw and resolved graph names exactly as the recorded
+upstream interpretation requires; recalculation reproduced all saved leakage/status labels.
+S9 evidence/population and all eight frozen S10 sample hashes remain unchanged.
+This is an implementation/history reconciliation, not a new scientific choice.
+Details: docs/S8_reconciliation.md; machine comparison: checkpoint/comparison.json.

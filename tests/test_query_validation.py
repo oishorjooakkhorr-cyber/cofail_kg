@@ -76,6 +76,21 @@ def test_missing_target_denominator_fails():
         validate_queries([query()], {"c": 0}, set(), {"a:b:c": "NONE"})
 
 
+def test_upstream_approved_leakage_checks_graph_names_and_normalizes_both_sides():
+    q = query()
+    q.update(question_texts=["Find ＲＥＤ   fox."], gold_bridge_names=["unrelated"],
+             gold_answer_names=["unrelated"])
+    result = validate_queries([q], {"c":10}, set(), {"a:b:c":"NONE"},
+                              {"2":"Blue fox", "10":"red fox"})[0]
+    assert result["leaky_question"] and result["leaked_names"] == ["red fox"]
+
+
+def test_leakage_minimum_length_is_measured_after_normalization():
+    q = query()
+    q.update(question_texts=["cat"], gold_bridge_names=[" cat "], gold_answer_names=[])
+    assert validate(q)["leaky_question"] is False
+
+
 def test_artifact_roundtrip_and_overwrite_protection(tmp_path):
     import csv
     import importlib.util

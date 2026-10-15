@@ -2,6 +2,7 @@
 /results/diagnostics/query_validation.csv -text
 /results/diagnostics/query_validation_summary.json -text
 /results/diagnostics/s8_verification.json -text
+/results/diagnostics/s8_github_checkpoint/** -text
 /results/diagnostics/s9_decision_evidence/*.csv -text
 /results/diagnostics/s9_decision_evidence/*.json -text
 /data/processed/primary_population.csv -text
