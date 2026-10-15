@@ -1,0 +1,11 @@
+# Preserve exact bytes of generated evidence referenced by saved SHA256 values.
+/results/diagnostics/query_validation.csv -text
+/results/diagnostics/query_validation_summary.json -text
+/results/diagnostics/s8_verification.json -text
+/results/diagnostics/s9_decision_evidence/*.csv -text
+/results/diagnostics/s9_decision_evidence/*.json -text
+/data/processed/primary_population.csv -text
+/data/processed/primary_population_summary.json -text
+# Preserve exact bytes of S10 artifacts whose SHA256 values are frozen.
+/data/processed/manifests/*.jsonl -text
+/data/agent_inputs/*.jsonl -text

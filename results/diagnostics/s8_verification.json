@@ -1,0 +1,135 @@
+{
+  "all_queries_csv_and_set_checks": "PASS (7377)",
+  "graph_spot_checks": [
+    {
+      "query_id": "BH2_05099",
+      "status": "INCONSISTENT",
+      "relation_type": "gene/protein:drug:disease",
+      "question": "Name all diseases that are treated by a drug that is associated with gene/protein ABCB8.",
+      "bridge_count": 1,
+      "gold_size": 85,
+      "reference_size": 85,
+      "missing_answers": [
+        "acute lymphoblastic leukemia"
+      ],
+      "extra_target_count": 1
+    },
+    {
+      "query_id": "BH2_05194",
+      "status": "INCONSISTENT",
+      "relation_type": "gene/protein:drug:disease",
+      "question": "Name all diseases that are treated by a drug that is associated with gene/protein DCTD.",
+      "bridge_count": 1,
+      "gold_size": 20,
+      "reference_size": 20,
+      "missing_answers": [
+        "acute lymphoblastic leukemia"
+      ],
+      "extra_target_count": 1
+    },
+    {
+      "query_id": "BH2_05353",
+      "status": "INCONSISTENT",
+      "relation_type": "gene/protein:drug:disease",
+      "question": "Name all diseases that are treated by a drug that is associated with gene/protein NOLC1.",
+      "bridge_count": 1,
+      "gold_size": 85,
+      "reference_size": 85,
+      "missing_answers": [
+        "acute lymphoblastic leukemia"
+      ],
+      "extra_target_count": 1
+    },
+    {
+      "query_id": "BH2_05629",
+      "status": "INCONSISTENT",
+      "relation_type": "effect/phenotype:disease:drug",
+      "question": "Name all drugs that can treat a disease that has phenotype Abnormality of the peripheral nervous system.",
+      "bridge_count": 2,
+      "gold_size": 11,
+      "reference_size": 2,
+      "missing_answers": [
+        "Oxytetracycline",
+        "Tetracycline",
+        "Fusidic acid",
+        "Doxycycline",
+        "Amphotericin B",
+        "Minocycline",
+        "Demeclocycline",
+        "Streptomycin",
+        "Meclocycline"
+      ],
+      "extra_target_count": 0
+    },
+    {
+      "query_id": "BH2_05652",
+      "status": "INCONSISTENT",
+      "relation_type": "effect/phenotype:disease:drug",
+      "question": "Name all drugs that can treat a disease that has phenotype Air crescent sign.",
+      "bridge_count": 2,
+      "gold_size": 5,
+      "reference_size": 2,
+      "missing_answers": [
+        "Voriconazole",
+        "Itraconazole",
+        "Posaconazole"
+      ],
+      "extra_target_count": 0
+    },
+    {
+      "query_id": "BH2_03612",
+      "status": "CONSISTENT",
+      "relation_type": "disease:drug:effect/phenotype",
+      "question": "Name all effect/phenotypes which are side effects of drug that can treat disease AIDS.",
+      "bridge_count": 23,
+      "gold_size": 347,
+      "reference_size": 347,
+      "missing_answers": [],
+      "extra_target_count": 0
+    },
+    {
+      "query_id": "BH2_03614",
+      "status": "CONSISTENT",
+      "relation_type": "disease:drug:effect/phenotype",
+      "question": "Name all effect/phenotypes which are side effects of drug that can treat disease ALK-positive large B-cell lymphoma.",
+      "bridge_count": 6,
+      "gold_size": 305,
+      "reference_size": 305,
+      "missing_answers": [],
+      "extra_target_count": 0
+    },
+    {
+      "query_id": "BH2_03615",
+      "status": "CONSISTENT",
+      "relation_type": "disease:drug:effect/phenotype",
+      "question": "Name all effect/phenotypes which are side effects of drug that can treat disease Actinomycetales infectious disease.",
+      "bridge_count": 8,
+      "gold_size": 221,
+      "reference_size": 221,
+      "missing_answers": [],
+      "extra_target_count": 0
+    },
+    {
+      "query_id": "BH2_03616",
+      "status": "CONSISTENT",
+      "relation_type": "disease:drug:effect/phenotype",
+      "question": "Name all effect/phenotypes which are side effects of drug that can treat disease Addison disease.",
+      "bridge_count": 8,
+      "gold_size": 143,
+      "reference_size": 143,
+      "missing_answers": [],
+      "extra_target_count": 0
+    },
+    {
+      "query_id": "BH2_03617",
+      "status": "CONSISTENT",
+      "relation_type": "disease:drug:effect/phenotype",
+      "question": "Name all effect/phenotypes which are side effects of drug that can treat disease Alzheimer disease without neurofibrillary tangles.",
+      "bridge_count": 3,
+      "gold_size": 246,
+      "reference_size": 246,
+      "missing_answers": [],
+      "extra_target_count": 0
+    }
+  ]
+}

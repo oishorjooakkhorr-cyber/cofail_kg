@@ -1,0 +1,516 @@
+{
+  "by_ambiguity_tag": {
+    "BOTH_AMBIGUOUS": {
+      "bridge_multiplicity": {
+        "MULTI_BRIDGE": 85,
+        "SINGLE_BRIDGE": 674
+      },
+      "leaky_questions": 31,
+      "primary_reason": {
+        "GOLD_MISSING_FROM_KG": 12,
+        "NONE": 747
+      },
+      "queries": 759,
+      "reason_codes": {
+        "BRIDGE_NOT_FOUND": 0,
+        "EXTRA_TARGETS": 0,
+        "GOLD_BRIDGE_NOT_VALID": 0,
+        "GOLD_MISSING_FROM_KG": 12,
+        "GOLD_UNMAPPED": 0,
+        "QUERY_NOT_FOUND": 0,
+        "QUESTION_TEXT_MISMATCH": 0
+      },
+      "s6_validation_queries": 60,
+      "status": {
+        "CONSISTENT": 747,
+        "INCONSISTENT": 12
+      }
+    },
+    "NONE": {
+      "bridge_multiplicity": {
+        "SINGLE_BRIDGE": 3928
+      },
+      "leaky_questions": 48,
+      "primary_reason": {
+        "NONE": 3928
+      },
+      "queries": 3928,
+      "reason_codes": {
+        "BRIDGE_NOT_FOUND": 0,
+        "EXTRA_TARGETS": 0,
+        "GOLD_BRIDGE_NOT_VALID": 0,
+        "GOLD_MISSING_FROM_KG": 0,
+        "GOLD_UNMAPPED": 0,
+        "QUERY_NOT_FOUND": 0,
+        "QUESTION_TEXT_MISMATCH": 0
+      },
+      "s6_validation_queries": 60,
+      "status": {
+        "CONSISTENT": 3928
+      }
+    },
+    "R1_AMBIGUOUS": {
+      "bridge_multiplicity": {
+        "MULTI_BRIDGE": 619,
+        "SINGLE_BRIDGE": 1032
+      },
+      "leaky_questions": 107,
+      "primary_reason": {
+        "NONE": 1651
+      },
+      "queries": 1651,
+      "reason_codes": {
+        "BRIDGE_NOT_FOUND": 0,
+        "EXTRA_TARGETS": 0,
+        "GOLD_BRIDGE_NOT_VALID": 0,
+        "GOLD_MISSING_FROM_KG": 0,
+        "GOLD_UNMAPPED": 0,
+        "QUERY_NOT_FOUND": 0,
+        "QUESTION_TEXT_MISMATCH": 0
+      },
+      "s6_validation_queries": 90,
+      "status": {
+        "CONSISTENT": 1651
+      }
+    },
+    "R2_AMBIGUOUS": {
+      "bridge_multiplicity": {
+        "SINGLE_BRIDGE": 1039
+      },
+      "leaky_questions": 0,
+      "primary_reason": {
+        "GOLD_MISSING_FROM_KG": 3,
+        "NONE": 1036
+      },
+      "queries": 1039,
+      "reason_codes": {
+        "BRIDGE_NOT_FOUND": 0,
+        "EXTRA_TARGETS": 3,
+        "GOLD_BRIDGE_NOT_VALID": 0,
+        "GOLD_MISSING_FROM_KG": 3,
+        "GOLD_UNMAPPED": 0,
+        "QUERY_NOT_FOUND": 0,
+        "QUESTION_TEXT_MISMATCH": 0
+      },
+      "s6_validation_queries": 60,
+      "status": {
+        "CONSISTENT": 1036,
+        "INCONSISTENT": 3
+      }
+    }
+  },
+  "by_bridge_multiplicity": {
+    "MULTI_BRIDGE": {
+      "bridge_multiplicity": {
+        "MULTI_BRIDGE": 704
+      },
+      "leaky_questions": 91,
+      "primary_reason": {
+        "GOLD_MISSING_FROM_KG": 12,
+        "NONE": 692
+      },
+      "queries": 704,
+      "reason_codes": {
+        "BRIDGE_NOT_FOUND": 0,
+        "EXTRA_TARGETS": 0,
+        "GOLD_BRIDGE_NOT_VALID": 0,
+        "GOLD_MISSING_FROM_KG": 12,
+        "GOLD_UNMAPPED": 0,
+        "QUERY_NOT_FOUND": 0,
+        "QUESTION_TEXT_MISMATCH": 0
+      },
+      "s6_validation_queries": 22,
+      "status": {
+        "CONSISTENT": 692,
+        "INCONSISTENT": 12
+      }
+    },
+    "SINGLE_BRIDGE": {
+      "bridge_multiplicity": {
+        "SINGLE_BRIDGE": 6673
+      },
+      "leaky_questions": 95,
+      "primary_reason": {
+        "GOLD_MISSING_FROM_KG": 3,
+        "NONE": 6670
+      },
+      "queries": 6673,
+      "reason_codes": {
+        "BRIDGE_NOT_FOUND": 0,
+        "EXTRA_TARGETS": 3,
+        "GOLD_BRIDGE_NOT_VALID": 0,
+        "GOLD_MISSING_FROM_KG": 3,
+        "GOLD_UNMAPPED": 0,
+        "QUERY_NOT_FOUND": 0,
+        "QUESTION_TEXT_MISMATCH": 0
+      },
+      "s6_validation_queries": 248,
+      "status": {
+        "CONSISTENT": 6670,
+        "INCONSISTENT": 3
+      }
+    }
+  },
+  "by_construction": {
+    "BRIDGE": {
+      "bridge_multiplicity": {
+        "MULTI_BRIDGE": 85,
+        "SINGLE_BRIDGE": 6343
+      },
+      "leaky_questions": 84,
+      "primary_reason": {
+        "GOLD_MISSING_FROM_KG": 15,
+        "NONE": 6413
+      },
+      "queries": 6428,
+      "reason_codes": {
+        "BRIDGE_NOT_FOUND": 0,
+        "EXTRA_TARGETS": 3,
+        "GOLD_BRIDGE_NOT_VALID": 0,
+        "GOLD_MISSING_FROM_KG": 15,
+        "GOLD_UNMAPPED": 0,
+        "QUERY_NOT_FOUND": 0,
+        "QUESTION_TEXT_MISMATCH": 0
+      },
+      "s6_validation_queries": 240,
+      "status": {
+        "CONSISTENT": 6413,
+        "INCONSISTENT": 15
+      }
+    },
+    "UNION": {
+      "bridge_multiplicity": {
+        "MULTI_BRIDGE": 619,
+        "SINGLE_BRIDGE": 330
+      },
+      "leaky_questions": 102,
+      "primary_reason": {
+        "NONE": 949
+      },
+      "queries": 949,
+      "reason_codes": {
+        "BRIDGE_NOT_FOUND": 0,
+        "EXTRA_TARGETS": 0,
+        "GOLD_BRIDGE_NOT_VALID": 0,
+        "GOLD_MISSING_FROM_KG": 0,
+        "GOLD_UNMAPPED": 0,
+        "QUERY_NOT_FOUND": 0,
+        "QUESTION_TEXT_MISMATCH": 0
+      },
+      "s6_validation_queries": 30,
+      "status": {
+        "CONSISTENT": 949
+      }
+    }
+  },
+  "by_relation_type": {
+    "disease:drug:effect/phenotype": {
+      "bridge_multiplicity": {
+        "MULTI_BRIDGE": 619,
+        "SINGLE_BRIDGE": 330
+      },
+      "leaky_questions": 102,
+      "primary_reason": {
+        "NONE": 949
+      },
+      "queries": 949,
+      "reason_codes": {
+        "BRIDGE_NOT_FOUND": 0,
+        "EXTRA_TARGETS": 0,
+        "GOLD_BRIDGE_NOT_VALID": 0,
+        "GOLD_MISSING_FROM_KG": 0,
+        "GOLD_UNMAPPED": 0,
+        "QUERY_NOT_FOUND": 0,
+        "QUESTION_TEXT_MISMATCH": 0
+      },
+      "s6_validation_queries": 30,
+      "status": {
+        "CONSISTENT": 949
+      }
+    },
+    "disease:drug:gene/protein": {
+      "bridge_multiplicity": {
+        "SINGLE_BRIDGE": 381
+      },
+      "leaky_questions": 5,
+      "primary_reason": {
+        "NONE": 381
+      },
+      "queries": 381,
+      "reason_codes": {
+        "BRIDGE_NOT_FOUND": 0,
+        "EXTRA_TARGETS": 0,
+        "GOLD_BRIDGE_NOT_VALID": 0,
+        "GOLD_MISSING_FROM_KG": 0,
+        "GOLD_UNMAPPED": 0,
+        "QUERY_NOT_FOUND": 0,
+        "QUESTION_TEXT_MISMATCH": 0
+      },
+      "s6_validation_queries": 30,
+      "status": {
+        "CONSISTENT": 381
+      }
+    },
+    "disease:gene/protein:drug": {
+      "bridge_multiplicity": {
+        "SINGLE_BRIDGE": 899
+      },
+      "leaky_questions": 47,
+      "primary_reason": {
+        "NONE": 899
+      },
+      "queries": 899,
+      "reason_codes": {
+        "BRIDGE_NOT_FOUND": 0,
+        "EXTRA_TARGETS": 0,
+        "GOLD_BRIDGE_NOT_VALID": 0,
+        "GOLD_MISSING_FROM_KG": 0,
+        "GOLD_UNMAPPED": 0,
+        "QUERY_NOT_FOUND": 0,
+        "QUESTION_TEXT_MISMATCH": 0
+      },
+      "s6_validation_queries": 30,
+      "status": {
+        "CONSISTENT": 899
+      }
+    },
+    "drug:disease:effect/phenotype": {
+      "bridge_multiplicity": {
+        "SINGLE_BRIDGE": 213
+      },
+      "leaky_questions": 0,
+      "primary_reason": {
+        "NONE": 213
+      },
+      "queries": 213,
+      "reason_codes": {
+        "BRIDGE_NOT_FOUND": 0,
+        "EXTRA_TARGETS": 0,
+        "GOLD_BRIDGE_NOT_VALID": 0,
+        "GOLD_MISSING_FROM_KG": 0,
+        "GOLD_UNMAPPED": 0,
+        "QUERY_NOT_FOUND": 0,
+        "QUESTION_TEXT_MISMATCH": 0
+      },
+      "s6_validation_queries": 30,
+      "status": {
+        "CONSISTENT": 213
+      }
+    },
+    "drug:disease:gene/protein": {
+      "bridge_multiplicity": {
+        "SINGLE_BRIDGE": 321
+      },
+      "leaky_questions": 0,
+      "primary_reason": {
+        "NONE": 321
+      },
+      "queries": 321,
+      "reason_codes": {
+        "BRIDGE_NOT_FOUND": 0,
+        "EXTRA_TARGETS": 0,
+        "GOLD_BRIDGE_NOT_VALID": 0,
+        "GOLD_MISSING_FROM_KG": 0,
+        "GOLD_UNMAPPED": 0,
+        "QUERY_NOT_FOUND": 0,
+        "QUESTION_TEXT_MISMATCH": 0
+      },
+      "s6_validation_queries": 30,
+      "status": {
+        "CONSISTENT": 321
+      }
+    },
+    "drug:gene/protein:disease": {
+      "bridge_multiplicity": {
+        "SINGLE_BRIDGE": 3029
+      },
+      "leaky_questions": 1,
+      "primary_reason": {
+        "NONE": 3029
+      },
+      "queries": 3029,
+      "reason_codes": {
+        "BRIDGE_NOT_FOUND": 0,
+        "EXTRA_TARGETS": 0,
+        "GOLD_BRIDGE_NOT_VALID": 0,
+        "GOLD_MISSING_FROM_KG": 0,
+        "GOLD_UNMAPPED": 0,
+        "QUERY_NOT_FOUND": 0,
+        "QUESTION_TEXT_MISMATCH": 0
+      },
+      "s6_validation_queries": 30,
+      "status": {
+        "CONSISTENT": 3029
+      }
+    },
+    "effect/phenotype:disease:drug": {
+      "bridge_multiplicity": {
+        "MULTI_BRIDGE": 85,
+        "SINGLE_BRIDGE": 461
+      },
+      "leaky_questions": 31,
+      "primary_reason": {
+        "GOLD_MISSING_FROM_KG": 12,
+        "NONE": 534
+      },
+      "queries": 546,
+      "reason_codes": {
+        "BRIDGE_NOT_FOUND": 0,
+        "EXTRA_TARGETS": 0,
+        "GOLD_BRIDGE_NOT_VALID": 0,
+        "GOLD_MISSING_FROM_KG": 12,
+        "GOLD_UNMAPPED": 0,
+        "QUERY_NOT_FOUND": 0,
+        "QUESTION_TEXT_MISMATCH": 0
+      },
+      "s6_validation_queries": 30,
+      "status": {
+        "CONSISTENT": 534,
+        "INCONSISTENT": 12
+      }
+    },
+    "gene/protein:disease:drug": {
+      "bridge_multiplicity": {
+        "SINGLE_BRIDGE": 577
+      },
+      "leaky_questions": 0,
+      "primary_reason": {
+        "NONE": 577
+      },
+      "queries": 577,
+      "reason_codes": {
+        "BRIDGE_NOT_FOUND": 0,
+        "EXTRA_TARGETS": 0,
+        "GOLD_BRIDGE_NOT_VALID": 0,
+        "GOLD_MISSING_FROM_KG": 0,
+        "GOLD_UNMAPPED": 0,
+        "QUERY_NOT_FOUND": 0,
+        "QUESTION_TEXT_MISMATCH": 0
+      },
+      "s6_validation_queries": 30,
+      "status": {
+        "CONSISTENT": 577
+      }
+    },
+    "gene/protein:drug:disease": {
+      "bridge_multiplicity": {
+        "SINGLE_BRIDGE": 462
+      },
+      "leaky_questions": 0,
+      "primary_reason": {
+        "GOLD_MISSING_FROM_KG": 3,
+        "NONE": 459
+      },
+      "queries": 462,
+      "reason_codes": {
+        "BRIDGE_NOT_FOUND": 0,
+        "EXTRA_TARGETS": 3,
+        "GOLD_BRIDGE_NOT_VALID": 0,
+        "GOLD_MISSING_FROM_KG": 3,
+        "GOLD_UNMAPPED": 0,
+        "QUERY_NOT_FOUND": 0,
+        "QUESTION_TEXT_MISMATCH": 0
+      },
+      "s6_validation_queries": 30,
+      "status": {
+        "CONSISTENT": 459,
+        "INCONSISTENT": 3
+      }
+    }
+  },
+  "overall": {
+    "bridge_multiplicity": {
+      "MULTI_BRIDGE": 704,
+      "SINGLE_BRIDGE": 6673
+    },
+    "leaky_questions": 186,
+    "primary_reason": {
+      "GOLD_MISSING_FROM_KG": 15,
+      "NONE": 7362
+    },
+    "queries": 7377,
+    "reason_codes": {
+      "BRIDGE_NOT_FOUND": 0,
+      "EXTRA_TARGETS": 3,
+      "GOLD_BRIDGE_NOT_VALID": 0,
+      "GOLD_MISSING_FROM_KG": 15,
+      "GOLD_UNMAPPED": 0,
+      "QUERY_NOT_FOUND": 0,
+      "QUESTION_TEXT_MISMATCH": 0
+    },
+    "s6_validation_queries": 270,
+    "status": {
+      "CONSISTENT": 7362,
+      "INCONSISTENT": 15
+    }
+  },
+  "provenance": {
+    "frozen_inputs": {
+      "biohopr_revision": "08f06692c3900347e7405ba55ff6a6d330f55ddb",
+      "kg_fingerprint": "bc5d3fd2f12aeb29398fe4684c83d8c65c7bd5c1edf704573322295bdc6b2e95",
+      "relation_mapping": "2d609332b6a4ff48423bd7b2f1cb98d8d2d9cafc2fe80c20f7cee8184b8bb8c0"
+    },
+    "git_commit": "a80cea144d381aa74a7205f4d2e5c98be5407832",
+    "run_time_utc": "2026-10-15T00:31:29+00:00",
+    "s6_sample_rows": 335,
+    "s7_provenance": {
+      "biohopr_revision": "08f06692c3900347e7405ba55ff6a6d330f55ddb",
+      "elapsed_seconds": 72.369,
+      "excluded_dataset_rows": 256,
+      "git_commit": "a7f38e97819c9512708a9e6baf43980ffe6bb6c2",
+      "input_dataset_rows": 7633,
+      "kg_fingerprint": "bc5d3fd2f12aeb29398fe4684c83d8c65c7bd5c1edf704573322295bdc6b2e95",
+      "protocol_version": "1.3.3",
+      "relation_mapping_sha256": "2d609332b6a4ff48423bd7b2f1cb98d8d2d9cafc2fe80c20f7cee8184b8bb8c0",
+      "run_time_utc": "2026-10-13T12:02:58+00:00",
+      "sha256": {
+        "configs/frozen_hashes.yaml": "36bd0c68019fdc82e082343412d16ee5f00bfc9bb64118d649d390237fdf4cd3",
+        "data/raw/biohopr/BioHopR.json": "1adda2f23d305c394537e7b56d3e972b2d8f4141ae716ede54e0d08876eb527d",
+        "data/raw/biohopr/metadata.json": "decb88cf73f583e2f97e2771452e9dd63df995ab1ee3730a074a5c9426820f2a",
+        "docs/decision_rules.md": "c007b1afb96c2b1967fc3ba5964d0dcfdf0197ba0039d71a46c46febbe222175",
+        "docs/frozen_pilot_protocol.md": "a73346aa75bea142e426687af3b109d50c66703a61e2189a9b22f01ddd297582",
+        "requirements.lock": "130f15ddf83ad62e1fea17cabf1bad55b3e93aa2c0d213c04a3dd16feb98a3b1",
+        "results/semantics/relation_mapping.json": "2d609332b6a4ff48423bd7b2f1cb98d8d2d9cafc2fe80c20f7cee8184b8bb8c0",
+        "scripts/07_build_reference_sets.py": "e04f27030a562b4ec2c37944acb6a2c2c89cc5b5ef78e9f84eabe39dee526b81",
+        "src/cofail_kg/data/biohopr_loader.py": "0ab1de558c393c1b5a68c3fba7c3e2b688c72b00f300951fe3b4826a92f41a2a",
+        "src/cofail_kg/data/diagnostics.py": "9c0ca21667702af80892daadf78991a13415f5efcef1b5af73bdcb8eff3d33e3",
+        "src/cofail_kg/data/field_roles.py": "2058c020f46649d2e009c1849fb5f59ace3ba787a7102efb3d859b69dc7818ee",
+        "src/cofail_kg/evaluation/normalize.py": "9f5dd89b93f9a89c2406fa47e2f9b0151e47307bd02d0cbb8b20b95b02e7c4e8",
+        "src/cofail_kg/evaluation/reference_sets.py": "06047494ba581e869715ef2e7f79e188640d2493617f0e73f827d78d8f10b8a3",
+        "src/cofail_kg/kg/prepare.py": "0852293aee83bd7878417f33b71628ba8c10f1568065c2b77b510802f80d1eb1",
+        "src/cofail_kg/kg/primekg_index.py": "3d1545d07ba5553c75568b548ad0730b018b2e8fe0e436b205a08a5adbbb61a2",
+        "src/cofail_kg/utils/frozen_hashes.py": "c6f03344020be7fb85a62af5adc0dcb16807a89b574378bc0d3afe23d0ee75bf"
+      }
+    },
+    "s7_source_crlf_to_lf_matches": [
+      "scripts/07_build_reference_sets.py",
+      "src/cofail_kg/evaluation/reference_sets.py",
+      "src/cofail_kg/kg/prepare.py",
+      "src/cofail_kg/kg/primekg_index.py"
+    ],
+    "s9_inclusion_computed": false,
+    "sha256": {
+      "data/cache/primekg_nodes.parquet": "ec43d05e4dd0570d73772a0289166360d90f3e1c79225f4ec840a5fd644dbb17",
+      "data/processed/reference_queries.parquet": "7d3be769ac5abfa99e3da94a03a70b2ada03c3b8ca5a21a2b61184cc33e0ad07",
+      "data/processed/reference_summary.json": "f9009e75a23e9c11dd131554a225038ad36256e13737d0612dde18f4f13c33d8",
+      "results/semantics/relation_ambiguity_tags.csv": "c1a1c3ddd574d8260e4f2773c372da64b759c96e368e5fd0ac90a26914e3d8ae",
+      "results/semantics/relation_mapping_proposed.json": "6f92c38037b421cb3843bdf793459088fc7007b3e594ec0fc54051eb80bb60e7",
+      "scripts/08_validate_queries.py": "3d01acf7f0057fb06a512e30102b7de3c6901674e0326fd2575dd5d6a0634e80",
+      "src/cofail_kg/evaluation/query_validation.py": "3ad0bb0bf063eccd5e0f4ade1d5b42a85c06246b9a48e90972d8b9fa53ac2638",
+      "src/cofail_kg/evaluation/relation_mapping.py": "138349d6e5cdbfa16a66c0f398c02a2846be86a1f71678d355c3cd0ddf8a4a27"
+    },
+    "target_type_node_counts": {
+      "anatomy": 14035,
+      "biological_process": 28642,
+      "cellular_component": 4176,
+      "disease": 17080,
+      "drug": 7957,
+      "effect/phenotype": 15311,
+      "exposure": 818,
+      "gene/protein": 27671,
+      "molecular_function": 11169,
+      "pathway": 2516
+    }
+  },
+  "validation_csv_sha256": "44c5f7d27886d36562d0b2621396f13bc30c45210f02f22c89b662d62c995619"
+}
