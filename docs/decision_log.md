@@ -497,3 +497,47 @@ Only the three part-2 artifacts and this required decision-log entry changed. Pr
 decision rules and historical first-prompt reports were not edited. Their pre-freeze status
 statements describe earlier snapshots; this entry and relation_mapping.json record the
 current freeze. No S7 work was started.
+
+## 2026-10-15 — S9 — Researcher freezes saturation threshold before feasibility
+
+Decision: θ = 0.50 (50%), frozen in protocol §7.2 before calculating D2 step 3.
+Researcher authorization: "use theta 50% and do the 2nd part then" after reviewing
+the part-1 evidence and the explanation of saturation thresholds.
+
+Evidence seen before deciding: all nine D1 PASS types CONFIRMED on queries containing
+no S6 validation-sample row (lowest 506/516 = 98.0620%); all other types remain excluded.
+Among 7,362 consistent queries, the maximum saturation share is 0.0515269574 (5.1527%).
+Each tested θ (0.30, 0.50, 0.70, 0.90) excludes zero queries overall and per type.
+Evidence: results/diagnostics/s9_decision_evidence/decision_evidence.json and .md.
+
+Rationale: retain the protocol's recommended 0.50; the sensitivity table gives no reason
+to change it. Saturation remains a strict share > θ comparison. No mapping, name
+resolution, consistency, leakage or Gate D2 rule is changed. This fills the scheduled
+S9 threshold choice; no primary population or feasibility outcome was computed before
+this entry. Part 2 is now authorized under the existing rules.
+
+## 2026-10-15 — S9 — Primary population and Gate D2 GREEN
+
+With θ = 0.50 already frozen above, applied protocol §7.2 inclusion and the ordered
+D2 step-3 rules without changing thresholds. Part-1 mapping confirmation was recomputed
+and matched the saved evidence exactly: all nine D1 PASS types CONFIRMED.
+
+Input: 7,377 queries from the nine D1 PASS types (the 256 dataset rows in three D1 FAIL
+types remain excluded upstream). Excluded 201 queries: 15 INCONSISTENT and 186
+LEAKY_QUESTION, with no overlap; 0 SATURATED, 0 unconfirmed mappings. Primary population
+N_P = 7,176: 6,575 SINGLE_BRIDGE and 601 MULTI_BRIDGE queries. Per-type counts:
+disease:drug:effect/phenotype 847; disease:drug:gene/protein 376;
+disease:gene/protein:drug 852; drug:disease:effect/phenotype 213;
+drug:disease:gene/protein 321; drug:gene/protein:disease 3,028;
+effect/phenotype:disease:drug 503; gene/protein:disease:drug 577;
+gene/protein:drug:disease 459. All nine have ≥20, so K = 9.
+
+Gate D2: GREEN. The first rule (N_P < 150) is false; the next rule
+(N_P ≥650 and K ≥5) is true. Continue as planned; S10 has not been started.
+
+Artifacts: data/processed/primary_population.csv, primary_population_summary.json,
+primary_population_report.md; implementation details: docs/S9_implementation.md.
+Full suite: 170 passed (12 new part-2 tests). Independent CSV readback verified exact
+membership against S8 predicates, uniqueness, per-type and multiplicity counts, checksum,
+and Gate D2. Source/input hashes and the pre-run decision-log hash are recorded in the
+summary. Historical S8 and S9 part-1 outputs are preserved unchanged.

@@ -1,0 +1,10 @@
+relation_type,total_queries,s6_overlap_queries,confirmation_queries,consistent_queries,inconsistent_queries,consistent_share,confirmation_status
+disease:drug:effect/phenotype,949,30,919,919,0,1.0,CONFIRMED
+disease:drug:gene/protein,381,30,351,351,0,1.0,CONFIRMED
+disease:gene/protein:drug,899,30,869,869,0,1.0,CONFIRMED
+drug:disease:effect/phenotype,213,30,183,183,0,1.0,CONFIRMED
+drug:disease:gene/protein,321,30,291,291,0,1.0,CONFIRMED
+drug:gene/protein:disease,3029,30,2999,2999,0,1.0,CONFIRMED
+effect/phenotype:disease:drug,546,30,516,506,10,0.9806201550387597,CONFIRMED
+gene/protein:disease:drug,577,30,547,547,0,1.0,CONFIRMED
+gene/protein:drug:disease,462,30,432,429,3,0.9930555555555556,CONFIRMED

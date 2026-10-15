@@ -1,0 +1,113 @@
+{
+  "K": 9,
+  "N_P": 7176,
+  "by_multiplicity": {
+    "MULTI_BRIDGE": 601,
+    "SINGLE_BRIDGE": 6575
+  },
+  "by_type": {
+    "disease:drug:effect/phenotype": {
+      "by_multiplicity": {
+        "MULTI_BRIDGE": 528,
+        "SINGLE_BRIDGE": 319
+      },
+      "queries": 847
+    },
+    "disease:drug:gene/protein": {
+      "by_multiplicity": {
+        "SINGLE_BRIDGE": 376
+      },
+      "queries": 376
+    },
+    "disease:gene/protein:drug": {
+      "by_multiplicity": {
+        "SINGLE_BRIDGE": 852
+      },
+      "queries": 852
+    },
+    "drug:disease:effect/phenotype": {
+      "by_multiplicity": {
+        "SINGLE_BRIDGE": 213
+      },
+      "queries": 213
+    },
+    "drug:disease:gene/protein": {
+      "by_multiplicity": {
+        "SINGLE_BRIDGE": 321
+      },
+      "queries": 321
+    },
+    "drug:gene/protein:disease": {
+      "by_multiplicity": {
+        "SINGLE_BRIDGE": 3028
+      },
+      "queries": 3028
+    },
+    "effect/phenotype:disease:drug": {
+      "by_multiplicity": {
+        "MULTI_BRIDGE": 73,
+        "SINGLE_BRIDGE": 430
+      },
+      "queries": 503
+    },
+    "gene/protein:disease:drug": {
+      "by_multiplicity": {
+        "SINGLE_BRIDGE": 577
+      },
+      "queries": 577
+    },
+    "gene/protein:drug:disease": {
+      "by_multiplicity": {
+        "SINGLE_BRIDGE": 459
+      },
+      "queries": 459
+    }
+  },
+  "excluded_queries": 201,
+  "exclusion_counts": {
+    "inconsistent": 15,
+    "leaky_question": 186,
+    "not_confirmed_or_unconfirmable": 0,
+    "not_d1_pass": 0,
+    "saturated": 0
+  },
+  "exclusion_counts_may_overlap": true,
+  "input_queries": 7377,
+  "mapping_confirmation": {
+    "disease:drug:effect/phenotype": "CONFIRMED",
+    "disease:drug:gene/protein": "CONFIRMED",
+    "disease:gene/protein:drug": "CONFIRMED",
+    "drug:disease:effect/phenotype": "CONFIRMED",
+    "drug:disease:gene/protein": "CONFIRMED",
+    "drug:gene/protein:disease": "CONFIRMED",
+    "effect/phenotype:disease:drug": "CONFIRMED",
+    "gene/protein:disease:drug": "CONFIRMED",
+    "gene/protein:drug:disease": "CONFIRMED"
+  },
+  "outcome": "GREEN",
+  "primary_population_sha256": "24a876a1bcca9e4e4fc5d273460212b47e38d95b0949c1770096fb46b79b41b8",
+  "provenance": {
+    "frozen_inputs": {
+      "biohopr_revision": "08f06692c3900347e7405ba55ff6a6d330f55ddb",
+      "kg_fingerprint": "bc5d3fd2f12aeb29398fe4684c83d8c65c7bd5c1edf704573322295bdc6b2e95",
+      "relation_mapping": "2d609332b6a4ff48423bd7b2f1cb98d8d2d9cafc2fe80c20f7cee8184b8bb8c0"
+    },
+    "git_commit": "a80cea144d381aa74a7205f4d2e5c98be5407832",
+    "run_time_utc": "2026-10-15T00:45:29+00:00",
+    "sha256": {
+      "configs/frozen_hashes.yaml": "36bd0c68019fdc82e082343412d16ee5f00bfc9bb64118d649d390237fdf4cd3",
+      "docs/decision_log.md": "58307b60fea118960bf10d77649784110fe2c11cb829411334a392fca72780bc",
+      "docs/decision_rules.md": "c007b1afb96c2b1967fc3ba5964d0dcfdf0197ba0039d71a46c46febbe222175",
+      "docs/frozen_pilot_protocol.md": "70a8c4d3fff0f2296e97a500a9e8953ee7fea9aa258e5a9ec3a0c225eb71c4e4",
+      "results/diagnostics/query_validation.csv": "44c5f7d27886d36562d0b2621396f13bc30c45210f02f22c89b662d62c995619",
+      "results/diagnostics/query_validation_summary.json": "f0be7ad51e27fd3ad88b46a8fd1de24b8c4c8e51e4df35d26188215d791c2f3d",
+      "results/diagnostics/s9_decision_evidence/decision_evidence.json": "828e2ecf8fc9f6252bb0f2a6c81117e15fefee6c69235d9a5cfadb0d59e5bb89",
+      "results/semantics/relation_mapping.json": "2d609332b6a4ff48423bd7b2f1cb98d8d2d9cafc2fe80c20f7cee8184b8bb8c0",
+      "scripts/09_decision_evidence.py": "b6d706b1c81afa8dcbeaeb7bbcc01ca4c9630389076cc8648724801142410a70",
+      "scripts/09_primary_population.py": "fcb235deb1c3ee0caa0f42343ef6f68ff5160f91e0e2c1fb7741b1b5c683c33f",
+      "src/cofail_kg/evaluation/dataset_evidence.py": "3e565a2fb78728bae937cda85e2c4347f2ebd06ff87123df5d3fce77b3559c88",
+      "src/cofail_kg/evaluation/primary_population.py": "5801a873cabbf20d1020018a8e3783d67563f7f56e3a1ef773df8dad285442ed"
+    }
+  },
+  "theta": 0.5
+}

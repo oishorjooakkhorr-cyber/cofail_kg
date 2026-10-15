@@ -329,7 +329,7 @@ word or phrase, the name of a gold bridge or of a gold answer at least 4 charact
 
 | Rule | Value | Status |
 |---|---|---|
-| Saturation threshold θ | Recommended 0.50 | `[TBD@S9]` |
+| Saturation threshold θ | 0.50 | `[FROZEN]` at S9 (2026-10-15) |
 | Absolute cap on the size of T_q | None (hub-heavy queries are relevant) | `[FROZEN]` |
 | **Primary population** | CONSISTENT ∧ not SATURATED ∧ not LEAKY_QUESTION ∧ relation type passed Gate D1 ∧ relation type confirmed or UNCONFIRMABLE in Gate D2 step 1 | `[FROZEN]` |
 | INCONSISTENT and LEAKY_QUESTION queries | Reported in the dataset table; never sampled | `[FROZEN]` |
