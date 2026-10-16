@@ -895,3 +895,44 @@ retain SOURCE_NAME_OVERLAP; official gates include them and pre-registered
 sensitivity reports exclude them. Original automated evidence is unchanged.
 Short-name and captured-message review remain pending; this entry does not
 claim full S15 acceptance or absence of overlap effects on model behavior.
+
+## 2026-10-16 — S15 manual review and approval
+
+Reviewer: Oishu (researcher). Review basis, as stated by the researcher: the 34
+short-name entries, the common system prompt and the 24 captured screening/smoke
+user messages in `results/diagnostics/s15/manual_review_packet.md` were checked
+with AI assistance (Claude, in chat on 2026-10-16, and again in code), and the
+researcher accepts them on that basis on 2026-10-16.
+
+Decisions:
+1. Short names: all 34 query/name entries (26 queries) accepted. None occurs as
+   a whole word in its starting line, the common system prompt or the question.
+   "AR" (BH2_01282) occurs only inside longer words: "Andarine" in the starting
+   line and the question, and words such as "are" in the system prompt and the
+   question. It never occurs as a whole word, so it carries no information.
+2. Messages: the common system prompt and all 24 captured user messages accepted.
+   Each user message is exactly question_text + "\n" + "Starting entity:
+   <start_name> (PrimeKG ID: <start_id>)". Apart from the rule list numbers 1-3,
+   the only numbers in the system prompt are page size (50) and tool budget (30).
+   The " (disease)" suffix in BH2_03750, BH2_03951 and BH2_04474 is PrimeKG's
+   canonical name (protocol §12, decision 2026-10-13) and adds no evaluator
+   information.
+3. Overlaps: the researcher confirms, as their own decision, all four rows in
+   `overlap_review.json`, including BH2_05778 (Ewing sarcoma) accepted as
+   full-name, cross-type overlap. This supersedes the earlier provenance note
+   that the assistant selected that option.
+4. **S15 approved.**
+
+Code verification (read-only; same whole-word rule as tests/test_leakage.py,
+plus raw substring): 24 captures, exactly one distinct system prompt, 24/24 user
+messages match the exact pattern; 34 entries in 26 queries, 0 whole-word hits;
+the only raw substring hit is AR in BH2_01282 (inside Starting, Andarine and
+are). Verification found two literal mismatches in the first decision wording;
+the researcher supplied the corrected wording above. No concerns unresolved.
+Record: `results/diagnostics/s15/manual_review_20261016.json` and `.md`.
+
+This supersedes the "pending" status in the two preceding S15 entries, which
+are retained. SOURCE_NAME_OVERLAP flags, gate populations and the pre-registered
+all/excluded reporting are unchanged. No code, test, protocol, decision rule,
+config, frozen hash, data or prior evidence change; no model call or episode.
+S16 requires a separate researcher instruction.

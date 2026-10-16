@@ -1,0 +1,1087 @@
+{
+  "record": "S15 manual review and approval",
+  "date_local": "2026-10-16",
+  "reviewer": "Oishu (researcher)",
+  "review_basis": "The 34 short-name entries, the common system prompt and the 24 captured screening/smoke user messages in results/diagnostics/s15/manual_review_packet.md were checked with AI assistance (Claude, in chat on 2026-10-16, and again in code in step a below). I, Oishu (researcher), accept them on that basis on 2026-10-16.",
+  "scope": {
+    "short_names": "34 query/name entries in 26 queries (source_name_overlap.json short_names)",
+    "messages": "common system prompt and 24 captured screening/smoke initial user messages (audit-v2.json S15_A.captures)",
+    "overlaps": "four rows of overlap_review.json",
+    "not_in_scope": "medical correctness, model behavior or performance"
+  },
+  "decision_1_short_names": {
+    "decision": "Accept all 34",
+    "statement": [
+      "Accept all 34 query/name entries (26 queries). None occurs as a whole word in its starting line, the common system prompt or the question.",
+      "\"AR\" (BH2_01282) occurs only inside longer words: \"Andarine\" in the starting line and the question, and words such as \"are\" in the system prompt and the question. It never occurs as a whole word, so it carries no information."
+    ],
+    "per_entry": [
+      {
+        "query_id": "BH2_00244",
+        "split": "expansion",
+        "name": "F11",
+        "start_id": "18371",
+        "start_name": "(R)-1-(4-(4-(hydroxymethyl)-1,3,2-dioxaborolan-2-yl)benzyl)guanidine",
+        "decision": "Accept",
+        "reason": "No case-insensitive whole-word occurrence in its starting line, the common system prompt or the question (verified: 0/0/0)."
+      },
+      {
+        "query_id": "BH2_00341",
+        "split": "pilot",
+        "name": "ADA",
+        "start_id": "19259",
+        "start_name": "1-Deaza-Adenosine",
+        "decision": "Accept",
+        "reason": "No case-insensitive whole-word occurrence in its starting line, the common system prompt or the question (verified: 0/0/0)."
+      },
+      {
+        "query_id": "BH2_00461",
+        "split": "screening",
+        "name": "TTR",
+        "start_id": "14097",
+        "start_name": "2,6-dimethyl-4-[(E)-2-phenylethenyl]phenol",
+        "decision": "Accept",
+        "reason": "No case-insensitive whole-word occurrence in its starting line, the common system prompt or the question (verified: 0/0/0)."
+      },
+      {
+        "query_id": "BH2_00732",
+        "split": "expansion",
+        "name": "GCK",
+        "start_id": "18420",
+        "start_name": "3-[(4-fluorophenyl)sulfanyl]-N-(4-methyl-1,3-thiazol-2-yl)-6-[(4-methyl-4H-1,2,4-triazol-3-yl)sulfanyl]pyridine-2-carboxamide",
+        "decision": "Accept",
+        "reason": "No case-insensitive whole-word occurrence in its starting line, the common system prompt or the question (verified: 0/0/0)."
+      },
+      {
+        "query_id": "BH2_00841",
+        "split": "expansion",
+        "name": "ABO",
+        "start_id": "16606",
+        "start_name": "4-AMINO-2-OCTYLOXY-6-HYDROXYMETHYL-TETRAHYDRO-PYRAN-3,5-DIOL",
+        "decision": "Accept",
+        "reason": "No case-insensitive whole-word occurrence in its starting line, the common system prompt or the question (verified: 0/0/0)."
+      },
+      {
+        "query_id": "BH2_00874",
+        "split": "expansion",
+        "name": "UNG",
+        "start_id": "19843",
+        "start_name": "4-[(1E,7E)-8-(2,6-DIOXO-1,2,3,6-TETRAHYDROPYRIMIDIN-4-YL)-3,6-DIOXA-2,7-DIAZAOCTA-1,7-DIEN-1-YL]BENZOIC ACID",
+        "decision": "Accept",
+        "reason": "No case-insensitive whole-word occurrence in its starting line, the common system prompt or the question (verified: 0/0/0)."
+      },
+      {
+        "query_id": "BH2_01061",
+        "split": "expansion",
+        "name": "GSR",
+        "start_id": "17531",
+        "start_name": "6-(3-METHYL-1,4-DIOXO-1,4-DIHYDRONAPHTHALEN-2-YL)HEXANOIC ACID",
+        "decision": "Accept",
+        "reason": "No case-insensitive whole-word occurrence in its starting line, the common system prompt or the question (verified: 0/0/0)."
+      },
+      {
+        "query_id": "BH2_01223",
+        "split": "expansion",
+        "name": "ALB",
+        "start_id": "14430",
+        "start_name": "Acetrizoic acid",
+        "decision": "Accept",
+        "reason": "No case-insensitive whole-word occurrence in its starting line, the common system prompt or the question (verified: 0/0/0)."
+      },
+      {
+        "query_id": "BH2_01280",
+        "split": "expansion",
+        "name": "KIT",
+        "start_id": "17285",
+        "start_name": "Ancestim",
+        "decision": "Accept",
+        "reason": "No case-insensitive whole-word occurrence in its starting line, the common system prompt or the question (verified: 0/0/0)."
+      },
+      {
+        "query_id": "BH2_01282",
+        "split": "expansion",
+        "name": "AR",
+        "start_id": "16450",
+        "start_name": "Andarine",
+        "decision": "Accept",
+        "reason": "No case-insensitive whole-word occurrence in its starting line, the common system prompt or the question (verified: 0/0/0). \"AR\" (BH2_01282) occurs only inside longer words: \"Andarine\" in the starting line and the question, and words such as \"are\" in the system prompt and the question. It never occurs as a whole word, so it carries no information."
+      },
+      {
+        "query_id": "BH2_02390",
+        "split": "expansion",
+        "name": "LTF",
+        "start_id": "18279",
+        "start_name": "Nitrilotriacetic acid",
+        "decision": "Accept",
+        "reason": "No case-insensitive whole-word occurrence in its starting line, the common system prompt or the question (verified: 0/0/0)."
+      },
+      {
+        "query_id": "BH2_02780",
+        "split": "expansion",
+        "name": "F2",
+        "start_id": "16099",
+        "start_name": "TRANS-4-(GUANIDINOMETHYL)-CYCLOHEXANE-L-YL-D-3-CYCLOHEXYLALANYL-L-AZETIDINE-2-YL-D-TYROSINYL-L-HOMOARGININAMIDE",
+        "decision": "Accept",
+        "reason": "No case-insensitive whole-word occurrence in its starting line, the common system prompt or the question (verified: 0/0/0)."
+      },
+      {
+        "query_id": "BH2_02789",
+        "split": "pilot",
+        "name": "PGR",
+        "start_id": "17392",
+        "start_name": "Tanaproget",
+        "decision": "Accept",
+        "reason": "No case-insensitive whole-word occurrence in its starting line, the common system prompt or the question (verified: 0/0/0)."
+      },
+      {
+        "query_id": "BH2_04824",
+        "split": "expansion",
+        "name": "NGF",
+        "start_id": "14583",
+        "start_name": "Solifenacin",
+        "decision": "Accept",
+        "reason": "No case-insensitive whole-word occurrence in its starting line, the common system prompt or the question (verified: 0/0/0)."
+      },
+      {
+        "query_id": "BH2_04828",
+        "split": "pilot",
+        "name": "XDH",
+        "start_id": "14574",
+        "start_name": "Sulfinpyrazone",
+        "decision": "Accept",
+        "reason": "No case-insensitive whole-word occurrence in its starting line, the common system prompt or the question (verified: 0/0/0)."
+      },
+      {
+        "query_id": "BH2_04856",
+        "split": "expansion",
+        "name": "CKB",
+        "start_id": "17226",
+        "start_name": "Tirofiban",
+        "decision": "Accept",
+        "reason": "No case-insensitive whole-word occurrence in its starting line, the common system prompt or the question (verified: 0/0/0)."
+      },
+      {
+        "query_id": "BH2_04856",
+        "split": "expansion",
+        "name": "CKM",
+        "start_id": "17226",
+        "start_name": "Tirofiban",
+        "decision": "Accept",
+        "reason": "No case-insensitive whole-word occurrence in its starting line, the common system prompt or the question (verified: 0/0/0)."
+      },
+      {
+        "query_id": "BH2_04856",
+        "split": "expansion",
+        "name": "CRP",
+        "start_id": "17226",
+        "start_name": "Tirofiban",
+        "decision": "Accept",
+        "reason": "No case-insensitive whole-word occurrence in its starting line, the common system prompt or the question (verified: 0/0/0)."
+      },
+      {
+        "query_id": "BH2_04856",
+        "split": "expansion",
+        "name": "GSN",
+        "start_id": "17226",
+        "start_name": "Tirofiban",
+        "decision": "Accept",
+        "reason": "No case-insensitive whole-word occurrence in its starting line, the common system prompt or the question (verified: 0/0/0)."
+      },
+      {
+        "query_id": "BH2_04856",
+        "split": "expansion",
+        "name": "IL6",
+        "start_id": "17226",
+        "start_name": "Tirofiban",
+        "decision": "Accept",
+        "reason": "No case-insensitive whole-word occurrence in its starting line, the common system prompt or the question (verified: 0/0/0)."
+      },
+      {
+        "query_id": "BH2_04856",
+        "split": "expansion",
+        "name": "TNF",
+        "start_id": "17226",
+        "start_name": "Tirofiban",
+        "decision": "Accept",
+        "reason": "No case-insensitive whole-word occurrence in its starting line, the common system prompt or the question (verified: 0/0/0)."
+      },
+      {
+        "query_id": "BH2_04856",
+        "split": "expansion",
+        "name": "VCL",
+        "start_id": "17226",
+        "start_name": "Tirofiban",
+        "decision": "Accept",
+        "reason": "No case-insensitive whole-word occurrence in its starting line, the common system prompt or the question (verified: 0/0/0)."
+      },
+      {
+        "query_id": "BH2_04856",
+        "split": "expansion",
+        "name": "VIM",
+        "start_id": "17226",
+        "start_name": "Tirofiban",
+        "decision": "Accept",
+        "reason": "No case-insensitive whole-word occurrence in its starting line, the common system prompt or the question (verified: 0/0/0)."
+      },
+      {
+        "query_id": "BH2_06279",
+        "split": "expansion",
+        "name": "MCC",
+        "start_id": "28259",
+        "start_name": "X-linked hereditary sensory and autonomic neuropathy with deafness",
+        "decision": "Accept",
+        "reason": "No case-insensitive whole-word occurrence in its starting line, the common system prompt or the question (verified: 0/0/0)."
+      },
+      {
+        "query_id": "BH2_06294",
+        "split": "expansion",
+        "name": "ATP",
+        "start_id": "31831",
+        "start_name": "acromegaloid facial appearance syndrome",
+        "decision": "Accept",
+        "reason": "No case-insensitive whole-word occurrence in its starting line, the common system prompt or the question (verified: 0/0/0)."
+      },
+      {
+        "query_id": "BH2_06423",
+        "split": "expansion",
+        "name": "RB1",
+        "start_id": "28362",
+        "start_name": "chromosome 13q14 deletion syndrome",
+        "decision": "Accept",
+        "reason": "No case-insensitive whole-word occurrence in its starting line, the common system prompt or the question (verified: 0/0/0)."
+      },
+      {
+        "query_id": "BH2_06518",
+        "split": "expansion",
+        "name": "EPX",
+        "start_id": "32078",
+        "start_name": "eosinophil peroxidase deficiency",
+        "decision": "Accept",
+        "reason": "No case-insensitive whole-word occurrence in its starting line, the common system prompt or the question (verified: 0/0/0)."
+      },
+      {
+        "query_id": "BH2_06865",
+        "split": "pilot",
+        "name": "C3",
+        "start_id": "30998",
+        "start_name": "pemphigus vulgaris",
+        "decision": "Accept",
+        "reason": "No case-insensitive whole-word occurrence in its starting line, the common system prompt or the question (verified: 0/0/0)."
+      },
+      {
+        "query_id": "BH2_07325",
+        "split": "expansion",
+        "name": "ALB",
+        "start_id": "30533",
+        "start_name": "cavernous hemangiomas of face-supraumbilical midline raphe syndrome",
+        "decision": "Accept",
+        "reason": "No case-insensitive whole-word occurrence in its starting line, the common system prompt or the question (verified: 0/0/0)."
+      },
+      {
+        "query_id": "BH2_07343",
+        "split": "expansion",
+        "name": "CA1",
+        "start_id": "38889",
+        "start_name": "congenital isolated hyperinsulinism",
+        "decision": "Accept",
+        "reason": "No case-insensitive whole-word occurrence in its starting line, the common system prompt or the question (verified: 0/0/0)."
+      },
+      {
+        "query_id": "BH2_07343",
+        "split": "expansion",
+        "name": "CA2",
+        "start_id": "38889",
+        "start_name": "congenital isolated hyperinsulinism",
+        "decision": "Accept",
+        "reason": "No case-insensitive whole-word occurrence in its starting line, the common system prompt or the question (verified: 0/0/0)."
+      },
+      {
+        "query_id": "BH2_07383",
+        "split": "expansion",
+        "name": "ALB",
+        "start_id": "84235",
+        "start_name": "epithelioid hemangioendothelioma",
+        "decision": "Accept",
+        "reason": "No case-insensitive whole-word occurrence in its starting line, the common system prompt or the question (verified: 0/0/0)."
+      },
+      {
+        "query_id": "BH2_07479",
+        "split": "pilot",
+        "name": "ALB",
+        "start_id": "36025",
+        "start_name": "lymphangioma",
+        "decision": "Accept",
+        "reason": "No case-insensitive whole-word occurrence in its starting line, the common system prompt or the question (verified: 0/0/0)."
+      },
+      {
+        "query_id": "BH2_07578",
+        "split": "expansion",
+        "name": "ALB",
+        "start_id": "84239",
+        "start_name": "retiform hemangioendothelioma",
+        "decision": "Accept",
+        "reason": "No case-insensitive whole-word occurrence in its starting line, the common system prompt or the question (verified: 0/0/0)."
+      }
+    ]
+  },
+  "decision_2_messages": {
+    "decision": "Accept system prompt and all 24 user messages",
+    "statement": [
+      "Accept the common system prompt and all 24 captured user messages. Each user message is exactly question_text + \"\\n\" + \"Starting entity: <start_name> (PrimeKG ID: <start_id>)\".",
+      "Apart from the rule list numbers 1-3, the only numbers in the system prompt are page size (50) and tool budget (30).",
+      "The \" (disease)\" suffix in BH2_03750, BH2_03951 and BH2_04474 is PrimeKG's canonical name (protocol §12, decision 2026-10-13) and adds no evaluator information."
+    ]
+  },
+  "decision_3_overlaps": {
+    "decision": "Confirmed",
+    "statement": "I confirm, as my own researcher decision, all four rows in overlap_review.json, including BH2_05778 (Ewing sarcoma) accepted as full-name, cross-type overlap.",
+    "rows": [
+      {
+        "query_id": "BH2_04007",
+        "decision": "accept",
+        "classification": "contained-phrase overlap"
+      },
+      {
+        "query_id": "BH2_05778",
+        "decision": "accept",
+        "classification": "full-name, cross-type overlap"
+      },
+      {
+        "query_id": "BH2_05971",
+        "decision": "accept",
+        "classification": "contained-phrase overlap"
+      },
+      {
+        "query_id": "BH2_06099",
+        "decision": "accept",
+        "classification": "contained-phrase overlap"
+      }
+    ],
+    "source_sha256": "4ee8debf93c436bd99dc0009a2ab6c75f324d79b5860340aa0aad6bd1aed6487"
+  },
+  "decision_4_approval": {
+    "decision": "S15 approved",
+    "statement": "I approve S15."
+  },
+  "wording_corrections": [
+    {
+      "item": "decision 1, AR sentence",
+      "initial": "\"AR\" (BH2_01282) occurs only inside longer words (\"Andarine\", words in the system prompt): not a whole-word match, no information.",
+      "step_a_finding": "AR also occurs inside \"Starting\" (starting line) and \"are\" (question).",
+      "recorded": "\"AR\" (BH2_01282) occurs only inside longer words: \"Andarine\" in the starting line and the question, and words such as \"are\" in the system prompt and the question. It never occurs as a whole word, so it carries no information."
+    },
+    {
+      "item": "decision 2, numbers sentence",
+      "initial": "the only numbers in the system prompt are page size (50) and tool budget (30).",
+      "step_a_finding": "The system prompt also contains rule-list enumerators 1., 2., 3.",
+      "recorded": "Apart from the rule list numbers 1-3, the only numbers in the system prompt are page size (50) and tool budget (30)."
+    }
+  ],
+  "verification_notes": [
+    "Researcher's corrected AR wording lists \"Andarine\" and words such as \"are\"; the code verification also finds AR inside \"Starting\" in the starting line. All contexts are inside longer words; whole-word count is 0. Full contexts: verification.short_names."
+  ],
+  "unresolved_concerns": [],
+  "unchanged": "SOURCE_NAME_OVERLAP flags, gate populations and pre-registered all/excluded reporting are unchanged. No code, test, protocol, decision rule, config, frozen hash, data or prior evidence file changed. No model call or episode. S16 not started.",
+  "verification": {
+    "inputs_sha256": {
+      "data/agent_inputs/expansion.jsonl": "290f4323fa80005a6ffc24c3077dd793566d82d4f3995dc26a39961f7306bc4b",
+      "data/agent_inputs/pilot.jsonl": "4c6190d844e8d3a2f14173db9fffa4fd9dd456e5e4cc3b487ea8c4a2ff982361",
+      "data/agent_inputs/screening.jsonl": "4624021f742d1f7a8ece8ef8545033b5481c1de7ec62fba554f952d74f04ba27",
+      "data/agent_inputs/smoke.jsonl": "08610aa6e3331b331ffd78213fab4e88bfda93a15bebe417a113bb3b009df68e",
+      "results/diagnostics/s15/audit-v2.json": "00486a34f3856d95a9a5a0f060c8c1290290151588c5c0d524eaa872550fe24f",
+      "results/diagnostics/s15/source_name_overlap.json": "f7dc51563299430e7ee74223c8bb1c0264df509cfed5f88eb4c41bc6e39f3538"
+    },
+    "messages": {
+      "captures": 24,
+      "digit_runs_in_system_prompt": [
+        "50",
+        "1",
+        "2",
+        "30",
+        "3"
+      ],
+      "disease_suffix_queries": {
+        "BH2_03750": {
+          "ends_with_disease_suffix": true,
+          "in_captures": true,
+          "start_name": "amenorrhea (disease)"
+        },
+        "BH2_03951": {
+          "ends_with_disease_suffix": true,
+          "in_captures": true,
+          "start_name": "endometriosis (disease)"
+        },
+        "BH2_04474": {
+          "ends_with_disease_suffix": true,
+          "in_captures": true,
+          "start_name": "synovitis (disease)"
+        }
+      },
+      "distinct_system_prompts": 1,
+      "per_capture": [
+        {
+          "exact_pattern": true,
+          "query_id": "BH2_00461",
+          "split": "screening",
+          "start_id": "14097",
+          "start_name": "2,6-dimethyl-4-[(E)-2-phenylethenyl]phenol"
+        },
+        {
+          "exact_pattern": true,
+          "query_id": "BH2_02033",
+          "split": "screening",
+          "start_id": "19601",
+          "start_name": "MYO-029"
+        },
+        {
+          "exact_pattern": true,
+          "query_id": "BH2_03434",
+          "split": "screening",
+          "start_id": "3248",
+          "start_name": "PSMD3"
+        },
+        {
+          "exact_pattern": true,
+          "query_id": "BH2_03619",
+          "split": "screening",
+          "start_id": "84092",
+          "start_name": "Balo concentric sclerosis"
+        },
+        {
+          "exact_pattern": true,
+          "query_id": "BH2_03750",
+          "split": "screening",
+          "start_id": "33574",
+          "start_name": "amenorrhea (disease)"
+        },
+        {
+          "exact_pattern": true,
+          "query_id": "BH2_03760",
+          "split": "screening",
+          "start_id": "31630",
+          "start_name": "androgen insensitivity syndrome"
+        },
+        {
+          "exact_pattern": true,
+          "query_id": "BH2_03762",
+          "split": "screening",
+          "start_id": "39540",
+          "start_name": "angioedema"
+        },
+        {
+          "exact_pattern": true,
+          "query_id": "BH2_03850",
+          "split": "screening",
+          "start_id": "36665",
+          "start_name": "cervical carcinoma"
+        },
+        {
+          "exact_pattern": true,
+          "query_id": "BH2_03856",
+          "split": "screening",
+          "start_id": "36106",
+          "start_name": "chlamydia trachomatis infectious disease"
+        },
+        {
+          "exact_pattern": true,
+          "query_id": "BH2_03879",
+          "split": "screening",
+          "start_id": "36937",
+          "start_name": "clear cell renal carcinoma"
+        },
+        {
+          "exact_pattern": true,
+          "query_id": "BH2_03881",
+          "split": "screening",
+          "start_id": "32651",
+          "start_name": "coccidioidomycosis"
+        },
+        {
+          "exact_pattern": true,
+          "query_id": "BH2_03953",
+          "split": "screening",
+          "start_id": "37038",
+          "start_name": "endometrium neoplasm"
+        },
+        {
+          "exact_pattern": true,
+          "query_id": "BH2_03991",
+          "split": "screening",
+          "start_id": "29908",
+          "start_name": "familial male-limited precocious puberty"
+        },
+        {
+          "exact_pattern": true,
+          "query_id": "BH2_04003",
+          "split": "screening",
+          "start_id": "83780",
+          "start_name": "fetal erythroblastosis"
+        },
+        {
+          "exact_pattern": true,
+          "query_id": "BH2_04007",
+          "split": "screening",
+          "start_id": "83880",
+          "start_name": "folic acid deficiency anemia"
+        },
+        {
+          "exact_pattern": true,
+          "query_id": "BH2_04425",
+          "split": "screening",
+          "start_id": "33542",
+          "start_name": "scrub typhus"
+        },
+        {
+          "exact_pattern": true,
+          "query_id": "BH2_05366",
+          "split": "screening",
+          "start_id": "321",
+          "start_name": "OXT"
+        },
+        {
+          "exact_pattern": true,
+          "query_id": "BH2_05686",
+          "split": "screening",
+          "start_id": "89391",
+          "start_name": "Cephalohematoma"
+        },
+        {
+          "exact_pattern": true,
+          "query_id": "BH2_05843",
+          "split": "screening",
+          "start_id": "88994",
+          "start_name": "Impaired ristocetin-induced platelet aggregation"
+        },
+        {
+          "exact_pattern": true,
+          "query_id": "BH2_06427",
+          "split": "screening",
+          "start_id": "39126",
+          "start_name": "chronic diarrheal disease"
+        },
+        {
+          "exact_pattern": true,
+          "query_id": "BH2_01682",
+          "split": "smoke",
+          "start_id": "18973",
+          "start_name": "Elaidamide"
+        },
+        {
+          "exact_pattern": true,
+          "query_id": "BH2_03951",
+          "split": "smoke",
+          "start_id": "33680",
+          "start_name": "endometriosis (disease)"
+        },
+        {
+          "exact_pattern": true,
+          "query_id": "BH2_04459",
+          "split": "smoke",
+          "start_id": "38087",
+          "start_name": "streptococcal meningitis"
+        },
+        {
+          "exact_pattern": true,
+          "query_id": "BH2_04474",
+          "split": "smoke",
+          "start_id": "36347",
+          "start_name": "synovitis (disease)"
+        }
+      ],
+      "rule_list_enumerators": [
+        "1",
+        "2",
+        "3"
+      ],
+      "system_prompt_sha256": "c5240f8fa376ca187a69a9a0c2286702c538f60d6bd28cc96a80a0a1f11d8ad1",
+      "user_messages_matching_exact_pattern": 24
+    },
+    "problems": [],
+    "rule": "case-insensitive whole word (?<!\\w)TERM(?!\\w), re.IGNORECASE, as tests/test_leakage.py::scan_surface; plus raw case-insensitive substring",
+    "script": "verify_s15_review.py (scratchpad, read-only)",
+    "short_names": {
+      "entries": 34,
+      "entries_with_raw_substring": [
+        {
+          "contexts": {
+            "question": [
+              "are",
+              "Andarine"
+            ],
+            "starting_line": [
+              "Starting",
+              "Andarine"
+            ],
+            "system_prompt": [
+              "are",
+              "are"
+            ]
+          },
+          "name": "AR",
+          "query_id": "BH2_01282"
+        }
+      ],
+      "per_entry": [
+        {
+          "name": "F11",
+          "query_id": "BH2_00244",
+          "raw_substring_contexts": {},
+          "split": "expansion",
+          "start_id": "18371",
+          "start_name": "(R)-1-(4-(4-(hydroxymethyl)-1,3,2-dioxaborolan-2-yl)benzyl)guanidine",
+          "whole_word_hits": {
+            "question": 0,
+            "starting_line": 0,
+            "system_prompt": 0
+          }
+        },
+        {
+          "name": "ADA",
+          "query_id": "BH2_00341",
+          "raw_substring_contexts": {},
+          "split": "pilot",
+          "start_id": "19259",
+          "start_name": "1-Deaza-Adenosine",
+          "whole_word_hits": {
+            "question": 0,
+            "starting_line": 0,
+            "system_prompt": 0
+          }
+        },
+        {
+          "name": "TTR",
+          "query_id": "BH2_00461",
+          "raw_substring_contexts": {},
+          "split": "screening",
+          "start_id": "14097",
+          "start_name": "2,6-dimethyl-4-[(E)-2-phenylethenyl]phenol",
+          "whole_word_hits": {
+            "question": 0,
+            "starting_line": 0,
+            "system_prompt": 0
+          }
+        },
+        {
+          "name": "GCK",
+          "query_id": "BH2_00732",
+          "raw_substring_contexts": {},
+          "split": "expansion",
+          "start_id": "18420",
+          "start_name": "3-[(4-fluorophenyl)sulfanyl]-N-(4-methyl-1,3-thiazol-2-yl)-6-[(4-methyl-4H-1,2,4-triazol-3-yl)sulfanyl]pyridine-2-carboxamide",
+          "whole_word_hits": {
+            "question": 0,
+            "starting_line": 0,
+            "system_prompt": 0
+          }
+        },
+        {
+          "name": "ABO",
+          "query_id": "BH2_00841",
+          "raw_substring_contexts": {},
+          "split": "expansion",
+          "start_id": "16606",
+          "start_name": "4-AMINO-2-OCTYLOXY-6-HYDROXYMETHYL-TETRAHYDRO-PYRAN-3,5-DIOL",
+          "whole_word_hits": {
+            "question": 0,
+            "starting_line": 0,
+            "system_prompt": 0
+          }
+        },
+        {
+          "name": "UNG",
+          "query_id": "BH2_00874",
+          "raw_substring_contexts": {},
+          "split": "expansion",
+          "start_id": "19843",
+          "start_name": "4-[(1E,7E)-8-(2,6-DIOXO-1,2,3,6-TETRAHYDROPYRIMIDIN-4-YL)-3,6-DIOXA-2,7-DIAZAOCTA-1,7-DIEN-1-YL]BENZOIC ACID",
+          "whole_word_hits": {
+            "question": 0,
+            "starting_line": 0,
+            "system_prompt": 0
+          }
+        },
+        {
+          "name": "GSR",
+          "query_id": "BH2_01061",
+          "raw_substring_contexts": {},
+          "split": "expansion",
+          "start_id": "17531",
+          "start_name": "6-(3-METHYL-1,4-DIOXO-1,4-DIHYDRONAPHTHALEN-2-YL)HEXANOIC ACID",
+          "whole_word_hits": {
+            "question": 0,
+            "starting_line": 0,
+            "system_prompt": 0
+          }
+        },
+        {
+          "name": "ALB",
+          "query_id": "BH2_01223",
+          "raw_substring_contexts": {},
+          "split": "expansion",
+          "start_id": "14430",
+          "start_name": "Acetrizoic acid",
+          "whole_word_hits": {
+            "question": 0,
+            "starting_line": 0,
+            "system_prompt": 0
+          }
+        },
+        {
+          "name": "KIT",
+          "query_id": "BH2_01280",
+          "raw_substring_contexts": {},
+          "split": "expansion",
+          "start_id": "17285",
+          "start_name": "Ancestim",
+          "whole_word_hits": {
+            "question": 0,
+            "starting_line": 0,
+            "system_prompt": 0
+          }
+        },
+        {
+          "name": "AR",
+          "query_id": "BH2_01282",
+          "raw_substring_contexts": {
+            "question": [
+              "are",
+              "Andarine"
+            ],
+            "starting_line": [
+              "Starting",
+              "Andarine"
+            ],
+            "system_prompt": [
+              "are",
+              "are"
+            ]
+          },
+          "split": "expansion",
+          "start_id": "16450",
+          "start_name": "Andarine",
+          "whole_word_hits": {
+            "question": 0,
+            "starting_line": 0,
+            "system_prompt": 0
+          }
+        },
+        {
+          "name": "LTF",
+          "query_id": "BH2_02390",
+          "raw_substring_contexts": {},
+          "split": "expansion",
+          "start_id": "18279",
+          "start_name": "Nitrilotriacetic acid",
+          "whole_word_hits": {
+            "question": 0,
+            "starting_line": 0,
+            "system_prompt": 0
+          }
+        },
+        {
+          "name": "F2",
+          "query_id": "BH2_02780",
+          "raw_substring_contexts": {},
+          "split": "expansion",
+          "start_id": "16099",
+          "start_name": "TRANS-4-(GUANIDINOMETHYL)-CYCLOHEXANE-L-YL-D-3-CYCLOHEXYLALANYL-L-AZETIDINE-2-YL-D-TYROSINYL-L-HOMOARGININAMIDE",
+          "whole_word_hits": {
+            "question": 0,
+            "starting_line": 0,
+            "system_prompt": 0
+          }
+        },
+        {
+          "name": "PGR",
+          "query_id": "BH2_02789",
+          "raw_substring_contexts": {},
+          "split": "pilot",
+          "start_id": "17392",
+          "start_name": "Tanaproget",
+          "whole_word_hits": {
+            "question": 0,
+            "starting_line": 0,
+            "system_prompt": 0
+          }
+        },
+        {
+          "name": "NGF",
+          "query_id": "BH2_04824",
+          "raw_substring_contexts": {},
+          "split": "expansion",
+          "start_id": "14583",
+          "start_name": "Solifenacin",
+          "whole_word_hits": {
+            "question": 0,
+            "starting_line": 0,
+            "system_prompt": 0
+          }
+        },
+        {
+          "name": "XDH",
+          "query_id": "BH2_04828",
+          "raw_substring_contexts": {},
+          "split": "pilot",
+          "start_id": "14574",
+          "start_name": "Sulfinpyrazone",
+          "whole_word_hits": {
+            "question": 0,
+            "starting_line": 0,
+            "system_prompt": 0
+          }
+        },
+        {
+          "name": "CKB",
+          "query_id": "BH2_04856",
+          "raw_substring_contexts": {},
+          "split": "expansion",
+          "start_id": "17226",
+          "start_name": "Tirofiban",
+          "whole_word_hits": {
+            "question": 0,
+            "starting_line": 0,
+            "system_prompt": 0
+          }
+        },
+        {
+          "name": "CKM",
+          "query_id": "BH2_04856",
+          "raw_substring_contexts": {},
+          "split": "expansion",
+          "start_id": "17226",
+          "start_name": "Tirofiban",
+          "whole_word_hits": {
+            "question": 0,
+            "starting_line": 0,
+            "system_prompt": 0
+          }
+        },
+        {
+          "name": "CRP",
+          "query_id": "BH2_04856",
+          "raw_substring_contexts": {},
+          "split": "expansion",
+          "start_id": "17226",
+          "start_name": "Tirofiban",
+          "whole_word_hits": {
+            "question": 0,
+            "starting_line": 0,
+            "system_prompt": 0
+          }
+        },
+        {
+          "name": "GSN",
+          "query_id": "BH2_04856",
+          "raw_substring_contexts": {},
+          "split": "expansion",
+          "start_id": "17226",
+          "start_name": "Tirofiban",
+          "whole_word_hits": {
+            "question": 0,
+            "starting_line": 0,
+            "system_prompt": 0
+          }
+        },
+        {
+          "name": "IL6",
+          "query_id": "BH2_04856",
+          "raw_substring_contexts": {},
+          "split": "expansion",
+          "start_id": "17226",
+          "start_name": "Tirofiban",
+          "whole_word_hits": {
+            "question": 0,
+            "starting_line": 0,
+            "system_prompt": 0
+          }
+        },
+        {
+          "name": "TNF",
+          "query_id": "BH2_04856",
+          "raw_substring_contexts": {},
+          "split": "expansion",
+          "start_id": "17226",
+          "start_name": "Tirofiban",
+          "whole_word_hits": {
+            "question": 0,
+            "starting_line": 0,
+            "system_prompt": 0
+          }
+        },
+        {
+          "name": "VCL",
+          "query_id": "BH2_04856",
+          "raw_substring_contexts": {},
+          "split": "expansion",
+          "start_id": "17226",
+          "start_name": "Tirofiban",
+          "whole_word_hits": {
+            "question": 0,
+            "starting_line": 0,
+            "system_prompt": 0
+          }
+        },
+        {
+          "name": "VIM",
+          "query_id": "BH2_04856",
+          "raw_substring_contexts": {},
+          "split": "expansion",
+          "start_id": "17226",
+          "start_name": "Tirofiban",
+          "whole_word_hits": {
+            "question": 0,
+            "starting_line": 0,
+            "system_prompt": 0
+          }
+        },
+        {
+          "name": "MCC",
+          "query_id": "BH2_06279",
+          "raw_substring_contexts": {},
+          "split": "expansion",
+          "start_id": "28259",
+          "start_name": "X-linked hereditary sensory and autonomic neuropathy with deafness",
+          "whole_word_hits": {
+            "question": 0,
+            "starting_line": 0,
+            "system_prompt": 0
+          }
+        },
+        {
+          "name": "ATP",
+          "query_id": "BH2_06294",
+          "raw_substring_contexts": {},
+          "split": "expansion",
+          "start_id": "31831",
+          "start_name": "acromegaloid facial appearance syndrome",
+          "whole_word_hits": {
+            "question": 0,
+            "starting_line": 0,
+            "system_prompt": 0
+          }
+        },
+        {
+          "name": "RB1",
+          "query_id": "BH2_06423",
+          "raw_substring_contexts": {},
+          "split": "expansion",
+          "start_id": "28362",
+          "start_name": "chromosome 13q14 deletion syndrome",
+          "whole_word_hits": {
+            "question": 0,
+            "starting_line": 0,
+            "system_prompt": 0
+          }
+        },
+        {
+          "name": "EPX",
+          "query_id": "BH2_06518",
+          "raw_substring_contexts": {},
+          "split": "expansion",
+          "start_id": "32078",
+          "start_name": "eosinophil peroxidase deficiency",
+          "whole_word_hits": {
+            "question": 0,
+            "starting_line": 0,
+            "system_prompt": 0
+          }
+        },
+        {
+          "name": "C3",
+          "query_id": "BH2_06865",
+          "raw_substring_contexts": {},
+          "split": "pilot",
+          "start_id": "30998",
+          "start_name": "pemphigus vulgaris",
+          "whole_word_hits": {
+            "question": 0,
+            "starting_line": 0,
+            "system_prompt": 0
+          }
+        },
+        {
+          "name": "ALB",
+          "query_id": "BH2_07325",
+          "raw_substring_contexts": {},
+          "split": "expansion",
+          "start_id": "30533",
+          "start_name": "cavernous hemangiomas of face-supraumbilical midline raphe syndrome",
+          "whole_word_hits": {
+            "question": 0,
+            "starting_line": 0,
+            "system_prompt": 0
+          }
+        },
+        {
+          "name": "CA1",
+          "query_id": "BH2_07343",
+          "raw_substring_contexts": {},
+          "split": "expansion",
+          "start_id": "38889",
+          "start_name": "congenital isolated hyperinsulinism",
+          "whole_word_hits": {
+            "question": 0,
+            "starting_line": 0,
+            "system_prompt": 0
+          }
+        },
+        {
+          "name": "CA2",
+          "query_id": "BH2_07343",
+          "raw_substring_contexts": {},
+          "split": "expansion",
+          "start_id": "38889",
+          "start_name": "congenital isolated hyperinsulinism",
+          "whole_word_hits": {
+            "question": 0,
+            "starting_line": 0,
+            "system_prompt": 0
+          }
+        },
+        {
+          "name": "ALB",
+          "query_id": "BH2_07383",
+          "raw_substring_contexts": {},
+          "split": "expansion",
+          "start_id": "84235",
+          "start_name": "epithelioid hemangioendothelioma",
+          "whole_word_hits": {
+            "question": 0,
+            "starting_line": 0,
+            "system_prompt": 0
+          }
+        },
+        {
+          "name": "ALB",
+          "query_id": "BH2_07479",
+          "raw_substring_contexts": {},
+          "split": "pilot",
+          "start_id": "36025",
+          "start_name": "lymphangioma",
+          "whole_word_hits": {
+            "question": 0,
+            "starting_line": 0,
+            "system_prompt": 0
+          }
+        },
+        {
+          "name": "ALB",
+          "query_id": "BH2_07578",
+          "raw_substring_contexts": {},
+          "split": "expansion",
+          "start_id": "84239",
+          "start_name": "retiform hemangioendothelioma",
+          "whole_word_hits": {
+            "question": 0,
+            "starting_line": 0,
+            "system_prompt": 0
+          }
+        }
+      ],
+      "queries": 26,
+      "whole_word_hits_total": 0
+    }
+  },
+  "verification_script_sha256": "d14555df2fd06e75c2f75c9920305b4b4def1cbe7dc75c1e54afdd55348165ac",
+  "verification_script_source": "\"\"\"Step a: verify researcher decisions 1 and 2 for S15 manual review. Read-only.\"\"\"\nimport hashlib\nimport json\nimport re\nimport sys\nfrom pathlib import Path\n\nROOT = Path(sys.argv[1])\nOUT = Path(sys.argv[2])\nS15 = ROOT / \"results/diagnostics/s15\"\n\n\ndef load(p):\n    return json.loads((ROOT / p).read_text(encoding=\"utf-8\"))\n\n\ndef sha(p):\n    return hashlib.sha256((ROOT / p).read_bytes()).hexdigest()\n\n\ndef whole_word(term, text):\n    # Same rule as tests/test_leakage.py::scan_surface.\n    return [m.group(0) for m in re.finditer(r\"(?<!\\w)\" + re.escape(term) + r\"(?!\\w)\", text, re.IGNORECASE)]\n\n\ndef substr_contexts(term, text):\n    out = []\n    for m in re.finditer(re.escape(term), text, re.IGNORECASE):\n        s, e = m.start(), m.end()\n        while s > 0 and re.match(r\"\\w\", text[s - 1]):\n            s -= 1\n        while e < len(text) and re.match(r\"\\w\", text[e]):\n            e += 1\n        out.append(text[s:e])\n    return out\n\n\nsheets = {}\nfor split in (\"expansion\", \"pilot\", \"screening\", \"smoke\"):\n    rows = [json.loads(l) for l in (ROOT / f\"data/agent_inputs/{split}.jsonl\").read_text(encoding=\"utf-8\").splitlines() if l.strip()]\n    for r in rows:\n        sheets[(split, r[\"query_id\"])] = r\n\naudit = load(\"results/diagnostics/s15/audit-v2.json\")\noverlap = load(\"results/diagnostics/s15/source_name_overlap.json\")\ncaptures = audit[\"S15_A\"][\"captures\"]\nsystems = sorted({c[\"messages\"][0][\"content\"] for c in captures})\nproblems = []\n\n# ---- Decision 2: messages ----\nif len(captures) != 24:\n    problems.append(f\"expected 24 captures, found {len(captures)}\")\nif len(systems) != 1:\n    problems.append(f\"expected exactly 1 distinct system prompt, found {len(systems)}\")\nsystem = systems[0]\nmsg_rows = []\nfor c in captures:\n    roles = [m[\"role\"] for m in c[\"messages\"]]\n    row = sheets.get((c[\"split\"], c[\"query_id\"]))\n    if roles != [\"system\", \"user\"]:\n        problems.append(f\"{c['query_id']}: roles {roles}\")\n    if row is None:\n        problems.append(f\"{c['query_id']}: not in {c['split']}.jsonl\")\n        continue\n    expected = row[\"question_text\"] + \"\\n\" + f\"Starting entity: {row['start_name']} (PrimeKG ID: {row['start_id']})\"\n    ok = c[\"messages\"][1][\"content\"] == expected\n    if not ok:\n        problems.append(f\"{c['query_id']}: user message != exact pattern\")\n    msg_rows.append({\"query_id\": c[\"query_id\"], \"split\": c[\"split\"], \"exact_pattern\": ok,\n                     \"start_name\": row[\"start_name\"], \"start_id\": row[\"start_id\"]})\n\nnumbers_in_system = re.findall(r\"\\d+\", system)\nstandalone_numbers = sorted({n for n in re.findall(r\"(?<![\\w.])\\d+(?![\\w])(?!\\.\\s)\", system)})\nenumerators = re.findall(r\"(?m)^(\\d+)\\.\\s\", system)\n\nsuffix_ids = [\"BH2_03750\", \"BH2_03951\", \"BH2_04474\"]\nsuffix = {}\nfor qid in suffix_ids:\n    hits = [r for (s, q), r in sheets.items() if q == qid]\n    cap = [m for m in msg_rows if m[\"query_id\"] == qid]\n    suffix[qid] = {\"in_captures\": bool(cap),\n                   \"start_name\": hits[0][\"start_name\"] if hits else None,\n                   \"ends_with_disease_suffix\": bool(hits) and hits[0][\"start_name\"].endswith(\" (disease)\")}\n    if not suffix[qid][\"ends_with_disease_suffix\"] or not cap:\n        problems.append(f\"{qid}: suffix check {suffix[qid]}\")\n\n# ---- Decision 1: short names ----\nshort = overlap[\"short_names\"]\nif len(short) != 34:\n    problems.append(f\"expected 34 short-name entries, found {len(short)}\")\nqids = sorted({s[\"query_id\"] for s in short})\nif len(qids) != 26:\n    problems.append(f\"expected 26 queries, found {len(qids)}\")\nshort_rows = []\nfor s in sorted(short, key=lambda x: (x[\"query_id\"], x[\"name\"])):\n    row = sheets[(s[\"split\"], s[\"query_id\"])]\n    line = f\"Starting entity: {row['start_name']} (PrimeKG ID: {row['start_id']})\"\n    surfaces = {\"starting_line\": line, \"system_prompt\": system, \"question\": row[\"question_text\"]}\n    ww = {k: whole_word(s[\"name\"], v) for k, v in surfaces.items()}\n    sub = {k: substr_contexts(s[\"name\"], v) for k, v in surfaces.items()}\n    if any(ww.values()):\n        problems.append(f\"{s['query_id']} {s['name']}: whole-word hit {ww}\")\n    if s[\"present_in_starting_line\"] or s[\"present_in_system\"]:\n        problems.append(f\"{s['query_id']} {s['name']}: audit flags present=True\")\n    short_rows.append({\"query_id\": s[\"query_id\"], \"split\": s[\"split\"], \"name\": s[\"name\"],\n                       \"start_name\": row[\"start_name\"], \"start_id\": row[\"start_id\"],\n                       \"whole_word_hits\": {k: len(v) for k, v in ww.items()},\n                       \"raw_substring_contexts\": {k: v for k, v in sub.items() if v}})\n\nsubstring_entries = [r for r in short_rows if r[\"raw_substring_contexts\"]]\n\nresult = {\n    \"script\": \"verify_s15_review.py (scratchpad, read-only)\",\n    \"rule\": \"case-insensitive whole word (?<!\\\\w)TERM(?!\\\\w), re.IGNORECASE, as tests/test_leakage.py::scan_surface; plus raw case-insensitive substring\",\n    \"inputs_sha256\": {p: sha(p) for p in [\n        \"results/diagnostics/s15/audit-v2.json\",\n        \"results/diagnostics/s15/source_name_overlap.json\",\n        \"data/agent_inputs/expansion.jsonl\", \"data/agent_inputs/pilot.jsonl\",\n        \"data/agent_inputs/screening.jsonl\", \"data/agent_inputs/smoke.jsonl\"]},\n    \"messages\": {\n        \"captures\": len(captures),\n        \"distinct_system_prompts\": len(systems),\n        \"system_prompt_sha256\": hashlib.sha256(system.encode(\"utf-8\")).hexdigest(),\n        \"user_messages_matching_exact_pattern\": sum(m[\"exact_pattern\"] for m in msg_rows),\n        \"digit_runs_in_system_prompt\": numbers_in_system,\n        \"rule_list_enumerators\": enumerators,\n        \"disease_suffix_queries\": suffix,\n        \"per_capture\": msg_rows,\n    },\n    \"short_names\": {\n        \"entries\": len(short), \"queries\": len(qids),\n        \"whole_word_hits_total\": sum(sum(r[\"whole_word_hits\"].values()) for r in short_rows),\n        \"entries_with_raw_substring\": [{\"query_id\": r[\"query_id\"], \"name\": r[\"name\"],\n                                        \"contexts\": r[\"raw_substring_contexts\"]} for r in substring_entries],\n        \"per_entry\": short_rows,\n    },\n    \"problems\": problems,\n}\nOUT.write_text(json.dumps(result, indent=2, sort_keys=True, ensure_ascii=False) + \"\\n\", encoding=\"utf-8\")\nprint(json.dumps({k: v for k, v in result[\"messages\"].items() if k != \"per_capture\"}, indent=1, ensure_ascii=False))\nprint(\"short-name entries:\", len(short), \"queries:\", len(qids), \"whole-word hits:\", result[\"short_names\"][\"whole_word_hits_total\"])\nfor r in substring_entries:\n    print(\"  substring:\", r[\"query_id\"], r[\"name\"], r[\"raw_substring_contexts\"] if len(str(r[\"raw_substring_contexts\"])) < 300 else {k: sorted(set(v)) for k, v in r[\"raw_substring_contexts\"].items()})\nprint(\"PROBLEMS:\", problems)\n"
+}

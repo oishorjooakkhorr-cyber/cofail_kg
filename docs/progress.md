@@ -1,5 +1,15 @@
 # Progress — CoFail-KG
 
+**S15 accepted (2026-10-16).** Researcher Oishu reviewed, with AI assistance,
+all 34 short-name entries (26 queries), the common system prompt and all 24
+captured user messages, and accepted them; confirmed all four overlap rows as
+their own decision (including BH2_05778); and approved S15. Code verification:
+24/24 messages match the exact pattern, one system prompt, 0 whole-word
+short-name hits. Record: `results/diagnostics/s15/manual_review_20261016.json`
+and `.md`; decision log 2026-10-16 "S15 manual review and approval". Full suite
+at approval: `results/diagnostics/s15/full-suite-approval-20261016.txt`. The
+"pending" statements below are superseded but kept as history. S16 not started.
+
 S15 overlap review (2026-10-16): per-row decisions recorded in
 `results/diagnostics/s15/overlap_review.json`. BH2_04007, BH2_05971 and BH2_06099
 accepted as contained-phrase overlaps; BH2_05778 accepted as a full-name,

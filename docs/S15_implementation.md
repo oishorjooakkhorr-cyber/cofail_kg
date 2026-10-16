@@ -1,5 +1,9 @@
 # S15 leakage audit — 2026-10-16
 
+> **Superseded status (2026-10-16): S15 accepted by the researcher.** See the
+> final section "S15 manual review and approval". The status text below is
+> historical and kept unchanged.
+
 **Implemented and executed; S15 is NOT accepted.** Protocol §19.1(a) has one
 strict whole-word match. The researcher explicitly chose “Keep strict failure;
 decide a remedy later.” No exception, exclusion or scientific-rule change was
@@ -273,3 +277,38 @@ their flags and remain in official gate populations; the pre-registered
 sensitivity population excludes all four. This does not establish that the
 overlaps have no effect on model behavior. The 34 short-name entries and captured
 initial messages still require review; S15 acceptance remains pending.
+
+## S15 manual review and approval — 2026-10-16
+
+Supersedes the "pending" statements above, which are kept as history.
+
+Reviewer: Oishu (researcher). Basis: the short-name entries, common system
+prompt and captured user messages in `manual_review_packet.md` were checked
+with AI assistance (Claude, in chat and again in code), and the researcher
+accepts them on that basis.
+
+- **Short names:** all 34 query/name entries (26 queries) accepted; 0
+  case-insensitive whole-word occurrences in starting line, system prompt or
+  question. AR (BH2_01282) occurs only inside longer words.
+- **Messages:** common system prompt and all 24 captured user messages accepted;
+  each is exactly the question text plus the starting-entity line. Apart from
+  rule-list numbers 1-3, the system prompt contains only 50 (page size) and 30
+  (tool budget). The " (disease)" suffix in BH2_03750, BH2_03951 and BH2_04474
+  is PrimeKG's canonical name.
+- **Overlaps:** all four rows of `overlap_review.json` confirmed as the
+  researcher's own decision, including BH2_05778.
+- **S15 approved.**
+
+Verification was a read-only script with the same whole-word rule as
+`tests/test_leakage.py`, plus raw substring search; its output, input SHA256s
+and source are embedded in `results/diagnostics/s15/manual_review_20261016.json`
+(readable summary: `.md`). It found two literal mismatches in the first decision
+wording (AR also inside "Starting" and "are"; rule-list numbers 1-3 in the
+system prompt). The researcher supplied corrected wording, which is what the
+record contains. Full suite at approval:
+`results/diagnostics/s15/full-suite-approval-20261016.txt`.
+
+Unchanged: production code, tests, protocol, decision rules, configs, frozen
+hashes, data, prior evidence, flags and gate/sensitivity populations. No model
+call or episode. The temporary `docs/S15_REVIEW_HANDOFF.md` was removed after
+this approval was recorded. S16 not started.
