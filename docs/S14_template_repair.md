@@ -1,5 +1,9 @@
 # S14 template repair and repeat — 2026-10-16
 
+Subsequent researcher decision: P1 approved and its exact template hash frozen on
+2026-10-16. Broader reliability is not an S14 requirement. This approval covers
+the prompt only; the diagnostic settings and remaining limitations below stand.
+
 The authorized single repeat finished **SUCCESS**, after the existing one allowed
 JSON re-prompt. All four native tool calls succeeded; the final 21 ID/name pairs
 exactly match the returned disease neighbors. This is a successful execution and

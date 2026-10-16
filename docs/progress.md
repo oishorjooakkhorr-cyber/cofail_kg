@@ -1,6 +1,14 @@
 # Progress — CoFail-KG
 
 ## Current stage
+P1 approved and frozen by the researcher (2026-10-16), conditional on broader
+reliability not being required by S14; the runbook confirms that condition.
+`configs/frozen_hashes.yaml` now contains the exact unfilled P1 template SHA256:
+`8f93b7c42ef7a90f64bbcd83e6b77db62e4f3c6b0c08a45f068b435a9c655265`.
+This approves P1, not experimental model/settings changes. The researcher then
+authorized the local S14 commit; acceptance of the diagnostic settings/context
+margin remains separate. No new episode or S15.
+
 S14 template repair and authorized repeat (2026-10-16): **SUCCESS** after one fixed
 re-prompt; four successful native calls and 21 final ID/name pairs matching the
 returned disease items. Full host suite: **352 passed**, no skips/exclusions.
@@ -11,7 +19,7 @@ are unchanged. Crucial correction: local `qwen3:4b` metadata identifies
 Qwen3-4B-Thinking-2507, which supports only thinking mode. Reasoning persisted
 despite `think=false`; the first final reply failed parsing, the re-prompt succeeded.
 This establishes a successful example, not reliable non-thinking behavior or gold
-accuracy. P1 approval/freeze remains pending; no S15 or experimental model choice.
+accuracy. P1 approval/freeze is now complete; no S15 or experimental model choice.
 Details and next-step options: `docs/S14_template_repair.md`.
 
 Previous diagnostic checkpoint:

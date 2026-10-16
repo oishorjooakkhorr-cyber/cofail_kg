@@ -792,3 +792,24 @@ not validation of non-thinking behavior or a replacement experimental model.
 True non-thinking requires a researcher-selected compatible set of weights.
 No model download, P1 freeze, frozen protocol change, gold scoring, S15 or commit.
 Engineering choices, exact identities and evidence: docs/S14_template_repair.md.
+
+## 2026-10-16 — Researcher approval and freeze of P1
+
+Researcher authorized: "approve it if s14 didnt required broader reliability".
+Runbook S14 requires one real example and specified trace/format checks; it does
+not require broader reliability or gold-answer scoring. The condition is met.
+The exact unfilled P1 text in src/cofail_kg/agents/prompts.py was checked verbatim
+against the runbook and frozen through the existing write_once helper as:
+prompt: 8f93b7c42ef7a90f64bbcd83e6b77db62e4f3c6b0c08a45f068b435a9c655265
+
+All existing frozen values were preserved; repeating the same write was verified
+to be a no-op. The successful diagnostic used this unchanged P1. Historical
+records retain their original draft-review provenance. This approval does not
+select experimental weights, thinking policy or token settings, accept the
+diagnostic context margin, authorize a commit, or begin S15. No new design choice.
+
+Subsequent authorization: researcher said "okay commit" after being told this
+would create the local `S14: agent runner and prompt P1` commit without pushing.
+The runner and diagnostic evidence already exist in checkpoint 8322145; this
+commit records the P1 freeze and approval. Unrelated backup-script work is excluded.
+Pre-commit verification: 352 tests passed; frozen prompt matches the implementation.
