@@ -1,5 +1,12 @@
 # Progress — CoFail-KG
 
+S15 overlap review (2026-10-16): per-row decisions recorded in
+`results/diagnostics/s15/overlap_review.json`. BH2_04007, BH2_05971 and BH2_06099
+accepted as contained-phrase overlaps; BH2_05778 accepted as a full-name,
+cross-type overlap under the researcher's authorized choice. All four retain
+SOURCE_NAME_OVERLAP; gate and sensitivity populations are unchanged. Short-name
+and captured-message reviews remain pending, so S15 acceptance remains pending.
+
 S15 revision 2 (2026-10-16): authorized source-name overlap exemption implemented;
 **all automated checks pass**. Only protocol §19.1(a) amended, with chronology
 corrected to before any pilot model run or co-failure results and prior S14

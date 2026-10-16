@@ -260,3 +260,16 @@ in `audit-v2.json`; the original `example_messages.txt` is unchanged.
 Automated S15 verification passes; manual message/flag/short-name review is not
 claimed complete. No commit, new dependency, model call, production/data/config
 change, decision-rule edit, or S16 work was performed.
+
+### Subsequent per-row overlap review — 2026-10-16
+
+Decisions are recorded separately in `results/diagnostics/s15/overlap_review.json`
+to preserve the original automated evidence. Rows refer to the table presented
+in chat: BH2_04007, BH2_05778, BH2_05971, BH2_06099, in that order.
+Rows 1, 3 and 4 are accepted as contained-phrase overlaps. The researcher
+authorized acceptance or exclusion for row 2; the assistant selected acceptance
+as a full-name, cross-type overlap under the existing exemption. All four retain
+their flags and remain in official gate populations; the pre-registered
+sensitivity population excludes all four. This does not establish that the
+overlaps have no effect on model behavior. The 34 short-name entries and captured
+initial messages still require review; S15 acceptance remains pending.

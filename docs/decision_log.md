@@ -872,3 +872,26 @@ or deselections. The 524-row scan confirms exactly the four expected flags and
 zero failures; 34 short-name query/name entries require manual review. New
 evidence is versioned under results/diagnostics/s15/; original evidence and all
 protected files remain unchanged. Manual review is pending; no commit made.
+
+## 2026-10-16 — S15 per-row overlap decisions
+
+Researcher requested per-row decisions in the audit evidence, specifying
+contained-phrase acceptance for chat-table rows 1, 3 and 4, and authorizing
+either acceptance as full-name, cross-type overlap or exclusion for row 2.
+Recorded in `results/diagnostics/s15/overlap_review.json`:
+
+| Chat row | Query | Decision | Classification |
+|---|---|---|---|
+| 1 | BH2_04007 | Accept | contained-phrase overlap |
+| 2 | BH2_05778 | Accept | full-name, cross-type overlap |
+| 3 | BH2_05971 | Accept | contained-phrase overlap |
+| 4 | BH2_06099 | Accept | contained-phrase overlap |
+
+For row 2 the assistant selected the authorized acceptance option: canonical
+starting phenotype node 89218 and non-gold bridge disease node 29749 share the
+name Ewing sarcoma. The approved §19.1(a) exemption permits full-name containment.
+No new scientific rule, exclusion or protocol change is introduced. All four
+retain SOURCE_NAME_OVERLAP; official gates include them and pre-registered
+sensitivity reports exclude them. Original automated evidence is unchanged.
+Short-name and captured-message review remain pending; this entry does not
+claim full S15 acceptance or absence of overlap effects on model behavior.

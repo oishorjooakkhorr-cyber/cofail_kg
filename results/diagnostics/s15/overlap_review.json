@@ -1,0 +1,59 @@
+{
+  "date_local": "2026-10-16",
+  "timezone": "Asia/Dhaka",
+  "source_evidence": "results/diagnostics/s15/source_name_overlap.json",
+  "authority": "Researcher requested per-row decisions, with contained-phrase acceptance for rows 1, 3 and 4 and either acceptance or exclusion for row 2. Assistant selected acceptance for row 2 under the approved section 19.1(a) exemption.",
+  "row_order": "Order of the four-row table presented in chat, not the source JSON array order",
+  "decisions": [
+    {
+      "row": 1,
+      "query_id": "BH2_04007",
+      "decision": "accept",
+      "classification": "contained-phrase overlap",
+      "start_id": "83880",
+      "start_name": "folic acid deficiency anemia",
+      "matched_node_id": "14678",
+      "matched_name": "Folic acid",
+      "reason": "Non-gold B_q name lies entirely inside the unchanged canonical starting name."
+    },
+    {
+      "row": 2,
+      "query_id": "BH2_05778",
+      "decision": "accept",
+      "classification": "full-name, cross-type overlap",
+      "start_id": "89218",
+      "start_name": "Ewing sarcoma",
+      "start_type": "effect/phenotype",
+      "matched_node_id": "29749",
+      "matched_name": "Ewing sarcoma",
+      "matched_type": "disease",
+      "reason": "The starting phenotype node and non-gold B_q disease node have identical names but distinct IDs and types. Full-name containment satisfies the approved exemption; no additional exclusion is introduced."
+    },
+    {
+      "row": 3,
+      "query_id": "BH2_05971",
+      "decision": "accept",
+      "classification": "contained-phrase overlap",
+      "start_id": "94389",
+      "start_name": "Perineal hemangioma",
+      "matched_node_id": "33562",
+      "matched_name": "hemangioma",
+      "reason": "Non-gold B_q name lies entirely inside the unchanged canonical starting name; matched node 33562 differs from gold bridge 32222."
+    },
+    {
+      "row": 4,
+      "query_id": "BH2_06099",
+      "decision": "accept",
+      "classification": "contained-phrase overlap",
+      "start_id": "25461",
+      "start_name": "Visceral hemangioma",
+      "matched_node_id": "33562",
+      "matched_name": "hemangioma",
+      "reason": "Non-gold B_q name lies entirely inside the unchanged canonical starting name; matched node 33562 differs from gold bridge 32222."
+    }
+  ],
+  "population_effect": "All four retain SOURCE_NAME_OVERLAP and remain in official gate populations; all four are excluded only from the pre-registered sensitivity population.",
+  "remaining_review": ["34 short-name entries", "captured initial messages"],
+  "s15_acceptance": "pending",
+  "limitation": "Acceptance establishes eligibility under the exemption, not absence of an effect on model behavior."
+}

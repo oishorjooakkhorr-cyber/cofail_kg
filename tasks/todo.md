@@ -1,5 +1,9 @@
 # S15 revision 2 — automated verification complete
 
+Developer handoff: [S15 review and approval instructions](../docs/S15_REVIEW_HANDOFF.md).
+After explicit S15 approval is permanently recorded, delete that temporary handoff
+and remove this pointer; retain all audit and review evidence.
+
 - [x] Researcher authorizes the narrow exemption and corrected S14/pilot chronology.
 - [x] Confirm no protocol frozen-hash entry and record protected-file identities.
 - [x] Amend only protocol §19.1(a); record decision and pre-register split reporting.
@@ -8,7 +12,8 @@
 - [x] Pass all-524 scan with zero failures and exactly four specified flags.
 - [x] Pass focused 43-test audit and full 401-test sandbox suite; no skips/deselections.
 - [x] Preserve old evidence; save versioned results and complete overlap/short-name report.
-- [ ] Researcher reviews exact messages, four overlap cases and the 34-entry short-name list.
+- [x] Record four per-row overlap decisions under researcher authorization in `results/diagnostics/s15/overlap_review.json`.
+- [ ] Researcher reviews exact messages and the 34-entry short-name list.
 
 Later reporting requirement (pre-registered here; not implemented during S15):
 every §16 metric and §17 comparison uses both all queries and a report excluding
