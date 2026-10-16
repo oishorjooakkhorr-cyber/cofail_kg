@@ -1,4 +1,4 @@
-"""S14 launcher checks use a mocked model and the unchanged real S12 saver."""
+"""S14 launcher checks use a mocked model and the real S12 saver."""
 
 import importlib.util
 import json
@@ -78,13 +78,22 @@ def test_launcher_rejects_changed_sheet_before_model_call(launcher):
     module.run_episode.assert_not_called()
 
 
-def test_launcher_stops_on_blocked_persistence_before_model_call(launcher, monkeypatch):
+@pytest.mark.parametrize("error", [PermissionError("blocked"), OSError("disk full")])
+def test_launcher_stops_on_blocked_persistence_before_model_call(launcher, monkeypatch, error):
     module, _, _ = launcher
-    monkeypatch.setattr(module, "check_persistence", Mock(side_effect=PermissionError("blocked")))
-    with pytest.raises(RuntimeError, match="outside the restricted sandbox"):
+    monkeypatch.setattr(module, "check_persistence", Mock(side_effect=error))
+    with pytest.raises(RuntimeError, match="persistence is blocked"):
         module.main(["--run-id", "s14-test", "--think", "true"])
     module.OllamaClient.assert_not_called()
     module.run_episode.assert_not_called()
+
+
+def test_preflight_rejects_an_operation_that_overwrites(launcher, monkeypatch):
+    module, root, _ = launcher
+    monkeypatch.setattr(module, "publish_once", lambda source, target: target.write_bytes(source.read_bytes()))
+    with pytest.raises(RuntimeError, match="not refused"):
+        module.check_persistence(root / "results/runs")
+    assert list((root / "results/runs").iterdir()) == []
 
 
 def test_launcher_reports_changed_identity_and_keeps_record(launcher):

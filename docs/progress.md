@@ -1,5 +1,24 @@
 # Progress — CoFail-KG
 
+S12 sandbox portability fix (2026-10-16): Windows publishes staged episode files
+with no-overwrite rename; other platforms retain hard links. Saver and S14 preflight
+share the publisher; flush/fsync, reconstruction, cleanup and write-once protection
+remain. All four original sandbox failures now pass. Full **sandbox** suite:
+**358 passed in 13.56 s**, no skips/exclusions; actual `results/runs` synthetic
+save/load/overwrite probe and preflight pass. New checks include competing writers
+and explicit filesystem-error handling. Workspace pytest temp root is still needed.
+No host test execution, model call, protocol/frozen-setting change, commit or S15
+work. Report: `docs/S12_sandbox_fix_20261016.md`. This supersedes the prior host-only
+execution recommendation below; historical evidence is retained.
+
+S12 environment freshly verified (2026-10-16): unchanged S12 tests **21/21 pass**
+on host; full host suite **352 passed** in 12.47 s, no skips/exclusions. Actual
+`results/runs` preflight and synthetic save/load/reconstruction/overwrite-refusal
+probe pass. Sandbox with workspace temp still gives 17 passed/4 failed at hard-link
+persistence. Use approved host execution; sandbox policy and saver are unchanged.
+No model call, code/test/frozen-setting change, commit, or S15 work. Report and
+future-run procedure: `docs/S12_environment_verification_20261016.md`.
+
 ## Current stage
 P1 approved and frozen by the researcher (2026-10-16), conditional on broader
 reliability not being required by S14; the runbook confirms that condition.

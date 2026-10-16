@@ -1,6 +1,6 @@
 """Researcher launcher: one S14 example, first screening query, protocol §9.1 settings.
 
-Run outside the restricted sandbox. Prompt approval/freezing is a separate
+The output directory must pass the persistence preflight. Prompt approval/freezing is a separate
 researcher decision after reviewing the saved episode. No model is downloaded.
 """
 
@@ -16,7 +16,7 @@ import yaml
 from cofail_kg.agents.ollama_client import OllamaClient
 from cofail_kg.agents.prompts import prompt_sha256
 from cofail_kg.agents.run_agent import run_episode
-from cofail_kg.agents.trace import load_episode_record, record_path
+from cofail_kg.agents.trace import load_episode_record, publish_once, record_path
 from cofail_kg.kg.prepare import file_hash
 from cofail_kg.utils.frozen_hashes import read_frozen_hashes
 
@@ -24,20 +24,28 @@ ROOT = Path(__file__).resolve().parents[1]
 
 
 def check_persistence(root):
-    """Fail before a model call if this output directory cannot publish hard links."""
+    """Check flushed, write-once publication in the actual output directory (protocol §19)."""
     root.mkdir(parents=True, exist_ok=True)
     with TemporaryDirectory(prefix=".s14-check-", dir=root) as temporary:
         source, target = Path(temporary) / "source", Path(temporary) / "target"
-        source.write_bytes(b"S14 persistence check\n")
-        os.link(source, target)
-        if not source.samefile(target):
-            raise RuntimeError("Hard-link identity check failed")
+        content = b"S14 persistence check\n"
+        with source.open("xb") as handle:
+            handle.write(content)
+            handle.flush()
+            os.fsync(handle.fileno())
+        publish_once(source, target)
+        if target.read_bytes() != content:
+            raise RuntimeError("Published content check failed")
+        source.unlink(missing_ok=True)  # A hard-link publisher leaves source pointing to target.
+        source.write_bytes(b"Must not replace the first record\n")
         try:
-            os.link(source, target)
+            publish_once(source, target)
         except FileExistsError:
             pass
         else:
-            raise RuntimeError("Existing hard-link destination was not refused")
+            raise RuntimeError("Existing destination was not refused")
+        if target.read_bytes() != content:
+            raise RuntimeError("Existing destination was modified")
 
 
 def main(argv=None):
@@ -71,8 +79,8 @@ def main(argv=None):
         raise ValueError("P1 template does not match its frozen hash")
     try:
         check_persistence(runs_root)
-    except PermissionError as error:
-        raise RuntimeError("Episode persistence is blocked; run on the host outside the restricted sandbox") from error
+    except OSError as error:
+        raise RuntimeError("Episode persistence is blocked; check output-directory permissions and filesystem support") from error
     transport = yaml.safe_load((ROOT / "configs/ollama.yaml").read_text(encoding="utf-8"))
     think = args.think == "true"
     client = OllamaClient(think=think, timeout_seconds=transport["request_timeout_seconds"],

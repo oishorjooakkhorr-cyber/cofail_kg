@@ -39,18 +39,26 @@ the same packages without versions; use it only if you deliberately want newer v
 python -m pytest -q
 ```
 
-On this Windows host, run the suite in a normal PowerShell terminal or through
-approved host execution outside the Codex restricted sandbox. The sandbox denies
-the hard links used to publish write-once episode records and may also deny pytest's
-temporary directory. Moving the temporary directory does not remove the hard-link
-restriction. Do not skip the persistence tests or replace the atomic saver to work
-around that execution restriction.
+The saver publishes a complete, flushed temporary file using Windows rename, which
+refuses an existing destination. Other platforms retain hard-link publication to
+avoid POSIX rename's overwrite behavior. Existing results are never replaced.
+
+In the restricted Windows sandbox, use a fresh workspace temporary directory if
+pytest's default temporary location is blocked:
+
+```powershell
+.\.venv\Scripts\python.exe -m pytest -q --basetemp=.pytest_cache/sandbox-run-001
+```
+
+Use a new `--basetemp` directory for each run; pytest clears an existing one.
+Do not skip persistence tests. Check the actual output directory before inference;
+the S14 launcher performs this preflight automatically.
 
 - One test checks the real BioHopR file and skips until it has been downloaded (next section).
 - S4 unit tests use tiny synthetic graphs and do not require the full PrimeKG download.
 
 S14's single-example launcher is `scripts/14_run_episode.py`; it requires a new
-`--run-id` and an explicit `--think true` or `--think false`. Run it on the host with
+`--run-id` and an explicit `--think true` or `--think false`. It requires access to
 local Ollama serving the installed qwen3:4b. It checks frozen inputs and persistence
 before generation, uses the first screening query and protocol screening settings,
 and saves every episode outcome without overwriting. See `docs/S14_implementation.md`

@@ -4,11 +4,15 @@ Records are hand-written call logs in the KGEnvironment.call_log shape; no model
 """
 
 import itertools
+from concurrent.futures import ThreadPoolExecutor
 import json
 import os
 import random
 import subprocess
 import sys
+from threading import Barrier
+from types import SimpleNamespace
+from unittest.mock import Mock
 
 import pytest
 
@@ -284,7 +288,7 @@ def test_save_path_and_refuses_overwrite(tmp_path):
         "BH2_00001__A1__a1.json", "BH2_00001__A1__a2.json"]
 
 
-def test_link_refuses_existing_target_even_without_the_precheck(tmp_path, monkeypatch):
+def test_publication_refuses_existing_target_even_without_the_precheck(tmp_path, monkeypatch):
     rec = record([])
     path = save_episode_record(rec, tmp_path)
     monkeypatch.setattr(trace.Path, "exists", lambda self: False)  # simulate a racing writer
@@ -294,14 +298,63 @@ def test_link_refuses_existing_target_even_without_the_precheck(tmp_path, monkey
     assert [p.name for p in path.parent.iterdir()] == [path.name]
 
 
-@pytest.mark.parametrize("target", ["fsync", "link"])
+@pytest.mark.parametrize("target", ["fsync", "publish_once"])
 def test_crash_during_save_leaves_no_file(tmp_path, monkeypatch, target):
     def crash(*args, **kwargs):
         raise OSError("simulated crash")
-    monkeypatch.setattr(trace.os, target, crash)
+    monkeypatch.setattr(trace.os if target == "fsync" else trace, target, crash)
     with pytest.raises(OSError, match="simulated crash"):
         save_episode_record(record([nb("1", "r", [2])]), tmp_path)
     assert [p for p in tmp_path.rglob("*") if p.is_file()] == []
+
+
+@pytest.mark.parametrize("platform", ["nt", "posix"])
+def test_publication_uses_the_platform_no_overwrite_operation(tmp_path, monkeypatch, platform):
+    source, destination = tmp_path / "source", tmp_path / "destination"
+    operations = SimpleNamespace(name=platform, rename=Mock(), link=Mock())
+    monkeypatch.setattr(trace, "os", operations)
+    trace.publish_once(source, destination)
+    selected = operations.rename if platform == "nt" else operations.link
+    unused = operations.link if platform == "nt" else operations.rename
+    selected.assert_called_once_with(source, destination)
+    unused.assert_not_called()
+
+
+def test_saver_when_hard_links_are_unavailable(tmp_path, monkeypatch):
+    monkeypatch.setattr(trace.os, "link", Mock(side_effect=PermissionError("hard links blocked")))
+    rec = record([nb("1", "r", [2])])
+    if os.name == "nt":
+        assert load_episode_record(save_episode_record(rec, tmp_path)) == rec
+        trace.os.link.assert_not_called()
+    else:
+        with pytest.raises(PermissionError, match="hard links blocked"):
+            save_episode_record(rec, tmp_path)
+        assert [p for p in tmp_path.rglob("*") if p.is_file()] == []
+
+
+def test_competing_savers_publish_one_complete_record(tmp_path, monkeypatch):
+    records = [record([nb("1", "r", [target])]) for target in (2, 3)]
+    ready = Barrier(2)
+    publish = trace.publish_once
+
+    def publish_together(source, destination):
+        assert not destination.exists()
+        assert json.loads(source.read_text(encoding="utf-8")) in records
+        ready.wait(timeout=10)
+        publish(source, destination)
+
+    monkeypatch.setattr(trace, "publish_once", publish_together)
+    with ThreadPoolExecutor(max_workers=2) as pool:
+        futures = [pool.submit(save_episode_record, rec, tmp_path) for rec in records]
+        winners, refused = [], 0
+        for future in futures:
+            try:
+                winners.append(future.result(timeout=15))
+            except FileExistsError:
+                refused += 1
+    assert len(winners) == refused == 1
+    assert load_episode_record(winners[0]) in records
+    assert sorted(p for p in tmp_path.rglob("*") if p.is_file()) == winners
 
 
 def test_reconstruction_round_trip_and_tamper_detection(tmp_path):

@@ -1,0 +1,124 @@
+..............FF.FFFFF.FF..FFFF..                                        [100%]
+================================== FAILURES ===================================
+____________________ test_save_path_and_refuses_overwrite _____________________
+tests\test_trace.py:278: in test_save_path_and_refuses_overwrite
+    path = save_episode_record(rec, tmp_path)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src\cofail_kg\agents\trace.py:430: in save_episode_record
+    os.link(temporary, final)  # fails if `final` exists: never overwrites
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+E   PermissionError: [WinError 5] Access is denied: 'E:\\Phitron Thesis\\cofail_kg\\.pytest_cache\\s12-fix-red-20261016\\test_save_path_and_refuses_ove0\\run-test\\.BH2_00001__A1__a1.json.ed5fffe89f154e43820ac8fa5d31acfc.tmp' -> 'E:\\Phitron Thesis\\cofail_kg\\.pytest_cache\\s12-fix-red-20261016\\test_save_path_and_refuses_ove0\\run-test\\BH2_00001__A1__a1.json'
+_____ test_publication_refuses_existing_target_even_without_the_precheck ______
+tests\test_trace.py:293: in test_publication_refuses_existing_target_even_without_the_precheck
+    path = save_episode_record(rec, tmp_path)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src\cofail_kg\agents\trace.py:430: in save_episode_record
+    os.link(temporary, final)  # fails if `final` exists: never overwrites
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+E   PermissionError: [WinError 5] Access is denied: 'E:\\Phitron Thesis\\cofail_kg\\.pytest_cache\\s12-fix-red-20261016\\test_publication_refuses_exist0\\run-test\\.BH2_00001__A1__a1.json.f91cf849c122427c9c374ad888acb5e8.tmp' -> 'E:\\Phitron Thesis\\cofail_kg\\.pytest_cache\\s12-fix-red-20261016\\test_publication_refuses_exist0\\run-test\\BH2_00001__A1__a1.json'
+_____________ test_crash_during_save_leaves_no_file[publish_once] _____________
+tests\test_trace.py:305: in test_crash_during_save_leaves_no_file
+    monkeypatch.setattr(trace.os if target == "fsync" else trace, target, crash)
+E   AttributeError: <module 'cofail_kg.agents.trace' from 'E:\\Phitron Thesis\\cofail_kg\\src\\cofail_kg\\agents\\trace.py'> has no attribute 'publish_once'
+________ test_publication_uses_the_platform_no_overwrite_operation[nt] ________
+tests\test_trace.py:316: in test_publication_uses_the_platform_no_overwrite_operation
+    trace.publish_once(source, destination)
+    ^^^^^^^^^^^^^^^^^^
+E   AttributeError: module 'cofail_kg.agents.trace' has no attribute 'publish_once'
+______ test_publication_uses_the_platform_no_overwrite_operation[posix] _______
+tests\test_trace.py:316: in test_publication_uses_the_platform_no_overwrite_operation
+    trace.publish_once(source, destination)
+    ^^^^^^^^^^^^^^^^^^
+E   AttributeError: module 'cofail_kg.agents.trace' has no attribute 'publish_once'
+______________ test_competing_savers_publish_one_complete_record ______________
+tests\test_trace.py:326: in test_competing_savers_publish_one_complete_record
+    publish = trace.publish_once
+              ^^^^^^^^^^^^^^^^^^
+E   AttributeError: module 'cofail_kg.agents.trace' has no attribute 'publish_once'
+_____________ test_reconstruction_round_trip_and_tamper_detection _____________
+tests\test_trace.py:353: in test_reconstruction_round_trip_and_tamper_detection
+    loaded = load_episode_record(save_episode_record(rec, tmp_path))
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src\cofail_kg\agents\trace.py:430: in save_episode_record
+    os.link(temporary, final)  # fails if `final` exists: never overwrites
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+E   PermissionError: [WinError 5] Access is denied: 'E:\\Phitron Thesis\\cofail_kg\\.pytest_cache\\s12-fix-red-20261016\\test_reconstruction_round_trip0\\run-test\\.BH2_00001__A1__a1.json.28060be023f048c1b1e3f87edf6ea181.tmp' -> 'E:\\Phitron Thesis\\cofail_kg\\.pytest_cache\\s12-fix-red-20261016\\test_reconstruction_round_trip0\\run-test\\BH2_00001__A1__a1.json'
+_______ test_trace_module_is_isolated_from_evaluation_imports_and_files _______
+tests\test_trace.py:401: in test_trace_module_is_isolated_from_evaluation_imports_and_files
+    subprocess.run([sys.executable, "-c", script, str(tmp_path), payload],
+E:\anaconda\Lib\subprocess.py:577: in run
+    raise CalledProcessError(retcode, process.args,
+E   subprocess.CalledProcessError: Command '['E:\\Phitron Thesis\\cofail_kg\\.venv\\Scripts\\python.exe', '-c', '\nimport sys\n\ndef audit(event, args):\n    if event == "import" and args[0].startswith("cofail_kg.evaluation"):\n        raise AssertionError("evaluation import")\n    if event == "open" and isinstance(args[0], str):\n        path = "/" + args[0].replace("\\\\", "/").lower().lstrip("/")\n        if "/data/processed/" in path:\n            raise AssertionError("evaluation file read: " + path)\n\nsys.addaudithook(audit)\nimport json\nfrom cofail_kg.agents import trace\nrec = trace.make_episode_record(**json.loads(sys.argv[2]))\ntrace.load_episode_record(trace.save_episode_record(rec, sys.argv[1]))\nassert not any(n.startswith("cofail_kg.evaluation") for n in sys.modules)\n', 'E:\\Phitron Thesis\\cofail_kg\\.pytest_cache\\s12-fix-red-20261016\\test_trace_module_is_isolated_0', '{"run_id": "run-test", "query_id": "BH2_00001", "agent_id": "A1", "attempt": 1, "model": {"tag": "test:tag", "digest": "sha256:test", "quantization": "Q4_K_M"}, "temperature": 0, "seed": 42, "num_ctx": 8192, "num_predict": 4096, "prompt_version": "P1-test", "tool_config": {"tool_version": "T1", "page_size": 50, "budget": 30, "ordering_rule": "numeric-id", "tool_schema_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "prompt_values": {"PAGE_SIZE": 50, "BUDGET": 30}}, "kg_fingerprint": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb", "biohopr_revision": "rev-test", "git_commit": "commit-test", "timestamps": {"started_at": "2026-10-15T00:00:00+00:00", "finished_at": "2026-10-15T00:01:00+00:00"}, "messages": [{"role": "user", "content": "q"}], "call_log": [{"tool": "get_neighbors", "success": true, "timestamp": "2026-10-15T00:00:00+00:00", "elapsed_seconds": 0.0, "arguments": {"entity_id": "1", "relation": "r", "neighbor_type": null, "page": 1}, "result": {"items": [{"id": "2", "name": "N2", "type": "t", "display_labels": ["r"]}], "total_count": 1, "page": 1, "page_size": 50, "has_more": false}}], "token_counts": {"prompt": [10], "completion": [5]}, "raw_final_output": "{\\"status\\": \\"no_answer\\", \\"answers\\": []}", "status": "SUCCESS", "cause": null}']' returned non-zero exit status 1.
+______ test_launcher_passes_explicit_settings_and_refuses_completed_run _______
+scripts\14_run_episode.py:73: in main
+    check_persistence(runs_root)
+scripts\14_run_episode.py:32: in check_persistence
+    os.link(source, target)
+E   PermissionError: [WinError 5] Access is denied: 'E:\\Phitron Thesis\\cofail_kg\\.pytest_cache\\s12-fix-red-20261016\\test_launcher_passes_explicit_0\\results\\runs\\.s14-check-ufl2u_ex\\source' -> 'E:\\Phitron Thesis\\cofail_kg\\.pytest_cache\\s12-fix-red-20261016\\test_launcher_passes_explicit_0\\results\\runs\\.s14-check-ufl2u_ex\\target'
+
+The above exception was the direct cause of the following exception:
+tests\test_run_episode_script.py:59: in test_launcher_passes_explicit_settings_and_refuses_completed_run
+    assert module.main(["--run-id", "s14-test", "--think", "false"]) == 0
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+scripts\14_run_episode.py:75: in main
+    raise RuntimeError("Episode persistence is blocked; run on the host outside the restricted sandbox") from error
+E   RuntimeError: Episode persistence is blocked; run on the host outside the restricted sandbox
+_____________ test_preflight_rejects_an_operation_that_overwrites _____________
+tests\test_run_episode_script.py:92: in test_preflight_rejects_an_operation_that_overwrites
+    monkeypatch.setattr(module, "publish_once", lambda source, target: target.write_bytes(source.read_bytes()))
+E   AttributeError: <module 's14_launcher' from 'E:\\Phitron Thesis\\cofail_kg\\scripts\\14_run_episode.py'> has no attribute 'publish_once'
+___________ test_launcher_reports_changed_identity_and_keeps_record ___________
+scripts\14_run_episode.py:73: in main
+    check_persistence(runs_root)
+scripts\14_run_episode.py:32: in check_persistence
+    os.link(source, target)
+E   PermissionError: [WinError 5] Access is denied: 'E:\\Phitron Thesis\\cofail_kg\\.pytest_cache\\s12-fix-red-20261016\\test_launcher_reports_changed_0\\results\\runs\\.s14-check-oa3x1tw_\\source' -> 'E:\\Phitron Thesis\\cofail_kg\\.pytest_cache\\s12-fix-red-20261016\\test_launcher_reports_changed_0\\results\\runs\\.s14-check-oa3x1tw_\\target'
+
+The above exception was the direct cause of the following exception:
+tests\test_run_episode_script.py:102: in test_launcher_reports_changed_identity_and_keeps_record
+    assert module.main(["--run-id", "s14-test", "--think", "true"]) == 1
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+scripts\14_run_episode.py:75: in main
+    raise RuntimeError("Episode persistence is blocked; run on the host outside the restricted sandbox") from error
+E   RuntimeError: Episode persistence is blocked; run on the host outside the restricted sandbox
+________ test_diagnostic_output_limit_is_explicit_and_passed_to_runner ________
+scripts\14_run_episode.py:73: in main
+    check_persistence(runs_root)
+scripts\14_run_episode.py:32: in check_persistence
+    os.link(source, target)
+E   PermissionError: [WinError 5] Access is denied: 'E:\\Phitron Thesis\\cofail_kg\\.pytest_cache\\s12-fix-red-20261016\\test_diagnostic_output_limit_i0\\results\\runs\\.s14-check-3ag48pd1\\source' -> 'E:\\Phitron Thesis\\cofail_kg\\.pytest_cache\\s12-fix-red-20261016\\test_diagnostic_output_limit_i0\\results\\runs\\.s14-check-3ag48pd1\\target'
+
+The above exception was the direct cause of the following exception:
+tests\test_run_episode_script.py:110: in test_diagnostic_output_limit_is_explicit_and_passed_to_runner
+    assert module.main(["--run-id", "s14-output-test", "--think", "false",
+scripts\14_run_episode.py:75: in main
+    raise RuntimeError("Episode persistence is blocked; run on the host outside the restricted sandbox") from error
+E   RuntimeError: Episode persistence is blocked; run on the host outside the restricted sandbox
+________ test_diagnostic_model_identity_is_used_and_checked_after_run _________
+scripts\14_run_episode.py:73: in main
+    check_persistence(runs_root)
+scripts\14_run_episode.py:32: in check_persistence
+    os.link(source, target)
+E   PermissionError: [WinError 5] Access is denied: 'E:\\Phitron Thesis\\cofail_kg\\.pytest_cache\\s12-fix-red-20261016\\test_diagnostic_model_identity0\\results\\runs\\.s14-check-c5_pnylp\\source' -> 'E:\\Phitron Thesis\\cofail_kg\\.pytest_cache\\s12-fix-red-20261016\\test_diagnostic_model_identity0\\results\\runs\\.s14-check-c5_pnylp\\target'
+
+The above exception was the direct cause of the following exception:
+tests\test_run_episode_script.py:122: in test_diagnostic_model_identity_is_used_and_checked_after_run
+    assert module.main(["--run-id", "s14-template-test", "--think", "false",
+scripts\14_run_episode.py:75: in main
+    raise RuntimeError("Episode persistence is blocked; run on the host outside the restricted sandbox") from error
+E   RuntimeError: Episode persistence is blocked; run on the host outside the restricted sandbox
+=========================== short test summary info ===========================
+FAILED tests/test_trace.py::test_save_path_and_refuses_overwrite - Permission...
+FAILED tests/test_trace.py::test_publication_refuses_existing_target_even_without_the_precheck
+FAILED tests/test_trace.py::test_crash_during_save_leaves_no_file[publish_once]
+FAILED tests/test_trace.py::test_publication_uses_the_platform_no_overwrite_operation[nt]
+FAILED tests/test_trace.py::test_publication_uses_the_platform_no_overwrite_operation[posix]
+FAILED tests/test_trace.py::test_competing_savers_publish_one_complete_record
+FAILED tests/test_trace.py::test_reconstruction_round_trip_and_tamper_detection
+FAILED tests/test_trace.py::test_trace_module_is_isolated_from_evaluation_imports_and_files
+FAILED tests/test_run_episode_script.py::test_launcher_passes_explicit_settings_and_refuses_completed_run
+FAILED tests/test_run_episode_script.py::test_preflight_rejects_an_operation_that_overwrites
+FAILED tests/test_run_episode_script.py::test_launcher_reports_changed_identity_and_keeps_record
+FAILED tests/test_run_episode_script.py::test_diagnostic_output_limit_is_explicit_and_passed_to_runner
+FAILED tests/test_run_episode_script.py::test_diagnostic_model_identity_is_used_and_checked_after_run
+13 failed, 20 passed in 2.30s

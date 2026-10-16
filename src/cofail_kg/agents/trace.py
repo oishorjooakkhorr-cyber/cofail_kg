@@ -11,8 +11,8 @@ Episode record (§11, §19)
 Write-once saving (§19)
     ``results/runs/<run_id>/<query_id>__<agent_id>__a<attempt>.json``. Any existing record
     counts as a completed episode, so a partial record must never exist: the JSON is written
-    to a temporary file in the same folder, flushed and fsynced, then hard-linked to the final
-    name. ``os.link`` refuses an existing target on both Windows and POSIX, so an existing
+    to a temporary file in the same folder, flushed and fsynced, then published with Windows
+    rename or, elsewhere, a hard link. Both refuse an existing target, so an existing
     record is never overwritten, even by a racing writer. The temporary file is removed on
     every exit path; a hard crash can leave only a ``.*.tmp`` file, never a ``*.json`` record.
 
@@ -410,6 +410,14 @@ def record_path(runs_root, run_id: str, query_id: str, agent_id: str, attempt: i
     return Path(runs_root) / run_id / f"{query_id}__{agent_id}__a{attempt}.json"
 
 
+def publish_once(source: Path, destination: Path) -> None:
+    """Publish a complete staged file beside its target without replacing it (protocol §19)."""
+    if os.name == "nt":
+        os.rename(source, destination)  # Windows refuses existing targets; POSIX rename overwrites.
+    else:
+        os.link(source, destination)
+
+
 def save_episode_record(record: dict, runs_root=DEFAULT_RUNS_ROOT) -> Path:
     """Write the record once, atomically; raise FileExistsError if it already exists (§19)."""
     verify_reconstruction(record)
@@ -427,7 +435,7 @@ def save_episode_record(record: dict, runs_root=DEFAULT_RUNS_ROOT) -> Path:
             handle.write(text)
             handle.flush()
             os.fsync(handle.fileno())
-        os.link(temporary, final)  # fails if `final` exists: never overwrites
+        publish_once(temporary, final)
     finally:
         temporary.unlink(missing_ok=True)
     return final
