@@ -171,7 +171,7 @@ versions, corruption detection, no deletion, busy writers, tracked-file safety,
 no transfer on commits/status/failed commands/dry runs, and transfers after
 successful push/pull (including already-up-to-date pulls and `git -C`).
 Validated on 2026-10-16 with Windows PowerShell 5.1 and rclone v1.75.2.
-Google authentication and a read-only Drive access check succeeded on 2026-10-16. Real cloud backup uploads/downloads have not been performed.
+Google authentication and Drive access were verified on 2026-10-16. The first push-triggered backup uploaded 116 files and its MD5 check reported 116 matches and zero differences. A real cloud restore has not been performed.
 Scientific protocols and existing experiment outputs were not modified.
 
 References: [Git hooks](https://git-scm.com/docs/githooks),
@@ -188,9 +188,10 @@ References: [Git hooks](https://git-scm.com/docs/githooks),
 - Wrapper activation added to both Windows PowerShell and PowerShell 7 current-user
   all-hosts profiles; verified in new processes using `git --version` only.
 - Windows PowerShell CurrentUser execution policy set to RemoteSigned with user approval.
-- No hourly scheduled task exists. No GitHub push/pull or research transfer was run.
-- `CoFail-KG-Backups` does not exist yet; the first successful wrapped push with
-  eligible outputs will create it.
+- No hourly scheduled task exists. The S12-S14 GitHub push and its first Drive backup completed successfully.
+- `CoFail-KG-Backups/current` was created by the successful wrapped push. All
+  116 stable files passed checksum verification. Two open Ollama server logs
+  were deferred; their committed versions are retained on GitHub.
 
 The researcher chose **weekly reauthentication** on 2026-10-16. Keep the OAuth
 app in Testing mode; publishing, a homepage and a privacy-policy site are not
