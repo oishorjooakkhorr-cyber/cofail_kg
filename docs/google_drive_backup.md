@@ -5,6 +5,17 @@ pull through the PowerShell wrapper. There is no hourly task, logon trigger,
 background watcher or automatic retry timer. Commits, edits, fetches, failed
 Git commands and dry-run pushes cause no transfers.
 
+Shared backup: [CoFail-KG-Backups](https://drive.google.com/drive/folders/1lA-lOinAY1Z8m9fpvQD2QQyxgonMGxbk).
+Both scripts default to
+`cofail_gdrive,root_folder_id=1lA-lOinAY1Z8m9fpvQD2QQyxgonMGxbk:`.
+This rclone connection string pins the existing folder by ID for each command,
+without changing your remote configuration. No folder search or My Drive
+shortcut is needed. The ID/link grants no access: every developer still needs
+their own authentication and the owner's sharing permission. Explicit
+`-Destination` overrides remain available for isolated tests or another backup.
+After updating an existing installation, reopen PowerShell or dot-source the
+activation script again so its destination environment variable is refreshed.
+
 ## One-time setup on each computer
 
 1. Download rclone from https://rclone.org/downloads/ and extract it to a
@@ -81,7 +92,7 @@ Windows PowerShell/PowerShell 7; other operating systems need their own integrat
 
 ### Backup owner: grant folder access
 
-In Google Drive, share the existing **CoFail-KG-Backups** folder with each
+In Google Drive, open [the existing CoFail-KG-Backups folder](https://drive.google.com/drive/folders/1lA-lOinAY1Z8m9fpvQD2QQyxgonMGxbk) and share it with each
 developer's Google email as **Editor**. Send them that folder's link so they can
 identify the correct folder. Keep general access restricted to invited people.
 Do not send your Google password, `rclone.conf`, OAuth token, or OAuth client JSON.
@@ -103,7 +114,8 @@ No collaborator access has been granted by these scripts.
    Google Cloud project/Desktop OAuth client and Google account. Enable Drive API,
    keep Testing mode, and add your own Google email as a test user. Create the
    rclone remote named `cofail_gdrive` with scope `drive`; keep its advanced
-   `root_folder_id` blank and `shared_with_me` false for the shortcut setup below.
+   `root_folder_id` blank and `shared_with_me` false. The scripts supply the
+   verified folder ID per command, regardless of its name/location in My Drive.
 
    ```powershell
    & $rcloneExe config
@@ -113,26 +125,23 @@ No collaborator access has been granted by these scripts.
    means the backup owner does not need to distribute any authentication settings.
    With Testing mode, each developer reauthenticates about weekly.
 
-3. Open the folder link shared by the owner in Google Drive while signed in to
-   the same account used for rclone. Use **Organize > Add shortcut** to put a
-   shortcut named exactly **CoFail-KG-Backups** directly in **My Drive**.
-   This must point to the owner's shared folder; do not create a new empty folder
-   or copy its contents. Ensure there is no second folder/shortcut with that name
-   in My Drive. Leave rclone's `skip_shortcuts` setting false (the default).
-   Rclone follows folder shortcuts for both uploads and downloads, so the existing
-   destination `cofail_gdrive:CoFail-KG-Backups` reaches the shared folder.
+3. Open [the shared folder](https://drive.google.com/drive/folders/1lA-lOinAY1Z8m9fpvQD2QQyxgonMGxbk)
+   while signed in to the same account used for rclone. Confirm the owner granted
+   your account Editor access. Do not create another folder or copy the contents;
+   the scripts address this folder directly by ID. Existing shortcuts may stay,
+   but are not used by the default destination.
 
 4. Before any push, verify that you can see the owner's existing backup:
 
    ```powershell
-   & $rcloneExe lsf 'cofail_gdrive:CoFail-KG-Backups/current' --dirs-only
-   & $rcloneExe lsf 'cofail_gdrive:CoFail-KG-Backups/current/results/runs' --max-depth 1
+   & $rcloneExe lsf 'cofail_gdrive,root_folder_id=1lA-lOinAY1Z8m9fpvQD2QQyxgonMGxbk:current' --dirs-only
+   & $rcloneExe lsf 'cofail_gdrive,root_folder_id=1lA-lOinAY1Z8m9fpvQD2QQyxgonMGxbk:current/results/runs' --max-depth 1
    ```
 
    The first command should show `data/` and `results/`; the second should show
    existing experiment run directories. If the path is missing/empty, or rclone
    reports duplicate names or a permission error, fix sharing, account selection
-   or the shortcut first. Do not push and accidentally create a separate backup.
+   first. Do not change the destination to a same-named personal folder.
 
 5. Activate the wrapper and make the first pull to restore the shared outputs:
 
@@ -186,7 +195,8 @@ operation can have a failed Drive transfer; read the wrapper warning and exit
 status rather than assuming both services succeeded.
 
 References: [Google folder sharing](https://support.google.com/drive/answer/7166529),
-[rclone folder shortcuts](https://rclone.org/drive/#shortcuts).
+[rclone folder IDs](https://rclone.org/drive/#root-folder-id),
+[connection strings](https://rclone.org/docs/#connection-strings).
 This onboarding path is documented from those sources; another developer's
 account/computer has not been tested or configured here.
 

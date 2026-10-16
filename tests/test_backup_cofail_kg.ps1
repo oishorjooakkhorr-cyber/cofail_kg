@@ -9,6 +9,13 @@ function Run-Backup([string[]]$extra = @()) {
     Assert ($LASTEXITCODE -eq 0) 'Backup failed'
 }
 try {
+    foreach ($name in @('backup_cofail_kg.ps1','enable_cofail_kg_backup.ps1')) {
+        $tokens = $null; $parseErrors = $null
+        $ast = [Management.Automation.Language.Parser]::ParseFile((Join-Path $PSScriptRoot "../scripts/$name"), [ref]$tokens, [ref]$parseErrors)
+        Assert (!$parseErrors) "Script parse failed: $name"
+        $destination = $ast.ParamBlock.Parameters | Where-Object { $_.Name.VariablePath.UserPath -eq 'Destination' }
+        Assert ($destination.DefaultValue.SafeGetValue() -eq 'cofail_gdrive,root_folder_id=1lA-lOinAY1Z8m9fpvQD2QQyxgonMGxbk:') "Default must target the verified shared folder ID: $name"
+    }
     New-Item -ItemType Directory -Path "$testRoot/repo/results/runs", "$testRoot/repo/data/raw", "$testRoot/repo/data/cache" -Force | Out-Null
     & git.exe -C "$testRoot/repo" init -q
     Assert ($LASTEXITCODE -eq 0) 'Test Git initialization failed'

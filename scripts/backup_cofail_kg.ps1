@@ -2,7 +2,7 @@
 [CmdletBinding()]
 param(
     [string]$RepositoryRoot = (Split-Path $PSScriptRoot -Parent),
-    [ValidatePattern('^[A-Za-z0-9_-]+:.+')][string]$Destination = 'cofail_gdrive:CoFail-KG-Backups',
+    [ValidatePattern('^[A-Za-z0-9_-]+(?:,root_folder_id=[A-Za-z0-9_-]+)?:.*$')][string]$Destination = 'cofail_gdrive,root_folder_id=1lA-lOinAY1Z8m9fpvQD2QQyxgonMGxbk:',
     [string]$RclonePath = 'rclone',
     [string]$StateDirectory = (Join-Path $env:LOCALAPPDATA 'CoFail-KG-Backup'),
     [ValidateRange(1,1440)][int]$MinimumAgeMinutes = 10,

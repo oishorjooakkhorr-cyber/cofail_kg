@@ -1,7 +1,7 @@
 # Dot-source this file so ordinary git commands in this PowerShell use the wrapper.
 param(
     [string]$RclonePath = 'rclone',
-    [ValidatePattern('^[A-Za-z0-9_-]+:.+')][string]$Destination = 'cofail_gdrive:CoFail-KG-Backups'
+    [ValidatePattern('^[A-Za-z0-9_-]+(?:,root_folder_id=[A-Za-z0-9_-]+)?:.*$')][string]$Destination = 'cofail_gdrive,root_folder_id=1lA-lOinAY1Z8m9fpvQD2QQyxgonMGxbk:'
 )
 if ($MyInvocation.InvocationName -ne '.') { throw 'Dot-source this script: . .\scripts\enable_cofail_kg_backup.ps1' }
 if (Test-Path Alias:git) { throw 'An existing git alias would hide the wrapper. Resolve that alias first.' }

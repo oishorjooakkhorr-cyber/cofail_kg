@@ -7,6 +7,8 @@ CoFail-KG is a research project studying co-failure of independent local LLM age
 Windows developers can upload research outputs after `git push` and download them
 after `git pull`. See the [setup and shared-folder onboarding guide](docs/google_drive_backup.md#other-developers-using-the-same-backup-folder).
 Each developer authenticates with their own Google account; credentials are never committed.
+The scripts target the existing [CoFail-KG-Backups folder](https://drive.google.com/drive/folders/1lA-lOinAY1Z8m9fpvQD2QQyxgonMGxbk)
+by its fixed Drive ID. Ask the owner for Editor access before enabling transfers.
 
 ## Reproduce
 
