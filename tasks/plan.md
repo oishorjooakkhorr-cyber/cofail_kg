@@ -1,3 +1,82 @@
+# S15 revision 2 — authorized and executed (2026-10-16)
+
+The researcher authorized Option 1, a narrow source-name exemption plus a
+pre-registered split report, and approved correcting the chronology to before any
+pilot model run or co-failure results while acknowledging the S14 diagnostics.
+The earlier strict-failure hold is superseded; its record is preserved below.
+
+1. Confirmed no frozen-hash entry covers the protocol; recorded protected-file hashes.
+2. Added the authorized paragraph only to §19.1(a) and logged the frozen-item change.
+3. Added synthetic regressions first, then implemented per-occurrence character-offset
+   checks in tests/test_leakage.py, preserving the literal whole-word matcher.
+4. Passed the 24-query audit (one flag) and full 524-row scan (exactly four flags).
+5. Passed focused tests (43) and the complete sandbox suite (401), without skips.
+6. Saved new versioned evidence and the complete overlap/short-name report; retained
+   original evidence and protected production, data, configuration and episode files.
+
+Manual review remains pending. Every §16 metric and §17 baseline comparison must
+later report both all queries and the subset excluding SOURCE_NAME_OVERLAP; gates
+use all queries. No metric implementation, model call, S16 work or commit in this
+revision. Full report: docs/S15_implementation.md, revision 2.
+
+# Original S15 strict audit plan (historical)
+
+Execution update: implementation and audit completed, with one strict failure
+retained by the researcher. See docs/S15_implementation.md. Screening BH2_04007's
+starting entity contains the name Folic acid, an additional B_q bridge. Checks
+(b)-(d) pass; (a) fails. Final full suite: 383 passed, 1 failed. S15 acceptance
+and a scientific remedy remain pending; no production/scientific changes made.
+
+Original proposal below, subsequently authorized by the researcher.
+Authority: runbook S15 and protocol §§8, 9.3, 10, 19.1. Preserve the completed
+S12 plans below. Tasks are appended to tasks/todo.md.
+
+1. Preflight: verify frozen P1/T1, sheet hashes and cache identity. Inventory all
+   screening (20) and smoke (4) queries and their evaluator-side reference rows,
+   accepted R1/R2 mapping, raw gold names, resolved gold IDs and B_q/T_q names.
+   Missing evidence fails explicitly; do not regenerate data or change samples.
+2. Add tests/test_leakage.py with small synthetic checks that demonstrate the
+   audit detects leaks, handles case-insensitive whole-word punctuation correctly,
+   reports names shorter than four characters for manual review, and rejects an
+   extra sheet field. IDs and labels are not exempted by the short-name rule.
+3. Capture the initial messages produced by the existing runner using a test-only
+   fake client stopped at the first chat boundary. No network/model calls or
+   saved episodes. Use existing runner fixtures/patterns; do not change production
+   message construction or introduce a separate production helper for this audit.
+4. Check system content and the starting-entity line for the full query-specific
+   prohibited vocabulary. Preserve question text verbatim; do not treat permitted
+   question text or tool results as leakage. Print exact system/user messages for
+   first screening query BH2_00461, and detailed query/surface/term failures.
+5. Audit imports and application-data reads for kg_env, tool_schemas, prompts and
+   run_agent, following local dependencies. Combine source inspection with guarded
+   reads on exercised paths. Only agent sheets and PrimeKG cache are allowed inputs.
+   Evaluator data is read only by the audit harness, outside the guarded agent path.
+   Do not confuse result writes or Python/library source loading with experiment
+   input reads; inspect any questionable access rather than silently exempting it.
+6. Check every line of all four agent-input sheets for exactly query_id,
+   question_text, start_name, start_id. For 10 distinct seeded random real
+   (entity, label) pairs, compare complete paginated get_neighbors results against
+   the index: IDs, names, types, display labels, order and pagination metadata.
+   Sort candidates before sampling; record seed 42 and selected pairs. Ensure the
+   test budget permits all pages; do not silently truncate.
+7. Run focused synthetic/audit tests then the full sandbox suite with a fresh
+   workspace --basetemp. Report pass/fail independently for (a)-(d), coverage
+   counts, exact messages, short-name review list, commands and results. Save
+   docs/S15_implementation.md and results/diagnostics/s15/ evidence; update progress
+   and decision log as appropriate. No dependency additions are expected.
+
+Acceptance: all four automated checks pass on complete required evidence; checker
+regressions pass; full suite has no regressions; researcher can inspect exact
+messages and short-name list. Human review remains explicitly pending until done.
+Any real leak or scientific ambiguity is reported, not repaired by changing P1,
+data, matching rules or exclusions. No model calls, frozen/protocol changes,
+commit/push or S16 work are included in this request.
+
+Expected scope: tests/test_leakage.py, audit evidence/report, progress/decision
+documentation and these task files. Existing production modules are audit inputs.
+Engineering choices: deterministic seed/order, source plus runtime isolation
+checks, test-only interception and report format; none changes scientific rules.
+
 # Plan: remove the Windows hard-link requirement safely
 
 Follow-up requested 2026-10-16 after the completed host/sandbox comparison below.

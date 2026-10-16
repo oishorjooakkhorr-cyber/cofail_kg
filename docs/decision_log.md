@@ -813,3 +813,62 @@ would create the local `S14: agent runner and prompt P1` commit without pushing.
 The runner and diagnostic evidence already exist in checkpoint 8322145; this
 commit records the P1 freeze and approval. Unrelated backup-script work is excluded.
 Pre-commit verification: 352 tests passed; frozen prompt matches the implementation.
+
+
+## 2026-10-16 — S15 strict leakage failure retained
+
+Researcher authorized execution of the S15 audit plan. No model calls were made.
+Protocol §19.1(a) produces one case-insensitive whole-word match: Folic acid,
+additional valid B_q bridge ID 14678, within BH2_04007's starting entity name
+folic acid deficiency anemia (83880). Gold bridge is Cyanocobalamin (14706).
+No evaluation data was injected; the literal lexical rule still fails.
+
+After reviewing this finding, researcher explicitly chose: "Keep strict failure;
+decide a remedy later". Do not add exceptions, exclude the query, alter matching,
+change the starting name, or mark the failure xfail. No protocol revision or
+scientific remedy was authorized. S15 is not accepted and S16 is not started.
+
+Checks (b)-(d) pass on audited paths; focused tests 25 passed/1 failed; complete
+sandbox suite 383 passed/1 failed, no skips/exclusions. TTR for BH2_00461 remains
+on the manual-review list, absent from both scanned surfaces. Full evidence and
+engineering choices: docs/S15_implementation.md and results/diagnostics/s15/.
+Production modules, frozen hashes, protocol, data and episodes are unchanged.
+
+
+## 2026-10-16 — S15 source-name overlap amendment and pre-registered split report
+
+Researcher explicitly authorized the narrow §19.1(a) exemption and later confirmed
+the chronology correction: before any pilot model run or co-failure results.
+No entry in configs/frozen_hashes.yaml covers the protocol; that file is unchanged.
+Only check (a) of the Leakage test row was amended, with this text:
+
+Source-name overlap exemption (added 2026-10-16, before any pilot model run or co-failure results): a match is not a failure when all of these hold: (i) the matched term is the name of a B_q member that is neither a gold bridge nor a gold answer; (ii) the matched span lies entirely within start_name; (iii) start_name equals the PrimeKG canonical name of node s. Each such query is flagged SOURCE_NAME_OVERLAP and listed in the audit output. Every other match still fails, including any match of a gold, T_q, ID, label, relation-type or evaluator term, and any match outside start_name. SOURCE_NAME_OVERLAP never changes an answer set or a gate input. Every co-failure metric (§16) and chance-baseline comparison (§17) is reported on all queries and again with SOURCE_NAME_OVERLAP queries excluded. Gates use all queries.
+
+Why: §9.3 requires the canonical starting name, repeating the entity named in the
+question, which is outside the prohibited-term scan. No evaluator-derived
+annotation is added. The exemption requires the matched span to lie inside the
+exact canonical start_name; it does not require the name to occur verbatim in
+the question (the documented disease-suffix cases remain eligible).
+
+Evidence for this decision: lexical audit counts over 524 input rows, with four
+non-gold B_q name overlaps: screening BH2_04007; pilot BH2_05778; expansion
+BH2_05971 and BH2_06099. Each has two valid bridges, with the matched member
+non-gold. No gold, T_q, ID or label matches, and no system prompt matches.
+The earlier S14 diagnostic model episodes and reviewed outputs already existed
+and remain historical evidence (docs/S14_template_repair.md); this is not a
+claim that no model had ever run. No pilot or co-failure results had been seen.
+This S15 amendment makes no model call and creates no episode.
+
+Under §20, this is an explicitly authorized frozen-item change before pilot
+results. It replaces the earlier "keep strict failure; decide later" hold.
+All original failure evidence is retained. SOURCE_NAME_OVERLAP is evaluator-only;
+answer sets, sample membership and gate populations are unchanged. Reporting
+every §16 metric and §17 comparison with and without flagged queries is now
+pre-registered; gates use all queries. Reporting execution belongs to later
+stages. No decision_rules.md change, S16 work or commit is authorized here.
+
+Revision verification: 43 focused tests and all 401 sandbox tests pass, no skips
+or deselections. The 524-row scan confirms exactly the four expected flags and
+zero failures; 34 short-name query/name entries require manual review. New
+evidence is versioned under results/diagnostics/s15/; original evidence and all
+protected files remain unchanged. Manual review is pending; no commit made.

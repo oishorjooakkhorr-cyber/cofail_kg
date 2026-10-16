@@ -1,5 +1,31 @@
 # Progress — CoFail-KG
 
+S15 revision 2 (2026-10-16): authorized source-name overlap exemption implemented;
+**all automated checks pass**. Only protocol §19.1(a) amended, with chronology
+corrected to before any pilot model run or co-failure results and prior S14
+diagnostics acknowledged. Screening/smoke: zero failures, BH2_04007 flagged.
+All 524 rows: zero failures, exactly four flags (screening 1, smoke 0, pilot 1,
+expansion 2). Full short-name review list: 34 query/name entries, none matching
+scanned surfaces. Focused **43 passed**; full sandbox suite **401 passed**, no
+skips/deselections. Every §16 metric and §17 baseline comparison is now required
+on all queries and with flagged queries excluded; official gates use all queries.
+That reporting runs in later stages. Evidence: `results/diagnostics/s15/audit-v2.json`
+and `source_name_overlap.json`; report: dated revision in `docs/S15_implementation.md`.
+Original failure evidence preserved. Manual review pending; no production/data/
+frozen-hash change, model call, episode, commit or S16 work.
+
+S15 audit implemented and executed (2026-10-16), **NOT accepted**. Strict protocol
+§19.1(a) flags `Folic acid` (additional B_q bridge 14678) within screening query
+BH2_04007's starting name `folic acid deficiency anemia`; gold bridge is
+Cyanocobalamin (14706). Researcher explicitly chose to retain the strict failure
+and defer a remedy. (b) import/guarded-input isolation, (c) all 524 four-field
+sheet rows, and (d) 10 real neighbor pairs/12 pages/187 neighbors pass. Short-name
+manual review: TTR for BH2_00461, absent from both scanned surfaces. Focused:
+25 passed/1 failed; final complete sandbox suite: **383 passed/1 failed**, no
+skips/exclusions, only the retained leakage failure. Exact messages and evidence:
+`results/diagnostics/s15/`; report: `docs/S15_implementation.md`. No production,
+data, protocol/frozen-setting change, model call, episode save, commit or S16 work.
+
 S12 sandbox portability fix (2026-10-16): Windows publishes staged episode files
 with no-overwrite rename; other platforms retain hard links. Saver and S14 preflight
 share the publisher; flush/fsync, reconstruction, cleanup and write-once protection

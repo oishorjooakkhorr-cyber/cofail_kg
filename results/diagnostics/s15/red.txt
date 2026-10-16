@@ -1,0 +1,367 @@
+FFFFFFFFFFFFFFFFFFFF                                                     [100%]
+================================== FAILURES ===================================
+_____________ test_matcher_detects_leaks_and_reports_short_names ______________
+
+    def test_matcher_detects_leaks_and_reports_short_names():
+        terms = [("name", "Alpha (beta)"), ("name", "ACE"), ("id", "12"),
+                 ("label", "r"), ("label", "OFF_QUESTION")]
+>       hits, short = scan_surface("ALPHA (BETA); 12 r off_question ACE", terms)
+                      ^^^^^^^^^^^^
+E       NameError: name 'scan_surface' is not defined
+
+tests\test_leakage.py:41: NameError
+______ test_vocabulary_includes_each_gold_source[name-gold_bridge_names] ______
+
+role = 'name', key = 'gold_bridge_names'
+
+    @pytest.mark.parametrize("role,key", [("name", "gold_bridge_names"),
+                                        ("name", "gold_answer_names"),
+                                        ("id", "gold_bridges"), ("id", "A_star_q")])
+    def test_vocabulary_includes_each_gold_source(role, key):
+        query = {"gold_bridge_names": [], "gold_answer_names": [], "gold_bridges": [],
+                 "A_star_q": [], "B_q": [], "T_q": [], "relation_type": "a:b:c"}
+        query[key] = ["1234" if role == "id" else "Raw Alias"]
+        index = Mock()
+        index.get_node.return_value = {"name": "Canonical Name"}
+>       terms = forbidden_terms(query, {"R1": ["first"], "R2": ["second"]}, index)
+                ^^^^^^^^^^^^^^^
+E       NameError: name 'forbidden_terms' is not defined
+
+tests\test_leakage.py:57: NameError
+______ test_vocabulary_includes_each_gold_source[name-gold_answer_names] ______
+
+role = 'name', key = 'gold_answer_names'
+
+    @pytest.mark.parametrize("role,key", [("name", "gold_bridge_names"),
+                                        ("name", "gold_answer_names"),
+                                        ("id", "gold_bridges"), ("id", "A_star_q")])
+    def test_vocabulary_includes_each_gold_source(role, key):
+        query = {"gold_bridge_names": [], "gold_answer_names": [], "gold_bridges": [],
+                 "A_star_q": [], "B_q": [], "T_q": [], "relation_type": "a:b:c"}
+        query[key] = ["1234" if role == "id" else "Raw Alias"]
+        index = Mock()
+        index.get_node.return_value = {"name": "Canonical Name"}
+>       terms = forbidden_terms(query, {"R1": ["first"], "R2": ["second"]}, index)
+                ^^^^^^^^^^^^^^^
+E       NameError: name 'forbidden_terms' is not defined
+
+tests\test_leakage.py:57: NameError
+_________ test_vocabulary_includes_each_gold_source[id-gold_bridges] __________
+
+role = 'id', key = 'gold_bridges'
+
+    @pytest.mark.parametrize("role,key", [("name", "gold_bridge_names"),
+                                        ("name", "gold_answer_names"),
+                                        ("id", "gold_bridges"), ("id", "A_star_q")])
+    def test_vocabulary_includes_each_gold_source(role, key):
+        query = {"gold_bridge_names": [], "gold_answer_names": [], "gold_bridges": [],
+                 "A_star_q": [], "B_q": [], "T_q": [], "relation_type": "a:b:c"}
+        query[key] = ["1234" if role == "id" else "Raw Alias"]
+        index = Mock()
+        index.get_node.return_value = {"name": "Canonical Name"}
+>       terms = forbidden_terms(query, {"R1": ["first"], "R2": ["second"]}, index)
+                ^^^^^^^^^^^^^^^
+E       NameError: name 'forbidden_terms' is not defined
+
+tests\test_leakage.py:57: NameError
+___________ test_vocabulary_includes_each_gold_source[id-A_star_q] ____________
+
+role = 'id', key = 'A_star_q'
+
+    @pytest.mark.parametrize("role,key", [("name", "gold_bridge_names"),
+                                        ("name", "gold_answer_names"),
+                                        ("id", "gold_bridges"), ("id", "A_star_q")])
+    def test_vocabulary_includes_each_gold_source(role, key):
+        query = {"gold_bridge_names": [], "gold_answer_names": [], "gold_bridges": [],
+                 "A_star_q": [], "B_q": [], "T_q": [], "relation_type": "a:b:c"}
+        query[key] = ["1234" if role == "id" else "Raw Alias"]
+        index = Mock()
+        index.get_node.return_value = {"name": "Canonical Name"}
+>       terms = forbidden_terms(query, {"R1": ["first"], "R2": ["second"]}, index)
+                ^^^^^^^^^^^^^^^
+E       NameError: name 'forbidden_terms' is not defined
+
+tests\test_leakage.py:57: NameError
+___________ test_vocabulary_includes_other_bridge_and_target_names ____________
+
+    def test_vocabulary_includes_other_bridge_and_target_names():
+        query = dict(gold_bridge_names=[], gold_answer_names=[], gold_bridges=[], A_star_q=[],
+                     B_q=["1"], T_q=["2"], relation_type="a:b:c")
+        index = Mock()
+        index.get_node.side_effect = lambda n: {"name": {"1": "Other Bridge", "2": "Other Target"}[n]}
+>       terms = forbidden_terms(query, {"R1": [], "R2": []}, index)
+                ^^^^^^^^^^^^^^^
+E       NameError: name 'forbidden_terms' is not defined
+
+tests\test_leakage.py:71: NameError
+_______________________ test_sheet_rejects_extra_fields _______________________
+
+tmp_path = WindowsPath('E:/Phitron Thesis/cofail_kg/results/diagnostics/s15/temp-red/test_sheet_rejects_extra_field0')
+
+    def test_sheet_rejects_extra_fields(tmp_path):
+        sheet = tmp_path / "sheet.jsonl"
+        row = dict(query_id="Q", question_text="Question", start_name="Start", start_id="1")
+        sheet.write_text(json.dumps(row) + "\n", encoding="utf-8")
+>       assert read_sheet(sheet) == [row]
+               ^^^^^^^^^^
+E       NameError: name 'read_sheet' is not defined
+
+tests\test_leakage.py:79: NameError
+_ test_source_checker_rejects_forbidden_access[import cofail_kg.evaluation.normalize as x] _
+
+source = 'import cofail_kg.evaluation.normalize as x'
+
+    @pytest.mark.parametrize("source", [
+        "import cofail_kg.evaluation.normalize as x",
+        "from cofail_kg.evaluation import normalize",
+        "from cofail_kg import evaluation",
+        "from ..evaluation import normalize",
+        "__import__('cofail_kg.evaluation')",
+        "import importlib; importlib.import_module('cofail_kg.evaluation')",
+        "open('data/processed/reference_queries.parquet')",
+    ])
+    def test_source_checker_rejects_forbidden_access(source):
+        with pytest.raises(AssertionError):
+>           inspect_source(source, "cofail_kg.agents.fake")
+            ^^^^^^^^^^^^^^
+E           NameError: name 'inspect_source' is not defined
+
+tests\test_leakage.py:96: NameError
+_ test_source_checker_rejects_forbidden_access[from cofail_kg.evaluation import normalize] _
+
+source = 'from cofail_kg.evaluation import normalize'
+
+    @pytest.mark.parametrize("source", [
+        "import cofail_kg.evaluation.normalize as x",
+        "from cofail_kg.evaluation import normalize",
+        "from cofail_kg import evaluation",
+        "from ..evaluation import normalize",
+        "__import__('cofail_kg.evaluation')",
+        "import importlib; importlib.import_module('cofail_kg.evaluation')",
+        "open('data/processed/reference_queries.parquet')",
+    ])
+    def test_source_checker_rejects_forbidden_access(source):
+        with pytest.raises(AssertionError):
+>           inspect_source(source, "cofail_kg.agents.fake")
+            ^^^^^^^^^^^^^^
+E           NameError: name 'inspect_source' is not defined
+
+tests\test_leakage.py:96: NameError
+_ test_source_checker_rejects_forbidden_access[from cofail_kg import evaluation] _
+
+source = 'from cofail_kg import evaluation'
+
+    @pytest.mark.parametrize("source", [
+        "import cofail_kg.evaluation.normalize as x",
+        "from cofail_kg.evaluation import normalize",
+        "from cofail_kg import evaluation",
+        "from ..evaluation import normalize",
+        "__import__('cofail_kg.evaluation')",
+        "import importlib; importlib.import_module('cofail_kg.evaluation')",
+        "open('data/processed/reference_queries.parquet')",
+    ])
+    def test_source_checker_rejects_forbidden_access(source):
+        with pytest.raises(AssertionError):
+>           inspect_source(source, "cofail_kg.agents.fake")
+            ^^^^^^^^^^^^^^
+E           NameError: name 'inspect_source' is not defined
+
+tests\test_leakage.py:96: NameError
+_ test_source_checker_rejects_forbidden_access[from ..evaluation import normalize] _
+
+source = 'from ..evaluation import normalize'
+
+    @pytest.mark.parametrize("source", [
+        "import cofail_kg.evaluation.normalize as x",
+        "from cofail_kg.evaluation import normalize",
+        "from cofail_kg import evaluation",
+        "from ..evaluation import normalize",
+        "__import__('cofail_kg.evaluation')",
+        "import importlib; importlib.import_module('cofail_kg.evaluation')",
+        "open('data/processed/reference_queries.parquet')",
+    ])
+    def test_source_checker_rejects_forbidden_access(source):
+        with pytest.raises(AssertionError):
+>           inspect_source(source, "cofail_kg.agents.fake")
+            ^^^^^^^^^^^^^^
+E           NameError: name 'inspect_source' is not defined
+
+tests\test_leakage.py:96: NameError
+_ test_source_checker_rejects_forbidden_access[__import__('cofail_kg.evaluation')] _
+
+source = "__import__('cofail_kg.evaluation')"
+
+    @pytest.mark.parametrize("source", [
+        "import cofail_kg.evaluation.normalize as x",
+        "from cofail_kg.evaluation import normalize",
+        "from cofail_kg import evaluation",
+        "from ..evaluation import normalize",
+        "__import__('cofail_kg.evaluation')",
+        "import importlib; importlib.import_module('cofail_kg.evaluation')",
+        "open('data/processed/reference_queries.parquet')",
+    ])
+    def test_source_checker_rejects_forbidden_access(source):
+        with pytest.raises(AssertionError):
+>           inspect_source(source, "cofail_kg.agents.fake")
+            ^^^^^^^^^^^^^^
+E           NameError: name 'inspect_source' is not defined
+
+tests\test_leakage.py:96: NameError
+_ test_source_checker_rejects_forbidden_access[import importlib; importlib.import_module('cofail_kg.evaluation')] _
+
+source = "import importlib; importlib.import_module('cofail_kg.evaluation')"
+
+    @pytest.mark.parametrize("source", [
+        "import cofail_kg.evaluation.normalize as x",
+        "from cofail_kg.evaluation import normalize",
+        "from cofail_kg import evaluation",
+        "from ..evaluation import normalize",
+        "__import__('cofail_kg.evaluation')",
+        "import importlib; importlib.import_module('cofail_kg.evaluation')",
+        "open('data/processed/reference_queries.parquet')",
+    ])
+    def test_source_checker_rejects_forbidden_access(source):
+        with pytest.raises(AssertionError):
+>           inspect_source(source, "cofail_kg.agents.fake")
+            ^^^^^^^^^^^^^^
+E           NameError: name 'inspect_source' is not defined
+
+tests\test_leakage.py:96: NameError
+_ test_source_checker_rejects_forbidden_access[open('data/processed/reference_queries.parquet')] _
+
+source = "open('data/processed/reference_queries.parquet')"
+
+    @pytest.mark.parametrize("source", [
+        "import cofail_kg.evaluation.normalize as x",
+        "from cofail_kg.evaluation import normalize",
+        "from cofail_kg import evaluation",
+        "from ..evaluation import normalize",
+        "__import__('cofail_kg.evaluation')",
+        "import importlib; importlib.import_module('cofail_kg.evaluation')",
+        "open('data/processed/reference_queries.parquet')",
+    ])
+    def test_source_checker_rejects_forbidden_access(source):
+        with pytest.raises(AssertionError):
+>           inspect_source(source, "cofail_kg.agents.fake")
+            ^^^^^^^^^^^^^^
+E           NameError: name 'inspect_source' is not defined
+
+tests\test_leakage.py:96: NameError
+__________________ test_source_checker_follows_local_imports __________________
+
+tmp_path = WindowsPath('E:/Phitron Thesis/cofail_kg/results/diagnostics/s15/temp-red/test_source_checker_follows_lo0')
+
+    def test_source_checker_follows_local_imports(tmp_path):
+        package = tmp_path / "cofail_kg"
+        package.mkdir()
+        (package / "entry.py").write_text("from cofail_kg import helper\n")
+        (package / "helper.py").write_text("import cofail_kg.evaluation\n")
+        with pytest.raises(AssertionError, match="evaluation"):
+>           inspect_modules(package, ["entry"])
+            ^^^^^^^^^^^^^^^
+E           NameError: name 'inspect_modules' is not defined
+
+tests\test_leakage.py:105: NameError
+______________ test_read_guard_rejects_evaluator_files[builtin] _______________
+
+tmp_path = WindowsPath('E:/Phitron Thesis/cofail_kg/results/diagnostics/s15/temp-red/test_read_guard_rejects_evalua0')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x000001EB96897BB0>
+method = 'builtin'
+
+    @pytest.mark.parametrize("method", ["builtin", "path", "os", "parquet"])
+    def test_read_guard_rejects_evaluator_files(tmp_path, monkeypatch, method):
+        allowed = tmp_path / "allowed"
+        allowed.mkdir()
+        secret = tmp_path / "reference.txt"
+        secret.write_text("secret")
+>       with guarded_agent_io(monkeypatch, [allowed], []) as reads:
+             ^^^^^^^^^^^^^^^^
+E       NameError: name 'guarded_agent_io' is not defined
+
+tests\test_leakage.py:114: NameError
+________________ test_read_guard_rejects_evaluator_files[path] ________________
+
+tmp_path = WindowsPath('E:/Phitron Thesis/cofail_kg/results/diagnostics/s15/temp-red/test_read_guard_rejects_evalua1')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x000001EB96897A80>
+method = 'path'
+
+    @pytest.mark.parametrize("method", ["builtin", "path", "os", "parquet"])
+    def test_read_guard_rejects_evaluator_files(tmp_path, monkeypatch, method):
+        allowed = tmp_path / "allowed"
+        allowed.mkdir()
+        secret = tmp_path / "reference.txt"
+        secret.write_text("secret")
+>       with guarded_agent_io(monkeypatch, [allowed], []) as reads:
+             ^^^^^^^^^^^^^^^^
+E       NameError: name 'guarded_agent_io' is not defined
+
+tests\test_leakage.py:114: NameError
+_________________ test_read_guard_rejects_evaluator_files[os] _________________
+
+tmp_path = WindowsPath('E:/Phitron Thesis/cofail_kg/results/diagnostics/s15/temp-red/test_read_guard_rejects_evalua2')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x000001EB968F5130>
+method = 'os'
+
+    @pytest.mark.parametrize("method", ["builtin", "path", "os", "parquet"])
+    def test_read_guard_rejects_evaluator_files(tmp_path, monkeypatch, method):
+        allowed = tmp_path / "allowed"
+        allowed.mkdir()
+        secret = tmp_path / "reference.txt"
+        secret.write_text("secret")
+>       with guarded_agent_io(monkeypatch, [allowed], []) as reads:
+             ^^^^^^^^^^^^^^^^
+E       NameError: name 'guarded_agent_io' is not defined
+
+tests\test_leakage.py:114: NameError
+______________ test_read_guard_rejects_evaluator_files[parquet] _______________
+
+tmp_path = WindowsPath('E:/Phitron Thesis/cofail_kg/results/diagnostics/s15/temp-red/test_read_guard_rejects_evalua3')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x000001EB968B6690>
+method = 'parquet'
+
+    @pytest.mark.parametrize("method", ["builtin", "path", "os", "parquet"])
+    def test_read_guard_rejects_evaluator_files(tmp_path, monkeypatch, method):
+        allowed = tmp_path / "allowed"
+        allowed.mkdir()
+        secret = tmp_path / "reference.txt"
+        secret.write_text("secret")
+>       with guarded_agent_io(monkeypatch, [allowed], []) as reads:
+             ^^^^^^^^^^^^^^^^
+E       NameError: name 'guarded_agent_io' is not defined
+
+tests\test_leakage.py:114: NameError
+________________ test_neighbor_checker_detects_changed_output _________________
+
+    def test_neighbor_checker_detects_changed_output():
+        index = Mock()
+        index.neighbors.return_value = [dict(id="1", name="One", type="gene", display_labels=["r"])]
+        env = Mock()
+        env.get_neighbors.return_value = dict(items=[], total_count=1, page=1, page_size=50, has_more=False)
+        with pytest.raises(AssertionError):
+>           compare_neighbors(index, env, "0", "r")
+            ^^^^^^^^^^^^^^^^^
+E           NameError: name 'compare_neighbors' is not defined
+
+tests\test_leakage.py:133: NameError
+=========================== short test summary info ===========================
+FAILED tests/test_leakage.py::test_matcher_detects_leaks_and_reports_short_names
+FAILED tests/test_leakage.py::test_vocabulary_includes_each_gold_source[name-gold_bridge_names]
+FAILED tests/test_leakage.py::test_vocabulary_includes_each_gold_source[name-gold_answer_names]
+FAILED tests/test_leakage.py::test_vocabulary_includes_each_gold_source[id-gold_bridges]
+FAILED tests/test_leakage.py::test_vocabulary_includes_each_gold_source[id-A_star_q]
+FAILED tests/test_leakage.py::test_vocabulary_includes_other_bridge_and_target_names
+FAILED tests/test_leakage.py::test_sheet_rejects_extra_fields - NameError: na...
+FAILED tests/test_leakage.py::test_source_checker_rejects_forbidden_access[import cofail_kg.evaluation.normalize as x]
+FAILED tests/test_leakage.py::test_source_checker_rejects_forbidden_access[from cofail_kg.evaluation import normalize]
+FAILED tests/test_leakage.py::test_source_checker_rejects_forbidden_access[from cofail_kg import evaluation]
+FAILED tests/test_leakage.py::test_source_checker_rejects_forbidden_access[from ..evaluation import normalize]
+FAILED tests/test_leakage.py::test_source_checker_rejects_forbidden_access[__import__('cofail_kg.evaluation')]
+FAILED tests/test_leakage.py::test_source_checker_rejects_forbidden_access[import importlib; importlib.import_module('cofail_kg.evaluation')]
+FAILED tests/test_leakage.py::test_source_checker_rejects_forbidden_access[open('data/processed/reference_queries.parquet')]
+FAILED tests/test_leakage.py::test_source_checker_follows_local_imports - Nam...
+FAILED tests/test_leakage.py::test_read_guard_rejects_evaluator_files[builtin]
+FAILED tests/test_leakage.py::test_read_guard_rejects_evaluator_files[path]
+FAILED tests/test_leakage.py::test_read_guard_rejects_evaluator_files[os] - N...
+FAILED tests/test_leakage.py::test_read_guard_rejects_evaluator_files[parquet]
+FAILED tests/test_leakage.py::test_neighbor_checker_detects_changed_output - ...
+20 failed in 1.36s

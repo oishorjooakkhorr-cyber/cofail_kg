@@ -1,0 +1,21 @@
+{
+  "deselected": 0,
+  "episodes_created": 0,
+  "focused": {
+    "command": ".venv/Scripts/python.exe -m pytest tests/test_leakage.py -q -s --basetemp .pytest_tmp_s15_v2_audit",
+    "exit_code": 0,
+    "passed": 43,
+    "seconds": 12.5
+  },
+  "full_suite": {
+    "command": ".venv/Scripts/python.exe -m pytest -q --basetemp .pytest_tmp_s15_v2_full",
+    "exit_code": 0,
+    "passed": 401,
+    "seconds": 26.35
+  },
+  "manual_review": "pending",
+  "model_calls": 0,
+  "protected_preexisting_files_verified": 56,
+  "protocol_only_authorized_paragraph_added": true,
+  "skipped": 0
+}

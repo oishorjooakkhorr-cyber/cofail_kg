@@ -1,0 +1,39 @@
+F..............F                                                         [100%]
+================================== FAILURES ===================================
+__________ test_overlap_exempts_only_canonical_non_gold_bridge_span ___________
+
+overlap_case = ({'query_id': 'synthetic', 'question_text': 'Unchanged question.', 'start_id': '100', 'start_name': 'Folic acid defici... '102', 'name': 'Gold bridge', 'type': 'drug'}, '103': {'id': '103', 'name': 'Gold answer', 'type': 'phenotype'}, ...})
+
+    def test_overlap_exempts_only_canonical_non_gold_bridge_span(overlap_case):
+        row, query, spec, index, _ = overlap_case
+        line = f"Starting entity: {row['start_name']} (PrimeKG ID: 100)"
+        failures, flags, short = scan_starting_line(line, row, query, spec, index)
+        assert failures == [] and short == []
+        assert len(flags) == 1 and flags[0]["node_id"] == "101"
+>       assert flags[0]["span"] == [16, 26]
+E       assert [17, 27] == [16, 26]
+E         
+E         At index 0 diff: 17 != 16
+E         Use -v to get more diff
+
+tests\test_leakage.py:265: AssertionError
+__________ test_overlap_allows_entire_name_shared_by_distinct_nodes ___________
+
+overlap_case = ({'query_id': 'synthetic', 'question_text': 'Unchanged question.', 'start_id': '100', 'start_name': 'Ewing sarcoma'}, ... '102', 'name': 'Gold bridge', 'type': 'drug'}, '103': {'id': '103', 'name': 'Gold answer', 'type': 'phenotype'}, ...})
+
+    def test_overlap_allows_entire_name_shared_by_distinct_nodes(overlap_case):
+        row, query, spec, index, nodes = overlap_case
+        row["start_name"] = nodes["100"]["name"] = nodes["101"]["name"] = "Ewing sarcoma"
+        failures, flags, _ = scan_starting_line(f"Starting entity: {row['start_name']}", row, query, spec, index)
+        assert not failures and len(flags) == 1
+>       assert flags[0]["span"] == [16, 29]
+E       assert [17, 30] == [16, 29]
+E         
+E         At index 0 diff: 17 != 16
+E         Use -v to get more diff
+
+tests\test_leakage.py:322: AssertionError
+=========================== short test summary info ===========================
+FAILED tests/test_leakage.py::test_overlap_exempts_only_canonical_non_gold_bridge_span
+FAILED tests/test_leakage.py::test_overlap_allows_entire_name_shared_by_distinct_nodes
+2 failed, 14 passed, 27 deselected in 1.08s

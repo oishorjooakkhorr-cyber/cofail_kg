@@ -1,0 +1,238 @@
+FFFFFFFFFFFFFFFF                                                         [100%]
+================================== FAILURES ===================================
+__________ test_overlap_exempts_only_canonical_non_gold_bridge_span ___________
+
+overlap_case = ({'query_id': 'synthetic', 'question_text': 'Unchanged question.', 'start_id': '100', 'start_name': 'Folic acid defici... '102', 'name': 'Gold bridge', 'type': 'drug'}, '103': {'id': '103', 'name': 'Gold answer', 'type': 'phenotype'}, ...})
+
+    def test_overlap_exempts_only_canonical_non_gold_bridge_span(overlap_case):
+        row, query, spec, index, _ = overlap_case
+        line = f"Starting entity: {row['start_name']} (PrimeKG ID: 100)"
+>       failures, flags, short = scan_starting_line(line, row, query, spec, index)
+                                 ^^^^^^^^^^^^^^^^^^
+E       NameError: name 'scan_starting_line' is not defined
+
+tests\test_leakage.py:228: NameError
+_______________ test_overlap_repeated_outside_name_still_fails ________________
+
+overlap_case = ({'query_id': 'synthetic', 'question_text': 'Unchanged question.', 'start_id': '100', 'start_name': 'Folic acid defici... '102', 'name': 'Gold bridge', 'type': 'drug'}, '103': {'id': '103', 'name': 'Gold answer', 'type': 'phenotype'}, ...})
+
+    def test_overlap_repeated_outside_name_still_fails(overlap_case):
+        row, query, spec, index, _ = overlap_case
+        line = f"Starting entity: {row['start_name']} (PrimeKG ID: 100); FOLIC ACID"
+>       failures, flags, _ = scan_starting_line(line, row, query, spec, index)
+                             ^^^^^^^^^^^^^^^^^^
+E       NameError: name 'scan_starting_line' is not defined
+
+tests\test_leakage.py:239: NameError
+___________ test_overlap_never_exempts_gold_or_target[gold_bridges] ___________
+
+overlap_case = ({'query_id': 'synthetic', 'question_text': 'Unchanged question.', 'start_id': '100', 'start_name': 'Folic acid defici... '102', 'name': 'Gold bridge', 'type': 'drug'}, '103': {'id': '103', 'name': 'Gold answer', 'type': 'phenotype'}, ...})
+role = 'gold_bridges'
+
+    @pytest.mark.parametrize("role", ["gold_bridges", "A_star_q", "T_q", "gold_bridge_names", "gold_answer_names"])
+    def test_overlap_never_exempts_gold_or_target(overlap_case, role):
+        row, query, spec, index, _ = overlap_case
+        query[role].append("Folic acid" if role.endswith("names") else "101")
+>       failures, flags, _ = scan_starting_line(f"Starting entity: {row['start_name']}", row, query, spec, index)
+                             ^^^^^^^^^^^^^^^^^^
+E       NameError: name 'scan_starting_line' is not defined
+
+tests\test_leakage.py:248: NameError
+_____________ test_overlap_never_exempts_gold_or_target[A_star_q] _____________
+
+overlap_case = ({'query_id': 'synthetic', 'question_text': 'Unchanged question.', 'start_id': '100', 'start_name': 'Folic acid defici... '102', 'name': 'Gold bridge', 'type': 'drug'}, '103': {'id': '103', 'name': 'Gold answer', 'type': 'phenotype'}, ...})
+role = 'A_star_q'
+
+    @pytest.mark.parametrize("role", ["gold_bridges", "A_star_q", "T_q", "gold_bridge_names", "gold_answer_names"])
+    def test_overlap_never_exempts_gold_or_target(overlap_case, role):
+        row, query, spec, index, _ = overlap_case
+        query[role].append("Folic acid" if role.endswith("names") else "101")
+>       failures, flags, _ = scan_starting_line(f"Starting entity: {row['start_name']}", row, query, spec, index)
+                             ^^^^^^^^^^^^^^^^^^
+E       NameError: name 'scan_starting_line' is not defined
+
+tests\test_leakage.py:248: NameError
+_______________ test_overlap_never_exempts_gold_or_target[T_q] ________________
+
+overlap_case = ({'query_id': 'synthetic', 'question_text': 'Unchanged question.', 'start_id': '100', 'start_name': 'Folic acid defici... '102', 'name': 'Gold bridge', 'type': 'drug'}, '103': {'id': '103', 'name': 'Gold answer', 'type': 'phenotype'}, ...})
+role = 'T_q'
+
+    @pytest.mark.parametrize("role", ["gold_bridges", "A_star_q", "T_q", "gold_bridge_names", "gold_answer_names"])
+    def test_overlap_never_exempts_gold_or_target(overlap_case, role):
+        row, query, spec, index, _ = overlap_case
+        query[role].append("Folic acid" if role.endswith("names") else "101")
+>       failures, flags, _ = scan_starting_line(f"Starting entity: {row['start_name']}", row, query, spec, index)
+                             ^^^^^^^^^^^^^^^^^^
+E       NameError: name 'scan_starting_line' is not defined
+
+tests\test_leakage.py:248: NameError
+________ test_overlap_never_exempts_gold_or_target[gold_bridge_names] _________
+
+overlap_case = ({'query_id': 'synthetic', 'question_text': 'Unchanged question.', 'start_id': '100', 'start_name': 'Folic acid defici... '102', 'name': 'Gold bridge', 'type': 'drug'}, '103': {'id': '103', 'name': 'Gold answer', 'type': 'phenotype'}, ...})
+role = 'gold_bridge_names'
+
+    @pytest.mark.parametrize("role", ["gold_bridges", "A_star_q", "T_q", "gold_bridge_names", "gold_answer_names"])
+    def test_overlap_never_exempts_gold_or_target(overlap_case, role):
+        row, query, spec, index, _ = overlap_case
+        query[role].append("Folic acid" if role.endswith("names") else "101")
+>       failures, flags, _ = scan_starting_line(f"Starting entity: {row['start_name']}", row, query, spec, index)
+                             ^^^^^^^^^^^^^^^^^^
+E       NameError: name 'scan_starting_line' is not defined
+
+tests\test_leakage.py:248: NameError
+________ test_overlap_never_exempts_gold_or_target[gold_answer_names] _________
+
+overlap_case = ({'query_id': 'synthetic', 'question_text': 'Unchanged question.', 'start_id': '100', 'start_name': 'Folic acid defici... '102', 'name': 'Gold bridge', 'type': 'drug'}, '103': {'id': '103', 'name': 'Gold answer', 'type': 'phenotype'}, ...})
+role = 'gold_answer_names'
+
+    @pytest.mark.parametrize("role", ["gold_bridges", "A_star_q", "T_q", "gold_bridge_names", "gold_answer_names"])
+    def test_overlap_never_exempts_gold_or_target(overlap_case, role):
+        row, query, spec, index, _ = overlap_case
+        query[role].append("Folic acid" if role.endswith("names") else "101")
+>       failures, flags, _ = scan_starting_line(f"Starting entity: {row['start_name']}", row, query, spec, index)
+                             ^^^^^^^^^^^^^^^^^^
+E       NameError: name 'scan_starting_line' is not defined
+
+tests\test_leakage.py:248: NameError
+___________________ test_overlap_target_homonym_still_fails ___________________
+
+overlap_case = ({'query_id': 'synthetic', 'question_text': 'Unchanged question.', 'start_id': '100', 'start_name': 'Folic acid defici... '102', 'name': 'Gold bridge', 'type': 'drug'}, '103': {'id': '103', 'name': 'Gold answer', 'type': 'phenotype'}, ...})
+
+    def test_overlap_target_homonym_still_fails(overlap_case):
+        row, query, spec, index, nodes = overlap_case
+        nodes["104"]["name"] = "FOLIC ACID"
+>       failures, flags, _ = scan_starting_line(f"Starting entity: {row['start_name']}", row, query, spec, index)
+                             ^^^^^^^^^^^^^^^^^^
+E       NameError: name 'scan_starting_line' is not defined
+
+tests\test_leakage.py:255: NameError
+_________________ test_overlap_never_exempts_id_or_label[103] _________________
+
+overlap_case = ({'query_id': 'synthetic', 'question_text': 'Unchanged question.', 'start_id': '100', 'start_name': '103 condition'}, ... '102', 'name': 'Gold bridge', 'type': 'drug'}, '103': {'id': '103', 'name': 'Gold answer', 'type': 'phenotype'}, ...})
+term = '103'
+
+    @pytest.mark.parametrize("term", ["103", "first", "second", "a:b:c", "OFF_QUESTION"])
+    def test_overlap_never_exempts_id_or_label(overlap_case, term):
+        row, query, spec, index, nodes = overlap_case
+        row["start_name"] = nodes["100"]["name"] = term + " condition"
+        nodes["101"]["name"] = term
+>       failures, flags, _ = scan_starting_line(f"Starting entity: {row['start_name']}", row, query, spec, index)
+                             ^^^^^^^^^^^^^^^^^^
+E       NameError: name 'scan_starting_line' is not defined
+
+tests\test_leakage.py:264: NameError
+________________ test_overlap_never_exempts_id_or_label[first] ________________
+
+overlap_case = ({'query_id': 'synthetic', 'question_text': 'Unchanged question.', 'start_id': '100', 'start_name': 'first condition'}... '102', 'name': 'Gold bridge', 'type': 'drug'}, '103': {'id': '103', 'name': 'Gold answer', 'type': 'phenotype'}, ...})
+term = 'first'
+
+    @pytest.mark.parametrize("term", ["103", "first", "second", "a:b:c", "OFF_QUESTION"])
+    def test_overlap_never_exempts_id_or_label(overlap_case, term):
+        row, query, spec, index, nodes = overlap_case
+        row["start_name"] = nodes["100"]["name"] = term + " condition"
+        nodes["101"]["name"] = term
+>       failures, flags, _ = scan_starting_line(f"Starting entity: {row['start_name']}", row, query, spec, index)
+                             ^^^^^^^^^^^^^^^^^^
+E       NameError: name 'scan_starting_line' is not defined
+
+tests\test_leakage.py:264: NameError
+_______________ test_overlap_never_exempts_id_or_label[second] ________________
+
+overlap_case = ({'query_id': 'synthetic', 'question_text': 'Unchanged question.', 'start_id': '100', 'start_name': 'second condition'... '102', 'name': 'Gold bridge', 'type': 'drug'}, '103': {'id': '103', 'name': 'Gold answer', 'type': 'phenotype'}, ...})
+term = 'second'
+
+    @pytest.mark.parametrize("term", ["103", "first", "second", "a:b:c", "OFF_QUESTION"])
+    def test_overlap_never_exempts_id_or_label(overlap_case, term):
+        row, query, spec, index, nodes = overlap_case
+        row["start_name"] = nodes["100"]["name"] = term + " condition"
+        nodes["101"]["name"] = term
+>       failures, flags, _ = scan_starting_line(f"Starting entity: {row['start_name']}", row, query, spec, index)
+                             ^^^^^^^^^^^^^^^^^^
+E       NameError: name 'scan_starting_line' is not defined
+
+tests\test_leakage.py:264: NameError
+________________ test_overlap_never_exempts_id_or_label[a:b:c] ________________
+
+overlap_case = ({'query_id': 'synthetic', 'question_text': 'Unchanged question.', 'start_id': '100', 'start_name': 'a:b:c condition'}... '102', 'name': 'Gold bridge', 'type': 'drug'}, '103': {'id': '103', 'name': 'Gold answer', 'type': 'phenotype'}, ...})
+term = 'a:b:c'
+
+    @pytest.mark.parametrize("term", ["103", "first", "second", "a:b:c", "OFF_QUESTION"])
+    def test_overlap_never_exempts_id_or_label(overlap_case, term):
+        row, query, spec, index, nodes = overlap_case
+        row["start_name"] = nodes["100"]["name"] = term + " condition"
+        nodes["101"]["name"] = term
+>       failures, flags, _ = scan_starting_line(f"Starting entity: {row['start_name']}", row, query, spec, index)
+                             ^^^^^^^^^^^^^^^^^^
+E       NameError: name 'scan_starting_line' is not defined
+
+tests\test_leakage.py:264: NameError
+____________ test_overlap_never_exempts_id_or_label[OFF_QUESTION] _____________
+
+overlap_case = ({'query_id': 'synthetic', 'question_text': 'Unchanged question.', 'start_id': '100', 'start_name': 'OFF_QUESTION cond... '102', 'name': 'Gold bridge', 'type': 'drug'}, '103': {'id': '103', 'name': 'Gold answer', 'type': 'phenotype'}, ...})
+term = 'OFF_QUESTION'
+
+    @pytest.mark.parametrize("term", ["103", "first", "second", "a:b:c", "OFF_QUESTION"])
+    def test_overlap_never_exempts_id_or_label(overlap_case, term):
+        row, query, spec, index, nodes = overlap_case
+        row["start_name"] = nodes["100"]["name"] = term + " condition"
+        nodes["101"]["name"] = term
+>       failures, flags, _ = scan_starting_line(f"Starting entity: {row['start_name']}", row, query, spec, index)
+                             ^^^^^^^^^^^^^^^^^^
+E       NameError: name 'scan_starting_line' is not defined
+
+tests\test_leakage.py:264: NameError
+____________________ test_overlap_requires_canonical_name _____________________
+
+overlap_case = ({'query_id': 'synthetic', 'question_text': 'Unchanged question.', 'start_id': '100', 'start_name': 'Folic acid defici... '102', 'name': 'Gold bridge', 'type': 'drug'}, '103': {'id': '103', 'name': 'Gold answer', 'type': 'phenotype'}, ...})
+
+    def test_overlap_requires_canonical_name(overlap_case):
+        row, query, spec, index, _ = overlap_case
+        row["start_name"] += " modified"
+>       failures, flags, _ = scan_starting_line(f"Starting entity: {row['start_name']}", row, query, spec, index)
+                             ^^^^^^^^^^^^^^^^^^
+E       NameError: name 'scan_starting_line' is not defined
+
+tests\test_leakage.py:271: NameError
+________________ test_overlap_short_names_remain_manual_review ________________
+
+overlap_case = ({'query_id': 'synthetic', 'question_text': 'Unchanged question.', 'start_id': '100', 'start_name': 'ACE condition'}, ... '102', 'name': 'Gold bridge', 'type': 'drug'}, '103': {'id': '103', 'name': 'Gold answer', 'type': 'phenotype'}, ...})
+
+    def test_overlap_short_names_remain_manual_review(overlap_case):
+        row, query, spec, index, nodes = overlap_case
+        row["start_name"] = nodes["100"]["name"] = "ACE condition"
+        nodes["101"]["name"] = "ACE"
+>       failures, flags, short = scan_starting_line(f"Starting entity: {row['start_name']}", row, query, spec, index)
+                                 ^^^^^^^^^^^^^^^^^^
+E       NameError: name 'scan_starting_line' is not defined
+
+tests\test_leakage.py:279: NameError
+__________ test_overlap_allows_entire_name_shared_by_distinct_nodes ___________
+
+overlap_case = ({'query_id': 'synthetic', 'question_text': 'Unchanged question.', 'start_id': '100', 'start_name': 'Ewing sarcoma'}, ... '102', 'name': 'Gold bridge', 'type': 'drug'}, '103': {'id': '103', 'name': 'Gold answer', 'type': 'phenotype'}, ...})
+
+    def test_overlap_allows_entire_name_shared_by_distinct_nodes(overlap_case):
+        row, query, spec, index, nodes = overlap_case
+        row["start_name"] = nodes["100"]["name"] = nodes["101"]["name"] = "Ewing sarcoma"
+>       failures, flags, _ = scan_starting_line(f"Starting entity: {row['start_name']}", row, query, spec, index)
+                             ^^^^^^^^^^^^^^^^^^
+E       NameError: name 'scan_starting_line' is not defined
+
+tests\test_leakage.py:286: NameError
+=========================== short test summary info ===========================
+FAILED tests/test_leakage.py::test_overlap_exempts_only_canonical_non_gold_bridge_span
+FAILED tests/test_leakage.py::test_overlap_repeated_outside_name_still_fails
+FAILED tests/test_leakage.py::test_overlap_never_exempts_gold_or_target[gold_bridges]
+FAILED tests/test_leakage.py::test_overlap_never_exempts_gold_or_target[A_star_q]
+FAILED tests/test_leakage.py::test_overlap_never_exempts_gold_or_target[T_q]
+FAILED tests/test_leakage.py::test_overlap_never_exempts_gold_or_target[gold_bridge_names]
+FAILED tests/test_leakage.py::test_overlap_never_exempts_gold_or_target[gold_answer_names]
+FAILED tests/test_leakage.py::test_overlap_target_homonym_still_fails - NameE...
+FAILED tests/test_leakage.py::test_overlap_never_exempts_id_or_label[103] - N...
+FAILED tests/test_leakage.py::test_overlap_never_exempts_id_or_label[first]
+FAILED tests/test_leakage.py::test_overlap_never_exempts_id_or_label[second]
+FAILED tests/test_leakage.py::test_overlap_never_exempts_id_or_label[a:b:c]
+FAILED tests/test_leakage.py::test_overlap_never_exempts_id_or_label[OFF_QUESTION]
+FAILED tests/test_leakage.py::test_overlap_requires_canonical_name - NameErro...
+FAILED tests/test_leakage.py::test_overlap_short_names_remain_manual_review
+FAILED tests/test_leakage.py::test_overlap_allows_entire_name_shared_by_distinct_nodes
+16 failed, 26 deselected in 1.64s

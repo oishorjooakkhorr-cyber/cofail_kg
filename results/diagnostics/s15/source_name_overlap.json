@@ -1,0 +1,435 @@
+{
+  "failures": [],
+  "flagged_queries": [
+    {
+      "bq_size": 2,
+      "flag": "SOURCE_NAME_OVERLAP",
+      "gold_bridges": [
+        {
+          "id": "32222",
+          "name": "congenital hemangioma",
+          "type": "disease"
+        }
+      ],
+      "matches": [
+        {
+          "node_id": "33562",
+          "node_type": "disease",
+          "span": [
+            26,
+            36
+          ],
+          "term": "hemangioma"
+        }
+      ],
+      "query_id": "BH2_05971",
+      "relation_type": "effect/phenotype:disease:drug",
+      "split": "expansion",
+      "start_id": "94389",
+      "start_name": "Perineal hemangioma",
+      "tq_size": 1
+    },
+    {
+      "bq_size": 2,
+      "flag": "SOURCE_NAME_OVERLAP",
+      "gold_bridges": [
+        {
+          "id": "32222",
+          "name": "congenital hemangioma",
+          "type": "disease"
+        }
+      ],
+      "matches": [
+        {
+          "node_id": "33562",
+          "node_type": "disease",
+          "span": [
+            26,
+            36
+          ],
+          "term": "hemangioma"
+        }
+      ],
+      "query_id": "BH2_06099",
+      "relation_type": "effect/phenotype:disease:drug",
+      "split": "expansion",
+      "start_id": "25461",
+      "start_name": "Visceral hemangioma",
+      "tq_size": 1
+    },
+    {
+      "bq_size": 2,
+      "flag": "SOURCE_NAME_OVERLAP",
+      "gold_bridges": [
+        {
+          "id": "31883",
+          "name": "retinoblastoma",
+          "type": "disease"
+        }
+      ],
+      "matches": [
+        {
+          "node_id": "29749",
+          "node_type": "disease",
+          "span": [
+            17,
+            30
+          ],
+          "term": "Ewing sarcoma"
+        }
+      ],
+      "query_id": "BH2_05778",
+      "relation_type": "effect/phenotype:disease:drug",
+      "split": "pilot",
+      "start_id": "89218",
+      "start_name": "Ewing sarcoma",
+      "tq_size": 2
+    },
+    {
+      "bq_size": 2,
+      "flag": "SOURCE_NAME_OVERLAP",
+      "gold_bridges": [
+        {
+          "id": "14706",
+          "name": "Cyanocobalamin",
+          "type": "drug"
+        }
+      ],
+      "matches": [
+        {
+          "node_id": "14678",
+          "node_type": "drug",
+          "span": [
+            17,
+            27
+          ],
+          "term": "Folic acid"
+        }
+      ],
+      "query_id": "BH2_04007",
+      "relation_type": "disease:drug:effect/phenotype",
+      "split": "screening",
+      "start_id": "83880",
+      "start_name": "folic acid deficiency anemia",
+      "tq_size": 30
+    }
+  ],
+  "manual_review": "Flagged cases and all-524 short-name list provided; researcher review pending",
+  "per_relation_type": {
+    "disease:drug:effect/phenotype": {
+      "flagged": 1,
+      "rows": 352
+    },
+    "disease:drug:gene/protein": {
+      "flagged": 0,
+      "rows": 8
+    },
+    "disease:gene/protein:drug": {
+      "flagged": 0,
+      "rows": 17
+    },
+    "drug:disease:effect/phenotype": {
+      "flagged": 0,
+      "rows": 6
+    },
+    "drug:disease:gene/protein": {
+      "flagged": 0,
+      "rows": 8
+    },
+    "drug:gene/protein:disease": {
+      "flagged": 0,
+      "rows": 54
+    },
+    "effect/phenotype:disease:drug": {
+      "flagged": 3,
+      "rows": 57
+    },
+    "gene/protein:disease:drug": {
+      "flagged": 0,
+      "rows": 12
+    },
+    "gene/protein:drug:disease": {
+      "flagged": 0,
+      "rows": 10
+    }
+  },
+  "per_split": {
+    "expansion": {
+      "flagged": 2,
+      "rows": 400
+    },
+    "pilot": {
+      "flagged": 1,
+      "rows": 100
+    },
+    "screening": {
+      "flagged": 1,
+      "rows": 20
+    },
+    "smoke": {
+      "flagged": 0,
+      "rows": 4
+    }
+  },
+  "provenance": {
+    "audit_source_sha256": "cdf1dcdb20e649253fed1051646d1675202ac2168c6c894ef83cc70e80c77a45",
+    "date_local": "2026-10-16",
+    "episodes_created": 0,
+    "git_commit": "0e5b9fc9e1cbf042a173867cb28b9ba2de05f5c1",
+    "model_calls_in_this_revision": 0,
+    "no_protocol_frozen_hash_entry": true,
+    "prior_s14_diagnostics_exist": true,
+    "protocol_sha256": "d87b111cc2cd918882c95f75f1fcc757a0532bac26455e633d52d2e2490e773b",
+    "timezone": "Asia/Dhaka"
+  },
+  "reporting_rule": {
+    "execution": "future reporting stages; no results computed in S15",
+    "gates": "all queries",
+    "metrics": "Every protocol \u00a716 metric and \u00a717 chance-baseline comparison",
+    "populations": [
+      "all queries",
+      "SOURCE_NAME_OVERLAP excluded"
+    ]
+  },
+  "rows": 524,
+  "short_names": [
+    {
+      "name": "F11",
+      "present_in_starting_line": false,
+      "present_in_system": false,
+      "query_id": "BH2_00244",
+      "split": "expansion"
+    },
+    {
+      "name": "GCK",
+      "present_in_starting_line": false,
+      "present_in_system": false,
+      "query_id": "BH2_00732",
+      "split": "expansion"
+    },
+    {
+      "name": "ABO",
+      "present_in_starting_line": false,
+      "present_in_system": false,
+      "query_id": "BH2_00841",
+      "split": "expansion"
+    },
+    {
+      "name": "UNG",
+      "present_in_starting_line": false,
+      "present_in_system": false,
+      "query_id": "BH2_00874",
+      "split": "expansion"
+    },
+    {
+      "name": "GSR",
+      "present_in_starting_line": false,
+      "present_in_system": false,
+      "query_id": "BH2_01061",
+      "split": "expansion"
+    },
+    {
+      "name": "ALB",
+      "present_in_starting_line": false,
+      "present_in_system": false,
+      "query_id": "BH2_01223",
+      "split": "expansion"
+    },
+    {
+      "name": "KIT",
+      "present_in_starting_line": false,
+      "present_in_system": false,
+      "query_id": "BH2_01280",
+      "split": "expansion"
+    },
+    {
+      "name": "AR",
+      "present_in_starting_line": false,
+      "present_in_system": false,
+      "query_id": "BH2_01282",
+      "split": "expansion"
+    },
+    {
+      "name": "LTF",
+      "present_in_starting_line": false,
+      "present_in_system": false,
+      "query_id": "BH2_02390",
+      "split": "expansion"
+    },
+    {
+      "name": "F2",
+      "present_in_starting_line": false,
+      "present_in_system": false,
+      "query_id": "BH2_02780",
+      "split": "expansion"
+    },
+    {
+      "name": "NGF",
+      "present_in_starting_line": false,
+      "present_in_system": false,
+      "query_id": "BH2_04824",
+      "split": "expansion"
+    },
+    {
+      "name": "CKB",
+      "present_in_starting_line": false,
+      "present_in_system": false,
+      "query_id": "BH2_04856",
+      "split": "expansion"
+    },
+    {
+      "name": "CKM",
+      "present_in_starting_line": false,
+      "present_in_system": false,
+      "query_id": "BH2_04856",
+      "split": "expansion"
+    },
+    {
+      "name": "CRP",
+      "present_in_starting_line": false,
+      "present_in_system": false,
+      "query_id": "BH2_04856",
+      "split": "expansion"
+    },
+    {
+      "name": "GSN",
+      "present_in_starting_line": false,
+      "present_in_system": false,
+      "query_id": "BH2_04856",
+      "split": "expansion"
+    },
+    {
+      "name": "IL6",
+      "present_in_starting_line": false,
+      "present_in_system": false,
+      "query_id": "BH2_04856",
+      "split": "expansion"
+    },
+    {
+      "name": "TNF",
+      "present_in_starting_line": false,
+      "present_in_system": false,
+      "query_id": "BH2_04856",
+      "split": "expansion"
+    },
+    {
+      "name": "VCL",
+      "present_in_starting_line": false,
+      "present_in_system": false,
+      "query_id": "BH2_04856",
+      "split": "expansion"
+    },
+    {
+      "name": "VIM",
+      "present_in_starting_line": false,
+      "present_in_system": false,
+      "query_id": "BH2_04856",
+      "split": "expansion"
+    },
+    {
+      "name": "MCC",
+      "present_in_starting_line": false,
+      "present_in_system": false,
+      "query_id": "BH2_06279",
+      "split": "expansion"
+    },
+    {
+      "name": "ATP",
+      "present_in_starting_line": false,
+      "present_in_system": false,
+      "query_id": "BH2_06294",
+      "split": "expansion"
+    },
+    {
+      "name": "RB1",
+      "present_in_starting_line": false,
+      "present_in_system": false,
+      "query_id": "BH2_06423",
+      "split": "expansion"
+    },
+    {
+      "name": "EPX",
+      "present_in_starting_line": false,
+      "present_in_system": false,
+      "query_id": "BH2_06518",
+      "split": "expansion"
+    },
+    {
+      "name": "ALB",
+      "present_in_starting_line": false,
+      "present_in_system": false,
+      "query_id": "BH2_07325",
+      "split": "expansion"
+    },
+    {
+      "name": "CA1",
+      "present_in_starting_line": false,
+      "present_in_system": false,
+      "query_id": "BH2_07343",
+      "split": "expansion"
+    },
+    {
+      "name": "CA2",
+      "present_in_starting_line": false,
+      "present_in_system": false,
+      "query_id": "BH2_07343",
+      "split": "expansion"
+    },
+    {
+      "name": "ALB",
+      "present_in_starting_line": false,
+      "present_in_system": false,
+      "query_id": "BH2_07383",
+      "split": "expansion"
+    },
+    {
+      "name": "ALB",
+      "present_in_starting_line": false,
+      "present_in_system": false,
+      "query_id": "BH2_07578",
+      "split": "expansion"
+    },
+    {
+      "name": "ADA",
+      "present_in_starting_line": false,
+      "present_in_system": false,
+      "query_id": "BH2_00341",
+      "split": "pilot"
+    },
+    {
+      "name": "PGR",
+      "present_in_starting_line": false,
+      "present_in_system": false,
+      "query_id": "BH2_02789",
+      "split": "pilot"
+    },
+    {
+      "name": "XDH",
+      "present_in_starting_line": false,
+      "present_in_system": false,
+      "query_id": "BH2_04828",
+      "split": "pilot"
+    },
+    {
+      "name": "C3",
+      "present_in_starting_line": false,
+      "present_in_system": false,
+      "query_id": "BH2_06865",
+      "split": "pilot"
+    },
+    {
+      "name": "ALB",
+      "present_in_starting_line": false,
+      "present_in_system": false,
+      "query_id": "BH2_07479",
+      "split": "pilot"
+    },
+    {
+      "name": "TTR",
+      "present_in_starting_line": false,
+      "present_in_system": false,
+      "query_id": "BH2_00461",
+      "split": "screening"
+    }
+  ]
+}
