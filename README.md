@@ -2,6 +2,12 @@
 
 CoFail-KG is a research project studying co-failure of independent local LLM agents answering multi-hop biomedical questions over a knowledge graph (PrimeKG, with questions from BioHopR). See `docs/` for the frozen protocol, decision rules, pipeline runbook, and progress log.
 
+## Research output backups
+
+Windows developers can upload research outputs after `git push` and download them
+after `git pull`. See the [setup and shared-folder onboarding guide](docs/google_drive_backup.md#other-developers-using-the-same-backup-folder).
+Each developer authenticates with their own Google account; credentials are never committed.
+
 ## Reproduce
 
 ### Python

@@ -72,6 +72,124 @@ Disable-ScheduledTask -TaskName CoFail-KG-Backup
 No production task was enabled during implementation. The old task-registration
 script has been removed. No task is required for the new workflow.
 
+## Other developers using the same backup folder
+
+This setup is per computer and per Google account. Cloning the repository gets
+the scripts and this guide; it does not install rclone, authenticate Google, or
+enable the PowerShell wrapper automatically. The current implementation supports
+Windows PowerShell/PowerShell 7; other operating systems need their own integration.
+
+### Backup owner: grant folder access
+
+In Google Drive, share the existing **CoFail-KG-Backups** folder with each
+developer's Google email as **Editor**. Send them that folder's link so they can
+identify the correct folder. Keep general access restricted to invited people.
+Do not send your Google password, `rclone.conf`, OAuth token, or OAuth client JSON.
+Editors can modify/move/remove shared content through Drive itself; the backup
+scripts' preservation rules do not restrict what an editor can do manually.
+No collaborator access has been granted by these scripts.
+
+### Developer: install and authenticate independently
+
+1. Clone the repository, then install rclone at a permanent path. Example:
+
+   ```powershell
+   git.exe clone https://github.com/oishorjooakkhorr-cyber/cofail_kg.git C:\Work\cofail_kg
+   Set-Location C:\Work\cofail_kg
+   $rcloneExe = 'C:\Tools\rclone\rclone.exe'
+   ```
+
+2. Follow the OAuth setup in the one-time setup section above using **your own**
+   Google Cloud project/Desktop OAuth client and Google account. Enable Drive API,
+   keep Testing mode, and add your own Google email as a test user. Create the
+   rclone remote named `cofail_gdrive` with scope `drive`; keep its advanced
+   `root_folder_id` blank and `shared_with_me` false for the shortcut setup below.
+
+   ```powershell
+   & $rcloneExe config
+   ```
+
+   Each developer's token remains on their own computer. Their own OAuth app
+   means the backup owner does not need to distribute any authentication settings.
+   With Testing mode, each developer reauthenticates about weekly.
+
+3. Open the folder link shared by the owner in Google Drive while signed in to
+   the same account used for rclone. Use **Organize > Add shortcut** to put a
+   shortcut named exactly **CoFail-KG-Backups** directly in **My Drive**.
+   This must point to the owner's shared folder; do not create a new empty folder
+   or copy its contents. Ensure there is no second folder/shortcut with that name
+   in My Drive. Leave rclone's `skip_shortcuts` setting false (the default).
+   Rclone follows folder shortcuts for both uploads and downloads, so the existing
+   destination `cofail_gdrive:CoFail-KG-Backups` reaches the shared folder.
+
+4. Before any push, verify that you can see the owner's existing backup:
+
+   ```powershell
+   & $rcloneExe lsf 'cofail_gdrive:CoFail-KG-Backups/current' --dirs-only
+   & $rcloneExe lsf 'cofail_gdrive:CoFail-KG-Backups/current/results/runs' --max-depth 1
+   ```
+
+   The first command should show `data/` and `results/`; the second should show
+   existing experiment run directories. If the path is missing/empty, or rclone
+   reports duplicate names or a permission error, fix sharing, account selection
+   or the shortcut first. Do not push and accidentally create a separate backup.
+
+5. Activate the wrapper and make the first pull to restore the shared outputs:
+
+   ```powershell
+   . .\scripts\enable_cofail_kg_backup.ps1 -RclonePath $rcloneExe
+   git pull --ff-only
+   ```
+
+   An already-up-to-date Git pull still downloads the backup. Changed local
+   outputs are preserved under `.cofail-backup-history/` before replacement;
+   Git-tracked files stay managed by Git. Raw datasets, model weights and large
+   cache tables are not backed up: follow the README to obtain/rebuild those.
+
+6. For future sessions, put the activation line in the PowerShell profile you
+   use, with **your own clone and rclone paths**, then reopen PowerShell:
+
+   ```powershell
+   . 'C:\Work\cofail_kg\scripts\enable_cofail_kg_backup.ps1' -RclonePath 'C:\Tools\rclone\rclone.exe'
+   ```
+
+   The all-hosts user profile path is `$PROFILE.CurrentUserAllHosts`. If script
+   execution is blocked, review `Get-ExecutionPolicy -List`; choosing
+   `Set-ExecutionPolicy -Scope CurrentUser RemoteSigned` permits local scripts
+   for your user. Organizational policy can still override this. Activation
+   must display the Drive-transfers-enabled message before relying on the wrapper.
+
+### Everyday team workflow
+
+```powershell
+git pull --ff-only          # pull code, then outputs
+# Work and finish writing the outputs; uploads defer files newer than 10 minutes.
+git add .
+git commit -m 'Research update'  # no Drive transfer
+git push                   # push code, then eligible outputs
+```
+
+Use unique experiment/run IDs across developers. Avoid concurrent pushes that
+change the same output path: this is a shared versioned backup, not a conflict
+resolver. The last upload becomes `current`; previous remote versions go into
+`history`. Pull before starting work on another computer. GUI Git clients and
+direct `git.exe` commands bypass the PowerShell wrapper.
+
+When authorization expires:
+
+```powershell
+& $rcloneExe config reconnect cofail_gdrive:
+```
+
+Complete browser consent, then retry the failed Git push/pull. A successful Git
+operation can have a failed Drive transfer; read the wrapper warning and exit
+status rather than assuming both services succeeded.
+
+References: [Google folder sharing](https://support.google.com/drive/answer/7166529),
+[rclone folder shortcuts](https://rclone.org/drive/#shortcuts).
+This onboarding path is documented from those sources; another developer's
+account/computer has not been tested or configured here.
+
 ## What is transferred
 
 | Path | Included artifacts |
