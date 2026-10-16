@@ -33,8 +33,29 @@ the same packages without versions; use it only if you deliberately want newer v
 python -m pytest -q
 ```
 
+On this Windows host, run the suite in a normal PowerShell terminal or through
+approved host execution outside the Codex restricted sandbox. The sandbox denies
+the hard links used to publish write-once episode records and may also deny pytest's
+temporary directory. Moving the temporary directory does not remove the hard-link
+restriction. Do not skip the persistence tests or replace the atomic saver to work
+around that execution restriction.
+
 - One test checks the real BioHopR file and skips until it has been downloaded (next section).
 - S4 unit tests use tiny synthetic graphs and do not require the full PrimeKG download.
+
+S14's single-example launcher is `scripts/14_run_episode.py`; it requires a new
+`--run-id` and an explicit `--think true` or `--think false`. Run it on the host with
+local Ollama serving the installed qwen3:4b. It checks frozen inputs and persistence
+before generation, uses the first screening query and protocol screening settings,
+and saves every episode outcome without overwriting. See `docs/S14_implementation.md`
+for the reviewed run and remaining P1 approval; do not repeat or tune experimental
+runs without the researcher's decision.
+
+The authorized template diagnostic uses `configs/qwen3_s14.Modelfile` under the
+separate tag `cofail-qwen3:4b-templatefix`, selected with `--diagnostic-model`.
+Its one real repeat succeeded after a re-prompt, but local `qwen3:4b` actually
+contains Thinking-2507 weights: `think=false` does not reliably suppress reasoning.
+See `docs/S14_template_repair.md` for evidence and the remaining limitation.
 
 ### Get the data
 

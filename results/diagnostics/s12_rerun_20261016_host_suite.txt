@@ -1,0 +1,16 @@
+
+=================================== ERRORS ====================================
+__________________ ERROR collecting tests/test_run_agent.py ___________________
+ImportError while importing test module 'E:\Phitron Thesis\cofail_kg\tests\test_run_agent.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+E:\anaconda\Lib\importlib\__init__.py:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_run_agent.py:14: in <module>
+    from cofail_kg.agents import run_agent as runner
+E   ImportError: cannot import name 'run_agent' from 'cofail_kg.agents' (E:\Phitron Thesis\cofail_kg\src\cofail_kg\agents\__init__.py)
+=========================== short test summary info ===========================
+ERROR tests/test_run_agent.py
+!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!
+1 error in 5.19s

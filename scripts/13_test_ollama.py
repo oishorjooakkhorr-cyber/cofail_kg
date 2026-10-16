@@ -29,7 +29,7 @@ def main(argv=None):
         raise FileExistsError(args.output)
     config = yaml.safe_load(args.config.read_text(encoding="utf-8"))
     client = OllamaClient(timeout_seconds=config["request_timeout_seconds"],
-                          base_url=config["base_url"])
+                          think=config["think"], base_url=config["base_url"])
     report = {"stage": "S13", "model_requested": args.model, "options": OPTIONS,
               "transport": config, "started_at": datetime.now(timezone.utc).isoformat(),
               "native_tool_call": False}

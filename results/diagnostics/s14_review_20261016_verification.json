@@ -1,0 +1,30 @@
+{
+  "query_id": "BH2_00461",
+  "status": "PARSE_FAIL",
+  "record_sha256": "d43bcebb7c41113694ba1126bfe253042af01522c7812339502671790bca0425",
+  "prompt_sha256": "8f93b7c42ef7a90f64bbcd83e6b77db62e4f3c6b0c08a45f068b435a9c655265",
+  "exact_system_and_user_messages": true,
+  "reconstruction_verified": true,
+  "raw_thinking_and_messages_preserved": true,
+  "one_fixed_reprompt": true,
+  "native_tool_calls": 0,
+  "tool_result_comparison": "Not exercised: no tool calls",
+  "trace_route": "Not exercised: no tool calls",
+  "final_json_parsed": false,
+  "grounded_answer_check": "Not exercised: no final answers",
+  "prompt_tokens": [
+    598,
+    627
+  ],
+  "output_tokens": [
+    4096,
+    4096
+  ],
+  "max_prompt_context_fraction": 0.0765380859375,
+  "done_reasons": [
+    "length",
+    "length"
+  ],
+  "duration_seconds": 90.10505,
+  "runtime_sources_still_match": true
+}

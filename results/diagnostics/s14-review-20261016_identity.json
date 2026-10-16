@@ -1,0 +1,28 @@
+{
+  "record_path": "E:\\Phitron Thesis\\cofail_kg\\results\\runs\\s14-review-20261016\\BH2_00461__S14-qwen3-4b__a1.json",
+  "record_sha256": "d43bcebb7c41113694ba1126bfe253042af01522c7812339502671790bca0425",
+  "identity_before": {
+    "tag": "qwen3:4b",
+    "digest": "359d7dd4bcdab3d86b87d73ac27966f4dbb9f5efdfcc75d34a8764a09474fae7",
+    "quantization": "Q4_K_M",
+    "parameter_size": "4.0B",
+    "capabilities": [
+      "completion",
+      "tools",
+      "thinking"
+    ]
+  },
+  "identity_after": {
+    "tag": "qwen3:4b",
+    "digest": "359d7dd4bcdab3d86b87d73ac27966f4dbb9f5efdfcc75d34a8764a09474fae7",
+    "quantization": "Q4_K_M",
+    "parameter_size": "4.0B",
+    "capabilities": [
+      "completion",
+      "tools",
+      "thinking"
+    ]
+  },
+  "identity_stable": true,
+  "status": "PARSE_FAIL"
+}

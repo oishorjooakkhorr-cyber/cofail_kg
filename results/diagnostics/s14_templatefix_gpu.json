@@ -1,0 +1,536 @@
+{
+  "command": [
+    "E:\\Phitron Thesis\\cofail_kg\\.venv\\Scripts\\python.exe",
+    "scripts/14_run_episode.py",
+    "--run-id",
+    "s14-templatefix-20261016",
+    "--think",
+    "false",
+    "--diagnostic-num-predict",
+    "6144",
+    "--diagnostic-model",
+    "cofail-qwen3:4b-templatefix"
+  ],
+  "episode_exit_code": 0,
+  "samples": [
+    {
+      "utc": "2026-10-16T04:39:15.184011+00:00",
+      "gpu": "NVIDIA GeForce RTX 3060 Ti, 8192, 4623, 3402, 1",
+      "exit_code": 0
+    },
+    {
+      "utc": "2026-10-16T04:39:16.227026+00:00",
+      "gpu": "NVIDIA GeForce RTX 3060 Ti, 8192, 4632, 3393, 3",
+      "exit_code": 0
+    },
+    {
+      "utc": "2026-10-16T04:39:17.272336+00:00",
+      "gpu": "NVIDIA GeForce RTX 3060 Ti, 8192, 4632, 3393, 1",
+      "exit_code": 0
+    },
+    {
+      "utc": "2026-10-16T04:39:18.314698+00:00",
+      "gpu": "NVIDIA GeForce RTX 3060 Ti, 8192, 4640, 3385, 100",
+      "exit_code": 0
+    },
+    {
+      "utc": "2026-10-16T04:39:19.357371+00:00",
+      "gpu": "NVIDIA GeForce RTX 3060 Ti, 8192, 4632, 3393, 95",
+      "exit_code": 0
+    },
+    {
+      "utc": "2026-10-16T04:39:20.398228+00:00",
+      "gpu": "NVIDIA GeForce RTX 3060 Ti, 8192, 4640, 3385, 95",
+      "exit_code": 0
+    },
+    {
+      "utc": "2026-10-16T04:39:21.444477+00:00",
+      "gpu": "NVIDIA GeForce RTX 3060 Ti, 8192, 4643, 3382, 94",
+      "exit_code": 0
+    },
+    {
+      "utc": "2026-10-16T04:39:22.491347+00:00",
+      "gpu": "NVIDIA GeForce RTX 3060 Ti, 8192, 4643, 3382, 95",
+      "exit_code": 0
+    },
+    {
+      "utc": "2026-10-16T04:39:23.539567+00:00",
+      "gpu": "NVIDIA GeForce RTX 3060 Ti, 8192, 4634, 3391, 95",
+      "exit_code": 0
+    },
+    {
+      "utc": "2026-10-16T04:39:24.576641+00:00",
+      "gpu": "NVIDIA GeForce RTX 3060 Ti, 8192, 4642, 3383, 95",
+      "exit_code": 0
+    },
+    {
+      "utc": "2026-10-16T04:39:25.625606+00:00",
+      "gpu": "NVIDIA GeForce RTX 3060 Ti, 8192, 4641, 3384, 95",
+      "exit_code": 0
+    },
+    {
+      "utc": "2026-10-16T04:39:26.678851+00:00",
+      "gpu": "NVIDIA GeForce RTX 3060 Ti, 8192, 4640, 3385, 95",
+      "exit_code": 0
+    },
+    {
+      "utc": "2026-10-16T04:39:27.717128+00:00",
+      "gpu": "NVIDIA GeForce RTX 3060 Ti, 8192, 4640, 3385, 95",
+      "exit_code": 0
+    },
+    {
+      "utc": "2026-10-16T04:39:28.769826+00:00",
+      "gpu": "NVIDIA GeForce RTX 3060 Ti, 8192, 4646, 3379, 95",
+      "exit_code": 0
+    },
+    {
+      "utc": "2026-10-16T04:39:29.811662+00:00",
+      "gpu": "NVIDIA GeForce RTX 3060 Ti, 8192, 4646, 3379, 93",
+      "exit_code": 0
+    },
+    {
+      "utc": "2026-10-16T04:39:30.853037+00:00",
+      "gpu": "NVIDIA GeForce RTX 3060 Ti, 8192, 4641, 3384, 96",
+      "exit_code": 0
+    },
+    {
+      "utc": "2026-10-16T04:39:31.893521+00:00",
+      "gpu": "NVIDIA GeForce RTX 3060 Ti, 8192, 4631, 3394, 95",
+      "exit_code": 0
+    },
+    {
+      "utc": "2026-10-16T04:39:32.937390+00:00",
+      "gpu": "NVIDIA GeForce RTX 3060 Ti, 8192, 4645, 3380, 95",
+      "exit_code": 0
+    },
+    {
+      "utc": "2026-10-16T04:39:33.981513+00:00",
+      "gpu": "NVIDIA GeForce RTX 3060 Ti, 8192, 4642, 3383, 95",
+      "exit_code": 0
+    },
+    {
+      "utc": "2026-10-16T04:39:35.024555+00:00",
+      "gpu": "NVIDIA GeForce RTX 3060 Ti, 8192, 4636, 3389, 96",
+      "exit_code": 0
+    },
+    {
+      "utc": "2026-10-16T04:39:36.068632+00:00",
+      "gpu": "NVIDIA GeForce RTX 3060 Ti, 8192, 4627, 3398, 95",
+      "exit_code": 0
+    },
+    {
+      "utc": "2026-10-16T04:39:37.109796+00:00",
+      "gpu": "NVIDIA GeForce RTX 3060 Ti, 8192, 4640, 3385, 94",
+      "exit_code": 0
+    },
+    {
+      "utc": "2026-10-16T04:39:38.150747+00:00",
+      "gpu": "NVIDIA GeForce RTX 3060 Ti, 8192, 4640, 3385, 94",
+      "exit_code": 0
+    },
+    {
+      "utc": "2026-10-16T04:39:39.190703+00:00",
+      "gpu": "NVIDIA GeForce RTX 3060 Ti, 8192, 4638, 3387, 95",
+      "exit_code": 0
+    },
+    {
+      "utc": "2026-10-16T04:39:40.232594+00:00",
+      "gpu": "NVIDIA GeForce RTX 3060 Ti, 8192, 4634, 3391, 95",
+      "exit_code": 0
+    },
+    {
+      "utc": "2026-10-16T04:39:41.274098+00:00",
+      "gpu": "NVIDIA GeForce RTX 3060 Ti, 8192, 4639, 3386, 95",
+      "exit_code": 0
+    },
+    {
+      "utc": "2026-10-16T04:39:42.318932+00:00",
+      "gpu": "NVIDIA GeForce RTX 3060 Ti, 8192, 4638, 3387, 95",
+      "exit_code": 0
+    },
+    {
+      "utc": "2026-10-16T04:39:43.366172+00:00",
+      "gpu": "NVIDIA GeForce RTX 3060 Ti, 8192, 4634, 3391, 95",
+      "exit_code": 0
+    },
+    {
+      "utc": "2026-10-16T04:39:44.409027+00:00",
+      "gpu": "NVIDIA GeForce RTX 3060 Ti, 8192, 4635, 3390, 94",
+      "exit_code": 0
+    },
+    {
+      "utc": "2026-10-16T04:39:45.455911+00:00",
+      "gpu": "NVIDIA GeForce RTX 3060 Ti, 8192, 4643, 3382, 94",
+      "exit_code": 0
+    },
+    {
+      "utc": "2026-10-16T04:39:46.499840+00:00",
+      "gpu": "NVIDIA GeForce RTX 3060 Ti, 8192, 4642, 3383, 95",
+      "exit_code": 0
+    },
+    {
+      "utc": "2026-10-16T04:39:47.550521+00:00",
+      "gpu": "NVIDIA GeForce RTX 3060 Ti, 8192, 4637, 3388, 95",
+      "exit_code": 0
+    },
+    {
+      "utc": "2026-10-16T04:39:48.600727+00:00",
+      "gpu": "NVIDIA GeForce RTX 3060 Ti, 8192, 4641, 3384, 94",
+      "exit_code": 0
+    },
+    {
+      "utc": "2026-10-16T04:39:49.643785+00:00",
+      "gpu": "NVIDIA GeForce RTX 3060 Ti, 8192, 4639, 3386, 95",
+      "exit_code": 0
+    },
+    {
+      "utc": "2026-10-16T04:39:50.687914+00:00",
+      "gpu": "NVIDIA GeForce RTX 3060 Ti, 8192, 4639, 3386, 95",
+      "exit_code": 0
+    },
+    {
+      "utc": "2026-10-16T04:39:51.740503+00:00",
+      "gpu": "NVIDIA GeForce RTX 3060 Ti, 8192, 4634, 3391, 95",
+      "exit_code": 0
+    },
+    {
+      "utc": "2026-10-16T04:39:52.782373+00:00",
+      "gpu": "NVIDIA GeForce RTX 3060 Ti, 8192, 4639, 3386, 95",
+      "exit_code": 0
+    },
+    {
+      "utc": "2026-10-16T04:39:53.829828+00:00",
+      "gpu": "NVIDIA GeForce RTX 3060 Ti, 8192, 4639, 3386, 96",
+      "exit_code": 0
+    },
+    {
+      "utc": "2026-10-16T04:39:54.879830+00:00",
+      "gpu": "NVIDIA GeForce RTX 3060 Ti, 8192, 4635, 3390, 96",
+      "exit_code": 0
+    },
+    {
+      "utc": "2026-10-16T04:39:55.931652+00:00",
+      "gpu": "NVIDIA GeForce RTX 3060 Ti, 8192, 4630, 3395, 96",
+      "exit_code": 0
+    },
+    {
+      "utc": "2026-10-16T04:39:56.982134+00:00",
+      "gpu": "NVIDIA GeForce RTX 3060 Ti, 8192, 4641, 3384, 95",
+      "exit_code": 0
+    },
+    {
+      "utc": "2026-10-16T04:39:58.030975+00:00",
+      "gpu": "NVIDIA GeForce RTX 3060 Ti, 8192, 4641, 3384, 95",
+      "exit_code": 0
+    },
+    {
+      "utc": "2026-10-16T04:39:59.072819+00:00",
+      "gpu": "NVIDIA GeForce RTX 3060 Ti, 8192, 4636, 3389, 93",
+      "exit_code": 0
+    },
+    {
+      "utc": "2026-10-16T04:40:00.118119+00:00",
+      "gpu": "NVIDIA GeForce RTX 3060 Ti, 8192, 4641, 3384, 95",
+      "exit_code": 0
+    },
+    {
+      "utc": "2026-10-16T04:40:01.160091+00:00",
+      "gpu": "NVIDIA GeForce RTX 3060 Ti, 8192, 4639, 3386, 95",
+      "exit_code": 0
+    },
+    {
+      "utc": "2026-10-16T04:40:02.205676+00:00",
+      "gpu": "NVIDIA GeForce RTX 3060 Ti, 8192, 4630, 3395, 95",
+      "exit_code": 0
+    },
+    {
+      "utc": "2026-10-16T04:40:03.248104+00:00",
+      "gpu": "NVIDIA GeForce RTX 3060 Ti, 8192, 4627, 3398, 96",
+      "exit_code": 0
+    },
+    {
+      "utc": "2026-10-16T04:40:04.292391+00:00",
+      "gpu": "NVIDIA GeForce RTX 3060 Ti, 8192, 4639, 3386, 95",
+      "exit_code": 0
+    },
+    {
+      "utc": "2026-10-16T04:40:05.332433+00:00",
+      "gpu": "NVIDIA GeForce RTX 3060 Ti, 8192, 4639, 3386, 95",
+      "exit_code": 0
+    },
+    {
+      "utc": "2026-10-16T04:40:06.378031+00:00",
+      "gpu": "NVIDIA GeForce RTX 3060 Ti, 8192, 4633, 3392, 95",
+      "exit_code": 0
+    },
+    {
+      "utc": "2026-10-16T04:40:07.420017+00:00",
+      "gpu": "NVIDIA GeForce RTX 3060 Ti, 8192, 4642, 3383, 94",
+      "exit_code": 0
+    },
+    {
+      "utc": "2026-10-16T04:40:08.460813+00:00",
+      "gpu": "NVIDIA GeForce RTX 3060 Ti, 8192, 4642, 3383, 96",
+      "exit_code": 0
+    },
+    {
+      "utc": "2026-10-16T04:40:09.499845+00:00",
+      "gpu": "NVIDIA GeForce RTX 3060 Ti, 8192, 4642, 3383, 94",
+      "exit_code": 0
+    },
+    {
+      "utc": "2026-10-16T04:40:10.543768+00:00",
+      "gpu": "NVIDIA GeForce RTX 3060 Ti, 8192, 4636, 3389, 95",
+      "exit_code": 0
+    },
+    {
+      "utc": "2026-10-16T04:40:11.592536+00:00",
+      "gpu": "NVIDIA GeForce RTX 3060 Ti, 8192, 4638, 3387, 95",
+      "exit_code": 0
+    },
+    {
+      "utc": "2026-10-16T04:40:12.641388+00:00",
+      "gpu": "NVIDIA GeForce RTX 3060 Ti, 8192, 4638, 3387, 95",
+      "exit_code": 0
+    },
+    {
+      "utc": "2026-10-16T04:40:13.687121+00:00",
+      "gpu": "NVIDIA GeForce RTX 3060 Ti, 8192, 4639, 3386, 95",
+      "exit_code": 0
+    },
+    {
+      "utc": "2026-10-16T04:40:14.735858+00:00",
+      "gpu": "NVIDIA GeForce RTX 3060 Ti, 8192, 4638, 3387, 95",
+      "exit_code": 0
+    },
+    {
+      "utc": "2026-10-16T04:40:15.789674+00:00",
+      "gpu": "NVIDIA GeForce RTX 3060 Ti, 8192, 4642, 3383, 1",
+      "exit_code": 0
+    },
+    {
+      "utc": "2026-10-16T04:40:16.842987+00:00",
+      "gpu": "NVIDIA GeForce RTX 3060 Ti, 8192, 4633, 3392, 95",
+      "exit_code": 0
+    },
+    {
+      "utc": "2026-10-16T04:40:17.890744+00:00",
+      "gpu": "NVIDIA GeForce RTX 3060 Ti, 8192, 4643, 3382, 96",
+      "exit_code": 0
+    },
+    {
+      "utc": "2026-10-16T04:40:18.942303+00:00",
+      "gpu": "NVIDIA GeForce RTX 3060 Ti, 8192, 4645, 3380, 96",
+      "exit_code": 0
+    },
+    {
+      "utc": "2026-10-16T04:40:19.982805+00:00",
+      "gpu": "NVIDIA GeForce RTX 3060 Ti, 8192, 4643, 3382, 95",
+      "exit_code": 0
+    },
+    {
+      "utc": "2026-10-16T04:40:21.028762+00:00",
+      "gpu": "NVIDIA GeForce RTX 3060 Ti, 8192, 4638, 3387, 96",
+      "exit_code": 0
+    },
+    {
+      "utc": "2026-10-16T04:40:22.071472+00:00",
+      "gpu": "NVIDIA GeForce RTX 3060 Ti, 8192, 4644, 3381, 96",
+      "exit_code": 0
+    },
+    {
+      "utc": "2026-10-16T04:40:23.112714+00:00",
+      "gpu": "NVIDIA GeForce RTX 3060 Ti, 8192, 4642, 3383, 96",
+      "exit_code": 0
+    },
+    {
+      "utc": "2026-10-16T04:40:24.157873+00:00",
+      "gpu": "NVIDIA GeForce RTX 3060 Ti, 8192, 4637, 3388, 95",
+      "exit_code": 0
+    },
+    {
+      "utc": "2026-10-16T04:40:25.202055+00:00",
+      "gpu": "NVIDIA GeForce RTX 3060 Ti, 8192, 4643, 3382, 96",
+      "exit_code": 0
+    },
+    {
+      "utc": "2026-10-16T04:40:26.245141+00:00",
+      "gpu": "NVIDIA GeForce RTX 3060 Ti, 8192, 4640, 3385, 96",
+      "exit_code": 0
+    },
+    {
+      "utc": "2026-10-16T04:40:27.289510+00:00",
+      "gpu": "NVIDIA GeForce RTX 3060 Ti, 8192, 4636, 3389, 96",
+      "exit_code": 0
+    },
+    {
+      "utc": "2026-10-16T04:40:28.331511+00:00",
+      "gpu": "NVIDIA GeForce RTX 3060 Ti, 8192, 4632, 3393, 96",
+      "exit_code": 0
+    },
+    {
+      "utc": "2026-10-16T04:40:29.374963+00:00",
+      "gpu": "NVIDIA GeForce RTX 3060 Ti, 8192, 4640, 3385, 96",
+      "exit_code": 0
+    },
+    {
+      "utc": "2026-10-16T04:40:30.421376+00:00",
+      "gpu": "NVIDIA GeForce RTX 3060 Ti, 8192, 4643, 3382, 95",
+      "exit_code": 0
+    },
+    {
+      "utc": "2026-10-16T04:40:31.458602+00:00",
+      "gpu": "NVIDIA GeForce RTX 3060 Ti, 8192, 4640, 3385, 96",
+      "exit_code": 0
+    },
+    {
+      "utc": "2026-10-16T04:40:32.506792+00:00",
+      "gpu": "NVIDIA GeForce RTX 3060 Ti, 8192, 4641, 3384, 96",
+      "exit_code": 0
+    },
+    {
+      "utc": "2026-10-16T04:40:33.554658+00:00",
+      "gpu": "NVIDIA GeForce RTX 3060 Ti, 8192, 4641, 3384, 96",
+      "exit_code": 0
+    },
+    {
+      "utc": "2026-10-16T04:40:34.603685+00:00",
+      "gpu": "NVIDIA GeForce RTX 3060 Ti, 8192, 4641, 3384, 96",
+      "exit_code": 0
+    },
+    {
+      "utc": "2026-10-16T04:40:35.646737+00:00",
+      "gpu": "NVIDIA GeForce RTX 3060 Ti, 8192, 4635, 3390, 94",
+      "exit_code": 0
+    },
+    {
+      "utc": "2026-10-16T04:40:36.691244+00:00",
+      "gpu": "NVIDIA GeForce RTX 3060 Ti, 8192, 4640, 3385, 96",
+      "exit_code": 0
+    },
+    {
+      "utc": "2026-10-16T04:40:37.728492+00:00",
+      "gpu": "NVIDIA GeForce RTX 3060 Ti, 8192, 4640, 3385, 96",
+      "exit_code": 0
+    },
+    {
+      "utc": "2026-10-16T04:40:38.771773+00:00",
+      "gpu": "NVIDIA GeForce RTX 3060 Ti, 8192, 4640, 3385, 96",
+      "exit_code": 0
+    },
+    {
+      "utc": "2026-10-16T04:40:39.815287+00:00",
+      "gpu": "NVIDIA GeForce RTX 3060 Ti, 8192, 4630, 3395, 96",
+      "exit_code": 0
+    },
+    {
+      "utc": "2026-10-16T04:40:40.860677+00:00",
+      "gpu": "NVIDIA GeForce RTX 3060 Ti, 8192, 4640, 3385, 97",
+      "exit_code": 0
+    },
+    {
+      "utc": "2026-10-16T04:40:41.910891+00:00",
+      "gpu": "NVIDIA GeForce RTX 3060 Ti, 8192, 4643, 3382, 55",
+      "exit_code": 0
+    },
+    {
+      "utc": "2026-10-16T04:40:42.955301+00:00",
+      "gpu": "NVIDIA GeForce RTX 3060 Ti, 8192, 4673, 3352, 96",
+      "exit_code": 0
+    },
+    {
+      "utc": "2026-10-16T04:40:44.000291+00:00",
+      "gpu": "NVIDIA GeForce RTX 3060 Ti, 8192, 4673, 3352, 96",
+      "exit_code": 0
+    },
+    {
+      "utc": "2026-10-16T04:40:45.046559+00:00",
+      "gpu": "NVIDIA GeForce RTX 3060 Ti, 8192, 4670, 3355, 96",
+      "exit_code": 0
+    },
+    {
+      "utc": "2026-10-16T04:40:46.087944+00:00",
+      "gpu": "NVIDIA GeForce RTX 3060 Ti, 8192, 4651, 3374, 96",
+      "exit_code": 0
+    },
+    {
+      "utc": "2026-10-16T04:40:47.134525+00:00",
+      "gpu": "NVIDIA GeForce RTX 3060 Ti, 8192, 4652, 3373, 96",
+      "exit_code": 0
+    },
+    {
+      "utc": "2026-10-16T04:40:48.180181+00:00",
+      "gpu": "NVIDIA GeForce RTX 3060 Ti, 8192, 4727, 3298, 93",
+      "exit_code": 0
+    },
+    {
+      "utc": "2026-10-16T04:40:49.219667+00:00",
+      "gpu": "NVIDIA GeForce RTX 3060 Ti, 8192, 4726, 3299, 96",
+      "exit_code": 0
+    },
+    {
+      "utc": "2026-10-16T04:40:50.263193+00:00",
+      "gpu": "NVIDIA GeForce RTX 3060 Ti, 8192, 4725, 3300, 95",
+      "exit_code": 0
+    },
+    {
+      "utc": "2026-10-16T04:40:51.315113+00:00",
+      "gpu": "NVIDIA GeForce RTX 3060 Ti, 8192, 4732, 3293, 95",
+      "exit_code": 0
+    },
+    {
+      "utc": "2026-10-16T04:40:52.359662+00:00",
+      "gpu": "NVIDIA GeForce RTX 3060 Ti, 8192, 4715, 3310, 93",
+      "exit_code": 0
+    },
+    {
+      "utc": "2026-10-16T04:40:53.414505+00:00",
+      "gpu": "NVIDIA GeForce RTX 3060 Ti, 8192, 4741, 3284, 97",
+      "exit_code": 0
+    },
+    {
+      "utc": "2026-10-16T04:40:54.456317+00:00",
+      "gpu": "NVIDIA GeForce RTX 3060 Ti, 8192, 4742, 3283, 96",
+      "exit_code": 0
+    },
+    {
+      "utc": "2026-10-16T04:40:55.509830+00:00",
+      "gpu": "NVIDIA GeForce RTX 3060 Ti, 8192, 4729, 3296, 96",
+      "exit_code": 0
+    },
+    {
+      "utc": "2026-10-16T04:40:56.549120+00:00",
+      "gpu": "NVIDIA GeForce RTX 3060 Ti, 8192, 4670, 3355, 95",
+      "exit_code": 0
+    },
+    {
+      "utc": "2026-10-16T04:40:57.593949+00:00",
+      "gpu": "NVIDIA GeForce RTX 3060 Ti, 8192, 4663, 3362, 1",
+      "exit_code": 0
+    }
+  ],
+  "ollama_ps_after": {
+    "models": [
+      {
+        "name": "cofail-qwen3:4b-templatefix",
+        "model": "cofail-qwen3:4b-templatefix",
+        "size": 3877571133,
+        "digest": "188b1ed1a40c5a0e9c2b0a23cbb057cc1e7db1129395bec24ea082a7974155cd",
+        "details": {
+          "parent_model": "",
+          "format": "gguf",
+          "family": "qwen3",
+          "families": [
+            "qwen3"
+          ],
+          "parameter_size": "4.0B",
+          "quantization_level": "Q4_K_M"
+        },
+        "expires_at": "2026-10-16T10:45:57.3849096+06:00",
+        "size_vram": 3877571133,
+        "context_length": 8192,
+        "runner": "llamacpp"
+      }
+    ]
+  }
+}

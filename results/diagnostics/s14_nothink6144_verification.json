@@ -1,0 +1,82 @@
+{
+  "status": "PARSE_FAIL",
+  "think_requested": false,
+  "num_predict": 6144,
+  "num_ctx": 8192,
+  "seconds": 174.107482,
+  "token_counts": {
+    "completion": [
+      4910,
+      2834,
+      253,
+      346,
+      743,
+      5747
+    ],
+    "prompt": [
+      598,
+      1838,
+      4738,
+      5367,
+      6524,
+      7295
+    ]
+  },
+  "finish_reasons": [
+    "stop",
+    "stop",
+    "stop",
+    "stop",
+    "stop",
+    "stop"
+  ],
+  "gpu_peak_sampled_mib": 4714,
+  "gpu_total_mib": 8192,
+  "gpu_samples": 168,
+  "full_model_on_gpu": true,
+  "tool_checks": [
+    {
+      "tool": "inspect_entity",
+      "arguments": {
+        "entity_id": "14097"
+      },
+      "matches_inspection_cli": true
+    },
+    {
+      "tool": "get_neighbors",
+      "arguments": {
+        "entity_id": "14097",
+        "neighbor_type": "gene/protein",
+        "page": 1,
+        "relation": "drug_protein"
+      },
+      "matches_inspection_cli": true
+    },
+    {
+      "tool": "inspect_entity",
+      "arguments": {
+        "entity_id": "111"
+      },
+      "matches_inspection_cli": true
+    },
+    {
+      "tool": "get_neighbors",
+      "arguments": {
+        "entity_id": "111",
+        "neighbor_type": "disease",
+        "page": 1,
+        "relation": "disease_protein"
+      },
+      "matches_inspection_cli": true
+    }
+  ],
+  "native_calls": 4,
+  "disease_items_retrieved": 21,
+  "both_json_suffixes_match_tool_result": true,
+  "suffix_extraction_is_diagnostic_only": true,
+  "finals_have_reasoning_prefix": true,
+  "think_true_false_render_identical": true,
+  "render_ends_with_open_think": true,
+  "malformed_tool_definitions": 2,
+  "record_sha256": "a5ba5d4bdcb8ec79dd5e1f778b61426a1b7a6ce582c1d8c99bbfbc4208dd741b"
+}

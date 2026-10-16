@@ -681,3 +681,114 @@ Tests: 294 passed (45 new). Full suite run outside sandbox after four existing
 S12 hard-link tests hit sandbox permissions; tests/code were not weakened.
 Protocol, decision rules, earlier data/artifacts and frozen hashes unchanged.
 S13 complete; S14 not started.
+
+## 2026-10-15 — S13 follow-up — explicit think and host verification; commit held
+
+Researcher requested exact execution/install locations, unchanged S12 saver
+verification in the host environment, mandatory config-driven think, and no
+commit until their reply. Original S13 commit f79165a already existed before
+this instruction; it is preserved and no further commit has been made.
+
+Added required boolean think to the client and top-level chat payload; the
+diagnostic loads config["think"] with no fallback. Config true is an S13
+synthetic-check setting only, not a decision for the experiment. Thinking output
+remains untouched in raw response/message. Both true/false and omission/null
+handling tested. Experimental thinking policy remains a researcher decision
+to record before S20; no scientific protocol/rule/frozen hash was edited.
+
+Verified Windows host DESKTOP-5903S8A, project E:\Phitron Thesis\cofail_kg,
+Ollama executable .venv\ollama\ollama.exe, API 127.0.0.1:11434, model manifest
+D:\Models\manifests\registry.ollama.ai\library\qwen3\4b and referenced blobs.
+Outside sandbox, plain `.\.venv\Scripts\python.exe -m pytest -q`: 301 passed,
+zero skips/failures, no temp-dir override or saver workaround. Additional probe
+under the actual results/runs exercised the unchanged S12 saver, save/load,
+hard-link identity and refusal to overwrite an existing record/link target.
+Probe files cleaned up. Evidence: results/diagnostics/s13_environment_check.json.
+
+New synthetic diagnostic with explicit think:true succeeded; raw thinking saved
+in results/diagnostics/s13_ollama_explicit_think.json; old diagnostic preserved.
+No biomedical episode, S14 work or Gate D3 choice. Researcher has not yet confirmed
+the real-episode execution environment: verified host works outside sandbox;
+current sandbox still blocks the saver. Review reply: docs/S13_review_reply.md.
+
+
+## 2026-10-16 — Fix verification failures; implement S14 for review
+
+Researcher requested fixes, explicitly chose to complete S14 while keeping its
+existing tests active, and chose think=true for the single real S14 example.
+Restored think=true in configs/ollama.yaml for the S13 synthetic diagnostic,
+as already described by the 2026-10-15 decision; no experimental policy inferred.
+Implemented the exact runbook templates, runner and single-example launcher.
+Full host suite: 348 passed in 10.02 s, with no skips or exclusions. S12 saver is
+unchanged; host execution and a pre-inference results-directory hard-link check
+address the restricted-sandbox persistence limitation operationally.
+
+One actual episode, BH2_00461 with qwen3:4b and the frozen screening settings,
+was saved under s14-review-20261016 with status PARSE_FAIL. Both replies ended
+at 4096 generated tokens, with thinking but empty content and no native calls.
+The runner sent exactly one fixed re-prompt. Prompt tokens were 598/627,
+identity was stable, and full raw messages were retained. No answer or route was
+produced; no further generation or setting/prompt change was made to obtain a pass.
+The initial launcher connection failure happened before the episode; the existing
+local Ollama server was started on localhost using D:\Models before the one run.
+
+Report: docs/S14_implementation.md. P1 hash is
+8f93b7c42ef7a90f64bbcd83e6b77db62e4f3c6b0c08a45f068b435a9c655265.
+P1 is not frozen: runbook S14 / protocol 9.3 require researcher review and approval.
+The single-example thinking choice does not select the later experimental policy.
+No protocol/frozen-hash change, commit, S15 work or model-selection decision.
+
+
+## 2026-10-16 — Authorized S14 diagnostic: thinking disabled, output cap 6144
+
+Researcher requested one repeat with think=false and a moderately larger output
+window compatible with the GPU. RTX 3060 Ti has 8192 MiB VRAM; pre-run nvidia-smi
+reported 679 MiB used and 7346 MiB free. Earlier Ollama evidence fitted all 37/37
+layers on GPU at num_ctx=8192 (about 3697 MiB model/context/compute allocation).
+Selected num_predict=6144 (50% above the 4096 default), retaining num_ctx=8192,
+qwen3:4b, P1, the same first screening query, temperature 0, seed 42, page size 50,
+budget 30 and 600-second episode timeout. This is a diagnostic deviation from
+screening, explicitly requested by the researcher; no frozen setting changes.
+Run ID: s14-nothink6144-20261016. Prior failed record remains untouched.
+Added an explicit diagnostic output-cap CLI option; default remains 4096.
+Full host suite before generation: 351 passed (no skips/exclusions).
+GPU use will be sampled during the episode; no success outcome is presumed.
+
+
+S14 diagnostic outcome (same date): one episode completed as PARSE_FAIL after
+174.107482 s, but four native tools succeeded and returned 21 disease entries
+through TTR. Both final JSON suffixes exactly matched those returned ID/name pairs;
+reasoning prefixes made the complete replies invalid under unchanged protocol 9.4.
+GPU sampled peak 4714/8192 MiB, full model GPU resident, no OOM; all six turns
+stopped before the 6144 cap. The final prompt was 7295 tokens and two context
+shifts occurred during its long response.
+
+Render-only inspection (no further generation) confirmed identical true/false
+prompts ending in an open thinking tag, and two malformed rendered JSON tool
+definitions. The installed template uses .Function without JSON serialization
+and lacks a false-thinking closing prefix. A two-expression repair proposal was
+saved as results/diagnostics/s14_qwen3_template_proposed.Modelfile but was not
+installed or run. Original model and strict parser unchanged. Root-cause evidence,
+limitations and proposed validation: docs/S14_nothink6144_diagnostic.md.
+
+## 2026-10-16 — Authorized template repair and one S14 repeat
+
+Researcher requested repair and rerun. Created the separate local variant
+cofail-qwen3:4b-templatefix from the installed weights, correcting tool JSON
+serialization and adding the proposed false-thinking closing prefix. Actual
+Ollama rendering validates both tool definitions and distinct true/false prefixes.
+Added an explicit diagnostic model override and regression; full host suite:
+352 passed, no skips/exclusions. Original model and both failed records preserved.
+
+One repeat with think=false, num_predict=6144, num_ctx=8192 completed SUCCESS in
+101.511760 s after the existing single JSON re-prompt. Four successful native
+calls; 21 final ID/name pairs match the returned disease list and inspection CLI.
+Sampled GPU peak 4742/8192 MiB; full model GPU resident. No parser relaxation.
+
+Corrected earlier assumption: installed qwen3:4b metadata identifies
+Qwen3-4B-Thinking-2507, whose official model card supports only thinking mode.
+Reasoning persisted despite the changed prefix. This is a successful diagnostic,
+not validation of non-thinking behavior or a replacement experimental model.
+True non-thinking requires a researcher-selected compatible set of weights.
+No model download, P1 freeze, frozen protocol change, gold scoring, S15 or commit.
+Engineering choices, exact identities and evidence: docs/S14_template_repair.md.

@@ -39,13 +39,16 @@ class OllamaError(RuntimeError):
 
 
 class OllamaClient:
-    """Caller supplies the configured request timeout; no implicit generation settings."""
+    """Caller supplies configured timeout and think; no implicit generation settings."""
 
-    def __init__(self, *, timeout_seconds, base_url="http://127.0.0.1:11434"):
+    def __init__(self, *, timeout_seconds, think, base_url="http://127.0.0.1:11434"):
         if (type(timeout_seconds) not in (int, float) or not math.isfinite(timeout_seconds)
                 or timeout_seconds <= 0):
             raise ValueError("timeout_seconds must be a finite positive number")
+        if type(think) is not bool:
+            raise ValueError("think must be an explicit boolean, never None or a runtime default")
         self.timeout_seconds = timeout_seconds
+        self.think = think
         self.base_url = base_url.rstrip("/")
 
     def _request(self, method, endpoint, **kwargs):
@@ -106,7 +109,7 @@ class OllamaClient:
         started = time.perf_counter()
         raw = self._request("POST", "/api/chat", json={
             "model": model, "messages": messages, "tools": tools,
-            "options": options, "stream": False})
+            "options": options, "stream": False, "think": self.think})
         latency = time.perf_counter() - started
         message = raw.get("message")
         if (raw.get("done") is not True or not isinstance(message, dict)

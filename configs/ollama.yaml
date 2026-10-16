@@ -1,3 +1,5 @@
 # S13 HTTP transport settings; model/final runtime selection remains at S20–S21.
 base_url: http://127.0.0.1:11434
 request_timeout_seconds: 120
+# S13 synthetic diagnostic only; experimental thinking policy is decided separately.
+think: true

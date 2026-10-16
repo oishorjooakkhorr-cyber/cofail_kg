@@ -5,6 +5,65 @@ Completed 2026-10-15. Implements the S13 runbook prompt and protocol §9.1,
 No biomedical episode, Gate D3 model selection, or S14 work occurred.
 Protocol, decision rules, frozen hashes and final-model configuration are unchanged.
 
+## Requested follow-up — verified, uncommitted, awaiting researcher reply
+
+The original S13 implementation was already committed as `f79165a` before the
+researcher's subsequent instruction not to commit. That commit remains intact.
+No commit has been created for this follow-up. Ready-to-share reply:
+`docs/S13_review_reply.md`.
+
+1. **Files changed:** client, diagnostic script, `configs/ollama.yaml`, both S13
+   test modules and stage documentation. New evidence files:
+   `results/diagnostics/s13_environment_check.json` and
+   `results/diagnostics/s13_ollama_explicit_think.json`. The original diagnostic
+   and the S12 saver are unchanged.
+2. **Tests:** 52 focused S13 cases passed. On Windows host `DESKTOP-5903S8A`,
+   outside the Codex execution sandbox, the plain command
+   `.\.venv\Scripts\python.exe -m pytest -q` passed **301 tests in 8.46 s**, with
+   zero failures/skips and no `--basetemp`, mocks of the saver, or disabled tests.
+   The ordinary temp directory was `C:\Users\User\AppData\Local\Temp`.
+   A separate probe under the actual `results/runs` directory exercised the
+   unchanged S12 save/load functions, confirmed hard-link identity/link count,
+   and verified refusal to overwrite a completed episode/existing link target.
+   Only the probe's own files/directories were removed afterward.
+3. **Real example:** new synthetic greeting/tool diagnostic explicitly sent
+   top-level `think: true` from config. Both raw responses contain unmodified
+   `message.thinking`; greeting `Hello!` and native `add(a=2,b=3)` succeeded.
+   Counts remained 16/209 and 146/295; wall times were 4.809 s and 2.748 s.
+   Model identity before/after was unchanged. Previous default-based evidence is
+   retained separately and is not relabeled as an explicit-think request.
+4. **Assumptions:** `think: true` is solely an S13 synthetic diagnostic value to
+   exercise thinking-output preservation, not approval of an experimental policy.
+   No future real-episode environment has been selected by the researcher.
+5. **Engineering choices:** `think` is now a required boolean constructor
+   argument; the diagnostic obtains it with `config["think"]`, with no fallback.
+   Omitted, null, numeric and string values fail before HTTP. Every chat payload
+   includes top-level `think`; it is not buried inside generation `options`.
+   Both booleans and retention of thinking text are tested. Existing raw-response
+   preservation required no stripping, parsing or copying of the thinking field.
+   All are routine engineering; no scientific rule was selected or edited.
+6. **Manual review:** confirm the intended real-run environment before episodes.
+   This host outside the sandbox passes; the sandbox still blocks hard links.
+   Decide and record the thinking policy for all experimental models before S20.
+   Inspect the new evidence and the uncommitted diff before approving a commit.
+
+Environment locations verified from the listening process, CLI, filesystem and
+user environment variable:
+
+- Workspace: `E:\Phitron Thesis\cofail_kg` on Windows 11 host `DESKTOP-5903S8A`.
+- Python: `E:\Phitron Thesis\cofail_kg\.venv\Scripts\python.exe`.
+- Ollama 0.40.4: `E:\Phitron Thesis\cofail_kg\.venv\ollama\ollama.exe`;
+  serving `http://127.0.0.1:11434` (observed PID 24400).
+- User `OLLAMA_MODELS`: `D:\Models`.
+- qwen3:4b manifest: `D:\Models\manifests\registry.ollama.ai\library\qwen3\4b`;
+  referenced blobs exist under `D:\Models\blobs`.
+- Ordinary tool commands execute in the restricted Codex sandbox; host process
+  inspection, live Ollama calls, the saver probe and full suite used explicitly
+  approved execution outside it. These are separate execution contexts on the
+  same machine, not a remote machine. No real biomedical episode was run.
+
+The original implementation report below preserves its original test/run results.
+
 ## 1. Files created or changed
 
 - `src/cofail_kg/agents/ollama_client.py`: thin `OllamaClient`, explicit generation
@@ -98,7 +157,8 @@ An independent assertion checked unchanged identity and the exact native argumen
 All choices below are routine engineering; none is a proposed literature method.
 
 - **HTTP/interface:** use existing `requests`, non-streaming `/api/chat`, and
-  `OllamaClient(timeout_seconds=..., base_url=...)`. Return a dictionary with
+  `OllamaClient(timeout_seconds=..., think=..., base_url=...)` (required explicit
+  `think` added by the requested follow-up above). Return a dictionary with
   `raw_response`, `message`, `tool_calls`, `prompt_eval_count`, `eval_count`,
   `latency_seconds`. Raw response means the full decoded JSON; no fields are
   discarded and the message's native call objects are passed through unchanged.

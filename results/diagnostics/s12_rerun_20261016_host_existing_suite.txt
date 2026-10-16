@@ -1,0 +1,173 @@
+........................................................................ [ 23%]
+........................................................................ [ 47%]
+..............F.FFF.F................................................... [ 71%]
+........................................................................ [ 95%]
+.............                                                            [100%]
+================================== FAILURES ===================================
+_________ test_script_sends_exactly_two_calls_and_preserves_evidence __________
+
+script = (<module 'test_s13_script' from 'E:\\Phitron Thesis\\cofail_kg\\scripts\\13_test_ollama.py'>, <Mock id='1913467730112'>)
+tmp_path = WindowsPath('C:/Users/User/AppData/Local/Temp/pytest-of-User/pytest-4/test_script_sends_exactly_two_0')
+capsys = <_pytest.capture.CaptureFixture object at 0x000001BD81295D30>
+
+    def test_script_sends_exactly_two_calls_and_preserves_evidence(script, tmp_path, capsys):
+        module, client = script
+        output = tmp_path / "evidence.json"
+>       assert module.main(["--output", str(output)]) == 0
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests\test_ollama_smoke_script.py:33: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+argv = ['--output', 'C:\\Users\\User\\AppData\\Local\\Temp\\pytest-of-User\\pytest-4\\test_script_sends_exactly_two_0\\evidence.json']
+
+    def main(argv=None):
+        parser = argparse.ArgumentParser(description=__doc__)
+        parser.add_argument("--model", default="qwen3:4b", help="Diagnostic model only (default: qwen3:4b)")
+        parser.add_argument("--config", type=Path, default=ROOT / "configs/ollama.yaml")
+        parser.add_argument("--output", type=Path, help="Optional new JSON evidence file; never overwritten")
+        args = parser.parse_args(argv)
+        if args.output and args.output.exists():
+            raise FileExistsError(args.output)
+        config = yaml.safe_load(args.config.read_text(encoding="utf-8"))
+        client = OllamaClient(timeout_seconds=config["request_timeout_seconds"],
+>                             think=config["think"], base_url=config["base_url"])
+                                    ^^^^^^^^^^^^^^^
+E       KeyError: 'think'
+
+scripts\13_test_ollama.py:32: KeyError
+_____________ test_missing_native_call_is_reported_without_retry ______________
+
+script = (<module 'test_s13_script' from 'E:\\Phitron Thesis\\cofail_kg\\scripts\\13_test_ollama.py'>, <Mock id='1913467729440'>)
+capsys = <_pytest.capture.CaptureFixture object at 0x000001BD820B79D0>
+
+    def test_missing_native_call_is_reported_without_retry(script, capsys):
+        module, client = script
+        result = {"tool_calls": [], "prompt_eval_count": 1, "eval_count": 2, "latency_seconds": .1}
+        client.chat.side_effect = [result, result]
+>       assert module.main([]) == 1
+               ^^^^^^^^^^^^^^^
+
+tests\test_ollama_smoke_script.py:61: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+argv = []
+
+    def main(argv=None):
+        parser = argparse.ArgumentParser(description=__doc__)
+        parser.add_argument("--model", default="qwen3:4b", help="Diagnostic model only (default: qwen3:4b)")
+        parser.add_argument("--config", type=Path, default=ROOT / "configs/ollama.yaml")
+        parser.add_argument("--output", type=Path, help="Optional new JSON evidence file; never overwritten")
+        args = parser.parse_args(argv)
+        if args.output and args.output.exists():
+            raise FileExistsError(args.output)
+        config = yaml.safe_load(args.config.read_text(encoding="utf-8"))
+        client = OllamaClient(timeout_seconds=config["request_timeout_seconds"],
+>                             think=config["think"], base_url=config["base_url"])
+                                    ^^^^^^^^^^^^^^^
+E       KeyError: 'think'
+
+scripts\13_test_ollama.py:32: KeyError
+______________ test_failure_keeps_plain_result_and_error_details ______________
+
+script = (<module 'test_s13_script' from 'E:\\Phitron Thesis\\cofail_kg\\scripts\\13_test_ollama.py'>, <Mock id='1913427424800'>)
+capsys = <_pytest.capture.CaptureFixture object at 0x000001BD834AA3F0>
+
+    def test_failure_keeps_plain_result_and_error_details(script, capsys):
+        module, client = script
+        client.chat.side_effect = [{"tool_calls": []}, OllamaError(
+            "OUT_OF_MEMORY", "out of memory", status_code=500, response_text='{"error":"out of memory"}')]
+>       assert module.main([]) == 1
+               ^^^^^^^^^^^^^^^
+
+tests\test_ollama_smoke_script.py:70: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+argv = []
+
+    def main(argv=None):
+        parser = argparse.ArgumentParser(description=__doc__)
+        parser.add_argument("--model", default="qwen3:4b", help="Diagnostic model only (default: qwen3:4b)")
+        parser.add_argument("--config", type=Path, default=ROOT / "configs/ollama.yaml")
+        parser.add_argument("--output", type=Path, help="Optional new JSON evidence file; never overwritten")
+        args = parser.parse_args(argv)
+        if args.output and args.output.exists():
+            raise FileExistsError(args.output)
+        config = yaml.safe_load(args.config.read_text(encoding="utf-8"))
+        client = OllamaClient(timeout_seconds=config["request_timeout_seconds"],
+>                             think=config["think"], base_url=config["base_url"])
+                                    ^^^^^^^^^^^^^^^
+E       KeyError: 'think'
+
+scripts\13_test_ollama.py:32: KeyError
+______________ test_does_not_run_model_without_tools_capability _______________
+
+script = (<module 'test_s13_script' from 'E:\\Phitron Thesis\\cofail_kg\\scripts\\13_test_ollama.py'>, <Mock id='1913467729104'>)
+capsys = <_pytest.capture.CaptureFixture object at 0x000001BD834A8770>
+
+    def test_does_not_run_model_without_tools_capability(script, capsys):
+        module, client = script
+        client.get_model_identity.return_value = {"capabilities": []}
+>       assert module.main([]) == 1
+               ^^^^^^^^^^^^^^^
+
+tests\test_ollama_smoke_script.py:80: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+argv = []
+
+    def main(argv=None):
+        parser = argparse.ArgumentParser(description=__doc__)
+        parser.add_argument("--model", default="qwen3:4b", help="Diagnostic model only (default: qwen3:4b)")
+        parser.add_argument("--config", type=Path, default=ROOT / "configs/ollama.yaml")
+        parser.add_argument("--output", type=Path, help="Optional new JSON evidence file; never overwritten")
+        args = parser.parse_args(argv)
+        if args.output and args.output.exists():
+            raise FileExistsError(args.output)
+        config = yaml.safe_load(args.config.read_text(encoding="utf-8"))
+        client = OllamaClient(timeout_seconds=config["request_timeout_seconds"],
+>                             think=config["think"], base_url=config["base_url"])
+                                    ^^^^^^^^^^^^^^^
+E       KeyError: 'think'
+
+scripts\13_test_ollama.py:32: KeyError
+________________ test_model_identity_change_fails_verification ________________
+
+script = (<module 'test_s13_script' from 'E:\\Phitron Thesis\\cofail_kg\\scripts\\13_test_ollama.py'>, <Mock id='1913427423792'>)
+capsys = <_pytest.capture.CaptureFixture object at 0x000001BD83943AD0>
+
+    def test_model_identity_change_fails_verification(script, capsys):
+        module, client = script
+        client.get_model_identity.side_effect = [
+            {"tag": "qwen3:4b", "digest": "a", "capabilities": ["tools"]},
+            {"tag": "qwen3:4b", "digest": "b", "capabilities": ["tools"]}]
+>       assert module.main([]) == 1
+               ^^^^^^^^^^^^^^^
+
+tests\test_ollama_smoke_script.py:100: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+argv = []
+
+    def main(argv=None):
+        parser = argparse.ArgumentParser(description=__doc__)
+        parser.add_argument("--model", default="qwen3:4b", help="Diagnostic model only (default: qwen3:4b)")
+        parser.add_argument("--config", type=Path, default=ROOT / "configs/ollama.yaml")
+        parser.add_argument("--output", type=Path, help="Optional new JSON evidence file; never overwritten")
+        args = parser.parse_args(argv)
+        if args.output and args.output.exists():
+            raise FileExistsError(args.output)
+        config = yaml.safe_load(args.config.read_text(encoding="utf-8"))
+        client = OllamaClient(timeout_seconds=config["request_timeout_seconds"],
+>                             think=config["think"], base_url=config["base_url"])
+                                    ^^^^^^^^^^^^^^^
+E       KeyError: 'think'
+
+scripts\13_test_ollama.py:32: KeyError
+=========================== short test summary info ===========================
+FAILED tests/test_ollama_smoke_script.py::test_script_sends_exactly_two_calls_and_preserves_evidence
+FAILED tests/test_ollama_smoke_script.py::test_missing_native_call_is_reported_without_retry
+FAILED tests/test_ollama_smoke_script.py::test_failure_keeps_plain_result_and_error_details
+FAILED tests/test_ollama_smoke_script.py::test_does_not_run_model_without_tools_capability
+FAILED tests/test_ollama_smoke_script.py::test_model_identity_change_fails_verification
+5 failed, 296 passed in 10.77s

@@ -1,0 +1,35 @@
+{
+  "checked_at": "2026-10-15T15:50:53.523313+00:00",
+  "machine": "DESKTOP-5903S8A",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "working_directory": "E:\\Phitron Thesis\\cofail_kg",
+  "python": "E:\\Phitron Thesis\\cofail_kg\\.venv\\Scripts\\python.exe",
+  "execution": "Windows host outside Codex execution sandbox",
+  "normal_temp_directory": "C:\\Users\\User\\AppData\\Local\\Temp",
+  "ollama_executable": "E:\\Phitron Thesis\\cofail_kg\\.venv\\ollama\\ollama.exe",
+  "ollama_version": "0.40.4",
+  "ollama_url": "http://127.0.0.1:11434",
+  "model_manifest": "D:\\Models\\manifests\\registry.ollama.ai\\library\\qwen3\\4b",
+  "model_blobs": "D:\\Models\\blobs",
+  "production_results_root": "E:\\Phitron Thesis\\cofail_kg\\results\\runs",
+  "hard_links_work": true,
+  "s12_save_load_round_trip": true,
+  "s12_overwrite_refused": true,
+  "existing_hardlink_target_refused": true,
+  "full_suite": {
+    "command": ".\\.venv\\Scripts\\python.exe -m pytest -q",
+    "passed": 301,
+    "skipped": 0,
+    "failed": 0,
+    "seconds": 8.46,
+    "workarounds": []
+  },
+  "source_sha256": {
+    "src/cofail_kg/agents/trace.py": "5d71e12a2b68cc18390448e0072ab61935acfb5bee9872096a8a724eee9b45fd",
+    "src/cofail_kg/agents/ollama_client.py": "c5fc85390ab74233c5696ea68e8f5915dcca986480d731fd89f28544018988dd",
+    "scripts/13_test_ollama.py": "bcd551cee41a7c42e5fceeaf8a3238ecfa1827842a2d54c2cd0c178dcc3ba224",
+    "configs/ollama.yaml": "03a3d43b4c2f8343f2766d947abd5d221b924dec48d6a3189e7f32ac0f2b67f6"
+  },
+  "new_changes_committed": false,
+  "real_episode_execution_environment": "Not yet confirmed by researcher; host outside sandbox verified, sandbox remains unsuitable for S12 saver"
+}

@@ -1,0 +1,103 @@
+{
+  "status": "SUCCESS",
+  "record_sha256": "e56f8ab710a056656f78676e28527fc34ee951617103c76fdb144ff34fb83d53",
+  "model": {
+    "digest": "188b1ed1a40c5a0e9c2b0a23cbb057cc1e7db1129395bec24ea082a7974155cd",
+    "quantization": "Q4_K_M",
+    "tag": "cofail-qwen3:4b-templatefix"
+  },
+  "think_requested": false,
+  "num_ctx": 8192,
+  "num_predict": 6144,
+  "seconds": 101.51176,
+  "token_counts": {
+    "completion": [
+      5505,
+      1478,
+      306,
+      481,
+      751,
+      444
+    ],
+    "prompt": [
+      611,
+      2899,
+      4443,
+      5125,
+      6417,
+      7196
+    ]
+  },
+  "finish_reasons": [
+    "stop",
+    "stop",
+    "stop",
+    "stop",
+    "stop",
+    "stop"
+  ],
+  "tool_checks": [
+    {
+      "tool": "inspect_entity",
+      "arguments": {
+        "entity_id": "14097"
+      },
+      "matches_inspection_cli": true
+    },
+    {
+      "tool": "get_neighbors",
+      "arguments": {
+        "entity_id": "14097",
+        "neighbor_type": "gene/protein",
+        "page": 1,
+        "relation": "drug_protein"
+      },
+      "matches_inspection_cli": true
+    },
+    {
+      "tool": "inspect_entity",
+      "arguments": {
+        "entity_id": "111"
+      },
+      "matches_inspection_cli": true
+    },
+    {
+      "tool": "get_neighbors",
+      "arguments": {
+        "entity_id": "111",
+        "neighbor_type": "disease",
+        "page": 1,
+        "relation": "disease_protein"
+      },
+      "matches_inspection_cli": true
+    }
+  ],
+  "answer_count": 21,
+  "strict_final_json": true,
+  "answers_match_returned_disease_items": true,
+  "parse_errors": 1,
+  "reasoning_still_in_content": true,
+  "gpu_peak_sampled_mib": 4742,
+  "gpu_samples": 99,
+  "gpu_total_mib": 8192,
+  "full_model_on_gpu": true,
+  "original_model_unchanged": true,
+  "previous_failed_records_unchanged": true,
+  "model_metadata": {
+    "general.architecture": "qwen3",
+    "general.basename": "Qwen3",
+    "general.file_type": 15,
+    "general.finetune": "Thinking",
+    "general.license": "apache-2.0",
+    "general.license.link": "https://huggingface.co/Qwen/Qwen3-4B-Thinking-2507/blob/main/LICENSE",
+    "general.parameter_count": 4022468096,
+    "general.quantization_version": 2,
+    "general.size_label": "4B",
+    "general.tags": [
+      "text-generation"
+    ],
+    "general.type": "model",
+    "general.version": "2507"
+  },
+  "gold_scoring_performed": false
+}

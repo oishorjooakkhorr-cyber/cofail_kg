@@ -33,26 +33,40 @@ def reply(**overrides):
             "done": True, "prompt_eval_count": 22, "eval_count": 8, **overrides}
 
 
-def test_chat_preserves_raw_message_native_calls_and_explicit_options(http, monkeypatch):
-    raw = reply(extra="keep this")
+@pytest.mark.parametrize("think", [True, False])
+def test_chat_preserves_raw_message_native_calls_and_explicit_options(http, monkeypatch, think):
+    raw = reply(extra="keep this", message={"role": "assistant", "content": "",
+                                           "thinking": "synthetic reasoning", "tool_calls": [CALL]})
     http.return_value = response(raw)
     ticks = iter([10.0, 10.25])
     monkeypatch.setattr("cofail_kg.agents.ollama_client.time.perf_counter", lambda: next(ticks))
     original = deepcopy((MESSAGES, TOOLS, OPTIONS))
-    result = OllamaClient(timeout_seconds=7).chat("tiny:latest", MESSAGES, TOOLS, OPTIONS)
+    result = OllamaClient(think=think, timeout_seconds=7).chat("tiny:latest", MESSAGES, TOOLS, OPTIONS)
     http.assert_called_once_with(
         "POST", "http://127.0.0.1:11434/api/chat", timeout=7,
         json={"model": "tiny:latest", "messages": MESSAGES, "tools": TOOLS,
-              "options": OPTIONS, "stream": False})
+              "options": OPTIONS, "stream": False, "think": think})
     assert result == {"raw_response": raw, "message": raw["message"], "tool_calls": [CALL],
                       "prompt_eval_count": 22, "eval_count": 8, "latency_seconds": .25}
     assert (MESSAGES, TOOLS, OPTIONS) == original
+    assert result["raw_response"]["message"]["thinking"] == "synthetic reasoning"
+
+
+def test_think_cannot_be_omitted():
+    with pytest.raises(TypeError, match="think"):
+        OllamaClient(timeout_seconds=7)
+
+
+@pytest.mark.parametrize("think", [None, "true", 0, 1])
+def test_think_must_be_explicit_boolean(think):
+    with pytest.raises(ValueError, match="think"):
+        OllamaClient(think=think, timeout_seconds=7)
 
 
 def test_plain_text_is_never_executed_or_retried(http):
     raw = reply(message={"role": "assistant", "content": 'add(2, 3); out of memory'})
     http.return_value = response(raw)
-    result = OllamaClient(timeout_seconds=7).chat("tiny", MESSAGES, [], OPTIONS)
+    result = OllamaClient(think=True, timeout_seconds=7).chat("tiny", MESSAGES, [], OPTIONS)
     assert result["tool_calls"] == []
     assert result["message"] == raw["message"]
     assert http.call_count == 1
@@ -61,7 +75,7 @@ def test_plain_text_is_never_executed_or_retried(http):
 @pytest.mark.parametrize("missing", OPTIONS)
 def test_all_four_generation_options_required_before_http(http, missing):
     with pytest.raises(ValueError, match=missing):
-        OllamaClient(timeout_seconds=7).chat("tiny", MESSAGES, [],
+        OllamaClient(think=True, timeout_seconds=7).chat("tiny", MESSAGES, [],
                                            {k: v for k, v in OPTIONS.items() if k != missing})
     http.assert_not_called()
 
@@ -69,13 +83,13 @@ def test_all_four_generation_options_required_before_http(http, missing):
 @pytest.mark.parametrize("timeout", [0, -1, True, float("nan"), float("inf"), "7"])
 def test_timeout_must_be_finite_positive_number(timeout):
     with pytest.raises(ValueError, match="timeout"):
-        OllamaClient(timeout_seconds=timeout)
+        OllamaClient(think=True, timeout_seconds=timeout)
 
 
 def test_connection_errors_get_exactly_two_logged_retries(http, caplog):
     http.side_effect = requests.ConnectionError("connection refused")
     with pytest.raises(OllamaError) as error:
-        OllamaClient(timeout_seconds=7).chat("tiny", MESSAGES, [], OPTIONS)
+        OllamaClient(think=True, timeout_seconds=7).chat("tiny", MESSAGES, [], OPTIONS)
     assert error.value.cause == "CONNECTION"
     assert http.call_count == 3
     assert "retry 1/2" in caplog.text and "retry 2/2" in caplog.text
@@ -84,7 +98,7 @@ def test_connection_errors_get_exactly_two_logged_retries(http, caplog):
 
 def test_connection_retry_can_recover(http):
     http.side_effect = [requests.ConnectionError("reset"), response(reply())]
-    assert OllamaClient(timeout_seconds=7).chat("tiny", MESSAGES, [], OPTIONS)["eval_count"] == 8
+    assert OllamaClient(think=True, timeout_seconds=7).chat("tiny", MESSAGES, [], OPTIONS)["eval_count"] == 8
     assert http.call_count == 2
 
 
@@ -96,7 +110,7 @@ def test_connection_retry_can_recover(http):
 def test_non_connection_exceptions_are_not_retried(http, exception, cause):
     http.side_effect = exception
     with pytest.raises(OllamaError) as error:
-        OllamaClient(timeout_seconds=7).chat("tiny", MESSAGES, [], OPTIONS)
+        OllamaClient(think=True, timeout_seconds=7).chat("tiny", MESSAGES, [], OPTIONS)
     assert error.value.cause == cause
     assert http.call_count == 1
 
@@ -113,7 +127,7 @@ def test_non_connection_exceptions_are_not_retried(http, exception, cause):
 def test_server_error_causes_preserve_response_and_never_retry(http, message, cause):
     http.return_value = response({"error": message}, 500)
     with pytest.raises(OllamaError) as error:
-        OllamaClient(timeout_seconds=7).chat("tiny", MESSAGES, [], OPTIONS)
+        OllamaClient(think=True, timeout_seconds=7).chat("tiny", MESSAGES, [], OPTIONS)
     assert error.value.cause == cause
     assert error.value.status_code == 500
     assert message in error.value.response_text
@@ -123,7 +137,7 @@ def test_server_error_causes_preserve_response_and_never_retry(http, message, ca
 def test_error_object_even_on_200_is_runtime_failure(http):
     http.return_value = response({"error": "runner failed"})
     with pytest.raises(OllamaError, match="runner failed") as error:
-        OllamaClient(timeout_seconds=7).chat("tiny", MESSAGES, [], OPTIONS)
+        OllamaClient(think=True, timeout_seconds=7).chat("tiny", MESSAGES, [], OPTIONS)
     assert error.value.cause == "RUNTIME"
     assert http.call_count == 1
 
@@ -133,7 +147,7 @@ def test_non_json_reply_is_not_retried(http, status, cause):
     http.return_value = response(None, status, text="bad gateway")
     http.return_value.json.side_effect = ValueError("invalid JSON")
     with pytest.raises(OllamaError) as error:
-        OllamaClient(timeout_seconds=7).chat("tiny", MESSAGES, [], OPTIONS)
+        OllamaClient(think=True, timeout_seconds=7).chat("tiny", MESSAGES, [], OPTIONS)
     assert error.value.cause == cause
     assert error.value.response_text == "bad gateway"
     assert http.call_count == 1
@@ -146,7 +160,7 @@ def test_non_json_reply_is_not_retried(http, status, cause):
 def test_invalid_envelopes_are_other_not_model_parse_fail(http, raw):
     http.return_value = response(raw)
     with pytest.raises(OllamaError) as error:
-        OllamaClient(timeout_seconds=7).chat("tiny", MESSAGES, [], OPTIONS)
+        OllamaClient(think=True, timeout_seconds=7).chat("tiny", MESSAGES, [], OPTIONS)
     assert error.value.cause == "OTHER"
     assert http.call_count == 1
 
@@ -155,7 +169,7 @@ def test_absent_token_counts_remain_unknown(http):
     raw = reply()
     del raw["prompt_eval_count"], raw["eval_count"]
     http.return_value = response(raw)
-    result = OllamaClient(timeout_seconds=7).chat("tiny", MESSAGES, [], OPTIONS)
+    result = OllamaClient(think=True, timeout_seconds=7).chat("tiny", MESSAGES, [], OPTIONS)
     assert result["prompt_eval_count"] is None and result["eval_count"] is None
 
 
@@ -169,7 +183,7 @@ def identity_responses():
 
 def test_identity_uses_exact_tag_and_show_metadata(http):
     http.side_effect = identity_responses()
-    result = OllamaClient(timeout_seconds=7).get_model_identity("tiny")
+    result = OllamaClient(think=True, timeout_seconds=7).get_model_identity("tiny")
     assert result == {"tag": "tiny:latest", "digest": "abc123", "quantization": "Q4_K_M",
                       "parameter_size": "1B", "capabilities": ["completion", "tools"]}
     assert http.call_args_list[0].args == ("GET", "http://127.0.0.1:11434/api/tags")
@@ -179,7 +193,7 @@ def test_identity_uses_exact_tag_and_show_metadata(http):
 def test_missing_model_does_not_choose_another(http):
     http.side_effect = identity_responses()
     with pytest.raises(OllamaError) as error:
-        OllamaClient(timeout_seconds=7).get_model_identity("tin")
+        OllamaClient(think=True, timeout_seconds=7).get_model_identity("tin")
     assert error.value.cause == "RUNTIME"
     assert http.call_count == 1
 
@@ -189,5 +203,5 @@ def test_missing_identity_metadata_fails_instead_of_inventing_values(http):
     responses[1] = response({"details": {}})
     http.side_effect = responses
     with pytest.raises(OllamaError) as error:
-        OllamaClient(timeout_seconds=7).get_model_identity("tiny")
+        OllamaClient(think=True, timeout_seconds=7).get_model_identity("tiny")
     assert error.value.cause == "OTHER"

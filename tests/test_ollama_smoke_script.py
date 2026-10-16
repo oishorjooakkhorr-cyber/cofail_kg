@@ -41,6 +41,17 @@ def test_script_sends_exactly_two_calls_and_preserves_evidence(script, tmp_path,
     assert second.args[2][0]["function"]["name"] == "add"
     assert second.args[3] == {"temperature": 0, "seed": 42, "num_ctx": 8192, "num_predict": 4096}
     assert module.OllamaClient.call_args.kwargs["timeout_seconds"] == 120
+    assert module.OllamaClient.call_args.kwargs["think"] is True
+    assert report["transport"]["think"] is True
+
+
+def test_think_false_is_loaded_from_configuration(script, tmp_path, capsys):
+    module, _ = script
+    config = tmp_path / "ollama.yaml"
+    config.write_text("base_url: http://127.0.0.1:11434\nrequest_timeout_seconds: 120\nthink: false\n")
+    assert module.main(["--config", str(config)]) == 0
+    assert module.OllamaClient.call_args.kwargs["think"] is False
+    assert json.loads(capsys.readouterr().out)["transport"]["think"] is False
 
 
 def test_missing_native_call_is_reported_without_retry(script, capsys):

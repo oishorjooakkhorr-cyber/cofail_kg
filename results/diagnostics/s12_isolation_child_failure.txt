@@ -1,0 +1,11 @@
+Execution: Codex restricted sandbox
+Exit code: 1
+
+Traceback (most recent call last):
+  File "<string>", line 16, in <module>
+    trace.load_episode_record(trace.save_episode_record(rec, sys.argv[1]))
+                              ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "E:\Phitron Thesis\cofail_kg\src\cofail_kg\agents\trace.py", line 430, in save_episode_record
+    os.link(temporary, final)  # fails if `final` exists: never overwrites
+    ~~~~~~~^^^^^^^^^^^^^^^^^^
+PermissionError: [WinError 5] Access is denied: 'E:\\Phitron Thesis\\cofail_kg\\.pytest_cache\\s12-isolation-child-location-20261015a\\run-test\\.BH2_00001__A1__a1.json.64ca3b437bd3498383cc0156adfda1cc.tmp' -> 'E:\\Phitron Thesis\\cofail_kg\\.pytest_cache\\s12-isolation-child-location-20261015a\\run-test\\BH2_00001__A1__a1.json'

@@ -1,6 +1,66 @@
 # Progress — CoFail-KG
 
 ## Current stage
+S14 template repair and authorized repeat (2026-10-16): **SUCCESS** after one fixed
+re-prompt; four successful native calls and 21 final ID/name pairs matching the
+returned disease items. Full host suite: **352 passed**, no skips/exclusions.
+Separate variant `cofail-qwen3:4b-templatefix` has valid JSON tool definitions and
+different true/false prefixes, verified by render-only requests. Runtime 101.512 s;
+sampled GPU peak 4742/8192 MiB, fully GPU resident. Original model and prior records
+are unchanged. Crucial correction: local `qwen3:4b` metadata identifies
+Qwen3-4B-Thinking-2507, which supports only thinking mode. Reasoning persisted
+despite `think=false`; the first final reply failed parsing, the re-prompt succeeded.
+This establishes a successful example, not reliable non-thinking behavior or gold
+accuracy. P1 approval/freeze remains pending; no S15 or experimental model choice.
+Details and next-step options: `docs/S14_template_repair.md`.
+
+Previous diagnostic checkpoint:
+S14 authorized follow-up diagnostic (2026-10-16): `think=false`, output cap 6144,
+context 8192, same first screening query/model. **4 successful native tool calls**
+retrieved 21 disease entries via TTR; every result matches the inspection CLI.
+Still **PARSE_FAIL** because reasoning precedes final JSON on both final attempts.
+GPU peak sampled usage 4714/8192 MiB; model fully GPU resident. Runtime render-only
+checks show identical true/false prefixes ending in `<think>` and malformed tool
+schema serialization. Proposed template repair saved, not installed or generated
+with. Last prompt 7295 tokens; context shifts occurred during the re-prompt reply.
+Full host suite: **351 passed**. Details: `docs/S14_nothink6144_diagnostic.md`.
+No frozen setting, installed model or parser change; original failed runs preserved.
+
+S14 implementation verified; researcher review pending (2026-10-16): requested
+S13 diagnostic config restored (`think: true`, synthetic diagnostic only), missing
+S14 prompt/runner implemented, all original draft tests retained. Plain host suite:
+**348 passed**, no skips/exclusions. The unchanged S12 saver works on host; the S14
+launcher checks actual results-directory hard links before any model call.
+Researcher enabled thinking for one S14 example. First screening query BH2_00461
+with qwen3:4b was saved as **PARSE_FAIL**: two thinking-only replies, each at the
+4096-token output cap, empty final content, zero native tool calls; exactly one
+fixed re-prompt. Prompt tokens 598/627; model digest stable; duration 90.105 s.
+This verifies recording/failure handling but not a successful real traversal.
+Report: `docs/S14_implementation.md`; record:
+`results/runs/s14-review-20261016/BH2_00461__S14-qwen3-4b__a1.json`.
+P1 approval/freeze and acceptance of the real example remain pending. No commit,
+protocol/frozen-hash change, model-selection decision or S15 work.
+
+S12 rerun checked (2026-10-16): unchanged S12 tests pass **21/21 outside the sandbox**.
+Sandbox with workspace temp reproduces the same four `os.link` WinError 5 failures
+(17 passed); default sandbox temp instead causes six fixture setup errors (15 passed).
+At that checkpoint the plain host suite stopped collecting at untracked S14 `test_run_agent.py`
+(missing `run_agent` module). Explicitly excluding that file gives **296 passed,
+5 failed**, all S13 script failures from missing `think` in `configs/ollama.yaml`.
+That checkpoint did not reproduce the historical 301-pass result below; fixed above.
+Analysis and raw-output references: `docs/S12_rerun_20261016.md`. No code/config
+change, model call or commit was made for this rerun.
+
+S13 follow-up verified, **uncommitted pending researcher reply** (2026-10-15):
+required explicit config `think`, thinking text preserved, and host environment
+identified. Plain full-suite command outside the sandbox: 301 passed (249 prior
++ 52 S13), no skips or test/temp overrides. Unchanged S12 saver and hard links
+work under the actual `results/runs` path on DESKTOP-5903S8A outside the sandbox;
+sandbox remains unsuitable. New explicit-think synthetic check passed.
+Original S13 commit `f79165a` predates the commit hold; no new commit made.
+Review reply: `docs/S13_review_reply.md`. Researcher must confirm real-episode
+execution environment and decide experimental thinking policy before S20.
+
 S13 completed (2026-10-15): local Ollama HTTP client, explicit generation options,
 identity, error classification, bounded logged connection retries and diagnostic script.
 Suite: 294 passed (45 new). Real installed qwen3:4b (Q4_K_M, 4.0B) returned `Hello!`
