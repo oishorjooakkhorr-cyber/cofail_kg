@@ -1,7 +1,12 @@
 # S16 — Answer normalization (2026-10-17)
 
-Implementation and automated verification are complete. Researcher inspection and
-acceptance are pending. Authority: the researcher's explicit request to start S16,
+Implementation and automated verification are complete. Researcher acceptance was
+recorded on 2026-10-17. Unresolved deduplication uses exact submitted `(id, name)`
+pairs with no case/whitespace folding or ID type coercion, a conservative reading
+of §12. The mismatch flag is literal and diagnostic only. Pilot results must report
+unresolved answers that would merge under normalized comparison, without changing
+official scoring; see the decision log's S16 acceptance entry.
+Authority: the researcher's explicit request to start S16,
 runbook S16, and frozen protocol §12. The latest remote commit, 20997df,
 records S15 acceptance and was integrated before the S16 push. Earlier local
 references to pending S15 review were stale; that remote approval is preserved.

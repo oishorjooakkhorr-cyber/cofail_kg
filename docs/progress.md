@@ -1,5 +1,14 @@
 # Progress — CoFail-KG
 
+**S16 accepted (2026-10-17).** The researcher accepted normalization behavior
+and verification evidence, including ID precedence. Unresolved duplicates use
+exact submitted `(id, name)` pairs, without case/whitespace folding or ID type
+coercion: a conservative reading of §12. The mismatch flag is literal and
+diagnostic only. Pilot results must report unresolved answers that would merge
+under normalized comparison, without changing official deduplication/scoring.
+See the decision-log entry "S16 acceptance and pilot reporting requirement".
+This supersedes pending S16 acceptance statements below. S17 is not authorized.
+
 S16 implemented and automatically verified (2026-10-17), under the researcher's
 explicit instruction to start S16. Protocol §12 agent normalization now handles
 canonical ID precedence, exact typed-name/disease-suffix fallback, unique any-type

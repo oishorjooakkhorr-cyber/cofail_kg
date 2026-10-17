@@ -1345,6 +1345,10 @@ Tables:
 7. Case sheets: for EVERY query with CF3^{Q,H1}=1, one page: the question, each co-failing
    agent's primary path to the shared entity, reason codes, the shared node's degree
    percentile, ambiguity tag.
+8. Unresolved-answer diagnostic (researcher decision 2026-10-17): report any unresolved
+   answers that would merge under normalized comparison and state the comparison rule.
+   Official deduplication remains exact submitted (id, name) pairs, with no case/whitespace
+   folding or ID type coercion. The literal name/ID mismatch flag is diagnostic only.
 Also compute the D6 quantities (E on latest attempts, H, N, O_H1 vs N1-H1, P) and both
 interpretation flags, but do not state the outcome.
 ```

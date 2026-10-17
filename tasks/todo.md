@@ -8,7 +8,10 @@
 - [x] Pass focused tests (49) and demonstrate all 21 S14 answers resolve by ID.
 - [x] Complete full sandbox tests (443), review/mutation check and protected-file verification.
 - [x] Save stage report and current status in docs/S16_implementation.md and docs/progress.md.
-- [ ] Researcher inspects S16 evidence and records stage acceptance.
+- [x] Researcher accepts S16 behavior and evidence (2026-10-17); exact unresolved
+  pairs and literal diagnostic-only mismatch flag recorded in the decision log.
+- [ ] S28 pilot report: report unresolved answers that would merge under normalized
+  comparison; state the comparison rule and preserve official exact-pair scoring.
 
 # S15 — accepted 2026-10-16
 

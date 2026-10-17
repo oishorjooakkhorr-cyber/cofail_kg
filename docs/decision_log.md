@@ -937,7 +937,31 @@ all/excluded reporting are unchanged. No code, test, protocol, decision rule,
 config, frozen hash, data or prior evidence change; no model call or episode.
 S16 requires a separate researcher instruction.
 
-## 2026-10-17 — S16 authorization and unresolved duplicate identity
+## 2026-10-17 - S16 acceptance and pilot reporting requirement
+
+Decision: the researcher accepts S16's normalization behavior and verification
+evidence, including ID precedence and the recorded unresolved-duplicate policy.
+Unresolved deduplication uses exact submitted `(id, name)` pairs: no case or
+whitespace folding and no ID type coercion. This is the researcher's conservative
+reading of protocol §12. The name/ID mismatch flag is literal and diagnostic only;
+it does not override ID precedence or independently change evaluation labels.
+
+For the pilot results, report any unresolved answers that would merge under
+normalized comparison. This is an additional diagnostic report, not a change to
+official deduplication or scoring. The precise counterfactual comparison rule
+must be stated in that report; no alternative normalization rule is selected here.
+
+Evidence reviewed in this conversation: the S16 implementation report, protocol
+§12, duplicate-policy tests and saved verification evidence (49 focused tests,
+443 full-suite tests, and 21/21 saved S14 answers resolved by ID). The researcher
+explicitly accepted this evidence; no new checks or model calls were run for
+this acceptance record.
+
+Changes to protocol, decision rules, code, data and frozen settings: none.
+This entry supersedes earlier pending S16 acceptance statements. S17 has not
+been authorized by this acceptance.
+
+## 2026-10-17 - S16 authorization and unresolved duplicate identity
 
 Decision: researcher explicitly requested starting S16 and selected removal of
 identical unresolved (submitted ID, submitted name) pairs, with distinct unresolved
