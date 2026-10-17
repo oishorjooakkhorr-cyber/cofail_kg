@@ -1099,3 +1099,29 @@ authorized committing and pushing the S18 changes. Publish as
 status. No additional model call, scientific decision or S19 work is authorized.
 This records publication authorization; it does not claim the researcher has
 completed the separately listed all-answer manual inspection or stage acceptance.
+
+## 2026-10-17 - S18 delegated acceptance and commit/push authorization
+
+After receiving the remaining review checklist, the researcher stated:
+"Okay, you may accept it and commit and push. You are fully authorized to do so.
+You have my permission."
+
+This explicitly delegates the acceptance review and authorizes publication of
+the resulting acceptance record. It does not claim the researcher personally
+performed the manual inspection.
+
+The delegated review inspected the saved-episode verifier, all 21 inspection-table
+rows, the cyclic-source H1 regression and the SUPPORTED-with-shortcut case.
+A fresh run of `results/diagnostics/s18/check_s14.py` verified every answer/path
+against raw returned items, frozen identities and the KG. Its parsed JSON exactly
+matched the retained `s14_labels.json`; all 21 table rows matched those verified
+answers, paths, labels, codes and H1 values. All 48 cases in
+`tests/test_path_labels.py` passed again (0.80 s).
+
+S18 is accepted under this explicit delegated authority, including the retained
+142 focused/508 full-suite checks, mutation checks and 71 unchanged protected
+identities. The full suite was not rerun for this documentation-only update.
+This supersedes earlier pending S18 inspection/acceptance statements.
+Implementation is already committed as `efee848` (`S18: Label B and hop-1 status`).
+Commit and push this acceptance record. No code, data, scientific rule, frozen
+setting, saved episode or S19 work changes.

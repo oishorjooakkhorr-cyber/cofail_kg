@@ -29,4 +29,6 @@ Episode: H1_CLEAN; found R1 = true. Codes apply only to PATH_INVALID; all are em
 | 84174 | AH amyloidosis | GOLD / SUPPORTED | 1 | 14097 --drug_protein [1]--> 111; 111 --disease_protein [3]--> 84174 | [] / [] |
 | 84193 | ATTRV122I amyloidosis | GOLD / SUPPORTED | 1 | 14097 --drug_protein [1]--> 111; 111 --disease_protein [3]--> 84193 | [] / [] |
 
-Engineering inspection is complete; researcher review and S18 acceptance remain pending.
+S18 accepted under the researcher's explicit delegated-review authorization
+(2026-10-17). A fresh raw-call/KG replay matched the saved output and every row
+above; all 48 S18 cases passed again. See `docs/decision_log.md`.

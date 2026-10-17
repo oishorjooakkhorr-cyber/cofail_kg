@@ -7,7 +7,7 @@
 - [x] Review; 2 mutations caught/restored, 142 focused/508 full checks, 71 hashes unchanged.
 - [x] Save report and complete all-answer inspection table in diagnostics/s18.
 - [x] Researcher explicitly authorizes S18 commit/push after the verification report.
-- [ ] Researcher inspects all primary paths/labels/codes and accepts S18.
+- [x] Complete delegated review of all primary paths/labels/codes; accept S18 under the researcher's explicit authorization (2026-10-17).
 
 # S17 - Label A (2026-10-17)
 

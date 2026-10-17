@@ -16,9 +16,10 @@ focused checks and 508 full-suite tests pass. Both deliberate mutations caught
 and restored; all 71 protected hashes unchanged. All 21 saved S14 answers are
 GOLD/SUPPORTED with H1=1, codes empty and H1_CLEAN; every primary path checked
 against raw returned items and KG edges. Report: docs/S18_implementation.md.
-Researcher inspection/acceptance remains separately listed. The researcher has
-now explicitly authorized commit/push: publish `S18: Label B and hop-1 status`,
-then stop. No S19 work.
+S18 accepted under the researcher's explicit delegated-review authorization
+(2026-10-17): replay matches saved output and all 21 inspection-table rows;
+48 S18 cases pass again. Implementation commit: `efee848`.
+Commit/push the acceptance record, then stop. No S19 work.
 
 # S17 - Label A (authorized 2026-10-17)
 

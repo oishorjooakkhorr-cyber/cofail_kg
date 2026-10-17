@@ -1,7 +1,8 @@
 # S18 - Label B, reason codes and hop-1 status (2026-10-17)
 
-Implementation and automated verification complete. Researcher inspection and
-acceptance remain pending. Authority: explicit S18 request, frozen protocol §14
+Implementation, automated verification and delegated acceptance complete.
+The researcher explicitly authorized delegated acceptance and commit/push on
+2026-10-17; see the decision log. Authority: explicit S18 request, frozen protocol §14
 and runbook S18. The researcher clarified that H1 requires a path without repeated
 nodes; the decision is recorded in `docs/decision_log.md`.
 
@@ -148,11 +149,13 @@ All are routine engineering; no literature method, scoring threshold or heuristi
 
 ## 6. Manual inspection and limits
 
-Researcher: review **all 21 rows** of `results/diagnostics/s18/hand-check.md`
-against the saved episode, including both creation indices and the call-3 returned
-items. Review the cyclic-source H1 regression and the SUPPORTED-with-shortcut case.
-Engineering inspection and automated assertions are complete; researcher acceptance
-has not been inferred.
+Under the researcher's explicit delegation on 2026-10-17, acceptance review
+confirmed **all 21 rows** of `results/diagnostics/s18/hand-check.md` against a fresh
+saved-episode replay, including both creation indices and returned items checked
+against raw calls and the KG. Replay output exactly matched `s14_labels.json`.
+The cyclic-source H1 regression and SUPPORTED-with-shortcut case were inspected;
+all 48 S18 cases passed again. S18 is accepted under that delegated authority;
+this does not claim the researcher personally performed the manual inspection.
 
 The real example exercises SUPPORTED only. Other labels, reason codes and H1
 statuses are covered by synthetic traces. This verifies evaluation behavior, not

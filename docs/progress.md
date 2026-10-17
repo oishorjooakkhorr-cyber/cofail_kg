@@ -1,7 +1,11 @@
 # Progress — CoFail-KG
 
-**S18 implemented and automatically verified (2026-10-17); researcher acceptance
-pending.** Evaluator-only Label B, primary/union reason codes, primary paths,
+**S18 accepted (2026-10-17).** The researcher explicitly delegated acceptance
+and authorized commit/push. The delegated review confirmed all 21 inspection-table
+rows against a fresh raw-call/KG replay, identical to the saved output; all 48
+S18 cases passed again, including cyclic-source H1 and SUPPORTED-with-shortcut.
+Acceptance is recorded in the decision log and supersedes prior pending statements.
+Evaluator-only Label B, primary/union reason codes, primary paths,
 per-answer H1, episode hop-1 status and found-R1 use S12 trace utilities and the
 frozen mapping. Researcher chose simple H1 paths (no repeated nodes); no length
 cap, with cyclic-source returns excluded. Decision recorded in the decision log.
