@@ -936,3 +936,40 @@ are retained. SOURCE_NAME_OVERLAP flags, gate populations and the pre-registered
 all/excluded reporting are unchanged. No code, test, protocol, decision rule,
 config, frozen hash, data or prior evidence change; no model call or episode.
 S16 requires a separate researcher instruction.
+
+## 2026-10-17 — S16 authorization and unresolved duplicate identity
+
+Decision: researcher explicitly requested starting S16 and selected removal of
+identical unresolved (submitted ID, submitted name) pairs, with distinct unresolved
+submissions kept separate. Resolved answers are deduplicated by canonical node ID
+after resolution, as required by §12. First occurrence is retained; per-item
+resolution evidence and flags remain available even for removed duplicates.
+
+Why: §12 requires post-normalization deduplication but does not define identity
+for unresolved answers. This clarification can affect §15's UNRESOLVED rate, so
+the assistant asked before implementing it. Submitted values are compared exactly:
+integer versus string IDs, case differences and whitespace differences remain
+distinct for unresolved pairs. Name lookup itself continues to follow §12.
+
+Data seen before deciding: the existing saved S14 diagnostic episode was inspected;
+single-item S16 synthetic tests and unchanged S7 tests passed (42). No new model
+call, pilot run, co-failure result or new scientific label was produced. The
+duplicate choice was requested before list-level deduplication was implemented.
+
+Changes to protocol: none; §12's unresolved duplicate identity is clarified here
+under direct researcher authorization. No frozen hash, sample or gate change.
+S15 approval is recorded in the preceding remote decision-log entry. The
+researcher separately authorized S16 here. No S17 work was performed.
+
+Implementation verification: 49 focused tests and 443 full sandbox tests passed,
+with no skips/deselections. All 21 answers of the saved successful S14 BH2_00461
+episode resolved by ID with no mismatch, unresolved item or duplicate. A deliberate
+mutation ignoring submitted ID in unresolved identity was detected and restored
+before the full suite. All 50 protected-file hashes and four S7 definitions are
+unchanged. Report: docs/S16_implementation.md. Researcher inspection/acceptance of
+S16 remains pending; no new model call, episode, commit/push or S17 implementation.
+
+Integration update (2026-10-17): researcher requested committing/pushing S16
+and updating local files from the latest remote commit. Remote S15 approval
+20997df was integrated; its acceptance record and handoff removal are preserved.
+S16 source, tests, scientific rules and prior diagnostic evidence are unchanged.

@@ -1,3 +1,35 @@
+# S16 — answer normalization (authorized 2026-10-17)
+
+Implementation/automated verification complete: 49 focused tests, 443 full-suite
+tests, 21/21 saved S14 answers by ID, protected files and S7 definitions unchanged.
+Report: docs/S16_implementation.md. Researcher inspection/acceptance pending.
+
+The researcher explicitly requested starting S16 and asking about needed
+decisions. S15 acceptance is recorded in remote commit 20997df, integrated
+before pushing S16. Preserve that approval, its evidence and handoff removal.
+
+Scope: extend evaluation/normalize.py with the protocol §12 agent policy,
+synthetic tests, saved S14 example evidence, and stage/status documentation.
+Existing S7 definitions and callers remain unchanged. No new dependencies,
+experimental calls, data/settings edits, later-stage labels or metrics are needed.
+
+1. Save protected-file identities; inspect all reference-resolver callers.
+2. Add failing single-item tests, implement ID precedence and exact-name fallback,
+   then pass them alongside the unchanged S7 tests.
+3. Ask about unresolved duplicates before implementing list-level deduplication.
+   Researcher selected: remove only identical submitted (id, name) pairs; distinct
+   unresolved submissions remain separate. Resolved duplicates use canonical ID.
+4. Add failing list tests and implement stable deduplication with retained per-item
+   audit evidence and duplicate counts.
+5. Normalize the saved successful S14 episode without inference; require all 21
+   copied tool-output answers to resolve by ID. Save every normalized answer.
+6. Run focused/full tests, review against §12, verify protected identities and
+   unchanged S7 definitions, and document findings and engineering choices.
+
+Acceptance: all required cases pass, saved example resolves by ID, no regressions
+or scientific-rule edits. Human inspection and stage acceptance remain explicit;
+no automatic commit/push or continuation to S17.
+
 # S15 revision 2 — authorized and executed (2026-10-16)
 
 The researcher authorized Option 1, a narrow source-name exemption plus a

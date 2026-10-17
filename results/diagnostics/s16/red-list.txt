@@ -1,0 +1,93 @@
+...................................FFFFFFF                               [100%]
+================================== FAILURES ===================================
+__________ test_duplicates_are_removed_after_id_and_name_resolution ___________
+
+kg = <cofail_kg.kg.primekg_index.PrimeKGIndex object at 0x000001BA7E65FA10>
+
+    def test_duplicates_are_removed_after_id_and_name_resolution(kg):
+        items = [{"id": "2", "name": "Alpha"}, {"id": 2, "name": "wrong"},
+                 {"id": "missing", "name": "Alpha"}, {"id": "5", "name": "Unique protein"}]
+>       result = normalize.normalize_agent_answers(kg, items, "disease")
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       AttributeError: module 'cofail_kg.evaluation.normalize' has no attribute 'normalize_agent_answers'
+
+tests\test_normalize_agent.py:133: AttributeError
+___________ test_identical_unresolved_submissions_are_deduplicated ____________
+
+kg = <cofail_kg.kg.primekg_index.PrimeKGIndex object at 0x000001BA06D2BEF0>
+
+    def test_identical_unresolved_submissions_are_deduplicated(kg):
+        items = [{"id": "missing", "name": "Twin"}, {"id": "missing", "name": "Twin"},
+                 {"id": "bad", "name": "absent"}, {"id": "bad", "name": "absent"}]
+>       result = normalize.normalize_agent_answers(kg, items, "disease")
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       AttributeError: module 'cofail_kg.evaluation.normalize' has no attribute 'normalize_agent_answers'
+
+tests\test_normalize_agent.py:146: AttributeError
+________________ test_distinct_unresolved_submissions_are_kept ________________
+
+kg = <cofail_kg.kg.primekg_index.PrimeKGIndex object at 0x000001BA06DB9FD0>
+
+    def test_distinct_unresolved_submissions_are_kept(kg):
+        items = [{"id": "bad", "name": "absent"}, {"id": "other", "name": "absent"},
+                 {"id": "bad", "name": "ABSENT"}, {"id": "bad", "name": " absent "},
+                 {"id": -1, "name": "absent"}, {"id": "-1", "name": "absent"}]
+>       result = normalize.normalize_agent_answers(kg, items, "disease")
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       AttributeError: module 'cofail_kg.evaluation.normalize' has no attribute 'normalize_agent_answers'
+
+tests\test_normalize_agent.py:155: AttributeError
+_______ test_different_valid_ids_with_the_same_name_are_not_duplicates ________
+
+kg = <cofail_kg.kg.primekg_index.PrimeKGIndex object at 0x000001BA06D2BDD0>
+
+    def test_different_valid_ids_with_the_same_name_are_not_duplicates(kg):
+>       result = normalize.normalize_agent_answers(
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+            kg, [{"id": "1", "name": "Alpha"}, {"id": "2", "name": "Alpha"}], "disease")
+E       AttributeError: module 'cofail_kg.evaluation.normalize' has no attribute 'normalize_agent_answers'
+
+tests\test_normalize_agent.py:161: AttributeError
+___________________ test_first_occurrence_order_is_retained ___________________
+
+kg = <cofail_kg.kg.primekg_index.PrimeKGIndex object at 0x000001BA06DBA1B0>
+
+    def test_first_occurrence_order_is_retained(kg):
+        items = [{"id": "5", "name": "Unique protein"}, {"id": "bad", "name": "none"},
+                 {"id": "2", "name": "Alpha"}, {"id": "5", "name": "wrong"},
+                 {"id": "bad", "name": "none"}]
+>       result = normalize.normalize_agent_answers(kg, items, "disease")
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       AttributeError: module 'cofail_kg.evaluation.normalize' has no attribute 'normalize_agent_answers'
+
+tests\test_normalize_agent.py:171: AttributeError
+___________________________ test_empty_answer_list ____________________________
+
+kg = <cofail_kg.kg.primekg_index.PrimeKGIndex object at 0x000001BA06DBA4B0>
+
+    def test_empty_answer_list(kg):
+>       result = normalize.normalize_agent_answers(kg, [], "disease")
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       AttributeError: module 'cofail_kg.evaluation.normalize' has no attribute 'normalize_agent_answers'
+
+tests\test_normalize_agent.py:177: AttributeError
+______________________ test_batch_rejects_invalid_items _______________________
+
+kg = <cofail_kg.kg.primekg_index.PrimeKGIndex object at 0x000001BA06DBA5D0>
+
+    def test_batch_rejects_invalid_items(kg):
+        with pytest.raises(ValueError, match="string/integer id and string name"):
+>           normalize.normalize_agent_answers(kg, [{"id": True, "name": "Alpha"}], "disease")
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E           AttributeError: module 'cofail_kg.evaluation.normalize' has no attribute 'normalize_agent_answers'
+
+tests\test_normalize_agent.py:184: AttributeError
+=========================== short test summary info ===========================
+FAILED tests/test_normalize_agent.py::test_duplicates_are_removed_after_id_and_name_resolution
+FAILED tests/test_normalize_agent.py::test_identical_unresolved_submissions_are_deduplicated
+FAILED tests/test_normalize_agent.py::test_distinct_unresolved_submissions_are_kept
+FAILED tests/test_normalize_agent.py::test_different_valid_ids_with_the_same_name_are_not_duplicates
+FAILED tests/test_normalize_agent.py::test_first_occurrence_order_is_retained
+FAILED tests/test_normalize_agent.py::test_empty_answer_list - AttributeError...
+FAILED tests/test_normalize_agent.py::test_batch_rejects_invalid_items - Attr...
+7 failed, 35 passed in 0.91s

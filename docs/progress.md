@@ -1,5 +1,21 @@
 # Progress — CoFail-KG
 
+S16 implemented and automatically verified (2026-10-17), under the researcher's
+explicit instruction to start S16. Protocol §12 agent normalization now handles
+canonical ID precedence, exact typed-name/disease-suffix fallback, unique any-type
+matches, unresolved reasons, mismatch flags and post-resolution duplicates.
+Researcher selected exact submitted (id, name) identity for unresolved duplicates;
+distinct unresolved pairs remain separate. All per-item evidence is retained.
+Focused **49 passed** (42 new agent cases + 7 unchanged reference cases); full
+sandbox **443 passed**, no skips/deselections. Saved S14 BH2_00461: **21/21 by ID**,
+zero unresolved/mismatches/duplicates, all copied pairs verified against tool output.
+All 50 protected files and all four S7 definitions unchanged. Report:
+`docs/S16_implementation.md`; evidence: `results/diagnostics/s16/`.
+S16 researcher inspection/acceptance pending. The latest remote S15 approval
+record is integrated below; S15 is accepted. Commit/push and immediate Drive
+backup were subsequently authorized. No model calls, new episodes,
+data/settings/protocol edits or S17 work.
+
 **S15 accepted (2026-10-16).** Researcher Oishu reviewed, with AI assistance,
 all 34 short-name entries (26 queries), the common system prompt and all 24
 captured user messages, and accepted them; confirmed all four overlap rows as
@@ -8,7 +24,7 @@ their own decision (including BH2_05778); and approved S15. Code verification:
 short-name hits. Record: `results/diagnostics/s15/manual_review_20261016.json`
 and `.md`; decision log 2026-10-16 "S15 manual review and approval". Full suite
 at approval: `results/diagnostics/s15/full-suite-approval-20261016.txt`. The
-"pending" statements below are superseded but kept as history. S16 not started.
+"pending" statements below are superseded but kept as history. At that checkpoint, S16 had not started.
 
 S15 overlap review (2026-10-16): per-row decisions recorded in
 `results/diagnostics/s15/overlap_review.json`. BH2_04007, BH2_05971 and BH2_06099
@@ -62,7 +78,7 @@ persistence. Use approved host execution; sandbox policy and saver are unchanged
 No model call, code/test/frozen-setting change, commit, or S15 work. Report and
 future-run procedure: `docs/S12_environment_verification_20261016.md`.
 
-## Current stage
+## Earlier stage records
 P1 approved and frozen by the researcher (2026-10-16), conditional on broader
 reliability not being required by S14; the runbook confirms that condition.
 `configs/frozen_hashes.yaml` now contains the exact unfilled P1 template SHA256:

@@ -1,10 +1,22 @@
+# S16 — answer normalization (2026-10-17)
+
+- [x] Researcher explicitly authorizes starting S16; remote S15 acceptance is preserved.
+- [x] Inventory S7 callers and save protected-file hashes and S7 definitions.
+- [x] Add failing item tests; implement §12 agent policy; pass 42 item/reference tests.
+- [x] Obtain researcher decision: deduplicate identical unresolved submitted pairs only.
+- [x] Add seven failing list tests, then implement stable post-resolution deduplication.
+- [x] Pass focused tests (49) and demonstrate all 21 S14 answers resolve by ID.
+- [x] Complete full sandbox tests (443), review/mutation check and protected-file verification.
+- [x] Save stage report and current status in docs/S16_implementation.md and docs/progress.md.
+- [ ] Researcher inspects S16 evidence and records stage acceptance.
+
 # S15 — accepted 2026-10-16
 
 - [x] Researcher reviews exact messages and the 34-entry short-name list (record:
   `results/diagnostics/s15/manual_review_20261016.json` / `.md`).
 - [x] Researcher confirms all four overlap rows and approves S15 (decision log 2026-10-16).
 - [x] Temporary review handoff removed after approval was recorded.
-- [ ] S16 — only on the researcher's instruction.
+- [x] Researcher separately instructs S16 implementation (2026-10-17); see above.
 
 # S15 revision 2 — automated verification complete (historical)
 
