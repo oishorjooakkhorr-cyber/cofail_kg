@@ -1,0 +1,26 @@
+............................F.....                                       [100%]
+================================== FAILURES ===================================
+________ test_no_answer_reply_ignores_its_items_under_existing_parser _________
+
+    def test_no_answer_reply_ignores_its_items_under_existing_parser():
+>       row = evaluate(raw_final_output='{"status":"no_answer","answers":[{"id":"3","name":"N3"}]}')
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests\test_agent_metrics.py:204:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+log = (), ids = ('3',), reference = None, targets = None
+override = {'raw_final_output': '{"status":"no_answer","answers":[{"id":"3","name":"N3"}]}'}
+
+    def evaluate(log=(), ids=("3",), *, reference=None, targets=None, **override):
+        q = copy.deepcopy(REFERENCE if reference is None else reference)
+        final = json.dumps({"status": "answered", "answers": [
+            {"id": n, "name": f"N{n}"} for n in ids]})
+>       rec = record(list(log), raw_final_output=final, **override)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       TypeError: test_trace.record() got multiple values for keyword argument 'raw_final_output'
+
+tests\test_agent_metrics.py:50: TypeError
+=========================== short test summary info ===========================
+FAILED tests/test_agent_metrics.py::test_no_answer_reply_ignores_its_items_under_existing_parser
+1 failed, 33 passed in 1.26s

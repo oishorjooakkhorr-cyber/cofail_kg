@@ -1125,3 +1125,73 @@ This supersedes earlier pending S18 inspection/acceptance statements.
 Implementation is already committed as `efee848` (`S18: Label B and hop-1 status`).
 Commit and push this acceptance record. No code, data, scientific rule, frozen
 setting, saved episode or S19 work changes.
+
+## 2026-10-17 - S19 authorization and metric clarifications
+
+The researcher requested S19 and questions for any needed decisions. Scope:
+protocol §15 and runbook S19; no S20, new inference or frozen-file changes.
+
+Before computing S19 results, the researcher selected:
+- Benchmark precision against A*_q uses resolved retained answers only;
+  unresolved answers are reported separately.
+- Benchmark F1 uses `2 * correct / (resolved answer count + gold count)`;
+  nonempty disjoint sets give zero, and a zero denominator gives NA.
+- TIMEOUT, ERROR and PARSE_FAIL have NA answer-quality scores, with tool effort
+  and trace diagnostics retained. They are not scored as valid empty answers.
+
+Data seen before deciding: existing S14/S18 evidence and the examples in the
+clarification questions. No new model call or pilot outcome. These decisions
+clarify unspecified S19 conventions without editing frozen scientific files.
+
+S19 implementation/automated verification complete. The evaluator-only helper
+reuses the existing parser, S12 reconstruction, S16 normalization and S17/S18
+labels unchanged. All §15 metrics are returned with complete answer/bridge
+diagnostics and full-KG degree/percentile values. JSON null represents NA;
+numerators/denominators and undefined counts support correct later aggregation.
+
+Verification: 48 new synthetic cases; 148 focused checks passed (2.30 s);
+full suite 556 passed (31.13 s), no skips/deselections. Reversing the early-stop
+page-2 condition caused seven failures; overwriting first bridge rank caused
+one. Both mutations were restored byte-for-byte. All 112 protected identities
+are unchanged, including existing code/tests, science, settings, data/cache and
+saved episodes. Final replay output exactly matches the retained metrics JSON.
+
+Saved S14 BH2_00461: 21 GOLD/SUPPORTED answers, benchmark P/R/F1=1, question-valid
+precision=1, OFF_QUESTION/UNRESOLVED/UNGROUNDED rates=0. TTR 111 is the only explored
+bridge, first returned on call 1/page 1/position 1 (rank 1); bridge recall=21/21=1.
+Early stop=false because neither successful page has has_more=true. Two neighbor
+pages, four charged calls, no exhausted budget or TEXT_TOOL_CALL; H1_CLEAN.
+Every answer's first-list/path list size and reported node degrees were verified.
+
+Routine engineering details are listed in docs/S19_implementation.md, including
+counting actual page requests (errors/repeats included, ignored calls excluded),
+first-list semantics, and retaining per-answer path fan-out for later PCF use.
+No co-failure metric, new inference, episode, S20 work, frozen-file/scientific-rule
+edit, commit or push was performed. Researcher stage acceptance remains pending.
+Complete evidence and hand checks: results/diagnostics/s19/.
+
+## 2026-10-17 - Technical failures in §16 and S19 acceptance
+
+Decision: technical-failure episodes (TIMEOUT, ERROR, PARSE_FAIL) must not count
+as answer failures in protocol §16 co-failure metrics. Preserve their technical
+status separately; do not treat them as wrong-answer sets or evidence of shared
+answer failure. This is a requirement for the later §16 implementation; S19's
+existing NA answer-quality treatment is unchanged. No §16 code is added here.
+
+The researcher explicitly stated: "I accept S19 (per-agent metrics) and its
+verification evidence." S19 is accepted, including its 48 synthetic cases,
+148 focused/556 full-suite checks, both caught/restored mutations, all 112
+unchanged protected identities and saved S14 replay/inspection evidence.
+This supersedes earlier pending S19 acceptance statements.
+
+Data seen before deciding: the S19 report and verification evidence, including
+TTR bridge rank 1, bridge recall 1, early_stop=false, benchmark P/R/F1=1,
+two page requests and four charged calls on the unchanged saved S14 episode.
+
+The researcher authorized committing as `S19: per-agent metrics`, explicitly
+instructed not to push, and prohibited starting S20. Record these decisions
+before the local commit. No frozen protocol/gate file is edited.
+
+Pre-commit verification: full suite 556 passed (26.89 s), no skips/deselections;
+all 112 protected identities remain unchanged. Evidence:
+`results/diagnostics/s19/full-suite-acceptance-20261017.txt`.

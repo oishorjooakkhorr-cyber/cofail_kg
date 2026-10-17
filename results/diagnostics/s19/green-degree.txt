@@ -1,0 +1,77 @@
+FF...........                                                            [100%]
+================================== FAILURES ===================================
+_ test_degree_percentiles_include_ties_isolates_self_loops_and_both_directions _
+
+index = <cofail_kg.kg.primekg_index.PrimeKGIndex object at 0x000001C983025940>
+cache = WindowsPath('E:/Phitron Thesis/cofail_kg/.pytest_cache/s19-green-degree/test_degree_percentiles_includ0/cache')
+
+    def test_degree_percentiles_include_ties_isolates_self_loops_and_both_directions(index, cache):
+        nodes = pd.read_parquet(cache / "primekg_nodes.parquet")
+        edges = pd.read_parquet(cache / "primekg_edges.parquet")
+>       stats = degree_statistics(nodes, edges)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests\test_agent_metrics.py:14:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+nodes =    node_index node_id         node_type      node_name node_source\n0           2      P2      gene/protein  \uff22eta  prot...    E40  effect/phenotype          acne         test\n4          99     D99           disease          Alpha        test
+edges =    x_index  y_index         relation display_relation
+0       10        2     drug_protein           target
+1        2...side effect
+5       10       40      drug_effect      side effect
+6        2        2  protein_protein              ppi
+
+    def degree_statistics(nodes: pd.DataFrame, edges: pd.DataFrame) -> dict:
+        """�3.2/�15 unique either-direction degrees and same-type inclusive percentiles.
+
+        Caller supplies checksum-verified S4 node/edge tables, once per frozen KG.
+        Include isolates; duplicate labels, reverse rows and self-loops count once.
+        """
+        ids = nodes["node_index"]
+        if ids.duplicated().any():
+            raise ValueError("duplicate node IDs in degree population")
+        pairs = edges[["x_index", "y_index"]]
+        if not pairs.isin(ids).all().all():
+>           raise ValueError("degree edge endpoint absent from node population")
+E           ValueError: degree edge endpoint absent from node population
+
+src\cofail_kg\evaluation\agent_metrics.py:17: ValueError
+__ test_degree_percentile_uses_share_less_than_or_equal_not_average_tie_rank __
+
+    def test_degree_percentile_uses_share_less_than_or_equal_not_average_tie_rank():
+        nodes = pd.DataFrame({"node_index": [1, 2, 3, 4], "node_type": ["t"] * 4})
+        edges = pd.DataFrame({"x_index": [1, 1], "y_index": [2, 3]})
+>       stats = degree_statistics(nodes, edges)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests\test_agent_metrics.py:30:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+nodes =    node_index node_type
+0           1         t
+1           2         t
+2           3         t
+3           4         t
+edges =    x_index  y_index
+0        1        2
+1        1        3
+
+    def degree_statistics(nodes: pd.DataFrame, edges: pd.DataFrame) -> dict:
+        """�3.2/�15 unique either-direction degrees and same-type inclusive percentiles.
+
+        Caller supplies checksum-verified S4 node/edge tables, once per frozen KG.
+        Include isolates; duplicate labels, reverse rows and self-loops count once.
+        """
+        ids = nodes["node_index"]
+        if ids.duplicated().any():
+            raise ValueError("duplicate node IDs in degree population")
+        pairs = edges[["x_index", "y_index"]]
+        if not pairs.isin(ids).all().all():
+>           raise ValueError("degree edge endpoint absent from node population")
+E           ValueError: degree edge endpoint absent from node population
+
+src\cofail_kg\evaluation\agent_metrics.py:17: ValueError
+=========================== short test summary info ===========================
+FAILED tests/test_agent_metrics.py::test_degree_percentiles_include_ties_isolates_self_loops_and_both_directions
+FAILED tests/test_agent_metrics.py::test_degree_percentile_uses_share_less_than_or_equal_not_average_tie_rank
+2 failed, 11 passed in 1.49s

@@ -1,0 +1,128 @@
+...........FFFFFF................F............                           [100%]
+================================== FAILURES ===================================
+_ test_early_stop_matches_exact_list_identity_and_counts_actual_page2_requests[extra0-True] _
+
+extra = [], expected = True
+
+    @pytest.mark.parametrize("extra,expected", [
+        ([], True), ([nb("2", "r2", ["10"], page=2, total=3)], False),
+        ([failed("get_neighbors", {"entity_id": "2", "relation": "r2", "page": 2,
+                                   "neighbor_type": None}, "Error")], False),
+        ([nb("2", "r2", ["10"], page=2, total=3, neighbor_type="disease")], True),
+        ([nb("5", "r2", ["10"], page=2, total=3)], True),
+        ([nb("2", "bad", ["10"], page=2, total=3)], True)])
+    def test_early_stop_matches_exact_list_identity_and_counts_actual_page2_requests(extra, expected):
+        row = evaluate([nb("2", "r2", ["3"], total=3, has_more=True), *extra])
+>       assert row["early_stop"] is expected
+E       assert False is True
+
+tests\test_agent_metrics.py:142: AssertionError
+_ test_early_stop_matches_exact_list_identity_and_counts_actual_page2_requests[extra1-False] _
+
+extra = [{'tool': 'get_neighbors', 'success': True, 'timestamp': '2026-10-15T00:00:00+00:00', 'elapsed_seconds': 0.0, ...}]
+expected = False
+
+    @pytest.mark.parametrize("extra,expected", [
+        ([], True), ([nb("2", "r2", ["10"], page=2, total=3)], False),
+        ([failed("get_neighbors", {"entity_id": "2", "relation": "r2", "page": 2,
+                                   "neighbor_type": None}, "Error")], False),
+        ([nb("2", "r2", ["10"], page=2, total=3, neighbor_type="disease")], True),
+        ([nb("5", "r2", ["10"], page=2, total=3)], True),
+        ([nb("2", "bad", ["10"], page=2, total=3)], True)])
+    def test_early_stop_matches_exact_list_identity_and_counts_actual_page2_requests(extra, expected):
+        row = evaluate([nb("2", "r2", ["3"], total=3, has_more=True), *extra])
+>       assert row["early_stop"] is expected
+E       assert True is False
+
+tests\test_agent_metrics.py:142: AssertionError
+_ test_early_stop_matches_exact_list_identity_and_counts_actual_page2_requests[extra2-False] _
+
+extra = [{'tool': 'get_neighbors', 'success': False, 'timestamp': '2026-10-15T00:00:00+00:00', 'elapsed_seconds': 0.0, ...}]
+expected = False
+
+    @pytest.mark.parametrize("extra,expected", [
+        ([], True), ([nb("2", "r2", ["10"], page=2, total=3)], False),
+        ([failed("get_neighbors", {"entity_id": "2", "relation": "r2", "page": 2,
+                                   "neighbor_type": None}, "Error")], False),
+        ([nb("2", "r2", ["10"], page=2, total=3, neighbor_type="disease")], True),
+        ([nb("5", "r2", ["10"], page=2, total=3)], True),
+        ([nb("2", "bad", ["10"], page=2, total=3)], True)])
+    def test_early_stop_matches_exact_list_identity_and_counts_actual_page2_requests(extra, expected):
+        row = evaluate([nb("2", "r2", ["3"], total=3, has_more=True), *extra])
+>       assert row["early_stop"] is expected
+E       assert True is False
+
+tests\test_agent_metrics.py:142: AssertionError
+_ test_early_stop_matches_exact_list_identity_and_counts_actual_page2_requests[extra3-True] _
+
+extra = [{'tool': 'get_neighbors', 'success': True, 'timestamp': '2026-10-15T00:00:00+00:00', 'elapsed_seconds': 0.0, ...}]
+expected = True
+
+    @pytest.mark.parametrize("extra,expected", [
+        ([], True), ([nb("2", "r2", ["10"], page=2, total=3)], False),
+        ([failed("get_neighbors", {"entity_id": "2", "relation": "r2", "page": 2,
+                                   "neighbor_type": None}, "Error")], False),
+        ([nb("2", "r2", ["10"], page=2, total=3, neighbor_type="disease")], True),
+        ([nb("5", "r2", ["10"], page=2, total=3)], True),
+        ([nb("2", "bad", ["10"], page=2, total=3)], True)])
+    def test_early_stop_matches_exact_list_identity_and_counts_actual_page2_requests(extra, expected):
+        row = evaluate([nb("2", "r2", ["3"], total=3, has_more=True), *extra])
+>       assert row["early_stop"] is expected
+E       assert False is True
+
+tests\test_agent_metrics.py:142: AssertionError
+_ test_early_stop_matches_exact_list_identity_and_counts_actual_page2_requests[extra4-True] _
+
+extra = [{'tool': 'get_neighbors', 'success': True, 'timestamp': '2026-10-15T00:00:00+00:00', 'elapsed_seconds': 0.0, ...}]
+expected = True
+
+    @pytest.mark.parametrize("extra,expected", [
+        ([], True), ([nb("2", "r2", ["10"], page=2, total=3)], False),
+        ([failed("get_neighbors", {"entity_id": "2", "relation": "r2", "page": 2,
+                                   "neighbor_type": None}, "Error")], False),
+        ([nb("2", "r2", ["10"], page=2, total=3, neighbor_type="disease")], True),
+        ([nb("5", "r2", ["10"], page=2, total=3)], True),
+        ([nb("2", "bad", ["10"], page=2, total=3)], True)])
+    def test_early_stop_matches_exact_list_identity_and_counts_actual_page2_requests(extra, expected):
+        row = evaluate([nb("2", "r2", ["3"], total=3, has_more=True), *extra])
+>       assert row["early_stop"] is expected
+E       assert False is True
+
+tests\test_agent_metrics.py:142: AssertionError
+_ test_early_stop_matches_exact_list_identity_and_counts_actual_page2_requests[extra5-True] _
+
+extra = [{'tool': 'get_neighbors', 'success': True, 'timestamp': '2026-10-15T00:00:00+00:00', 'elapsed_seconds': 0.0, ...}]
+expected = True
+
+    @pytest.mark.parametrize("extra,expected", [
+        ([], True), ([nb("2", "r2", ["10"], page=2, total=3)], False),
+        ([failed("get_neighbors", {"entity_id": "2", "relation": "r2", "page": 2,
+                                   "neighbor_type": None}, "Error")], False),
+        ([nb("2", "r2", ["10"], page=2, total=3, neighbor_type="disease")], True),
+        ([nb("5", "r2", ["10"], page=2, total=3)], True),
+        ([nb("2", "bad", ["10"], page=2, total=3)], True)])
+    def test_early_stop_matches_exact_list_identity_and_counts_actual_page2_requests(extra, expected):
+        row = evaluate([nb("2", "r2", ["3"], total=3, has_more=True), *extra])
+>       assert row["early_stop"] is expected
+E       assert False is True
+
+tests\test_agent_metrics.py:142: AssertionError
+____ test_ignored_page2_is_not_a_request_and_failed_page1_is_not_evidence _____
+
+    def test_ignored_page2_is_not_a_request_and_failed_page1_is_not_evidence():
+        ignored = [{"function": {"name": "get_neighbors", "arguments": {
+            "entity_id": "2", "relation": "r2", "page": 2}}}]
+        row = evaluate([nb("2", "r2", ["3"], total=3, has_more=True)], ignored_tool_calls=ignored)
+>       assert row["early_stop"] is True and row["pages_requested"] == 1
+E       assert (False is True)
+
+tests\test_agent_metrics.py:249: AssertionError
+=========================== short test summary info ===========================
+FAILED tests/test_agent_metrics.py::test_early_stop_matches_exact_list_identity_and_counts_actual_page2_requests[extra0-True]
+FAILED tests/test_agent_metrics.py::test_early_stop_matches_exact_list_identity_and_counts_actual_page2_requests[extra1-False]
+FAILED tests/test_agent_metrics.py::test_early_stop_matches_exact_list_identity_and_counts_actual_page2_requests[extra2-False]
+FAILED tests/test_agent_metrics.py::test_early_stop_matches_exact_list_identity_and_counts_actual_page2_requests[extra3-True]
+FAILED tests/test_agent_metrics.py::test_early_stop_matches_exact_list_identity_and_counts_actual_page2_requests[extra4-True]
+FAILED tests/test_agent_metrics.py::test_early_stop_matches_exact_list_identity_and_counts_actual_page2_requests[extra5-True]
+FAILED tests/test_agent_metrics.py::test_ignored_page2_is_not_a_request_and_failed_page1_is_not_evidence
+7 failed, 39 passed in 1.45s

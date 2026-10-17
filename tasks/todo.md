@@ -1,3 +1,14 @@
+# S19 - Per-agent metrics (2026-10-17)
+
+- [x] Researcher authorizes S19; inspect scope/callers and save 112 protected hashes.
+- [x] Record benchmark and technical-failure decisions before computing scores.
+- [x] RED/GREEN degree and percentile cases using the existing S4 fixture.
+- [x] Test/implement all §15 answer, bridge, pagination and effort metrics.
+- [x] Replay saved S14 and inspect early stop and bridge rank against raw calls.
+- [x] Review/mutation, 148 focused/556 full checks, 112 unchanged hashes and stage report.
+- [x] Researcher explicitly accepts S19 and its verification evidence (2026-10-17).
+- [x] Record that TIMEOUT/ERROR/PARSE_FAIL must not count as answer failures in §16.
+
 # S18 - Label B, reason codes and hop-1 status (2026-10-17)
 
 - [x] Researcher authorizes S18; inspect dependencies/callers and save protected hashes.

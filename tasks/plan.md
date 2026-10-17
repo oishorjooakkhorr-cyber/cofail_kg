@@ -1,3 +1,26 @@
+# S19 - Per-agent metrics (authorized 2026-10-17)
+
+Implement protocol §15 using S12 and S16-S18 unchanged. Researcher clarified
+resolved-only benchmark precision, count-form F1, and NA answer-quality scores
+for technical failures; see the decision log.
+
+1. Save protected identities and inspect callers, raw logs and S7 reference tables.
+2. RED/GREEN degree statistics against unique-neighbor counts and inclusive ranks.
+3. RED/GREEN answer metrics, bridge recall/rank, pagination and effort cases.
+4. Replay saved S14; hand-check bridge rank and early stop against raw calls.
+5. Review, mutation-check, run the full suite and compare protected identities;
+   record complete evidence and the stage report. No S20 or new inference.
+
+Implementation/automated verification complete: 48 new synthetic cases, 148
+focused checks and 556 full-suite tests passed without skips. Both deliberate
+mutations caught/restored; all 112 protected files unchanged. Final saved S14
+replay matches retained metrics exactly: TTR rank 1, early_stop=false, bridge
+recall and benchmark P/R/F1 all 1, 2 page requests/4 calls, budget not exhausted.
+Report: docs/S19_implementation.md. Researcher accepted S19 and its verification
+evidence on 2026-10-17. Record the §16 requirement that technical failures must
+not count as answer failures, then commit as `S19: per-agent metrics`.
+Stop at S19. Do not push or start S20.
+
 # S18 - Label B, reason codes and hop-1 status (authorized 2026-10-17)
 
 Researcher explicitly requested S18 implementation and questions for any needed

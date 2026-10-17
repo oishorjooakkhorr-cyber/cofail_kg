@@ -1,0 +1,21 @@
+........F.....................................                           [100%]
+================================== FAILURES ===================================
+_ test_explored_bridge_rank_is_first_returned_position_not_smallest_page_or_rank _
+
+    def test_explored_bridge_rank_is_first_returned_position_not_smallest_page_or_rank():
+        row = evaluate([nb("1", "bad", ["2"]), nb("1", "r1", ["5"], page=3, total=5),
+                        nb("5", "r2", ["10", "11"]), nb("1", "r1", ["2", "5"]),
+                        nb("2", "r2", ["3", "10"]), nb("2", "bad", [])], ("3", "10"))
+        assert row["bridges_explored"] == ["2", "5"]
+>       assert row["bridge_rank"] == {"2": 1, "5": 5}
+E       AssertionError: assert {'2': 1, '5': 2} == {'2': 1, '5': 5}
+E
+E         Omitting 1 identical items, use -vv to show
+E         Differing items:
+E         {'5': 2} != {'5': 5}
+E         Use -v to get more diff
+
+tests\test_agent_metrics.py:113: AssertionError
+=========================== short test summary info ===========================
+FAILED tests/test_agent_metrics.py::test_explored_bridge_rank_is_first_returned_position_not_smallest_page_or_rank
+1 failed, 45 passed in 1.32s

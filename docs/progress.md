@@ -1,5 +1,21 @@
 # Progress — CoFail-KG
 
+**S19 accepted (2026-10-17).** The researcher accepted per-agent metrics and its
+verification evidence, authorized local commit `S19: per-agent metrics`, and
+instructed not to push or start S20. The decision log also records that technical
+failures (TIMEOUT, ERROR, PARSE_FAIL) must not count as answer failures in §16
+co-failure metrics. Evaluator-only
+per-agent metrics reuse S12/S16-S18 unchanged. Researcher clarified resolved-only
+benchmark precision, count-form F1 and technical-failure NA scores. Final focused
+suite: 148 passed (48 new S19 cases); full suite: **556 passed**, no skips;
+both deliberate mutations caught/restored. All **112 protected files unchanged**.
+Saved S14: 21 GOLD/SUPPORTED, benchmark P/R/F1=1, TTR rank=1, bridge recall=1,
+early_stop=false, 2 pages/4 calls, budget not exhausted, H1_CLEAN.
+Report: `docs/S19_implementation.md`; complete row/hand checks: diagnostics/s19.
+No new inference, S20 or frozen scientific-file edit. Prior pending acceptance
+statements are superseded by the explicit acceptance in the decision log.
+This explicit S19 authorization supersedes earlier no-S19 status statements.
+
 **S18 accepted (2026-10-17).** The researcher explicitly delegated acceptance
 and authorized commit/push. The delegated review confirmed all 21 inspection-table
 rows against a fresh raw-call/KG replay, identical to the saved output; all 48
