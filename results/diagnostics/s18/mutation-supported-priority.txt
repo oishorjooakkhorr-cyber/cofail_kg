@@ -1,0 +1,44 @@
+FF........F......F............................F.                         [100%]
+================================== FAILURES ===================================
+_____________ test_supported_including_non_gold_bridge[2-3-GOLD] ______________
+tests\test_path_labels.py:59: in test_supported_including_non_gold_bridge
+    assert item["label_b"] == "SUPPORTED"
+E   AssertionError: assert 'PATH_INVALID' == 'SUPPORTED'
+E
+E     - SUPPORTED
+E     + PATH_INVALID
+__________ test_supported_including_non_gold_bridge[5-10-ALT_VALID] ___________
+tests\test_path_labels.py:59: in test_supported_including_non_gold_bridge
+    assert item["label_b"] == "SUPPORTED"
+E   AssertionError: assert 'PATH_INVALID' == 'SUPPORTED'
+E
+E     - SUPPORTED
+E     + PATH_INVALID
+_______ test_supported_wins_even_when_primary_path_is_invalid_shortcut ________
+tests\test_path_labels.py:86: in test_supported_wins_even_when_primary_path_is_invalid_shortcut
+    assert item["label_b"] == "SUPPORTED"
+E   AssertionError: assert 'PATH_INVALID' == 'SUPPORTED'
+E
+E     - SUPPORTED
+E     + PATH_INVALID
+______________ test_unopened_page_is_ungrounded_until_requested _______________
+tests\test_path_labels.py:112: in test_unopened_page_is_ungrounded_until_requested
+    assert evaluate(log, ["10"])["answers"][0]["label_b"] == "SUPPORTED"
+E   AssertionError: assert 'PATH_INVALID' == 'SUPPORTED'
+E
+E     - SUPPORTED
+E     + PATH_INVALID
+_____ test_multiple_accepted_relations_and_no_tool_chronology_requirement _____
+tests\test_path_labels.py:227: in test_multiple_accepted_relations_and_no_tool_chronology_requirement
+    assert result["answers"][0]["label_b"] == "SUPPORTED"
+E   AssertionError: assert 'PATH_INVALID' == 'SUPPORTED'
+E
+E     - SUPPORTED
+E     + PATH_INVALID
+=========================== short test summary info ===========================
+FAILED tests/test_path_labels.py::test_supported_including_non_gold_bridge[2-3-GOLD]
+FAILED tests/test_path_labels.py::test_supported_including_non_gold_bridge[5-10-ALT_VALID]
+FAILED tests/test_path_labels.py::test_supported_wins_even_when_primary_path_is_invalid_shortcut
+FAILED tests/test_path_labels.py::test_unopened_page_is_ungrounded_until_requested
+FAILED tests/test_path_labels.py::test_multiple_accepted_relations_and_no_tool_chronology_requirement
+5 failed, 43 passed in 0.92s

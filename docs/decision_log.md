@@ -1052,3 +1052,50 @@ Full report: docs/S17_implementation.md; evidence: results/diagnostics/s17/.
 This acceptance supersedes earlier pending S17 statements. Recording acceptance
 changes no code, data, protocol, scientific rule, frozen setting or scoring.
 Commit/push are now explicitly authorized. S18 has not been authorized or started.
+
+## 2026-10-17 - S18 authorization and H1 simple-path clarification
+
+The researcher explicitly requested S18 implementation and questions for needed
+decisions. Authority: frozen protocol §14 and runbook S18. No S19 work or new
+model inference is authorized by this implementation request.
+
+For §14.3 per-answer H1, the researcher selected "Count only a path without
+repeated nodes". A correct R1 edge s→b does not establish H1 when b can reach
+the answer only through s again (for example s→b→s→x). The H1 supporting path
+is simple and has no length cap; the ≤3 bound remains specific to §14.2's
+reason-code union. This clarification can affect H1 on cyclic traces and is
+recorded before implementing H1. No scientific threshold, frozen file, dataset,
+episode, Label A rule or reason-code rule changes.
+
+Evidence seen before deciding: existing saved S14/S17 evidence and the initial
+S18 synthetic Label B/reason-code slice (65 checks passed with S12/S17 tests).
+No new model call or pilot result.
+
+Implementation/automated verification complete: 48 synthetic S18 cases; 142
+focused checks and 508 full-suite tests passed, no skips/deselections. An H1
+source-return mutation caused two failures; a disabled-SUPPORTED mutation caused
+five. Both were restored byte-for-byte before the full suite. All 71 protected
+identities are unchanged, including S12/S16/S17, frozen rules/settings, raw and
+processed data, cache and episode records.
+
+Saved S14 BH2_00461: all 21 answers GOLD/SUPPORTED, H1=1, codes empty; episode
+H1_CLEAN and found R1=true. All primary paths were checked against raw call 1
+(14097 --drug_protein--> TTR 111) and call 3 (111 --disease_protein--> each answer),
+including returned items, creation indices, types and underlying real KG edges.
+The no-OFF_QUESTION-and-SUPPORTED invariant passes synthetic/real checks.
+
+Report: docs/S18_implementation.md. Full all-answer inspection table:
+results/diagnostics/s18/hand-check.md. Researcher inspection/acceptance pending;
+no protocol/scientific-file edit, new model call/episode, setting change, S19
+implementation, commit or push. Output shape, sorted codes, cached types and
+source-excluding reverse reachability are routine engineering, documented in
+the report. No scientific choice beyond the researcher's H1 clarification.
+
+## 2026-10-17 - S18 commit/push authorization
+
+After the S18 implementation/verification report, the researcher explicitly
+authorized committing and pushing the S18 changes. Publish as
+`S18: Label B and hop-1 status`. This supersedes the earlier no-commit/push
+status. No additional model call, scientific decision or S19 work is authorized.
+This records publication authorization; it does not claim the researcher has
+completed the separately listed all-answer manual inspection or stage acceptance.

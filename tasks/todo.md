@@ -1,3 +1,14 @@
+# S18 - Label B, reason codes and hop-1 status (2026-10-17)
+
+- [x] Researcher authorizes S18; inspect dependencies/callers and save protected hashes.
+- [x] RED/GREEN synthetic Label B and reason-code cases, using S12 utilities.
+- [x] Researcher selects simple H1 paths; test/implement H1 without a length cap.
+- [x] Replay saved S14 and verify all 21 primary paths directly against raw calls/KG.
+- [x] Review; 2 mutations caught/restored, 142 focused/508 full checks, 71 hashes unchanged.
+- [x] Save report and complete all-answer inspection table in diagnostics/s18.
+- [x] Researcher explicitly authorizes S18 commit/push after the verification report.
+- [ ] Researcher inspects all primary paths/labels/codes and accepts S18.
+
 # S17 - Label A (2026-10-17)
 
 - [x] Researcher authorizes S17 with G_q, UNION coverage and CONSISTENT extra errors.

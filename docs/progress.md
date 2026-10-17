@@ -1,5 +1,22 @@
 # Progress — CoFail-KG
 
+**S18 implemented and automatically verified (2026-10-17); researcher acceptance
+pending.** Evaluator-only Label B, primary/union reason codes, primary paths,
+per-answer H1, episode hop-1 status and found-R1 use S12 trace utilities and the
+frozen mapping. Researcher chose simple H1 paths (no repeated nodes); no length
+cap, with cyclic-source returns excluded. Decision recorded in the decision log.
+48 new synthetic cases include exhaustive H1 comparison on 40 small cyclic
+graphs. Focused **142 passed**; full suite **508 passed**, no skips/deselections;
+both deliberate mutations caught and restored. All 21 saved S14 answers are
+GOLD/SUPPORTED, H1=1, codes empty; episode H1_CLEAN, found R1=true. Every primary
+path was checked against raw calls 1 and 3 and the real KG. All **71 protected
+files unchanged**. Report: `docs/S18_implementation.md`; all-answer inspection
+table: `results/diagnostics/s18/hand-check.md`. No inference, new episode,
+scientific/frozen-setting change or S19 work. The researcher subsequently
+explicitly authorized the S18 commit/push; see the decision log.
+This explicit S18 authorization supersedes earlier statements that S18 was
+unauthorized; prior stage records remain below as history.
+
 **S17 accepted (2026-10-17).** The researcher accepted Label A and all verification
 evidence, and explicitly authorized commit `S17: Label A` and push. Acceptance is
 recorded in the decision log. This supersedes pending S17 acceptance statements.

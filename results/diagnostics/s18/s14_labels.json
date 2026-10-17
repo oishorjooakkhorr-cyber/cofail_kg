@@ -1,0 +1,1070 @@
+{
+  "query_id": "BH2_00461",
+  "construction": "BRIDGE",
+  "in_primary_population": true,
+  "status": "CONSISTENT",
+  "counts": {
+    "SUPPORTED": 21
+  },
+  "hop1_status": "H1_CLEAN",
+  "found_r1": true,
+  "answers": [
+    {
+      "submitted_index": 0,
+      "node_id": "27413",
+      "name": "Finnish type amyloidosis",
+      "label_a": "GOLD",
+      "label_b": "SUPPORTED",
+      "h1": 1,
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "u": "14097",
+          "label": "drug_protein",
+          "v": "111"
+        },
+        {
+          "creation_index": 3,
+          "u": "111",
+          "label": "disease_protein",
+          "v": "27413"
+        }
+      ],
+      "primary_reason_codes": [],
+      "reason_codes": [],
+      "raw_call_checks": [
+        {
+          "call_index": 1,
+          "page": 1,
+          "returned": {
+            "display_labels": [
+              "carrier"
+            ],
+            "id": "111",
+            "name": "TTR",
+            "type": "gene/protein"
+          }
+        },
+        {
+          "call_index": 3,
+          "page": 1,
+          "returned": {
+            "display_labels": [
+              "associated with"
+            ],
+            "id": "27413",
+            "name": "Finnish type amyloidosis",
+            "type": "disease"
+          }
+        }
+      ]
+    },
+    {
+      "submitted_index": 1,
+      "node_id": "27710",
+      "name": "AL amyloidosis",
+      "label_a": "GOLD",
+      "label_b": "SUPPORTED",
+      "h1": 1,
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "u": "14097",
+          "label": "drug_protein",
+          "v": "111"
+        },
+        {
+          "creation_index": 3,
+          "u": "111",
+          "label": "disease_protein",
+          "v": "27710"
+        }
+      ],
+      "primary_reason_codes": [],
+      "reason_codes": [],
+      "raw_call_checks": [
+        {
+          "call_index": 1,
+          "page": 1,
+          "returned": {
+            "display_labels": [
+              "carrier"
+            ],
+            "id": "111",
+            "name": "TTR",
+            "type": "gene/protein"
+          }
+        },
+        {
+          "call_index": 3,
+          "page": 1,
+          "returned": {
+            "display_labels": [
+              "associated with"
+            ],
+            "id": "27710",
+            "name": "AL amyloidosis",
+            "type": "disease"
+          }
+        }
+      ]
+    },
+    {
+      "submitted_index": 2,
+      "node_id": "27933",
+      "name": "anxiety disorder",
+      "label_a": "GOLD",
+      "label_b": "SUPPORTED",
+      "h1": 1,
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "u": "14097",
+          "label": "drug_protein",
+          "v": "111"
+        },
+        {
+          "creation_index": 3,
+          "u": "111",
+          "label": "disease_protein",
+          "v": "27933"
+        }
+      ],
+      "primary_reason_codes": [],
+      "reason_codes": [],
+      "raw_call_checks": [
+        {
+          "call_index": 1,
+          "page": 1,
+          "returned": {
+            "display_labels": [
+              "carrier"
+            ],
+            "id": "111",
+            "name": "TTR",
+            "type": "gene/protein"
+          }
+        },
+        {
+          "call_index": 3,
+          "page": 1,
+          "returned": {
+            "display_labels": [
+              "associated with"
+            ],
+            "id": "27933",
+            "name": "anxiety disorder",
+            "type": "disease"
+          }
+        }
+      ]
+    },
+    {
+      "submitted_index": 3,
+      "node_id": "28275",
+      "name": "corneal dystrophy",
+      "label_a": "GOLD",
+      "label_b": "SUPPORTED",
+      "h1": 1,
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "u": "14097",
+          "label": "drug_protein",
+          "v": "111"
+        },
+        {
+          "creation_index": 3,
+          "u": "111",
+          "label": "disease_protein",
+          "v": "28275"
+        }
+      ],
+      "primary_reason_codes": [],
+      "reason_codes": [],
+      "raw_call_checks": [
+        {
+          "call_index": 1,
+          "page": 1,
+          "returned": {
+            "display_labels": [
+              "carrier"
+            ],
+            "id": "111",
+            "name": "TTR",
+            "type": "gene/protein"
+          }
+        },
+        {
+          "call_index": 3,
+          "page": 1,
+          "returned": {
+            "display_labels": [
+              "associated with"
+            ],
+            "id": "28275",
+            "name": "corneal dystrophy",
+            "type": "disease"
+          }
+        }
+      ]
+    },
+    {
+      "submitted_index": 4,
+      "node_id": "28831",
+      "name": "carpal tunnel syndrome",
+      "label_a": "GOLD",
+      "label_b": "SUPPORTED",
+      "h1": 1,
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "u": "14097",
+          "label": "drug_protein",
+          "v": "111"
+        },
+        {
+          "creation_index": 3,
+          "u": "111",
+          "label": "disease_protein",
+          "v": "28831"
+        }
+      ],
+      "primary_reason_codes": [],
+      "reason_codes": [],
+      "raw_call_checks": [
+        {
+          "call_index": 1,
+          "page": 1,
+          "returned": {
+            "display_labels": [
+              "carrier"
+            ],
+            "id": "111",
+            "name": "TTR",
+            "type": "gene/protein"
+          }
+        },
+        {
+          "call_index": 3,
+          "page": 1,
+          "returned": {
+            "display_labels": [
+              "associated with"
+            ],
+            "id": "28831",
+            "name": "carpal tunnel syndrome",
+            "type": "disease"
+          }
+        }
+      ]
+    },
+    {
+      "submitted_index": 5,
+      "node_id": "29041",
+      "name": "familial adenomatous polyposis",
+      "label_a": "GOLD",
+      "label_b": "SUPPORTED",
+      "h1": 1,
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "u": "14097",
+          "label": "drug_protein",
+          "v": "111"
+        },
+        {
+          "creation_index": 3,
+          "u": "111",
+          "label": "disease_protein",
+          "v": "29041"
+        }
+      ],
+      "primary_reason_codes": [],
+      "reason_codes": [],
+      "raw_call_checks": [
+        {
+          "call_index": 1,
+          "page": 1,
+          "returned": {
+            "display_labels": [
+              "carrier"
+            ],
+            "id": "111",
+            "name": "TTR",
+            "type": "gene/protein"
+          }
+        },
+        {
+          "call_index": 3,
+          "page": 1,
+          "returned": {
+            "display_labels": [
+              "associated with"
+            ],
+            "id": "29041",
+            "name": "familial adenomatous polyposis",
+            "type": "disease"
+          }
+        }
+      ]
+    },
+    {
+      "submitted_index": 6,
+      "node_id": "29695",
+      "name": "hyperthyroxinemia, dystransthyretinemic",
+      "label_a": "GOLD",
+      "label_b": "SUPPORTED",
+      "h1": 1,
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "u": "14097",
+          "label": "drug_protein",
+          "v": "111"
+        },
+        {
+          "creation_index": 3,
+          "u": "111",
+          "label": "disease_protein",
+          "v": "29695"
+        }
+      ],
+      "primary_reason_codes": [],
+      "reason_codes": [],
+      "raw_call_checks": [
+        {
+          "call_index": 1,
+          "page": 1,
+          "returned": {
+            "display_labels": [
+              "carrier"
+            ],
+            "id": "111",
+            "name": "TTR",
+            "type": "gene/protein"
+          }
+        },
+        {
+          "call_index": 3,
+          "page": 1,
+          "returned": {
+            "display_labels": [
+              "associated with"
+            ],
+            "id": "29695",
+            "name": "hyperthyroxinemia, dystransthyretinemic",
+            "type": "disease"
+          }
+        }
+      ]
+    },
+    {
+      "submitted_index": 7,
+      "node_id": "30929",
+      "name": "ABri amyloidosis",
+      "label_a": "GOLD",
+      "label_b": "SUPPORTED",
+      "h1": 1,
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "u": "14097",
+          "label": "drug_protein",
+          "v": "111"
+        },
+        {
+          "creation_index": 3,
+          "u": "111",
+          "label": "disease_protein",
+          "v": "30929"
+        }
+      ],
+      "primary_reason_codes": [],
+      "reason_codes": [],
+      "raw_call_checks": [
+        {
+          "call_index": 1,
+          "page": 1,
+          "returned": {
+            "display_labels": [
+              "carrier"
+            ],
+            "id": "111",
+            "name": "TTR",
+            "type": "gene/protein"
+          }
+        },
+        {
+          "call_index": 3,
+          "page": 1,
+          "returned": {
+            "display_labels": [
+              "associated with"
+            ],
+            "id": "30929",
+            "name": "ABri amyloidosis",
+            "type": "disease"
+          }
+        }
+      ]
+    },
+    {
+      "submitted_index": 8,
+      "node_id": "31116",
+      "name": "lung cancer",
+      "label_a": "GOLD",
+      "label_b": "SUPPORTED",
+      "h1": 1,
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "u": "14097",
+          "label": "drug_protein",
+          "v": "111"
+        },
+        {
+          "creation_index": 3,
+          "u": "111",
+          "label": "disease_protein",
+          "v": "31116"
+        }
+      ],
+      "primary_reason_codes": [],
+      "reason_codes": [],
+      "raw_call_checks": [
+        {
+          "call_index": 1,
+          "page": 1,
+          "returned": {
+            "display_labels": [
+              "carrier"
+            ],
+            "id": "111",
+            "name": "TTR",
+            "type": "gene/protein"
+          }
+        },
+        {
+          "call_index": 3,
+          "page": 1,
+          "returned": {
+            "display_labels": [
+              "associated with"
+            ],
+            "id": "31116",
+            "name": "lung cancer",
+            "type": "disease"
+          }
+        }
+      ]
+    },
+    {
+      "submitted_index": 9,
+      "node_id": "32117",
+      "name": "familial amyloid neuropathy",
+      "label_a": "GOLD",
+      "label_b": "SUPPORTED",
+      "h1": 1,
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "u": "14097",
+          "label": "drug_protein",
+          "v": "111"
+        },
+        {
+          "creation_index": 3,
+          "u": "111",
+          "label": "disease_protein",
+          "v": "32117"
+        }
+      ],
+      "primary_reason_codes": [],
+      "reason_codes": [],
+      "raw_call_checks": [
+        {
+          "call_index": 1,
+          "page": 1,
+          "returned": {
+            "display_labels": [
+              "carrier"
+            ],
+            "id": "111",
+            "name": "TTR",
+            "type": "gene/protein"
+          }
+        },
+        {
+          "call_index": 3,
+          "page": 1,
+          "returned": {
+            "display_labels": [
+              "associated with"
+            ],
+            "id": "32117",
+            "name": "familial amyloid neuropathy",
+            "type": "disease"
+          }
+        }
+      ]
+    },
+    {
+      "submitted_index": 10,
+      "node_id": "33591",
+      "name": "amyloidosis (disease)",
+      "label_a": "GOLD",
+      "label_b": "SUPPORTED",
+      "h1": 1,
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "u": "14097",
+          "label": "drug_protein",
+          "v": "111"
+        },
+        {
+          "creation_index": 3,
+          "u": "111",
+          "label": "disease_protein",
+          "v": "33591"
+        }
+      ],
+      "primary_reason_codes": [],
+      "reason_codes": [],
+      "raw_call_checks": [
+        {
+          "call_index": 1,
+          "page": 1,
+          "returned": {
+            "display_labels": [
+              "carrier"
+            ],
+            "id": "111",
+            "name": "TTR",
+            "type": "gene/protein"
+          }
+        },
+        {
+          "call_index": 3,
+          "page": 1,
+          "returned": {
+            "display_labels": [
+              "associated with"
+            ],
+            "id": "33591",
+            "name": "amyloidosis (disease)",
+            "type": "disease"
+          }
+        }
+      ]
+    },
+    {
+      "submitted_index": 11,
+      "node_id": "36544",
+      "name": "drug-induced liver injury",
+      "label_a": "GOLD",
+      "label_b": "SUPPORTED",
+      "h1": 1,
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "u": "14097",
+          "label": "drug_protein",
+          "v": "111"
+        },
+        {
+          "creation_index": 3,
+          "u": "111",
+          "label": "disease_protein",
+          "v": "36544"
+        }
+      ],
+      "primary_reason_codes": [],
+      "reason_codes": [],
+      "raw_call_checks": [
+        {
+          "call_index": 1,
+          "page": 1,
+          "returned": {
+            "display_labels": [
+              "carrier"
+            ],
+            "id": "111",
+            "name": "TTR",
+            "type": "gene/protein"
+          }
+        },
+        {
+          "call_index": 3,
+          "page": 1,
+          "returned": {
+            "display_labels": [
+              "associated with"
+            ],
+            "id": "36544",
+            "name": "drug-induced liver injury",
+            "type": "disease"
+          }
+        }
+      ]
+    },
+    {
+      "submitted_index": 12,
+      "node_id": "36812",
+      "name": "lung neoplasm",
+      "label_a": "GOLD",
+      "label_b": "SUPPORTED",
+      "h1": 1,
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "u": "14097",
+          "label": "drug_protein",
+          "v": "111"
+        },
+        {
+          "creation_index": 3,
+          "u": "111",
+          "label": "disease_protein",
+          "v": "36812"
+        }
+      ],
+      "primary_reason_codes": [],
+      "reason_codes": [],
+      "raw_call_checks": [
+        {
+          "call_index": 1,
+          "page": 1,
+          "returned": {
+            "display_labels": [
+              "carrier"
+            ],
+            "id": "111",
+            "name": "TTR",
+            "type": "gene/protein"
+          }
+        },
+        {
+          "call_index": 3,
+          "page": 1,
+          "returned": {
+            "display_labels": [
+              "associated with"
+            ],
+            "id": "36812",
+            "name": "lung neoplasm",
+            "type": "disease"
+          }
+        }
+      ]
+    },
+    {
+      "submitted_index": 13,
+      "node_id": "37703",
+      "name": "neurotic disorder",
+      "label_a": "GOLD",
+      "label_b": "SUPPORTED",
+      "h1": 1,
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "u": "14097",
+          "label": "drug_protein",
+          "v": "111"
+        },
+        {
+          "creation_index": 3,
+          "u": "111",
+          "label": "disease_protein",
+          "v": "37703"
+        }
+      ],
+      "primary_reason_codes": [],
+      "reason_codes": [],
+      "raw_call_checks": [
+        {
+          "call_index": 1,
+          "page": 1,
+          "returned": {
+            "display_labels": [
+              "carrier"
+            ],
+            "id": "111",
+            "name": "TTR",
+            "type": "gene/protein"
+          }
+        },
+        {
+          "call_index": 3,
+          "page": 1,
+          "returned": {
+            "display_labels": [
+              "associated with"
+            ],
+            "id": "37703",
+            "name": "neurotic disorder",
+            "type": "disease"
+          }
+        }
+      ]
+    },
+    {
+      "submitted_index": 14,
+      "node_id": "37798",
+      "name": "hereditary amyloidosis",
+      "label_a": "GOLD",
+      "label_b": "SUPPORTED",
+      "h1": 1,
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "u": "14097",
+          "label": "drug_protein",
+          "v": "111"
+        },
+        {
+          "creation_index": 3,
+          "u": "111",
+          "label": "disease_protein",
+          "v": "37798"
+        }
+      ],
+      "primary_reason_codes": [],
+      "reason_codes": [],
+      "raw_call_checks": [
+        {
+          "call_index": 1,
+          "page": 1,
+          "returned": {
+            "display_labels": [
+              "carrier"
+            ],
+            "id": "111",
+            "name": "TTR",
+            "type": "gene/protein"
+          }
+        },
+        {
+          "call_index": 3,
+          "page": 1,
+          "returned": {
+            "display_labels": [
+              "associated with"
+            ],
+            "id": "37798",
+            "name": "hereditary amyloidosis",
+            "type": "disease"
+          }
+        }
+      ]
+    },
+    {
+      "submitted_index": 15,
+      "node_id": "37871",
+      "name": "pancreatic neuroendocrine neoplasm",
+      "label_a": "GOLD",
+      "label_b": "SUPPORTED",
+      "h1": 1,
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "u": "14097",
+          "label": "drug_protein",
+          "v": "111"
+        },
+        {
+          "creation_index": 3,
+          "u": "111",
+          "label": "disease_protein",
+          "v": "37871"
+        }
+      ],
+      "primary_reason_codes": [],
+      "reason_codes": [],
+      "raw_call_checks": [
+        {
+          "call_index": 1,
+          "page": 1,
+          "returned": {
+            "display_labels": [
+              "carrier"
+            ],
+            "id": "111",
+            "name": "TTR",
+            "type": "gene/protein"
+          }
+        },
+        {
+          "call_index": 3,
+          "page": 1,
+          "returned": {
+            "display_labels": [
+              "associated with"
+            ],
+            "id": "37871",
+            "name": "pancreatic neuroendocrine neoplasm",
+            "type": "disease"
+          }
+        }
+      ]
+    },
+    {
+      "submitted_index": 16,
+      "node_id": "38035",
+      "name": "acute kidney failure",
+      "label_a": "GOLD",
+      "label_b": "SUPPORTED",
+      "h1": 1,
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "u": "14097",
+          "label": "drug_protein",
+          "v": "111"
+        },
+        {
+          "creation_index": 3,
+          "u": "111",
+          "label": "disease_protein",
+          "v": "38035"
+        }
+      ],
+      "primary_reason_codes": [],
+      "reason_codes": [],
+      "raw_call_checks": [
+        {
+          "call_index": 1,
+          "page": 1,
+          "returned": {
+            "display_labels": [
+              "carrier"
+            ],
+            "id": "111",
+            "name": "TTR",
+            "type": "gene/protein"
+          }
+        },
+        {
+          "call_index": 3,
+          "page": 1,
+          "returned": {
+            "display_labels": [
+              "associated with"
+            ],
+            "id": "38035",
+            "name": "acute kidney failure",
+            "type": "disease"
+          }
+        }
+      ]
+    },
+    {
+      "submitted_index": 17,
+      "node_id": "83760",
+      "name": "dysthymic disorder",
+      "label_a": "GOLD",
+      "label_b": "SUPPORTED",
+      "h1": 1,
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "u": "14097",
+          "label": "drug_protein",
+          "v": "111"
+        },
+        {
+          "creation_index": 3,
+          "u": "111",
+          "label": "disease_protein",
+          "v": "83760"
+        }
+      ],
+      "primary_reason_codes": [],
+      "reason_codes": [],
+      "raw_call_checks": [
+        {
+          "call_index": 1,
+          "page": 1,
+          "returned": {
+            "display_labels": [
+              "carrier"
+            ],
+            "id": "111",
+            "name": "TTR",
+            "type": "gene/protein"
+          }
+        },
+        {
+          "call_index": 3,
+          "page": 1,
+          "returned": {
+            "display_labels": [
+              "associated with"
+            ],
+            "id": "83760",
+            "name": "dysthymic disorder",
+            "type": "disease"
+          }
+        }
+      ]
+    },
+    {
+      "submitted_index": 18,
+      "node_id": "83840",
+      "name": "unipolar depression",
+      "label_a": "GOLD",
+      "label_b": "SUPPORTED",
+      "h1": 1,
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "u": "14097",
+          "label": "drug_protein",
+          "v": "111"
+        },
+        {
+          "creation_index": 3,
+          "u": "111",
+          "label": "disease_protein",
+          "v": "83840"
+        }
+      ],
+      "primary_reason_codes": [],
+      "reason_codes": [],
+      "raw_call_checks": [
+        {
+          "call_index": 1,
+          "page": 1,
+          "returned": {
+            "display_labels": [
+              "carrier"
+            ],
+            "id": "111",
+            "name": "TTR",
+            "type": "gene/protein"
+          }
+        },
+        {
+          "call_index": 3,
+          "page": 1,
+          "returned": {
+            "display_labels": [
+              "associated with"
+            ],
+            "id": "83840",
+            "name": "unipolar depression",
+            "type": "disease"
+          }
+        }
+      ]
+    },
+    {
+      "submitted_index": 19,
+      "node_id": "84174",
+      "name": "AH amyloidosis",
+      "label_a": "GOLD",
+      "label_b": "SUPPORTED",
+      "h1": 1,
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "u": "14097",
+          "label": "drug_protein",
+          "v": "111"
+        },
+        {
+          "creation_index": 3,
+          "u": "111",
+          "label": "disease_protein",
+          "v": "84174"
+        }
+      ],
+      "primary_reason_codes": [],
+      "reason_codes": [],
+      "raw_call_checks": [
+        {
+          "call_index": 1,
+          "page": 1,
+          "returned": {
+            "display_labels": [
+              "carrier"
+            ],
+            "id": "111",
+            "name": "TTR",
+            "type": "gene/protein"
+          }
+        },
+        {
+          "call_index": 3,
+          "page": 1,
+          "returned": {
+            "display_labels": [
+              "associated with"
+            ],
+            "id": "84174",
+            "name": "AH amyloidosis",
+            "type": "disease"
+          }
+        }
+      ]
+    },
+    {
+      "submitted_index": 20,
+      "node_id": "84193",
+      "name": "ATTRV122I amyloidosis",
+      "label_a": "GOLD",
+      "label_b": "SUPPORTED",
+      "h1": 1,
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "u": "14097",
+          "label": "drug_protein",
+          "v": "111"
+        },
+        {
+          "creation_index": 3,
+          "u": "111",
+          "label": "disease_protein",
+          "v": "84193"
+        }
+      ],
+      "primary_reason_codes": [],
+      "reason_codes": [],
+      "raw_call_checks": [
+        {
+          "call_index": 1,
+          "page": 1,
+          "returned": {
+            "display_labels": [
+              "carrier"
+            ],
+            "id": "111",
+            "name": "TTR",
+            "type": "gene/protein"
+          }
+        },
+        {
+          "call_index": 3,
+          "page": 1,
+          "returned": {
+            "display_labels": [
+              "associated with"
+            ],
+            "id": "84193",
+            "name": "ATTRV122I amyloidosis",
+            "type": "disease"
+          }
+        }
+      ]
+    }
+  ],
+  "source_hashes": {
+    "results/runs/s14-templatefix-20261016/BH2_00461__S14-qwen3-4b__a1.json": "e56f8ab710a056656f78676e28527fc34ee951617103c76fdb144ff34fb83d53",
+    "data/processed/reference_queries.parquet": "7d3be769ac5abfa99e3da94a03a70b2ada03c3b8ca5a21a2b61184cc33e0ad07",
+    "data/processed/primary_population.csv": "24a876a1bcca9e4e4fc5d273460212b47e38d95b0949c1770096fb46b79b41b8",
+    "results/semantics/relation_mapping.json": "2d609332b6a4ff48423bd7b2f1cb98d8d2d9cafc2fe80c20f7cee8184b8bb8c0",
+    "results/diagnostics/s17/s14_labels.json": "21aac5d915e9449d8ecb9af4b2407d68af5f6c15d6d9ef0a400baa29b3a615b1"
+  }
+}

@@ -1,0 +1,534 @@
+FFFFFFFFFFFFFFFFFFFFFF                                                   [100%]
+================================== FAILURES ===================================
+_ test_episode_hop1_status_uses_successful_source_calls_by_label_only[log0-H1_CLEAN-True] _
+
+log = [{'tool': 'get_neighbors', 'success': True, 'arguments': {'entity_id': '1', 'relation': 'r1', 'page': 1}, 'result': {'items': [], 'has_more': False, 'total_count': 0}}]
+status = 'H1_CLEAN', found = True
+
+    @pytest.mark.parametrize("log,status,found", [
+        ([nb("1", "r1", [])], "H1_CLEAN", True),
+        ([nb(1, "r1", ["2"], neighbor_type="wrong-filter")], "H1_CLEAN", True),
+        ([nb("1", "r1", []), nb("1", "bad", [])], "H1_MIXED", True),
+        ([nb("1", "bad", [])], "H1_WRONG", False),
+        ([], "H1_NONE", False),
+        ([inspect("1"), nb("2", "r1", ["3"])], "H1_NONE", False),
+        ([nb("1", "r1", [], success=False)], "H1_NONE", False),
+        ([nb("1", "r1", []), nb("1", "bad", [], success=False)], "H1_CLEAN", True),
+    ])
+    def test_episode_hop1_status_uses_successful_source_calls_by_label_only(log, status, found):
+        result = evaluate(log)
+>       assert result["hop1_status"] == status
+               ^^^^^^^^^^^^^^^^^^^^^
+E       KeyError: 'hop1_status'
+
+tests\test_path_labels.py:170: KeyError
+_ test_episode_hop1_status_uses_successful_source_calls_by_label_only[log1-H1_CLEAN-True] _
+
+log = [{'tool': 'get_neighbors', 'success': True, 'arguments': {'entity_id': 1, 'relation': 'r1', 'page': 1, 'neighbor_type'...lter'}, 'result': {'items': [{'id': '2', 'name': 'N2', 'type': 'gene/protein'}], 'has_more': False, 'total_count': 1}}]
+status = 'H1_CLEAN', found = True
+
+    @pytest.mark.parametrize("log,status,found", [
+        ([nb("1", "r1", [])], "H1_CLEAN", True),
+        ([nb(1, "r1", ["2"], neighbor_type="wrong-filter")], "H1_CLEAN", True),
+        ([nb("1", "r1", []), nb("1", "bad", [])], "H1_MIXED", True),
+        ([nb("1", "bad", [])], "H1_WRONG", False),
+        ([], "H1_NONE", False),
+        ([inspect("1"), nb("2", "r1", ["3"])], "H1_NONE", False),
+        ([nb("1", "r1", [], success=False)], "H1_NONE", False),
+        ([nb("1", "r1", []), nb("1", "bad", [], success=False)], "H1_CLEAN", True),
+    ])
+    def test_episode_hop1_status_uses_successful_source_calls_by_label_only(log, status, found):
+        result = evaluate(log)
+>       assert result["hop1_status"] == status
+               ^^^^^^^^^^^^^^^^^^^^^
+E       KeyError: 'hop1_status'
+
+tests\test_path_labels.py:170: KeyError
+_ test_episode_hop1_status_uses_successful_source_calls_by_label_only[log2-H1_MIXED-True] _
+
+log = [{'tool': 'get_neighbors', 'success': True, 'arguments': {'entity_id': '1', 'relation': 'r1', 'page': 1}, 'result': {'...ents': {'entity_id': '1', 'relation': 'bad', 'page': 1}, 'result': {'items': [], 'has_more': False, 'total_count': 0}}]
+status = 'H1_MIXED', found = True
+
+    @pytest.mark.parametrize("log,status,found", [
+        ([nb("1", "r1", [])], "H1_CLEAN", True),
+        ([nb(1, "r1", ["2"], neighbor_type="wrong-filter")], "H1_CLEAN", True),
+        ([nb("1", "r1", []), nb("1", "bad", [])], "H1_MIXED", True),
+        ([nb("1", "bad", [])], "H1_WRONG", False),
+        ([], "H1_NONE", False),
+        ([inspect("1"), nb("2", "r1", ["3"])], "H1_NONE", False),
+        ([nb("1", "r1", [], success=False)], "H1_NONE", False),
+        ([nb("1", "r1", []), nb("1", "bad", [], success=False)], "H1_CLEAN", True),
+    ])
+    def test_episode_hop1_status_uses_successful_source_calls_by_label_only(log, status, found):
+        result = evaluate(log)
+>       assert result["hop1_status"] == status
+               ^^^^^^^^^^^^^^^^^^^^^
+E       KeyError: 'hop1_status'
+
+tests\test_path_labels.py:170: KeyError
+_ test_episode_hop1_status_uses_successful_source_calls_by_label_only[log3-H1_WRONG-False] _
+
+log = [{'tool': 'get_neighbors', 'success': True, 'arguments': {'entity_id': '1', 'relation': 'bad', 'page': 1}, 'result': {'items': [], 'has_more': False, 'total_count': 0}}]
+status = 'H1_WRONG', found = False
+
+    @pytest.mark.parametrize("log,status,found", [
+        ([nb("1", "r1", [])], "H1_CLEAN", True),
+        ([nb(1, "r1", ["2"], neighbor_type="wrong-filter")], "H1_CLEAN", True),
+        ([nb("1", "r1", []), nb("1", "bad", [])], "H1_MIXED", True),
+        ([nb("1", "bad", [])], "H1_WRONG", False),
+        ([], "H1_NONE", False),
+        ([inspect("1"), nb("2", "r1", ["3"])], "H1_NONE", False),
+        ([nb("1", "r1", [], success=False)], "H1_NONE", False),
+        ([nb("1", "r1", []), nb("1", "bad", [], success=False)], "H1_CLEAN", True),
+    ])
+    def test_episode_hop1_status_uses_successful_source_calls_by_label_only(log, status, found):
+        result = evaluate(log)
+>       assert result["hop1_status"] == status
+               ^^^^^^^^^^^^^^^^^^^^^
+E       KeyError: 'hop1_status'
+
+tests\test_path_labels.py:170: KeyError
+_ test_episode_hop1_status_uses_successful_source_calls_by_label_only[log4-H1_NONE-False] _
+
+log = [], status = 'H1_NONE', found = False
+
+    @pytest.mark.parametrize("log,status,found", [
+        ([nb("1", "r1", [])], "H1_CLEAN", True),
+        ([nb(1, "r1", ["2"], neighbor_type="wrong-filter")], "H1_CLEAN", True),
+        ([nb("1", "r1", []), nb("1", "bad", [])], "H1_MIXED", True),
+        ([nb("1", "bad", [])], "H1_WRONG", False),
+        ([], "H1_NONE", False),
+        ([inspect("1"), nb("2", "r1", ["3"])], "H1_NONE", False),
+        ([nb("1", "r1", [], success=False)], "H1_NONE", False),
+        ([nb("1", "r1", []), nb("1", "bad", [], success=False)], "H1_CLEAN", True),
+    ])
+    def test_episode_hop1_status_uses_successful_source_calls_by_label_only(log, status, found):
+        result = evaluate(log)
+>       assert result["hop1_status"] == status
+               ^^^^^^^^^^^^^^^^^^^^^
+E       KeyError: 'hop1_status'
+
+tests\test_path_labels.py:170: KeyError
+_ test_episode_hop1_status_uses_successful_source_calls_by_label_only[log5-H1_NONE-False] _
+
+log = [{'tool': 'inspect_entity', 'success': True, 'arguments': {'entity_id': '1'}, 'result': {'id': '1', 'name': 'N1', 'typ... 'page': 1}, 'result': {'items': [{'id': '3', 'name': 'N3', 'type': 'disease'}], 'has_more': False, 'total_count': 1}}]
+status = 'H1_NONE', found = False
+
+    @pytest.mark.parametrize("log,status,found", [
+        ([nb("1", "r1", [])], "H1_CLEAN", True),
+        ([nb(1, "r1", ["2"], neighbor_type="wrong-filter")], "H1_CLEAN", True),
+        ([nb("1", "r1", []), nb("1", "bad", [])], "H1_MIXED", True),
+        ([nb("1", "bad", [])], "H1_WRONG", False),
+        ([], "H1_NONE", False),
+        ([inspect("1"), nb("2", "r1", ["3"])], "H1_NONE", False),
+        ([nb("1", "r1", [], success=False)], "H1_NONE", False),
+        ([nb("1", "r1", []), nb("1", "bad", [], success=False)], "H1_CLEAN", True),
+    ])
+    def test_episode_hop1_status_uses_successful_source_calls_by_label_only(log, status, found):
+        result = evaluate(log)
+>       assert result["hop1_status"] == status
+               ^^^^^^^^^^^^^^^^^^^^^
+E       KeyError: 'hop1_status'
+
+tests\test_path_labels.py:170: KeyError
+_ test_episode_hop1_status_uses_successful_source_calls_by_label_only[log6-H1_NONE-False] _
+
+log = [{'tool': 'get_neighbors', 'success': False, 'arguments': {'entity_id': '1', 'relation': 'r1', 'page': 1}, 'result': 'Error'}]
+status = 'H1_NONE', found = False
+
+    @pytest.mark.parametrize("log,status,found", [
+        ([nb("1", "r1", [])], "H1_CLEAN", True),
+        ([nb(1, "r1", ["2"], neighbor_type="wrong-filter")], "H1_CLEAN", True),
+        ([nb("1", "r1", []), nb("1", "bad", [])], "H1_MIXED", True),
+        ([nb("1", "bad", [])], "H1_WRONG", False),
+        ([], "H1_NONE", False),
+        ([inspect("1"), nb("2", "r1", ["3"])], "H1_NONE", False),
+        ([nb("1", "r1", [], success=False)], "H1_NONE", False),
+        ([nb("1", "r1", []), nb("1", "bad", [], success=False)], "H1_CLEAN", True),
+    ])
+    def test_episode_hop1_status_uses_successful_source_calls_by_label_only(log, status, found):
+        result = evaluate(log)
+>       assert result["hop1_status"] == status
+               ^^^^^^^^^^^^^^^^^^^^^
+E       KeyError: 'hop1_status'
+
+tests\test_path_labels.py:170: KeyError
+_ test_episode_hop1_status_uses_successful_source_calls_by_label_only[log7-H1_CLEAN-True] _
+
+log = [{'tool': 'get_neighbors', 'success': True, 'arguments': {'entity_id': '1', 'relation': 'r1', 'page': 1}, 'result': {'...: 'get_neighbors', 'success': False, 'arguments': {'entity_id': '1', 'relation': 'bad', 'page': 1}, 'result': 'Error'}]
+status = 'H1_CLEAN', found = True
+
+    @pytest.mark.parametrize("log,status,found", [
+        ([nb("1", "r1", [])], "H1_CLEAN", True),
+        ([nb(1, "r1", ["2"], neighbor_type="wrong-filter")], "H1_CLEAN", True),
+        ([nb("1", "r1", []), nb("1", "bad", [])], "H1_MIXED", True),
+        ([nb("1", "bad", [])], "H1_WRONG", False),
+        ([], "H1_NONE", False),
+        ([inspect("1"), nb("2", "r1", ["3"])], "H1_NONE", False),
+        ([nb("1", "r1", [], success=False)], "H1_NONE", False),
+        ([nb("1", "r1", []), nb("1", "bad", [], success=False)], "H1_CLEAN", True),
+    ])
+    def test_episode_hop1_status_uses_successful_source_calls_by_label_only(log, status, found):
+        result = evaluate(log)
+>       assert result["hop1_status"] == status
+               ^^^^^^^^^^^^^^^^^^^^^
+E       KeyError: 'hop1_status'
+
+tests\test_path_labels.py:170: KeyError
+________ test_per_answer_h1_simple_paths_without_length_cap[log0-3-1] _________
+
+log = [{'tool': 'get_neighbors', 'success': True, 'arguments': {'entity_id': '1', 'relation': 'r1', 'page': 1}, 'result': {'... 'page': 1}, 'result': {'items': [{'id': '3', 'name': 'N3', 'type': 'disease'}], 'has_more': False, 'total_count': 1}}]
+target = '3', h1 = 1
+
+    @pytest.mark.parametrize("log,target,h1", [
+        ([nb("1", "r1", ["2"]), nb("2", "r2", ["3"])], "3", 1),
+        ([nb("1", "bad", ["2"]), nb("2", "r2", ["3"])], "3", 0),
+        ([nb("1", "r1", ["4"]), nb("4", "r2", ["3"])], "3", 0),
+        ([nb("1", "r1", ["2"]), nb("2", "bad", ["3"])], "3", 1),
+        ([nb("1", "r1", ["2"])], "2", 0),
+        ([nb("1", "r1", ["2", "5"]), nb("5", "bad", ["2"])], "2", 1),
+        ([nb("1", "r1", ["2"])], "3", 0),
+        ([nb("9", "r2", ["3"])], "3", 0),
+        ([], None, 0),
+        ([inspect("1"), nb("1", "r1", ["2"]), nb("2", "bad", ["1"])], "1", 0),
+        ([nb("1", "r1", ["2"]), nb("2", "bad", ["1"]), nb("1", "bad", ["3"])], "3", 0),
+        ([nb("1", "r1", ["2"]), nb("2", "bad", ["4"]),
+          nb("4", "bad", ["6"]), nb("6", "bad", ["3"])], "3", 1),
+    ])
+    def test_per_answer_h1_simple_paths_without_length_cap(log, target, h1):
+>       assert evaluate(log, [target])["answers"][0]["h1"] == h1
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       KeyError: 'h1'
+
+tests\test_path_labels.py:190: KeyError
+________ test_per_answer_h1_simple_paths_without_length_cap[log1-3-0] _________
+
+log = [{'tool': 'get_neighbors', 'success': True, 'arguments': {'entity_id': '1', 'relation': 'bad', 'page': 1}, 'result': {... 'page': 1}, 'result': {'items': [{'id': '3', 'name': 'N3', 'type': 'disease'}], 'has_more': False, 'total_count': 1}}]
+target = '3', h1 = 0
+
+    @pytest.mark.parametrize("log,target,h1", [
+        ([nb("1", "r1", ["2"]), nb("2", "r2", ["3"])], "3", 1),
+        ([nb("1", "bad", ["2"]), nb("2", "r2", ["3"])], "3", 0),
+        ([nb("1", "r1", ["4"]), nb("4", "r2", ["3"])], "3", 0),
+        ([nb("1", "r1", ["2"]), nb("2", "bad", ["3"])], "3", 1),
+        ([nb("1", "r1", ["2"])], "2", 0),
+        ([nb("1", "r1", ["2", "5"]), nb("5", "bad", ["2"])], "2", 1),
+        ([nb("1", "r1", ["2"])], "3", 0),
+        ([nb("9", "r2", ["3"])], "3", 0),
+        ([], None, 0),
+        ([inspect("1"), nb("1", "r1", ["2"]), nb("2", "bad", ["1"])], "1", 0),
+        ([nb("1", "r1", ["2"]), nb("2", "bad", ["1"]), nb("1", "bad", ["3"])], "3", 0),
+        ([nb("1", "r1", ["2"]), nb("2", "bad", ["4"]),
+          nb("4", "bad", ["6"]), nb("6", "bad", ["3"])], "3", 1),
+    ])
+    def test_per_answer_h1_simple_paths_without_length_cap(log, target, h1):
+>       assert evaluate(log, [target])["answers"][0]["h1"] == h1
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       KeyError: 'h1'
+
+tests\test_path_labels.py:190: KeyError
+________ test_per_answer_h1_simple_paths_without_length_cap[log2-3-0] _________
+
+log = [{'tool': 'get_neighbors', 'success': True, 'arguments': {'entity_id': '1', 'relation': 'r1', 'page': 1}, 'result': {'... 'page': 1}, 'result': {'items': [{'id': '3', 'name': 'N3', 'type': 'disease'}], 'has_more': False, 'total_count': 1}}]
+target = '3', h1 = 0
+
+    @pytest.mark.parametrize("log,target,h1", [
+        ([nb("1", "r1", ["2"]), nb("2", "r2", ["3"])], "3", 1),
+        ([nb("1", "bad", ["2"]), nb("2", "r2", ["3"])], "3", 0),
+        ([nb("1", "r1", ["4"]), nb("4", "r2", ["3"])], "3", 0),
+        ([nb("1", "r1", ["2"]), nb("2", "bad", ["3"])], "3", 1),
+        ([nb("1", "r1", ["2"])], "2", 0),
+        ([nb("1", "r1", ["2", "5"]), nb("5", "bad", ["2"])], "2", 1),
+        ([nb("1", "r1", ["2"])], "3", 0),
+        ([nb("9", "r2", ["3"])], "3", 0),
+        ([], None, 0),
+        ([inspect("1"), nb("1", "r1", ["2"]), nb("2", "bad", ["1"])], "1", 0),
+        ([nb("1", "r1", ["2"]), nb("2", "bad", ["1"]), nb("1", "bad", ["3"])], "3", 0),
+        ([nb("1", "r1", ["2"]), nb("2", "bad", ["4"]),
+          nb("4", "bad", ["6"]), nb("6", "bad", ["3"])], "3", 1),
+    ])
+    def test_per_answer_h1_simple_paths_without_length_cap(log, target, h1):
+>       assert evaluate(log, [target])["answers"][0]["h1"] == h1
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       KeyError: 'h1'
+
+tests\test_path_labels.py:190: KeyError
+________ test_per_answer_h1_simple_paths_without_length_cap[log3-3-1] _________
+
+log = [{'tool': 'get_neighbors', 'success': True, 'arguments': {'entity_id': '1', 'relation': 'r1', 'page': 1}, 'result': {'... 'page': 1}, 'result': {'items': [{'id': '3', 'name': 'N3', 'type': 'disease'}], 'has_more': False, 'total_count': 1}}]
+target = '3', h1 = 1
+
+    @pytest.mark.parametrize("log,target,h1", [
+        ([nb("1", "r1", ["2"]), nb("2", "r2", ["3"])], "3", 1),
+        ([nb("1", "bad", ["2"]), nb("2", "r2", ["3"])], "3", 0),
+        ([nb("1", "r1", ["4"]), nb("4", "r2", ["3"])], "3", 0),
+        ([nb("1", "r1", ["2"]), nb("2", "bad", ["3"])], "3", 1),
+        ([nb("1", "r1", ["2"])], "2", 0),
+        ([nb("1", "r1", ["2", "5"]), nb("5", "bad", ["2"])], "2", 1),
+        ([nb("1", "r1", ["2"])], "3", 0),
+        ([nb("9", "r2", ["3"])], "3", 0),
+        ([], None, 0),
+        ([inspect("1"), nb("1", "r1", ["2"]), nb("2", "bad", ["1"])], "1", 0),
+        ([nb("1", "r1", ["2"]), nb("2", "bad", ["1"]), nb("1", "bad", ["3"])], "3", 0),
+        ([nb("1", "r1", ["2"]), nb("2", "bad", ["4"]),
+          nb("4", "bad", ["6"]), nb("6", "bad", ["3"])], "3", 1),
+    ])
+    def test_per_answer_h1_simple_paths_without_length_cap(log, target, h1):
+>       assert evaluate(log, [target])["answers"][0]["h1"] == h1
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       KeyError: 'h1'
+
+tests\test_path_labels.py:190: KeyError
+________ test_per_answer_h1_simple_paths_without_length_cap[log4-2-0] _________
+
+log = [{'tool': 'get_neighbors', 'success': True, 'arguments': {'entity_id': '1', 'relation': 'r1', 'page': 1}, 'result': {'items': [{'id': '2', 'name': 'N2', 'type': 'gene/protein'}], 'has_more': False, 'total_count': 1}}]
+target = '2', h1 = 0
+
+    @pytest.mark.parametrize("log,target,h1", [
+        ([nb("1", "r1", ["2"]), nb("2", "r2", ["3"])], "3", 1),
+        ([nb("1", "bad", ["2"]), nb("2", "r2", ["3"])], "3", 0),
+        ([nb("1", "r1", ["4"]), nb("4", "r2", ["3"])], "3", 0),
+        ([nb("1", "r1", ["2"]), nb("2", "bad", ["3"])], "3", 1),
+        ([nb("1", "r1", ["2"])], "2", 0),
+        ([nb("1", "r1", ["2", "5"]), nb("5", "bad", ["2"])], "2", 1),
+        ([nb("1", "r1", ["2"])], "3", 0),
+        ([nb("9", "r2", ["3"])], "3", 0),
+        ([], None, 0),
+        ([inspect("1"), nb("1", "r1", ["2"]), nb("2", "bad", ["1"])], "1", 0),
+        ([nb("1", "r1", ["2"]), nb("2", "bad", ["1"]), nb("1", "bad", ["3"])], "3", 0),
+        ([nb("1", "r1", ["2"]), nb("2", "bad", ["4"]),
+          nb("4", "bad", ["6"]), nb("6", "bad", ["3"])], "3", 1),
+    ])
+    def test_per_answer_h1_simple_paths_without_length_cap(log, target, h1):
+>       assert evaluate(log, [target])["answers"][0]["h1"] == h1
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       KeyError: 'h1'
+
+tests\test_path_labels.py:190: KeyError
+________ test_per_answer_h1_simple_paths_without_length_cap[log5-2-1] _________
+
+log = [{'tool': 'get_neighbors', 'success': True, 'arguments': {'entity_id': '1', 'relation': 'r1', 'page': 1}, 'result': {'...e': 1}, 'result': {'items': [{'id': '2', 'name': 'N2', 'type': 'gene/protein'}], 'has_more': False, 'total_count': 1}}]
+target = '2', h1 = 1
+
+    @pytest.mark.parametrize("log,target,h1", [
+        ([nb("1", "r1", ["2"]), nb("2", "r2", ["3"])], "3", 1),
+        ([nb("1", "bad", ["2"]), nb("2", "r2", ["3"])], "3", 0),
+        ([nb("1", "r1", ["4"]), nb("4", "r2", ["3"])], "3", 0),
+        ([nb("1", "r1", ["2"]), nb("2", "bad", ["3"])], "3", 1),
+        ([nb("1", "r1", ["2"])], "2", 0),
+        ([nb("1", "r1", ["2", "5"]), nb("5", "bad", ["2"])], "2", 1),
+        ([nb("1", "r1", ["2"])], "3", 0),
+        ([nb("9", "r2", ["3"])], "3", 0),
+        ([], None, 0),
+        ([inspect("1"), nb("1", "r1", ["2"]), nb("2", "bad", ["1"])], "1", 0),
+        ([nb("1", "r1", ["2"]), nb("2", "bad", ["1"]), nb("1", "bad", ["3"])], "3", 0),
+        ([nb("1", "r1", ["2"]), nb("2", "bad", ["4"]),
+          nb("4", "bad", ["6"]), nb("6", "bad", ["3"])], "3", 1),
+    ])
+    def test_per_answer_h1_simple_paths_without_length_cap(log, target, h1):
+>       assert evaluate(log, [target])["answers"][0]["h1"] == h1
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       KeyError: 'h1'
+
+tests\test_path_labels.py:190: KeyError
+________ test_per_answer_h1_simple_paths_without_length_cap[log6-3-0] _________
+
+log = [{'tool': 'get_neighbors', 'success': True, 'arguments': {'entity_id': '1', 'relation': 'r1', 'page': 1}, 'result': {'items': [{'id': '2', 'name': 'N2', 'type': 'gene/protein'}], 'has_more': False, 'total_count': 1}}]
+target = '3', h1 = 0
+
+    @pytest.mark.parametrize("log,target,h1", [
+        ([nb("1", "r1", ["2"]), nb("2", "r2", ["3"])], "3", 1),
+        ([nb("1", "bad", ["2"]), nb("2", "r2", ["3"])], "3", 0),
+        ([nb("1", "r1", ["4"]), nb("4", "r2", ["3"])], "3", 0),
+        ([nb("1", "r1", ["2"]), nb("2", "bad", ["3"])], "3", 1),
+        ([nb("1", "r1", ["2"])], "2", 0),
+        ([nb("1", "r1", ["2", "5"]), nb("5", "bad", ["2"])], "2", 1),
+        ([nb("1", "r1", ["2"])], "3", 0),
+        ([nb("9", "r2", ["3"])], "3", 0),
+        ([], None, 0),
+        ([inspect("1"), nb("1", "r1", ["2"]), nb("2", "bad", ["1"])], "1", 0),
+        ([nb("1", "r1", ["2"]), nb("2", "bad", ["1"]), nb("1", "bad", ["3"])], "3", 0),
+        ([nb("1", "r1", ["2"]), nb("2", "bad", ["4"]),
+          nb("4", "bad", ["6"]), nb("6", "bad", ["3"])], "3", 1),
+    ])
+    def test_per_answer_h1_simple_paths_without_length_cap(log, target, h1):
+>       assert evaluate(log, [target])["answers"][0]["h1"] == h1
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       KeyError: 'h1'
+
+tests\test_path_labels.py:190: KeyError
+________ test_per_answer_h1_simple_paths_without_length_cap[log7-3-0] _________
+
+log = [{'tool': 'get_neighbors', 'success': True, 'arguments': {'entity_id': '9', 'relation': 'r2', 'page': 1}, 'result': {'items': [{'id': '3', 'name': 'N3', 'type': 'disease'}], 'has_more': False, 'total_count': 1}}]
+target = '3', h1 = 0
+
+    @pytest.mark.parametrize("log,target,h1", [
+        ([nb("1", "r1", ["2"]), nb("2", "r2", ["3"])], "3", 1),
+        ([nb("1", "bad", ["2"]), nb("2", "r2", ["3"])], "3", 0),
+        ([nb("1", "r1", ["4"]), nb("4", "r2", ["3"])], "3", 0),
+        ([nb("1", "r1", ["2"]), nb("2", "bad", ["3"])], "3", 1),
+        ([nb("1", "r1", ["2"])], "2", 0),
+        ([nb("1", "r1", ["2", "5"]), nb("5", "bad", ["2"])], "2", 1),
+        ([nb("1", "r1", ["2"])], "3", 0),
+        ([nb("9", "r2", ["3"])], "3", 0),
+        ([], None, 0),
+        ([inspect("1"), nb("1", "r1", ["2"]), nb("2", "bad", ["1"])], "1", 0),
+        ([nb("1", "r1", ["2"]), nb("2", "bad", ["1"]), nb("1", "bad", ["3"])], "3", 0),
+        ([nb("1", "r1", ["2"]), nb("2", "bad", ["4"]),
+          nb("4", "bad", ["6"]), nb("6", "bad", ["3"])], "3", 1),
+    ])
+    def test_per_answer_h1_simple_paths_without_length_cap(log, target, h1):
+>       assert evaluate(log, [target])["answers"][0]["h1"] == h1
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       KeyError: 'h1'
+
+tests\test_path_labels.py:190: KeyError
+_______ test_per_answer_h1_simple_paths_without_length_cap[log8-None-0] _______
+
+log = [], target = None, h1 = 0
+
+    @pytest.mark.parametrize("log,target,h1", [
+        ([nb("1", "r1", ["2"]), nb("2", "r2", ["3"])], "3", 1),
+        ([nb("1", "bad", ["2"]), nb("2", "r2", ["3"])], "3", 0),
+        ([nb("1", "r1", ["4"]), nb("4", "r2", ["3"])], "3", 0),
+        ([nb("1", "r1", ["2"]), nb("2", "bad", ["3"])], "3", 1),
+        ([nb("1", "r1", ["2"])], "2", 0),
+        ([nb("1", "r1", ["2", "5"]), nb("5", "bad", ["2"])], "2", 1),
+        ([nb("1", "r1", ["2"])], "3", 0),
+        ([nb("9", "r2", ["3"])], "3", 0),
+        ([], None, 0),
+        ([inspect("1"), nb("1", "r1", ["2"]), nb("2", "bad", ["1"])], "1", 0),
+        ([nb("1", "r1", ["2"]), nb("2", "bad", ["1"]), nb("1", "bad", ["3"])], "3", 0),
+        ([nb("1", "r1", ["2"]), nb("2", "bad", ["4"]),
+          nb("4", "bad", ["6"]), nb("6", "bad", ["3"])], "3", 1),
+    ])
+    def test_per_answer_h1_simple_paths_without_length_cap(log, target, h1):
+>       assert evaluate(log, [target])["answers"][0]["h1"] == h1
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       KeyError: 'h1'
+
+tests\test_path_labels.py:190: KeyError
+________ test_per_answer_h1_simple_paths_without_length_cap[log9-1-0] _________
+
+log = [{'tool': 'inspect_entity', 'success': True, 'arguments': {'entity_id': '1'}, 'result': {'id': '1', 'name': 'N1', 'typ...d', 'page': 1}, 'result': {'items': [{'id': '1', 'name': 'N1', 'type': 'drug'}], 'has_more': False, 'total_count': 1}}]
+target = '1', h1 = 0
+
+    @pytest.mark.parametrize("log,target,h1", [
+        ([nb("1", "r1", ["2"]), nb("2", "r2", ["3"])], "3", 1),
+        ([nb("1", "bad", ["2"]), nb("2", "r2", ["3"])], "3", 0),
+        ([nb("1", "r1", ["4"]), nb("4", "r2", ["3"])], "3", 0),
+        ([nb("1", "r1", ["2"]), nb("2", "bad", ["3"])], "3", 1),
+        ([nb("1", "r1", ["2"])], "2", 0),
+        ([nb("1", "r1", ["2", "5"]), nb("5", "bad", ["2"])], "2", 1),
+        ([nb("1", "r1", ["2"])], "3", 0),
+        ([nb("9", "r2", ["3"])], "3", 0),
+        ([], None, 0),
+        ([inspect("1"), nb("1", "r1", ["2"]), nb("2", "bad", ["1"])], "1", 0),
+        ([nb("1", "r1", ["2"]), nb("2", "bad", ["1"]), nb("1", "bad", ["3"])], "3", 0),
+        ([nb("1", "r1", ["2"]), nb("2", "bad", ["4"]),
+          nb("4", "bad", ["6"]), nb("6", "bad", ["3"])], "3", 1),
+    ])
+    def test_per_answer_h1_simple_paths_without_length_cap(log, target, h1):
+>       assert evaluate(log, [target])["answers"][0]["h1"] == h1
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       KeyError: 'h1'
+
+tests\test_path_labels.py:190: KeyError
+________ test_per_answer_h1_simple_paths_without_length_cap[log10-3-0] ________
+
+log = [{'tool': 'get_neighbors', 'success': True, 'arguments': {'entity_id': '1', 'relation': 'r1', 'page': 1}, 'result': {'... 'page': 1}, 'result': {'items': [{'id': '3', 'name': 'N3', 'type': 'disease'}], 'has_more': False, 'total_count': 1}}]
+target = '3', h1 = 0
+
+    @pytest.mark.parametrize("log,target,h1", [
+        ([nb("1", "r1", ["2"]), nb("2", "r2", ["3"])], "3", 1),
+        ([nb("1", "bad", ["2"]), nb("2", "r2", ["3"])], "3", 0),
+        ([nb("1", "r1", ["4"]), nb("4", "r2", ["3"])], "3", 0),
+        ([nb("1", "r1", ["2"]), nb("2", "bad", ["3"])], "3", 1),
+        ([nb("1", "r1", ["2"])], "2", 0),
+        ([nb("1", "r1", ["2", "5"]), nb("5", "bad", ["2"])], "2", 1),
+        ([nb("1", "r1", ["2"])], "3", 0),
+        ([nb("9", "r2", ["3"])], "3", 0),
+        ([], None, 0),
+        ([inspect("1"), nb("1", "r1", ["2"]), nb("2", "bad", ["1"])], "1", 0),
+        ([nb("1", "r1", ["2"]), nb("2", "bad", ["1"]), nb("1", "bad", ["3"])], "3", 0),
+        ([nb("1", "r1", ["2"]), nb("2", "bad", ["4"]),
+          nb("4", "bad", ["6"]), nb("6", "bad", ["3"])], "3", 1),
+    ])
+    def test_per_answer_h1_simple_paths_without_length_cap(log, target, h1):
+>       assert evaluate(log, [target])["answers"][0]["h1"] == h1
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       KeyError: 'h1'
+
+tests\test_path_labels.py:190: KeyError
+________ test_per_answer_h1_simple_paths_without_length_cap[log11-3-1] ________
+
+log = [{'tool': 'get_neighbors', 'success': True, 'arguments': {'entity_id': '1', 'relation': 'r1', 'page': 1}, 'result': {'... 'page': 1}, 'result': {'items': [{'id': '3', 'name': 'N3', 'type': 'disease'}], 'has_more': False, 'total_count': 1}}]
+target = '3', h1 = 1
+
+    @pytest.mark.parametrize("log,target,h1", [
+        ([nb("1", "r1", ["2"]), nb("2", "r2", ["3"])], "3", 1),
+        ([nb("1", "bad", ["2"]), nb("2", "r2", ["3"])], "3", 0),
+        ([nb("1", "r1", ["4"]), nb("4", "r2", ["3"])], "3", 0),
+        ([nb("1", "r1", ["2"]), nb("2", "bad", ["3"])], "3", 1),
+        ([nb("1", "r1", ["2"])], "2", 0),
+        ([nb("1", "r1", ["2", "5"]), nb("5", "bad", ["2"])], "2", 1),
+        ([nb("1", "r1", ["2"])], "3", 0),
+        ([nb("9", "r2", ["3"])], "3", 0),
+        ([], None, 0),
+        ([inspect("1"), nb("1", "r1", ["2"]), nb("2", "bad", ["1"])], "1", 0),
+        ([nb("1", "r1", ["2"]), nb("2", "bad", ["1"]), nb("1", "bad", ["3"])], "3", 0),
+        ([nb("1", "r1", ["2"]), nb("2", "bad", ["4"]),
+          nb("4", "bad", ["6"]), nb("6", "bad", ["3"])], "3", 1),
+    ])
+    def test_per_answer_h1_simple_paths_without_length_cap(log, target, h1):
+>       assert evaluate(log, [target])["answers"][0]["h1"] == h1
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       KeyError: 'h1'
+
+tests\test_path_labels.py:190: KeyError
+______________ test_h1_can_use_a_non_primary_path_in_mixed_trace ______________
+
+    def test_h1_can_use_a_non_primary_path_in_mixed_trace():
+        result = evaluate([nb("1", "bad", ["3"]), nb("1", "r1", ["2"]),
+                           nb("2", "bad", ["3"])])
+>       assert result["hop1_status"] == "H1_MIXED"
+               ^^^^^^^^^^^^^^^^^^^^^
+E       KeyError: 'hop1_status'
+
+tests\test_path_labels.py:196: KeyError
+______________ test_ignored_calls_never_change_hop1_or_grounding ______________
+
+    def test_ignored_calls_never_change_hop1_or_grounding():
+        record = {"query_id": "q", "call_log": [],
+                  "ignored_tool_calls": [nb("1", "r1", ["2"])]}
+        q = {"query_id": "q", "s": "1", "Type_B": "gene/protein", "Type_T": "disease"}
+        result = label_paths([AgentResolution("2")], record, q, SPEC, KG())
+>       assert result["hop1_status"] == "H1_NONE" and result["found_r1"] is False
+               ^^^^^^^^^^^^^^^^^^^^^
+E       KeyError: 'hop1_status'
+
+tests\test_path_labels.py:206: KeyError
+=========================== short test summary info ===========================
+FAILED tests/test_path_labels.py::test_episode_hop1_status_uses_successful_source_calls_by_label_only[log0-H1_CLEAN-True]
+FAILED tests/test_path_labels.py::test_episode_hop1_status_uses_successful_source_calls_by_label_only[log1-H1_CLEAN-True]
+FAILED tests/test_path_labels.py::test_episode_hop1_status_uses_successful_source_calls_by_label_only[log2-H1_MIXED-True]
+FAILED tests/test_path_labels.py::test_episode_hop1_status_uses_successful_source_calls_by_label_only[log3-H1_WRONG-False]
+FAILED tests/test_path_labels.py::test_episode_hop1_status_uses_successful_source_calls_by_label_only[log4-H1_NONE-False]
+FAILED tests/test_path_labels.py::test_episode_hop1_status_uses_successful_source_calls_by_label_only[log5-H1_NONE-False]
+FAILED tests/test_path_labels.py::test_episode_hop1_status_uses_successful_source_calls_by_label_only[log6-H1_NONE-False]
+FAILED tests/test_path_labels.py::test_episode_hop1_status_uses_successful_source_calls_by_label_only[log7-H1_CLEAN-True]
+FAILED tests/test_path_labels.py::test_per_answer_h1_simple_paths_without_length_cap[log0-3-1]
+FAILED tests/test_path_labels.py::test_per_answer_h1_simple_paths_without_length_cap[log1-3-0]
+FAILED tests/test_path_labels.py::test_per_answer_h1_simple_paths_without_length_cap[log2-3-0]
+FAILED tests/test_path_labels.py::test_per_answer_h1_simple_paths_without_length_cap[log3-3-1]
+FAILED tests/test_path_labels.py::test_per_answer_h1_simple_paths_without_length_cap[log4-2-0]
+FAILED tests/test_path_labels.py::test_per_answer_h1_simple_paths_without_length_cap[log5-2-1]
+FAILED tests/test_path_labels.py::test_per_answer_h1_simple_paths_without_length_cap[log6-3-0]
+FAILED tests/test_path_labels.py::test_per_answer_h1_simple_paths_without_length_cap[log7-3-0]
+FAILED tests/test_path_labels.py::test_per_answer_h1_simple_paths_without_length_cap[log8-None-0]
+FAILED tests/test_path_labels.py::test_per_answer_h1_simple_paths_without_length_cap[log9-1-0]
+FAILED tests/test_path_labels.py::test_per_answer_h1_simple_paths_without_length_cap[log10-3-0]
+FAILED tests/test_path_labels.py::test_per_answer_h1_simple_paths_without_length_cap[log11-3-1]
+FAILED tests/test_path_labels.py::test_h1_can_use_a_non_primary_path_in_mixed_trace
+FAILED tests/test_path_labels.py::test_ignored_calls_never_change_hop1_or_grounding
+22 failed, 23 deselected in 1.02s

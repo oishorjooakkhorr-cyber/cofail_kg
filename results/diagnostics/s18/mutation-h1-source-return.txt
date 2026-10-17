@@ -1,0 +1,14 @@
+.........................................F.....F                         [100%]
+================================== FAILURES ===================================
+________ test_per_answer_h1_simple_paths_without_length_cap[log10-3-0] ________
+tests\test_path_labels.py:191: in test_per_answer_h1_simple_paths_without_length_cap
+    assert evaluate(log, [target])["answers"][0]["h1"] == h1
+E   assert 1 == 0
+_______ test_h1_matches_exhaustive_simple_paths_on_small_cyclic_graphs ________
+tests\test_path_labels.py:261: in test_h1_matches_exhaustive_simple_paths_on_small_cyclic_graphs
+    assert evaluate(log)["answers"][0]["h1"] == expected
+E   assert 1 == 0
+=========================== short test summary info ===========================
+FAILED tests/test_path_labels.py::test_per_answer_h1_simple_paths_without_length_cap[log10-3-0]
+FAILED tests/test_path_labels.py::test_h1_matches_exhaustive_simple_paths_on_small_cyclic_graphs
+2 failed, 46 passed in 0.93s

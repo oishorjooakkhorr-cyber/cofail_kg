@@ -1,3 +1,25 @@
+# S18 - Label B, reason codes and hop-1 status (authorized 2026-10-17)
+
+Researcher explicitly requested S18 implementation and questions for any needed
+scientific decisions. Use frozen protocol §14 and runbook S18. Preserve S12,
+S16/S17, data, settings and saved episodes; no inference or S19 work.
+
+1. Save protected identities and inspect S12 paths, normalization and all callers.
+2. Write failing synthetic Label B/reason-code tests, then implement the evaluator.
+3. Resolve H1 path/cycle interpretation with the researcher; test and implement H1.
+4. Verify every saved S14 answer against raw returned items and its primary path.
+5. Review, run focused/full tests and a deliberate mutation, compare protected
+   hashes, and record evidence, engineering choices and manual review items.
+
+Implementation/automated verification complete: 48 new synthetic cases, 142
+focused checks and 508 full-suite tests pass. Both deliberate mutations caught
+and restored; all 71 protected hashes unchanged. All 21 saved S14 answers are
+GOLD/SUPPORTED with H1=1, codes empty and H1_CLEAN; every primary path checked
+against raw returned items and KG edges. Report: docs/S18_implementation.md.
+Researcher inspection/acceptance remains separately listed. The researcher has
+now explicitly authorized commit/push: publish `S18: Label B and hop-1 status`,
+then stop. No S19 work.
+
 # S17 - Label A (authorized 2026-10-17)
 
 Implement protocol §6/§13 using S7's saved G_q: BRIDGE uses gold-bridge
