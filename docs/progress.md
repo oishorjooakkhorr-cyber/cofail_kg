@@ -1,5 +1,20 @@
 # Progress — CoFail-KG
 
+**S17 accepted (2026-10-17).** The researcher accepted Label A and all verification
+evidence, and explicitly authorized commit `S17: Label A` and push. Acceptance is
+recorded in the decision log. This supersedes pending S17 acceptance statements.
+The implementation uses S7 G_q by construction (§6/§13). The evaluator-only labeler
+preserves exact priority, rejects G_q/construction disagreement, and raises an
+error for GOLD_BRIDGE_EXTRA on a CONSISTENT query. Synthetic coverage includes
+UNION never producing ALT_VALID and one target reached through two bridges.
+Focused **76 passed**; full suite **460 passed**, no skips/deselections; deliberate
+mutation caught and restored. Saved S14 BH2_00461 is BRIDGE/CONSISTENT and in the
+primary population: **21 GOLD**. Both hand-checked answers use gold bridge TTR
+(111), with membership and frozen R1/R2 edges verified. All 53 protected files
+unchanged. Report: `docs/S17_implementation.md`; evidence: `results/diagnostics/s17/`.
+No model calls, new episodes or S18 work. The S17 authorization supersedes earlier
+statements that S17 was not authorized; S18 remains unauthorized.
+
 **S16 accepted (2026-10-17).** The researcher accepted normalization behavior
 and verification evidence, including ID precedence. Unresolved duplicates use
 exact submitted `(id, name)` pairs, without case/whitespace folding or ID type
@@ -7,7 +22,8 @@ coercion: a conservative reading of §12. The mismatch flag is literal and
 diagnostic only. Pilot results must report unresolved answers that would merge
 under normalized comparison, without changing official deduplication/scoring.
 See the decision-log entry "S16 acceptance and pilot reporting requirement".
-This supersedes pending S16 acceptance statements below. S17 is not authorized.
+This supersedes pending S16 acceptance statements below. S17 was separately
+authorized afterward; see the current S17 entry above.
 
 S16 implemented and automatically verified (2026-10-17), under the researcher's
 explicit instruction to start S16. Protocol §12 agent normalization now handles

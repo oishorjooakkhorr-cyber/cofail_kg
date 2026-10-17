@@ -1,4 +1,15 @@
-# S16 — answer normalization (2026-10-17)
+# S17 - Label A (2026-10-17)
+
+- [x] Researcher authorizes S17 with G_q, UNION coverage and CONSISTENT extra errors.
+- [x] Inspect S7/S16 structures/callers and save protected-file identities.
+- [x] Write failing tests; implement §6/§13 labels and pass 76 focused checks.
+- [x] Replay saved S14: BRIDGE, primary/CONSISTENT, 21 GOLD; hand-check two via TTR.
+- [x] Pass all 460 tests, catch/restore deliberate mutation, verify 53 protected files.
+- [x] Align runbook S17 wording; save full report, evidence and design choices.
+- [x] Researcher accepts S17 and its verification evidence (2026-10-17), and
+  explicitly authorizes commit `S17: Label A` and push; decision log updated.
+
+# S16 - answer normalization (2026-10-17)
 
 - [x] Researcher explicitly authorizes starting S16; remote S15 acceptance is preserved.
 - [x] Inventory S7 callers and save protected-file hashes and S7 definitions.

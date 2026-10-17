@@ -997,3 +997,58 @@ Integration update (2026-10-17): researcher requested committing/pushing S16
 and updating local files from the latest remote commit. Remote S15 approval
 20997df was integrated; its acceptance record and handoff removal are preserved.
 S16 source, tests, scientific rules and prior diagnostic evidence are unchanged.
+
+## 2026-10-17 - S17 authorization and Label A implementation
+
+The researcher explicitly authorized S17 and required S7 G_q per protocol §6/§13:
+BRIDGE uses T_q^{B*}, UNION uses T_q. Required a UNION-cannot-produce-ALT_VALID
+test, an error for any GOLD_BRIDGE_EXTRA emitted on a CONSISTENT query, and an
+explicit construction mode in the S14 hand check. These follow the existing
+protocol; no scientific rule or frozen setting was changed. The older S17 runbook
+wording was aligned with that protocol and this instruction.
+
+Implemented evaluator-only label_answers over S16 retained resolutions and S7
+query rows. First matching rule wins. Explicit consistency flag and ValueError
+on forbidden extra labels are routine engineering, as are G_q/construction
+validation, set membership and order-preserving list output. Official callers
+remain restricted to primary-population queries; synthetic inconsistent fixtures
+test the otherwise forbidden GOLD_BRIDGE_EXTRA label.
+
+Verification: 17 new S17 cases; 76 focused checks passed; full suite 460 passed
+without skips/deselections. A deliberately inverted consistency guard caused
+three expected failures and was restored byte-for-byte before the full suite.
+Review also strengthened the UNION error case to use a target outside the
+gold-bridge target set. A mutation using those targets instead of G_q was caught
+(one expected failure), restored byte-for-byte, then final checks reran.
+Saved S14 BH2_00461 is drug:gene/protein:disease, BRIDGE, CONSISTENT and in the
+primary population: 21/21 GOLD. Hand-checked Finnish type amyloidosis (27413) and
+AL amyloidosis (27710): each is in reference_targets through gold bridge TTR (111),
+A*_q and G_q. Frozen drug_protein/disease_protein edges confirmed with the KG.
+All 53 protected-file identities are unchanged, including S7, S16 normalization,
+protocol, raw/processed data, cache, settings, agent code and episode records.
+
+Report: docs/S17_implementation.md; evidence: results/diagnostics/s17/.
+Researcher inspection/acceptance of S17 pending. No model calls, new episodes,
+metrics, S18 work, commit or push were performed.
+
+## 2026-10-17 - S17 acceptance and commit/push authorization
+
+The researcher explicitly stated: "I accept S17 (Label A) and its verification
+evidence." They requested recording acceptance in this log, committing as
+`S17: Label A`, and pushing the commit.
+
+Accepted behavior: protocol §6/§13 Label A priority using S7 G_q by construction
+(BRIDGE -> T_q^{B*}, UNION -> T_q); UNION cannot produce ALT_VALID; any
+GOLD_BRIDGE_EXTRA emitted on a CONSISTENT query raises an error.
+
+Accepted verification evidence: 17 synthetic S17 cases, 76 focused checks and
+460 full-suite tests passed without skips/deselections; both deliberate mutations
+were caught and restored. Saved S14 BH2_00461 uses BRIDGE construction and has
+21 GOLD answers. The two hand checks confirmed Finnish type amyloidosis (27413)
+and AL amyloidosis (27710) through gold bridge TTR (111), with membership in A*_q
+and G_q and frozen relation edges checked. All 53 protected identities unchanged.
+Full report: docs/S17_implementation.md; evidence: results/diagnostics/s17/.
+
+This acceptance supersedes earlier pending S17 statements. Recording acceptance
+changes no code, data, protocol, scientific rule, frozen setting or scoring.
+Commit/push are now explicitly authorized. S18 has not been authorized or started.

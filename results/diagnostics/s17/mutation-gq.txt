@@ -1,0 +1,19 @@
+.........F.......                                                        [100%]
+================================== FAILURES ===================================
+_________________ test_consistent_extra_is_an_error[UNION-12] _________________
+
+construction = 'UNION', node = '12'
+
+    @pytest.mark.parametrize("construction,node", [("BRIDGE", "11"), ("UNION", "12")])
+    def test_consistent_extra_is_an_error(construction, node):
+        q = reference(construction=construction)
+        if construction == "UNION":
+            q["G_q"] = q["T_q"]
+>       with pytest.raises(ValueError, match=f"synthetic.*GOLD_BRIDGE_EXTRA.*{node}"):
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       Failed: DID NOT RAISE ValueError
+
+tests\test_answer_labels.py:41: Failed
+=========================== short test summary info ===========================
+FAILED tests/test_answer_labels.py::test_consistent_extra_is_an_error[UNION-12]
+1 failed, 16 passed in 0.98s

@@ -991,14 +991,17 @@ answer copied from tool output should resolve by ID.
 ```text
 Implement protocol §13 exactly in src/cofail_kg/evaluation/answer_labels.py.
 Input: resolved answers, the query's reference sets (S7) and A*_q.
+Use S7's G_q per §6: BRIDGE -> T_q^{B*}; UNION -> T_q.
 Priority exactly as in §13. Output one label per answer.
 Tests: GOLD; GOLD_BRIDGE_EXTRA; ALT_VALID; OFF_QUESTION; UNRESOLVED; an entity in both
-T_q^{B*} and A*_q (must be GOLD); an entity reachable through two bridges.
+G_q and A*_q (must be GOLD); an entity reachable through two bridges;
+UNION cannot produce ALT_VALID. GOLD_BRIDGE_EXTRA on a CONSISTENT query is an error.
 Run it on the S14 real episode and print each answer with its label.
 ```
 
 **Evaluate.** For two answers from the real episode, confirm the label by hand: is the entity in
 `reference_targets.parquet` for this query? Through the gold bridge or another bridge?
+State whether the relation type uses BRIDGE or UNION construction.
 
 **Commit.** `S17: Label A`
 

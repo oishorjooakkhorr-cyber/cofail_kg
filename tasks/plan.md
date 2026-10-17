@@ -1,4 +1,28 @@
-# S16 — answer normalization (authorized 2026-10-17)
+# S17 - Label A (authorized 2026-10-17)
+
+Implement protocol §6/§13 using S7's saved G_q: BRIDGE uses gold-bridge
+targets; UNION uses all valid targets. Preserve S16 normalization and all
+scientific rules, frozen settings, data and episodes.
+
+Implementation/automated verification complete: 76 focused checks and 460 full-suite
+tests passed; saved S14 BRIDGE query has 21 GOLD answers, two checked through gold
+bridge TTR (111); all 53 protected files unchanged. Report: docs/S17_implementation.md.
+Researcher accepted S17 and its evidence on 2026-10-17, and explicitly authorized
+commit `S17: Label A` and push. Acceptance recorded in the decision log. Completed plan:
+
+1. Save protected-file hashes; inspect S7/S16 structures and existing callers.
+2. Write failing synthetic tests for priority, shared targets, both construction
+   modes, the UNION prohibition on ALT_VALID, and CONSISTENT extra-target errors.
+3. Implement the evaluator-only labeler with one ordered label per retained answer.
+4. Replay the saved S14 episode without inference, print every label, confirm
+   primary-population membership and state its construction mode in two hand checks.
+5. Run focused/full tests, mutation check and protected-file comparison; save
+   evidence and report engineering choices and manual inspection items.
+
+S17 implementation/verification and researcher acceptance are complete; perform
+the explicitly authorized commit/push, then stop. Do not start S18.
+
+# S16 - answer normalization (authorized 2026-10-17)
 
 Implementation/automated verification complete: 49 focused tests, 443 full-suite
 tests, 21/21 saved S14 answers by ID, protected files and S7 definitions unchanged.

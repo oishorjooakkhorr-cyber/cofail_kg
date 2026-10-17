@@ -1,0 +1,89 @@
+...F....FF.......                                                        [100%]
+================================== FAILURES ===================================
+______________ test_protocol_priority[answer3-GOLD_BRIDGE_EXTRA] ______________
+
+answer = AgentResolution(node_id='11', method=None, reason=None, name_id_mismatch=False, via_suffix=False)
+expected = 'GOLD_BRIDGE_EXTRA'
+
+    @pytest.mark.parametrize("answer,expected", [
+        (AgentResolution(None, reason="NO_MATCH"), "UNRESOLVED"),
+        (AgentResolution(None, reason="AMBIGUOUS_NAME"), "UNRESOLVED"),
+        (AgentResolution("10"), "GOLD"),
+        (AgentResolution("11"), "GOLD_BRIDGE_EXTRA"),
+        (AgentResolution("12"), "ALT_VALID"),
+        (AgentResolution("99"), "OFF_QUESTION"),
+        (AgentResolution("1"), "OFF_QUESTION"),
+    ])
+    def test_protocol_priority(answer, expected):
+>       assert label_answers([answer], reference(), consistent=False) == [expected]
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests\test_answer_labels.py:27:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+answers = [AgentResolution(node_id='11', method=None, reason=None, name_id_mismatch=False, via_suffix=False)]
+reference = {'query_id': 'synthetic', 'construction': 'BRIDGE', 's': '1', 'A_star_q': ['10'], ...}
+consistent = False
+
+    def label_answers(answers: list[AgentResolution], reference: dict, *, consistent: bool) -> list[str]:
+        """First matching §13 rule, in S16 retained-answer order.
+
+        Use the S7 query row unchanged, including G_q and A_star_q. Official evaluation
+        calls this only for primary-population queries; consistent is the S8 status.
+        False permits synthetic diagnostic coverage of GOLD_BRIDGE_EXTRA, which is
+        an error on a CONSISTENT query. No normalization or deduplication occurs here.
+        """
+        gold, construction, valid = (set(reference[key]) for key in ("A_star_q", "G_q", "T_q"))
+        mode = reference["construction"]
+        if mode not in ("BRIDGE", "UNION"):
+            raise ValueError(f"{reference['query_id']}: invalid construction {mode!r}")
+        expected = set(reference["T_q_gold_bridges"]) if mode == "BRIDGE" else valid
+        if construction != expected:
+            raise ValueError(f"{reference['query_id']}: G_q disagrees with {mode} construction")
+
+        labels = []
+        for answer in answers:
+            node = answer.node_id
+            if node is None:
+                label = "UNRESOLVED"
+            elif node in gold:
+                label = "GOLD"
+            elif node in construction:
+                if not consistent:
+>                   raise ValueError(f"{reference['query_id']}: GOLD_BRIDGE_EXTRA for {node} on CONSISTENT query")
+E                   ValueError: synthetic: GOLD_BRIDGE_EXTRA for 11 on CONSISTENT query
+
+src\cofail_kg\evaluation\answer_labels.py:31: ValueError
+__________________ test_consistent_extra_is_an_error[BRIDGE] __________________
+
+construction = 'BRIDGE'
+
+    @pytest.mark.parametrize("construction", ["BRIDGE", "UNION"])
+    def test_consistent_extra_is_an_error(construction):
+        q = reference(construction=construction)
+        if construction == "UNION":
+            q["G_q"] = q["T_q"]
+>       with pytest.raises(ValueError, match="synthetic.*GOLD_BRIDGE_EXTRA.*11"):
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       Failed: DID NOT RAISE ValueError
+
+tests\test_answer_labels.py:41: Failed
+__________________ test_consistent_extra_is_an_error[UNION] ___________________
+
+construction = 'UNION'
+
+    @pytest.mark.parametrize("construction", ["BRIDGE", "UNION"])
+    def test_consistent_extra_is_an_error(construction):
+        q = reference(construction=construction)
+        if construction == "UNION":
+            q["G_q"] = q["T_q"]
+>       with pytest.raises(ValueError, match="synthetic.*GOLD_BRIDGE_EXTRA.*11"):
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       Failed: DID NOT RAISE ValueError
+
+tests\test_answer_labels.py:41: Failed
+=========================== short test summary info ===========================
+FAILED tests/test_answer_labels.py::test_protocol_priority[answer3-GOLD_BRIDGE_EXTRA]
+FAILED tests/test_answer_labels.py::test_consistent_extra_is_an_error[BRIDGE]
+FAILED tests/test_answer_labels.py::test_consistent_extra_is_an_error[UNION]
+3 failed, 14 passed in 0.87s

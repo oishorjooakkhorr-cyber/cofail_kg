@@ -1,0 +1,234 @@
+{
+  "query_id": "BH2_00461",
+  "relation_type": "drug:gene/protein:disease",
+  "construction": "BRIDGE",
+  "status": "CONSISTENT",
+  "in_primary_population": true,
+  "source": {
+    "id": "14097",
+    "source_id": "DB08100",
+    "type": "drug",
+    "name": "2,6-dimethyl-4-[(E)-2-phenylethenyl]phenol",
+    "source": "DrugBank"
+  },
+  "counts": {
+    "GOLD": 21
+  },
+  "answers": [
+    {
+      "submitted_index": 0,
+      "id": "27413",
+      "name": "Finnish type amyloidosis",
+      "node_id": "27413",
+      "label": "GOLD"
+    },
+    {
+      "submitted_index": 1,
+      "id": "27710",
+      "name": "AL amyloidosis",
+      "node_id": "27710",
+      "label": "GOLD"
+    },
+    {
+      "submitted_index": 2,
+      "id": "27933",
+      "name": "anxiety disorder",
+      "node_id": "27933",
+      "label": "GOLD"
+    },
+    {
+      "submitted_index": 3,
+      "id": "28275",
+      "name": "corneal dystrophy",
+      "node_id": "28275",
+      "label": "GOLD"
+    },
+    {
+      "submitted_index": 4,
+      "id": "28831",
+      "name": "carpal tunnel syndrome",
+      "node_id": "28831",
+      "label": "GOLD"
+    },
+    {
+      "submitted_index": 5,
+      "id": "29041",
+      "name": "familial adenomatous polyposis",
+      "node_id": "29041",
+      "label": "GOLD"
+    },
+    {
+      "submitted_index": 6,
+      "id": "29695",
+      "name": "hyperthyroxinemia, dystransthyretinemic",
+      "node_id": "29695",
+      "label": "GOLD"
+    },
+    {
+      "submitted_index": 7,
+      "id": "30929",
+      "name": "ABri amyloidosis",
+      "node_id": "30929",
+      "label": "GOLD"
+    },
+    {
+      "submitted_index": 8,
+      "id": "31116",
+      "name": "lung cancer",
+      "node_id": "31116",
+      "label": "GOLD"
+    },
+    {
+      "submitted_index": 9,
+      "id": "32117",
+      "name": "familial amyloid neuropathy",
+      "node_id": "32117",
+      "label": "GOLD"
+    },
+    {
+      "submitted_index": 10,
+      "id": "33591",
+      "name": "amyloidosis (disease)",
+      "node_id": "33591",
+      "label": "GOLD"
+    },
+    {
+      "submitted_index": 11,
+      "id": "36544",
+      "name": "drug-induced liver injury",
+      "node_id": "36544",
+      "label": "GOLD"
+    },
+    {
+      "submitted_index": 12,
+      "id": "36812",
+      "name": "lung neoplasm",
+      "node_id": "36812",
+      "label": "GOLD"
+    },
+    {
+      "submitted_index": 13,
+      "id": "37703",
+      "name": "neurotic disorder",
+      "node_id": "37703",
+      "label": "GOLD"
+    },
+    {
+      "submitted_index": 14,
+      "id": "37798",
+      "name": "hereditary amyloidosis",
+      "node_id": "37798",
+      "label": "GOLD"
+    },
+    {
+      "submitted_index": 15,
+      "id": "37871",
+      "name": "pancreatic neuroendocrine neoplasm",
+      "node_id": "37871",
+      "label": "GOLD"
+    },
+    {
+      "submitted_index": 16,
+      "id": "38035",
+      "name": "acute kidney failure",
+      "node_id": "38035",
+      "label": "GOLD"
+    },
+    {
+      "submitted_index": 17,
+      "id": "83760",
+      "name": "dysthymic disorder",
+      "node_id": "83760",
+      "label": "GOLD"
+    },
+    {
+      "submitted_index": 18,
+      "id": "83840",
+      "name": "unipolar depression",
+      "node_id": "83840",
+      "label": "GOLD"
+    },
+    {
+      "submitted_index": 19,
+      "id": "84174",
+      "name": "AH amyloidosis",
+      "node_id": "84174",
+      "label": "GOLD"
+    },
+    {
+      "submitted_index": 20,
+      "id": "84193",
+      "name": "ATTRV122I amyloidosis",
+      "node_id": "84193",
+      "label": "GOLD"
+    }
+  ],
+  "hand_checks": [
+    {
+      "submitted_index": 0,
+      "id": "27413",
+      "name": "Finnish type amyloidosis",
+      "node_id": "27413",
+      "label": "GOLD",
+      "construction": "BRIDGE",
+      "in_reference_targets": true,
+      "in_A_star_q": true,
+      "in_G_q": true,
+      "paths": [
+        {
+          "bridge": {
+            "id": "111",
+            "source_id": "7276",
+            "type": "gene/protein",
+            "name": "TTR",
+            "source": "NCBI"
+          },
+          "R1": [
+            "drug_protein"
+          ],
+          "R2": [
+            "disease_protein"
+          ],
+          "gold_bridge": true
+        }
+      ]
+    },
+    {
+      "submitted_index": 1,
+      "id": "27710",
+      "name": "AL amyloidosis",
+      "node_id": "27710",
+      "label": "GOLD",
+      "construction": "BRIDGE",
+      "in_reference_targets": true,
+      "in_A_star_q": true,
+      "in_G_q": true,
+      "paths": [
+        {
+          "bridge": {
+            "id": "111",
+            "source_id": "7276",
+            "type": "gene/protein",
+            "name": "TTR",
+            "source": "NCBI"
+          },
+          "R1": [
+            "drug_protein"
+          ],
+          "R2": [
+            "disease_protein"
+          ],
+          "gold_bridge": true
+        }
+      ]
+    }
+  ],
+  "source_hashes": {
+    "results/runs/s14-templatefix-20261016/BH2_00461__S14-qwen3-4b__a1.json": "e56f8ab710a056656f78676e28527fc34ee951617103c76fdb144ff34fb83d53",
+    "data/processed/reference_queries.parquet": "7d3be769ac5abfa99e3da94a03a70b2ada03c3b8ca5a21a2b61184cc33e0ad07",
+    "data/processed/reference_targets.parquet": "3cc447fb262fc29d3f9cf1de1b589deef249ef2c2fe257272bebbf70e9310943",
+    "data/processed/primary_population.csv": "24a876a1bcca9e4e4fc5d273460212b47e38d95b0949c1770096fb46b79b41b8",
+    "results/semantics/relation_mapping.json": "2d609332b6a4ff48423bd7b2f1cb98d8d2d9cafc2fe80c20f7cee8184b8bb8c0",
+    "results/diagnostics/s16/s14_normalization.json": "87cd52b1feaefc2becdf535ab480ba12452bf5a76d75e59042fae0b1a2958b36"
+  }
+}
