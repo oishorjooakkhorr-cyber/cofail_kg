@@ -1,0 +1,58 @@
+{
+  "generated_at": "2026-10-19T04:02:42.648492+00:00",
+  "nodes": {
+    "docs_decision_rules_d3_model_selection_s20_s21": {
+      "code_fingerprint": "c007b1afb96c2b1967fc3ba5964d0dcfdf0197ba0039d71a46c46febbe222175",
+      "label": "D3 — Model selection (S20–S21)",
+      "last": "2026-10-18T15:22:58.802921+00:00",
+      "provenance": [
+        {
+          "date": "2026-10-18T15:22:58.802921+00:00",
+          "outcome": "useful",
+          "q": "whats the next mmodel should I donwload"
+        },
+        {
+          "date": "2026-10-18T15:21:03.134638+00:00",
+          "outcome": "useful",
+          "q": "now u start s20 tests for this model, ask me for any decisions"
+        },
+        {
+          "date": "2026-10-18T09:30:44.997942+00:00",
+          "outcome": "useful",
+          "q": "Which model should follow Llama in S20, and should thinking be on or off?"
+        }
+      ],
+      "score": 2.958054288,
+      "source_file": "docs/decision_rules.md",
+      "status": "preferred",
+      "uses": 3
+    },
+    "docs_pipeline_runbook_s20_model_screening": {
+      "code_fingerprint": "9cde2135c5a233515aa795224b21549519b4913d1d5b8591aea45abc1c47831c",
+      "label": "S20 — Model screening",
+      "last": "2026-10-18T15:22:58.802921+00:00",
+      "provenance": [
+        {
+          "date": "2026-10-18T15:22:58.802921+00:00",
+          "outcome": "useful",
+          "q": "whats the next mmodel should I donwload"
+        },
+        {
+          "date": "2026-10-18T15:21:03.134638+00:00",
+          "outcome": "useful",
+          "q": "now u start s20 tests for this model, ask me for any decisions"
+        },
+        {
+          "date": "2026-10-18T09:30:44.997942+00:00",
+          "outcome": "useful",
+          "q": "Which model should follow Llama in S20, and should thinking be on or off?"
+        }
+      ],
+      "score": 2.958054288,
+      "source_file": "docs/pipeline_runbook.md",
+      "status": "preferred",
+      "uses": 3
+    }
+  },
+  "version": 1
+}
