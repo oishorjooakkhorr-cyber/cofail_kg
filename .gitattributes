@@ -12,3 +12,9 @@
 /data/agent_inputs/*.jsonl -text
 # Preserve the exact source bytes used for the S11 tool-schema identity.
 /src/cofail_kg/agents/tool_schemas.py -text
+# Preserve S20 evidence and source bytes referenced by screening manifests.
+/results/diagnostics/s20/** -text
+/results/diagnostics/screening/** -text
+/scripts/20_screen_models.py -text
+/src/cofail_kg/evaluation/screening.py -text
+/tests/test_screening.py -text
