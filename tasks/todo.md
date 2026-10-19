@@ -1,3 +1,20 @@
+# S20 - Qwen3.5 9B preflight (2026-10-18)
+
+- [x] Record addition as an extra candidate, preserving the original eight.
+- [x] Verify identity, native tools and synthetic disabled-thinking exchange.
+- [x] Run full suite: 598 passed; verify 122 protected and 43 pinned hashes.
+- [x] Pause official inference at researcher's request; investigate GPU memory.
+- [x] Capture isolated Ollama load: 32/33 GPU layers, about 70 MiB fitting shortfall.
+- [x] Researcher recheck after closing apps; same placement and 70 MiB shortfall.
+- [x] Researcher accepts recorded offload and authorizes all 20 official queries.
+- [x] Run full official block with separate invocations and strict stop checks.
+- [x] Verify report-only resume/integrity, inspect episodes and report final D3.
+
+Qwen D3 PASS: 210/210 well-formed; 18/20 SUCCESS; 15/20 competent;
+median wall 26.383874 s; zero OOM. All 20 outcomes saved, no reruns. All 42 run
+files, 122 protected identities and 43 pinned sources/inputs verified unchanged.
+Report: docs/S20_qwen35_screening.md. No S21 choice or 16K follow-up yet.
+
 # S20 - Remaining Llama screening block (2026-10-18)
 
 - [x] Record checkpoint acceptance, strict D3 typing and per-invocation execution authorization.

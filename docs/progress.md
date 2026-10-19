@@ -1,5 +1,22 @@
 # Progress — CoFail-KG
 
+**S20 Qwen3.5 9B complete (2026-10-18): candidate passes D3.** Researcher
+added qwen3.5:9b as a ninth candidate, preserving the original pool. All 598 tests
+passed; synthetic native tools with integer arguments and disabled thinking
+passed at context 8192. Memory investigation reproduced 32/33 layers on GPU;
+Ollama's fitting target was about 70 MiB short of all-layer placement. After an
+unchanged recheck, researcher accepted recorded offload and authorized all 20
+official queries, with per-invocation stop/status/order/hash checks. All 20 are
+saved: 18 SUCCESS, 2 PARSE_FAIL, no ERROR/TIMEOUT/OOM. D3: well-formed calls
+210/210 (100%); SUCCESS 18/20 (90%); competence 15/20 (75%); median wall
+26.383874 seconds; zero OOM. All five criteria pass. Report-only resume retained
+all 42 run-file hashes; 122 protected and 43 pinned source/input hashes match.
+Largest prompt 8189; context-bound parse failures and accepted CPU placement
+are documented. If chosen at S21, section 9.1 requires the five-query 16K check.
+S20 pool remains incomplete; seven planned candidates remain unrun, no S21 choice.
+Report: `docs/S20_qwen35_screening.md`; historical preflight:
+`docs/S20_qwen35_preflight.md`.
+
 **S20 Llama candidate block complete (2026-10-18).** Researcher accepted the
 first checkpoint and authorized nineteen separate --max-new 1 host invocations
 with an exit/status/hash check between them. All nineteen exited zero; no ERROR

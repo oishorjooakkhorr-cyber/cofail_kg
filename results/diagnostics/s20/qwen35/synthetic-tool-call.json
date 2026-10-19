@@ -1,0 +1,65 @@
+{
+  "raw_response": {
+    "model": "qwen3.5:9b",
+    "created_at": "2026-10-18T14:55:45.1067405Z",
+    "message": {
+      "role": "assistant",
+      "content": "",
+      "tool_calls": [
+        {
+          "id": "call_fj9ij9s7",
+          "function": {
+            "index": 0,
+            "name": "add",
+            "arguments": {
+              "a": 2,
+              "b": 3
+            }
+          }
+        }
+      ]
+    },
+    "done": true,
+    "done_reason": "stop",
+    "total_duration": 37662117700,
+    "load_duration": 31344437000,
+    "prompt_eval_count": 294,
+    "prompt_eval_cached_count": 0,
+    "prompt_eval_duration": 5307315000,
+    "eval_count": 35,
+    "eval_duration": 967586000
+  },
+  "message": {
+    "role": "assistant",
+    "content": "",
+    "tool_calls": [
+      {
+        "id": "call_fj9ij9s7",
+        "function": {
+          "index": 0,
+          "name": "add",
+          "arguments": {
+            "a": 2,
+            "b": 3
+          }
+        }
+      }
+    ]
+  },
+  "tool_calls": [
+    {
+      "id": "call_fj9ij9s7",
+      "function": {
+        "index": 0,
+        "name": "add",
+        "arguments": {
+          "a": 2,
+          "b": 3
+        }
+      }
+    }
+  ],
+  "prompt_eval_count": 294,
+  "eval_count": 35,
+  "latency_seconds": 37.66567290000057
+}

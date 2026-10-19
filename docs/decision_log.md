@@ -1356,3 +1356,100 @@ same datetime.fromisoformat calculation. Original invocation journal retained.
 
 No code, evaluator, test, config, prompt, schema, data or frozen rule changed;
 no S21 selection/freeze, commit or push. Stop after this candidate report.
+
+## 2026-10-18 - Qwen3.5 9B added; official screening paused for memory investigation
+
+Researcher requested S20 testing of the newly pulled qwen3.5:9b and explicitly
+chose to add it as an extra candidate while retaining the original eight-model
+pool, including the unrun qwen3:8b. This is an explicit pool extension to nine,
+recorded before any Qwen3.5 biomedical result. No S21 selection is made.
+
+Installed identity: qwen3.5:9b, Qwen lineage, 9.0B Q4_K_M, digest
+56671c2ab9385f9cfcb404638e32cd62d88e3501d44822208363c010179a3c90.
+Ollama 0.40.4 advertises native tools and thinking. A synthetic add(2,3)
+exchange at temperature=0, seed=42, num_ctx=8192, num_predict=4096,
+think=false emitted the native add tool with integer arguments, then answered 5;
+neither response contained a nonempty thinking field. Identity was unchanged.
+These diagnostics do not establish biomedical competence or a D3 verdict.
+
+The unchanged repository suite passed: 598 tests in 41.73 seconds, no skips or
+deselections. All 122 protected-file hashes and 43 Llama-pinned source/input
+hashes match. Existing official run hashes are saved in
+results/diagnostics/s20/qwen35/integrity-preflight.json.
+
+During the synthetic check, /api/ps reported size=6402196107 bytes,
+size_vram=5614044445 bytes, context_length=8192. ollama ps displayed
+12%/88% CPU/GPU; nvidia-smi sampled 7563 MiB of 8192 MiB used. Only this model
+was loaded. Asked whether to proceed with this placement, the researcher chose:
+"Pause official screening and investigate GPU memory first". No Qwen3.5 S20
+episode or official run configuration has been created. Official inference must
+remain paused pending researcher resolution after the memory investigation.
+
+The investigation may use isolated synthetic/allocation diagnostics, with logs
+under results/diagnostics/s20/qwen35/. Frozen generation settings, source,
+agent, evaluator, prompt, tool schemas, data and prior episodes remain unchanged.
+
+Captured isolated Ollama load reproduced the primary loaded-size/VRAM values and
+confirmed 32/33 text layers on GPU. The fitter retained context 8192 and reported
+a 70 MiB shortfall against its 1927 MiB free-memory target, including the vision
+projector's 1152.01 MiB worst-case reserve. The temporary model/server were
+stopped. Full evidence and diagnostic limitations: docs/S20_qwen35_preflight.md.
+
+Researcher chose "I'll close unused GPU apps; then recheck with unchanged
+settings". Wait for readiness before repeating the memory diagnostic. This
+choice authorizes the recheck; official screening remains paused while its
+memory outcome is unresolved.
+
+Researcher confirmed readiness after closing apps. An unchanged isolated
+Ollama recheck again loaded 32/33 layers on GPU with the identical 70 MiB
+fitting shortfall and size/VRAM values. Baseline GPU usage was 926 MiB and
+loaded usage 7353 MiB. Evidence: results/diagnostics/s20/qwen35/memory-recheck-01/.
+Temporary model/server stopped. Official queries remain unrun, pending the
+researcher's choice of accepting placement, diagnostic tuning, or staying paused.
+
+Researcher resolved the pause: "Run all 20 S20 queries with the offload
+documented (recommended)". Authorizes the full qwen3.5:9b screening block on
+the existing primary RTX 3060 Ti host, run primary-3060ti-20261018, agent
+Qwen35-9B, family Qwen, exact digest above. Accept the observed 32/33-layer
+GPU placement; retain all frozen screening settings and think=false. Use
+separate --max-new 1 launcher invocations and check process exit, saved status,
+frozen order, prior-file/config hashes and pinned sources between invocations.
+Stop on any ERROR, nonzero exit, drift or order discrepancy; no automatic retry,
+repair or workaround. Saved TIMEOUT/PARSE_FAIL are completed under existing
+rules. No S21 choice/freeze, source/config/data changes, commit or push.
+
+### Qwen3.5 full candidate block complete: evidence, no S21 decision
+
+Executed 20 separate --max-new 1 host invocations, each exiting zero and saving
+one record in frozen order. All inter-invocation status/identity/hash checks
+passed; no ERROR, nonzero exit, drift or order discrepancy. All 20 are saved:
+18 SUCCESS and two PARSE_FAIL (BH2_03856, BH2_03881), zero TIMEOUT/ERROR/OOM.
+No saved outcome was rerun, repaired or overwritten. No other model ran.
+
+Complete=true; this candidate passes all five D3 criteria:
+well-formed/attempted=210/210 (100%); SUCCESS=18/20 (90%);
+competence=15/20 (75%); median wall=26.383874 seconds; OOM=0.
+All 210 attempts were native, with zero TEXT_TOOL_CALL events. Median charged
+calls=9; budget-hit share=0; largest prompt_eval_count=8189; zero nonempty
+thinking fields in recorded assistant messages. Submitted answer labels:
+341 GOLD, 17 ALT_VALID, four OFF_QUESTION; 358 SUPPORTED, four PATH_INVALID.
+Competence is at least one valid supported answer per query, not completeness.
+
+Both PARSE_FAIL records ended at the context boundary with done_reason=length;
+empty/truncated final output remained unparsed after the existing re-prompt.
+Some competent queries have very low benchmark recall. These limitations and
+wrong-target behavior were inspected without tuning or changing a threshold.
+If selected later at S21, largest prompt 8189 > 0.8*8192 triggers section 9.1's
+five-query context-16384 check; none was run and final runtime values are unfrozen.
+
+Full pre-inference suite: 598 passed in 41.73 seconds, no skips/deselections.
+Report-only --max-new 0 exited zero with no inference and retained all 42
+run-file hashes, including all 21 original Llama files. All 122 protected-file
+and 43 pinned source/input hashes match. Final proof, per-query values,
+invocation journal and raw diagnostic evidence are in
+results/diagnostics/s20/qwen35/. Report: docs/S20_qwen35_screening.md.
+
+Qwen3.5 stays an extra candidate; the original eight-model pool is retained.
+Seven planned candidates remain unrun. This completes the authorized Qwen
+block only: no full S20 acceptance, S21 selection/freeze, 16K follow-up,
+source/config/data/test change, commit or push.

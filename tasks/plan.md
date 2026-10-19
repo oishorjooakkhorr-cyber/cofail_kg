@@ -1,3 +1,20 @@
+# S20 - Qwen3.5 9B (2026-10-18; authorized block complete)
+
+Researcher added qwen3.5:9b as an extra candidate, retaining the original eight,
+then paused official screening to investigate GPU memory. Compatibility passed
+and 598 tests passed. Reproduced load: 32/33 layers on GPU, about 70 MiB short
+of Ollama's all-layer fitting target. Report: docs/S20_qwen35_preflight.md.
+
+Researcher subsequently accepted the recorded offload and authorized all 20
+official queries. Completed 20 separate --max-new 1 invocations with checks of
+exits, status, frozen order, hashes and sources between queries. No stop
+condition occurred. D3 passes: 210/210 well-formed; 18/20 SUCCESS; 15/20
+competent; median wall 26.383874 s; zero OOM. Two PARSE_FAIL records retained.
+Report-only resume and all 42 run-file hashes verified; protected/pinned hashes
+unchanged. Inspected correct, wrong-target and parse-failure examples.
+Report: docs/S20_qwen35_screening.md. Stop after this candidate: no other
+model, S21 selection, 16K follow-up, source/config edits, commit or push.
+
 # S20 - Remaining Llama screening block (authorized 2026-10-18)
 
 Researcher accepted the first checkpoint, fixed D3 argument typing without
