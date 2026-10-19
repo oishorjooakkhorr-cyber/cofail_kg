@@ -1,0 +1,15 @@
+169:load_tensors: offloading output layer to GPU
+170:load_tensors: offloading 39 repeating layers to GPU
+171:load_tensors: offloaded 41/41 layers to GPU
+194:llama_kv_cache: size = 1280.00 MiB (  8192 cells,  40 layers,  1/1 seqs), K (f16):  640.00 MiB, V (f16):  640.00 MiB
+209:srv    load_model: initializing, n_slots = 1, n_ctx_slot = 8192, kv_unified = 'false'
+251:slot   operator(): id  0 | task 0 | new prompt, n_ctx_slot = 8192, n_keep = 4, task.n_tokens = 174
+270:slot   operator(): id  0 | task 37 | new prompt, n_ctx_slot = 8192, n_keep = 4, task.n_tokens = 206
+296:slot   operator(): id  0 | task 51 | new prompt, n_ctx_slot = 8192, n_keep = 4, task.n_tokens = 571
+319:slot   operator(): id  0 | task 562 | new prompt, n_ctx_slot = 8192, n_keep = 4, task.n_tokens = 1107
+347:slot   operator(): id  0 | task 661 | new prompt, n_ctx_slot = 8192, n_keep = 4, task.n_tokens = 535
+367:slot   operator(): id  0 | task 984 | new prompt, n_ctx_slot = 8192, n_keep = 4, task.n_tokens = 885
+386:slot   operator(): id  0 | task 1007 | new prompt, n_ctx_slot = 8192, n_keep = 4, task.n_tokens = 527
+408:slot   operator(): id  0 | task 1586 | new prompt, n_ctx_slot = 8192, n_keep = 4, task.n_tokens = 1130
+439:slot   operator(): id  0 | task 1602 | new prompt, n_ctx_slot = 8192, n_keep = 4, task.n_tokens = 538
+459:slot   operator(): id  0 | task 1904 | new prompt, n_ctx_slot = 8192, n_keep = 4, task.n_tokens = 866

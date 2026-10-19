@@ -1453,3 +1453,82 @@ Qwen3.5 stays an extra candidate; the original eight-model pool is retained.
 Seven planned candidates remain unrun. This completes the authorized Qwen
 block only: no full S20 acceptance, S21 selection/freeze, 16K follow-up,
 source/config/data/test change, commit or push.
+
+## 2026-10-19 - Granite 3.3 8B S20 screening authorized
+
+Researcher: "granite 3.3 model has been download, now run s20 on that model".
+This authorizes the complete 20-query block for the original planned candidate
+granite3.3:8b on the existing primary RTX 3060 Ti host, with the established
+per-invocation checks. Agent Granite33-8B, family Granite, experiment run
+primary-3060ti-20261018. Installed identity verified before inference: 8.2B
+Q4_K_M, digest fd429f23b90980ed1bef53b990894e7b0199331f6ae90c5650240a7d5b70f1f7;
+Ollama 0.40.4 advertises completion and native tools. Existing server was stopped;
+started the installed Ollama executable with D:\Models on 127.0.0.1:11434.
+
+Retain frozen screening settings and think=false, 120-second request timeout,
+strict schema typing without coercion, original pool and saved outcomes. First
+check synthetic native tools, GPU placement, full suite, protected/pinned hashes
+and all existing official records. Use separate --max-new 1 invocations, stopping
+on any ERROR, nonzero exit, identity/hash drift or frozen-order discrepancy.
+Saved TIMEOUT/PARSE_FAIL remain completed and are never rerun. Operational
+helpers reuse the preceding Qwen block's checks with Granite identity/output
+paths. No scientific rules, agent/launcher/evaluator, source/config/data/test
+changes, S21 selection/freeze, other candidate run, commit or push.
+
+Granite preflight passed before official inference: unchanged full suite 598
+passed in 43.55 seconds, no skips/deselections; 122 protected identities, 43
+pinned source/input hashes and all 42 prior Llama/Qwen run files match. Synthetic
+native add(2,3) used integer arguments and answered 5 with no nonempty thinking
+field; model identity stayed unchanged. /api/ps reports context 8192,
+size=size_vram=6403905289 bytes (full GPU residency); sampled GPU usage 7404 MiB
+of 8192 MiB. Raw metadata and synthetic evidence are retained under
+results/diagnostics/s20/granite33/. Proceeding with the authorized official block.
+
+
+### Granite 3.3 full block complete: evidence, no S21 decision
+
+Completed all 20 separate --max-new 1 invocations in frozen order. Every launcher
+exited zero and saved exactly one new SUCCESS record. No ERROR, TIMEOUT,
+PARSE_FAIL, OOM, identity/hash drift or order discrepancy occurred. All prior
+records were retained; no reruns or source/prompt/template/argument repairs.
+
+D3 fails: well-formed/attempted=0/8 (0%); competence=0/20 (0%). Other criteria
+pass: SUCCESS=20/20, median episode wall=13.597764 seconds, OOM=0. Zero native
+calls and eight logged TEXT_TOOL_CALL occurrences; no KG call was executed.
+SUCCESS reflects parsing under the existing parser, not a correct answer.
+69 evaluated answer items: 53 OFF_QUESTION, 15 UNRESOLVED, one GOLD; all 54 resolved
+items are UNGROUNDED, unresolved items NOT_APPLICABLE. No supported answers.
+Largest prompt_eval_count=3546; no nonempty assistant thinking fields.
+
+Full suite before inference: 598 passed in 43.55 seconds. All 20 placement samples
+confirm size=size_vram=6403905289 at context 8192, consistent with the preflight
+41/41 GPU-layer log. Report-only --max-new 0 exited zero without inference and
+retained all 63 run-file hashes, including all 42 prior Llama/Qwen files.
+122 protected identities and 43 pinned source/input hashes match.
+
+Report: docs/S20_granite33_screening.md; evidence/operational helper copies:
+results/diagnostics/s20/granite33/. Inspected first text-tool output, the
+BH2_03762 GOLD-but-UNGROUNDED name-fallback result and BH2_03850 placeholders.
+The auxiliary raw-output inspection initially used strict JSON decoding, which
+rejected an existing code fence; reran only the inspection using the unchanged
+runner parser. Official screening, outcomes and metrics were unaffected.
+
+Three candidates are screened; six original planned candidates remain unrun.
+No S21 selection/freeze, 16K follow-up, other candidate, source/config/data/test
+change, commit or push. This completes the requested Granite block.
+
+## 2026-10-19 - Local S20 commits authorized per model
+
+Researcher requested committing the changes, separately for each model where
+possible. This supersedes historical no-commit checkpoints for the completed
+S20 implementation and these three candidate blocks. Separate shared launcher/
+D3 code from Llama, Qwen3.5 and Granite reports, diagnostics and metric rows;
+retain generated graph context separately. No push was requested.
+
+Pre-commit focused suite: 42 passed in 2.46 seconds; unchanged full suite already
+passed 598 tests before the Granite run. Preserve original episode/configuration
+bytes and recorded run provenance. Raw episodes remain ignored under
+results/runs/. Extend .gitattributes to preserve exact S20 source/evidence bytes
+because screening manifests and integrity proofs identify them by SHA256.
+Index-only documentation/table snapshots split shared files by candidate without
+rewriting the current working files or any completed episode.

@@ -1,3 +1,15 @@
+# S20 - Granite 3.3 8B (2026-10-19)
+
+- [x] Record authorization; verify exact installed identity and native tools.
+- [x] Synthetic add(2,3), full GPU residency, 598 tests and prior-file integrity.
+- [x] Complete 20 frozen queries with one episode per invocation and stop checks.
+- [x] Report-only resume; all 63 run files, 122 protected and 43 pinned hashes match.
+- [x] Inspect text tools, ungrounded GOLD match and placeholder answers; report D3.
+
+D3 FAIL: 0/8 well-formed, 0/20 competent, 20/20 SUCCESS, median 13.597764 s,
+zero OOM. No native KG calls. Report: docs/S20_granite33_screening.md.
+Six planned candidates remain unrun; no S21 choice or other candidate execution.
+
 # S20 - Qwen3.5 9B preflight (2026-10-18)
 
 - [x] Record addition as an extra candidate, preserving the original eight.

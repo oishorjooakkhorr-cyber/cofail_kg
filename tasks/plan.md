@@ -1,3 +1,17 @@
+# S20 - Granite 3.3 8B (2026-10-19; authorized block complete)
+
+Researcher requested S20 for the downloaded granite3.3:8b, an original planned
+candidate. Exact identity/native tools checked, synthetic add passed, 598 tests
+passed, prior records and protected/pinned inputs verified. Ran 20 separate
+--max-new 1 invocations with exit/status/order/identity/hash checks. All completed;
+no stop condition. Report-only resume retained all 63 official run files.
+
+D3 FAIL: well-formed 0/8, competence 0/20; SUCCESS 20/20, median wall 13.597764 s,
+zero OOM. Zero native KG calls, eight logged text tool calls; no supported answers.
+Full GPU residency (41/41 layers, context 8192). No source/config/scientific
+changes, reruns, other candidate, S21 selection, commit or push. Three candidates
+screened, six planned candidates remain. Report: docs/S20_granite33_screening.md.
+
 # S20 - Qwen3.5 9B (2026-10-18; authorized block complete)
 
 Researcher added qwen3.5:9b as an extra candidate, retaining the original eight,

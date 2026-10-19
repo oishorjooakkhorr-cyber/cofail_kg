@@ -1,0 +1,195 @@
+{
+  "agent_id": "Granite33-8B",
+  "answer_count": 5,
+  "answers": [
+    {
+      "degree": 20,
+      "degree_percentile": 74.85362997658079,
+      "first_seen_page": "NEVER",
+      "h1": 0,
+      "label_a": "OFF_QUESTION",
+      "label_b": "UNGROUNDED",
+      "list_size": null,
+      "node_id": "33576",
+      "primary_path": null,
+      "primary_path_max_list_size": null,
+      "primary_reason_codes": [],
+      "reason_codes": [],
+      "submitted_index": 0
+    },
+    {
+      "degree": 456,
+      "degree_percentile": 99.75409836065575,
+      "first_seen_page": "NEVER",
+      "h1": 0,
+      "label_a": "OFF_QUESTION",
+      "label_b": "UNGROUNDED",
+      "list_size": null,
+      "node_id": "33577",
+      "primary_path": null,
+      "primary_path_max_list_size": null,
+      "primary_reason_codes": [],
+      "reason_codes": [],
+      "submitted_index": 1
+    },
+    {
+      "degree": 11,
+      "degree_percentile": 64.01053864168618,
+      "first_seen_page": "NEVER",
+      "h1": 0,
+      "label_a": "OFF_QUESTION",
+      "label_b": "UNGROUNDED",
+      "list_size": null,
+      "node_id": "33578",
+      "primary_path": null,
+      "primary_path_max_list_size": null,
+      "primary_reason_codes": [],
+      "reason_codes": [],
+      "submitted_index": 2
+    },
+    {
+      "degree": 28,
+      "degree_percentile": 81.24121779859485,
+      "first_seen_page": "NEVER",
+      "h1": 0,
+      "label_a": "OFF_QUESTION",
+      "label_b": "UNGROUNDED",
+      "list_size": null,
+      "node_id": "33579",
+      "primary_path": null,
+      "primary_path_max_list_size": null,
+      "primary_reason_codes": [],
+      "reason_codes": [],
+      "submitted_index": 3
+    },
+    {
+      "degree": 27,
+      "degree_percentile": 80.48009367681499,
+      "first_seen_page": "NEVER",
+      "h1": 0,
+      "label_a": "OFF_QUESTION",
+      "label_b": "UNGROUNDED",
+      "list_size": null,
+      "node_id": "33580",
+      "primary_path": null,
+      "primary_path_max_list_size": null,
+      "primary_reason_codes": [],
+      "reason_codes": [],
+      "submitted_index": 4
+    }
+  ],
+  "attempt": 1,
+  "benchmark_f1": 0.0,
+  "benchmark_precision": 0.0,
+  "benchmark_recall": 0.0,
+  "bridge_conditional_recall": {},
+  "bridge_rank": {},
+  "bridge_recall_counts": {},
+  "bridges_explored": [],
+  "budget_exhausted": false,
+  "cause": null,
+  "construction": "UNION",
+  "denominators": {
+    "benchmark_f1": 49,
+    "benchmark_precision": 5,
+    "benchmark_recall": 44,
+    "off_question_rate": 5,
+    "question_valid_precision": 5,
+    "ungrounded_rate": 5,
+    "unresolved_rate": 5
+  },
+  "early_stop": false,
+  "episode_status": "SUCCESS",
+  "found_r1": false,
+  "hop1_status": "H1_NONE",
+  "label_a_counts": {
+    "ALT_VALID": 0,
+    "GOLD": 0,
+    "GOLD_BRIDGE_EXTRA": 0,
+    "OFF_QUESTION": 5,
+    "UNRESOLVED": 0
+  },
+  "label_b_counts": {
+    "KG_UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0,
+    "PATH_INVALID": 0,
+    "SUPPORTED": 0,
+    "UNGROUNDED": 5
+  },
+  "node_statistics": {
+    "33574": {
+      "degree": 15,
+      "degree_percentile": 69.596018735363
+    },
+    "33576": {
+      "degree": 20,
+      "degree_percentile": 74.85362997658079
+    },
+    "33577": {
+      "degree": 456,
+      "degree_percentile": 99.75409836065575
+    },
+    "33578": {
+      "degree": 11,
+      "degree_percentile": 64.01053864168618
+    },
+    "33579": {
+      "degree": 28,
+      "degree_percentile": 81.24121779859485
+    },
+    "33580": {
+      "degree": 27,
+      "degree_percentile": 80.48009367681499
+    }
+  },
+  "numerators": {
+    "benchmark_f1": 0,
+    "benchmark_precision": 0,
+    "benchmark_recall": 0,
+    "off_question_rate": 5,
+    "question_valid_precision": 0,
+    "ungrounded_rate": 5,
+    "unresolved_rate": 0
+  },
+  "off_question_rate": 1.0,
+  "pages_requested": 0,
+  "primary_reason_counts": {
+    "SHORTCUT": 0,
+    "WRONG_BRIDGE_TYPE": 0,
+    "WRONG_HOP_COUNT": 0,
+    "WRONG_RELATION_HOP1": 0,
+    "WRONG_RELATION_HOP2": 0,
+    "WRONG_TARGET_TYPE": 0
+  },
+  "query_id": "BH2_03750",
+  "question_valid_precision": 0.0,
+  "reason_counts": {
+    "SHORTCUT": 0,
+    "WRONG_BRIDGE_TYPE": 0,
+    "WRONG_HOP_COUNT": 0,
+    "WRONG_RELATION_HOP1": 0,
+    "WRONG_RELATION_HOP2": 0,
+    "WRONG_TARGET_TYPE": 0
+  },
+  "resolved_count": 5,
+  "run_id": "primary-3060ti-20261018",
+  "text_tool_call_count": 1,
+  "tool_calls_used": 0,
+  "undefined_counts": {
+    "benchmark_f1": 0,
+    "benchmark_precision": 0,
+    "benchmark_recall": 0,
+    "bridge_conditional_recall": 0,
+    "bridge_rank": 0,
+    "degree": 0,
+    "degree_percentile": 0,
+    "list_size": 5,
+    "off_question_rate": 0,
+    "primary_path_max_list_size": 5,
+    "question_valid_precision": 0,
+    "ungrounded_rate": 0,
+    "unresolved_rate": 0
+  },
+  "ungrounded_rate": 1.0,
+  "unresolved_rate": 0.0
+}

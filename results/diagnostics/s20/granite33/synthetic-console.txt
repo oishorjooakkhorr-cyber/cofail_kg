@@ -1,0 +1,58 @@
+{
+  "identity": {
+    "tag": "granite3.3:8b",
+    "digest": "fd429f23b90980ed1bef53b990894e7b0199331f6ae90c5650240a7d5b70f1f7",
+    "quantization": "Q4_K_M",
+    "parameter_size": "8.2B",
+    "capabilities": [
+      "completion",
+      "tools"
+    ]
+  },
+  "first_message": {
+    "role": "assistant",
+    "content": "",
+    "tool_calls": [
+      {
+        "id": "call_68bcb6za",
+        "function": {
+          "index": 0,
+          "name": "add",
+          "arguments": {
+            "a": 2,
+            "b": 3
+          }
+        }
+      }
+    ]
+  },
+  "final_message": {
+    "role": "assistant",
+    "content": "The result of 2 + 3 is 5."
+  },
+  "ps": {
+    "models": [
+      {
+        "name": "granite3.3:8b",
+        "model": "granite3.3:8b",
+        "size": 6403905289,
+        "digest": "fd429f23b90980ed1bef53b990894e7b0199331f6ae90c5650240a7d5b70f1f7",
+        "details": {
+          "parent_model": "",
+          "format": "gguf",
+          "family": "granite",
+          "families": [
+            "granite"
+          ],
+          "parameter_size": "8.2B",
+          "quantization_level": "Q4_K_M"
+        },
+        "expires_at": "2026-10-19T10:09:06.1733462+06:00",
+        "size_vram": 6403905289,
+        "context_length": 8192,
+        "runner": "llamacpp"
+      }
+    ]
+  },
+  "gpu": "NVIDIA GeForce RTX 3060 Ti, 8192 MiB, 7404 MiB\n"
+}

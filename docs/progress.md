@@ -1,3 +1,15 @@
+**S20 Granite 3.3 8B complete (2026-10-19): candidate fails D3.** All 20
+queries saved for Granite33-8B in primary-3060ti-20261018. No native KG calls;
+eight logged TEXT_TOOL_CALL occurrences; well-formed 0/8 and competence 0/20.
+SUCCESS 20/20 means parsing, not correctness. Median wall time 13.597764 s;
+zero ERROR/TIMEOUT/PARSE_FAIL/OOM. Synthetic tools passed, but official answers
+were ungrounded. Full GPU residency at context 8192, 41/41 layers.
+
+598 tests passed. Report-only resume and all 63 official run-file hashes,
+122 protected identities and 43 pinned hashes verified unchanged. No reruns or
+scientific/source/config changes. Report: `docs/S20_granite33_screening.md`.
+Three candidates screened; six planned candidates remain unrun. No S21 choice.
+
 # Progress — CoFail-KG
 
 **S20 Qwen3.5 9B complete (2026-10-18): candidate passes D3.** Researcher
