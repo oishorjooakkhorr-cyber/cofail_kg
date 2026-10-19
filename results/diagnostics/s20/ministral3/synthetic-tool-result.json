@@ -1,0 +1,27 @@
+{
+  "raw_response": {
+    "model": "ministral-3:8b",
+    "created_at": "2026-10-19T06:44:52.9343216Z",
+    "message": {
+      "role": "assistant",
+      "content": "The result of **2 + 3** is **5**."
+    },
+    "done": true,
+    "done_reason": "stop",
+    "total_duration": 637361100,
+    "load_duration": 27056800,
+    "prompt_eval_count": 638,
+    "prompt_eval_cached_count": 621,
+    "prompt_eval_duration": 142741000,
+    "eval_count": 14,
+    "eval_duration": 456633000
+  },
+  "message": {
+    "role": "assistant",
+    "content": "The result of **2 + 3** is **5**."
+  },
+  "tool_calls": [],
+  "prompt_eval_count": 638,
+  "eval_count": 14,
+  "latency_seconds": 0.6405438000001595
+}

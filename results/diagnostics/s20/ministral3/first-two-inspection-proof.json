@@ -1,0 +1,78 @@
+[
+  {
+    "query_id": "BH2_00461",
+    "answer_count": 21,
+    "exact_complete_returned_list_match": true,
+    "all_gold_supported": true,
+    "call_sequence": [
+      {
+        "tool": "inspect_entity",
+        "arguments": {
+          "entity_id": "14097"
+        }
+      },
+      {
+        "tool": "get_neighbors",
+        "arguments": {
+          "entity_id": "14097",
+          "neighbor_type": "gene/protein",
+          "page": 1,
+          "relation": "drug_protein"
+        }
+      },
+      {
+        "tool": "inspect_entity",
+        "arguments": {
+          "entity_id": "111"
+        }
+      },
+      {
+        "tool": "get_neighbors",
+        "arguments": {
+          "entity_id": "111",
+          "neighbor_type": "disease",
+          "page": 1,
+          "relation": "disease_protein"
+        }
+      }
+    ]
+  },
+  {
+    "query_id": "BH2_02033",
+    "answer_count": 3,
+    "exact_complete_returned_list_match": true,
+    "all_gold_supported": true,
+    "call_sequence": [
+      {
+        "tool": "inspect_entity",
+        "arguments": {
+          "entity_id": "19601"
+        }
+      },
+      {
+        "tool": "get_neighbors",
+        "arguments": {
+          "entity_id": "19601",
+          "neighbor_type": "gene/protein",
+          "page": 1,
+          "relation": "drug_protein"
+        }
+      },
+      {
+        "tool": "inspect_entity",
+        "arguments": {
+          "entity_id": "7876"
+        }
+      },
+      {
+        "tool": "get_neighbors",
+        "arguments": {
+          "entity_id": "7876",
+          "neighbor_type": "disease",
+          "page": 1,
+          "relation": "disease_protein"
+        }
+      }
+    ]
+  }
+]

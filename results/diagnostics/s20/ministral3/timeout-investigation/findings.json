@@ -1,0 +1,16 @@
+{
+  "original_read_wait_after_last_tool_seconds": 120.03365950000021,
+  "original_successful_model_turns": 6,
+  "original_successful_chat_seconds": 16.8974591000042,
+  "diagnostic_latency_seconds": 153.47103300000163,
+  "diagnostic_generation_seconds": 143.567916,
+  "diagnostic_tokens": 2576,
+  "diagnostic_tokens_per_second": 17.942727538094235,
+  "replay_only": true,
+  "official_run_files_unchanged": 84,
+  "protected_identities_unchanged": 122,
+  "pinned_source_input_hashes_unchanged": 43,
+  "screening_row_unchanged": true,
+  "root_cause_assessment": "Buffered long generation exceeds the fixed 120-second HTTP read timeout; reproduced with the original saved request payload. Historical original generated text/timing beyond cancellation is unavailable.",
+  "diagnostic_reply_valid_final_json": false
+}

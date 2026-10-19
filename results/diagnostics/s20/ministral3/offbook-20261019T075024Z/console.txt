@@ -1,0 +1,20 @@
+START one complete diagnostic episode: BH2_04425; request cap 600 s, episode cap 600 s.
+{
+  "diagnostic_only": true,
+  "record_path": "E:\\Phitron Thesis\\cofail_kg\\results\\runs\\diagnostic\\ministral3-bh204425-diagnostic-20261019T075024Z\\BH2_04425__Ministral3-8B__a1.json",
+  "record_sha256": "d5042c8239a4b42e24630186eea3db8650153dcd7bf624bac3799f2a8ac435fc",
+  "status": "SUCCESS",
+  "cause": null,
+  "wall_seconds": 237.017349,
+  "native_calls": 6,
+  "text_tool_calls": 0,
+  "attempted_calls": 6,
+  "well_formed_calls": 6,
+  "tool_calls_used": 6,
+  "answer_items": 65,
+  "supported_question_valid": 65,
+  "largest_prompt": 5925,
+  "official_run_files_unchanged": 84,
+  "total_protected_files_unchanged": 290,
+  "official_screening_unchanged": true
+}

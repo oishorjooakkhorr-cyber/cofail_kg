@@ -1,0 +1,24 @@
+{
+  "models": [
+    {
+      "name": "ministral-3:8b",
+      "model": "ministral-3:8b",
+      "size": 6591967394,
+      "digest": "1922accd5827ebe6829e536369195db25eaf664528dc66206d646ea3bb386b71",
+      "details": {
+        "parent_model": "",
+        "format": "gguf",
+        "family": "mistral3",
+        "families": [
+          "mistral3"
+        ],
+        "parameter_size": "8.9B",
+        "quantization_level": "Q4_K_M"
+      },
+      "expires_at": "2026-10-19T13:09:41.2252713+06:00",
+      "size_vram": 5549137591,
+      "context_length": 8192,
+      "runner": "llamacpp"
+    }
+  ]
+}

@@ -1,3 +1,16 @@
+# S20 - Ministral 3 8B (2026-10-19; authorized block complete)
+
+Completed all 20 frozen queries. The researcher explicitly authorized the four
+remaining queries after the saved ERROR/CONNECTION at query 16; all four completed
+SUCCESS. All prior records, including the error and four PARSE_FAILs, are unchanged.
+D3 FAIL on SUCCESS (15/20=75%). Other criteria pass: 197/197 well-formed calls,
+10/20 competent, median wall 62.850686 s, zero OOM. Synthetic native tools and
+think=false passed; automatic 16%/84% CPU/GPU placement recorded at context 8192.
+598 tests passed before inference; final report-only and all 84 run-file hashes,
+122 protected and 43 pinned identities match. No scientific/source/config change,
+rerun, 16K follow-up, S21 choice, other model, commit or push. Stop after this
+candidate. Report: docs/S20_ministral3_screening.md.
+
 # S20 - Granite 3.3 8B (2026-10-19; authorized block complete)
 
 Researcher requested S20 for the downloaded granite3.3:8b, an original planned

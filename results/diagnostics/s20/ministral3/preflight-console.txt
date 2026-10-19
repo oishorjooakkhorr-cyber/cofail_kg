@@ -1,0 +1,59 @@
+{
+  "identity": {
+    "tag": "ministral-3:8b",
+    "digest": "1922accd5827ebe6829e536369195db25eaf664528dc66206d646ea3bb386b71",
+    "quantization": "Q4_K_M",
+    "parameter_size": "8.9B",
+    "capabilities": [
+      "completion",
+      "vision",
+      "tools"
+    ]
+  },
+  "first_message": {
+    "role": "assistant",
+    "content": "",
+    "tool_calls": [
+      {
+        "id": "call_dkarwqy0",
+        "function": {
+          "index": 0,
+          "name": "add",
+          "arguments": {
+            "a": 2,
+            "b": 3
+          }
+        }
+      }
+    ]
+  },
+  "final_message": {
+    "role": "assistant",
+    "content": "The result of **2 + 3** is **5**."
+  },
+  "ps": {
+    "models": [
+      {
+        "name": "ministral-3:8b",
+        "model": "ministral-3:8b",
+        "size": 6591967394,
+        "digest": "1922accd5827ebe6829e536369195db25eaf664528dc66206d646ea3bb386b71",
+        "details": {
+          "parent_model": "",
+          "format": "gguf",
+          "family": "mistral3",
+          "families": [
+            "mistral3"
+          ],
+          "parameter_size": "8.9B",
+          "quantization_level": "Q4_K_M"
+        },
+        "expires_at": "2026-10-19T12:49:52.9350677+06:00",
+        "size_vram": 5549137591,
+        "context_length": 8192,
+        "runner": "llamacpp"
+      }
+    ]
+  },
+  "gpu": "NVIDIA GeForce RTX 3060 Ti, 8192 MiB, 7233 MiB\n"
+}

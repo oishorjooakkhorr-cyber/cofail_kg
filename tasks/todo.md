@@ -1,3 +1,16 @@
+# S20 - Ministral 3 8B (2026-10-19; complete)
+
+- [x] Record authorization; verify exact identity, tools, think=false and GPU placement.
+- [x] Full suite 598 passed; preserve prior runs and protected/pinned hashes.
+- [x] Save first 16 frozen outcomes; stop on BH2_04425 ERROR/CONNECTION.
+- [x] Read-only diagnosis, report-only stop checkpoint and 80-file integrity proof.
+- [x] Researcher authorizes only the remaining four; all four complete SUCCESS.
+- [x] Preserve all 20 outcomes; final report-only, 84-file proof and complete D3 row.
+
+D3 FAIL: SUCCESS 15/20=75%; 197/197 well-formed, competence 10/20, median wall
+62.850686 s and zero OOM pass. Four PARSE_FAILs and one CONNECTION error retained.
+Report: docs/S20_ministral3_screening.md. No S21 choice, other model, commit or push.
+
 # S20 - Granite 3.3 8B (2026-10-19)
 
 - [x] Record authorization; verify exact installed identity and native tools.

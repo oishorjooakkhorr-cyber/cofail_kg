@@ -1,3 +1,14 @@
+**S20 Ministral 3 8B complete (2026-10-19): candidate fails D3.** All 20
+frozen queries saved. The researcher authorized the final four after the query-16
+ERROR/CONNECTION checkpoint; all four completed SUCCESS and all earlier outcomes
+remain unchanged. Final: 15 SUCCESS, four PARSE_FAIL, one ERROR/CONNECTION, zero
+OOM. D3: 197/197 well-formed calls (PASS), SUCCESS 15/20=75% (FAIL), competence
+10/20=50% (PASS), median wall 62.850686 s (PASS), OOM 0 (PASS). Largest prompt
+8184; context 8192; automatic 16%/84% CPU/GPU placement documented.
+598 tests passed before inference; all 84 run files (80 stopped, 63 pre-Ministral),
+122 protected and 43 pinned identities verified. Report-only passed. No reruns,
+source/config/scientific changes or S21 work. Report: `docs/S20_ministral3_screening.md`.
+
 **S20 Granite 3.3 8B complete (2026-10-19): candidate fails D3.** All 20
 queries saved for Granite33-8B in primary-3060ti-20261018. No native KG calls;
 eight logged TEXT_TOOL_CALL occurrences; well-formed 0/8 and competence 0/20.

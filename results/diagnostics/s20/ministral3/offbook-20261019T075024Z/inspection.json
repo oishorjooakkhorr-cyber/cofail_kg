@@ -1,0 +1,121 @@
+{
+  "status": "SUCCESS",
+  "wall_seconds": 237.017349,
+  "label_a_counts": {
+    "GOLD": 65
+  },
+  "label_b_counts": {
+    "SUPPORTED": 65
+  },
+  "benchmark_precision": 1.0,
+  "benchmark_recall": 0.8666666666666667,
+  "benchmark_f1": 0.9285714285714286,
+  "responses": [
+    {
+      "latency_seconds": 9.047779100001208,
+      "prompt_tokens": 500,
+      "output_tokens": 17,
+      "done_reason": "stop",
+      "tool_calls": 1,
+      "content_characters": 0
+    },
+    {
+      "latency_seconds": 2.235139299998991,
+      "prompt_tokens": 656,
+      "output_tokens": 64,
+      "done_reason": "stop",
+      "tool_calls": 1,
+      "content_characters": 138
+    },
+    {
+      "latency_seconds": 3.4628766999994696,
+      "prompt_tokens": 822,
+      "output_tokens": 99,
+      "done_reason": "stop",
+      "tool_calls": 1,
+      "content_characters": 262
+    },
+    {
+      "latency_seconds": 2.7431669000034162,
+      "prompt_tokens": 1169,
+      "output_tokens": 74,
+      "done_reason": "stop",
+      "tool_calls": 1,
+      "content_characters": 132
+    },
+    {
+      "latency_seconds": 4.289405699997587,
+      "prompt_tokens": 3107,
+      "output_tokens": 79,
+      "done_reason": "stop",
+      "tool_calls": 1,
+      "content_characters": 197
+    },
+    {
+      "latency_seconds": 3.204804699998931,
+      "prompt_tokens": 3434,
+      "output_tokens": 70,
+      "done_reason": "stop",
+      "tool_calls": 1,
+      "content_characters": 114
+    },
+    {
+      "latency_seconds": 135.26192169999922,
+      "prompt_tokens": 4569,
+      "output_tokens": 2576,
+      "done_reason": "stop",
+      "tool_calls": 0,
+      "content_characters": 2624
+    },
+    {
+      "latency_seconds": 74.90348009999798,
+      "prompt_tokens": 5925,
+      "output_tokens": 1297,
+      "done_reason": "stop",
+      "tool_calls": 0,
+      "content_characters": 3061
+    }
+  ],
+  "parse_errors": [
+    {
+      "event": "PARSE_ERROR",
+      "message": "Expecting value: line 1 column 1 (char 0)",
+      "message_index": 14
+    }
+  ],
+  "get_neighbors_results": [
+    {
+      "arguments": {
+        "entity_id": "33542",
+        "neighbor_type": "drug",
+        "page": 1,
+        "relation": "indication"
+      },
+      "items": 2,
+      "has_more": false,
+      "total_count": 2
+    },
+    {
+      "arguments": {
+        "entity_id": "15425",
+        "neighbor_type": "effect/phenotype",
+        "page": 1,
+        "relation": "drug_effect"
+      },
+      "items": 50,
+      "has_more": true,
+      "total_count": 60
+    },
+    {
+      "arguments": {
+        "entity_id": "15180",
+        "neighbor_type": "effect/phenotype",
+        "page": 1,
+        "relation": "drug_effect"
+      },
+      "items": 28,
+      "has_more": false,
+      "total_count": 28
+    }
+  ]
+}

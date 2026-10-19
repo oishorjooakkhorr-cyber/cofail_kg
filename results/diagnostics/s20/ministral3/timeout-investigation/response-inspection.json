@@ -1,0 +1,21 @@
+{
+  "message_keys": [
+    "role",
+    "content"
+  ],
+  "prefix": "I have retrieved the side effects/phenotypes for both drugs indicated for scrub typhus:\n\n### **Doxycycline (ID: 15425) Side Effects:**\n1. Sinusitis (ID: 22250)\n2. Anxiety (ID: 22447)\n3. Inflammatory abnormality of the skin (ID: 22539)\n4. Erythema (ID: 22581)\n5. Hepatic steatosis (ID: 22734)\n6. Abdominal distention (ID: 22791)\n7. Hemolytic anemia (ID: 22928)\n8. Thrombocytopenia (ID: 22934)\n9. Fever (ID: 22952)\n10. Pain (ID: 22982)\n11. Dysphagia (ID: 22999)\n12. Headache (ID: 23002)\n13. Dyspnea (ID",
+  "suffix": ": 25569)\n20. Abnormality of the eye (ID: 25608)\n21. Pruritus (ID: 25945)\n22. Ocular pain (ID: 26096)\n23. Epiphora (ID: 26262)\n24. Periorbital edema (ID: 26939)\n25. Leukopenia (ID: 33730)\n26. Nausea (ID: 84409)\n27. Acute kidney injury (ID: 85002)\n28. Poor appetite (ID: 85849)\n\n---\nI will now compile the unique side effects/phenotypes for both drugs.",
+  "parse_error": "Expecting value: line 1 column 1 (char 0)",
+  "last_kg_call_metadata": {
+    "arguments": {
+      "entity_id": "15180",
+      "neighbor_type": "effect/phenotype",
+      "page": 1,
+      "relation": "drug_effect"
+    },
+    "elapsed_seconds": 0.011046499999793014,
+    "success": true,
+    "timestamp": "2026-10-19T07:10:33.915069+00:00",
+    "tool": "get_neighbors"
+  }
+}

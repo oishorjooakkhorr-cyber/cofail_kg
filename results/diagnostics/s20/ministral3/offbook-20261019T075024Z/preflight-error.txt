@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "E:\Phitron Thesis\cofail_kg\results\diagnostics\s20\ministral3\offbook-20261019T075024Z\run_diagnostic.py", line 37, in <module>
+    config['source_sha256'] = {**config['source_sha256'], Path(__file__).relative_to(root).as_posix():file_hash(__file__)}
+                                                                                                      ~~~~~~~~~^^^^^^^^^^
+  File "E:\Phitron Thesis\cofail_kg\src\cofail_kg\kg\prepare.py", line 31, in file_hash
+    with path.open("rb") as stream:
+         ^^^^^^^^^
+AttributeError: 'str' object has no attribute 'open'

@@ -1,0 +1,109 @@
+[
+  {
+    "query_id": "BH2_03619",
+    "status": "PARSE_FAIL",
+    "cause": null,
+    "wall_seconds": 98.195388,
+    "raw_final_output": "```json\n{\n  \"status\": \"no_answer\"\n}\n```",
+    "parse_errors": [
+      {
+        "event": "PARSE_ERROR",
+        "message": "Expecting value: line 1 column 1 (char 0)",
+        "message_index": 34
+      },
+      {
+        "event": "PARSE_ERROR",
+        "message": "Expected status and answers list",
+        "message_index": 36
+      }
+    ],
+    "error_events": [],
+    "last_done_reason": "stop",
+    "last_prompt_tokens": 8155
+  },
+  {
+    "query_id": "BH2_03881",
+    "status": "PARSE_FAIL",
+    "cause": null,
+    "wall_seconds": 79.212305,
+    "raw_final_output": "```json\n{\n  \"status\": \"answered\",\n  \"answers\": [\n    {\n      \"id\": \"14281\",\n      \"name\": \"Ketoconazole\"\n    },\n    {\n      \"id\": \"14992\",\n      \"name\": \"Itraconazole\"\n    },\n    {\n      \"id\": \"15456\",\n      \"name\": \"Amphotericin B\"\n    },\n    {\n      \"id\": \"15502\",\n      \"name\": \"Posaconazole\"\n    },",
+    "parse_errors": [
+      {
+        "event": "PARSE_ERROR",
+        "message": "Expecting value: line 1 column 1 (char 0)",
+        "message_index": 18
+      },
+      {
+        "event": "PARSE_ERROR",
+        "message": "Expecting value: line 1 column 1 (char 0)",
+        "message_index": 20
+      }
+    ],
+    "error_events": [],
+    "last_done_reason": "length",
+    "last_prompt_tokens": 8076
+  },
+  {
+    "query_id": "BH2_03991",
+    "status": "PARSE_FAIL",
+    "cause": null,
+    "wall_seconds": 121.809869,
+    "raw_final_output": "```json\n{\n  \"status\":",
+    "parse_errors": [
+      {
+        "event": "PARSE_ERROR",
+        "message": "Expecting value: line 1 column 1 (char 0)",
+        "message_index": 27
+      },
+      {
+        "event": "PARSE_ERROR",
+        "message": "Expecting value: line 1 column 1 (char 0)",
+        "message_index": 29
+      }
+    ],
+    "error_events": [],
+    "last_done_reason": "length",
+    "last_prompt_tokens": 8184
+  },
+  {
+    "query_id": "BH2_04003",
+    "status": "PARSE_FAIL",
+    "cause": null,
+    "wall_seconds": 53.33218,
+    "raw_final_output": "```json\n{\n  \"status\": \"answered\",\n  \"answers\": [\n    {\"id\": \"22262\", \"name\": \"Edema\"},\n    {\"id\": \"22323\", \"name\": \"Muscle weakness\"},\n    {\"id\": \"22380\", \"name\": \"Visual impairment\"},\n    {\"id\": \"22400\", \"name\": \"Reduced visual acuity\"},\n    {\"id\": \"2",
+    "parse_errors": [
+      {
+        "event": "PARSE_ERROR",
+        "message": "Expecting value: line 1 column 1 (char 0)",
+        "message_index": 18
+      },
+      {
+        "event": "PARSE_ERROR",
+        "message": "Expecting value: line 1 column 1 (char 0)",
+        "message_index": 20
+      }
+    ],
+    "error_events": [],
+    "last_done_reason": "length",
+    "last_prompt_tokens": 8095
+  },
+  {
+    "query_id": "BH2_04425",
+    "status": "ERROR",
+    "cause": "CONNECTION",
+    "wall_seconds": 139.070961,
+    "raw_final_output": null,
+    "parse_errors": [],
+    "error_events": [
+      {
+        "event": "ERROR",
+        "http_status": null,
+        "message": "HTTPConnectionPool(host='127.0.0.1', port=11434): Read timed out. (read timeout=120)",
+        "response_text": null,
+        "type": "OllamaError"
+      }
+    ],
+    "last_done_reason": "stop",
+    "last_prompt_tokens": 3434
+  }
+]
