@@ -1,5 +1,35 @@
 # Progress — CoFail-KG
 
+**S20 Llama candidate block complete (2026-10-18).** Researcher accepted the
+first checkpoint and authorized nineteen separate --max-new 1 host invocations
+with an exit/status/hash check between them. All nineteen exited zero; no ERROR
+or drift occurred. All 20 frozen Llama queries are saved, original record unchanged.
+Complete screening table: well-formed=0/620 FAIL; SUCCESS=20/20 PASS;
+competence=0/20 FAIL; median wall=22.132269 s PASS; OOM=0 PASS. **D3 fails**.
+All outputs are no_answer, with no successful KG call or submitted answer.
+598 tests pass; report-only resume preserves all 21 run files and 20 unique
+episodes. All 43 pinned hashes and 122 protected identities are unchanged.
+No other candidate, S21 decision/freeze, commit or push. Full report and per-query
+times: `docs/S20_llama_screening.md`. Overall S20 pool screening remains incomplete.
+This continuation supersedes the first-checkpoint stop below; its evidence is retained.
+
+**S20 first-episode checkpoint (2026-10-18), not full stage acceptance.** The
+researcher authorized the screening launcher and one Llama episode. Launcher and
+D3 aggregation verified: 598 tests passed (42 new), saved S14 evaluator replay
+unchanged, 122 protected identities unchanged. Source/config/input manifests and
+all final episode statuses are write-once and resumable. Screening settings remain
+8192 context / 4096 output / think=false; no science/config edits.
+
+Llama BH2_00461: valid no_answer JSON (SUCCESS status), 25.875 s, 0 answers,
+0/31 well-formed/attempted native calls, 30 charged calls, 0 successful KG calls,
+0 OOM, largest prompt count 2071. It guessed invalid relation names and emitted
+page="1" instead of an integer on every native call. Full GPU residency at 8192
+was sampled during inference. Report-only resume preserved episode/config bytes.
+Only **1/20** episodes is saved; D3 verdicts are undefined. Stop for researcher
+inspection before the other 19. No S21 work, commit or push. Full checkpoint:
+`docs/S20_implementation.md`; evidence: `results/diagnostics/s20/`.
+This authorization supersedes historical statements below not to start S20.
+
 **S19 accepted (2026-10-17).** The researcher accepted per-agent metrics and its
 verification evidence, authorized local commit `S19: per-agent metrics`, and
 instructed not to push or start S20. The decision log also records that technical

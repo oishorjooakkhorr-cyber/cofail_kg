@@ -1,3 +1,31 @@
+# S20 - Remaining Llama screening block (2026-10-18)
+
+- [x] Record checkpoint acceptance, strict D3 typing and per-invocation execution authorization.
+- [x] Confirm CLI flags, strict checker, original record, nineteen remaining queries and pinned hashes.
+- [x] Execute nineteen host invocations with --max-new 1; check exit/status/order/hashes between each.
+- [x] Save all twenty episodes and complete D3 row; do not rerun the original episode.
+- [x] Full suite 598 passed; report-only resume retains twenty unique episodes and all twenty-one run files.
+- [x] Verify 43 pinned hashes and 122 protected identities unchanged; report all per-query times and inspect three records.
+- [x] Stop after Llama block; no other candidate, S21 selection/freeze, commit or push.
+
+Llama D3 FAIL: well-formed 0/620, competence 0/20; other three criteria pass.
+Full report: docs/S20_llama_screening.md. The rest of the S20 pool is unrun.
+
+# S20 - Launcher and first Llama episode (2026-10-18)
+
+- [x] Researcher authorizes S20 implementation and first Llama screening episode.
+- [x] Preserve protected-file hashes and record pre-screening decisions.
+- [x] RED/GREEN screening counts, D3 boundaries, provenance and resume checks.
+- [x] Implement screening launcher and evaluator-only table using existing helpers.
+- [x] Review, 598 full-suite tests (42 new), saved S14 replay and 122 unchanged protected identities.
+- [x] Run exactly one Llama episode; inspect/evaluate it and verify report-only resume.
+- [x] Report first result and stop before further screening or S21 decisions.
+
+First result: valid no_answer JSON, 25.875 s, 30 charged calls, 0/31 well-formed
+native calls (all page values are strings), no OOM. Partial table is 1/20 with no
+D3 verdict. Full report: docs/S20_implementation.md. Remaining 19 episodes and
+all later models await the next researcher instruction; do not silently drop Llama.
+
 # S19 - Per-agent metrics (2026-10-17)
 
 - [x] Researcher authorizes S19; inspect scope/callers and save 112 protected hashes.

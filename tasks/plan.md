@@ -1,3 +1,39 @@
+# S20 - Remaining Llama screening block (authorized 2026-10-18)
+
+Researcher accepted the first checkpoint, fixed D3 argument typing without
+coercion and resolved the stop-policy conflict through nineteen separate
+--max-new 1 host invocations with exit/status/order/hash checks between calls.
+This supersedes the historical first-episode-only stop below.
+
+Completed: all 20 Llama episodes saved in frozen order; no ERROR, non-zero Python
+exit or drift. Original record unchanged. D3 fails on well-formedness (0/620) and
+competence (0/20); SUCCESS, median wall-time and OOM criteria pass. Full suite
+598 passed; report-only resume preserves all 21 run files, with 20 unique
+episodes. All 43 pinned hashes and 122 protected identities remain unchanged.
+Report: docs/S20_llama_screening.md. Stop here: no other candidate, S21 decision,
+source/config/data/test changes, commit or push.
+
+# S20 - Screening launcher and first Llama episode (authorized 2026-10-18)
+
+The researcher authorized implementation and the first official screening episode
+after reviewing Llama 3.1 8B identity, synthetic tool use, and 100% GPU residency
+at context 8192. This supersedes historical instructions below not to start S20.
+Stop after inspecting this first episode; do not run the remaining 19, select
+models at S21, commit, or push in this turn.
+
+1. Preserve existing code/tests/science/config/data/episodes with a hash baseline;
+   record the thinking, hardware, candidate-pool and sequential-run decisions.
+2. Write failing synthetic tests for D3 counting, incomplete tables, immutable
+   provenance and resume of all final statuses, then implement the S20 launcher
+   using the unchanged S14 runner and S16-S19 evaluation.
+3. Pass focused and full suites; review the change and verify protected hashes.
+4. Verify installed Llama digest and native-tools metadata. Test sandbox access
+   before creating an episode; if transport is blocked, use the host explicitly.
+5. Run exactly the first screening query with the frozen settings, save the
+   complete record, evaluate it, and demonstrate a no-inference resume/report.
+6. Record the first result, engineering decisions and next checkpoint. The
+   screening table stays explicitly incomplete until all 20 queries are saved.
+
 # S19 - Per-agent metrics (authorized 2026-10-17)
 
 Implement protocol §15 using S12 and S16-S18 unchanged. Researcher clarified

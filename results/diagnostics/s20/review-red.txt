@@ -1,0 +1,22 @@
+....FF..............................                                     [100%]
+================================== FAILURES ===================================
+_ test_malformed_native_functions_are_attempts_not_well_formed_calls[function2] _
+tests\test_screening.py:58: in test_malformed_native_functions_are_attempts_not_well_formed_calls
+    assert call_counts(rec)["attempted_calls"] == 1
+           ^^^^^^^^^^^^^^^^
+src\cofail_kg\evaluation\screening.py:25: in call_counts
+    schema = schemas.get(function.get("name")) if isinstance(function, dict) else None
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   TypeError: unhashable type: 'list'
+_ test_malformed_native_functions_are_attempts_not_well_formed_calls[function3] _
+tests\test_screening.py:58: in test_malformed_native_functions_are_attempts_not_well_formed_calls
+    assert call_counts(rec)["attempted_calls"] == 1
+           ^^^^^^^^^^^^^^^^
+src\cofail_kg\evaluation\screening.py:25: in call_counts
+    schema = schemas.get(function.get("name")) if isinstance(function, dict) else None
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   TypeError: unhashable type: 'dict'
+=========================== short test summary info ===========================
+FAILED tests/test_screening.py::test_malformed_native_functions_are_attempts_not_well_formed_calls[function2]
+FAILED tests/test_screening.py::test_malformed_native_functions_are_attempts_not_well_formed_calls[function3]
+2 failed, 34 passed in 2.06s

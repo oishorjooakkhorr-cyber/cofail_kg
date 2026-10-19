@@ -1195,3 +1195,164 @@ before the local commit. No frozen protocol/gate file is edited.
 Pre-commit verification: full suite 556 passed (26.89 s), no skips/deselections;
 all 112 protected identities remain unchanged. Evidence:
 `results/diagnostics/s19/full-suite-acceptance-20261017.txt`.
+
+## 2026-10-18 - S20 authorization and decisions before screening
+
+Researcher authorized implementing the S20 launcher and running the first official
+Llama screening episode ("go on" after the explicit implementation/first-episode
+question). This supersedes the S19 instruction not to start S20. Stop after the
+first saved episode and inspection; no remaining episodes, S21 selection, commit
+or push is authorized by this checkpoint.
+
+Experimental policy: think=false for all candidates. Use unmodified Ollama tags
+with native tools and no thinking mode or a supported disabled-thinking mode;
+exclude thinking-only weights and custom diagnostic templates. No thinking-enabled
+screening; a possible later thinking comparison is exploratory and outside gates.
+Use protocol section 9.1 screening settings exactly: temperature 0, seed 42,
+num_ctx 8192, num_predict 4096, page_size 50, budget 30, timeout 600 seconds.
+Keep the existing 120-second request timeout. No frozen science/config is edited.
+
+Researcher accepts a 7B-9B target range. Planned pool (local eligibility still to
+be checked for subsequent models): llama3.1:8b, qwen3:8b, granite3.3:8b,
+mistral:7b, command-r7b:7b, qwen2.5:7b, aya-expanse:8b, granite3.2:8b.
+ministral-3:8b remains a proposed reserve, not an automatic replacement. Only
+Llama is approved for inference at this checkpoint. Run each candidate's complete
+screening block before moving to another, with intermediate results visible;
+never drop/swap candidates based on early performance. Apply D3 selection at S21
+after the approved screening pool finishes. The first-episode checkpoint does not
+freeze models or final engineering limits.
+
+Primary run remains on RTX 3060 Ti 8 GB; screening, smoke and pilot for this run
+stay on that machine. The separately declared RTX 5060 Ti 16 GB run has independent
+screening, freeze/configs/results/run IDs and descriptive exploratory reporting;
+it cannot change a primary gate or claim. No secondary inference is authorized here.
+
+Evidence seen before this decision: prior S14 diagnostics, S19 acceptance, model
+library descriptions and today's user-run Llama synthetic greeting/native add(2,3)
+responses. User's ollama ps showed 100% GPU, context 8192, loaded size 5.8 GB.
+Installed Llama tag/digest confirmed: llama3.1:8b,
+46e0c10c039e019119339687c3c1757cc81b9da49709a3b3924863ba87ca666e,
+8.0B Q4_K_M, native tools advertised. No S20 biomedical result had been seen.
+
+Engineering plan: a new S20 launcher with correct agent identity, immutable run
+configuration/source/input hashes, bounded new-episode count and resumable
+write-once records. A saved TIMEOUT/ERROR/PARSE_FAIL is completed and is never
+automatically retried. Partial tables show observed quantities but no D3 verdict.
+Initial sandbox metadata request is socket-blocked; host metadata access succeeds
+with Ollama 0.40.4. Use host execution for the authorized episode, preserving the
+same machine/config. This avoids creating a known infrastructure-failure episode.
+
+### S20 first-episode checkpoint evidence (no new scientific decision)
+
+After the decisions above were recorded, exactly one official Llama episode ran:
+BH2_00461, primary-3060ti-20261018, agent Llama31-8B. All 598 tests passed before
+inference (42 new) and 122 protected identities were unchanged. Frozen settings,
+data, prompt, tools, existing evaluators and scientific rules are unchanged.
+
+Result: SUCCESS status for valid {"status":"no_answer","answers":[]}; 25.875167
+seconds; 30 charged calls; 0/31 well-formed/attempted native calls; zero supported
+answers, no OOM, largest prompt count 2071. It guessed unknown relation labels,
+never used inspect_entity and emitted string page="1" on all native calls.
+No argument coercion, prompt repair, automatic retry or candidate rejection.
+During-episode GPU evidence confirms full residency at context 8192. Identity
+remained stable. Report-only resume used no model inference and retained identical
+episode/config hashes; one episode remains saved. Partial table has no D3 verdict.
+
+This is the authorized first-episode checkpoint only. Researcher review and
+instructions for the remaining 19 are pending. No S21 selection, commit or push.
+Full report and engineering choices: docs/S20_implementation.md.
+
+## 2026-10-18 - S20 Llama continuation authorization; preflight stop
+
+The researcher accepted the first-episode checkpoint and authorized the remaining
+19 Llama screening queries in primary-3060ti-20261018, agent Llama31-8B, with
+--max-new 19 on the host. No other model, S21 selection/freeze, source/config/data
+change, commit or push is authorized. The saved BH2_00461 record must not be
+overwritten or rerun. Stop immediately on any failed preflight/hash/identity check
+or any saved ERROR episode, including OUT_OF_MEMORY; no fix, retry or workaround.
+
+Researcher decision, recorded before any further inference: D3 well-formedness
+requires argument types matching T1 with no coercion. page="1" is not well-formed.
+This follows D3's "arguments parse and match the schema types" definition and
+remains fixed before further results. The implemented checker was read alongside
+T1 and D3 and matches this rule: it parses a JSON argument object when needed,
+checks declared tool names, required fields and exact declared types, and never
+coerces argument values. A string page and Boolean page both fail; integer page
+passes. No evaluator edit was made.
+
+Pre-run checks: parser/source and --help confirm --run-id, --agent-id and
+--max-new (0-20). Exactly one final record exists, BH2_00461, and all 19 remaining
+IDs match the frozen manifest order. All 43 pinned source/input hashes match.
+The existing episode hash remains
+36a51907078f857fe75aeb25a0defa71c620d53405fdc138aa95e0f49cdea051;
+the per-model configuration hash remains
+8c936436896ca42ef60bbbe617df263fddb61d03e814d954189d4b128923a85b.
+
+Preflight also found a stop-policy incompatibility: run_screening saves and loads
+each episode, validates provenance, appends the record and proceeds without
+checking whether status is ERROR. The agent runner catches runtime errors and
+saves ERROR as a normal return, so --max-new 19 cannot itself guarantee the
+new immediate-stop requirement. No further inference was started. The launcher
+was not changed and no in-memory patch, supervisor, retry or workaround was used.
+Further execution is pending resolution of this incompatibility by the researcher.
+
+## 2026-10-18 - S20 continuation: researcher-approved per-invocation stop policy
+
+The researcher accepts the preflight and resolves the stop-policy incompatibility
+without changing code: invoke scripts/20_screen_models.py with --run-id
+primary-3060ti-20261018, --agent-id Llama31-8B and --max-new 1, repeatedly, at most
+19 invocations. Other required flags remain --model llama3.1:8b, --family Llama,
+--expected-digest 46e0c10c039e019119339687c3c1757cc81b9da49709a3b3924863ba87ca666e.
+Run on the existing host Ollama server. After each invocation, check the native
+process exit code and newly saved record's status before issuing another. Stop
+immediately if the exit is non-zero, any drift is reported, or the new status is
+ERROR (any cause, including OUT_OF_MEMORY). No fix, retry or workaround after a
+stop condition. TIMEOUT/PARSE_FAIL remain saved completed episodes under the
+previously frozen rules; only the specified conditions stop this continuation.
+
+The shell orchestration will also confirm exactly one new record in frozen order
+and unchanged hashes for all earlier records/config, including BH2_00461. This is
+the explicitly requested execution method, not a launcher/agent/evaluator change.
+The previous strict no-coercion D3 decision remains unchanged. No other candidate,
+S21 decision/freeze, source/config/data/test edit, commit or push is authorized.
+
+Rechecked before inference: parser/--help flags are unchanged, the exact-type D3
+check remains in place, one episode and nineteen remaining frozen queries are
+present, and all 43 pinned source/input hashes matched at accepted preflight.
+Live host metadata now confirms Ollama 0.40.4, the exact approved Llama digest,
+and no currently loaded competing model. No additional model result has yet been
+observed. Existing generation settings/timeouts and P1/T1 remain fixed.
+
+### S20 Llama block complete: evidence, no new scientific decision
+
+Executed exactly nineteen separate --max-new 1 host invocations. Each Python
+launcher exited zero and produced exactly one new SUCCESS record in frozen
+order; every new status and previous-file hash was checked before another
+invocation. No ERROR (any cause), reported drift or order/hash discrepancy occurred.
+The original BH2_00461 episode was not rerun or changed. No other candidate ran.
+
+All 20 Llama episodes are now saved; complete=true and d3_pass=false. D3 values:
+well-formed/attempted=0/620 (0%, FAIL); SUCCESS=20/20 (100%, PASS);
+competence=0/20 (0%, FAIL); median wall=22.132269 seconds (n=20, PASS against
+300 s); ERROR with OUT_OF_MEMORY=0 among 20 episodes (PASS). There are no TIMEOUT,
+ERROR or PARSE_FAIL episodes. All final outputs are no_answer with empty answers;
+no episode has a successful KG call or a submitted answer. All 620 native calls
+are get_neighbors with string page values; zero TEXT_TOOL_CALL events. Budget-hit
+share=20/20; median charged calls=30; largest prompt count=2165.
+
+Full unchanged suite: 598 passed in 42.45 s, no skips/deselections, with base temp
+directory inside ignored .venv/. Report-only resume (--max-new 0) exited zero,
+left exactly 20 unique episodes and retained identical hashes for all 21 run
+files (20 records plus configuration). All 43 pinned source/input hashes and
+122 protected identities remain unchanged. Full per-query report and manual
+inspection suggestions: docs/S20_llama_screening.md. Evidence is under
+results/diagnostics/s20/llama-*; screening_table.csv was regenerated.
+
+The shell's optional live wall-time display had a non-terminating date-formatting
+error after PowerShell converted JSON timestamps to date objects. This did not
+affect Python exits, statuses, stop checks, raw records or settings. Final wall
+times were derived from the unchanged raw ISO timestamps using the evaluator's
+same datetime.fromisoformat calculation. Original invocation journal retained.
+
+No code, evaluator, test, config, prompt, schema, data or frozen rule changed;
+no S21 selection/freeze, commit or push. Stop after this candidate report.

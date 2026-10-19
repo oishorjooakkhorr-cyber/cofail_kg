@@ -1,0 +1,39 @@
+Starting BH2_06427 / llama3.1:8b (new episode 1)
+{
+  "finished_at": "2026-10-18T08:57:14.128815+00:00",
+  "episodes_saved_for_model": 20,
+  "screening_rows": [
+    {
+      "run_id": "primary-3060ti-20261018",
+      "agent_id": "Llama31-8B",
+      "tag": "llama3.1:8b",
+      "digest": "46e0c10c039e019119339687c3c1757cc81b9da49709a3b3924863ba87ca666e",
+      "quantization": "Q4_K_M",
+      "parameter_size": "8.0B",
+      "family": "Llama",
+      "episodes_completed": 20,
+      "episodes_expected": 20,
+      "complete": true,
+      "native_calls": 620,
+      "text_tool_calls": 0,
+      "attempted_calls": 620,
+      "well_formed_calls": 0,
+      "well_formed_rate": 0.0,
+      "success_episodes": 20,
+      "success_rate": 1.0,
+      "competent_episodes": 0,
+      "competence": 0.0,
+      "median_wall_seconds": 22.132269,
+      "out_of_memory_episodes": 0,
+      "largest_prompt_eval_count": 2165,
+      "median_tool_calls": 30.0,
+      "budget_hit_share": 1.0,
+      "pass_well_formed": false,
+      "pass_success": true,
+      "pass_competence": false,
+      "pass_time": true,
+      "pass_oom": true,
+      "d3_pass": false
+    }
+  ]
+}

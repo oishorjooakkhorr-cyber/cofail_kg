@@ -1,0 +1,25 @@
+{
+  "query_id": "BH2_00461",
+  "record_sha256": "36a51907078f857fe75aeb25a0defa71c620d53405fdc138aa95e0f49cdea051",
+  "native_tool_names": {
+    "get_neighbors": 31
+  },
+  "page_argument_types": {
+    "str": 31
+  },
+  "relation_arguments": {
+    "associated_with": 2,
+    "target_of": 5,
+    "treats": 5,
+    "interacts_with": 5,
+    "mechanism_of_action": 5,
+    "acts_on": 5,
+    "acts_against": 4
+  },
+  "successful_kg_calls": 0,
+  "tool_error_replies": 30,
+  "budget_exhausted_replies": 1,
+  "raw_final_output": "{\"status\": \"no_answer\", \"answers\": []}",
+  "thinking_fields": 0,
+  "recorded_think": false
+}

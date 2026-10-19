@@ -1,0 +1,17 @@
+.........................................F                               [100%]
+================================== FAILURES ===================================
+__ test_mismatched_saved_record_stops_before_any_new_inference[query_id-Q9] ___
+tests\test_screening.py:336: in test_mismatched_saved_record_stops_before_any_new_inference
+    module.run_screening(agent, config, queries, max_new=1, check_identity=Mock())
+scripts\20_screen_models.py:103: in run_screening
+    rec = load_episode_record(target)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src\cofail_kg\agents\trace.py:446: in load_episode_record
+    with open(path, encoding="utf-8") as handle:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   FileNotFoundError: [Errno 2] No such file or directory: 'E:\\Phitron Thesis\\cofail_kg\\.venv\\s20-resume-red-tmp\\test_mismatched_saved_record_s3\\results\\runs\\screening\\s20-fixture\\Q0__Llama__a1.json'
+---------------------------- Captured stdout call -----------------------------
+Starting Q0 / llama3.1:8b (new episode 1)
+=========================== short test summary info ===========================
+FAILED tests/test_screening.py::test_mismatched_saved_record_stops_before_any_new_inference[query_id-Q9]
+1 failed, 41 passed in 2.79s
