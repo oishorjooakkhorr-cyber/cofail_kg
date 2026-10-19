@@ -1,3 +1,14 @@
+**S20 OLMo 3 7B Instruct complete (2026-10-19): candidate fails D3.** All 20
+frozen queries saved in primary-3060ti-20261018. D3: 60/62 well-formed calls
+(96.7742%, PASS), SUCCESS 20/20 (PASS), competence 0/20 (FAIL), median wall
+8.951106 s (PASS), OOM 0 (PASS). Eighteen no_answer outputs; two answered
+outputs contain 12 OFF_QUESTION/PATH_INVALID items. No supported answers.
+598 tests passed; report-only and all 105 run-file hashes (84 prior), 122
+protected and 43 pinned identities verified. Context 8192, partial CPU/GPU
+offload recorded without tuning, largest prompt 8137, no nonempty thinking.
+No errors, reruns, source/config/scientific changes, S21 work, commit or push.
+Report: `docs/S20_olmo3_screening.md`.
+
 **S20 Ministral 3 8B complete (2026-10-19): candidate fails D3.** All 20
 frozen queries saved. The researcher authorized the final four after the query-16
 ERROR/CONNECTION checkpoint; all four completed SUCCESS and all earlier outcomes

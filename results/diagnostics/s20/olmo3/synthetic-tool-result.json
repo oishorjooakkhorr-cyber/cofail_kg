@@ -1,0 +1,27 @@
+{
+  "raw_response": {
+    "model": "olmo-3:7b-instruct",
+    "created_at": "2026-10-19T11:56:19.6911565Z",
+    "message": {
+      "role": "assistant",
+      "content": "The result of 2 + 3 is 5."
+    },
+    "done": true,
+    "done_reason": "stop",
+    "total_duration": 5666455600,
+    "load_duration": 8612300,
+    "prompt_eval_count": 179,
+    "prompt_eval_cached_count": 152,
+    "prompt_eval_duration": 5227891000,
+    "eval_count": 13,
+    "eval_duration": 425635000
+  },
+  "message": {
+    "role": "assistant",
+    "content": "The result of 2 + 3 is 5."
+  },
+  "tool_calls": [],
+  "prompt_eval_count": 179,
+  "eval_count": 13,
+  "latency_seconds": 5.668753800004197
+}

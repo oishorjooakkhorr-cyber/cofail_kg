@@ -1,3 +1,15 @@
+# S20 - OLMo 3 7B Instruct (2026-10-19; complete)
+
+- [x] Record authorization; pin exact Instruct tag/digest and verify tools.
+- [x] Synthetic native add(2,3), disabled thinking and GPU placement recorded.
+- [x] Full suite 598 passed; 84 prior run files, 122 protected, 43 pinned match.
+- [x] Save all 20 outcomes with one invocation each and stop/integrity checks.
+- [x] Verify report-only resume, final hashes and complete D3 row.
+- [x] Inspect saved traces and report results without S21 selection.
+
+D3 FAIL on competence (0/20); other criteria pass. Report: docs/S20_olmo3_screening.md.
+No decision was needed during this block; no S21 selection, commit or push.
+
 # S20 - Ministral 3 8B (2026-10-19; complete)
 
 - [x] Record authorization; verify exact identity, tools, think=false and GPU placement.

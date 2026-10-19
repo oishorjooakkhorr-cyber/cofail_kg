@@ -1570,3 +1570,69 @@ Exactly one complete BH2_04425 diagnostic episode saved under E:\Phitron Thesis\
 ## 2026-10-19 - Ministral checkpoint commit authorized
 
 Researcher requested "okay commit and take me what should be the next model". Authorizes a local commit of completed Ministral official screening, timeout investigation and the separately labeled one-query diagnostic. Preserve recorded episode/config provenance and all write-once results. Pre-commit suite: 598 passed in 29.14 s; six diagnostic helpers parse; evidence/metric credential-pattern scan found no matches. All 84 official run-file hashes, 122 protected identities and 43 pinned source/input hashes match. Stage shared documentation snapshots for Ministral only, preserving earlier uncommitted shortlist/cleanup changes in the working files. Raw results/runs records remain ignored under the existing policy. No push or next-model inference/download requested.
+
+## 2026-10-19 - OLMo 3 7B Instruct S20 screening authorized
+
+Researcher supplied the successful pull of olmo-3:7b-instruct and requested
+"run s20 on this model, and lemme know if u need any decisions". This authorizes
+the full unchanged 20-query block on the primary RTX 3060 Ti host, subject to
+existing preflight and between-invocation stop checks. Agent OLMo3-7B, family
+OLMo, experiment primary-3060ti-20261018. Exact installed tag: 7.3B Q4_K_M,
+digest ea72df8c85d75c6783ab0d00278803c53a634fc9d0fe38d3fd4ab6f35adbdbb2.
+Ollama 0.40.4 advertises completion and tools. No default/Think tag substitution.
+
+Retain frozen P1/T1, context 8192, output 4096, temperature 0, seed 42, budget
+30, page size 50, episode timeout 600 s, request timeout 120 s and think=false.
+Reuse the prior candidate's operational helpers with identity/path substitutions.
+Check synthetic native tools, placement, full suite, 122 protected identities,
+43 pinned source/input hashes and all 84 prior run files before inference.
+Run separate --max-new 1 invocations; stop on ERROR, nonzero exit, identity/hash
+drift or order discrepancy. Every saved final status remains completed.
+No scientific/source/prompt/template/config changes, reruns, S21 selection,
+other candidate, commit or push. Pool membership/round decisions remain for
+the researcher; this single-candidate measurement does not settle them.
+
+OLMo preflight passed: 598 unchanged tests in 35.69 seconds, no skips or
+deselections; synthetic native add(2,3) used exact integer arguments and
+answered 5, with no nonempty thinking fields. Identity unchanged. Context 8192,
+size=6511625501 and size_vram=5298192384 bytes: automatic partial CPU/GPU offload,
+recorded under the same unchanged placement procedure used for Ministral. No
+placement tuning or new eligibility threshold. All 84 prior official files,
+122 protected identities and 43 pinned source/input hashes match. Proceeding
+with the authorized OLMo block, one frozen query per invocation.
+
+
+### OLMo 3 Instruct full block complete: D3 FAIL on competence
+
+All 20 separate --max-new 1 invocations exited zero, saved exactly one SUCCESS
+record in frozen order, and passed between-invocation checks. No ERROR, TIMEOUT,
+PARSE_FAIL, OOM, drift or rerun. D3: 60/62 well-formed (96.7742%), SUCCESS 20/20,
+competence 0/20 (FAIL), median wall 8.951106 s, OOM 0. All 62 attempts native;
+61 charged and 51 successful KG calls. Two missing required page arguments in
+BH2_03762 fail strict well-formedness. Budget-hit share 5%; largest prompt 8137.
+18 no_answer outputs; two answered outputs submit 12 items, all OFF_QUESTION
+and PATH_INVALID. No supported answers or nonempty thinking fields.
+
+Report-only --max-new 0 exited zero without inference and preserved all 105
+run files, including all 84 prior files. All 122 protected and 43 pinned hashes
+match. All 20 placement samples retain context 8192 and the synthetic partial
+CPU/GPU placement sizes. Full suite before inference: 598 passed in 35.69 s.
+Report: docs/S20_olmo3_screening.md; diagnostics: results/diagnostics/s20/olmo3/.
+No scientific/source/config change, other candidate, 16K follow-up, S21 choice,
+commit or push. No new researcher decision was needed for this candidate block.
+
+
+## 2026-10-19 - OLMo result commit and model removal authorized
+
+Researcher: "commit it and delete the model from the computer to free up space".
+Authorizes a local commit of the completed OLMo S20 report, metrics, diagnostics
+and status updates, followed by native Ollama removal of exactly
+olmo-3:7b-instruct. Preserve all episode/configuration bytes and their recorded
+provenance; downloaded weights are separate from historical results. No push.
+
+Pre-commit review confirms the unchanged 598-test suite passed before inference,
+all 105 official run-file hashes, 122 protected identities and 43 pinned sources
+match, and earlier models' table rows remain unchanged. Reuse the established
+index-only snapshots for shared documents so pending shortlist/earlier cleanup
+changes stay uncommitted and working files stay intact. No new inference or
+production-code change is required.

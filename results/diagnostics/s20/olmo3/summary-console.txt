@@ -1,0 +1,45 @@
+{
+  "screening_row": {
+    "run_id": "primary-3060ti-20261018",
+    "agent_id": "OLMo3-7B",
+    "tag": "olmo-3:7b-instruct",
+    "digest": "ea72df8c85d75c6783ab0d00278803c53a634fc9d0fe38d3fd4ab6f35adbdbb2",
+    "quantization": "Q4_K_M",
+    "parameter_size": "7.3B",
+    "family": "OLMo",
+    "episodes_completed": "20",
+    "episodes_expected": "20",
+    "complete": "True",
+    "native_calls": "62",
+    "text_tool_calls": "0",
+    "attempted_calls": "62",
+    "well_formed_calls": "60",
+    "well_formed_rate": "0.967741935483871",
+    "success_episodes": "20",
+    "success_rate": "1.0",
+    "competent_episodes": "0",
+    "competence": "0.0",
+    "median_wall_seconds": "8.951106",
+    "out_of_memory_episodes": "0",
+    "largest_prompt_eval_count": "8137",
+    "median_tool_calls": "0.0",
+    "budget_hit_share": "0.05",
+    "pass_well_formed": "True",
+    "pass_success": "True",
+    "pass_competence": "False",
+    "pass_time": "True",
+    "pass_oom": "True",
+    "d3_pass": "False"
+  },
+  "status_counts": {
+    "SUCCESS": 20
+  },
+  "total_answers": 12,
+  "label_a_counts": {
+    "OFF_QUESTION": 12
+  },
+  "label_b_counts": {
+    "PATH_INVALID": 12
+  },
+  "thinking_messages": 0
+}

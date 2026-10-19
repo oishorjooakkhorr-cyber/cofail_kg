@@ -1,0 +1,58 @@
+{
+  "identity": {
+    "tag": "olmo-3:7b-instruct",
+    "digest": "ea72df8c85d75c6783ab0d00278803c53a634fc9d0fe38d3fd4ab6f35adbdbb2",
+    "quantization": "Q4_K_M",
+    "parameter_size": "7.3B",
+    "capabilities": [
+      "completion",
+      "tools"
+    ]
+  },
+  "first_message": {
+    "role": "assistant",
+    "content": "",
+    "tool_calls": [
+      {
+        "id": "call_z6t4e87d",
+        "function": {
+          "index": 0,
+          "name": "add",
+          "arguments": {
+            "a": 2,
+            "b": 3
+          }
+        }
+      }
+    ]
+  },
+  "final_message": {
+    "role": "assistant",
+    "content": "The result of 2 + 3 is 5."
+  },
+  "ps": {
+    "models": [
+      {
+        "name": "olmo-3:7b-instruct",
+        "model": "olmo-3:7b-instruct",
+        "size": 6511625501,
+        "digest": "ea72df8c85d75c6783ab0d00278803c53a634fc9d0fe38d3fd4ab6f35adbdbb2",
+        "details": {
+          "parent_model": "",
+          "format": "gguf",
+          "family": "olmo3",
+          "families": [
+            "olmo3"
+          ],
+          "parameter_size": "7.3B",
+          "quantization_level": "Q4_K_M"
+        },
+        "expires_at": "2026-10-19T18:01:19.6911565+06:00",
+        "size_vram": 5298192384,
+        "context_length": 8192,
+        "runner": "llamacpp"
+      }
+    ]
+  },
+  "gpu": "NVIDIA GeForce RTX 3060 Ti, 8192 MiB, 7145 MiB\n"
+}

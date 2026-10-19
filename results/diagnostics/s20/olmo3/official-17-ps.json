@@ -1,0 +1,24 @@
+{
+  "models": [
+    {
+      "name": "olmo-3:7b-instruct",
+      "model": "olmo-3:7b-instruct",
+      "size": 6511625501,
+      "digest": "ea72df8c85d75c6783ab0d00278803c53a634fc9d0fe38d3fd4ab6f35adbdbb2",
+      "details": {
+        "parent_model": "",
+        "format": "gguf",
+        "family": "olmo3",
+        "families": [
+          "olmo3"
+        ],
+        "parameter_size": "7.3B",
+        "quantization_level": "Q4_K_M"
+      },
+      "expires_at": "2026-10-19T18:12:30.054789+06:00",
+      "size_vram": 5298192384,
+      "context_length": 8192,
+      "runner": "llamacpp"
+    }
+  ]
+}
