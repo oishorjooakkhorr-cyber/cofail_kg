@@ -1,0 +1,49 @@
+{
+  "context": 16384,
+  "researcher_authorized_reassessment": true,
+  "screening_row": {
+    "run_id": "context16k-3060ti-20261020",
+    "agent_id": "Ministral3-8B",
+    "tag": "ministral-3:8b",
+    "digest": "1922accd5827ebe6829e536369195db25eaf664528dc66206d646ea3bb386b71",
+    "quantization": "Q4_K_M",
+    "parameter_size": "8.9B",
+    "family": "Mistral",
+    "episodes_completed": 20,
+    "episodes_expected": 20,
+    "complete": true,
+    "native_calls": 167,
+    "text_tool_calls": 0,
+    "attempted_calls": 167,
+    "well_formed_calls": 167,
+    "well_formed_rate": 1.0,
+    "success_episodes": 12,
+    "success_rate": 0.6,
+    "competent_episodes": 12,
+    "competence": 0.6,
+    "median_wall_seconds": 168.0803425,
+    "out_of_memory_episodes": 0,
+    "largest_prompt_eval_count": 15009,
+    "median_tool_calls": 7.0,
+    "budget_hit_share": 0.0,
+    "pass_well_formed": true,
+    "pass_success": false,
+    "pass_competence": true,
+    "pass_time": true,
+    "pass_oom": true,
+    "d3_pass": false
+  },
+  "accepted_at_16k": false,
+  "status_counts": {
+    "SUCCESS": 12,
+    "ERROR": 8
+  },
+  "label_a_counts": {
+    "GOLD": 211,
+    "ALT_VALID": 17
+  },
+  "label_b_counts": {
+    "SUPPORTED": 228
+  }
+}
+COMPLETE Ministral3-8B: 20/20; D3 FAIL at 16K.

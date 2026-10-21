@@ -1,0 +1,110 @@
+{
+  "agent_id": "Ministral3-8B",
+  "answer_count": null,
+  "answers": [],
+  "attempt": 1,
+  "benchmark_f1": null,
+  "benchmark_precision": null,
+  "benchmark_recall": null,
+  "bridge_conditional_recall": {
+    "14203": null,
+    "14685": null,
+    "15435": null
+  },
+  "bridge_rank": {
+    "14203": 1,
+    "14685": 2,
+    "15435": 3
+  },
+  "bridge_recall_counts": {
+    "14203": {
+      "correct": null,
+      "total": 70
+    },
+    "14685": {
+      "correct": null,
+      "total": 116
+    },
+    "15435": {
+      "correct": null,
+      "total": 49
+    }
+  },
+  "bridges_explored": [
+    "14203",
+    "14685",
+    "15435"
+  ],
+  "budget_exhausted": false,
+  "cause": "CONNECTION",
+  "construction": "UNION",
+  "denominators": {
+    "benchmark_f1": null,
+    "benchmark_precision": null,
+    "benchmark_recall": 143,
+    "off_question_rate": null,
+    "question_valid_precision": null,
+    "ungrounded_rate": null,
+    "unresolved_rate": null
+  },
+  "early_stop": null,
+  "episode_status": "ERROR",
+  "found_r1": true,
+  "hop1_status": "H1_CLEAN",
+  "label_a_counts": null,
+  "label_b_counts": null,
+  "node_statistics": {
+    "14203": {
+      "degree": 1597,
+      "degree_percentile": 96.41824808344853
+    },
+    "14685": {
+      "degree": 1457,
+      "degree_percentile": 94.74676385572451
+    },
+    "15435": {
+      "degree": 1264,
+      "degree_percentile": 91.227849692095
+    },
+    "37038": {
+      "degree": 120,
+      "degree_percentile": 97.70491803278688
+    }
+  },
+  "numerators": {
+    "benchmark_f1": null,
+    "benchmark_precision": null,
+    "benchmark_recall": null,
+    "off_question_rate": null,
+    "question_valid_precision": null,
+    "ungrounded_rate": null,
+    "unresolved_rate": null
+  },
+  "off_question_rate": null,
+  "pages_requested": 6,
+  "primary_reason_counts": null,
+  "query_id": "BH2_03953",
+  "question_valid_precision": null,
+  "reason_counts": null,
+  "resolved_count": null,
+  "run_id": "context16k-3060ti-20261020",
+  "text_tool_call_count": 0,
+  "tool_calls_used": 10,
+  "undefined_counts": {
+    "benchmark_f1": 1,
+    "benchmark_precision": 1,
+    "benchmark_recall": 1,
+    "bridge_conditional_recall": 3,
+    "bridge_rank": 0,
+    "degree": 0,
+    "degree_percentile": 0,
+    "list_size": 0,
+    "off_question_rate": 1,
+    "primary_path_max_list_size": 0,
+    "question_valid_precision": 1,
+    "ungrounded_rate": 1,
+    "unresolved_rate": 1
+  },
+  "ungrounded_rate": null,
+  "unresolved_rate": null
+}

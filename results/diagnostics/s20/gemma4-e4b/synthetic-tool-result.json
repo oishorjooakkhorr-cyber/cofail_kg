@@ -1,0 +1,27 @@
+{
+  "raw_response": {
+    "model": "gemma4:e4b-it-q4_K_M",
+    "created_at": "2026-10-20T07:07:48.7843466Z",
+    "message": {
+      "role": "assistant",
+      "content": "The result is 5."
+    },
+    "done": true,
+    "done_reason": "stop",
+    "total_duration": 146276900,
+    "load_duration": 14081400,
+    "prompt_eval_count": 108,
+    "prompt_eval_cached_count": 77,
+    "prompt_eval_duration": 85681000,
+    "eval_count": 7,
+    "eval_duration": 43640000
+  },
+  "message": {
+    "role": "assistant",
+    "content": "The result is 5."
+  },
+  "tool_calls": [],
+  "prompt_eval_count": 108,
+  "eval_count": 7,
+  "latency_seconds": 0.17035630000100355
+}

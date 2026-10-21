@@ -1,3 +1,94 @@
+# Current S20 checklist — 2026-10-21
+
+- [x] Run the researcher-requested full Command R7B original 8K S20 block:
+  all twenty outcomes saved, nineteen SUCCESS, one PARSE_FAIL; D3 FAIL due to
+  undefined call validity (zero attempts) and zero competence.
+- [x] Verify 42 screening tests, offline report, 512 baseline file hashes,
+  21 new run hashes and all eight prior screening rows.
+  [Command R7B report](../docs/S20_command_r7b_screening.md).
+
+- [x] Stop Granite 4.1 16K on explicit researcher instruction during query 16;
+  unload model, preserve six SUCCESS and nine ERROR/CONNECTION final records.
+- [x] Document stopped 15/20 block with no final D3 verdict; one interrupted
+  and four unstarted queries have no final record. Original 8K PASS unchanged.
+  [Stopped report](../docs/S20_granite41_16k_stopped.md). No automatic resume.
+
+- [x] Preserve all eight completed original 8K candidate blocks and failed outcomes.
+- [x] Record Granite41-8B PASS: 20/20 SUCCESS, 14/20 competent, 217/217 valid
+  calls, median 61.3250475 s, zero OOM; 42 screening tests and integrity checks passed.
+- [x] Retain separate complete 16K results: Gemma PASS, Qwen PASS, Ministral FAIL.
+- [x] Explicitly retain the other current failures: Llama31-8B, Granite33-8B,
+  Granite42-8B and OLMo3-7B, with failed criteria documented.
+- [x] Reconcile [complete screening status](../docs/S20_screening_status.md),
+  progress, decision log, plan and historical shortlist status.
+- [ ] Researcher settles any further candidate/round accounting under D3;
+  three candidates currently pass, a fourth passing model is still needed.
+- [ ] Select/freeze the final panel at S21 only after its requirements are met.
+
+The older checklists below are dated history. Earlier deferred, unrun and
+untested statements are superseded by the current status above.
+
+# Full 16K D3 reassessment (2026-10-20; complete)
+
+- [x] Record explicit researcher authorization and scoped context amendment.
+- [x] Verify all three exact installed digests, original integrity and full 20-query manifests.
+- [x] Pass 42 screening tests and manifest/syntax assertions.
+- [x] Save all 20 Gemma 16K outcomes; D3 PASS on all five criteria.
+- [x] Save all 20 Qwen 16K outcomes; D3 PASS on all five criteria.
+- [x] Save all 20 Ministral 16K outcomes; D3 FAIL only on SUCCESS (eight timeouts).
+- [x] Verify all three offline reports, original/new hashes and paired results.
+- [x] Document current 16K acceptance: Gemma and Qwen PASS, Ministral FAIL.
+
+# S20 - Context-window parse-failure audit (2026-10-20; complete)
+
+- [x] Inventory all 140 official episodes across seven completed candidates.
+- [x] Replay all 20 saved parser errors and inspect context/output counts and termination.
+- [x] Identify Qwen two direct cases; Ministral three direct cases and one mixed case.
+- [x] Keep four request read timeouts distinct from parse/context truncation.
+- [x] Link Gemma's existing four-query 16K recovery without changing official results.
+- [x] Verify all original/diagnostic/source hashes; document evidence and limits.
+
+No new inference. Qwen/Ministral 16K recovery remains untested.
+Report: docs/S20_context_window_audit.md.
+
+# Gemma 4 E4B - 16K context diagnostic (2026-10-20; complete)
+
+- [x] Record researcher authorization for the four-failure 16K comparison.
+- [x] Isolate diagnostic outputs; retain all other scientific settings.
+- [x] Run all four continuously; verify actual 16384 context and pinned identity.
+- [x] Score with unchanged evaluator; distinguish parsing from supported answers.
+- [x] Verify all official run/metric/table/source/protected hashes unchanged.
+- [x] Save paired results and report; retain official 8K D3 verdict.
+
+All four parse failures recovered; three of four competent. No full 16K S20 block
+or S21 freeze. Report: docs/S20_gemma4_16k_diagnostic.md.
+
+# S20 - Gemma 4 E4B (2026-10-20; complete)
+
+- [x] Record explicit authorization for all 20 queries uninterrupted.
+- [x] Pin exact installed identity; pass synthetic native tools and disabled thinking.
+- [x] Pass full suite: 598 tests; preserve prior run/metric/source hashes.
+- [x] Run all twenty frozen queries in one invocation; checkpoint every final status.
+- [x] Retain four PARSE_FAIL outcomes without repair, rerun or replacement.
+- [x] Complete D3 evaluation, offline report-only and full integrity validation.
+- [x] Inspect saved traces; report results without S21 selection.
+
+D3 FAIL only on SUCCESS 80%; competence 55%, well-formed 100%, median 11.9732305 s,
+and zero OOM pass. Report: docs/S20_gemma4_screening.md.
+
+# S20 - Granite 4.2 8B (2026-10-19; complete)
+
+- [x] Pin exact identity; native tools, think=false and placement preflight.
+- [x] Full suite 598 passed; preserve prior files and frozen identities.
+- [x] Preserve all three ERROR/CONNECTION checkpoints and obtain continuation decisions.
+- [x] Researcher authorizes final four with narrow timeout exception; all four SUCCESS.
+- [x] Save all twenty outcomes and complete D3 row; no retries or overwrites.
+- [x] Verify offline report-only, all 126 run files, protected/pinned hashes and prior metrics/rows.
+- [x] Inspect traces and write the final report without S21 selection.
+
+D3 FAIL: SUCCESS 85% and competence 30%; well-formed 100%, median 120.247903 s,
+and zero OOM pass. Three timeout outcomes retained. Report: docs/S20_granite42_screening.md.
+
 # S20 - OLMo 3 7B Instruct (2026-10-19; complete)
 
 - [x] Record authorization; pin exact Instruct tag/digest and verify tools.
@@ -22,6 +113,15 @@ No decision was needed during this block; no S21 selection, commit or push.
 D3 FAIL: SUCCESS 15/20=75%; 197/197 well-formed, competence 10/20, median wall
 62.850686 s and zero OOM pass. Four PARSE_FAILs and one CONNECTION error retained.
 Report: docs/S20_ministral3_screening.md. No S21 choice, other model, commit or push.
+
+# S20 - Review updated models (2026-10-19)
+
+- [x] Record recency direction and source-check a similar-size shortlist.
+- [x] Preserve frozen identities, all completed results and original-pool history.
+- [ ] Researcher settles exact membership, older-candidate schedule and D3 round accounting.
+- [ ] At a later requested run, verify each exact tag's native tools, disabled thinking and GPU fit.
+
+Proposal: docs/S20_updated_model_pool_proposal.md. No new inference or downloads.
 
 # S20 - Granite 3.3 8B (2026-10-19)
 

@@ -1,0 +1,44 @@
+[
+  {
+    "status": "SUCCESS",
+    "cause": null,
+    "message": "",
+    "expected_continue": true,
+    "passed": true
+  },
+  {
+    "status": "ERROR",
+    "cause": "CONNECTION",
+    "message": "Read timed out. (read timeout=120)",
+    "expected_continue": true,
+    "passed": true
+  },
+  {
+    "status": "ERROR",
+    "cause": "CONNECTION",
+    "message": "Connection refused",
+    "expected_continue": false,
+    "passed": true
+  },
+  {
+    "status": "ERROR",
+    "cause": "OUT_OF_MEMORY",
+    "message": "out of memory",
+    "expected_continue": false,
+    "passed": true
+  },
+  {
+    "status": "ERROR",
+    "cause": "RUNTIME",
+    "message": "Read timed out",
+    "expected_continue": false,
+    "passed": true
+  },
+  {
+    "status": "PARSE_FAIL",
+    "cause": null,
+    "message": "",
+    "expected_continue": true,
+    "passed": true
+  }
+]

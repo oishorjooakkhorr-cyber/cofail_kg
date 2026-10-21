@@ -1,0 +1,24 @@
+{
+  "authorized": "User requests Granite 4.1 at 16K and documentation update; previous continue-after-query-error instruction retained.",
+  "changed_config_keys": [
+    "num_ctx",
+    "run_id",
+    "runs_root"
+  ],
+  "continue_on_saved_failures": true,
+  "driver_changes": "Candidate choice, explicit UTF-8 reads, allow an empty loaded-model list after a failed episode; all observed matching-model contexts must be 16384.",
+  "prior_evidence_files": 488,
+  "queries": 20,
+  "retry_saved_final_statuses": false,
+  "settings": {
+    "budget": 30,
+    "num_ctx": 16384,
+    "num_predict": 4096,
+    "page_size": 50,
+    "request_timeout_seconds": 120,
+    "seed": 42,
+    "temperature": 0,
+    "timeout_seconds": 600
+  },
+  "think": false
+}

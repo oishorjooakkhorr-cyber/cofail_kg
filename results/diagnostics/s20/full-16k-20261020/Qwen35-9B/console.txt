@@ -1,0 +1,89 @@
+Starting BH2_00461 / qwen3.5:9b (new episode 1)
+SAVED Qwen35-9B 1/20 BH2_00461 SUCCESS None
+Starting BH2_02033 / qwen3.5:9b (new episode 2)
+SAVED Qwen35-9B 2/20 BH2_02033 SUCCESS None
+Starting BH2_03434 / qwen3.5:9b (new episode 3)
+SAVED Qwen35-9B 3/20 BH2_03434 SUCCESS None
+Starting BH2_03619 / qwen3.5:9b (new episode 4)
+SAVED Qwen35-9B 4/20 BH2_03619 SUCCESS None
+Starting BH2_03750 / qwen3.5:9b (new episode 5)
+SAVED Qwen35-9B 5/20 BH2_03750 SUCCESS None
+Starting BH2_03760 / qwen3.5:9b (new episode 6)
+SAVED Qwen35-9B 6/20 BH2_03760 SUCCESS None
+Starting BH2_03762 / qwen3.5:9b (new episode 7)
+SAVED Qwen35-9B 7/20 BH2_03762 SUCCESS None
+Starting BH2_03850 / qwen3.5:9b (new episode 8)
+SAVED Qwen35-9B 8/20 BH2_03850 SUCCESS None
+Starting BH2_03856 / qwen3.5:9b (new episode 9)
+SAVED Qwen35-9B 9/20 BH2_03856 SUCCESS None
+Starting BH2_03879 / qwen3.5:9b (new episode 10)
+SAVED Qwen35-9B 10/20 BH2_03879 SUCCESS None
+Starting BH2_03881 / qwen3.5:9b (new episode 11)
+SAVED Qwen35-9B 11/20 BH2_03881 SUCCESS None
+Starting BH2_03953 / qwen3.5:9b (new episode 12)
+SAVED Qwen35-9B 12/20 BH2_03953 SUCCESS None
+Starting BH2_03991 / qwen3.5:9b (new episode 13)
+SAVED Qwen35-9B 13/20 BH2_03991 PARSE_FAIL None
+Starting BH2_04003 / qwen3.5:9b (new episode 14)
+SAVED Qwen35-9B 14/20 BH2_04003 SUCCESS None
+Starting BH2_04007 / qwen3.5:9b (new episode 15)
+SAVED Qwen35-9B 15/20 BH2_04007 SUCCESS None
+Starting BH2_04425 / qwen3.5:9b (new episode 16)
+SAVED Qwen35-9B 16/20 BH2_04425 SUCCESS None
+Starting BH2_05366 / qwen3.5:9b (new episode 17)
+SAVED Qwen35-9B 17/20 BH2_05366 SUCCESS None
+Starting BH2_05686 / qwen3.5:9b (new episode 18)
+SAVED Qwen35-9B 18/20 BH2_05686 SUCCESS None
+Starting BH2_05843 / qwen3.5:9b (new episode 19)
+SAVED Qwen35-9B 19/20 BH2_05843 SUCCESS None
+Starting BH2_06427 / qwen3.5:9b (new episode 20)
+SAVED Qwen35-9B 20/20 BH2_06427 SUCCESS None
+{
+  "context": 16384,
+  "researcher_authorized_reassessment": true,
+  "screening_row": {
+    "run_id": "context16k-3060ti-20261020",
+    "agent_id": "Qwen35-9B",
+    "tag": "qwen3.5:9b",
+    "digest": "56671c2ab9385f9cfcb404638e32cd62d88e3501d44822208363c010179a3c90",
+    "quantization": "Q4_K_M",
+    "parameter_size": "9.0B",
+    "family": "Qwen",
+    "episodes_completed": 20,
+    "episodes_expected": 20,
+    "complete": true,
+    "native_calls": 263,
+    "text_tool_calls": 0,
+    "attempted_calls": 263,
+    "well_formed_calls": 263,
+    "well_formed_rate": 1.0,
+    "success_episodes": 19,
+    "success_rate": 0.95,
+    "competent_episodes": 13,
+    "competence": 0.65,
+    "median_wall_seconds": 56.839506,
+    "out_of_memory_episodes": 0,
+    "largest_prompt_eval_count": 16379,
+    "median_tool_calls": 9.5,
+    "budget_hit_share": 0.1,
+    "pass_well_formed": true,
+    "pass_success": true,
+    "pass_competence": true,
+    "pass_time": true,
+    "pass_oom": true,
+    "d3_pass": true
+  },
+  "accepted_at_16k": true,
+  "status_counts": {
+    "SUCCESS": 19,
+    "PARSE_FAIL": 1
+  },
+  "label_a_counts": {
+    "GOLD": 545,
+    "ALT_VALID": 17
+  },
+  "label_b_counts": {
+    "SUPPORTED": 562
+  }
+}
+COMPLETE Qwen35-9B: 20/20; D3 PASS at 16K.

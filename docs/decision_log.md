@@ -1533,6 +1533,45 @@ because screening manifests and integrity proofs identify them by SHA256.
 Index-only documentation/table snapshots split shared files by candidate without
 rewriting the current working files or any completed episode.
 
+## 2026-10-19 - Researcher requests updated models at a similar parameter scale
+
+Researcher: "i think we should work with the updated models but similar parameter
+size". Record the direction of reviewing newer releases in the previously
+accepted 7B-9B class. Granite 4.1 testing was deferred ("i will test it later").
+No new model inference or download is authorized or performed by this planning
+update. No frozen protocol, D3 threshold, runtime setting or model freeze changes.
+
+Source-checked proposal: docs/S20_updated_model_pool_proposal.md. Initial
+shortlist: existing pinned Qwen3.5 9B, Ministral 3 8B Instruct, OLMo 3 7B
+Instruct, and conditional Granite 4.2 8B; Granite 4.1 8B is a proposed fallback
+or additional candidate. Exact membership, remaining-old-model disposition and
+D3 round accounting remain researcher decisions before new official inference.
+Published capability is not local eligibility; every new exact tag must pass
+native-tools, non-thinking and GPU placement preflight without altering P1/T1.
+
+Preserve all completed Llama/Granite/Qwen records and prior chronological pool
+decisions, including failures. This recency preference was expressed after the
+three candidate outcomes were observed; record that timing transparently.
+The proposed list has four developer families but is not a four-model S21
+selection. D3 still requires four passing models covering at least three families.
+
+## 2026-10-19 - Failed model downloads removed at researcher request
+
+Researcher explicitly requested removal of downloaded Granite 3.3 and Llama
+weights to free disk space after their D3 failures. Verified installed tags and
+original screening digests, then used the existing Ollama server's native
+removal command for exactly granite3.3:8b and llama3.1:8b. Both tags are now absent.
+All three Qwen tags/digests remain unchanged, including screened qwen3.5:9b.
+
+D: free space increased from 250234822656 to 260098826240 bytes: 9864003584 bytes
+reclaimed (9.86 GB decimal / 9.187 GiB). Metadata manifests were retained as tiny
+archival JSON files alongside before/after tags and disk measurements under
+results/diagnostics/s20/model-storage-cleanup-20261019/. Downloaded weight files
+are removed; completed episodes, configurations, metrics and reports are retained.
+This is storage maintenance, not a change to historical screening outcomes,
+scientific rules, pool membership or model-selection gates.
+
+
 ## 2026-10-19 - Ministral 3 8B S20 block authorized
 
 Researcher downloaded ministral-3:8b and explicitly requested: "now run s20 on this model". This authorizes its complete 20-query block after exact identity, native tools, disabled thinking and context-8192 placement preflight. Treat this as an additional screened candidate; preserve original candidate history and all prior outcomes. No replacement, D3 round assignment or S21 panel selection is inferred. Reuse the unchanged launcher with one --max-new 1 invocation per episode and existing stop/integrity checks. Frozen protocol, inputs, P1/T1, source, config and prior records remain unchanged; no other model, 16K follow-up, commit or push.
@@ -1570,6 +1609,7 @@ Exactly one complete BH2_04425 diagnostic episode saved under E:\Phitron Thesis\
 ## 2026-10-19 - Ministral checkpoint commit authorized
 
 Researcher requested "okay commit and take me what should be the next model". Authorizes a local commit of completed Ministral official screening, timeout investigation and the separately labeled one-query diagnostic. Preserve recorded episode/config provenance and all write-once results. Pre-commit suite: 598 passed in 29.14 s; six diagnostic helpers parse; evidence/metric credential-pattern scan found no matches. All 84 official run-file hashes, 122 protected identities and 43 pinned source/input hashes match. Stage shared documentation snapshots for Ministral only, preserving earlier uncommitted shortlist/cleanup changes in the working files. Raw results/runs records remain ignored under the existing policy. No push or next-model inference/download requested.
+
 
 ## 2026-10-19 - OLMo 3 7B Instruct S20 screening authorized
 
@@ -1636,3 +1676,278 @@ match, and earlier models' table rows remain unchanged. Reuse the established
 index-only snapshots for shared documents so pending shortlist/earlier cleanup
 changes stay uncommitted and working files stay intact. No new inference or
 production-code change is required.
+
+
+## 2026-10-19 - Granite 4.2 8B S20 screening authorized
+
+Researcher supplied the successful pull of granite4.2:8b and requested "run s20 on this model". Authorizes the complete unchanged 20-query block for Granite42-8B, family Granite, in primary-3060ti-20261018, after established preflight. This single-candidate measurement does not settle revised pool membership, D3 round accounting or S21 selection. Preserve prior outcomes and pending shortlist/cleanup edits; no other model, rerun, commit or push.
+
+Installed identity: granite4.2:8b, 8.8B Q4_K_M, digest f586c02fdecdf151b656207c339aa003997345774a41768bac1fd6d2fb85913b. Existing Ollama 0.40.4 server advertises tools, thinking and completion. An attempted server start found port 11434 already occupied; the healthy existing endpoint was used. Synthetic native add(2,3) emitted exact integer arguments and answered 5, with no nonempty thinking fields and unchanged identity. Context 8192 placement reports size=6862195914 and size_vram=6268114697 bytes (automatic partial CPU/GPU offload); GPU usage sampled 7208/8192 MiB. Same unchanged placement procedure as recent candidates; no tuning or new threshold.
+
+Retain protocol section 9.1 settings, P1/T1 and think=false: temperature 0, seed 42, context 8192, output cap 4096, budget 30, page size 50, episode timeout 600 s, request timeout 120 s. Reused OLMo operational helpers with only candidate identity/output substitutions and existing assertions. All 105 prior official run-file hashes, 122 protected identities and 43 pinned source/input hashes match. Full suite required before official inference. Use separate --max-new 1 invocations in frozen order; stop on ERROR, nonzero exit, drift or order discrepancy. Every saved final status remains completed without retry.
+
+Granite 4.2 preflight complete: unchanged full suite 598 passed in 34.27 s, no skips/deselections. Proceeding with the authorized block; evidence under results/diagnostics/s20/granite42/.
+
+
+### Granite 4.2 stopped at query 12: ERROR/CONNECTION preserved
+
+Eleven SUCCESS and one ERROR/CONNECTION saved through BH2_03953. Its next chat request exceeded the unchanged 120-second HTTP read timeout after eight successful responses; episode wall time 139.565813 s. Launcher exited zero and saved the final error; outer checker then stopped before query 13 under the established policy. Read-only Ollama identity/placement check responded unchanged; exact slow-generation cause unresolved. No replay, retry, timeout change or new inference.
+
+Partial observations: 168/168 well-formed native calls, SUCCESS 11/12, competent 5/12, median wall 86.6405435 s, zero OOM, largest prompt 8187, median charged calls 9.5, budget-hit share 25%, zero thinking messages. 131 answers: 129 GOLD/SUPPORTED and two OFF_QUESTION/PATH_INVALID. Partial D3 fields remain undefined. Optional page omission is valid under the frozen T1 schema; direct evaluator/schema inspection corrected an intermediate commentary claim without changing any result.
+
+Offline report-only exited zero. All 118 run-file hashes (105 prior), 122 protected identities, 43 pinned sources, 100 prior metrics and five prior table rows match. Full suite before inference: 598 passed in 34.27 s. Checkpoint report: docs/S20_granite42_screening.md; evidence: results/diagnostics/s20/granite42/. Eight frozen queries remain; continuation decision required before further inference. No production/scientific edit, S21 selection, other model, commit or push.
+
+
+### Granite 4.2 remaining-eight continuation authorized
+
+Researcher selected "Continue the remaining eight (Recommended)" after reviewing the 12/20 ERROR checkpoint. Authorizes only BH2_03991, BH2_04003, BH2_04007, BH2_04425, BH2_05366, BH2_05686, BH2_05843 and BH2_06427 in frozen order, preserving all twelve saved final outcomes, including BH2_03953 ERROR/CONNECTION. Unchanged frozen settings, one --max-new 1 invocation per episode and existing stop/integrity checks. No retry, timeout/source/config/scientific change, other model, S21, commit or push.
+
+Continuation preflight: all 118 stopped-checkpoint run files, 122 protected, 43 pinned and 100 prior metric hashes match. Reused Ministral continuation helper with Granite identity/path and twelve-record prefix substitutions; syntax and assertions checked. Full-suite evidence remains 598 passed before inference; pinned source is unchanged, so no repeat was required. Preserve the stopped report, summary, per-query CSV, inspection, proof and table snapshot separately.
+
+
+### Granite 4.2 continuation stopped at 15/20: second ERROR/CONNECTION
+
+Authorized remaining-eight continuation saved BH2_03991 SUCCESS (155.876456 s), BH2_04003 SUCCESS (176.102251 s) and BH2_04007 ERROR/CONNECTION (144.983317 s), then stopped before query 16. All three launchers exited zero; outer checker stopped on the newly saved ERROR under the retained policy. BH2_04007 had fourteen successful model responses before the next request hit the 120-second read timeout. Read-only model identity/placement check responded unchanged. No retry, timeout adjustment or diagnostic inference. All earlier outcomes including BH2_03953 ERROR remain unchanged.
+
+Partial: 244/244 well-formed native calls, SUCCESS 13/15, competence 5/15, median wall 108.939291 s, OOM 0, largest prompt 8190, median charged calls 14, budget-hit share 1/3, no thinking messages. 132 answers: 129 GOLD/SUPPORTED, three OFF_QUESTION/PATH_INVALID. Final D3 fields remain undefined.
+
+Offline report-only exited zero. All 121 run hashes match, including all 118 stopped-checkpoint and 105 prior files; all 122 protected, 43 pinned and 100 prior metric hashes and five prior table rows unchanged. Suite remains 598 passed before inference, unchanged source. Original 12/20 evidence retained; new numbered stopped-15 report/summary/proof saved separately. Five frozen queries remain: BH2_04425, BH2_05366, BH2_05686, BH2_05843, BH2_06427. Further inference requires the established continuation decision. Report: docs/S20_granite42_screening.md. No source/scientific change, S21, commit or push.
+
+
+### Granite 4.2 remaining-five continuation authorized
+
+Researcher selected "Continue the remaining five (Recommended)" after reviewing the second ERROR checkpoint at 15/20. Authorizes only BH2_04425, BH2_05366, BH2_05686, BH2_05843 and BH2_06427 in frozen order, retaining all fifteen final outcomes and both ERROR/CONNECTION records. Keep all settings, one --max-new 1 invocation per episode and stop on each new ERROR, nonzero exit, drift or order discrepancy. No retry, timeout/source/config/scientific change, other model, S21, commit or push.
+
+All 121 run files, 122 protected identities, 43 pinned source/input hashes and 100 historical metric hashes match. Captured all 115 current metric hashes and the 15/20 table as continuation baselines. Reused the prior continuation helper with only checkpoint, prefix and output-name substitutions; syntax and frozen-prefix assertions retained. The prior 598-test pass remains applicable because pinned sources are unchanged.
+
+
+### Granite 4.2 stopped at 16/20: third ERROR/CONNECTION
+
+Approved remaining-five continuation saved BH2_04425 ERROR/CONNECTION (142.561278 s), then stopped before query 17 under the retained policy. Seven successful model responses preceded the next request's 120-second HTTP read timeout. Launcher exited zero; outer checker stopped on ERROR. Read-only identity/placement check responded unchanged. All fifteen prior outcomes and both earlier errors are unchanged; no replay, retry or timeout adjustment.
+
+Partial: 251/251 well-formed native calls, SUCCESS 13/16, competent 5/16, median wall 124.252552 s, zero OOM, largest prompt 8190, median charged calls 12.5, budget-hit share 31.25%, zero thinking fields. 132 answer items unchanged: 129 GOLD/SUPPORTED, three OFF_QUESTION/PATH_INVALID. At most 17/20 SUCCESS (85%) remains possible, below frozen D3's 90%; no complete verdict is assigned while four queries are unrun.
+
+Offline report-only exited zero. All 122 run hashes match (121 previous checkpoint, 105 pre-Granite); 122 protected, 43 pinned and 115 existing metric hashes and five prior table rows match. Unchanged source; full suite remains 598 passed before inference. Separate stopped-16 report/summary/proof retained; earlier checkpoints unchanged. Final four: BH2_05366, BH2_05686, BH2_05843, BH2_06427. Further inference awaits continuation authorization. A proposed operational option is to finish these four despite further CONNECTION errors, preserving those outcomes and keeping all other stop conditions; it is not implemented or authorized yet. No source/scientific edit, S21, commit or push.
+
+
+### Granite 4.2 final-four continuation and narrower stop policy authorized
+
+Researcher selected "Finish four; continue past CONNECTION timeouts (Recommended)" after the verified 16/20 checkpoint. Authorizes only BH2_05366, BH2_05686, BH2_05843 and BH2_06427 with all scientific settings and the 120-second request timeout unchanged. Preserve all sixteen saved outcomes and all further timeouts in the official denominator. The between-invocation checker may continue only for ERROR/CONNECTION with a logged timed-out request; other ERROR causes, CONNECTION failures without timeout evidence, nonzero exits, identity/hash drift and order/count discrepancies still stop. No failed query is retried or repaired. This is a researcher-approved operational stop-policy amendment, not a scientific rule/threshold change.
+
+All 122 run-file hashes, 122 protected and 43 pinned identities and the existing 115-metric baseline match; captured all 116 current metric hashes. Reused continuation helper with sixteen-record prefix, separate journal/log names and the approved narrow timeout exception. Its actual AST guard passed six synthetic assert-based checks: SUCCESS, logged CONNECTION timeout and PARSE_FAIL continue; refused CONNECTION, OUT_OF_MEMORY and RUNTIME stop. The 598-test result remains applicable to unchanged production source. No S21 work, other candidate, commit or push.
+
+
+### Granite 4.2 full block complete: D3 FAIL on SUCCESS and competence
+
+All four final queries completed SUCCESS: BH2_05366 (13.160678 s), BH2_05686 (148.298446 s), BH2_05843 (131.556515 s), BH2_06427 (44.859084 s). The approved logged-CONNECTION-timeout exception was therefore not triggered in live continuation. All twenty frozen outcomes saved; all prior records and three ERROR/CONNECTION outcomes remain unchanged. Each of twenty individual launcher invocations exited zero, saved exactly one record in frozen order and passed the applicable between-invocation integrity checks.
+
+Final D3 FAIL: well-formed 327/327=100% (PASS); SUCCESS 17/20=85% (FAIL); competence 6/20=30% (FAIL); median wall 120.247903 s (PASS); OOM 0 (PASS). Zero text-tool attempts, PARSE_FAIL, episode TIMEOUT or nonempty thinking fields. Largest prompt 8190, median charged calls 12.5, seven budget hits (35%). 135 answer items: 132 GOLD/SUPPORTED and three OFF_QUESTION/PATH_INVALID. Final BH2_06427 submits three GOLD/SUPPORTED answers with benchmark precision/recall 1.0; raw example in final report/manual inspection.
+
+Offline --max-new 0 exited zero. All 126 run-file hashes match, including all 122 last-checkpoint and 105 pre-Granite files; all twenty journal episode hashes match. All 122 protected identities, 43 pinned source/input hashes, 116 existing metric hashes and five prior candidate rows unchanged. Seventeen available post-invocation placement samples retain pinned digest/context 8192 and unchanged automatic partial CPU/GPU sizes. Unchanged full-suite evidence: 598 passed in 34.27 s; six guard checks passed. Proofs: results/diagnostics/s20/granite42/official-final-integrity.json and official-validation.json.
+
+Report updated: docs/S20_granite42_screening.md. Earlier 12/20, 15/20 and 16/20 checkpoint reports and derivations preserved separately. No retry, diagnostic inference, timeout/source/config/scientific change, other model, 16K follow-up, S21 selection, commit or push. Stop after this candidate report.
+
+
+## 2026-10-20 — S20 — Gemma 4 E4B full uninterrupted screening authorized
+Decision: Researcher explicitly requested `gemma4:e4b-it-q4_K_M`: "run s20 tests on this model, all 20 queries uninterrupted". Run the existing frozen twenty-query block continuously, retaining every saved final outcome without retries or intermediate continuation approval. Use agent ID Gemma4-E4B in primary-3060ti-20261018.
+Why: Measure this exact downloaded candidate under unchanged S20 settings. The existing runner supports --max-new 20 and checkpoints every episode.
+Data seen before deciding: Researcher supplied the download transcript; prior candidate history existed. No Gemma biomedical episode had run when authorization was given. Subsequent preflight verified installed 7.5B Q4_K_M, tools, disabled thinking, and exact digest dc35e8d9c6061baa6f0fa870975ab6932e2542b579b13ea0f199fa4bb7300c9c; synthetic add and all 598 tests passed.
+Changes to protocol or decision rules: none. Full-block execution replaces only intermediate operational continuation pauses for this request. Pool/round accounting and S21 selection remain separate researcher decisions.
+
+## 2026-10-20 — S20 — Gemma 4 E4B complete; D3 FAIL
+Decision: Record the unchanged evaluator result after all twenty uninterrupted queries: FAIL only on SUCCESS rate (16/20=80%, required >=90%). Four PARSE_FAIL outcomes remain official. Other criteria pass: 149/149 well-formed native calls, competence 11/20=55%, median wall 11.9732305 s and zero OOM. No S21 selection made.
+Why: Apply existing D3 criteria to all frozen queries without outcome-dependent changes.
+Data seen before deciding: All twenty saved outcomes and metrics; all four parse failures have incomplete JSON and final done_reason=length. Full suite 598 passed; report-only and 147 run hashes (126 prior), 120 prior metrics, 122 protected, 43 pinned sources and six prior rows verified unchanged.
+Changes to protocol or decision rules: none. Report: docs/S20_gemma4_screening.md.
+
+## 2026-10-20 — Gemma 4 E4B — Authorized isolated 16K context diagnostic
+Decision: Researcher accepted the proposed four-failure diagnostic: "yeah do that with 16K context for this model and see". Rerun exactly BH2_03619, BH2_03762, BH2_03850 and BH2_03953 under a separate diagnostic run ID with num_ctx=16384 and every other scientific setting unchanged. Retain original S20 outcomes and D3 verdict.
+Why: Test the context-limit explanation for the four incomplete 8K final outputs.
+Data seen before deciding: Complete official 8K block and four parse-failure traces with done_reason=length; no 16K Gemma outcomes.
+Changes to protocol or decision rules: none. This selected diagnostic is separate from S20 scoring and the S21 five-query requirement.
+
+## 2026-10-20 — Gemma 4 E4B — 16K diagnostic results retained
+Decision: Record all four diagnostic outcomes as SUCCESS; three queries have GOLD/SUPPORTED answers, while BH2_03762 has six OFF_QUESTION/PATH_INVALID answers. All four final reasons changed from length to stop. Context-limit explanation is strongly supported; no full-20-query 16K D3 verdict or S21 selection inferred.
+Why: Separate recovered formatting from biomedical competence and preserve the official experiment.
+Data seen before deciding: All four diagnostic traces and unchanged evaluator metrics; actual context 16384; 51/51 well-formed calls, zero OOM/thinking; all 147 official runs, 140 metrics, official table, 43 pinned and 122 protected hashes unchanged.
+Changes to protocol or decision rules: none. Report: docs/S20_gemma4_16k_diagnostic.md.
+
+## 2026-10-20 — S20 — Offline context-window parse-failure audit
+Decision: Document previous models with observed context-related parse failures without changing official statuses or gates. Qwen3.5 has two direct final context-truncation cases; Ministral has three direct cases and one mixed case (BH2_03619: initial length termination at 8192, then normal-stop final JSON missing answers). No Qwen/Ministral 16K recovery is claimed. Link the already-completed Gemma 16K diagnostic (4/4 parse recovery, 3/4 competent).
+Why: Researcher requested investigation of prior models after Gemma recovered at 16K; avoid conflating context truncation, schema omission and request timeouts.
+Data seen before deciding: All 140 official S20 episodes, 20 exactly reproduced saved parser errors, existing timeout report and Gemma comparison. Five earlier final attempts have length termination, exact prompt-plus-output 8192 and output below num_predict=4096. All original run/metric/table/source and separate Gemma diagnostic hashes unchanged.
+Changes to protocol or decision rules: none. No new model call or rerun. Report: docs/S20_context_window_audit.md.
+
+## 2026-10-20 — S20 — Full 16K D3 reassessment authorized for Gemma, Qwen and Ministral
+Decision: Researcher requests increased-context tests for Qwen3.5 9B and Ministral 3 8B, and allows Gemma 4 to count as passing only if it meets all D3 thresholds now. Run a complete fresh twenty-query block at num_ctx=16384 for each of the three exact existing model digests, in fixed order Gemma, Qwen, Ministral. Apply unchanged D3 thresholds to each entire block, including every failed outcome. Do not combine old 8K successes with selected 16K recoveries. Current researcher acceptance for these three candidates is conditional on the full 16K D3 verdict. Preserve chronological 8K history separately.
+Why: Researcher-authorized context reassessment after observed context truncation; a four-query diagnostic cannot establish full-block D3 eligibility.
+Data seen before deciding: All 140 official 8K episodes, original D3 verdicts, offline trace audit and Gemma selected four-query 16K results (4/4 parsing recovery, 3/4 competence). No full twenty-query 16K block exists for these candidates. No pilot/co-failure outcomes have been run.
+Changes to protocol or decision rules: Authorized scoped exception to section 9.1 screening num_ctx=8192 for these separately labelled full 16K reassessment blocks, recorded under section 20. D3 definitions/thresholds unchanged; all other scientific runtime settings unchanged. Frozen protocol/decision-rule files are preserved. No S21 selection/freeze or additional candidate authorization implied. Run root results/runs/screening-16k; run ID context16k-3060ti-20261020.
+
+## 2026-10-20 — Full 16K reassessment — Gemma passes all D3 thresholds
+Decision: Accept Gemma4-E4B as passing at 16K under the researcher-authorized reassessment: complete fresh 20-query block, 181/181 well-formed calls, SUCCESS 19/20=95%, competence 14/20=70%, median wall 16.2779325 s and zero OOM. The one PARSE_FAIL remains included. Preserve the original 8K FAIL and separate four-query diagnostic; neither substitutes for this block.
+Why: The researcher explicitly conditioned current acceptance on meeting the existing D3 thresholds after increasing context; all five now pass.
+Data seen before deciding: Complete Gemma 16K block and unchanged evaluator metrics, actual context samples, immutable configuration/records and original hash checks. Qwen and Ministral full 16K verdicts are not yet available.
+Changes to protocol or decision rules: no new change beyond the already logged scoped 16K reassessment authorization. No S21 panel selection/freeze.
+
+## 2026-10-20 — Full 16K reassessment — Qwen passes all D3 thresholds
+Decision: Accept Qwen35-9B as passing at 16K on its complete fresh block: 263/263 well-formed calls, SUCCESS 19/20=95%, competence 13/20=65%, median wall 56.839506 s and zero OOM. One new PARSE_FAIL (BH2_03991) remains included; both original 8K PARSE_FAIL queries now have SUCCESS. Preserve original 8K PASS and its metrics (18 SUCCESS, 15 competent); context increase is not assumed to improve every metric.
+Why: Apply the researcher-authorized current 16K D3 acceptance rule to the full unchanged-threshold block.
+Data seen before deciding: All twenty Qwen 16K outcomes and metrics, actual 16K samples, model identity and integrity checks; Gemma full 16K PASS already recorded, Ministral pending.
+Changes to protocol or decision rules: no new change beyond the logged scoped context amendment; no S21 selection/freeze.
+
+## 2026-10-20 — Full 16K reassessment complete — Gemma and Qwen accepted; Ministral fails
+Decision: Apply the same D3 thresholds to all three complete fresh 16K blocks and implement current acceptance as Gemma4-E4B PASS, Qwen35-9B PASS, Ministral3-8B FAIL. Gemma: SUCCESS 19/20, competence 14/20, 181/181 valid calls, median 16.2779325 s, OOM 0. Qwen: 19/20, 13/20, 263/263, 56.839506 s, OOM 0. Ministral: 12/20, 12/20, 167/167, 168.0803425 s, OOM 0; eight request read timeouts fail only its SUCCESS threshold. All failures retained, no selective retries or stitched denominator. Historical 8K results remain unchanged.
+Why: Researcher explicitly conditioned current acceptance on passing D3 after increased-context testing. Larger context qualifies Gemma on full evidence; Qwen still qualifies; Ministral still does not meet the gate.
+Data seen before deciding: All sixty new episodes and metrics; four reproduced parse errors; eight saved 120-second read-timeout errors; 117 actual-16K context samples; three successful offline reports; all original/new source and result hash checks. Qwen old parse failures now parse no_answer, without competence recovery; Gemma selected-diagnostic recovery was not substituted into the fresh block.
+Changes to protocol or decision rules: no new change beyond the pre-inference scoped 16K context amendment logged under section 20. All D3 thresholds unchanged; no S21 selection/freeze. Complete report docs/S20_full_16k_reassessment.md; acceptance artifact results/diagnostics/s20/full-16k-20261020/acceptance.json.
+
+## 2026-10-21 — S20 — Granite 4.1 complete; shared screening status reconciled
+
+Decision: Record the completed researcher-authorized Granite41-8B 8K block as
+D3 PASS and reconcile all eight completed candidates in the shared documents.
+The earlier Granite 4.1 deferral is superseded by the user's later instruction
+to run all twenty queries and continue after query errors. The completed block
+has 20/20 SUCCESS, 14/20 competent queries, 217/217 well-formed native calls,
+median wall 61.3250475 s and zero OOM. There were no ERROR, TIMEOUT, PARSE_FAIL
+or thinking messages. Of 568 submitted items, 525 are question-valid/SUPPORTED
+and 43 are OFF_QUESTION/PATH_INVALID. SUCCESS remains distinct from correctness.
+
+Why: The researcher requested a documentation update including the other failed
+models. A complete status summary must retain all failures and distinguish the
+original 8K blocks from the three researcher-authorized full 16K reassessments.
+
+Data seen before deciding: All eight original screening-table rows, per-model
+reports, Granite 4.1's completed traces/metrics and final integrity proof, and
+the existing complete 16K acceptance artifact. Original 8K failures: Llama31-8B
+and Granite33-8B on call validity/competence; Granite42-8B on SUCCESS/competence;
+OLMo3-7B on competence; Ministral3-8B and Gemma4-E4B on SUCCESS. Qwen35-9B and
+Granite41-8B pass at 8K. Separate full 16K results: Gemma PASS, Qwen PASS,
+Ministral FAIL on SUCCESS (eight retained request-timeout errors). Current
+passing candidates therefore number three across three families: Granite,
+Gemma and Qwen; the other five completed candidates remain failing. A fourth
+passing model is still needed before the D3 panel requirement can be met.
+
+Granite 4.1 evidence: 42 focused tests passed in 6.38 s; synthetic native tools
+and think=false passed; full and offline report invocations exited zero.
+Final proof verifies twenty unique sequential attempt-1 records, 21 new
+configuration/episode hashes, 359 prior result/metric hashes, 43 source/input
+pins, 122 protected identities and seven unchanged prior table rows. The full
+suite was not repeated because the pinned implementation was unchanged.
+
+Changes to protocol or decision rules: none. This entry records existing
+evidence and corrects shared documentation only; no new inference, retry,
+metric/source/configuration change, additional model authorization or S21
+selection/freeze. Historical entries remain intact. Routine engineering choice:
+one linked current-status document, with dated notices above historical
+progress/plan/checklists and the old shortlist. Reports:
+docs/S20_granite41_screening.md and docs/S20_screening_status.md.
+
+## 2026-10-21 — S20 — Granite 4.1 full 16K block authorized
+
+Decision: The researcher requested "run granite 4.1 at 16K and update". Run a
+fresh complete twenty-query block for the same Granite41-8B identity at
+num_ctx=16384, retaining all other scientific settings, all saved failures and
+the previous continue-after-query-error instruction. Use isolated run ID
+granite41-context16k-3060ti-20261021 under results/runs/screening-16k. Apply the
+unchanged D3 criteria to the full block and report both 8K and 16K evidence;
+do not replace or stitch the existing 8K PASS with selected new outcomes.
+
+Why: Researcher-authorized context reassessment after the complete original
+8K block; its largest recorded prompt was 8187 tokens. No Granite 4.1 16K
+screening episode existed when this authorization and manifest were recorded.
+
+Data seen before deciding: The full 8K PASS (20 SUCCESS, 14 competent,
+217/217 valid calls, median 61.3250475 s, zero OOM), existing other-model 16K
+results and the researcher's explicit request. Preflight confirms the original
+digest 444af1c4b2fedd6b54041aca558e7300b0b3d5c0468c44619126240323ba2852,
+43 unchanged source/input pins and 122 protected identities. The 42 screening
+tests passed in 2.15 s. A baseline protects 488 existing evidence files.
+
+Changes to protocol or decision rules: Scoped researcher-authorized exception
+to section 9.1's screening context for this separately labelled full 16K block,
+as in the earlier section 20 reassessments; D3 thresholds unchanged. No source,
+prompt, tool, timeout, temperature, seed or output-cap change, failed-episode
+retry, additional candidate authorization or S21 selection/freeze. Routine
+engineering: reuse the earlier 16K driver with this candidate, UTF-8 reads and
+allow missing placement after a failed episode while checking every observed
+matching-model context. Diagnostics: results/diagnostics/s20/granite41-16k-20261021/.
+
+## 2026-10-21 — Granite 4.1 16K stopped on researcher instruction
+
+Decision: The researcher explicitly requested "stop the test, i understand it
+will not pass". Terminate the screening processes immediately, unload the
+model and do not resume without a new instruction. Fifteen final outcomes are
+saved: six SUCCESS and nine ERROR/CONNECTION, each with a logged 120-second
+read timeout. Query 16 (BH2_04425) was interrupted without a final record;
+BH2_05366, BH2_05686, BH2_05843 and BH2_06427 were not started.
+
+Why: Honor the explicit stop request. With nine saved errors, at most 11/20
+SUCCESS (55%) is possible, below the existing 90% requirement, even if every
+unsaved query succeeded. Retain an incomplete/stopped status with no final
+D3 verdict or full-block competence; do not fabricate the five missing outcomes.
+
+Data seen before deciding: Fifteen immutable final records, runtime samples,
+console timeouts and the researcher instruction. All fifteen initial message
+pairs match the original 8K block. Preflight passed 42 screening tests, four
+context-guard cases, native tools and disabled thinking at actual context
+16384. Stop-time checks preserve 488 earlier evidence hashes and 122 protected
+identities. Sixteen new run/configuration hashes are recorded in stopped-summary.json.
+
+Changes to protocol or decision rules: none. The explicit stop supersedes the
+earlier authorization to finish twenty queries. Original Granite 4.1 8K PASS
+remains intact; no 16K acceptance or final S21 selection. No retry, timeout
+change, further inference or final full-block evaluator/report-only invocation.
+Report: docs/S20_granite41_16k_stopped.md; shared progress/plan/checklist and
+complete screening status updated to record the stop.
+
+## 2026-10-21 — S20 — Command R7B complete full original 8K block
+
+Decision: Execute the researcher's explicit request to run the whole S20 test,
+all twenty queries, for downloaded command-r7b:7b. Apply original protocol
+section 9.1 settings and unchanged D3 using the existing launcher. Isolate run
+command-r7b-3060ti-20261021, agent CommandR7B-7B, family Cohere. Retain every
+final outcome without retries. No S21 selection or D3 round accounting assigned.
+
+Data seen before inference: existing candidate history; native-tools metadata
+for installed digest ff4e9696ef9f19b62e3f7d7261c95dcc9bb15a7c0398493366d851119fe2e1ef,
+Q4_K_M, parameter metadata 8.0B; 42 passing screening tests; frozen 8K settings
+and 512 baseline hashes. The synthetic add test returned valid prose without
+a native call and its assertion failed. That evidence was retained in preflight;
+the explicitly requested full block measured behavior without introducing a
+new synthetic-use gate, tuning prompts or changing model packaging. Policy
+and identity/placement evidence were saved before official inference.
+
+Result: all twenty attempt-1 queries saved sequentially; nineteen SUCCESS and
+one PARSE_FAIL (BH2_00461 returned a JSON array rather than the required object).
+Zero native/text-tool attempts; well-formed rate is undefined and fails D3.
+Competence 0/20 also fails. Median 2.889849 s, OOM 0. Two submitted answer
+items were OFF_QUESTION/UNGROUNDED and UNRESOLVED/NOT_APPLICABLE. No thinking,
+request errors or episode timeouts. Largest prompt=2292, not near the 8192 cap.
+Overall D3 FAIL. Three passing candidates remain; a fourth is still needed.
+
+Verification: official/offline exit zero, 42 tests passed in 2.31 s; all 512
+baseline hashes, 43 source/input pins, 21 new run hashes and eight prior
+screening rows match. No source/configuration/prompt/tool/input/rule change.
+Routine engineering: dated isolated run and diagnostics, reuse of existing
+preflight/summary code, runtime samples, immutable evidence and offline replay.
+No scientific amendment, completed-episode retry, commit or push.
+Report: docs/S20_command_r7b_screening.md.
+
+## 2026-10-21 — S20 checkpoint commit and push authorized
+
+Researcher explicitly requested committing and pushing the completed work.
+Include the pending related S20 reports, candidate metrics, context diagnostics,
+full 16K reassessments, stopped Granite 4.1 16K evidence and Command R7B block
+as one screening checkpoint, preserving all historical outcomes and settings.
+Keep unrelated scratch console output, Graphify state and Ministral speed
+experiments out of the commit. Raw results/runs remain ignored under repository
+policy. The existing unpushed OLMo commit is included in the requested push.
+
+Pre-commit verification: 598 tests passed in 47.92 s; all 264 new JSON artifacts
+parsed, twelve diagnostic Python helpers passed syntax checks and the selected
+files had zero credential-pattern matches. Command R7B's 512 historical/source
+and 21 new run hashes still match. Review corrected only accidental encoding
+damage in older checklist text. No experimental source/configuration, frozen
+rule, result or S21 selection change. Fetch confirmed main has no remote-only
+commits; use a normal push without rewriting history.

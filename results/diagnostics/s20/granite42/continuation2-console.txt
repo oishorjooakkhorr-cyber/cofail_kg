@@ -1,0 +1,7 @@
+START 16/20 BH2_04425
+{"index": 16, "query_id": "BH2_04425", "exit_code": 0, "checked_at": "2026-10-19T15:00:00.306159+00:00", "status": "ERROR", "cause": "CONNECTION", "wall_seconds": 142.561278, "sha256": "c6973f7487652bbe4e62b06fbeb167ca7e4e2dfa868e9fd2dfe71678bd884cfb"}
+Traceback (most recent call last):
+  File "E:\Phitron Thesis\cofail_kg\results\diagnostics\s20\granite42\s20_granite42_continue2.py", line 69, in <module>
+    assert record['status'] != 'ERROR', f'STOP: saved ERROR {record["cause"]}'
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: STOP: saved ERROR CONNECTION

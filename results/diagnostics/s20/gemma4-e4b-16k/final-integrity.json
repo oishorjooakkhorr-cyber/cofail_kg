@@ -1,0 +1,19 @@
+{
+  "actual_context_verified": 16384,
+  "comparison_count": 4,
+  "diagnostic_episode_hashes": {
+    "results/runs/context-diagnostics/gemma4-e4b-16k-20261020/BH2_03619__Gemma4-E4B__a1.json": "4829d4d01c21a365332f300a5ffd78560670fcfd079588616045c40005289d06",
+    "results/runs/context-diagnostics/gemma4-e4b-16k-20261020/BH2_03762__Gemma4-E4B__a1.json": "0f534df852f6170a18750d9beaef77ef2ee2ffbed55b1e61f9b5320d8db3154e",
+    "results/runs/context-diagnostics/gemma4-e4b-16k-20261020/BH2_03850__Gemma4-E4B__a1.json": "079e5e6297cb7d5c82246147c70126dc1a2b3295eea4c2072a2a27682427f31c",
+    "results/runs/context-diagnostics/gemma4-e4b-16k-20261020/BH2_03953__Gemma4-E4B__a1.json": "1efe74d3c2e52b0ea7341a79f583e4ef2671116af6f89a742583f870255a0d9e",
+    "results/runs/context-diagnostics/gemma4-e4b-16k-20261020/diagnostic.config.json": "73ed681b81c797077dc78986d10563d07f4ab6f7f9baee81b290f6132e82054a"
+  },
+  "drift": [],
+  "official_hashes_unchanged": {
+    "official_metrics": 140,
+    "official_runs": 147,
+    "official_table": 1,
+    "protected": 122,
+    "sources": 43
+  }
+}

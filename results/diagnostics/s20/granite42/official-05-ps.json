@@ -1,0 +1,24 @@
+{
+  "models": [
+    {
+      "name": "granite4.2:8b",
+      "model": "granite4.2:8b",
+      "size": 6862195914,
+      "digest": "f586c02fdecdf151b656207c339aa003997345774a41768bac1fd6d2fb85913b",
+      "details": {
+        "parent_model": "",
+        "format": "gguf",
+        "family": "granite",
+        "families": [
+          "granite"
+        ],
+        "parameter_size": "8.8B",
+        "quantization_level": "Q4_K_M"
+      },
+      "expires_at": "2026-10-19T20:11:03.1255224+06:00",
+      "size_vram": 6268114697,
+      "context_length": 8192,
+      "runner": "llamacpp"
+    }
+  ]
+}

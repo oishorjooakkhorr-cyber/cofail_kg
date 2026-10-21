@@ -1,0 +1,80 @@
+[
+  {
+    "query_id": "BH2_00461",
+    "question": "Name all diseases that are related to a gene/protein that is associated with drug 2,6-dimethyl-4-[(E)-2-phenylethenyl]phenol.",
+    "call_sequence": [],
+    "final_output": "[\n    {\n        \"status\": \"no_answer\",\n        \"answers\": []\n    }\n]",
+    "answers": [],
+    "metrics": {
+      "query_id": "BH2_00461",
+      "status": "PARSE_FAIL",
+      "cause": null,
+      "wall_seconds": 11.500979,
+      "native_calls": 0,
+      "text_tool_calls": 0,
+      "attempted_calls": 0,
+      "well_formed_calls": 0,
+      "successful_kg_calls": 0,
+      "charged_calls": 0,
+      "budget_exhausted": false,
+      "answers": 0,
+      "supported_question_valid": 0,
+      "benchmark_precision": null,
+      "benchmark_recall": null,
+      "largest_prompt": 2292,
+      "thinking_messages": 0
+    }
+  },
+  {
+    "query_id": "BH2_03760",
+    "question": "Name all effect/phenotypes which are side effects of drug that can treat disease androgen insensitivity syndrome.",
+    "call_sequence": [],
+    "final_output": "{\"status\": \"no_answer\", \"answers\": []}",
+    "answers": [],
+    "metrics": {
+      "query_id": "BH2_03760",
+      "status": "SUCCESS",
+      "cause": null,
+      "wall_seconds": 2.907436,
+      "native_calls": 0,
+      "text_tool_calls": 0,
+      "attempted_calls": 0,
+      "well_formed_calls": 0,
+      "successful_kg_calls": 0,
+      "charged_calls": 0,
+      "budget_exhausted": false,
+      "answers": 0,
+      "supported_question_valid": 0,
+      "benchmark_precision": null,
+      "benchmark_recall": 0.0,
+      "largest_prompt": 1748,
+      "thinking_messages": 0
+    }
+  },
+  {
+    "query_id": "BH2_03856",
+    "question": "Name all effect/phenotypes which are side effects of drug that can treat disease chlamydia trachomatis infectious disease.",
+    "call_sequence": [],
+    "final_output": "{\"status\": \"no_answer\", \"answers\": []}",
+    "answers": [],
+    "metrics": {
+      "query_id": "BH2_03856",
+      "status": "SUCCESS",
+      "cause": null,
+      "wall_seconds": 2.903023,
+      "native_calls": 0,
+      "text_tool_calls": 0,
+      "attempted_calls": 0,
+      "well_formed_calls": 0,
+      "successful_kg_calls": 0,
+      "charged_calls": 0,
+      "budget_exhausted": false,
+      "answers": 0,
+      "supported_question_valid": 0,
+      "benchmark_precision": null,
+      "benchmark_recall": 0.0,
+      "largest_prompt": 1758,
+      "thinking_messages": 0
+    }
+  }
+]

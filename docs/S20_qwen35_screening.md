@@ -1,5 +1,7 @@
 # S20 Qwen3.5 9B screening complete (2026-10-18)
 
+**Follow-up (2026-10-20):** Qwen subsequently passed the complete fresh twenty-query 16K D3 reassessment (19 SUCCESS, 13 competent). The original 8K PASS and its metrics below remain historical evidence. See [full 16K reassessment](S20_full_16k_reassessment.md).
+
 All 20 frozen screening queries are saved for Qwen35-9B in run
 primary-3060ti-20261018. **This candidate passes all five D3 criteria.**
 The full S20 pool remains incomplete; no four-model S21 selection/freeze has

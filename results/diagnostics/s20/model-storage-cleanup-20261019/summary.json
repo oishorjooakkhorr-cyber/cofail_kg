@@ -1,0 +1,27 @@
+{
+  "removed": [
+    "granite3.3:8b",
+    "llama3.1:8b"
+  ],
+  "freed_bytes": 9864003584,
+  "free_bytes_before": 250234822656,
+  "free_bytes_after": 260098826240,
+  "remaining_models": [
+    {
+      "name": "qwen3.5:9b",
+      "digest": "56671c2ab9385f9cfcb404638e32cd62d88e3501d44822208363c010179a3c90",
+      "size": 6550825550
+    },
+    {
+      "name": "cofail-qwen3:4b-templatefix",
+      "digest": "188b1ed1a40c5a0e9c2b0a23cbb057cc1e7db1129395bec24ea082a7974155cd",
+      "size": 2497293622
+    },
+    {
+      "name": "qwen3:4b",
+      "digest": "359d7dd4bcdab3d86b87d73ac27966f4dbb9f5efdfcc75d34a8764a09474fae7",
+      "size": 2497293931
+    }
+  ],
+  "freed_GiB": 9.187
+}

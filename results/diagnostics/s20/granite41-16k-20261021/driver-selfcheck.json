@@ -1,0 +1,5 @@
+{
+  "context_guard_cases": 4,
+  "passed": true,
+  "guard": "all((m['context_length'] == 16384 for m in ps['models'] if m['digest'] == agent['digest']))"
+}

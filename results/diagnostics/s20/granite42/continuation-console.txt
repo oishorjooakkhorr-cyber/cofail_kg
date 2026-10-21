@@ -1,0 +1,11 @@
+START 13/20 BH2_03991
+{"index": 13, "query_id": "BH2_03991", "exit_code": 0, "checked_at": "2026-10-19T14:27:56.409843+00:00", "status": "SUCCESS", "cause": null, "wall_seconds": 155.876456, "sha256": "fd7586e477578bcc6e50d53725eace9fd65eb5c4e89d8b9ef45dc2a25fecfb06"}
+START 14/20 BH2_04003
+{"index": 14, "query_id": "BH2_04003", "exit_code": 0, "checked_at": "2026-10-19T14:31:03.730057+00:00", "status": "SUCCESS", "cause": null, "wall_seconds": 176.102251, "sha256": "cb64d91d966959e37909e3deeb546c014be2ad3c63ef5b5c5e88ae70c347b288"}
+START 15/20 BH2_04007
+{"index": 15, "query_id": "BH2_04007", "exit_code": 0, "checked_at": "2026-10-19T14:33:38.892684+00:00", "status": "ERROR", "cause": "CONNECTION", "wall_seconds": 144.983317, "sha256": "7bff4fc1138b5bebb10bc09ec89b387195efdb8e19092ee2cba9695bab69d308"}
+Traceback (most recent call last):
+  File "E:\Phitron Thesis\cofail_kg\results\diagnostics\s20\granite42\s20_granite42_continue.py", line 69, in <module>
+    assert record['status'] != 'ERROR', f'STOP: saved ERROR {record["cause"]}'
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: STOP: saved ERROR CONNECTION

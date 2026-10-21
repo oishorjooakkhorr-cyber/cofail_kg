@@ -1,5 +1,7 @@
 # S20 Ministral 3 8B screening complete (2026-10-19)
 
+**Follow-up (2026-10-20):** Ministral subsequently failed the complete fresh twenty-query 16K D3 reassessment (12 SUCCESS, eight request-timeout errors, 12 competent). It remains not accepted; the original 8K results below remain historical evidence. See [full 16K reassessment](S20_full_16k_reassessment.md).
+
 All 20 frozen queries are saved for `Ministral3-8B` in
 `primary-3060ti-20261018`. **This candidate fails D3** because SUCCESS is
 15/20 (75%), below the required 90%. The other four criteria pass. Four

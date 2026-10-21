@@ -1,0 +1,91 @@
+Starting BH2_00461 / gemma4:e4b-it-q4_K_M (new episode 1)
+SAVED Gemma4-E4B 1/20 BH2_00461 SUCCESS None
+Starting BH2_02033 / gemma4:e4b-it-q4_K_M (new episode 2)
+SAVED Gemma4-E4B 2/20 BH2_02033 SUCCESS None
+Starting BH2_03434 / gemma4:e4b-it-q4_K_M (new episode 3)
+SAVED Gemma4-E4B 3/20 BH2_03434 SUCCESS None
+Starting BH2_03619 / gemma4:e4b-it-q4_K_M (new episode 4)
+SAVED Gemma4-E4B 4/20 BH2_03619 SUCCESS None
+Starting BH2_03750 / gemma4:e4b-it-q4_K_M (new episode 5)
+SAVED Gemma4-E4B 5/20 BH2_03750 SUCCESS None
+Starting BH2_03760 / gemma4:e4b-it-q4_K_M (new episode 6)
+SAVED Gemma4-E4B 6/20 BH2_03760 SUCCESS None
+Starting BH2_03762 / gemma4:e4b-it-q4_K_M (new episode 7)
+SAVED Gemma4-E4B 7/20 BH2_03762 PARSE_FAIL None
+Starting BH2_03850 / gemma4:e4b-it-q4_K_M (new episode 8)
+SAVED Gemma4-E4B 8/20 BH2_03850 SUCCESS None
+Starting BH2_03856 / gemma4:e4b-it-q4_K_M (new episode 9)
+SAVED Gemma4-E4B 9/20 BH2_03856 SUCCESS None
+Starting BH2_03879 / gemma4:e4b-it-q4_K_M (new episode 10)
+SAVED Gemma4-E4B 10/20 BH2_03879 SUCCESS None
+Starting BH2_03881 / gemma4:e4b-it-q4_K_M (new episode 11)
+SAVED Gemma4-E4B 11/20 BH2_03881 SUCCESS None
+Starting BH2_03953 / gemma4:e4b-it-q4_K_M (new episode 12)
+SAVED Gemma4-E4B 12/20 BH2_03953 SUCCESS None
+Starting BH2_03991 / gemma4:e4b-it-q4_K_M (new episode 13)
+SAVED Gemma4-E4B 13/20 BH2_03991 SUCCESS None
+Starting BH2_04003 / gemma4:e4b-it-q4_K_M (new episode 14)
+SAVED Gemma4-E4B 14/20 BH2_04003 SUCCESS None
+Starting BH2_04007 / gemma4:e4b-it-q4_K_M (new episode 15)
+SAVED Gemma4-E4B 15/20 BH2_04007 SUCCESS None
+Starting BH2_04425 / gemma4:e4b-it-q4_K_M (new episode 16)
+SAVED Gemma4-E4B 16/20 BH2_04425 SUCCESS None
+Starting BH2_05366 / gemma4:e4b-it-q4_K_M (new episode 17)
+SAVED Gemma4-E4B 17/20 BH2_05366 SUCCESS None
+Starting BH2_05686 / gemma4:e4b-it-q4_K_M (new episode 18)
+SAVED Gemma4-E4B 18/20 BH2_05686 SUCCESS None
+Starting BH2_05843 / gemma4:e4b-it-q4_K_M (new episode 19)
+SAVED Gemma4-E4B 19/20 BH2_05843 SUCCESS None
+Starting BH2_06427 / gemma4:e4b-it-q4_K_M (new episode 20)
+SAVED Gemma4-E4B 20/20 BH2_06427 SUCCESS None
+{
+  "context": 16384,
+  "researcher_authorized_reassessment": true,
+  "screening_row": {
+    "run_id": "context16k-3060ti-20261020",
+    "agent_id": "Gemma4-E4B",
+    "tag": "gemma4:e4b-it-q4_K_M",
+    "digest": "dc35e8d9c6061baa6f0fa870975ab6932e2542b579b13ea0f199fa4bb7300c9c",
+    "quantization": "Q4_K_M",
+    "parameter_size": "7.5B",
+    "family": "Gemma",
+    "episodes_completed": 20,
+    "episodes_expected": 20,
+    "complete": true,
+    "native_calls": 181,
+    "text_tool_calls": 0,
+    "attempted_calls": 181,
+    "well_formed_calls": 181,
+    "well_formed_rate": 1.0,
+    "success_episodes": 19,
+    "success_rate": 0.95,
+    "competent_episodes": 14,
+    "competence": 0.7,
+    "median_wall_seconds": 16.2779325,
+    "out_of_memory_episodes": 0,
+    "largest_prompt_eval_count": 16314,
+    "median_tool_calls": 8.0,
+    "budget_hit_share": 0.0,
+    "pass_well_formed": true,
+    "pass_success": true,
+    "pass_competence": true,
+    "pass_time": true,
+    "pass_oom": true,
+    "d3_pass": true
+  },
+  "accepted_at_16k": true,
+  "status_counts": {
+    "SUCCESS": 19,
+    "PARSE_FAIL": 1
+  },
+  "label_a_counts": {
+    "GOLD": 578,
+    "OFF_QUESTION": 34,
+    "ALT_VALID": 17
+  },
+  "label_b_counts": {
+    "SUPPORTED": 575,
+    "PATH_INVALID": 54
+  }
+}
+COMPLETE Gemma4-E4B: 20/20; D3 PASS at 16K.

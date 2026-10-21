@@ -1,0 +1,125 @@
+[
+  {
+    "agent_id": "Gemma4-E4B",
+    "d3_8k": false,
+    "d3_16k": true,
+    "success_8k": 16,
+    "success_16k": 19,
+    "competent_8k": 11,
+    "competent_16k": 14,
+    "median_wall_8k": 11.9732305,
+    "median_wall_16k": 16.2779325,
+    "status_16k": {
+      "PARSE_FAIL": 1,
+      "SUCCESS": 19
+    },
+    "old_parse_failures": [
+      {
+        "query_id": "BH2_03619",
+        "status_16k": "SUCCESS",
+        "supported_answers_16k": 77
+      },
+      {
+        "query_id": "BH2_03762",
+        "status_16k": "PARSE_FAIL",
+        "supported_answers_16k": 0
+      },
+      {
+        "query_id": "BH2_03850",
+        "status_16k": "SUCCESS",
+        "supported_answers_16k": 66
+      },
+      {
+        "query_id": "BH2_03953",
+        "status_16k": "SUCCESS",
+        "supported_answers_16k": 90
+      }
+    ],
+    "new_failures_from_old_success": [],
+    "thinking_messages_16k": 0,
+    "episode_start_utc": "2026-10-20T07:46:27.170422+00:00",
+    "episode_finish_utc": "2026-10-20T07:52:33.233262+00:00",
+    "block_elapsed_seconds": 366.06284
+  },
+  {
+    "agent_id": "Qwen35-9B",
+    "d3_8k": true,
+    "d3_16k": true,
+    "success_8k": 18,
+    "success_16k": 19,
+    "competent_8k": 15,
+    "competent_16k": 13,
+    "median_wall_8k": 26.383874,
+    "median_wall_16k": 56.839506,
+    "status_16k": {
+      "PARSE_FAIL": 1,
+      "SUCCESS": 19
+    },
+    "old_parse_failures": [
+      {
+        "query_id": "BH2_03856",
+        "status_16k": "SUCCESS",
+        "supported_answers_16k": 0
+      },
+      {
+        "query_id": "BH2_03881",
+        "status_16k": "SUCCESS",
+        "supported_answers_16k": 0
+      }
+    ],
+    "new_failures_from_old_success": [
+      "BH2_03991"
+    ],
+    "thinking_messages_16k": 0,
+    "episode_start_utc": "2026-10-20T07:52:46.557764+00:00",
+    "episode_finish_utc": "2026-10-20T08:13:08.099823+00:00",
+    "block_elapsed_seconds": 1221.542059
+  },
+  {
+    "agent_id": "Ministral3-8B",
+    "d3_8k": false,
+    "d3_16k": false,
+    "success_8k": 15,
+    "success_16k": 12,
+    "competent_8k": 10,
+    "competent_16k": 12,
+    "median_wall_8k": 62.850685999999996,
+    "median_wall_16k": 168.0803425,
+    "status_16k": {
+      "ERROR": 8,
+      "SUCCESS": 12
+    },
+    "old_parse_failures": [
+      {
+        "query_id": "BH2_03619",
+        "status_16k": "ERROR",
+        "supported_answers_16k": 0
+      },
+      {
+        "query_id": "BH2_03881",
+        "status_16k": "SUCCESS",
+        "supported_answers_16k": 11
+      },
+      {
+        "query_id": "BH2_03991",
+        "status_16k": "ERROR",
+        "supported_answers_16k": 0
+      },
+      {
+        "query_id": "BH2_04003",
+        "status_16k": "ERROR",
+        "supported_answers_16k": 0
+      }
+    ],
+    "new_failures_from_old_success": [
+      "BH2_03750",
+      "BH2_03856",
+      "BH2_03879",
+      "BH2_03953"
+    ],
+    "thinking_messages_16k": 0,
+    "episode_start_utc": "2026-10-20T08:13:17.789900+00:00",
+    "episode_finish_utc": "2026-10-20T09:07:19.602372+00:00",
+    "block_elapsed_seconds": 3241.812472
+  }
+]

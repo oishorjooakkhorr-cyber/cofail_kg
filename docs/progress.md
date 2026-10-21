@@ -1,3 +1,104 @@
+# Current S20 status — 2026-10-21
+
+**Command R7B complete: D3 FAIL at 8K.** All twenty queries saved: nineteen
+SUCCESS, one PARSE_FAIL, zero tool attempts and zero competent queries.
+Median 2.889849 s, zero OOM. Undefined 0/0 call validity fails D3 along with
+competence. Forty-two screening tests, offline reporting and integrity checks
+passed; all eight earlier table rows are unchanged. Nine original 8K blocks
+and three full 16K reassessments are now complete.
+[Report](S20_command_r7b_screening.md). Three passing candidates remain;
+S21 selection is pending. Older counts below describe the previous checkpoint.
+
+**Granite 4.1 16K stopped by researcher:** 15/20 final outcomes saved,
+six SUCCESS and nine ERROR/CONNECTION read timeouts. Query 16 was interrupted
+without a final record; the last four were unstarted. Final D3 verdict is
+unassigned for this incomplete block; at most 11/20 SUCCESS was still possible.
+Original 8K PASS remains unchanged. No resumption without a new instruction.
+[Stopped-run report](S20_granite41_16k_stopped.md).
+
+Eight candidates have completed their original twenty-query 8K blocks; Gemma,
+Qwen and Ministral also have separate complete twenty-query 16K reassessments.
+The [complete results and failure history](S20_screening_status.md) reconcile
+all eight candidates and all eleven full blocks without mixing denominators.
+
+- **PASS:** Granite41-8B at 8K; Gemma4-E4B and Qwen35-9B at 16K.
+- **FAIL:** Llama31-8B and Granite33-8B (call validity and competence),
+  Granite42-8B (SUCCESS and competence), OLMo3-7B (competence), and
+  Ministral3-8B (SUCCESS at both 8K and 16K).
+- Original 8K Gemma FAIL and Qwen PASS remain recorded separately. All failed
+  outcomes remain in their original denominators.
+
+**Granite 4.1 screening complete (2026-10-21): D3 PASS.** All twenty frozen
+queries saved as SUCCESS; competence 14/20 (70%), calls 217/217, median wall
+61.3250475 s, OOM 0. No ERROR, TIMEOUT, PARSE_FAIL or thinking messages.
+525/568 submitted items are question-valid/SUPPORTED; 43 are
+OFF_QUESTION/PATH_INVALID. The 42 screening tests and synthetic native-tool
+preflight passed; offline report and all new/prior integrity checks passed.
+Report: [S20_granite41_screening.md](S20_granite41_screening.md).
+
+Three passing candidates cover three developer families; a fourth passing model
+is still required. No S21 selection/freeze or new candidate authorization.
+The entries below are dated history; earlier deferred/unrun/untested statements
+do not override this current status.
+
+**Full 16K D3 reassessment complete (2026-10-20): Gemma PASS, Qwen PASS,
+Ministral FAIL.** All sixty fresh queries completed, twenty per model, without
+stitching selected diagnostic outputs into old results. Current researcher-
+authorized acceptance: Gemma4-E4B and Qwen35-9B pass at 16K; Ministral3-8B does not.
+Gemma: SUCCESS 19/20, competence 14/20, calls 181/181, median 16.2779325 s, OOM 0.
+Qwen: SUCCESS 19/20, competence 13/20, calls 263/263, median 56.839506 s, OOM 0.
+Ministral: SUCCESS 12/20, competence 12/20, calls 167/167, median 168.0803425 s,
+OOM 0; eight preserved request-timeout errors cause its SUCCESS-criterion FAIL.
+42 focused tests passed; all three offline reports reproduced. All 63 new run
+hashes, 147 old run hashes, 140 old metrics, old table, 43 pinned sources, 122
+protected identities and prior diagnostic evidence are unchanged. All starting
+prompts match their 8K counterparts; only configured scientific change is context.
+Historical 8K verdicts remain preserved. No S21 selection/freeze.
+Report: docs/S20_full_16k_reassessment.md.
+Acceptance: results/diagnostics/s20/full-16k-20261020/acceptance.json.
+
+**S20 context-window audit complete (2026-10-20; offline).** Across all 140
+saved official episodes, earlier context-related parse failures occur in Qwen3.5
+9B (two direct cases) and Ministral 3 8B (three direct cases plus one mixed
+context/schema failure). Five earlier final responses end exactly at 8192 tokens
+with length termination and output below the 4096 cap. Ministral BH2_03619 first
+hits context but its final normal-stop reply omits answers. Qwen/Ministral 16K
+recovery remains untested. Gemma's existing 4/4 parsing recovery and 3/4 competent
+16K diagnostic is documented separately. Twenty saved parser errors reproduced;
+all original/diagnostic/source hashes unchanged; no model call or D3 change.
+Report: docs/S20_context_window_audit.md.
+
+**Gemma 4 E4B 16K diagnostic complete (2026-10-20).** The four original
+8K PARSE_FAIL queries all completed SUCCESS at 16K in one continuous process.
+Three recovered supported answers (85, 66, 90 GOLD/SUPPORTED items); BH2_03762
+parsed but all six answers were OFF_QUESTION/PATH_INVALID. Only num_ctx changed
+scientifically; 51/51 native calls well formed; no thinking, errors or OOM.
+Actual context 16384 verified. All 147 official runs, 140 metrics, official table,
+43 pinned and 122 protected hashes unchanged. Original S20 D3 remains FAIL;
+this selected diagnostic does not establish a full 16K D3 result.
+Report: docs/S20_gemma4_16k_diagnostic.md.
+
+**S20 Gemma 4 E4B complete (2026-10-20): candidate fails D3 on SUCCESS rate.**
+All 20 frozen queries ran uninterrupted in one --max-new 20 invocation: 16 SUCCESS,
+four preserved PARSE_FAIL, no ERROR/TIMEOUT/OOM. D3: 149/149 well-formed calls
+(PASS), SUCCESS 80% (FAIL), competence 11/20=55% (PASS), median wall
+11.9732305 s (PASS), OOM 0 (PASS). No thinking; largest prompt 8190.
+598 tests passed; synthetic native tools/think=false passed. Offline report-only,
+147 run hashes (126 prior), 120 prior metrics, 122 protected, 43 pinned sources
+and six prior table rows verified. No source/scientific change, retries or S21.
+Report: docs/S20_gemma4_screening.md.
+
+**S20 Granite 4.2 8B complete (2026-10-19): candidate fails D3.** All twenty
+frozen outcomes saved: 17 SUCCESS and three preserved ERROR/CONNECTION timeouts.
+D3: 327/327 well-formed calls (PASS), SUCCESS 17/20=85% (FAIL), competence
+6/20=30% (FAIL), median wall 120.247903 s (PASS), OOM 0 (PASS). Largest prompt
+8190, median charged calls 12.5, budget-hit share 35%, no thinking messages.
+Final four all SUCCESS under the researcher-approved timeout continuation policy.
+598 tests passed before inference; final report-only, all 126 run hashes
+(122 last checkpoint, 105 prior), 122 protected, 43 pinned and 116 existing metrics
+verified; prior table rows unchanged. No rerun, source/scientific change, S21,
+commit or push. Report: docs/S20_granite42_screening.md.
+
 **S20 OLMo 3 7B Instruct complete (2026-10-19): candidate fails D3.** All 20
 frozen queries saved in primary-3060ti-20261018. D3: 60/62 well-formed calls
 (96.7742%, PASS), SUCCESS 20/20 (PASS), competence 0/20 (FAIL), median wall

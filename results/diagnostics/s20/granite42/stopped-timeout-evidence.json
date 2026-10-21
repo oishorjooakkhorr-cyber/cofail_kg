@@ -1,0 +1,389 @@
+{
+  "query_id": "BH2_03953",
+  "status": "ERROR",
+  "cause": "CONNECTION",
+  "timestamps": {
+    "finished_at": "2026-10-19T14:19:12.623554+00:00",
+    "started_at": "2026-10-19T14:16:53.057741+00:00"
+  },
+  "log_events": [
+    {
+      "agent_inputs_sha256": "4624021f742d1f7a8ece8ef8545033b5481c1de7ec62fba554f952d74f04ba27",
+      "draft_prompt": false,
+      "event": "EPISODE_CONFIG",
+      "request_timeout_seconds": 120,
+      "source_sha256": {
+        "configs/frozen_hashes.yaml": "7db879075c3893051fef0a91dfea528dd8daee6b79426d62db573461ce174b36",
+        "configs/ollama.yaml": "aa721697935e602b80845a00f53c6dbbea5c8729010b00deb1cfc285a83b9288",
+        "data/agent_inputs/screening.jsonl": "4624021f742d1f7a8ece8ef8545033b5481c1de7ec62fba554f952d74f04ba27",
+        "data/cache/primekg_metadata.json": "bc5d3fd2f12aeb29398fe4684c83d8c65c7bd5c1edf704573322295bdc6b2e95",
+        "data/processed/manifests/screening.jsonl": "58421a410eb32413b7af7dfa157ef4a430b5ccf7e087dc1f8d60d597730c12b9",
+        "data/processed/primary_population.csv": "24a876a1bcca9e4e4fc5d273460212b47e38d95b0949c1770096fb46b79b41b8",
+        "data/processed/reference_queries.parquet": "7d3be769ac5abfa99e3da94a03a70b2ada03c3b8ca5a21a2b61184cc33e0ad07",
+        "data/processed/reference_summary.json": "f9009e75a23e9c11dd131554a225038ad36256e13737d0612dde18f4f13c33d8",
+        "data/processed/reference_targets.parquet": "3cc447fb262fc29d3f9cf1de1b589deef249ef2c2fe257272bebbf70e9310943",
+        "docs/decision_rules.md": "c007b1afb96c2b1967fc3ba5964d0dcfdf0197ba0039d71a46c46febbe222175",
+        "docs/frozen_pilot_protocol.md": "d87b111cc2cd918882c95f75f1fcc757a0532bac26455e633d52d2e2490e773b",
+        "results/semantics/relation_mapping.json": "2d609332b6a4ff48423bd7b2f1cb98d8d2d9cafc2fe80c20f7cee8184b8bb8c0",
+        "scripts/20_screen_models.py": "c558a80d5a1f7a931432f366e173fb1c467ec37499c616950be810b953db8ed1",
+        "src/cofail_kg/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "src/cofail_kg/agents/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "src/cofail_kg/agents/kg_env.py": "957c31d77988add1804f127f2889297b55388c1a6401b9d6948b3a639c430549",
+        "src/cofail_kg/agents/ollama_client.py": "c5fc85390ab74233c5696ea68e8f5915dcca986480d731fd89f28544018988dd",
+        "src/cofail_kg/agents/prompts.py": "1b590b92db92da365b668112d981f05827d1d70600deb76297a969e5539d3e4e",
+        "src/cofail_kg/agents/run_agent.py": "ba12a6ccce5626c08fac066463713a9ace780495df6d6fa348a11800cd94016a",
+        "src/cofail_kg/agents/tool_schemas.py": "fe95093be50073aca922360645240d4410737fb39f11061aa1f5f2df0a8b0bab",
+        "src/cofail_kg/agents/trace.py": "6cff52a7646e5ceaef01a487db5427293ae62e7a3b2ca94f9c805b83cdec7ffc",
+        "src/cofail_kg/analysis/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "src/cofail_kg/data/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "src/cofail_kg/data/biohopr_loader.py": "0ab1de558c393c1b5a68c3fba7c3e2b688c72b00f300951fe3b4826a92f41a2a",
+        "src/cofail_kg/data/diagnostics.py": "9c0ca21667702af80892daadf78991a13415f5efcef1b5af73bdcb8eff3d33e3",
+        "src/cofail_kg/data/field_roles.py": "2058c020f46649d2e009c1849fb5f59ace3ba787a7102efb3d859b69dc7818ee",
+        "src/cofail_kg/data/sampling.py": "37a895cd5d7c48876a567a716ab8cab768aacaac522809257faee25bd72367f8",
+        "src/cofail_kg/evaluation/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "src/cofail_kg/evaluation/agent_metrics.py": "ad4de6694b6a1bdb8c02c7110e9a5f7a08cbabbdf3bd9a5960eb107d37fc3c1c",
+        "src/cofail_kg/evaluation/answer_labels.py": "35297976b8cf94909b5c0b78f097309a986a3221a7a62016c1c15cb71aa41537",
+        "src/cofail_kg/evaluation/dataset_evidence.py": "fed445c9731b187f0023c3e8d6b1a19cd8ab9a1d3a6c0c56136f69ba9a9790e4",
+        "src/cofail_kg/evaluation/normalize.py": "d6bb073cc92389d9b370c10de4f56ce0698fe99f05ec0392c89f3999c990d849",
+        "src/cofail_kg/evaluation/path_labels.py": "f42c25dbe1a1031f33061b2788431784a92af8da07f6735e92e1878fa3f709ab",
+        "src/cofail_kg/evaluation/primary_population.py": "d0e4bc52671616b97fbbb28935effb3bb4a69b413d5bce7cdd1c24fa7eae96e7",
+        "src/cofail_kg/evaluation/query_validation.py": "f0cf029d7e89d4c37f16f7366324a33d9b050461338486bf6905e65ee5838dd6",
+        "src/cofail_kg/evaluation/reference_sets.py": "f1bc1767f8f5460aab8534bd94a6c2cefd2883e02cb99ea4324dd9a93e07339d",
+        "src/cofail_kg/evaluation/relation_mapping.py": "138349d6e5cdbfa16a66c0f398c02a2846be86a1f71678d355c3cd0ddf8a4a27",
+        "src/cofail_kg/evaluation/screening.py": "afd33f7ce54b9537435ff4f112048040e5082b24f2e4972ab3e7159dceb9c1f9",
+        "src/cofail_kg/kg/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "src/cofail_kg/kg/prepare.py": "9b238ce9fecd81c127626122084d42d2e7d6f591fe2d5a1a491bb5cc275d720d",
+        "src/cofail_kg/kg/primekg_index.py": "048581ebcd38780cf43015de23749ba326d6fa7d6d3b039f664d6fc68704869a",
+        "src/cofail_kg/utils/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "src/cofail_kg/utils/frozen_hashes.py": "c6f03344020be7fb85a62af5adc0dcb16807a89b574378bc0d3afe23d0ee75bf"
+      },
+      "think": false,
+      "timeout_seconds": 600
+    },
+    {
+      "event": "CHAT_RESPONSE",
+      "latency_seconds": 1.3633830999970087,
+      "message_index": 2,
+      "raw_response": {
+        "created_at": "2026-10-19T14:16:56.719338Z",
+        "done": true,
+        "done_reason": "stop",
+        "eval_count": 33,
+        "eval_duration": 818366000,
+        "load_duration": 1822800,
+        "message": {
+          "content": "",
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": {
+                  "entity_id": "37038"
+                },
+                "index": 0,
+                "name": "inspect_entity"
+              },
+              "id": "ZZRYK1fY8TkEiom2Gr6NcXWs5rIGoa1A"
+            }
+          ]
+        },
+        "model": "granite4.2:8b",
+        "prompt_eval_cached_count": 708,
+        "prompt_eval_count": 759,
+        "prompt_eval_duration": 63040000,
+        "total_duration": 1361134900
+      }
+    },
+    {
+      "event": "CHAT_RESPONSE",
+      "latency_seconds": 1.897867600004247,
+      "message_index": 4,
+      "raw_response": {
+        "created_at": "2026-10-19T14:16:58.6783507Z",
+        "done": true,
+        "done_reason": "stop",
+        "eval_count": 72,
+        "eval_duration": 1738594000,
+        "load_duration": 3594700,
+        "message": {
+          "content": "",
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": {
+                  "entity_id": "37038",
+                  "neighbor_type": "drug",
+                  "page": 1,
+                  "relation": "indication"
+                },
+                "index": 0,
+                "name": "get_neighbors"
+              },
+              "id": "03MY14AQSS8IMjPucrU6MQ174TgiLUyZ"
+            }
+          ]
+        },
+        "model": "granite4.2:8b",
+        "prompt_eval_cached_count": 791,
+        "prompt_eval_count": 1014,
+        "prompt_eval_duration": 129366999,
+        "total_duration": 1895224400
+      }
+    },
+    {
+      "event": "CHAT_RESPONSE",
+      "latency_seconds": 1.9913564000016777,
+      "message_index": 6,
+      "raw_response": {
+        "created_at": "2026-10-19T14:17:00.6872362Z",
+        "done": true,
+        "done_reason": "stop",
+        "eval_count": 74,
+        "eval_duration": 1840450000,
+        "load_duration": 3128800,
+        "message": {
+          "content": "",
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": {
+                  "entity_id": "14203",
+                  "neighbor_type": "drug",
+                  "page": 1,
+                  "relation": "contraindication"
+                },
+                "index": 0,
+                "name": "get_neighbors"
+              },
+              "id": "JCqm0nb5Mkw2njrQXHsUAcLPptkyV0dh"
+            }
+          ]
+        },
+        "model": "granite4.2:8b",
+        "prompt_eval_cached_count": 1085,
+        "prompt_eval_count": 1234,
+        "prompt_eval_duration": 105254000,
+        "total_duration": 1989124600
+      }
+    },
+    {
+      "event": "CHAT_RESPONSE",
+      "latency_seconds": 1.929134799996973,
+      "message_index": 8,
+      "raw_response": {
+        "created_at": "2026-10-19T14:17:02.6281273Z",
+        "done": true,
+        "done_reason": "stop",
+        "eval_count": 74,
+        "eval_duration": 1817985000,
+        "load_duration": 3185300,
+        "message": {
+          "content": "",
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": {
+                  "entity_id": "14203",
+                  "neighbor_type": "drug",
+                  "page": 1,
+                  "relation": "off-label use"
+                },
+                "index": 0,
+                "name": "get_neighbors"
+              },
+              "id": "1yZnp89jM4q9W8UY1kOpwfuoxIzKDNbC"
+            }
+          ]
+        },
+        "model": "granite4.2:8b",
+        "prompt_eval_cached_count": 1307,
+        "prompt_eval_count": 1357,
+        "prompt_eval_duration": 62958000,
+        "total_duration": 1915956300
+      }
+    },
+    {
+      "event": "CHAT_RESPONSE",
+      "latency_seconds": 0.9135382000022219,
+      "message_index": 10,
+      "raw_response": {
+        "created_at": "2026-10-19T14:17:03.5498047Z",
+        "done": true,
+        "done_reason": "stop",
+        "eval_count": 33,
+        "eval_duration": 806497000,
+        "load_duration": 3444900,
+        "message": {
+          "content": "",
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": {
+                  "entity_id": "14203"
+                },
+                "index": 0,
+                "name": "inspect_entity"
+              },
+              "id": "66DT55ZjBJXrRcxpi7EgbgysZBgjn7Fl"
+            }
+          ]
+        },
+        "model": "granite4.2:8b",
+        "prompt_eval_cached_count": 1430,
+        "prompt_eval_count": 1480,
+        "prompt_eval_duration": 66664000,
+        "total_duration": 910969600
+      }
+    },
+    {
+      "event": "CHAT_RESPONSE",
+      "latency_seconds": 2.1911813000042457,
+      "message_index": 12,
+      "raw_response": {
+        "created_at": "2026-10-19T14:17:05.7482239Z",
+        "done": true,
+        "done_reason": "stop",
+        "eval_count": 76,
+        "eval_duration": 1978455000,
+        "load_duration": 5143000,
+        "message": {
+          "content": "",
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": {
+                  "entity_id": "14203",
+                  "neighbor_type": "effect/phenotype",
+                  "page": 1,
+                  "relation": "drug_effect"
+                },
+                "index": 0,
+                "name": "get_neighbors"
+              },
+              "id": "mpLz7CH8F62IaU1TtW9YcM1NKvmUpuYM"
+            }
+          ]
+        },
+        "model": "granite4.2:8b",
+        "prompt_eval_cached_count": 1512,
+        "prompt_eval_count": 1782,
+        "prompt_eval_duration": 166596000,
+        "total_duration": 2188606200
+      }
+    },
+    {
+      "event": "CHAT_RESPONSE",
+      "latency_seconds": 3.257886799998232,
+      "message_index": 14,
+      "raw_response": {
+        "created_at": "2026-10-19T14:17:09.025831Z",
+        "done": true,
+        "done_reason": "stop",
+        "eval_count": 76,
+        "eval_duration": 2237815000,
+        "load_duration": 3666300,
+        "message": {
+          "content": "",
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": {
+                  "entity_id": "14685",
+                  "neighbor_type": "effect/phenotype",
+                  "page": 1,
+                  "relation": "drug_effect"
+                },
+                "index": 0,
+                "name": "get_neighbors"
+              },
+              "id": "zTVLoPrkCPJXXkmlntarPFXdJHcFfuwy"
+            }
+          ]
+        },
+        "model": "granite4.2:8b",
+        "prompt_eval_cached_count": 1857,
+        "prompt_eval_count": 3651,
+        "prompt_eval_duration": 965334000,
+        "total_duration": 3255788300
+      }
+    },
+    {
+      "event": "CHAT_RESPONSE",
+      "latency_seconds": 3.54262330000347,
+      "message_index": 16,
+      "raw_response": {
+        "created_at": "2026-10-19T14:17:12.5897092Z",
+        "done": true,
+        "done_reason": "stop",
+        "eval_count": 76,
+        "eval_duration": 2470734000,
+        "load_duration": 3682600,
+        "message": {
+          "content": "",
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": {
+                  "entity_id": "15435",
+                  "neighbor_type": "effect/phenotype",
+                  "page": 1,
+                  "relation": "drug_effect"
+                },
+                "index": 0,
+                "name": "get_neighbors"
+              },
+              "id": "TJPYN14cnZHqsO7ppYtLv0hVT5fc9q5u"
+            }
+          ]
+        },
+        "model": "granite4.2:8b",
+        "prompt_eval_cached_count": 3726,
+        "prompt_eval_count": 5512,
+        "prompt_eval_duration": 1008675000,
+        "total_duration": 3540196700
+      }
+    },
+    {
+      "event": "ERROR",
+      "http_status": null,
+      "message": "HTTPConnectionPool(host='127.0.0.1', port=11434): Read timed out. (read timeout=120)",
+      "response_text": null,
+      "type": "OllamaError"
+    }
+  ],
+  "calls": 8,
+  "last_messages": [
+    {
+      "content": "",
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "function": {
+            "arguments": {
+              "entity_id": "15435",
+              "neighbor_type": "effect/phenotype",
+              "page": 1,
+              "relation": "drug_effect"
+            },
+            "index": 0,
+            "name": "get_neighbors"
+          },
+          "id": "TJPYN14cnZHqsO7ppYtLv0hVT5fc9q5u"
+        }
+      ]
+    },
+    {
+      "content": "{\"items\": [{\"id\": \"22262\", \"name\": \"Edema\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"22457\", \"name\": \"Peripheral neuropathy\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"22458\", \"name\": \"Abnormal peripheral nervous system morphology\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"22539\", \"name\": \"Inflammatory abnormality of the skin\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"22594\", \"name\": \"Hyperhidrosis\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"22786\", \"name\": \"Increased body weight\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"22824\", \"name\": \"Cardiomyopathy\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"22859\", \"name\": \"Congestive heart failure\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"22952\", \"name\": \"Fever\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"22982\", \"name\": \"Pain\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"23000\", \"name\": \"Seizure\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"23002\", \"name\": \"Headache\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"23010\", \"name\": \"Abnormal lung morphology\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"23011\", \"name\": \"Dyspnea\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"23073\", \"name\": \"Alopecia\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"23094\", \"name\": \"Excessive salivation\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"23139\", \"name\": \"Sensory impairment\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"23157\", \"name\": \"Vomiting\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"23158\", \"name\": \"Abdominal pain\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"23183\", \"name\": \"Thrombophlebitis\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"23799\", \"name\": \"Alopecia of scalp\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"23855\", \"name\": \"Deep venous thrombosis\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"23864\", \"name\": \"Respiratory distress\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"24199\", \"name\": \"Hepatomegaly\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"24461\", \"name\": \"Abnormality of the skin\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"24492\", \"name\": \"Adrenal insufficiency\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"25311\", \"name\": \"Urinary incontinence\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"25520\", \"name\": \"Lethargy\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"25526\", \"name\": \"Hyperglycemia\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"25644\", \"name\": \"Paresthesia\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"25657\", \"name\": \"Albuminuria\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"25945\", \"name\": \"Pruritus\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"26160\", \"name\": \"Cough\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"26162\", \"name\": \"Confusion\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"26336\", \"name\": \"Chest pain\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"33730\", \"name\": \"Leukopenia\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"33751\", \"name\": \"Pneumonia\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"84409\", \"name\": \"Nausea\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"84420\", \"name\": \"Polyphagia\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"84452\", \"name\": \"Drooling\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"84549\", \"name\": \"Xerostomia\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"84693\", \"name\": \"Emotional lability\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"84697\", \"name\": \"Mood swings\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"84855\", \"name\": \"Polyneuropathy\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"84920\", \"name\": \"Mood changes\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"85015\", \"name\": \"Palpitations\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"89307\", \"name\": \"Peripheral edema\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"93440\", \"name\": \"Pollakisuria\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"93477\", \"name\": \"Metrorrhagia\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}], \"total_count\": 49, \"page\": 1, \"page_size\": 50, \"has_more\": false}",
+      "role": "tool",
+      "tool_call_id": "TJPYN14cnZHqsO7ppYtLv0hVT5fc9q5u",
+      "tool_name": "get_neighbors"
+    }
+  ]
+}

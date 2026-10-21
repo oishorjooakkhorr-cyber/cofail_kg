@@ -1,0 +1,49 @@
+{
+  "context": 16384,
+  "researcher_authorized_reassessment": true,
+  "screening_row": {
+    "run_id": "context16k-3060ti-20261020",
+    "agent_id": "Qwen35-9B",
+    "tag": "qwen3.5:9b",
+    "digest": "56671c2ab9385f9cfcb404638e32cd62d88e3501d44822208363c010179a3c90",
+    "quantization": "Q4_K_M",
+    "parameter_size": "9.0B",
+    "family": "Qwen",
+    "episodes_completed": 20,
+    "episodes_expected": 20,
+    "complete": true,
+    "native_calls": 263,
+    "text_tool_calls": 0,
+    "attempted_calls": 263,
+    "well_formed_calls": 263,
+    "well_formed_rate": 1.0,
+    "success_episodes": 19,
+    "success_rate": 0.95,
+    "competent_episodes": 13,
+    "competence": 0.65,
+    "median_wall_seconds": 56.839506,
+    "out_of_memory_episodes": 0,
+    "largest_prompt_eval_count": 16379,
+    "median_tool_calls": 9.5,
+    "budget_hit_share": 0.1,
+    "pass_well_formed": true,
+    "pass_success": true,
+    "pass_competence": true,
+    "pass_time": true,
+    "pass_oom": true,
+    "d3_pass": true
+  },
+  "accepted_at_16k": true,
+  "status_counts": {
+    "SUCCESS": 19,
+    "PARSE_FAIL": 1
+  },
+  "label_a_counts": {
+    "GOLD": 545,
+    "ALT_VALID": 17
+  },
+  "label_b_counts": {
+    "SUPPORTED": 562
+  }
+}
+COMPLETE Qwen35-9B: 20/20; D3 PASS at 16K.

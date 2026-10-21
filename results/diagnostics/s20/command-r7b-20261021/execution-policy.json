@@ -1,0 +1,22 @@
+{
+  "authorization": "Researcher requested the whole S20 test, all 20 queries, for command-r7b:7b on 2026-10-21.",
+  "model": "command-r7b:7b",
+  "expected_digest": "ff4e9696ef9f19b62e3f7d7261c95dcc9bb15a7c0398493366d851119fe2e1ef",
+  "agent_id": "CommandR7B-7B",
+  "family": "Cohere",
+  "run_id": "command-r7b-3060ti-20261021",
+  "settings": {
+    "temperature": 0,
+    "seed": 42,
+    "num_ctx": 8192,
+    "num_predict": 4096,
+    "page_size": 50,
+    "budget": 30,
+    "timeout_seconds": 600
+  },
+  "episodes": 20,
+  "retain_all_final_statuses": true,
+  "retry_completed_episodes": false,
+  "select_s21_models": false,
+  "round_accounting": "Not assigned; researcher decision."
+}

@@ -1,0 +1,42 @@
+{
+  "recorded_at": "2026-10-21T05:57:42.690177+00:00",
+  "run_state": "STOPPED_BY_USER",
+  "complete": false,
+  "expected": 20,
+  "saved": 15,
+  "status_counts": {
+    "SUCCESS": 6,
+    "ERROR": 9
+  },
+  "final_d3_verdict": null,
+  "best_possible_success_episodes": 11,
+  "best_possible_success_rate": 0.55,
+  "interrupted_query_without_final_record": "BH2_04425",
+  "uncompleted_queries": [
+    "BH2_04425",
+    "BH2_05366",
+    "BH2_05686",
+    "BH2_05843",
+    "BH2_06427"
+  ],
+  "identical_initial_messages_to_8k": 15,
+  "preserved_run_sha256": {
+    "results/runs/screening-16k/granite41-context16k-3060ti-20261021/Granite41-8B.config.json": "82976debc7a2c086235c0c17879d39690181a7866abb253dc0aefb63847a954b",
+    "results/runs/screening-16k/granite41-context16k-3060ti-20261021/BH2_00461__Granite41-8B__a1.json": "d8328c21f73d79b061ab31b82ab65fd1a286410eaafbeba4e0f39c8a6c03b1fe",
+    "results/runs/screening-16k/granite41-context16k-3060ti-20261021/BH2_02033__Granite41-8B__a1.json": "7b6a2b1f505c9589474cda2894a024623bb4827d10d619c4a7743f91248ea3ec",
+    "results/runs/screening-16k/granite41-context16k-3060ti-20261021/BH2_03434__Granite41-8B__a1.json": "abc71eb1c8ce563c5011b141b2fbc23fdbe29813bdf10d620a9b8a7603c432a6",
+    "results/runs/screening-16k/granite41-context16k-3060ti-20261021/BH2_03619__Granite41-8B__a1.json": "bed251d68995aa1aa24ca62c925aaddd68ac2687abb7edce36f14efd808e03b2",
+    "results/runs/screening-16k/granite41-context16k-3060ti-20261021/BH2_03750__Granite41-8B__a1.json": "ec01631ee7f46901fd069962917dd6d4a126f24efea5fa2af2481ba380dd9674",
+    "results/runs/screening-16k/granite41-context16k-3060ti-20261021/BH2_03760__Granite41-8B__a1.json": "13f5acb507ea20185e5d961d69f4adf2c30753d6b6260b085338d7eeb6741e4f",
+    "results/runs/screening-16k/granite41-context16k-3060ti-20261021/BH2_03762__Granite41-8B__a1.json": "653dc130afad34d8d9c135b3cd2e5dab968cd285eea723d636e5d34b022b6c06",
+    "results/runs/screening-16k/granite41-context16k-3060ti-20261021/BH2_03850__Granite41-8B__a1.json": "5385fa7389bc4f4ccf3b54b15a63499c4dfd4d80a68034d7404fc466a59e1abb",
+    "results/runs/screening-16k/granite41-context16k-3060ti-20261021/BH2_03856__Granite41-8B__a1.json": "01bd0e1b334f98ec194cb8b9d2c412c4758ecdbb719c6b172b00146b1cf2eaa9",
+    "results/runs/screening-16k/granite41-context16k-3060ti-20261021/BH2_03879__Granite41-8B__a1.json": "1598d6648ea908b65db22a48ab095f6aeb3da8e7d9e289c078c4fc8588b9e2d2",
+    "results/runs/screening-16k/granite41-context16k-3060ti-20261021/BH2_03881__Granite41-8B__a1.json": "aa77adca2e0639fbaa7898a7a78e170bd2b0191100dd15167a7d7cdd17bb44ae",
+    "results/runs/screening-16k/granite41-context16k-3060ti-20261021/BH2_03953__Granite41-8B__a1.json": "7f6c3d2101246f002409606f14e5a93efc67a9af6d1bea1ecb36ffb86c185154",
+    "results/runs/screening-16k/granite41-context16k-3060ti-20261021/BH2_03991__Granite41-8B__a1.json": "ca112e88c1282cdae694f3019c0ad2bd2cb1ee54561f880ba23899c1a7cb3c7f",
+    "results/runs/screening-16k/granite41-context16k-3060ti-20261021/BH2_04003__Granite41-8B__a1.json": "911da65e05a2cbfcbaccfa796c9eb478c56829e49216c6218faebc2623114ae6",
+    "results/runs/screening-16k/granite41-context16k-3060ti-20261021/BH2_04007__Granite41-8B__a1.json": "c4cf7b010af385cbe5ef392cff4510147a61f72b62dfb31b5c6338b9ca2e788c"
+  },
+  "note": "User stopped query 16. Do not resume without a new instruction. No final outcome fabricated for the interrupted query; original 8K PASS retained."
+}

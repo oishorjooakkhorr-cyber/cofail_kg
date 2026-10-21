@@ -1,0 +1,822 @@
+{
+  "scope": "All seven official S20 candidates; no inference",
+  "models": [
+    {
+      "agent_id": "Gemma4-E4B",
+      "model": "gemma4:e4b-it-q4_K_M",
+      "episodes": 20,
+      "success": 16,
+      "parse_fail": 4,
+      "error": 0,
+      "timeout": 0,
+      "direct_context_truncation": 0,
+      "mixed_context_and_schema": 0,
+      "recovered_at_16k": 4,
+      "unresolved_parse_failure": 0
+    },
+    {
+      "agent_id": "Granite33-8B",
+      "model": "granite3.3:8b",
+      "episodes": 20,
+      "success": 20,
+      "parse_fail": 0,
+      "error": 0,
+      "timeout": 0,
+      "direct_context_truncation": 0,
+      "mixed_context_and_schema": 0,
+      "recovered_at_16k": 0,
+      "unresolved_parse_failure": 0
+    },
+    {
+      "agent_id": "Granite42-8B",
+      "model": "granite4.2:8b",
+      "episodes": 20,
+      "success": 17,
+      "parse_fail": 0,
+      "error": 3,
+      "timeout": 0,
+      "direct_context_truncation": 0,
+      "mixed_context_and_schema": 0,
+      "recovered_at_16k": 0,
+      "unresolved_parse_failure": 0
+    },
+    {
+      "agent_id": "Llama31-8B",
+      "model": "llama3.1:8b",
+      "episodes": 20,
+      "success": 20,
+      "parse_fail": 0,
+      "error": 0,
+      "timeout": 0,
+      "direct_context_truncation": 0,
+      "mixed_context_and_schema": 0,
+      "recovered_at_16k": 0,
+      "unresolved_parse_failure": 0
+    },
+    {
+      "agent_id": "Ministral3-8B",
+      "model": "ministral-3:8b",
+      "episodes": 20,
+      "success": 15,
+      "parse_fail": 4,
+      "error": 1,
+      "timeout": 0,
+      "direct_context_truncation": 3,
+      "mixed_context_and_schema": 1,
+      "recovered_at_16k": 0,
+      "unresolved_parse_failure": 0
+    },
+    {
+      "agent_id": "OLMo3-7B",
+      "model": "olmo-3:7b-instruct",
+      "episodes": 20,
+      "success": 20,
+      "parse_fail": 0,
+      "error": 0,
+      "timeout": 0,
+      "direct_context_truncation": 0,
+      "mixed_context_and_schema": 0,
+      "recovered_at_16k": 0,
+      "unresolved_parse_failure": 0
+    },
+    {
+      "agent_id": "Qwen35-9B",
+      "model": "qwen3.5:9b",
+      "episodes": 20,
+      "success": 18,
+      "parse_fail": 2,
+      "error": 0,
+      "timeout": 0,
+      "direct_context_truncation": 2,
+      "mixed_context_and_schema": 0,
+      "recovered_at_16k": 0,
+      "unresolved_parse_failure": 0
+    }
+  ],
+  "non_success_episodes": [
+    {
+      "agent_id": "Gemma4-E4B",
+      "query_id": "BH2_03619",
+      "status": "PARSE_FAIL",
+      "cause": null,
+      "evidence_label": "recovered_at_16k",
+      "episode_path": "results/runs/screening/primary-3060ti-20261018/BH2_03619__Gemma4-E4B__a1.json",
+      "episode_sha256": "09eaa54fffb42bee933e33014a49b872689e6f2a0ab26ab7fd28f1846652c567",
+      "num_ctx": 8192,
+      "num_predict": 4096,
+      "parse_attempts": [
+        {
+          "message_index": 26,
+          "prompt_tokens": 8190,
+          "output_tokens": 2,
+          "token_sum": 8192,
+          "exact_context_boundary": true,
+          "parser_error_reproduced": "Expecting value: line 1 column 1 (char 0)",
+          "raw_response": {
+            "created_at": "2026-10-20T07:08:44.3796231Z",
+            "done": true,
+            "done_reason": "length",
+            "eval_count": 2,
+            "eval_duration": 8137057000,
+            "load_duration": 3116700,
+            "message": {
+              "content": "",
+              "role": "assistant"
+            },
+            "model": "gemma4:e4b-it-q4_K_M",
+            "prompt_eval_cached_count": 7940,
+            "prompt_eval_count": 8190,
+            "prompt_eval_duration": 137233000,
+            "total_duration": 8316345000
+          }
+        },
+        {
+          "message_index": 28,
+          "prompt_tokens": 8173,
+          "output_tokens": 19,
+          "token_sum": 8192,
+          "exact_context_boundary": true,
+          "parser_error_reproduced": "Expecting property name enclosed in double quotes: line 1 column 51 (char 50)",
+          "raw_response": {
+            "created_at": "2026-10-20T07:08:47.3267723Z",
+            "done": true,
+            "done_reason": "length",
+            "eval_count": 19,
+            "eval_duration": 124861000,
+            "load_duration": 2634800,
+            "message": {
+              "content": "{\"status\": \"answered\", \"answers\": [{\"id\": \"84092\",",
+              "role": "assistant"
+            },
+            "model": "gemma4:e4b-it-q4_K_M",
+            "prompt_eval_cached_count": 53,
+            "prompt_eval_count": 8173,
+            "prompt_eval_duration": 2541245000,
+            "total_duration": 2943295700
+          }
+        }
+      ],
+      "errors": []
+    },
+    {
+      "agent_id": "Gemma4-E4B",
+      "query_id": "BH2_03762",
+      "status": "PARSE_FAIL",
+      "cause": null,
+      "evidence_label": "recovered_at_16k",
+      "episode_path": "results/runs/screening/primary-3060ti-20261018/BH2_03762__Gemma4-E4B__a1.json",
+      "episode_sha256": "b1c4cb7039d7de2fcbd4c8a6866ed4b6c175c9955308e0d69ff371d28b30970d",
+      "num_ctx": 8192,
+      "num_predict": 4096,
+      "parse_attempts": [
+        {
+          "message_index": 12,
+          "prompt_tokens": 6020,
+          "output_tokens": 2172,
+          "token_sum": 8192,
+          "exact_context_boundary": true,
+          "parser_error_reproduced": "Expecting value: line 1 column 1 (char 0)",
+          "raw_response": {
+            "created_at": "2026-10-20T07:09:41.0249425Z",
+            "done": true,
+            "done_reason": "length",
+            "eval_count": 2172,
+            "eval_duration": 11907657000,
+            "load_duration": 2554200,
+            "message": {
+              "content": "The user is asking for side effects (effect/phenotypes) of drugs that treat angioedema.\nI have identified drugs that treat angioedema (indication: angioedema) and then retrieved the side effects (drug_effect) for one of those drugs, Betamethasone (14019).\n\nSince the initial query asks for *all* effect/phenotypes of *drugs* that treat angioedema, and I have only checked one drug (Betamethasone), I need to check other drugs as well. However, checking all 36 drugs would be too many calls. I will list the side effects found for Betamethasone as a representative sample, as the prompt implies a general answer based on the starting entity.\n\nThe side effects found for Betamethasone (14019) are:\nFrom page 1: Edema (22262), Muscle weakness (22323), Visual impairment (22380), Reduced visual acuity (22400), Anxiety (22447), Peripheral neuropathy (22457), Abnormal peripheral nervous system morphology (22458), Growth delay (22478), Inflammatory abnormality of the skin (22539), Erythema (22581), Abnormal joint morphology (22588), Dermal atrophy (22592), Hyperhidrosis (22594), Keratitis (22604), Decreased corneal thickness (22610), Telangiectasia (22659), Paraplegia (22677), Increased body weight (22786), Cardiac arrest (22828), Arrhythmia (22831), Hypertrophic cardiomyopathy (22837), Bradycardia (22846), Congestive heart failure (22859), Leukocytosis (22923), Thrombocytopenia (22934), Fever (22952), Hypokalemic alkalosis (22956), Pain (22982), Seizure (23000), Headache (23002), Hirsutism (23072), Alopecia (23073), Paraparesis (23098), Hallucinations (23113), Vomiting (23157), Abdominal pain (23158), Thrombophlebitis (23183), Arthropathy (23244), Recurrent fractures (23351), Myopathy (23488), Myalgia (23544), Alopecia of scalp (23799), Tachycardia (23833), Vasculitis (23956), Generalized osteoporosis (24040), Hepatomegaly (24199), Mania (24326), Abnormality of the gastrointestinal tract (24337), Subcapsular cataract (24408), Blindness (24423).\nFrom page 2: Retinal detachment (24427), Vertigo (25201), Retinal perforation (25416), Lethargy (25520), Hyperglycemia (25526), Delusions (25527), Abnormality of the eye (25608), Fatigue (25620), Paresthesia (25644), Syncope (25672), Scaling skin (25882), Blepharitis (25900), Pruritus (25945), Vitreous floaters (26090), Ocular pain (26096), Osteoporosis (26674), Avascular necrosis (26837), Irregular menstruation (26948), Optic neuritis (26954), Anaphylactic shock (27007), Migraine (33733), Peptic ulcer (33737), Cardiomegaly (84339), Pulmonary edema (84373), Loss of consciousness (84374), Nausea (84409), Polyphagia (84420), Hypernatremia (84441), Emotional lability (84693), Mood swings (84697), Personality changes (84708), Dry skin (84767), Petechiae (84771), Bruising susceptibility (84774), Striae distensae (84801), Papilledema (84808), Polyneuropathy (84855), Mood changes (84920), Increased intracranial pressure (85174), Vertebral compression fractures (85309), Glycosuria (85334), Poor appetite (85849), Vitreous hemorrhage (87210), Ocular hypertension (87212), Retinal hole (88788), Photopsia (90677), Tendon rupture (93451).\n\nSince the request is broad, I will provide the list of side effects found for Betamethasone, as it is a concrete example of a drug treating angioedema.\n\n{\"status\": \"answered\", \"answers\": [{\"id\": \"22262\", \"name\": \"Edema\"}, {\"id\": \"22323\", \"name\": \"Muscle weakness\"}, {\"id\": \"22380\", \"name\": \"Visual impairment\"}, {\"id\": \"22400\", \"name\": \"Reduced visual acuity\"}, {\"id\": \"22447\", \"name\": \"Anxiety\"}, {\"id\": \"22457\", \"name\": \"Peripheral neuropathy\"}, {\"id\": \"22458\", \"name\": \"Abnormal peripheral nervous system morphology\"}, {\"id\": \"22478\", \"name\": \"Growth delay\"}, {\"id\": \"22539\", \"name\": \"Inflammatory abnormality of the skin\"}, {\"id\": \"22581\", \"name\": \"Erythema\"}, {\"id\": \"22588\", \"name\": \"Abnormal joint morphology\"}, {\"id\": \"22592\", \"name\": \"Dermal atrophy\"}, {\"id\": \"22594\", \"name\": \"Hyperhidrosis\"}, {\"id\": \"22604\", \"name\": \"Keratitis\"}, {\"id\": \"22610\", \"name\": \"Decreased corneal thickness\"}, {\"id\": \"22659\", \"name\": \"Telangiectasia\"}, {\"id\": \"22677\", \"name\": \"Paraplegia\"}, {\"id\": \"22786\", \"name\": \"Increased body weight\"}, {\"id\": \"22828\", \"name\": \"Cardiac arrest\"}, {\"id\": \"22831\", \"name\": \"Arrhythmia\"}, {\"id\": \"22837\", \"name\": \"Hypertrophic cardiomyopathy\"}, {\"id\": \"22846\", \"name\": \"Bradycardia\"}, {\"id\": \"22859\", \"name\": \"Congestive heart failure\"}, {\"id\": \"22923\", \"name\": \"Leukocytosis\"}, {\"id\": \"22934\", \"name\": \"Thrombocytopenia\"}, {\"id\": \"22952\", \"name\": \"Fever\"}, {\"id\": \"22956\", \"name\": \"Hypokalemic alkalosis\"}, {\"id\": \"22982\", \"name\": \"Pain\"}, {\"id\": \"23000\", \"name\": \"Seizure\"}, {\"id\": \"23002\", \"name\": \"Headache\"}, {\"id\": \"23072\", \"name\": \"Hirsutism\"}, {\"id\": \"23073\", \"name\": \"Alopecia\"}, {\"id\": \"23098\", \"name\": \"Paraparesis\"}, {\"id\": \"23113\", \"name\": \"Hallucinations\"}, {\"id\": \"23157\", \"name\": \"Vomiting\"}, {\"id\": \"23158\", \"name\": \"Abdominal pain\"}, {\"id\": \"23183\", \"name\": \"Thrombophlebitis\"}, {\"id\": \"23244\", \"name\": \"Arthropathy\"}, {\"id\": \"23351\", \"name\": \"Recurrent fractures\"}, {\"id\": \"23488\", \"name\": \"Myopathy\"}, {\"id\": \"23544\", \"name\": \"Myalgia\"}, {\"id\": \"23799\", \"name\": \"Alopecia of scalp\"}, {\"id\": \"23833\", \"name\": \"Tachycardia\"}, {\"id\": \"23956\", \"name\": \"Vasculitis\"}, {\"id\": \"24040\", \"name\": \"Generalized osteoporosis\"}, {\"id\": \"24199\", \"name\": \"Hepatomegaly\"}, {\"id\": \"24326\", \"name\": \"Mania\"}, {\"id\": \"24337\", \"name\": \"Abnormality of the gastrointestinal tract\"}, {\"id\": \"24408\", \"name\": \"Subcapsular cataract\"}, {\"id\": \"24423\", \"name\": \"Blindness\"}, {\"id\": \"24427\", \"name\": \"Retinal detachment\"}, {\"id\": \"25201\", \"name\": \"Vertigo\"}, {\"id\": \"25416\", \"name\": \"Retinal perforation\"}, {\"id\": \"25520\", \"name\": \"Lethargy\"}, {\"id\": \"2",
+              "role": "assistant"
+            },
+            "model": "gemma4:e4b-it-q4_K_M",
+            "prompt_eval_cached_count": 4267,
+            "prompt_eval_count": 6020,
+            "prompt_eval_duration": 582856000,
+            "total_duration": 12522553000
+          }
+        },
+        {
+          "message_index": 14,
+          "prompt_tokens": 8175,
+          "output_tokens": 15,
+          "token_sum": 8190,
+          "exact_context_boundary": false,
+          "parser_error_reproduced": "Unterminated string starting at: line 1 column 43 (char 42)",
+          "raw_response": {
+            "created_at": "2026-10-20T07:09:45.1860412Z",
+            "done": true,
+            "done_reason": "length",
+            "eval_count": 15,
+            "eval_duration": 1401024000,
+            "load_duration": 2604500,
+            "message": {
+              "content": "{\"status\": \"answered\", \"answers\": [{\"id\": \"22",
+              "role": "assistant"
+            },
+            "model": "gemma4:e4b-it-q4_K_M",
+            "prompt_eval_cached_count": 52,
+            "prompt_eval_count": 8175,
+            "prompt_eval_duration": 2563589000,
+            "total_duration": 4157414000
+          }
+        }
+      ],
+      "errors": []
+    },
+    {
+      "agent_id": "Gemma4-E4B",
+      "query_id": "BH2_03850",
+      "status": "PARSE_FAIL",
+      "cause": null,
+      "evidence_label": "recovered_at_16k",
+      "episode_path": "results/runs/screening/primary-3060ti-20261018/BH2_03850__Gemma4-E4B__a1.json",
+      "episode_sha256": "23d941f661e1fffa32f5c7603423a42a9f646ddd6bb95f4f4cb3f14a3328f6be",
+      "num_ctx": 8192,
+      "num_predict": 4096,
+      "parse_attempts": [
+        {
+          "message_index": 18,
+          "prompt_tokens": 5141,
+          "output_tokens": 2476,
+          "token_sum": 7617,
+          "exact_context_boundary": false,
+          "parser_error_reproduced": "Expecting value: line 1 column 1 (char 0)",
+          "raw_response": {
+            "created_at": "2026-10-20T07:10:03.7322751Z",
+            "done": true,
+            "done_reason": "stop",
+            "eval_count": 2476,
+            "eval_duration": 12977163000,
+            "load_duration": 2639300,
+            "message": {
+              "content": "The side effects/phenotypes of drugs that treat cervical carcinoma (Topotecan, Bleomycin, Bevacizumab) are:\n\n**Topotecan (15481):**\n*   Peripheral neuropathy (22457)\n*   Abnormal peripheral nervous system morphology (22458)\n*   Inflammatory abnormality of the skin (22539)\n*   Hyperhidrosis (22594)\n*   Increased body weight (22786)\n*   Cardiac arrest (22828)\n*   Thrombocytopenia (22934)\n*   Pancytopenia (22938)\n*   Fever (22952)\n*   Pain (22982)\n*   Headache (23002)\n*   Abnormal lung morphology (23010)\n*   Dyspnea (23011)\n*   Abnormal pulmonary Interstitial morphology (23059)\n*   Alopecia (23073)\n*   Rhinitis (23083)\n*   Sensory impairment (23139)\n*   Vomiting (23157)\n*   Abdominal pain (23158)\n*   Intestinal obstruction (23166)\n*   Hyperbilirubinemia (23285)\n*   Back pain (23469)\n*   Myalgia (23544)\n*   Epistaxis (23764)\n*   Alopecia of scalp (23799)\n*   Respiratory distress (23864)\n*   Arthralgia (23901)\n*   Abnormality of the gastrointestinal tract (24337)\n*   Abnormality of the skin (24461)\n*   Pleural effusion (25150)\n*   Vertigo (25201)\n*   Stomatitis (25332)\n*   Lethargy (25520)\n*   Fatigue (25620)\n*   Paresthesia (25644)\n*   Pruritus (25945)\n*   Cough (26160)\n*   Chest pain (26336)\n*   Anaphylactic shock (27007)\n*   Leukopenia (33730)\n*   Pneumonia (33751)\n*   Dysmenorrhea (84362)\n*   Hyperkinetic movements (84401)\n*   Nausea (84409)\n*   Polyneuropathy (84855)\n*   Bone pain (85214)\n*   Respiratory failure (85285)\n*   Malnutrition (85848)\n*   Poor appetite (85849)\n*   Dyspareunia (90189)\n\n**Bleomycin (15893):**\n*   Hyperkeratosis (22229)\n*   Edema (22262)\n*   Inflammatory abnormality of the skin (22539)\n*   Erythema (22581)\n*   Abnormality of the nail (22658)\n*   Arthritis (22718)\n*   Thrombocytopenia (22934)\n*   Pancytopenia (22938)\n*   Fever (22952)\n*   Pain (22982)\n*   Dyspnea (23011)\n*   Abnormal pulmonary Interstitial morphology (23059)\n*   Pulmonary infiltrates (23060)\n*   Alopecia (23073)\n*   Sensory impairment (23139)\n*   Vomiting (23157)\n*   Hematuria (23284)\n*   Myalgia (23544)\n*   Alopecia of scalp (23799)\n*   Respiratory distress (23864)\n*   Stomatitis (25332)\n*   Paresthesia (25644)\n*   Scaling skin (25882)\n*   Pruritus (25945)\n*   Cough (26160)\n*   Confusion (26162)\n*   Wheezing (26309)\n*   Crackles (26310)\n*   Chest pain (26336)\n*   Pulmonary fibrosis (26629)\n*   Periorbital edema (26939)\n*   Anaphylactic shock (27007)\n*   Leukopenia (33730)\n*   Pneumonia (33751)\n*   Hypomagnesemia (84360)\n*   Nausea (84409)\n*   Hyperesthesia (84416)\n*   Aggressive behavior (84696)\n*   Striae distensae (84801)\n*   Poor appetite (85849)\n*   Urinary bladder inflammation (93464)\n\n**Bevacizumab (16510):**\n*   No side effects were found in the knowledge graph for this drug.\n\n{\"status\": \"answered\", \"answers\": [{\"id\": \"22457\", \"name\": \"Peripheral neuropathy\"}, {\"id\": \"22458\", \"name\": \"Abnormal peripheral nervous system morphology\"}, {\"id\": \"22539\", \"name\": \"Inflammatory abnormality of the skin\"}, {\"id\": \"22594\", \"name\": \"Hyperhidrosis\"}, {\"id\": \"22786\", \"name\": \"Increased body weight\"}, {\"id\": \"22828\", \"name\": \"Cardiac arrest\"}, {\"id\": \"22934\", \"name\": \"Thrombocytopenia\"}, {\"id\": \"22938\", \"name\": \"Pancytopenia\"}, {\"id\": \"22952\", \"name\": \"Fever\"}, {\"id\": \"22982\", \"name\": \"Pain\"}, {\"id\": \"23002\", \"name\": \"Headache\"}, {\"id\": \"23010\", \"name\": \"Abnormal lung morphology\"}, {\"id\": \"23011\", \"name\": \"Dyspnea\"}, {\"id\": \"23059\", \"name\": \"Abnormal pulmonary Interstitial morphology\"}, {\"id\": \"23073\", \"name\": \"Alopecia\"}, {\"id\": \"23083\", \"name\": \"Rhinitis\"}, {\"id\": \"23139\", \"name\": \"Sensory impairment\"}, {\"id\": \"23157\", \"name\": \"Vomiting\"}, {\"id\": \"23158\", \"name\": \"Abdominal pain\"}, {\"id\": \"23166\", \"name\": \"Intestinal obstruction\"}, {\"id\": \"23285\", \"name\": \"Hyperbilirubinemia\"}, {\"id\": \"23469\", \"name\": \"Back pain\"}, {\"id\": \"23544\", \"name\": \"Myalgia\"}, {\"id\": \"23764\", \"name\": \"Epistaxis\"}, {\"id\": \"23799\", \"name\": \"Alopecia of scalp\"}, {\"id\": \"23864\", \"name\": \"Respiratory distress\"}, {\"id\": \"23901\", \"name\": \"Arthralgia\"}, {\"id\": \"24337\", \"name\": \"Abnormality of the gastrointestinal tract\"}, {\"id\": \"24461\", \"name\": \"Abnormality of the skin\"}, {\"id\": \"25150\", \"name\": \"Pleural effusion\"}, {\"id\": \"25201\", \"name\": \"Vertigo\"}, {\"id\": \"25332\", \"name\": \"Stomatitis\"}, {\"id\": \"25520\", \"name\": \"Lethargy\"}, {\"id\": \"25620\", \"name\": \"Fatigue\"}, {\"id\": \"25644\", \"name\": \"Paresthesia\"}, {\"id\": \"25945\", \"name\": \"Pruritus\"}, {\"id\": \"26160\", \"name\": \"Cough\"}, {\"id\": \"26336\", \"name\": \"Chest pain\"}, {\"id\": \"27007\", \"name\": \"Anaphylactic shock\"}, {\"id\": \"33730\", \"name\": \"Leukopenia\"}, {\"id\": \"33751\", \"name\": \"Pneumonia\"}, {\"id\": \"84362\", \"name\": \"Dysmenorrhea\"}, {\"id\": \"84401\", \"name\": \"Hyperkinetic movements\"}, {\"id\": \"84409\", \"name\": \"Nausea\"}, {\"id\": \"84855\", \"name\": \"Polyneuropathy\"}, {\"id\": \"85214\", \"name\": \"Bone pain\"}, {\"id\": \"85285\", \"name\": \"Respiratory failure\"}, {\"id\": \"85848\", \"name\": \"Malnutrition\"}, {\"id\": \"85849\", \"name\": \"Poor appetite\"}, {\"id\": \"90189\", \"name\": \"Dyspareunia\"}, {\"id\": \"22229\", \"name\": \"Hyperkeratosis\"}, {\"id\": \"22262\", \"name\": \"Edema\"}, {\"id\": \"22581\", \"name\": \"Erythema\"}, {\"id\": \"22658\", \"name\": \"Abnormality of the nail\"}, {\"id\": \"22718\", \"name\": \"Arthritis\"}, {\"id\": \"23060\", \"name\": \"Pulmonary infiltrates\"}, {\"id\": \"26162\", \"name\": \"Confusion\"}, {\"id\": \"26309\", \"name\": \"Wheezing\"}, {\"id\": \"26310\", \"name\": \"Crackles\"}, {\"id\": \"26629\", \"name\": \"Pulmonary fibrosis\"}, {\"id\": \"26939\", \"name\": \"Periorbital edema\"}, {\"id\": \"84360\", \"name\": \"Hypomagnesemia\"}, {\"id\": \"84416\", \"name\": \"Hyperesthesia\"}, {\"id\": \"84696\", \"name\": \"Aggressive behavior\"}, {\"id\": \"84801\", \"name\": \"Striae distensae\"}, {\"id\": \"93464\", \"name\": \"Urinary bladder inflammation\"}]}",
+              "role": "assistant"
+            },
+            "model": "gemma4:e4b-it-q4_K_M",
+            "prompt_eval_cached_count": 5113,
+            "prompt_eval_count": 5141,
+            "prompt_eval_duration": 68083000,
+            "total_duration": 13074839600
+          }
+        },
+        {
+          "message_index": 20,
+          "prompt_tokens": 7645,
+          "output_tokens": 547,
+          "token_sum": 8192,
+          "exact_context_boundary": true,
+          "parser_error_reproduced": "Unterminated string starting at: line 1 column 1384 (char 1383)",
+          "raw_response": {
+            "created_at": "2026-10-20T07:10:06.715935Z",
+            "done": true,
+            "done_reason": "length",
+            "eval_count": 547,
+            "eval_duration": 2852191000,
+            "load_duration": 2829000,
+            "message": {
+              "content": "{\"status\": \"answered\", \"answers\": [{\"id\": \"22457\", \"name\": \"Peripheral neuropathy\"}, {\"id\": \"22458\", \"name\": \"Abnormal peripheral nervous system morphology\"}, {\"id\": \"22539\", \"name\": \"Inflammatory abnormality of the skin\"}, {\"id\": \"22594\", \"name\": \"Hyperhidrosis\"}, {\"id\": \"22786\", \"name\": \"Increased body weight\"}, {\"id\": \"22828\", \"name\": \"Cardiac arrest\"}, {\"id\": \"22934\", \"name\": \"Thrombocytopenia\"}, {\"id\": \"22938\", \"name\": \"Pancytopenia\"}, {\"id\": \"22952\", \"name\": \"Fever\"}, {\"id\": \"22982\", \"name\": \"Pain\"}, {\"id\": \"23002\", \"name\": \"Headache\"}, {\"id\": \"23010\", \"name\": \"Abnormal lung morphology\"}, {\"id\": \"23011\", \"name\": \"Dyspnea\"}, {\"id\": \"23059\", \"name\": \"Abnormal pulmonary Interstitial morphology\"}, {\"id\": \"23073\", \"name\": \"Alopecia\"}, {\"id\": \"23083\", \"name\": \"Rhinitis\"}, {\"id\": \"23139\", \"name\": \"Sensory impairment\"}, {\"id\": \"23157\", \"name\": \"Vomiting\"}, {\"id\": \"23158\", \"name\": \"Abdominal pain\"}, {\"id\": \"23166\", \"name\": \"Intestinal obstruction\"}, {\"id\": \"23285\", \"name\": \"Hyperbilirubinemia\"}, {\"id\": \"23469\", \"name\": \"Back pain\"}, {\"id\": \"23544\", \"name\": \"Myalgia\"}, {\"id\": \"23764\", \"name\": \"Epistaxis\"}, {\"id\": \"23799\", \"name\": \"Alopecia of scalp\"}, {\"id\": \"23864\", \"name\": \"Respiratory distress\"}, {\"id\": \"23901\", \"name\": \"Arthralgia\"}, {\"id\": \"24337\", \"name\": \"Abnormality of the gastrointestinal tract\"}, {\"id\": \"24461\", \"name\": \"Abnormality of the skin\"}, {\"id\": \"2",
+              "role": "assistant"
+            },
+            "model": "gemma4:e4b-it-q4_K_M",
+            "prompt_eval_cached_count": 7616,
+            "prompt_eval_count": 7645,
+            "prompt_eval_duration": 71777000,
+            "total_duration": 2958744700
+          }
+        }
+      ],
+      "errors": []
+    },
+    {
+      "agent_id": "Gemma4-E4B",
+      "query_id": "BH2_03953",
+      "status": "PARSE_FAIL",
+      "cause": null,
+      "evidence_label": "recovered_at_16k",
+      "episode_path": "results/runs/screening/primary-3060ti-20261018/BH2_03953__Gemma4-E4B__a1.json",
+      "episode_sha256": "9aff869ac8e5a8d3563b923f510b30a6f3e3c4c33057bf9432bfc48a9fef78aa",
+      "num_ctx": 8192,
+      "num_predict": 4096,
+      "parse_attempts": [
+        {
+          "message_index": 18,
+          "prompt_tokens": 7431,
+          "output_tokens": 761,
+          "token_sum": 8192,
+          "exact_context_boundary": true,
+          "parser_error_reproduced": "Expecting value: line 1 column 1 (char 0)",
+          "raw_response": {
+            "created_at": "2026-10-20T07:10:50.5473235Z",
+            "done": true,
+            "done_reason": "length",
+            "eval_count": 761,
+            "eval_duration": 4174274999,
+            "load_duration": 3102600,
+            "message": {
+              "content": "The side effects/phenotypes for the drugs treating endometrium neoplasm are:\n\n**For Medroxyprogesterone acetate (14203):**\n* Sinusitis (22250)\n* Edema (22262)\n* Dementia (22442)\n* Anxiety (22447)\n* Inflammatory abnormality of the skin (22539)\n* Erythema (22581)\n* Jaundice (22585)\n* Hyperhidrosis (22594)\n* Increased body weight (22786)\n* Abdominal distention (22791)\n* Paralysis (22811)\n* Abnormality of blood and blood-forming tissues (22916)\n* Fever (22952)\n* Seizure (23000)\n* Headache (23002)\n* Dyspnea (23011)\n* Hypocalcemia (23057)\n* Hirsutism (23072)\n* Alopecia (23073)\n* Vomiting (23157)\n* Abdominal pain (23158)\n* Thrombophlebitis (23183)\n* Bronchitis (23254)\n* Back pain (23469)\n* Alopecia of scalp (23799)\n* Tachycardia (23833)\n* Deep venous thrombosis (23855)\n* Respiratory distress (23864)\n* Impaired glucose tolerance (23875)\n* Arthralgia (23901)\n* Pancreatitis (23950)\n* Generalized osteoporosis (24040)\n* Dysphonia (24289)\n* Abnormality of the gastrointestinal tract (24337)\n* Blindness (24423)\n* Abnormality of the skin (24461)\n* Elevated hepatic transaminase (24475)\n* Vertigo (25201)\n* Fatigue (25620)\n* Limb pain (25638)\n* Paresthesia (25644)\n* Syncope (25672)\n* Pruritus (25945)\n* Chest pain (26336)\n* Osteoporosis (26674)\n* Irregular menstruation (26948)\n* Optic neuritis (26954)\n* Anaphylactic shock (27007)\n* Migraine (33733)\n* Varicose veins (33739)\n\n**For Progesterone (14685):**\n* Cleft upper lip (22197)\n* Cleft palate (22212)\n* Sinusitis (22250)\n* Edema (22262)\n* Visual impairment (22380)\n* Anxiety (22447)\n* Neurological speech impairment (22454)\n* Peripheral neuropathy (22457)\n* Abnormal peripheral nervous system morphology (22458)\n* Abnormality of the endocrine",
+              "role": "assistant"
+            },
+            "model": "gemma4:e4b-it-q4_K_M",
+            "prompt_eval_cached_count": 5617,
+            "prompt_eval_count": 7431,
+            "prompt_eval_duration": 627856000,
+            "total_duration": 4836562100
+          }
+        },
+        {
+          "message_index": 20,
+          "prompt_tokens": 8175,
+          "output_tokens": 15,
+          "token_sum": 8190,
+          "exact_context_boundary": false,
+          "parser_error_reproduced": "Unterminated string starting at: line 1 column 43 (char 42)",
+          "raw_response": {
+            "created_at": "2026-10-20T07:10:53.4833013Z",
+            "done": true,
+            "done_reason": "length",
+            "eval_count": 15,
+            "eval_duration": 106920000,
+            "load_duration": 3648300,
+            "message": {
+              "content": "{\"status\": \"answered\", \"answers\": [{\"id\": \"14",
+              "role": "assistant"
+            },
+            "model": "gemma4:e4b-it-q4_K_M",
+            "prompt_eval_cached_count": 47,
+            "prompt_eval_count": 8175,
+            "prompt_eval_duration": 2548338000,
+            "total_duration": 2933374000
+          }
+        }
+      ],
+      "errors": []
+    },
+    {
+      "agent_id": "Granite42-8B",
+      "query_id": "BH2_03953",
+      "status": "ERROR",
+      "cause": "CONNECTION",
+      "evidence_label": "request_timeout_not_parse_failure",
+      "episode_path": "results/runs/screening/primary-3060ti-20261018/BH2_03953__Granite42-8B__a1.json",
+      "episode_sha256": "ef27a3ed0320718d709eabe92f1940dfd7e616b9ab9fdcf9e3eaf7c0287ccc99",
+      "num_ctx": 8192,
+      "num_predict": 4096,
+      "parse_attempts": [],
+      "errors": [
+        {
+          "event": "ERROR",
+          "http_status": null,
+          "message": "HTTPConnectionPool(host='127.0.0.1', port=11434): Read timed out. (read timeout=120)",
+          "response_text": null,
+          "type": "OllamaError"
+        }
+      ]
+    },
+    {
+      "agent_id": "Granite42-8B",
+      "query_id": "BH2_04007",
+      "status": "ERROR",
+      "cause": "CONNECTION",
+      "evidence_label": "request_timeout_not_parse_failure",
+      "episode_path": "results/runs/screening/primary-3060ti-20261018/BH2_04007__Granite42-8B__a1.json",
+      "episode_sha256": "7bff4fc1138b5bebb10bc09ec89b387195efdb8e19092ee2cba9695bab69d308",
+      "num_ctx": 8192,
+      "num_predict": 4096,
+      "parse_attempts": [],
+      "errors": [
+        {
+          "event": "ERROR",
+          "http_status": null,
+          "message": "HTTPConnectionPool(host='127.0.0.1', port=11434): Read timed out. (read timeout=120)",
+          "response_text": null,
+          "type": "OllamaError"
+        }
+      ]
+    },
+    {
+      "agent_id": "Granite42-8B",
+      "query_id": "BH2_04425",
+      "status": "ERROR",
+      "cause": "CONNECTION",
+      "evidence_label": "request_timeout_not_parse_failure",
+      "episode_path": "results/runs/screening/primary-3060ti-20261018/BH2_04425__Granite42-8B__a1.json",
+      "episode_sha256": "c6973f7487652bbe4e62b06fbeb167ca7e4e2dfa868e9fd2dfe71678bd884cfb",
+      "num_ctx": 8192,
+      "num_predict": 4096,
+      "parse_attempts": [],
+      "errors": [
+        {
+          "event": "ERROR",
+          "http_status": null,
+          "message": "HTTPConnectionPool(host='127.0.0.1', port=11434): Read timed out. (read timeout=120)",
+          "response_text": null,
+          "type": "OllamaError"
+        }
+      ]
+    },
+    {
+      "agent_id": "Ministral3-8B",
+      "query_id": "BH2_03619",
+      "status": "PARSE_FAIL",
+      "cause": null,
+      "evidence_label": "context_pressure_with_final_schema_failure",
+      "episode_path": "results/runs/screening/primary-3060ti-20261018/BH2_03619__Ministral3-8B__a1.json",
+      "episode_sha256": "edceddf338db4788e999d8bcbf22709654dd0e3c00e043c1f62e3cc441e37f3d",
+      "num_ctx": 8192,
+      "num_predict": 4096,
+      "parse_attempts": [
+        {
+          "message_index": 34,
+          "prompt_tokens": 8073,
+          "output_tokens": 119,
+          "token_sum": 8192,
+          "exact_context_boundary": true,
+          "parser_error_reproduced": "Expecting value: line 1 column 1 (char 0)",
+          "raw_response": {
+            "created_at": "2026-10-19T06:49:50.9917726Z",
+            "done": true,
+            "done_reason": "length",
+            "eval_count": 119,
+            "eval_duration": 7059387000,
+            "load_duration": 7518000,
+            "message": {
+              "content": "Since the original question did not specify a particular drug, I will provide a summary of side effects/phenotypes for **Pitolisant** (ID: 14447) based on its relations. However, **Pitolisant** does not have a direct relation labeled for side effects/phenotypes in the knowledge graph.\n\nHere are some side effects/phenotypes for **Sodium oxybate** (ID: 14644) and **Modafinil** (ID: 14968) as examples:\n\n### **S",
+              "role": "assistant"
+            },
+            "model": "ministral-3:8b",
+            "prompt_eval_cached_count": 215,
+            "prompt_eval_count": 8073,
+            "prompt_eval_duration": 4157645999,
+            "total_duration": 12011198000
+          }
+        },
+        {
+          "message_index": 36,
+          "prompt_tokens": 8155,
+          "output_tokens": 15,
+          "token_sum": 8170,
+          "exact_context_boundary": false,
+          "parser_error_reproduced": "Expected status and answers list",
+          "raw_response": {
+            "created_at": "2026-10-19T06:49:57.0137864Z",
+            "done": true,
+            "done_reason": "stop",
+            "eval_count": 15,
+            "eval_duration": 841603000,
+            "load_duration": 4347600,
+            "message": {
+              "content": "```json\n{\n  \"status\": \"no_answer\"\n}\n```",
+              "role": "assistant"
+            },
+            "model": "ministral-3:8b",
+            "prompt_eval_cached_count": 216,
+            "prompt_eval_count": 8155,
+            "prompt_eval_duration": 4188251000,
+            "total_duration": 6019267500
+          }
+        }
+      ],
+      "errors": []
+    },
+    {
+      "agent_id": "Ministral3-8B",
+      "query_id": "BH2_03881",
+      "status": "PARSE_FAIL",
+      "cause": null,
+      "evidence_label": "direct_context_truncation_no_16k_test",
+      "episode_path": "results/runs/screening/primary-3060ti-20261018/BH2_03881__Ministral3-8B__a1.json",
+      "episode_sha256": "8cfcc674b053163c2544d51a2c0ea6b90c13764548139856d8a834b78988466f",
+      "num_ctx": 8192,
+      "num_predict": 4096,
+      "parse_attempts": [
+        {
+          "message_index": 18,
+          "prompt_tokens": 8050,
+          "output_tokens": 142,
+          "token_sum": 8192,
+          "exact_context_boundary": true,
+          "parser_error_reproduced": "Expecting value: line 1 column 1 (char 0)",
+          "raw_response": {
+            "created_at": "2026-10-19T07:03:31.0623054Z",
+            "done": true,
+            "done_reason": "length",
+            "eval_count": 142,
+            "eval_duration": 8333031999,
+            "load_duration": 4999400,
+            "message": {
+              "content": "Here are some key side effects of **Amphotericin B** (ID: **15456**):\n\n1. **Jaundice** (ID: **22585**)\n2. **Decreased liver function** (ID: **22731**)\n3. **Arrhythmia** (ID: **22831**)\n4. **Thrombocytopenia** (ID: **22934**)\n5. **Renal insufficiency** (ID: **22939**)\n6. **Fever** (ID: **22952**)\n7. **Hypoglycemia** (ID: **2",
+              "role": "assistant"
+            },
+            "model": "ministral-3:8b",
+            "prompt_eval_cached_count": 215,
+            "prompt_eval_count": 8050,
+            "prompt_eval_duration": 4102912000,
+            "total_duration": 12940990000
+          }
+        },
+        {
+          "message_index": 20,
+          "prompt_tokens": 8076,
+          "output_tokens": 116,
+          "token_sum": 8192,
+          "exact_context_boundary": true,
+          "parser_error_reproduced": "Expecting value: line 1 column 1 (char 0)",
+          "raw_response": {
+            "created_at": "2026-10-19T07:03:42.5745284Z",
+            "done": true,
+            "done_reason": "length",
+            "eval_count": 116,
+            "eval_duration": 6670393000,
+            "load_duration": 4889600,
+            "message": {
+              "content": "```json\n{\n  \"status\": \"answered\",\n  \"answers\": [\n    {\n      \"id\": \"14281\",\n      \"name\": \"Ketoconazole\"\n    },\n    {\n      \"id\": \"14992\",\n      \"name\": \"Itraconazole\"\n    },\n    {\n      \"id\": \"15456\",\n      \"name\": \"Amphotericin B\"\n    },\n    {\n      \"id\": \"15502\",\n      \"name\": \"Posaconazole\"\n    },",
+              "role": "assistant"
+            },
+            "model": "ministral-3:8b",
+            "prompt_eval_cached_count": 215,
+            "prompt_eval_count": 8076,
+            "prompt_eval_duration": 4124335000,
+            "total_duration": 11510152400
+          }
+        }
+      ],
+      "errors": []
+    },
+    {
+      "agent_id": "Ministral3-8B",
+      "query_id": "BH2_03991",
+      "status": "PARSE_FAIL",
+      "cause": null,
+      "evidence_label": "direct_context_truncation_no_16k_test",
+      "episode_path": "results/runs/screening/primary-3060ti-20261018/BH2_03991__Ministral3-8B__a1.json",
+      "episode_sha256": "20a7b3c6d2e82b225f6047b7be89ef63f9d1b8ed85cfa5fccfe4c8fcc02674ba",
+      "num_ctx": 8192,
+      "num_predict": 4096,
+      "parse_attempts": [
+        {
+          "message_index": 27,
+          "prompt_tokens": 7142,
+          "output_tokens": 1050,
+          "token_sum": 8192,
+          "exact_context_boundary": true,
+          "parser_error_reproduced": "Expecting value: line 1 column 1 (char 0)",
+          "raw_response": {
+            "created_at": "2026-10-19T07:06:43.5442931Z",
+            "done": true,
+            "done_reason": "length",
+            "eval_count": 1050,
+            "eval_duration": 59442449000,
+            "load_duration": 5622000,
+            "message": {
+              "content": "I will now compile the side effects/phenotypes for **Leuprolide (16572)**, **Nafarelin (16575)**, and **Medroxyprogesterone acetate (14203)** to provide a comparative list. Here are the unique side effects/phenotypes from these drugs:\n\n1. **Leuprolide (16572)**:\n   - Sinusitis (22250)\n   - Edema (22262)\n   - Muscle weakness (22323)\n   - Ophthalmoplegia (22364)\n   - Inflammatory abnormality of the skin (22539)\n   - Hyperhidrosis (22594)\n   - Decreased liver function (22731)\n   - Increased body weight (22786)\n   - Abdominal distention (22791)\n   - Ascites (22879)\n   - Seizure (23000)\n   - Headache (23002)\n   - Dyspnea (23011)\n   - Hirsutism (23072)\n   - Alopecia (23073)\n   - Rhinitis (23083)\n   - Incoordination (23097)\n   - Vomiting (23157)\n   - Myalgia (23544)\n   - Epistaxis (23764)\n   - Alopecia of scalp (23799)\n   - Deep venous thrombosis (23855)\n   - Respiratory distress (23864)\n   - Arthralgia (23901)\n   - Elevated hepatic transaminase (24475)\n   - Pleural effusion (25150)\n   - Vertigo (25201)\n   - Urinary incontinence (25311)\n   - Paresthesia (25644)\n   - Pruritus (25945)\n   - Ocular pain (26096)\n   - Chest pain (26336)\n   - Pulmonary fibrosis (26629)\n   - Oliguria (84365)\n   - Nausea (84409)\n   - Polyphagia (84420)\n   - Menorrhagia (84519)\n   - Emotional lability (84693)\n   - Mood swings (84697)\n   - Osteopenia (84764)\n   - Dry skin (84767)\n   - Mood changes (84920)\n   - Palpitations (85015)\n   - Decreased HDL cholesterol concentration (85405)\n   - Malnutrition (85848)\n   - Poor appetite (85849)\n   - Breast hypertrophy (88208)\n   - Hypovolemia (88528)\n   - Oculomotor nerve palsy (89214)\n\n2. **Nafarelin (16575)**:\n   - Sinusitis (22250)\n   - Edema (22262)\n   - Muscle weakness (22323)\n   - Ophthalmoplegia (22364)\n   - Inflammatory abnormality of the skin (22539)\n   - Hyperhidrosis (22594)\n   - Decreased liver function (22731)\n   - Increased body weight (22786)\n   - Abdominal distention (22791)\n   - Ascites (22879)\n   - Seizure (23000)\n   - Headache (23002)\n   - Dyspnea (23011)\n   - Hirsutism (23072)\n   - Alopecia (23073)\n   - Rhinitis (23083)\n   - Incoordination (23097)\n   - Vomiting (23157)\n   - Myalgia (23544)\n   - Epistaxis (23764)\n   - Alopecia of scalp (23799)\n   - Deep venous thrombosis (23855)\n   - Respiratory distress (23864)\n   - Arthralgia (23901)\n   - Vertigo (25201)\n   - Urinary incontinence (25311)\n   - Paresthesia (25644)\n   - Pruritus (25945)\n   - Ocular pain (26096)\n   - Chest pain (26",
+              "role": "assistant"
+            },
+            "model": "ministral-3:8b",
+            "prompt_eval_cached_count": 215,
+            "prompt_eval_count": 7142,
+            "prompt_eval_duration": 3556038000,
+            "total_duration": 63906579800
+          }
+        },
+        {
+          "message_index": 29,
+          "prompt_tokens": 8184,
+          "output_tokens": 8,
+          "token_sum": 8192,
+          "exact_context_boundary": true,
+          "parser_error_reproduced": "Expecting value: line 1 column 1 (char 0)",
+          "raw_response": {
+            "created_at": "2026-10-19T07:06:49.22069Z",
+            "done": true,
+            "done_reason": "length",
+            "eval_count": 8,
+            "eval_duration": 409562000,
+            "load_duration": 4813900,
+            "message": {
+              "content": "```json\n{\n  \"status\":",
+              "role": "assistant"
+            },
+            "model": "ministral-3:8b",
+            "prompt_eval_cached_count": 215,
+            "prompt_eval_count": 8184,
+            "prompt_eval_duration": 4155718000,
+            "total_duration": 5659368900
+          }
+        }
+      ],
+      "errors": []
+    },
+    {
+      "agent_id": "Ministral3-8B",
+      "query_id": "BH2_04003",
+      "status": "PARSE_FAIL",
+      "cause": null,
+      "evidence_label": "direct_context_truncation_no_16k_test",
+      "episode_path": "results/runs/screening/primary-3060ti-20261018/BH2_04003__Ministral3-8B__a1.json",
+      "episode_sha256": "2e8b7f17feeeb8d0ca5b4a7538fcf59d1e33e49b58c943e0ed8aaa56ec599cd8",
+      "num_ctx": 8192,
+      "num_predict": 4096,
+      "parse_attempts": [
+        {
+          "message_index": 18,
+          "prompt_tokens": 8033,
+          "output_tokens": 159,
+          "token_sum": 8192,
+          "exact_context_boundary": true,
+          "parser_error_reproduced": "Expecting value: line 1 column 1 (char 0)",
+          "raw_response": {
+            "created_at": "2026-10-19T07:07:40.5280539Z",
+            "done": true,
+            "done_reason": "length",
+            "eval_count": 159,
+            "eval_duration": 9194060000,
+            "load_duration": 4476200,
+            "message": {
+              "content": "I will now compile a **unique list of side effects/phenotypes** from the three drugs (**Betamethasone**, **Prednisone**, and **Dexamethasone**) to provide a comprehensive answer.",
+              "role": "assistant"
+            },
+            "model": "ministral-3:8b",
+            "prompt_eval_cached_count": 6098,
+            "prompt_eval_count": 8033,
+            "prompt_eval_duration": 1162102000,
+            "total_duration": 10461479400
+          }
+        },
+        {
+          "message_index": 20,
+          "prompt_tokens": 8095,
+          "output_tokens": 97,
+          "token_sum": 8192,
+          "exact_context_boundary": true,
+          "parser_error_reproduced": "Expecting value: line 1 column 1 (char 0)",
+          "raw_response": {
+            "created_at": "2026-10-19T07:07:50.7906005Z",
+            "done": true,
+            "done_reason": "length",
+            "eval_count": 97,
+            "eval_duration": 5627977000,
+            "load_duration": 3816900,
+            "message": {
+              "content": "```json\n{\n  \"status\": \"answered\",\n  \"answers\": [\n    {\"id\": \"22262\", \"name\": \"Edema\"},\n    {\"id\": \"22323\", \"name\": \"Muscle weakness\"},\n    {\"id\": \"22380\", \"name\": \"Visual impairment\"},\n    {\"id\": \"22400\", \"name\": \"Reduced visual acuity\"},\n    {\"id\": \"2",
+              "role": "assistant"
+            },
+            "model": "ministral-3:8b",
+            "prompt_eval_cached_count": 215,
+            "prompt_eval_count": 8095,
+            "prompt_eval_duration": 4133576000,
+            "total_duration": 10259836600
+          }
+        }
+      ],
+      "errors": []
+    },
+    {
+      "agent_id": "Ministral3-8B",
+      "query_id": "BH2_04425",
+      "status": "ERROR",
+      "cause": "CONNECTION",
+      "evidence_label": "request_timeout_not_parse_failure",
+      "episode_path": "results/runs/screening/primary-3060ti-20261018/BH2_04425__Ministral3-8B__a1.json",
+      "episode_sha256": "e63e6b2059106b97735bf5e5f0f5cddaffbe6a9c226e2d32da4657cd7afd2b6d",
+      "num_ctx": 8192,
+      "num_predict": 4096,
+      "parse_attempts": [],
+      "errors": [
+        {
+          "event": "ERROR",
+          "http_status": null,
+          "message": "HTTPConnectionPool(host='127.0.0.1', port=11434): Read timed out. (read timeout=120)",
+          "response_text": null,
+          "type": "OllamaError"
+        }
+      ]
+    },
+    {
+      "agent_id": "Qwen35-9B",
+      "query_id": "BH2_03856",
+      "status": "PARSE_FAIL",
+      "cause": null,
+      "evidence_label": "direct_context_truncation_no_16k_test",
+      "episode_path": "results/runs/screening/primary-3060ti-20261018/BH2_03856__Qwen35-9B__a1.json",
+      "episode_sha256": "cd58ea3fc50739b30726bb7a387cd33e991039b2cc26f9c343282e7696222fdb",
+      "num_ctx": 8192,
+      "num_predict": 4096,
+      "parse_attempts": [
+        {
+          "message_index": 38,
+          "prompt_tokens": 8140,
+          "output_tokens": 52,
+          "token_sum": 8192,
+          "exact_context_boundary": true,
+          "parser_error_reproduced": "Expecting value: line 1 column 1 (char 0)",
+          "raw_response": {
+            "created_at": "2026-10-18T15:09:56.4488644Z",
+            "done": true,
+            "done_reason": "length",
+            "eval_count": 52,
+            "eval_duration": 1168951000,
+            "load_duration": 6331900,
+            "message": {
+              "content": "",
+              "role": "assistant"
+            },
+            "model": "qwen3.5:9b",
+            "prompt_eval_cached_count": 273,
+            "prompt_eval_count": 8140,
+            "prompt_eval_duration": 3792869000,
+            "total_duration": 6062248600
+          }
+        },
+        {
+          "message_index": 40,
+          "prompt_tokens": 8169,
+          "output_tokens": 23,
+          "token_sum": 8192,
+          "exact_context_boundary": true,
+          "parser_error_reproduced": "Expecting value: line 1 column 1 (char 0)",
+          "raw_response": {
+            "created_at": "2026-10-18T15:09:58.0465511Z",
+            "done": true,
+            "done_reason": "length",
+            "eval_count": 23,
+            "eval_duration": 490475000,
+            "load_duration": 6405700,
+            "message": {
+              "content": "",
+              "role": "assistant"
+            },
+            "model": "qwen3.5:9b",
+            "prompt_eval_cached_count": 8136,
+            "prompt_eval_count": 8169,
+            "prompt_eval_duration": 149837000,
+            "total_duration": 1572402900
+          }
+        }
+      ],
+      "errors": []
+    },
+    {
+      "agent_id": "Qwen35-9B",
+      "query_id": "BH2_03881",
+      "status": "PARSE_FAIL",
+      "cause": null,
+      "evidence_label": "direct_context_truncation_no_16k_test",
+      "episode_path": "results/runs/screening/primary-3060ti-20261018/BH2_03881__Qwen35-9B__a1.json",
+      "episode_sha256": "e72890aaf233566096a22f02c53b740df3947a411eabe7fa705e30ebe62b64f4",
+      "num_ctx": 8192,
+      "num_predict": 4096,
+      "parse_attempts": [
+        {
+          "message_index": 25,
+          "prompt_tokens": 6994,
+          "output_tokens": 1198,
+          "token_sum": 8192,
+          "exact_context_boundary": true,
+          "parser_error_reproduced": "Unterminated string starting at: line 1 column 2541 (char 2540)",
+          "raw_response": {
+            "created_at": "2026-10-18T15:11:46.2224899Z",
+            "done": true,
+            "done_reason": "length",
+            "eval_count": 1198,
+            "eval_duration": 25633918000,
+            "load_duration": 2772200,
+            "message": {
+              "content": "{\"status\": \"answered\", \"answers\": [{\"id\": \"22467\", \"name\": \"Abnormality of the endocrine system\"}, {\"id\": \"14024\", \"name\": \"Prednisone\"}, {\"id\": \"14025\", \"name\": \"Mitotane\"}, {\"id\": \"14028\", \"name\": \"Hydrocortisone\"}, {\"id\": \"14034\", \"name\": \"Budesonide\"}, {\"id\": \"14127\", \"name\": \"Octreotide\"}, {\"id\": \"14144\", \"name\": \"Topiramate\"}, {\"id\": \"14153\", \"name\": \"Valproic acid\"}, {\"id\": \"14157\", \"name\": \"Hydromorphone\"}, {\"id\": \"14173\", \"name\": \"Imipramine\"}, {\"id\": \"14177\", \"name\": \"Duloxetine\"}, {\"id\": \"14178\", \"name\": \"Chlorpromazine\"}, {\"id\": \"14182\", \"name\": \"Oxycodone\"}, {\"id\": \"14184\", \"name\": \"Ritonavir\"}, {\"id\": \"14198\", \"name\": \"Clonidine\"}, {\"id\": \"14208\", \"name\": \"Testosterone\"}, {\"id\": \"14209\", \"name\": \"Efavirenz\"}, {\"id\": \"14210\", \"name\": \"Stavudine\"}, {\"id\": \"14223\", \"name\": \"Risperidone\"}, {\"id\": \"14235\", \"name\": \"Estradiol\"}, {\"id\": \"14241\", \"name\": \"Fentanyl\"}, {\"id\": \"14251\", \"name\": \"Tacrolimus\"}, {\"id\": \"14281\", \"name\": \"Ketoconazole\"}, {\"id\": \"14286\", \"name\": \"Rifampicin\"}, {\"id\": \"14294\", \"name\": \"Clonazepam\"}, {\"id\": \"14299\", \"name\": \"Sertraline\"}, {\"id\": \"14319\", \"name\": \"Saquinavir\"}, {\"id\": \"14323\", \"name\": \"Aripiprazole\"}, {\"id\": \"14325\", \"name\": \"Clomipramine\"}, {\"id\": \"14326\", \"name\": \"Darunavir\"}, {\"id\": \"14329\", \"name\": \"Insulin detemir\"}, {\"id\": \"14446\", \"name\": \"Vinflunine\"}, {\"id\": \"14542\", \"name\": \"Maprotiline\"}, {\"id\": \"14602\", \"name\": \"Voriconazole\"}, {\"id\": \"14606\", \"name\": \"Thalidomide\"}, {\"id\": \"14608\", \"name\": \"Ifosfamide\"}, {\"id\": \"14625\", \"name\": \"Corticotropin\"}, {\"id\": \"14642\", \"name\": \"Corticorelin\"}, {\"id\": \"14667\", \"name\": \"Risedronic acid\"}, {\"id\": \"14685\", \"name\": \"Progesterone\"}, {\"id\": \"14730\", \"name\": \"Metyrapone\"}, {\"id\": \"14738\", \"name\": \"Busulfan\"}, {\"id\": \"14768\", \"name\": \"Dalteparin\"}, {\"id\": \"14786\", \"name\": \"Lansoprazole\"}, {\"id\": \"14806\", \"name\": \"Entacapone\"}, {\"id\": \"14810\", \"name\": \"Micafungin\"}, {\"id\": \"14836\", \"name\": \"Ramipril\"}, {\"id\": \"14868\", \"name\": \"Thiotepa\"}, {\"id\": \"14926\", \"name\": \"Paricalcitol\"}, {\"id\": \"14937\", \"name\": \"Sildenafil\"}, {\"id\": \"14943\", \"name\": \"Levonorgestrel\"}, {\"id\": \"14945\", \"name\": \"Sorafenib\"}, {\"id\": \"14952\", \"name\": \"Haloperidol\"}, {\"id\": \"14956\", \"name\": \"Carbamazepine\"}, {\"id\": \"14961\", \"name\": \"Simvastatin\"}, {\"id\": \"14965\", \"name\": \"Eplerenone\"}, {\"id\": \"14970\", \"name\": \"Mometasone\"}, {\"id\": \"14988\", \"name\": \"Pimozide\"}, {\"id\": \"14999\", \"name\": \"Quetiapine\"}, {\"id\": \"15001\", \"name\": \"Paliperidone\"}, {\"id\": \"15002\", \"name\": \"Sunitinib\"}, {\"id\": \"15047\", \"name\": \"Clobetasol\"}, {\"id\": \"15073\", \"name\": \"Flu",
+              "role": "assistant"
+            },
+            "model": "qwen3.5:9b",
+            "prompt_eval_cached_count": 6408,
+            "prompt_eval_count": 6994,
+            "prompt_eval_duration": 358662000,
+            "total_duration": 26208906200
+          }
+        },
+        {
+          "message_index": 27,
+          "prompt_tokens": 6325,
+          "output_tokens": 1867,
+          "token_sum": 8192,
+          "exact_context_boundary": true,
+          "parser_error_reproduced": "Unterminated string starting at: line 1 column 3953 (char 3952)",
+          "raw_response": {
+            "created_at": "2026-10-18T15:12:30.1012678Z",
+            "done": true,
+            "done_reason": "length",
+            "eval_count": 1867,
+            "eval_duration": 40643734000,
+            "load_duration": 2756600,
+            "message": {
+              "content": "{\"status\": \"answered\", \"answers\": [{\"id\": \"22467\", \"name\": \"Abnormality of the endocrine system\"}, {\"id\": \"14024\", \"name\": \"Prednisone\"}, {\"id\": \"14025\", \"name\": \"Mitotane\"}, {\"id\": \"14028\", \"name\": \"Hydrocortisone\"}, {\"id\": \"14034\", \"name\": \"Budesonide\"}, {\"id\": \"14127\", \"name\": \"Octreotide\"}, {\"id\": \"14144\", \"name\": \"Topiramate\"}, {\"id\": \"14153\", \"name\": \"Valproic acid\"}, {\"id\": \"14157\", \"name\": \"Hydromorphone\"}, {\"id\": \"14173\", \"name\": \"Imipramine\"}, {\"id\": \"14177\", \"name\": \"Duloxetine\"}, {\"id\": \"14178\", \"name\": \"Chlorpromazine\"}, {\"id\": \"14182\", \"name\": \"Oxycodone\"}, {\"id\": \"14184\", \"name\": \"Ritonavir\"}, {\"id\": \"14198\", \"name\": \"Clonidine\"}, {\"id\": \"14208\", \"name\": \"Testosterone\"}, {\"id\": \"14209\", \"name\": \"Efavirenz\"}, {\"id\": \"14210\", \"name\": \"Stavudine\"}, {\"id\": \"14223\", \"name\": \"Risperidone\"}, {\"id\": \"14235\", \"name\": \"Estradiol\"}, {\"id\": \"14241\", \"name\": \"Fentanyl\"}, {\"id\": \"14251\", \"name\": \"Tacrolimus\"}, {\"id\": \"14281\", \"name\": \"Ketoconazole\"}, {\"id\": \"14286\", \"name\": \"Rifampicin\"}, {\"id\": \"14294\", \"name\": \"Clonazepam\"}, {\"id\": \"14299\", \"name\": \"Sertraline\"}, {\"id\": \"14319\", \"name\": \"Saquinavir\"}, {\"id\": \"14323\", \"name\": \"Aripiprazole\"}, {\"id\": \"14325\", \"name\": \"Clomipramine\"}, {\"id\": \"14326\", \"name\": \"Darunavir\"}, {\"id\": \"14329\", \"name\": \"Insulin detemir\"}, {\"id\": \"14446\", \"name\": \"Vinflunine\"}, {\"id\": \"14542\", \"name\": \"Maprotiline\"}, {\"id\": \"14602\", \"name\": \"Voriconazole\"}, {\"id\": \"14606\", \"name\": \"Thalidomide\"}, {\"id\": \"14608\", \"name\": \"Ifosfamide\"}, {\"id\": \"14625\", \"name\": \"Corticotropin\"}, {\"id\": \"14642\", \"name\": \"Corticorelin\"}, {\"id\": \"14667\", \"name\": \"Risedronic acid\"}, {\"id\": \"14685\", \"name\": \"Progesterone\"}, {\"id\": \"14730\", \"name\": \"Metyrapone\"}, {\"id\": \"14738\", \"name\": \"Busulfan\"}, {\"id\": \"14768\", \"name\": \"Dalteparin\"}, {\"id\": \"14786\", \"name\": \"Lansoprazole\"}, {\"id\": \"14806\", \"name\": \"Entacapone\"}, {\"id\": \"14810\", \"name\": \"Micafungin\"}, {\"id\": \"14836\", \"name\": \"Ramipril\"}, {\"id\": \"14868\", \"name\": \"Thiotepa\"}, {\"id\": \"14926\", \"name\": \"Paricalcitol\"}, {\"id\": \"14937\", \"name\": \"Sildenafil\"}, {\"id\": \"14943\", \"name\": \"Levonorgestrel\"}, {\"id\": \"14945\", \"name\": \"Sorafenib\"}, {\"id\": \"14952\", \"name\": \"Haloperidol\"}, {\"id\": \"14956\", \"name\": \"Carbamazepine\"}, {\"id\": \"14961\", \"name\": \"Simvastatin\"}, {\"id\": \"14965\", \"name\": \"Eplerenone\"}, {\"id\": \"14970\", \"name\": \"Mometasone\"}, {\"id\": \"14988\", \"name\": \"Pimozide\"}, {\"id\": \"14999\", \"name\": \"Quetiapine\"}, {\"id\": \"15001\", \"name\": \"Paliperidone\"}, {\"id\": \"15002\", \"name\": \"Sunitinib\"}, {\"id\": \"15047\", \"name\": \"Clobetasol\"}, {\"id\": \"15073\", \"name\": \"Fluvoxamine\"}, {\"id\": \"15075\", \"name\": \"Cevimeline\"}, {\"id\": \"15077\", \"name\": \"Bortezomib\"}, {\"id\": \"15078\", \"name\": \"Tramadol\"}, {\"id\": \"15080\", \"name\": \"Trospium\"}, {\"id\": \"15082\", \"name\": \"Citalopram\"}, {\"id\": \"15092\", \"name\": \"Vinorelbine\"}, {\"id\": \"15116\", \"name\": \"Paroxetine\"}, {\"id\": \"15148\", \"name\": \"Escitalopram\"}, {\"id\": \"15176\", \"name\": \"Everolimus\"}, {\"id\": \"15177\", \"name\": \"Zuclopenthixol\"}, {\"id\": \"15187\", \"name\": \"Nilotinib\"}, {\"id\": \"15205\", \"name\": \"Pazopanib\"}, {\"id\": \"15233\", \"name\": \"Dosulepin\"}, {\"id\": \"15288\", \"name\": \"Interferon alfa-2b\"}, {\"id\": \"15291\", \"name\": \"Ropinirole\"}, {\"id\": \"15308\", \"name\": \"Riluzole\"}, {\"id\": \"15324\", \"name\": \"Leflunomide\"}, {\"id\": \"15412\", \"name\": \"Histamine\"}, {\"id\": \"15428\", \"name\": \"Bexarotene\"}, {\"id\": \"15490\", \"name\": \"Pergolide\"}, {\"id\": \"15502\", \"name\": \"Posaconazole\"}, {\"id\": \"15520\", \"name\": \"Roflumilast\"}, {\"id\": \"15542\", \"name\": \"Milnacipran\"}, {\"id\": \"15562\", \"name\": \"Sitaxentan\"}, {\"id\": \"15584\", \"name\": \"Lanreotide\"}, {\"id\": \"15703\", \"name\": \"Clobetasone\"}, {\"id\": \"15782\", \"name\": \"Vigabatrin\"}, {\"id\": \"15818\", \"name\": \"Memantine\"}, {\"id\": \"15842\", \"name\": \"Mycophenolic acid\"}, {\"id\": \"15890\", \"name\": \"Tinzaparin\"}, {\"id\": \"16331\", \"name\": \"Epoprostenol\"}, {\"id\": \"16410\", \"name\": \"Polyestradiol phosphate\"}, {\"id\": \"16468\", \"name\": \"Goserelin\"}, {\"id\": \"16581\", \"name\": \"Triptorelin\"}, {\"id\": \"16669\", \"name\": \"Bemiparin\"}, {\"",
+              "role": "assistant"
+            },
+            "model": "qwen3.5:9b",
+            "prompt_eval_cached_count": 273,
+            "prompt_eval_count": 6325,
+            "prompt_eval_duration": 2834412000,
+            "total_duration": 43858313200
+          }
+        }
+      ],
+      "errors": []
+    }
+  ]
+}

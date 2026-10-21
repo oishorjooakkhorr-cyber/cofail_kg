@@ -1,0 +1,47 @@
+{
+  "identity": {
+    "tag": "ibm/granite4.1:8b",
+    "digest": "444af1c4b2fedd6b54041aca558e7300b0b3d5c0468c44619126240323ba2852",
+    "quantization": "Q4_K_M",
+    "parameter_size": "8.8B",
+    "capabilities": [
+      "completion",
+      "tools"
+    ]
+  },
+  "options": {
+    "temperature": 0,
+    "seed": 42,
+    "num_ctx": 8192,
+    "num_predict": 4096
+  },
+  "ps": {
+    "models": [
+      {
+        "name": "ibm/granite4.1:8b",
+        "model": "ibm/granite4.1:8b",
+        "size": 6862195914,
+        "digest": "444af1c4b2fedd6b54041aca558e7300b0b3d5c0468c44619126240323ba2852",
+        "details": {
+          "parent_model": "",
+          "format": "gguf",
+          "family": "granite",
+          "families": [
+            "granite"
+          ],
+          "parameter_size": "8.8B",
+          "quantization_level": "Q4_K_M"
+        },
+        "expires_at": "2026-10-21T09:38:20.0268219+06:00",
+        "size_vram": 6268114697,
+        "context_length": 8192,
+        "runner": "llamacpp"
+      }
+    ]
+  },
+  "gpu": "NVIDIA GeForce RTX 3060 Ti, 8192 MiB, 7051 MiB",
+  "tool_result": {
+    "role": "assistant",
+    "content": "The result of 2 + 3 is **5**."
+  }
+}

@@ -1,0 +1,8 @@
+agent_id,model,episodes,success,parse_fail,error,timeout,direct_context_truncation,mixed_context_and_schema,recovered_at_16k,unresolved_parse_failure
+Gemma4-E4B,gemma4:e4b-it-q4_K_M,20,16,4,0,0,0,0,4,0
+Granite33-8B,granite3.3:8b,20,20,0,0,0,0,0,0,0
+Granite42-8B,granite4.2:8b,20,17,0,3,0,0,0,0,0
+Llama31-8B,llama3.1:8b,20,20,0,0,0,0,0,0,0
+Ministral3-8B,ministral-3:8b,20,15,4,1,0,3,1,0,0
+OLMo3-7B,olmo-3:7b-instruct,20,20,0,0,0,0,0,0,0
+Qwen35-9B,qwen3.5:9b,20,18,2,0,0,2,0,0,0

@@ -1,0 +1,258 @@
+[
+  {
+    "agent_id": "Gemma4-E4B",
+    "query_id": "BH2_03762",
+    "status": "PARSE_FAIL",
+    "cause": null,
+    "parse_attempts": [
+      {
+        "error": {
+          "event": "PARSE_ERROR",
+          "message": "Expecting value: line 1 column 1 (char 0)",
+          "message_index": 42
+        },
+        "raw_response": {
+          "created_at": "2026-10-20T07:48:36.7731138Z",
+          "done": true,
+          "done_reason": "length",
+          "eval_count": 70,
+          "eval_duration": 717541000,
+          "load_duration": 5510200,
+          "message": {
+            "content": "The user is asking for information about the side effects of the drugs Triamcinolone, Prednisone, Hydrocortisone, Prednisolone, Methylprednisolone, and Hydroxyzine. I have already retrieved the side effects for all these drugs using `get_neighbors` and `inspect_entity`. I will now compile the answer based",
+            "role": "assistant"
+          },
+          "model": "gemma4:e4b-it-q4_K_M",
+          "prompt_eval_cached_count": 52,
+          "prompt_eval_count": 16314,
+          "prompt_eval_duration": 5396661000,
+          "total_duration": 6678980700
+        }
+      },
+      {
+        "error": {
+          "event": "PARSE_ERROR",
+          "message": "Unterminated string starting at: line 1 column 651 (char 650)",
+          "message_index": 44
+        },
+        "raw_response": {
+          "created_at": "2026-10-20T07:48:44.1627876Z",
+          "done": true,
+          "done_reason": "length",
+          "eval_count": 249,
+          "eval_duration": 1380960000,
+          "load_duration": 5783900,
+          "message": {
+            "content": "{\"status\": \"answered\", \"answers\": [{\"id\": \"22262\", \"name\": \"Edema\"}, {\"id\": \"22323\", \"name\": \"Muscle weakness\"}, {\"id\": \"22442\", \"name\": \"Dementia\"}, {\"id\": \"22447\", \"name\": \"Anxiety\"}, {\"id\": \"22457\", \"name\": \"Peripheral neuropathy\"}, {\"id\": \"22458\", \"name\": \"Abnormal peripheral nervous system morphology\"}, {\"id\": \"22467\", \"name\": \"Abnormality of the endocrine system\"}, {\"id\": \"22478\", \"name\": \"Growth delay\"}, {\"id\": \"22484\", \"name\": \"Hypothyroidism\"}, {\"id\": \"22539\", \"name\": \"Inflammatory abnormality of the skin\"}, {\"id\": \"22550\", \"name\": \"Eczema\"}, {\"id\": \"22581\", \"name\": \"Erythema\"}, {\"id\": \"22588\", \"name\": \"Abnormal joint morphology\"}, {\"id",
+            "role": "assistant"
+          },
+          "model": "gemma4:e4b-it-q4_K_M",
+          "prompt_eval_cached_count": 52,
+          "prompt_eval_count": 16135,
+          "prompt_eval_duration": 5345997000,
+          "total_duration": 7369691500
+        }
+      }
+    ],
+    "errors": []
+  },
+  {
+    "agent_id": "Qwen35-9B",
+    "query_id": "BH2_03991",
+    "status": "PARSE_FAIL",
+    "cause": null,
+    "parse_attempts": [
+      {
+        "error": {
+          "event": "PARSE_ERROR",
+          "message": "Unterminated string starting at: line 1 column 12 (char 11)",
+          "message_index": 27
+        },
+        "raw_response": {
+          "created_at": "2026-10-20T08:08:13.5726294Z",
+          "done": true,
+          "done_reason": "length",
+          "eval_count": 5,
+          "eval_duration": 139982000,
+          "load_duration": 6029900,
+          "message": {
+            "content": "{\"status\": \"answered",
+            "role": "assistant"
+          },
+          "model": "qwen3.5:9b",
+          "prompt_eval_cached_count": 273,
+          "prompt_eval_count": 16379,
+          "prompt_eval_duration": 8326494000,
+          "total_duration": 9123249100
+        }
+      },
+      {
+        "error": {
+          "event": "PARSE_ERROR",
+          "message": "Expecting value: line 1 column 1 (char 0)",
+          "message_index": 29
+        },
+        "raw_response": {
+          "created_at": "2026-10-20T08:08:24.4281203Z",
+          "done": true,
+          "done_reason": "stop",
+          "eval_count": 56,
+          "eval_duration": 1824665000,
+          "load_duration": 6331500,
+          "message": {
+            "content": "",
+            "role": "assistant",
+            "tool_calls": [
+              {
+                "function": {
+                  "arguments": {
+                    "entity_id": "16572",
+                    "page": 3,
+                    "relation": "drug_effect"
+                  },
+                  "index": 0,
+                  "name": "get_neighbors"
+                },
+                "id": "call_kpjypgao"
+              }
+            ]
+          },
+          "model": "qwen3.5:9b",
+          "prompt_eval_cached_count": 273,
+          "prompt_eval_count": 16180,
+          "prompt_eval_duration": 8339575999,
+          "total_duration": 10842921100
+        }
+      }
+    ],
+    "errors": []
+  },
+  {
+    "agent_id": "Ministral3-8B",
+    "query_id": "BH2_03619",
+    "status": "ERROR",
+    "cause": "CONNECTION",
+    "parse_attempts": [],
+    "errors": [
+      {
+        "event": "ERROR",
+        "http_status": null,
+        "message": "HTTPConnectionPool(host='127.0.0.1', port=11434): Read timed out. (read timeout=120)",
+        "response_text": null,
+        "type": "OllamaError"
+      }
+    ]
+  },
+  {
+    "agent_id": "Ministral3-8B",
+    "query_id": "BH2_03750",
+    "status": "ERROR",
+    "cause": "CONNECTION",
+    "parse_attempts": [],
+    "errors": [
+      {
+        "event": "ERROR",
+        "http_status": null,
+        "message": "HTTPConnectionPool(host='127.0.0.1', port=11434): Read timed out. (read timeout=120)",
+        "response_text": null,
+        "type": "OllamaError"
+      }
+    ]
+  },
+  {
+    "agent_id": "Ministral3-8B",
+    "query_id": "BH2_03856",
+    "status": "ERROR",
+    "cause": "CONNECTION",
+    "parse_attempts": [],
+    "errors": [
+      {
+        "event": "ERROR",
+        "http_status": null,
+        "message": "HTTPConnectionPool(host='127.0.0.1', port=11434): Read timed out. (read timeout=120)",
+        "response_text": null,
+        "type": "OllamaError"
+      }
+    ]
+  },
+  {
+    "agent_id": "Ministral3-8B",
+    "query_id": "BH2_03879",
+    "status": "ERROR",
+    "cause": "CONNECTION",
+    "parse_attempts": [],
+    "errors": [
+      {
+        "event": "ERROR",
+        "http_status": null,
+        "message": "HTTPConnectionPool(host='127.0.0.1', port=11434): Read timed out. (read timeout=120)",
+        "response_text": null,
+        "type": "OllamaError"
+      }
+    ]
+  },
+  {
+    "agent_id": "Ministral3-8B",
+    "query_id": "BH2_03953",
+    "status": "ERROR",
+    "cause": "CONNECTION",
+    "parse_attempts": [],
+    "errors": [
+      {
+        "event": "ERROR",
+        "http_status": null,
+        "message": "HTTPConnectionPool(host='127.0.0.1', port=11434): Read timed out. (read timeout=120)",
+        "response_text": null,
+        "type": "OllamaError"
+      }
+    ]
+  },
+  {
+    "agent_id": "Ministral3-8B",
+    "query_id": "BH2_03991",
+    "status": "ERROR",
+    "cause": "CONNECTION",
+    "parse_attempts": [],
+    "errors": [
+      {
+        "event": "ERROR",
+        "http_status": null,
+        "message": "HTTPConnectionPool(host='127.0.0.1', port=11434): Read timed out. (read timeout=120)",
+        "response_text": null,
+        "type": "OllamaError"
+      }
+    ]
+  },
+  {
+    "agent_id": "Ministral3-8B",
+    "query_id": "BH2_04003",
+    "status": "ERROR",
+    "cause": "CONNECTION",
+    "parse_attempts": [],
+    "errors": [
+      {
+        "event": "ERROR",
+        "http_status": null,
+        "message": "HTTPConnectionPool(host='127.0.0.1', port=11434): Read timed out. (read timeout=120)",
+        "response_text": null,
+        "type": "OllamaError"
+      }
+    ]
+  },
+  {
+    "agent_id": "Ministral3-8B",
+    "query_id": "BH2_04425",
+    "status": "ERROR",
+    "cause": "CONNECTION",
+    "parse_attempts": [],
+    "errors": [
+      {
+        "event": "ERROR",
+        "http_status": null,
+        "message": "HTTPConnectionPool(host='127.0.0.1', port=11434): Read timed out. (read timeout=120)",
+        "response_text": null,
+        "type": "OllamaError"
+      }
+    ]
+  }
+]

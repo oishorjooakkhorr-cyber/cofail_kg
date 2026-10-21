@@ -1,0 +1,40 @@
+{
+  "identity": {
+    "tag": "command-r7b:7b",
+    "digest": "ff4e9696ef9f19b62e3f7d7261c95dcc9bb15a7c0398493366d851119fe2e1ef",
+    "quantization": "Q4_K_M",
+    "parameter_size": "8.0B",
+    "capabilities": [
+      "completion",
+      "tools"
+    ]
+  },
+  "ps": {
+    "models": [
+      {
+        "name": "command-r7b:7b",
+        "model": "command-r7b:7b",
+        "size": 5642230169,
+        "digest": "ff4e9696ef9f19b62e3f7d7261c95dcc9bb15a7c0398493366d851119fe2e1ef",
+        "details": {
+          "parent_model": "",
+          "format": "gguf",
+          "family": "cohere2",
+          "families": [
+            "cohere2"
+          ],
+          "parameter_size": "8.0B",
+          "quantization_level": "Q4_K_M"
+        },
+        "expires_at": "2026-10-21T12:13:56.7836312+06:00",
+        "size_vram": 5642230169,
+        "context_length": 8192,
+        "runner": "llamacpp"
+      }
+    ]
+  },
+  "gpu": "NVIDIA GeForce RTX 3060 Ti, 8192 MiB, 6882 MiB\n",
+  "synthetic_native_tool_check": "FAIL: no native call; valid transport response preserved",
+  "proceed_reason": "Researcher requested all 20 outcomes. No preflight tool-use gate is added to D3. Metadata supports native tools; behavioral failure is measured without tuning.",
+  "production_code_changes": false
+}

@@ -1,0 +1,17 @@
+{
+  "result": "PASS",
+  "full_16k_queries": 60,
+  "accepted_at_16k": [
+    "Gemma4-E4B",
+    "Qwen35-9B"
+  ],
+  "not_accepted_at_16k": [
+    "Ministral3-8B"
+  ],
+  "original_results_preserved": true,
+  "new_run_hashes_unchanged_after_offline_reports_and_docs": 63,
+  "all_three_offline_reports_exit": 0,
+  "focused_tests": "42 passed in 2.43s",
+  "production_source_changes": false,
+  "report": "docs/S20_full_16k_reassessment.md"
+}

@@ -1,0 +1,588 @@
+{
+  "query_id": "BH2_04007",
+  "status": "ERROR",
+  "cause": "CONNECTION",
+  "timestamps": {
+    "finished_at": "2026-10-19T14:33:33.695973+00:00",
+    "started_at": "2026-10-19T14:31:08.712656+00:00"
+  },
+  "log_events": [
+    {
+      "agent_inputs_sha256": "4624021f742d1f7a8ece8ef8545033b5481c1de7ec62fba554f952d74f04ba27",
+      "draft_prompt": false,
+      "event": "EPISODE_CONFIG",
+      "request_timeout_seconds": 120,
+      "source_sha256": {
+        "configs/frozen_hashes.yaml": "7db879075c3893051fef0a91dfea528dd8daee6b79426d62db573461ce174b36",
+        "configs/ollama.yaml": "aa721697935e602b80845a00f53c6dbbea5c8729010b00deb1cfc285a83b9288",
+        "data/agent_inputs/screening.jsonl": "4624021f742d1f7a8ece8ef8545033b5481c1de7ec62fba554f952d74f04ba27",
+        "data/cache/primekg_metadata.json": "bc5d3fd2f12aeb29398fe4684c83d8c65c7bd5c1edf704573322295bdc6b2e95",
+        "data/processed/manifests/screening.jsonl": "58421a410eb32413b7af7dfa157ef4a430b5ccf7e087dc1f8d60d597730c12b9",
+        "data/processed/primary_population.csv": "24a876a1bcca9e4e4fc5d273460212b47e38d95b0949c1770096fb46b79b41b8",
+        "data/processed/reference_queries.parquet": "7d3be769ac5abfa99e3da94a03a70b2ada03c3b8ca5a21a2b61184cc33e0ad07",
+        "data/processed/reference_summary.json": "f9009e75a23e9c11dd131554a225038ad36256e13737d0612dde18f4f13c33d8",
+        "data/processed/reference_targets.parquet": "3cc447fb262fc29d3f9cf1de1b589deef249ef2c2fe257272bebbf70e9310943",
+        "docs/decision_rules.md": "c007b1afb96c2b1967fc3ba5964d0dcfdf0197ba0039d71a46c46febbe222175",
+        "docs/frozen_pilot_protocol.md": "d87b111cc2cd918882c95f75f1fcc757a0532bac26455e633d52d2e2490e773b",
+        "results/semantics/relation_mapping.json": "2d609332b6a4ff48423bd7b2f1cb98d8d2d9cafc2fe80c20f7cee8184b8bb8c0",
+        "scripts/20_screen_models.py": "c558a80d5a1f7a931432f366e173fb1c467ec37499c616950be810b953db8ed1",
+        "src/cofail_kg/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "src/cofail_kg/agents/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "src/cofail_kg/agents/kg_env.py": "957c31d77988add1804f127f2889297b55388c1a6401b9d6948b3a639c430549",
+        "src/cofail_kg/agents/ollama_client.py": "c5fc85390ab74233c5696ea68e8f5915dcca986480d731fd89f28544018988dd",
+        "src/cofail_kg/agents/prompts.py": "1b590b92db92da365b668112d981f05827d1d70600deb76297a969e5539d3e4e",
+        "src/cofail_kg/agents/run_agent.py": "ba12a6ccce5626c08fac066463713a9ace780495df6d6fa348a11800cd94016a",
+        "src/cofail_kg/agents/tool_schemas.py": "fe95093be50073aca922360645240d4410737fb39f11061aa1f5f2df0a8b0bab",
+        "src/cofail_kg/agents/trace.py": "6cff52a7646e5ceaef01a487db5427293ae62e7a3b2ca94f9c805b83cdec7ffc",
+        "src/cofail_kg/analysis/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "src/cofail_kg/data/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "src/cofail_kg/data/biohopr_loader.py": "0ab1de558c393c1b5a68c3fba7c3e2b688c72b00f300951fe3b4826a92f41a2a",
+        "src/cofail_kg/data/diagnostics.py": "9c0ca21667702af80892daadf78991a13415f5efcef1b5af73bdcb8eff3d33e3",
+        "src/cofail_kg/data/field_roles.py": "2058c020f46649d2e009c1849fb5f59ace3ba787a7102efb3d859b69dc7818ee",
+        "src/cofail_kg/data/sampling.py": "37a895cd5d7c48876a567a716ab8cab768aacaac522809257faee25bd72367f8",
+        "src/cofail_kg/evaluation/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "src/cofail_kg/evaluation/agent_metrics.py": "ad4de6694b6a1bdb8c02c7110e9a5f7a08cbabbdf3bd9a5960eb107d37fc3c1c",
+        "src/cofail_kg/evaluation/answer_labels.py": "35297976b8cf94909b5c0b78f097309a986a3221a7a62016c1c15cb71aa41537",
+        "src/cofail_kg/evaluation/dataset_evidence.py": "fed445c9731b187f0023c3e8d6b1a19cd8ab9a1d3a6c0c56136f69ba9a9790e4",
+        "src/cofail_kg/evaluation/normalize.py": "d6bb073cc92389d9b370c10de4f56ce0698fe99f05ec0392c89f3999c990d849",
+        "src/cofail_kg/evaluation/path_labels.py": "f42c25dbe1a1031f33061b2788431784a92af8da07f6735e92e1878fa3f709ab",
+        "src/cofail_kg/evaluation/primary_population.py": "d0e4bc52671616b97fbbb28935effb3bb4a69b413d5bce7cdd1c24fa7eae96e7",
+        "src/cofail_kg/evaluation/query_validation.py": "f0cf029d7e89d4c37f16f7366324a33d9b050461338486bf6905e65ee5838dd6",
+        "src/cofail_kg/evaluation/reference_sets.py": "f1bc1767f8f5460aab8534bd94a6c2cefd2883e02cb99ea4324dd9a93e07339d",
+        "src/cofail_kg/evaluation/relation_mapping.py": "138349d6e5cdbfa16a66c0f398c02a2846be86a1f71678d355c3cd0ddf8a4a27",
+        "src/cofail_kg/evaluation/screening.py": "afd33f7ce54b9537435ff4f112048040e5082b24f2e4972ab3e7159dceb9c1f9",
+        "src/cofail_kg/kg/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "src/cofail_kg/kg/prepare.py": "9b238ce9fecd81c127626122084d42d2e7d6f591fe2d5a1a491bb5cc275d720d",
+        "src/cofail_kg/kg/primekg_index.py": "048581ebcd38780cf43015de23749ba326d6fa7d6d3b039f664d6fc68704869a",
+        "src/cofail_kg/utils/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "src/cofail_kg/utils/frozen_hashes.py": "c6f03344020be7fb85a62af5adc0dcb16807a89b574378bc0d3afe23d0ee75bf"
+      },
+      "think": false,
+      "timeout_seconds": 600
+    },
+    {
+      "event": "CHAT_RESPONSE",
+      "latency_seconds": 1.4704550000024028,
+      "message_index": 2,
+      "raw_response": {
+        "created_at": "2026-10-19T14:31:12.5294987Z",
+        "done": true,
+        "done_reason": "stop",
+        "eval_count": 33,
+        "eval_duration": 804541000,
+        "load_duration": 2616700,
+        "message": {
+          "content": "",
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": {
+                  "entity_id": "83880"
+                },
+                "index": 0,
+                "name": "inspect_entity"
+              },
+              "id": "reW3OTqkoTseRKn8Kchht0VlCzeO01ei"
+            }
+          ]
+        },
+        "model": "granite4.2:8b",
+        "prompt_eval_cached_count": 4,
+        "prompt_eval_count": 759,
+        "prompt_eval_duration": 380703000,
+        "total_duration": 1468147900
+      }
+    },
+    {
+      "event": "CHAT_RESPONSE",
+      "latency_seconds": 1.57152479999786,
+      "message_index": 4,
+      "raw_response": {
+        "created_at": "2026-10-19T14:31:14.1583068Z",
+        "done": true,
+        "done_reason": "stop",
+        "eval_count": 60,
+        "eval_duration": 1423830000,
+        "load_duration": 3359700,
+        "message": {
+          "content": "",
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": {
+                  "entity_id": "83880",
+                  "neighbor_type": "drug",
+                  "relation": "indication"
+                },
+                "index": 0,
+                "name": "get_neighbors"
+              },
+              "id": "VfDiJmCpUNQ8K8lKVkJFKuI6s85nrQYB"
+            }
+          ]
+        },
+        "model": "granite4.2:8b",
+        "prompt_eval_cached_count": 791,
+        "prompt_eval_count": 942,
+        "prompt_eval_duration": 97696000,
+        "total_duration": 1548685100
+      }
+    },
+    {
+      "event": "CHAT_RESPONSE",
+      "latency_seconds": 1.0919952999975067,
+      "message_index": 6,
+      "raw_response": {
+        "created_at": "2026-10-19T14:31:15.2616956Z",
+        "done": true,
+        "done_reason": "stop",
+        "eval_count": 33,
+        "eval_duration": 884747000,
+        "load_duration": 4353200,
+        "message": {
+          "content": "",
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": {
+                  "entity_id": "14678"
+                },
+                "index": 0,
+                "name": "inspect_entity"
+              },
+              "id": "fsqdHenf1AOsT0ToLdOUFPar6e97ZmSf"
+            }
+          ]
+        },
+        "model": "granite4.2:8b",
+        "prompt_eval_cached_count": 1001,
+        "prompt_eval_count": 1276,
+        "prompt_eval_duration": 153618000,
+        "total_duration": 1071040000
+      }
+    },
+    {
+      "event": "CHAT_RESPONSE",
+      "latency_seconds": 1.8460914000024786,
+      "message_index": 8,
+      "raw_response": {
+        "created_at": "2026-10-19T14:31:17.1147695Z",
+        "done": true,
+        "done_reason": "stop",
+        "eval_count": 64,
+        "eval_duration": 1648910000,
+        "load_duration": 4544700,
+        "message": {
+          "content": "",
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": {
+                  "entity_id": "14678",
+                  "neighbor_type": "effect/phenotype",
+                  "relation": "drug_effect"
+                },
+                "index": 0,
+                "name": "get_neighbors"
+              },
+              "id": "HH0FllujQN7XlGBHetDIdgIMDATHgvP6"
+            }
+          ]
+        },
+        "model": "granite4.2:8b",
+        "prompt_eval_cached_count": 1308,
+        "prompt_eval_count": 1569,
+        "prompt_eval_duration": 159412000,
+        "total_duration": 1844119200
+      }
+    },
+    {
+      "event": "CHAT_RESPONSE",
+      "latency_seconds": 1.1644343999942066,
+      "message_index": 10,
+      "raw_response": {
+        "created_at": "2026-10-19T14:31:18.29001Z",
+        "done": true,
+        "done_reason": "stop",
+        "eval_count": 33,
+        "eval_duration": 853374000,
+        "load_duration": 3719300,
+        "message": {
+          "content": "",
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": {
+                  "entity_id": "14706"
+                },
+                "index": 0,
+                "name": "inspect_entity"
+              },
+              "id": "NXJKnW99qzurJXAINmBabzLRjWghKktz"
+            }
+          ]
+        },
+        "model": "granite4.2:8b",
+        "prompt_eval_cached_count": 1632,
+        "prompt_eval_count": 2135,
+        "prompt_eval_duration": 252729000,
+        "total_duration": 1145145900
+      }
+    },
+    {
+      "event": "CHAT_RESPONSE",
+      "latency_seconds": 1.93552610000188,
+      "message_index": 12,
+      "raw_response": {
+        "created_at": "2026-10-19T14:31:20.2318917Z",
+        "done": true,
+        "done_reason": "stop",
+        "eval_count": 64,
+        "eval_duration": 1729068000,
+        "load_duration": 22779900,
+        "message": {
+          "content": "",
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": {
+                  "entity_id": "14706",
+                  "neighbor_type": "effect/phenotype",
+                  "relation": "drug_effect"
+                },
+                "index": 0,
+                "name": "get_neighbors"
+              },
+              "id": "Md9ibGuDRhQehRvPwBPD06Q8uNv11ELz"
+            }
+          ]
+        },
+        "model": "granite4.2:8b",
+        "prompt_eval_cached_count": 2167,
+        "prompt_eval_count": 2394,
+        "prompt_eval_duration": 141385000,
+        "total_duration": 1933416100
+      }
+    },
+    {
+      "event": "CHAT_RESPONSE",
+      "latency_seconds": 1.4251015999980154,
+      "message_index": 14,
+      "raw_response": {
+        "created_at": "2026-10-19T14:31:21.6689142Z",
+        "done": true,
+        "done_reason": "stop",
+        "eval_count": 33,
+        "eval_duration": 920234000,
+        "load_duration": 3771300,
+        "message": {
+          "content": "",
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": {
+                  "entity_id": "16341"
+                },
+                "index": 0,
+                "name": "inspect_entity"
+              },
+              "id": "CHfkt0GPFsf8B4KtAhN5RACz1lNeOzIf"
+            }
+          ]
+        },
+        "model": "granite4.2:8b",
+        "prompt_eval_cached_count": 2457,
+        "prompt_eval_count": 3298,
+        "prompt_eval_duration": 452605000,
+        "total_duration": 1422837300
+      }
+    },
+    {
+      "event": "CHAT_RESPONSE",
+      "latency_seconds": 1.1104247000039322,
+      "message_index": 16,
+      "raw_response": {
+        "created_at": "2026-10-19T14:31:22.7842515Z",
+        "done": true,
+        "done_reason": "stop",
+        "eval_count": 33,
+        "eval_duration": 928619000,
+        "load_duration": 3726600,
+        "message": {
+          "content": "",
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": {
+                  "entity_id": "16347"
+                },
+                "index": 0,
+                "name": "inspect_entity"
+              },
+              "id": "78jpCbbTkjZ6W0JQXBwK3qtbZSv0GfL1"
+            }
+          ]
+        },
+        "model": "granite4.2:8b",
+        "prompt_eval_cached_count": 3330,
+        "prompt_eval_count": 3509,
+        "prompt_eval_duration": 126811000,
+        "total_duration": 1107467100
+      }
+    },
+    {
+      "event": "CHAT_RESPONSE",
+      "latency_seconds": 1.1687031999972533,
+      "message_index": 18,
+      "raw_response": {
+        "created_at": "2026-10-19T14:31:23.9579638Z",
+        "done": true,
+        "done_reason": "stop",
+        "eval_count": 33,
+        "eval_duration": 967366000,
+        "load_duration": 3490500,
+        "message": {
+          "content": "",
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": {
+                  "entity_id": "20446"
+                },
+                "index": 0,
+                "name": "inspect_entity"
+              },
+              "id": "MhMMdCSgqqd2c0owRBTfKIvZqn9dhEzI"
+            }
+          ]
+        },
+        "model": "granite4.2:8b",
+        "prompt_eval_cached_count": 3541,
+        "prompt_eval_count": 3762,
+        "prompt_eval_duration": 144280000,
+        "total_duration": 1166275100
+      }
+    },
+    {
+      "event": "CHAT_RESPONSE",
+      "latency_seconds": 1.13414489999559,
+      "message_index": 20,
+      "raw_response": {
+        "created_at": "2026-10-19T14:31:25.0961006Z",
+        "done": true,
+        "done_reason": "stop",
+        "eval_count": 33,
+        "eval_duration": 955230000,
+        "load_duration": 3675700,
+        "message": {
+          "content": "",
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": {
+                  "entity_id": "20447"
+                },
+                "index": 0,
+                "name": "inspect_entity"
+              },
+              "id": "eTAHuSMGYgQ4YCD3AUOXkn84vX2GaiG2"
+            }
+          ]
+        },
+        "model": "granite4.2:8b",
+        "prompt_eval_cached_count": 3794,
+        "prompt_eval_count": 3906,
+        "prompt_eval_duration": 91920000,
+        "total_duration": 1107503200
+      }
+    },
+    {
+      "event": "CHAT_RESPONSE",
+      "latency_seconds": 2.0872567999977036,
+      "message_index": 22,
+      "raw_response": {
+        "created_at": "2026-10-19T14:31:27.1881909Z",
+        "done": true,
+        "done_reason": "stop",
+        "eval_count": 64,
+        "eval_duration": 1893669000,
+        "load_duration": 3610900,
+        "message": {
+          "content": "",
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": {
+                  "entity_id": "20447",
+                  "neighbor_type": "effect/phenotype",
+                  "relation": "drug_effect"
+                },
+                "index": 0,
+                "name": "get_neighbors"
+              },
+              "id": "8kvfIi7lWcOqRT6szKw7CJID2ofb4smq"
+            }
+          ]
+        },
+        "model": "granite4.2:8b",
+        "prompt_eval_cached_count": 3938,
+        "prompt_eval_count": 4085,
+        "prompt_eval_duration": 117245000,
+        "total_duration": 2072785700
+      }
+    },
+    {
+      "event": "CHAT_RESPONSE",
+      "latency_seconds": 2.156153899995843,
+      "message_index": 24,
+      "raw_response": {
+        "created_at": "2026-10-19T14:31:29.3491846Z",
+        "done": true,
+        "done_reason": "stop",
+        "eval_count": 64,
+        "eval_duration": 1919195000,
+        "load_duration": 3936300,
+        "message": {
+          "content": "",
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": {
+                  "entity_id": "16341",
+                  "neighbor_type": "effect/phenotype",
+                  "relation": "drug_effect"
+                },
+                "index": 0,
+                "name": "get_neighbors"
+              },
+              "id": "NJOVog7itbzNKg6DfbacwdmTRlElIBem"
+            }
+          ]
+        },
+        "model": "granite4.2:8b",
+        "prompt_eval_cached_count": 4148,
+        "prompt_eval_count": 4178,
+        "prompt_eval_duration": 158153000,
+        "total_duration": 2143278500
+      }
+    },
+    {
+      "event": "CHAT_RESPONSE",
+      "latency_seconds": 2.1547627999971155,
+      "message_index": 26,
+      "raw_response": {
+        "created_at": "2026-10-19T14:31:31.5080879Z",
+        "done": true,
+        "done_reason": "stop",
+        "eval_count": 64,
+        "eval_duration": 1918699000,
+        "load_duration": 3930200,
+        "message": {
+          "content": "",
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": {
+                  "entity_id": "16347",
+                  "neighbor_type": "effect/phenotype",
+                  "relation": "drug_effect"
+                },
+                "index": 0,
+                "name": "get_neighbors"
+              },
+              "id": "H0kG4Y8qYuEB9kVyqot6JRQ4olyEjzCA"
+            }
+          ]
+        },
+        "model": "granite4.2:8b",
+        "prompt_eval_cached_count": 4241,
+        "prompt_eval_count": 4271,
+        "prompt_eval_duration": 145941000,
+        "total_duration": 2133040100
+      }
+    },
+    {
+      "event": "CHAT_RESPONSE",
+      "latency_seconds": 2.176447300000291,
+      "message_index": 28,
+      "raw_response": {
+        "created_at": "2026-10-19T14:31:33.6896325Z",
+        "done": true,
+        "done_reason": "stop",
+        "eval_count": 64,
+        "eval_duration": 1929196000,
+        "load_duration": 4272600,
+        "message": {
+          "content": "",
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": {
+                  "entity_id": "20446",
+                  "neighbor_type": "effect/phenotype",
+                  "relation": "drug_effect"
+                },
+                "index": 0,
+                "name": "get_neighbors"
+              },
+              "id": "iDKwELqzP69YVstJGOjSWxuDjZKCqCyi"
+            }
+          ]
+        },
+        "model": "granite4.2:8b",
+        "prompt_eval_cached_count": 4334,
+        "prompt_eval_count": 4364,
+        "prompt_eval_duration": 173313000,
+        "total_duration": 2174715300
+      }
+    },
+    {
+      "event": "ERROR",
+      "http_status": null,
+      "message": "HTTPConnectionPool(host='127.0.0.1', port=11434): Read timed out. (read timeout=120)",
+      "response_text": null,
+      "type": "OllamaError"
+    }
+  ],
+  "calls": 14,
+  "last_messages": [
+    {
+      "content": "",
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "function": {
+            "arguments": {
+              "entity_id": "20446",
+              "neighbor_type": "effect/phenotype",
+              "relation": "drug_effect"
+            },
+            "index": 0,
+            "name": "get_neighbors"
+          },
+          "id": "iDKwELqzP69YVstJGOjSWxuDjZKCqCyi"
+        }
+      ]
+    },
+    {
+      "content": "Error: entity 20446 has no relation drug_effect.",
+      "role": "tool",
+      "tool_call_id": "iDKwELqzP69YVstJGOjSWxuDjZKCqCyi",
+      "tool_name": "get_neighbors"
+    }
+  ]
+}
