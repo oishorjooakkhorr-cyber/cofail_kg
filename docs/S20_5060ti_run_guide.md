@@ -18,13 +18,29 @@ All 3060 Ti results stay as history; nothing is mixed across hosts.
 
 ## 1. Restore the project and its records
 
+The destination drive and project location are **not decided yet**. Choose them on the
+new computer, clone the repository there, then initialize this variable in **each
+PowerShell terminal** before using the commands below:
+
+```powershell
+$projectRoot = Read-Host 'Full path of the cloned cofail_kg folder on your chosen drive'
+$projectRoot = (Resolve-Path -LiteralPath $projectRoot -ErrorAction Stop).Path
+if (!(Test-Path -LiteralPath (Join-Path $projectRoot 'pyproject.toml'))) {
+    throw 'Select the cloned cofail_kg project folder.'
+}
+Set-Location -LiteralPath $projectRoot
+```
+
+All destination paths below are relative to this chosen project root. Source-computer
+paths mentioned for copying files do not prescribe the new computer's drive or location.
+
 | What | How |
 |---|---|
 | Code | Clone `https://github.com/oishorjooakkhorr-cyber/cofail_kg.git`, including this guide. Record the actual `git rev-parse HEAD`; `9b3956d` is the earlier screening checkpoint. |
-| Location | Use `E:\Phitron Thesis\cofail_kg` for the commands below. Matching the old path simplifies access to historical absolute paths. A different location requires fresh new-host paths in the new manifests; never rewrite historical configs. |
+| Location | Choose the destination drive/folder and set `$projectRoot` above. Matching this computer's path is not required. Use fresh destination paths in the new-host manifests; never rewrite historical configs. |
 | Previous records and inputs | Restore `results/`, `data/processed/` and `data/agent_inputs/` using the [Drive restore instructions](google_drive_backup.md#other-developers-using-the-same-backup-folder). Clone alone does not restore ignored `results/runs/` records. |
 | PrimeKG cache | Transfer the two Parquet files below separately, along with their original cache metadata. |
-| Python and Ollama | Follow sections 2 and 3; keep project packages, caches and runtime files on `E:`. |
+| Python and Ollama | Follow sections 2 and 3; keep project packages, caches and runtime files under the chosen project folder. |
 | Models | Pull the exact tags in section 4 and verify their full digests. Copy existing models only if a matching download is unavailable. |
 
 ### Why the cache files are excluded from Drive
@@ -45,32 +61,32 @@ standard Drive backup. Verify the full SHA-256 values after transfer:
 | `primekg_edges.parquet` | `129f2d881e7aa9a678341e3920e2bba0f2081c5fada1951a545e004fcb25289e` |
 
 ```powershell
-Set-Location -LiteralPath 'E:\Phitron Thesis\cofail_kg'
+Set-Location -LiteralPath $projectRoot
 Get-FileHash -Algorithm SHA256 -LiteralPath .\data\cache\primekg_nodes.parquet, .\data\cache\primekg_edges.parquet | Format-List Path, Hash
 ```
 
 Any hash mismatch: stop and obtain the original bytes. Keep the restored inputs, relation
 mapping, frozen hashes and all historical records intact.
 
-## 2. Install Python dependencies inside this project on E:
+## 2. Install Python dependencies inside the chosen project folder
 
 On the new Windows computer, install the **64-bit Python 3.13.9** release using its
 [official installer](https://www.python.org/downloads/release/python-3139/). Choose
-**Customize installation**, retain pip/venv support, and set the interpreter location to
-`E:\Tools\Python3139` instead of the default location on `C:`. Use the regular CPython build,
+**Customize installation**, retain pip/venv support, and choose the interpreter location
+on the selected drive instead of accepting an unrelated default location. Note the full
+path to its `python.exe` for the prompt below. Use the regular CPython build,
 not the experimental free-threaded build. Do not copy this computer's Python `.venv`;
 recreate it on the destination.
 
 Run the following in PowerShell from the new clone. This creates the virtual environment,
-pip cache and temporary setup files **under the project folder on E:**. Explicit interpreter
+pip cache and temporary setup files **under the chosen project folder**. Explicit interpreter
 paths avoid installing into another Python installation. The pip configuration reset prevents
 an existing user configuration from redirecting installations to another directory.
 
 ```powershell
 $ErrorActionPreference = 'Stop'
-Set-Location -LiteralPath 'E:\Phitron Thesis\cofail_kg'
-$projectRoot = (Get-Location).Path
-$basePython = 'E:\Tools\Python3139\python.exe'
+Set-Location -LiteralPath $projectRoot
+$basePython = Read-Host 'Full path to your Python 3.13.9 python.exe on the selected drive'
 & $basePython -c "import sys; assert sys.version_info[:3] == (3, 13, 9), sys.version"
 if ($LASTEXITCODE -ne 0) { throw 'Python 3.13.9 is required.' }
 
@@ -96,22 +112,23 @@ if ($LASTEXITCODE -ne 0) { throw 'Dependency compatibility check failed.' }
 Verify the interpreter, import location and dependency directory before testing:
 
 ```powershell
-Set-Location -LiteralPath 'E:\Phitron Thesis\cofail_kg'
+Set-Location -LiteralPath $projectRoot
 & .\.venv\Scripts\python.exe -c "import pathlib, sys, sysconfig, cofail_kg; root=pathlib.Path.cwd().resolve(); env=(root/'.venv').resolve(); packages=pathlib.Path(sysconfig.get_path('purelib')).resolve(); assert sys.version_info[:3] == (3,13,9); assert pathlib.Path(sys.prefix).resolve() == env; assert packages == env/'Lib'/'site-packages'; assert pathlib.Path(cofail_kg.__file__).resolve().is_relative_to(root/'src'); print(sys.executable); print(packages)"
 if ($LASTEXITCODE -ne 0) { throw 'Python or dependency installation is outside the expected project environment.' }
 & .\.venv\Scripts\python.exe -m pytest -q --basetemp .\.venv\pytest-5060ti
 if ($LASTEXITCODE -ne 0) { throw 'Tests failed; do not start screening.' }
 ```
 
-Expected package directory: `E:\Phitron Thesis\cofail_kg\.venv\Lib\site-packages`.
+Expected package directory: `<projectRoot>\.venv\Lib\site-packages` on the chosen drive.
 Do not use a bare `pip install`, `--user`, or `--system-site-packages`. In a new terminal,
 repeat the session's cache/temp environment settings before installing anything else.
 
 ## 3. Set up the same Ollama runtime locally
 
 Transfer the existing **Ollama 0.40.4** runtime from this computer. Copy `ollama.exe` and the
-**entire `lib/` tree** from `E:\Phitron Thesis\cofail_kg\.venv\ollama\` into that same
-directory on the destination, preserving the directory layout. Runtime libraries are
+**entire `lib/` tree** from this source computer's
+`E:\Phitron Thesis\cofail_kg\.venv\ollama\` into `<projectRoot>\.venv\ollama\` on the
+destination, preserving the directory layout. Runtime libraries are
 required; copying only `ollama.exe` is insufficient. Copy this runtime after creating the
 new Python virtual environment; do not replace it with the source Python environment.
 
@@ -122,7 +139,7 @@ record the incompatibility; a runtime change needs a separately recorded decisio
 Quit any pre-existing Ollama desktop app/server first. In a dedicated PowerShell terminal:
 
 ```powershell
-Set-Location -LiteralPath 'E:\Phitron Thesis\cofail_kg'
+Set-Location -LiteralPath $projectRoot
 if (Get-NetTCPConnection -LocalPort 11434 -State Listen -ErrorAction SilentlyContinue) {
     throw 'Port 11434 is occupied; identify and stop the existing Ollama server first.'
 }
@@ -133,14 +150,14 @@ Remove-Item Env:OLLAMA_KV_CACHE_TYPE, Env:OLLAMA_FLASH_ATTENTION -ErrorAction Si
 ```
 
 Leave that terminal open. The server's `OLLAMA_MODELS` setting puts downloaded weights in
-`E:\Phitron Thesis\cofail_kg\.venv\ollama-models`, avoiding the default model store on `C:`.
+`<projectRoot>\.venv\ollama-models` on the chosen drive, rather than a user-profile default.
 Unsetting the two cache/attention overrides preserves the source runtime defaults; confirm
 f16 KV cache from the runtime evidence during preflight.
 
 In a second terminal, verify the running server, then use this terminal for section 4:
 
 ```powershell
-Set-Location -LiteralPath 'E:\Phitron Thesis\cofail_kg'
+Set-Location -LiteralPath $projectRoot
 $runtime = Invoke-RestMethod -Uri 'http://127.0.0.1:11434/api/version'
 if ($runtime.version -ne '0.40.4') { throw 'Unexpected Ollama server version.' }
 $runtime | ConvertTo-Json
@@ -153,7 +170,7 @@ matches the recorded identity**. A tag can change; the same tag or model size al
 insufficient. Pulling downloads weights to the new computer; inference uses its local GPU.
 
 ```powershell
-Set-Location -LiteralPath 'E:\Phitron Thesis\cofail_kg'
+Set-Location -LiteralPath $projectRoot
 foreach ($tag in @('qwen3.5:9b', 'gemma4:e4b-it-q4_K_M', 'ministral-3:8b', 'ibm/granite4.1:8b')) {
     & .\.venv\ollama\ollama.exe pull $tag
     if ($LASTEXITCODE -ne 0) { throw "Model download failed: $tag" }
@@ -220,6 +237,8 @@ stopped Granite block as if it were a new-host run.
 The new-host launcher still needs to be built and tested. It must reuse the unchanged agent
 runner/evaluators while creating fresh per-model manifests with new run IDs/output roots,
 destination paths, current Git provenance, model/source/input pins and recorded host details.
+It must locate restored historical records under the chosen project root without requiring
+the source computer's drive paths to exist or modifying those historical manifests.
 Keep the twenty frozen queries in their original order and preserve every final status.
 Tests must cover identity/hash mismatch refusal, isolation from old records, all-status
 write-once resume and offline reporting. The current user request updates/publishes this
@@ -267,7 +286,8 @@ old results without mixing records across hosts.
   environment on the destination and install packages into its own `site-packages`.
 - [pip configuration](https://pip.pypa.io/en/stable/topics/configuration/) and
   [pip cache settings](https://pip.pypa.io/en/stable/cli/pip/#cmdoption-cache-dir): explicit
-  environment/configuration settings keep this setup's package/cache paths local to `E:`.
+  environment/configuration settings keep this setup's package/cache paths under the chosen
+  project folder.
 - [Ollama model metadata](https://docs.ollama.com/api/tags) and
   [model storage location](https://docs.ollama.com/faq#where-are-models-stored): verify full
   digests and set `OLLAMA_MODELS` in the server's environment.
@@ -275,7 +295,7 @@ old results without mixing records across hosts.
 Source computer verified on 2026-10-21: Python 3.13.9, Ollama 0.40.4, all four recorded
 model digests, and the two cache hashes above. Destination installation, GPU placement
 and new-host inference remain untested until the corresponding steps are completed there.
-Local guide checks: all seven PowerShell blocks parse; the model guard accepts matching
+Local guide checks: all eight PowerShell blocks parse; the model guard accepts matching
 fixtures and rejects missing models, changed digests and changed quantization. The current
 project passes the interpreter/site-packages location check and `pip check`. No dependency
 reinstallation, model download or new inference was performed to validate this document.
