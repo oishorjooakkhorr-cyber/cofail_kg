@@ -1,0 +1,28 @@
+F..                                                                      [100%]
+================================== FAILURES ===================================
+_____________________________ test_runtime_guard ______________________________
+
+    def test_runtime_guard():
+        model = {"digest": driver.DIGEST, "context_length": 16384, "size": 10, "size_vram": 10}
+        log = "OLLAMA_KV_CACHE_TYPE:f16 K (f16): 1088 MiB, V (f16): 1088 MiB offloaded 43/43 layers to GPU"
+>       driver.guard_runtime({"models": [model]}, log)
+
+.venv\gemma-review-mutation\isolated\test_driver.py:15:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+ps = {'models': [{'digest': 'dc35e8d9c6061baa6f0fa870975ab6932e2542b579b13ea0f199fa4bb7300c9c', 'context_length': 16384, 'size': 10, 'size_vram': 10}]}
+log = 'OLLAMA_KV_CACHE_TYPE:f16 K (f16): 1088 MiB, V (f16): 1088 MiB offloaded 43/43 layers to GPU'
+
+    def guard_runtime(ps, log):
+        models = [m for m in ps["models"] if m["digest"] == DIGEST]
+        assert len(models) == 1, ps
+        model = models[0]
+        assert model["context_length"] == 16384, model
+>       assert model["size"] > 0 and model["size_vram"] != model["size"], model
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       AssertionError: {'digest': 'dc35e8d9c6061baa6f0fa870975ab6932e2542b579b13ea0f199fa4bb7300c9c', 'context_length': 16384, 'size': 10, 'size_vram': 10}
+
+.venv\gemma-review-mutation\isolated\run_model.py:34: AssertionError
+=========================== short test summary info ===========================
+FAILED .venv/gemma-review-mutation/isolated/test_driver.py::test_runtime_guard
+1 failed, 2 passed in 0.59s

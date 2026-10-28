@@ -2003,3 +2003,38 @@ by Git and are included through the existing Drive backup procedure. Remote
 main matches local HEAD before publication. Focused screening/driver verification:
 44 tests passed; source pins, 459 historical and 21 new run-file hashes match;
 31 new JSON artifacts parse and the selected files have no credential patterns.
+
+
+## 2026-10-28 — S20 — authorized fresh Gemma block on RTX 5060 Ti
+
+Before inference, the researcher explicitly authorizes implementing/testing the
+new-host launcher, one complete fresh twenty-query Gemma4-E4B S20 block,
+investigation, project records, scoped commits/push to GitHub main and upload to
+the existing shared Google Drive backup. No further confirmation is needed.
+Stop after this model; no other candidate or S21 work is authorized.
+
+Run ID gemma4-5060ti-16k-20261028, model gemma4:e4b-it-q4_K_M,
+digest dc35e8d9c6061baa6f0fa870975ab6932e2542b579b13ea0f199fa4bb7300c9c.
+Use installed PATH Ollama client/server 0.40.12, without version changes, as a
+separate host/runtime condition from historical 3060 Ti / Ollama 0.40.4.
+Store D:\Models; isolated server port 11435, f16 KV only, context 16384,
+think=false, temperature 0, seed 42, num_predict 4096, page_size 50, budget 30,
+request timeout 120 s, episode timeout 600 s. Preserve Q4_K_M weights, all
+prompts/tools/parsers/evaluators/D3 thresholds, twenty-query order, historical
+results and acceptance records. Preflight requires native tools, actual 16K,
+f16 K/V logs and /api/ps size_vram=size corroborated by all-layer GPU logs.
+If any requirement fails, publish the blocker before official inference.
+
+Data seen before deciding: historical 8K Gemma 16 SUCCESS / 11 competent;
+complete 16K 19 SUCCESS / 14 competent, including BH2_03762 PARSE_FAIL;
+selected four-query 16K diagnostic parsed BH2_03762 with unsupported answers.
+The prior new-host Ministral outcome is present as unrelated uncommitted work.
+Do not tune or add experimental retries. Save every final status; crash resume
+may execute only unfinished queries. Commit tested launcher before inference.
+
+Routine engineering choices: adapt existing new-host driver, use separate
+manifests/metrics/output paths, preserve saved Git provenance on resume,
+normalize CRLF only when validating historical source identities, pin actual
+new-host bytes, and verify historical hashes plus runtime samples throughout.
+Host CPU is Ryzen 7 7700; usable RAM about 31 GiB; GPU RTX 5060 Ti 16311 MiB,
+driver 610.88. New host/runtime results cannot isolate a GPU-only causal effect.
