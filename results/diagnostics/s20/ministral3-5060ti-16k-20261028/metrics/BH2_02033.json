@@ -1,0 +1,211 @@
+{
+  "agent_id": "Ministral3-8B",
+  "answer_count": 3,
+  "answers": [
+    {
+      "degree": 5,
+      "degree_percentile": 49.133489461358316,
+      "first_seen_page": 1,
+      "h1": 1,
+      "label_a": "GOLD",
+      "label_b": "SUPPORTED",
+      "list_size": 3,
+      "node_id": "31332",
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "label": "drug_protein",
+          "u": "19601",
+          "v": "7876"
+        },
+        {
+          "creation_index": 3,
+          "label": "disease_protein",
+          "u": "7876",
+          "v": "31332"
+        }
+      ],
+      "primary_path_max_list_size": 3,
+      "primary_reason_codes": [],
+      "reason_codes": [],
+      "submitted_index": 0
+    },
+    {
+      "degree": 231,
+      "degree_percentile": 99.38524590163934,
+      "first_seen_page": 1,
+      "h1": 1,
+      "label_a": "GOLD",
+      "label_b": "SUPPORTED",
+      "list_size": 3,
+      "node_id": "36432",
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "label": "drug_protein",
+          "u": "19601",
+          "v": "7876"
+        },
+        {
+          "creation_index": 3,
+          "label": "disease_protein",
+          "u": "7876",
+          "v": "36432"
+        }
+      ],
+      "primary_path_max_list_size": 3,
+      "primary_reason_codes": [],
+      "reason_codes": [],
+      "submitted_index": 1
+    },
+    {
+      "degree": 168,
+      "degree_percentile": 98.67096018735363,
+      "first_seen_page": 1,
+      "h1": 1,
+      "label_a": "GOLD",
+      "label_b": "SUPPORTED",
+      "list_size": 3,
+      "node_id": "37659",
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "label": "drug_protein",
+          "u": "19601",
+          "v": "7876"
+        },
+        {
+          "creation_index": 3,
+          "label": "disease_protein",
+          "u": "7876",
+          "v": "37659"
+        }
+      ],
+      "primary_path_max_list_size": 3,
+      "primary_reason_codes": [],
+      "reason_codes": [],
+      "submitted_index": 2
+    }
+  ],
+  "attempt": 1,
+  "benchmark_f1": 1.0,
+  "benchmark_precision": 1.0,
+  "benchmark_recall": 1.0,
+  "bridge_conditional_recall": {
+    "7876": 1.0
+  },
+  "bridge_rank": {
+    "7876": 1
+  },
+  "bridge_recall_counts": {
+    "7876": {
+      "correct": 3,
+      "total": 3
+    }
+  },
+  "bridges_explored": [
+    "7876"
+  ],
+  "budget_exhausted": false,
+  "cause": null,
+  "construction": "BRIDGE",
+  "denominators": {
+    "benchmark_f1": 6,
+    "benchmark_precision": 3,
+    "benchmark_recall": 3,
+    "off_question_rate": 3,
+    "question_valid_precision": 3,
+    "ungrounded_rate": 3,
+    "unresolved_rate": 3
+  },
+  "early_stop": false,
+  "episode_status": "SUCCESS",
+  "found_r1": true,
+  "hop1_status": "H1_CLEAN",
+  "label_a_counts": {
+    "ALT_VALID": 0,
+    "GOLD": 3,
+    "GOLD_BRIDGE_EXTRA": 0,
+    "OFF_QUESTION": 0,
+    "UNRESOLVED": 0
+  },
+  "label_b_counts": {
+    "KG_UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0,
+    "PATH_INVALID": 0,
+    "SUPPORTED": 3,
+    "UNGROUNDED": 0
+  },
+  "node_statistics": {
+    "19601": {
+      "degree": 330,
+      "degree_percentile": 66.60801809727283
+    },
+    "31332": {
+      "degree": 5,
+      "degree_percentile": 49.133489461358316
+    },
+    "36432": {
+      "degree": 231,
+      "degree_percentile": 99.38524590163934
+    },
+    "37659": {
+      "degree": 168,
+      "degree_percentile": 98.67096018735363
+    },
+    "7876": {
+      "degree": 70,
+      "degree_percentile": 49.745220628094394
+    }
+  },
+  "numerators": {
+    "benchmark_f1": 6,
+    "benchmark_precision": 3,
+    "benchmark_recall": 3,
+    "off_question_rate": 0,
+    "question_valid_precision": 3,
+    "ungrounded_rate": 0,
+    "unresolved_rate": 0
+  },
+  "off_question_rate": 0.0,
+  "pages_requested": 2,
+  "primary_reason_counts": {
+    "SHORTCUT": 0,
+    "WRONG_BRIDGE_TYPE": 0,
+    "WRONG_HOP_COUNT": 0,
+    "WRONG_RELATION_HOP1": 0,
+    "WRONG_RELATION_HOP2": 0,
+    "WRONG_TARGET_TYPE": 0
+  },
+  "query_id": "BH2_02033",
+  "question_valid_precision": 1.0,
+  "reason_counts": {
+    "SHORTCUT": 0,
+    "WRONG_BRIDGE_TYPE": 0,
+    "WRONG_HOP_COUNT": 0,
+    "WRONG_RELATION_HOP1": 0,
+    "WRONG_RELATION_HOP2": 0,
+    "WRONG_TARGET_TYPE": 0
+  },
+  "resolved_count": 3,
+  "run_id": "ministral3-5060ti-16k-20261028",
+  "text_tool_call_count": 0,
+  "tool_calls_used": 4,
+  "undefined_counts": {
+    "benchmark_f1": 0,
+    "benchmark_precision": 0,
+    "benchmark_recall": 0,
+    "bridge_conditional_recall": 0,
+    "bridge_rank": 0,
+    "degree": 0,
+    "degree_percentile": 0,
+    "list_size": 0,
+    "off_question_rate": 0,
+    "primary_path_max_list_size": 0,
+    "question_valid_precision": 0,
+    "ungrounded_rate": 0,
+    "unresolved_rate": 0
+  },
+  "ungrounded_rate": 0.0,
+  "unresolved_rate": 0.0
+}

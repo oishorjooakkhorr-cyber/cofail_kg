@@ -1,0 +1,33 @@
+{
+  "stopped": true,
+  "finished_at": "2026-10-28T22:54:39.6816005+06:00",
+  "dedicated_server_pid": 27224,
+  "before": {
+    "models": [
+      {
+        "name": "ministral-3:8b",
+        "model": "ministral-3:8b",
+        "size": 7513676184,
+        "digest": "1922accd5827ebe6829e536369195db25eaf664528dc66206d646ea3bb386b71",
+        "details": {
+          "parent_model": "",
+          "format": "gguf",
+          "family": "mistral3",
+          "families": [
+            "mistral3"
+          ],
+          "parameter_size": "8.9B",
+          "quantization_level": "Q4_K_M"
+        },
+        "expires_at": "2026-10-28T23:23:15.2613178+06:00",
+        "size_vram": 7513676184,
+        "context_length": 16384,
+        "runner": "llamacpp"
+      }
+    ]
+  },
+  "primary_server_version": "0.40.12",
+  "after": {
+    "models": []
+  }
+}

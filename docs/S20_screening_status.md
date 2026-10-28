@@ -1,4 +1,13 @@
-# S20 screening status — 2026-10-21
+# S20 screening status — 2026-10-28
+
+**New-host result: Ministral 3 8B passes D3 on RTX 5060 Ti at 16K.** The fresh
+twenty-query block uses Q4_K_M weights, unquantized f16 KV and Ollama 0.40.12.
+Eighteen SUCCESS, two PARSE_FAIL, 17 competent, 179/179 well-formed native calls,
+median 45.307066 s, zero OOM/errors/timeouts. This result is separate from the
+3060 Ti/0.40.4 history below; it does not merge denominators or select S21.
+[New-host report](S20_ministral3_5060ti_16k.md).
+
+## Historical status — 2026-10-21
 
 **Latest: Command R7B completed all twenty original 8K queries: D3 FAIL.**
 Nineteen SUCCESS, one PARSE_FAIL, zero tool attempts, zero competent queries,

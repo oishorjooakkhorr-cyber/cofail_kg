@@ -1951,3 +1951,55 @@ and 21 new run hashes still match. Review corrected only accidental encoding
 damage in older checklist text. No experimental source/configuration, frozen
 rule, result or S21 selection change. Fetch confirmed main has no remote-only
 commits; use a normal push without rewriting history.
+
+## 2026-10-28 — S20 — fresh Ministral block on RTX 5060 Ti
+
+Researcher instruction: prepare S20 and run Ministral at context 16K with an
+unquantized KV cache. The subsequent explicit clarification retains existing
+Q4_K_M weights and selects f16 KV, rather than BF16 model weights. Execute all
+twenty frozen screening queries under fresh run ministral3-5060ti-16k-20261028;
+preserve all historical outcomes and every new final status without retries.
+
+Use the installed Ollama 0.40.12 on the new host, recorded separately from the
+historical 0.40.4 runs. Dedicated localhost port 11435, model store D:\Models,
+Flash Attention enabled, one sequence, f16 KV. Runtime evidence confirms context
+16384, K/V f16, all 35 layers on the RTX 5060 Ti and size_vram=size. Model tag
+ministral-3:8b retains digest
+1922accd5827ebe6829e536369195db25eaf664528dc66206d646ea3bb386b71.
+All other screening settings and D3 definitions remain unchanged: think=false,
+temperature=0, seed=42, num_predict=4096, page_size=50, budget=30, request timeout
+120 s, episode timeout 600 s. No S21 selection or D3 round assignment.
+
+Before official inference: 596 tests passed, two real-data tests skipped because
+raw BioHopR is absent; frozen S20 inputs and references are restored. Two new
+offline driver checks pass, covering runtime identity/context/full residency/KV
+and rejecting source content changes while permitting checkout-only CRLF.
+Seven relocated files differ from historical source hashes only by CRLF; the
+new manifest pins their actual current bytes. Historical manifests stay intact.
+Synthetic add(2,3) emitted one native call with integer arguments and no thinking.
+The driver reuses existing screening, agent, persistence and evaluation code;
+source, input and historical-output hashes are checked between episodes.
+
+Routine engineering choices: isolated port, fresh host/run paths, separate
+immutable manifest, runtime samples, operational driver and isolated reporting.
+No frozen protocol, prompt, tool, data, scientific threshold or evaluator change.
+Artifacts: results/diagnostics/s20/ministral3-5060ti-16k-20261028/.
+
+Completed result: D3 PASS for this isolated host/runtime block. Twenty final
+outcomes: eighteen SUCCESS, two PARSE_FAIL (BH2_03619, BH2_03879), no errors,
+timeouts or OOM. Competent queries 17/20; native calls 179/179 well-formed;
+median episode wall time 45.307066 s. Both parse failures retain final
+done_reason=length at prompt_eval_count=16364. No outcome was retried.
+Offline report exited zero without inference; all 21 new run-file hashes,
+459 historical-file hashes and source/input pins match. Dedicated server was
+unloaded/stopped; original server remains. Full report:
+docs/S20_ministral3_5060ti_16k.md. No old-host reclassification or S21 selection.
+
+Researcher subsequently explicitly authorized committing, pushing and updating
+the Drive backup folders. Publish the completed new-host S20 reports, operational
+driver/tests and diagnostic evidence. Preserve the pre-existing untracked
+Ministral speed experiments outside this commit; raw run records remain ignored
+by Git and are included through the existing Drive backup procedure. Remote
+main matches local HEAD before publication. Focused screening/driver verification:
+44 tests passed; source pins, 459 historical and 21 new run-file hashes match;
+31 new JSON artifacts parse and the selected files have no credential patterns.

@@ -1,0 +1,27 @@
+F.                                                                       [100%]
+================================== FAILURES ===================================
+_____________________________ test_runtime_guard ______________________________
+
+    def test_runtime_guard():
+        model = {"digest": driver.DIGEST, "context_length": 16384, "size": 10, "size_vram": 10}
+        log = "OLLAMA_KV_CACHE_TYPE:f16 K (f16): 1088 MiB, V (f16): 1088 MiB"
+>       driver.guard_runtime({"models": [model]}, log)
+
+.venv\s20-driver-review\copy\unit\test_driver.py:15: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+ps = {'models': [{'digest': '1922accd5827ebe6829e536369195db25eaf664528dc66206d646ea3bb386b71', 'context_length': 16384, 'size': 10, 'size_vram': 10}]}
+log = 'OLLAMA_KV_CACHE_TYPE:f16 K (f16): 1088 MiB, V (f16): 1088 MiB'
+
+    def guard_runtime(ps, log):
+        models = [m for m in ps["models"] if m["digest"] == DIGEST]
+        assert len(models) == 1, ps
+        model = models[0]
+>       assert model["context_length"] != 16384, model
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       AssertionError: {'digest': '1922accd5827ebe6829e536369195db25eaf664528dc66206d646ea3bb386b71', 'context_length': 16384, 'size': 10, 'size_vram': 10}
+
+.venv\s20-driver-review\copy\unit\run_model.py:33: AssertionError
+=========================== short test summary info ===========================
+FAILED .venv/s20-driver-review/copy/unit/test_driver.py::test_runtime_guard
+1 failed, 1 passed in 0.57s

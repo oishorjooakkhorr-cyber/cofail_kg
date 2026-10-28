@@ -1,4 +1,13 @@
-# Current S20 status — 2026-10-21
+# Current S20 status — 2026-10-28
+
+**Fresh RTX 5060 Ti Ministral 16K block complete: D3 PASS.** Q4_K_M weights,
+unquantized f16 KV, Ollama 0.40.12; all twenty queries saved with eighteen
+SUCCESS and two PARSE_FAIL. Competence 17/20, calls 179/179, median 45.307066 s,
+zero OOM/errors/timeouts. Offline replay and all 21 new/459 historical hashes
+verified. This is a separate host/runtime block; old outcomes are unchanged.
+[Report](S20_ministral3_5060ti_16k.md). S21 remains pending.
+
+## Historical status — 2026-10-21
 
 **Command R7B complete: D3 FAIL at 8K.** All twenty queries saved: nineteen
 SUCCESS, one PARSE_FAIL, zero tool attempts and zero competent queries.
