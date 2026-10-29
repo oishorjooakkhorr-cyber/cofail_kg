@@ -2223,3 +2223,17 @@ corrected executable; no official episode exists and no synthetic retry needed.
 Baseline16K configured FLASH_ATTENTION:true; both backends enable it, but the
 configuration-string difference is disclosed rather than claiming an exact
 context-only controlled comparison. No scientific component or check weakened.
+
+
+## 2026-10-29 — Qwen35-9B 32K block completed
+
+D3 FAIL:13/20 SUCCESS,12 competent,294/294 well-formed calls,median28.6345515s,
+zero OOM/ERROR/TIMEOUT. All twenty attempt-1 outcomes retained. No crash,repeat,
+repair or additional condition. Three same-host16K no_answer results03619,03881,
+04003 become PARSE_FAIL without competence change; all422 supported IDs unchanged.
+Seven failures investigated: output caps, final-turn calls/prose,32K boundary
+pressure. All42 runtime samples verify actual32768,f16,full GPU; backend Flash
+Attention enabled. Source/input/history pins and network-forbidden offline replay
+pass.1527 historical,21 new,51 source/input hashes verified. Model unloaded and
+isolated server stopped. Detailed report:docs/S20_qwen35_5060ti_32k.md. No S21
+selection or modification of historical acceptance.

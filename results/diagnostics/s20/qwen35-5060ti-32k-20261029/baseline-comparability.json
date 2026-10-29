@@ -1,0 +1,36 @@
+{
+  "baseline_run": "qwen35-5060ti-16k-20261029",
+  "new_run": "qwen35-5060ti-32k-20261029",
+  "same_agent_identity": true,
+  "same_order": true,
+  "config_differences": {
+    "git_commit": {
+      "baseline": "ad8e54963f0898cd39fe45aa462db0f59581f395-dirty",
+      "new": "d293ea7e18124cab6c78ede055d45f6f20215008-dirty"
+    },
+    "num_ctx": {
+      "baseline": 16384,
+      "new": 32768
+    },
+    "run_id": {
+      "baseline": "qwen35-5060ti-16k-20261029",
+      "new": "qwen35-5060ti-32k-20261029"
+    }
+  },
+  "unchanged_prior_source_pins": true,
+  "additional_pins": [
+    "results/diagnostics/s20/qwen35-5060ti-32k-20261029/investigate.py",
+    "results/diagnostics/s20/qwen35-5060ti-32k-20261029/offline_report.py",
+    "results/diagnostics/s20/qwen35-5060ti-32k-20261029/preflight.py",
+    "results/diagnostics/s20/qwen35-5060ti-32k-20261029/run_model.py",
+    "results/diagnostics/s20/qwen35-5060ti-32k-20261029/test_driver.py"
+  ],
+  "flash_attention": {
+    "baseline_server_setting": true,
+    "new_inherited_override": null,
+    "new_server_setting": false,
+    "both_backend_enabled": true,
+    "strict_context_only_claim": false
+  },
+  "notes": "Post-result reassessment, not new acceptance or S21. No runtime, cache precision, model weight, frozen component or timeout change. Configuration-string difference retained."
+}

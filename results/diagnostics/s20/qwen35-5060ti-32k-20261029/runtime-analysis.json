@@ -1,0 +1,210 @@
+{
+  "start": "2026-10-29T15:52:52.222822+00:00",
+  "finish": "2026-10-29T16:08:12.730739+00:00",
+  "responses": 166,
+  "done_reasons": {
+    "stop": 158,
+    "length": 8
+  },
+  "output_cap_responses": 4,
+  "reported_prompt_plus_completion_32768": 4,
+  "thinking_messages": 0,
+  "max_response_seconds": 69.79251180000028,
+  "min_wall_seconds": 5.151482,
+  "max_wall_seconds": 124.380639,
+  "runtime_truncated_1_lines": 4,
+  "gpu_used_mib_range": [
+    8773,
+    8961
+  ],
+  "gpu_free_mib_range": [
+    7090,
+    7278
+  ],
+  "free_ram_kib_range": [
+    8087504,
+    17179284
+  ],
+  "total_ram_kib": 32626236,
+  "api_size_bytes": [
+    6717848944
+  ],
+  "failed_tools_by_query": {
+    "BH2_03619": 1,
+    "BH2_03762": 14,
+    "BH2_03856": 1,
+    "BH2_03881": 1,
+    "BH2_04003": 3,
+    "BH2_05686": 1
+  },
+  "budget_queries": [
+    "BH2_03762",
+    "BH2_03856",
+    "BH2_04003"
+  ],
+  "supported_answer_count": 422,
+  "supported_set_changes_vs_samehost16k": [],
+  "failures": {
+    "BH2_03619": {
+      "wall_seconds": 27.244214,
+      "charged_calls": 23,
+      "failed_tools": 1,
+      "final_turns": [
+        {
+          "prompt": 20108,
+          "completion": 151,
+          "done_reason": "stop",
+          "native_calls": 0,
+          "content_start": "Now I need to collect all unique side effects from all the drugs that treat Balo concentric sclerosis. Let me compile the complete list of unique effect/phenoty",
+          "content_end": "om Methylphenidate (16855): 123 effects\n\nLet me compile all unique side effects:\n\n{\"status\": \"no_answer\", \"answers\": []}"
+        },
+        {
+          "prompt": 20287,
+          "completion": 56,
+          "done_reason": "stop",
+          "native_calls": 1,
+          "content_start": "",
+          "content_end": ""
+        }
+      ]
+    },
+    "BH2_03856": {
+      "wall_seconds": 102.929825,
+      "charged_calls": 30,
+      "failed_tools": 1,
+      "final_turns": [
+        {
+          "prompt": 23915,
+          "completion": 4096,
+          "done_reason": "length",
+          "native_calls": 0,
+          "content_start": "{\"status\": \"answered\", \"answers\": [{\"id\": \"22323\", \"name\": \"Muscle weakness\"}, {\"id\": \"22530\", \"name\": \"Cholestasis\"}, {\"id\": \"22539\", \"name\": \"Inflammatory abn",
+          "content_end": "{\"id\": \"26309\", \"name\": \"Wheezing\"}, {\"id\": \"33751\", \"name\": \"Pneumonia\"}, {\"id\": \"84351\", \"name\": \"Anuria\"}, {\"id\": \"84"
+        },
+        {
+          "prompt": 28040,
+          "completion": 56,
+          "done_reason": "stop",
+          "native_calls": 1,
+          "content_start": "",
+          "content_end": ""
+        }
+      ]
+    },
+    "BH2_03879": {
+      "wall_seconds": 124.380639,
+      "charged_calls": 27,
+      "failed_tools": 0,
+      "final_turns": [
+        {
+          "prompt": 29114,
+          "completion": 3654,
+          "done_reason": "length",
+          "native_calls": 0,
+          "content_start": "I notice that several drugs (Lenvatinib, Cabozantinib, Triethylenetetramine, Tivozanib) don't have a `drug_effect` relation. This means they may not have side e",
+          "content_end": "23844-Hepatitis, 23855-Deep venous thrombosis, 23864-Respiratory distress, 23901-Arthralgia, 23934-Prolonged QT interval"
+        },
+        {
+          "prompt": 32750,
+          "completion": 18,
+          "done_reason": "length",
+          "native_calls": 0,
+          "content_start": "",
+          "content_end": ""
+        }
+      ]
+    },
+    "BH2_03881": {
+      "wall_seconds": 94.041907,
+      "charged_calls": 19,
+      "failed_tools": 1,
+      "final_turns": [
+        {
+          "prompt": 21638,
+          "completion": 4096,
+          "done_reason": "length",
+          "native_calls": 0,
+          "content_start": "{\"status\": \"answered\", \"answers\": [{\"id\": \"22467\", \"name\": \"Abnormality of the endocrine system\"}, {\"id\": \"22539\", \"name\": \"Inflammatory abnormality of the skin",
+          "content_end": "5067\", \"name\": \"Hyperuricemia\"}, {\"id\": \"85104\", \"name\": \"Hematemesis\"}, {\"id\": \"85105\", \"name\": \"Melena\"}, {\"id\": \"8521"
+        },
+        {
+          "prompt": 25763,
+          "completion": 56,
+          "done_reason": "stop",
+          "native_calls": 1,
+          "content_start": "",
+          "content_end": ""
+        }
+      ]
+    },
+    "BH2_03953": {
+      "wall_seconds": 80.352643,
+      "charged_calls": 11,
+      "failed_tools": 0,
+      "final_turns": [
+        {
+          "prompt": 11219,
+          "completion": 4096,
+          "done_reason": "length",
+          "native_calls": 0,
+          "content_start": "Now I need to compile all the unique side effects from all three drugs. Let me collect them:\n\nFrom Medroxyprogesterone acetate (14203) - page 1 and 2:\n- Sinusit",
+          "content_end": "\": \"25620\", \"name\": \"Fatigue\"}, {\"id\": \"25638\", \"name\": \"Limb pain\"}, {\"id\": \"25644\", \"name\": \"Paresthesia\"}, {\"id\": \"25"
+        },
+        {
+          "prompt": 15344,
+          "completion": 56,
+          "done_reason": "stop",
+          "native_calls": 1,
+          "content_start": "",
+          "content_end": ""
+        }
+      ]
+    },
+    "BH2_03991": {
+      "wall_seconds": 90.178215,
+      "charged_calls": 20,
+      "failed_tools": 0,
+      "final_turns": [
+        {
+          "prompt": 18802,
+          "completion": 4096,
+          "done_reason": "length",
+          "native_calls": 0,
+          "content_start": "Now I need to compile all unique side effects from all drugs. Let me collect them:\n\nFrom Leuprolide (16572):\nPage 1: Hyperkeratosis, Sinusitis, Edema, Hearing i",
+          "content_end": "or appetite\"}, {\"id\": \"89142\", \"name\": \"Prostate cancer\"}, {\"id\": \"89214\", \"name\": \"Oculomotor nerve palsy\"}, {\"id\": \"89"
+        },
+        {
+          "prompt": 22927,
+          "completion": 112,
+          "done_reason": "stop",
+          "native_calls": 2,
+          "content_start": "",
+          "content_end": ""
+        }
+      ]
+    },
+    "BH2_04003": {
+      "wall_seconds": 117.15253,
+      "charged_calls": 30,
+      "failed_tools": 3,
+      "final_turns": [
+        {
+          "prompt": 32061,
+          "completion": 707,
+          "done_reason": "length",
+          "native_calls": 0,
+          "content_start": "{\"status\": \"answered\", \"answers\": [{\"id\": \"22262\", \"name\": \"Edema\"}, {\"id\": \"22323\", \"name\": \"Muscle weakness\"}, {\"id\": \"22380\", \"name\": \"Visual impairment\"}, {",
+          "content_end": "nitis\"}, {\"id\": \"23098\", \"name\": \"Paraparesis\"}, {\"id\": \"23157\", \"name\": \"Vomiting\"}, {\"id\": \"23183\", \"name\": \"Thromboph"
+        },
+        {
+          "prompt": 32749,
+          "completion": 19,
+          "done_reason": "length",
+          "native_calls": 0,
+          "content_start": "",
+          "content_end": ""
+        }
+      ]
+    }
+  }
+}

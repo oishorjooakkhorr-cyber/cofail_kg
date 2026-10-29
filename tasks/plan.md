@@ -8,7 +8,7 @@ Results pushed as7826348; Drive verified65/65 checksum matches,zero differences.
 Broader backup retains nine unrelated historical archive errors. No further
 inference or S21.
 
-# Gemma RTX 5060 Ti S20 — 2026-10-29 investigation
+# Gemma RTX 5060 Ti S20 â€” 2026-10-29 investigation
 
 Completed the authorized fresh 2026-10-28 block: D3 PASS, 19 SUCCESS,
 one retained PARSE_FAIL, 14 competent. Tested/committed launcher before
@@ -23,7 +23,7 @@ success is not claimed. No additional inference is needed.
 [Report](../docs/S20_gemma4_5060ti_16k.md). Stop after publication; no new model,
 experimental retries or S21. Older plans below retain their dated history.
 
-# Current S20 plan/status — 2026-10-21
+# Current S20 plan/status â€” 2026-10-21
 
 **Command R7B full 8K block completed: D3 FAIL.** Twenty saved outcomes,
 nineteen SUCCESS, one PARSE_FAIL, zero tool attempts, zero competent queries,
@@ -221,7 +221,7 @@ models at S21, commit, or push in this turn.
 
 # S19 - Per-agent metrics (authorized 2026-10-17)
 
-Implement protocol §15 using S12 and S16-S18 unchanged. Researcher clarified
+Implement protocol Â§15 using S12 and S16-S18 unchanged. Researcher clarified
 resolved-only benchmark precision, count-form F1, and NA answer-quality scores
 for technical failures; see the decision log.
 
@@ -238,14 +238,14 @@ mutations caught/restored; all 112 protected files unchanged. Final saved S14
 replay matches retained metrics exactly: TTR rank 1, early_stop=false, bridge
 recall and benchmark P/R/F1 all 1, 2 page requests/4 calls, budget not exhausted.
 Report: docs/S19_implementation.md. Researcher accepted S19 and its verification
-evidence on 2026-10-17. Record the §16 requirement that technical failures must
+evidence on 2026-10-17. Record the Â§16 requirement that technical failures must
 not count as answer failures, then commit as `S19: per-agent metrics`.
 Stop at S19. Do not push or start S20.
 
 # S18 - Label B, reason codes and hop-1 status (authorized 2026-10-17)
 
 Researcher explicitly requested S18 implementation and questions for any needed
-scientific decisions. Use frozen protocol §14 and runbook S18. Preserve S12,
+scientific decisions. Use frozen protocol Â§14 and runbook S18. Preserve S12,
 S16/S17, data, settings and saved episodes; no inference or S19 work.
 
 1. Save protected identities and inspect S12 paths, normalization and all callers.
@@ -267,7 +267,7 @@ Commit/push the acceptance record, then stop. No S19 work.
 
 # S17 - Label A (authorized 2026-10-17)
 
-Implement protocol §6/§13 using S7's saved G_q: BRIDGE uses gold-bridge
+Implement protocol Â§6/Â§13 using S7's saved G_q: BRIDGE uses gold-bridge
 targets; UNION uses all valid targets. Preserve S16 normalization and all
 scientific rules, frozen settings, data and episodes.
 
@@ -299,7 +299,7 @@ The researcher explicitly requested starting S16 and asking about needed
 decisions. S15 acceptance is recorded in remote commit 20997df, integrated
 before pushing S16. Preserve that approval, its evidence and handoff removal.
 
-Scope: extend evaluation/normalize.py with the protocol §12 agent policy,
+Scope: extend evaluation/normalize.py with the protocol Â§12 agent policy,
 synthetic tests, saved S14 example evidence, and stage/status documentation.
 Existing S7 definitions and callers remain unchanged. No new dependencies,
 experimental calls, data/settings edits, later-stage labels or metrics are needed.
@@ -314,14 +314,14 @@ experimental calls, data/settings edits, later-stage labels or metrics are neede
    audit evidence and duplicate counts.
 5. Normalize the saved successful S14 episode without inference; require all 21
    copied tool-output answers to resolve by ID. Save every normalized answer.
-6. Run focused/full tests, review against §12, verify protected identities and
+6. Run focused/full tests, review against Â§12, verify protected identities and
    unchanged S7 definitions, and document findings and engineering choices.
 
 Acceptance: all required cases pass, saved example resolves by ID, no regressions
 or scientific-rule edits. Human inspection and stage acceptance remain explicit;
 no automatic commit/push or continuation to S17.
 
-# S15 revision 2 — authorized and executed (2026-10-16)
+# S15 revision 2 â€” authorized and executed (2026-10-16)
 
 The researcher authorized Option 1, a narrow source-name exemption plus a
 pre-registered split report, and approved correcting the chronology to before any
@@ -329,7 +329,7 @@ pilot model run or co-failure results while acknowledging the S14 diagnostics.
 The earlier strict-failure hold is superseded; its record is preserved below.
 
 1. Confirmed no frozen-hash entry covers the protocol; recorded protected-file hashes.
-2. Added the authorized paragraph only to §19.1(a) and logged the frozen-item change.
+2. Added the authorized paragraph only to Â§19.1(a) and logged the frozen-item change.
 3. Added synthetic regressions first, then implemented per-occurrence character-offset
    checks in tests/test_leakage.py, preserving the literal whole-word matcher.
 4. Passed the 24-query audit (one flag) and full 524-row scan (exactly four flags).
@@ -337,7 +337,7 @@ The earlier strict-failure hold is superseded; its record is preserved below.
 6. Saved new versioned evidence and the complete overlap/short-name report; retained
    original evidence and protected production, data, configuration and episode files.
 
-Manual review remains pending. Every §16 metric and §17 baseline comparison must
+Manual review remains pending. Every Â§16 metric and Â§17 baseline comparison must
 later report both all queries and the subset excluding SOURCE_NAME_OVERLAP; gates
 use all queries. No metric implementation, model call, S16 work or commit in this
 revision. Full report: docs/S15_implementation.md, revision 2.
@@ -351,7 +351,7 @@ starting entity contains the name Folic acid, an additional B_q bridge. Checks
 and a scientific remedy remain pending; no production/scientific changes made.
 
 Original proposal below, subsequently authorized by the researcher.
-Authority: runbook S15 and protocol §§8, 9.3, 10, 19.1. Preserve the completed
+Authority: runbook S15 and protocol Â§Â§8, 9.3, 10, 19.1. Preserve the completed
 S12 plans below. Tasks are appended to tasks/todo.md.
 
 1. Preflight: verify frozen P1/T1, sheet hashes and cache identity. Inventory all
@@ -456,8 +456,22 @@ decision needed. If host execution is unavailable, retain evidence and report
 the blocker rather than treating unrun checks as passed.
 
 
-## Qwen RTX 5060 Ti S20 completed — 2026-10-29
+## Qwen RTX 5060 Ti S20 completed â€” 2026-10-29
 Fresh16K D3 FAIL:16/20 SUCCESS,12 competent,259/259 well-formed calls,
 median30.627939s,zero OOM. Four retained PARSE_FAIL. Full GPU/f16/actual16K
 verified; historical8K and16K PASS preserved. See docs/S20_qwen35_5060ti_16k.md.
 No retries,additional condition,other model or S21.
+
+
+## Qwen35-9B 32K reassessment completed â€” 2026-10-29
+
+Fresh same-host32K block: **D3 FAIL,13/20 SUCCESS,12/20 competent**, seven
+retained PARSE_FAIL;294/294 calls,median28.6345515s,zero OOM/errors/timeouts.
+Full GPU,actual32768,f16 and backend Flash Attention enabled verified in42 samples.
+Supported IDs unchanged from same-host16K;03619,03881,04003 lose valid no_answer
+parsing without competence change. Output-cap/final-turn failures persist;
+03879/04003 also show32K boundary pressure. Configuration-string Flash Attention
+difference disclosed; no strict context-only causal claim. Post-result reassessment,
+historical acceptance preserved; no other model or S21 selected.
+[Separate report](../docs/S20_qwen35_5060ti_32k.md). Offline reporting and all1527 historical,
+21 new and51 source/input hash checks pass. Publication/Drive proof recorded below.

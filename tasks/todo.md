@@ -8,7 +8,7 @@ Results pushed as7826348; Drive verified65/65 checksum matches,zero differences.
 Broader backup retains nine unrelated historical archive errors. No further
 inference or S21.
 
-# Gemma RTX 5060 Ti S20 — 2026-10-29
+# Gemma RTX 5060 Ti S20 â€” 2026-10-29
 
 - [x] Record authorization and commit tested launcher before inference (b49ac91).
 - [x] Verify pinned model, frozen inputs/order, f16 KV, actual 16K and 43/43 GPU layers.
@@ -23,7 +23,7 @@ inference or S21.
 
 [Report](../docs/S20_gemma4_5060ti_16k.md). Older checklists below are historical.
 
-# Current S20 checklist — 2026-10-21
+# Current S20 checklist â€” 2026-10-21
 
 - [x] Run the researcher-requested full Command R7B original 8K S20 block:
   all twenty outcomes saved, nineteen SUCCESS, one PARSE_FAIL; D3 FAIL due to
@@ -210,11 +210,11 @@ all later models await the next researcher instruction; do not silently drop Lla
 - [x] Researcher authorizes S19; inspect scope/callers and save 112 protected hashes.
 - [x] Record benchmark and technical-failure decisions before computing scores.
 - [x] RED/GREEN degree and percentile cases using the existing S4 fixture.
-- [x] Test/implement all §15 answer, bridge, pagination and effort metrics.
+- [x] Test/implement all Â§15 answer, bridge, pagination and effort metrics.
 - [x] Replay saved S14 and inspect early stop and bridge rank against raw calls.
 - [x] Review/mutation, 148 focused/556 full checks, 112 unchanged hashes and stage report.
 - [x] Researcher explicitly accepts S19 and its verification evidence (2026-10-17).
-- [x] Record that TIMEOUT/ERROR/PARSE_FAIL must not count as answer failures in §16.
+- [x] Record that TIMEOUT/ERROR/PARSE_FAIL must not count as answer failures in Â§16.
 
 # S18 - Label B, reason codes and hop-1 status (2026-10-17)
 
@@ -231,7 +231,7 @@ all later models await the next researcher instruction; do not silently drop Lla
 
 - [x] Researcher authorizes S17 with G_q, UNION coverage and CONSISTENT extra errors.
 - [x] Inspect S7/S16 structures/callers and save protected-file identities.
-- [x] Write failing tests; implement §6/§13 labels and pass 76 focused checks.
+- [x] Write failing tests; implement Â§6/Â§13 labels and pass 76 focused checks.
 - [x] Replay saved S14: BRIDGE, primary/CONSISTENT, 21 GOLD; hand-check two via TTR.
 - [x] Pass all 460 tests, catch/restore deliberate mutation, verify 53 protected files.
 - [x] Align runbook S17 wording; save full report, evidence and design choices.
@@ -242,7 +242,7 @@ all later models await the next researcher instruction; do not silently drop Lla
 
 - [x] Researcher explicitly authorizes starting S16; remote S15 acceptance is preserved.
 - [x] Inventory S7 callers and save protected-file hashes and S7 definitions.
-- [x] Add failing item tests; implement §12 agent policy; pass 42 item/reference tests.
+- [x] Add failing item tests; implement Â§12 agent policy; pass 42 item/reference tests.
 - [x] Obtain researcher decision: deduplicate identical unresolved submitted pairs only.
 - [x] Add seven failing list tests, then implement stable post-resolution deduplication.
 - [x] Pass focused tests (49) and demonstrate all 21 S14 answers resolve by ID.
@@ -253,7 +253,7 @@ all later models await the next researcher instruction; do not silently drop Lla
 - [ ] S28 pilot report: report unresolved answers that would merge under normalized
   comparison; state the comparison rule and preserve official exact-pair scoring.
 
-# S15 — accepted 2026-10-16
+# S15 â€” accepted 2026-10-16
 
 - [x] Researcher reviews exact messages and the 34-entry short-name list (record:
   `results/diagnostics/s15/manual_review_20261016.json` / `.md`).
@@ -261,11 +261,11 @@ all later models await the next researcher instruction; do not silently drop Lla
 - [x] Temporary review handoff removed after approval was recorded.
 - [x] Researcher separately instructs S16 implementation (2026-10-17); see above.
 
-# S15 revision 2 — automated verification complete (historical)
+# S15 revision 2 â€” automated verification complete (historical)
 
 - [x] Researcher authorizes the narrow exemption and corrected S14/pilot chronology.
 - [x] Confirm no protocol frozen-hash entry and record protected-file identities.
-- [x] Amend only protocol §19.1(a); record decision and pre-register split reporting.
+- [x] Amend only protocol Â§19.1(a); record decision and pre-register split reporting.
 - [x] Add synthetic regressions; implement rule-based spans without changing the matcher.
 - [x] Pass screening/smoke audit with zero failures and exactly BH2_04007 flagged.
 - [x] Pass all-524 scan with zero failures and exactly four specified flags.
@@ -275,7 +275,7 @@ all later models await the next researcher instruction; do not silently drop Lla
 - [x] Researcher reviews exact messages and the 34-entry short-name list (done 2026-10-16; see top).
 
 Later reporting requirement (pre-registered here; not implemented during S15):
-every §16 metric and §17 comparison uses both all queries and a report excluding
+every Â§16 metric and Â§17 comparison uses both all queries and a report excluding
 SOURCE_NAME_OVERLAP; official gates continue to use all queries.
 
 # Original S15 strict audit (historical)
@@ -317,8 +317,22 @@ manual review status explicit. Detailed scope and failure handling: tasks/plan.m
 - [x] Document procedure and evidence in docs/S12_environment_verification_20261016.md.
 
 
-## Qwen RTX 5060 Ti S20 completed — 2026-10-29
+## Qwen RTX 5060 Ti S20 completed â€” 2026-10-29
 Fresh16K D3 FAIL:16/20 SUCCESS,12 competent,259/259 well-formed calls,
 median30.627939s,zero OOM. Four retained PARSE_FAIL. Full GPU/f16/actual16K
 verified; historical8K and16K PASS preserved. See docs/S20_qwen35_5060ti_16k.md.
 No retries,additional condition,other model or S21.
+
+
+## Qwen35-9B 32K reassessment completed â€” 2026-10-29
+
+Fresh same-host32K block: **D3 FAIL,13/20 SUCCESS,12/20 competent**, seven
+retained PARSE_FAIL;294/294 calls,median28.6345515s,zero OOM/errors/timeouts.
+Full GPU,actual32768,f16 and backend Flash Attention enabled verified in42 samples.
+Supported IDs unchanged from same-host16K;03619,03881,04003 lose valid no_answer
+parsing without competence change. Output-cap/final-turn failures persist;
+03879/04003 also show32K boundary pressure. Configuration-string Flash Attention
+difference disclosed; no strict context-only causal claim. Post-result reassessment,
+historical acceptance preserved; no other model or S21 selected.
+[Separate report](../docs/S20_qwen35_5060ti_32k.md). Offline reporting and all1527 historical,
+21 new and51 source/input hash checks pass. Publication/Drive proof recorded below.

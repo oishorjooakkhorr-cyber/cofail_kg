@@ -1,3 +1,16 @@
+## Qwen35-9B 32K reassessment completed — 2026-10-29
+
+Fresh same-host32K block: **D3 FAIL,13/20 SUCCESS,12/20 competent**, seven
+retained PARSE_FAIL;294/294 calls,median28.6345515s,zero OOM/errors/timeouts.
+Full GPU,actual32768,f16 and backend Flash Attention enabled verified in42 samples.
+Supported IDs unchanged from same-host16K;03619,03881,04003 lose valid no_answer
+parsing without competence change. Output-cap/final-turn failures persist;
+03879/04003 also show32K boundary pressure. Configuration-string Flash Attention
+difference disclosed; no strict context-only causal claim. Post-result reassessment,
+historical acceptance preserved; no other model or S21 selected.
+[Separate report](S20_qwen35_5060ti_32k.md). Offline reporting and all1527 historical,
+21 new and51 source/input hash checks pass. Publication/Drive proof recorded below.
+
 # Granite41 RTX 5060 Ti S20 completed - 2026-10-29
 
 D3 PASS:20/20 SUCCESS,16/20 competent,236/236 well-formed calls,

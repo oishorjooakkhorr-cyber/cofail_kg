@@ -1,0 +1,9 @@
+PREPARED: immutable manifest and source/input/history checks passed
+Traceback (most recent call last):
+  File "D:\cofailKG\results\diagnostics\s20\qwen35-5060ti-32k-20261029\preflight.py", line 37, in <module>
+    guard_runtime(ps, (OUT / "server.stderr.log").read_text(encoding="utf-8", errors="replace"))
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\cofailKG\results\diagnostics\s20\qwen35-5060ti-32k-20261029\run_model.py", line 35, in guard_runtime
+    assert "OLLAMA_FLASH_ATTENTION:true" in log, "Flash Attention differs from same-host baseline"
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Flash Attention differs from same-host baseline
