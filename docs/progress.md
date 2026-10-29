@@ -9,7 +9,8 @@ parsing without competence change. Output-cap/final-turn failures persist;
 difference disclosed; no strict context-only causal claim. Post-result reassessment,
 historical acceptance preserved; no other model or S21 selected.
 [Separate report](S20_qwen35_5060ti_32k.md). Offline reporting and all1527 historical,
-21 new and51 source/input hash checks pass. Publication/Drive proof recorded below.
+21 new and51 source/input hash checks pass. Results b0d0f9e pushed to main; Drive74/74 checksum matches,zero differences.
+Nine unrelated archive errors persist. [Backup proof](S20_qwen35_5060ti_32k_backup.md).
 
 # Granite41 RTX 5060 Ti S20 completed - 2026-10-29
 

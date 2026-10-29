@@ -353,3 +353,9 @@ The overall copy still reports `cannotAddParent` when archiving nine older
 S13-S15 files. Their move/ownership permissions need separate repair; do not
 remove version preservation or treat Gemma's scoped check as proof that every
 repository output was refreshed.
+
+
+Qwen35-9B32K S20 follow-up (2026-10-29):all74 scientific output files independently
+checksum-verified in the same shared folder after the default age wait.
+[Verification](S20_qwen35_5060ti_32k_backup.md). Nine unrelated historical archive
+errors remain; scope-specific verification does not establish whole-backup success.

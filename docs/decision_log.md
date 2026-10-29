@@ -2237,3 +2237,16 @@ Attention enabled. Source/input/history pins and network-forbidden offline repla
 pass.1527 historical,21 new,51 source/input hashes verified. Model unloaded and
 isolated server stopped. Detailed report:docs/S20_qwen35_5060ti_32k.md. No S21
 selection or modification of historical acceptance.
+
+
+## 2026-10-29 — Qwen32K publication and verified backup
+
+Results b0d0f9e pushed to main. After first backup deferred recent files,waited
+until every expected file passed the default10-minute age rule; reran documented
+backup16:19:47 UTC. Exact-list checksum check16:21:53 UTC exited0:74 matching
+files,zero differences,including20 episodes and config. Local MD5 inventory
+unchanged. Both broad backups retain nine unrelated historical cannotAddParent
+archive failures; no global backup-success claim or preservation-policy change.
+See docs/S20_qwen35_5060ti_32k_backup.md for all74 expected hashes. Final docs
+restore an unintended encoding change in older task text; original text verified.
+No further model inference or S21.
