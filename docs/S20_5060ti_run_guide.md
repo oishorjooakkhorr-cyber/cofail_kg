@@ -1,3 +1,15 @@
+## Gemma4-E4B 32K reassessment completed — 2026-10-29
+
+**D3 PASS:20/20 SUCCESS,16/20 competent**,188/188 well-formed calls,
+median11.0878265s,zero errors/timeouts/OOM. Same-host16K was19/14:03879 gains86
+supported answers;04003 gains74 and corrects wrong-target drugs. Other eighteen
+supported sets unchanged;03619/03953 remain incomplete,03762 remains no_answer,
+05366 remains shortcut failure. Actual32768,f16,main43/43/draft5/5 GPU and
+unchanged Flash Attention/speculative setup verified in41 samples. Offline/hash
+checks pass;1606 historical,21 new,51 source/input files verified. This is an
+explicit post-result reassessment,preserving historical acceptance,no S21.
+[Separate report](S20_gemma4_5060ti_32k.md). Publication/Drive proof follows.
+
 ## Qwen35-9B 32K reassessment completed — 2026-10-29
 
 Fresh same-host32K block: **D3 FAIL,13/20 SUCCESS,12/20 competent**, seven

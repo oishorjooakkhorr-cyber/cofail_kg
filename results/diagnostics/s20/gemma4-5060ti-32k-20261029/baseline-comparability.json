@@ -1,0 +1,27 @@
+{
+  "same_agent_identity": true,
+  "same_query_order": true,
+  "unchanged_prior_source_pins": 46,
+  "source_pins": 51,
+  "config_differences": {
+    "git_commit": {
+      "baseline": "b49ac919046e04da1b17f8db56aabe56cc9b5dae-dirty",
+      "new": "c5798267a51868e94105586f4fb9cfcea9df9ce8-dirty"
+    },
+    "num_ctx": {
+      "baseline": 16384,
+      "new": 32768
+    },
+    "run_id": {
+      "baseline": "gemma4-5060ti-16k-20261028",
+      "new": "gemma4-5060ti-32k-20261029"
+    }
+  },
+  "runtime_commands_match_except_context_and_ephemeral_port": true,
+  "server_environment_matches_except_context": true,
+  "baseline_command": "C:\\\\Users\\\\USERAS\\\\AppData\\\\Local\\\\Programs\\\\Ollama\\\\lib\\\\ollama\\\\llama-server.exe --model D:\\\\Models\\\\blobs\\\\sha256-370c2879f17648d337b0ab4e208fdce348e24d1060064e93d7645daafd56d39c --port 60363 --host 127.0.0.1 --no-webui --offline -c 16384 -np 1 --log-verbosity 4 --no-log-prefix --no-log-timestamps --no-jinja --chat-template chatml --mmproj D:\\\\Models\\\\blobs\\\\sha256-4cb21b935cd7e79daed76f3154e82f2f160ad7a9d8d22cb5f14c7b93d5fb38ba --spec-type draft-mtp --spec-draft-n-max 3 --spec-draft-backend-sampling --spec-draft-model D:\\\\Models\\\\blobs\\\\sha256-05612e54110f8f68bade01dfcc546cdc6914d11dde0b650a65f263f0f87bbbd2 --load-mode none --cache-type-k f16 --cache-type-v f16 --flash-attn on -b 1024 -ub 1024 --context-shift --keep 4",
+  "new_command": "C:\\\\Users\\\\USERAS\\\\AppData\\\\Local\\\\Programs\\\\Ollama\\\\lib\\\\ollama\\\\llama-server.exe --model D:\\\\Models\\\\blobs\\\\sha256-370c2879f17648d337b0ab4e208fdce348e24d1060064e93d7645daafd56d39c --port 60715 --host 127.0.0.1 --no-webui --offline -c 32768 -np 1 --log-verbosity 4 --no-log-prefix --no-log-timestamps --no-jinja --chat-template chatml --mmproj D:\\\\Models\\\\blobs\\\\sha256-4cb21b935cd7e79daed76f3154e82f2f160ad7a9d8d22cb5f14c7b93d5fb38ba --spec-type draft-mtp --spec-draft-n-max 3 --spec-draft-backend-sampling --spec-draft-model D:\\\\Models\\\\blobs\\\\sha256-05612e54110f8f68bade01dfcc546cdc6914d11dde0b650a65f263f0f87bbbd2 --load-mode none --cache-type-k f16 --cache-type-v f16 --flash-attn on -b 1024 -ub 1024 --context-shift --keep 4",
+  "normalized_runtime_command": "C:\\\\Users\\\\USERAS\\\\AppData\\\\Local\\\\Programs\\\\Ollama\\\\lib\\\\ollama\\\\llama-server.exe --model D:\\\\Models\\\\blobs\\\\sha256-370c2879f17648d337b0ab4e208fdce348e24d1060064e93d7645daafd56d39c --port <ephemeral> --host 127.0.0.1 --no-webui --offline -c <context> -np 1 --log-verbosity 4 --no-log-prefix --no-log-timestamps --no-jinja --chat-template chatml --mmproj D:\\\\Models\\\\blobs\\\\sha256-4cb21b935cd7e79daed76f3154e82f2f160ad7a9d8d22cb5f14c7b93d5fb38ba --spec-type draft-mtp --spec-draft-n-max 3 --spec-draft-backend-sampling --spec-draft-model D:\\\\Models\\\\blobs\\\\sha256-05612e54110f8f68bade01dfcc546cdc6914d11dde0b650a65f263f0f87bbbd2 --load-mode none --cache-type-k f16 --cache-type-v f16 --flash-attn on -b 1024 -ub 1024 --context-shift --keep 4",
+  "baseline_environment": "map[CUDA_VISIBLE_DEVICES: GGML_VK_VISIBLE_DEVICES: GPU_DEVICE_ORDINAL: HIP_VISIBLE_DEVICES: HSA_OVERRIDE_GFX_VERSION: HTTPS_PROXY: HTTP_PROXY: LLAMA_ARG_FIT: LLAMA_ARG_FIT_TARGET: NO_PROXY: OLLAMA_CONTEXT_LENGTH:16384 OLLAMA_CREATE_REMOTE:false OLLAMA_DEBUG:INFO OLLAMA_DEBUG_LOG_REQUESTS:false OLLAMA_EDITOR: OLLAMA_FLASH_ATTENTION:true OLLAMA_GO_TEMPLATE:true OLLAMA_GPU_OVERHEAD:0 OLLAMA_HOST:http://127.0.0.1:11435 OLLAMA_IGPU_ENABLE: OLLAMA_KEEP_ALIVE:5m0s OLLAMA_KV_CACHE_TYPE:f16 OLLAMA_LLM_LIBRARY: OLLAMA_LOAD_TIMEOUT:5m0s OLLAMA_MAX_LOADED_MODELS:0 OLLAMA_MAX_QUEUE:512 OLLAMA_MAX_TRANSFER_STREAMS:4 OLLAMA_MODELS:D:\\\\Models OLLAMA_NOHISTORY:false OLLAMA_NOPRUNE:false OLLAMA_NO_CLOUD:false OLLAMA_NUM_PARALLEL:1 OLLAMA_ORIGINS:[http://localhost https://localhost http://localhost:* https://localhost:* http://127.0.0.1 https://127.0.0.1 http://127.0.0.1:* https://127.0.0.1:* http://0.0.0.0 https://0.0.0.0 http://0.0.0.0:* https://0.0.0.0:* app://* file://* tauri://* vscode-webview://* vscode-file://*] OLLAMA_REMOTES:[ollama.com] OLLAMA_SCHED_SPREAD:false OLLAMA_VULKAN:true ROCR_VISIBLE_DEVICES:]",
+  "new_environment": "map[CUDA_VISIBLE_DEVICES: GGML_VK_VISIBLE_DEVICES: GPU_DEVICE_ORDINAL: HIP_VISIBLE_DEVICES: HSA_OVERRIDE_GFX_VERSION: HTTPS_PROXY: HTTP_PROXY: LLAMA_ARG_FIT: LLAMA_ARG_FIT_TARGET: NO_PROXY: OLLAMA_CONTEXT_LENGTH:32768 OLLAMA_CREATE_REMOTE:false OLLAMA_DEBUG:INFO OLLAMA_DEBUG_LOG_REQUESTS:false OLLAMA_EDITOR: OLLAMA_FLASH_ATTENTION:true OLLAMA_GO_TEMPLATE:true OLLAMA_GPU_OVERHEAD:0 OLLAMA_HOST:http://127.0.0.1:11435 OLLAMA_IGPU_ENABLE: OLLAMA_KEEP_ALIVE:5m0s OLLAMA_KV_CACHE_TYPE:f16 OLLAMA_LLM_LIBRARY: OLLAMA_LOAD_TIMEOUT:5m0s OLLAMA_MAX_LOADED_MODELS:0 OLLAMA_MAX_QUEUE:512 OLLAMA_MAX_TRANSFER_STREAMS:4 OLLAMA_MODELS:D:\\\\Models OLLAMA_NOHISTORY:false OLLAMA_NOPRUNE:false OLLAMA_NO_CLOUD:false OLLAMA_NUM_PARALLEL:1 OLLAMA_ORIGINS:[http://localhost https://localhost http://localhost:* https://localhost:* http://127.0.0.1 https://127.0.0.1 http://127.0.0.1:* https://127.0.0.1:* http://0.0.0.0 https://0.0.0.0 http://0.0.0.0:* https://0.0.0.0:* app://* file://* tauri://* vscode-webview://* vscode-file://*] OLLAMA_REMOTES:[ollama.com] OLLAMA_SCHED_SPREAD:false OLLAMA_VULKAN:true ROCR_VISIBLE_DEVICES:]"
+}

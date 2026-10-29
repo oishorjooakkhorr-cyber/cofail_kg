@@ -1,0 +1,27 @@
+{
+  "inherited_environment": {
+    "NUM_PARALLEL": null,
+    "KV_CACHE_TYPE": null,
+    "FLASH_ATTENTION": null
+  },
+  "server_environment": {
+    "NUM_PARALLEL": "1",
+    "CONTEXT_LENGTH": "32768",
+    "OLLAMA_MODELS": "D:\\Models",
+    "KV_CACHE_TYPE": "f16",
+    "FLASH_ATTENTION": "true"
+  },
+  "gpu": "NVIDIA GeForce RTX 5060 Ti, 610.88, 16311 MiB, 1446 MiB, 14605 MiB",
+  "runtime": "C:\\Users\\USERAS\\AppData\\Local\\Programs\\Ollama\\ollama.exe",
+  "git": "c5798267a51868e94105586f4fb9cfcea9df9ce8",
+  "models": "D:\\Models",
+  "client": "Warning: could not connect to a running Ollama instance\r\nWarning: client version is 0.40.12\r\n",
+  "os": {
+    "Caption": "Microsoft Windows 11 Pro",
+    "Version": "10.0.22621",
+    "TotalVisibleMemorySize": 32626236,
+    "FreePhysicalMemory": 19980020
+  },
+  "python": "Python 3.13.9",
+  "cpu": "AMD Ryzen 7 7700 8-Core Processor              "
+}

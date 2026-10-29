@@ -1,0 +1,40 @@
+{
+  "historical_files_verified": 1606,
+  "kv_cache": "f16",
+  "runtime": "0.40.12",
+  "screening_row": {
+    "agent_id": "Gemma4-E4B",
+    "attempted_calls": 188,
+    "budget_hit_share": 0.05,
+    "competence": 0.8,
+    "competent_episodes": 16,
+    "complete": true,
+    "d3_pass": true,
+    "digest": "dc35e8d9c6061baa6f0fa870975ab6932e2542b579b13ea0f199fa4bb7300c9c",
+    "episodes_completed": 20,
+    "episodes_expected": 20,
+    "family": "Gemma",
+    "largest_prompt_eval_count": 26414,
+    "median_tool_calls": 8.0,
+    "median_wall_seconds": 11.0878265,
+    "native_calls": 188,
+    "out_of_memory_episodes": 0,
+    "parameter_size": "7.5B",
+    "pass_competence": true,
+    "pass_oom": true,
+    "pass_success": true,
+    "pass_time": true,
+    "pass_well_formed": true,
+    "quantization": "Q4_K_M",
+    "run_id": "gemma4-5060ti-32k-20261029",
+    "success_episodes": 20,
+    "success_rate": 1.0,
+    "tag": "gemma4:e4b-it-q4_K_M",
+    "text_tool_calls": 0,
+    "well_formed_calls": 188,
+    "well_formed_rate": 1.0
+  },
+  "status_counts": {
+    "SUCCESS": 20
+  }
+}

@@ -2279,3 +2279,19 @@ Unique output roots,exact source/input/history pins,all-status write-once resume
 per-episode memory samples,network-forbidden reporting and paired inspection are
 routine engineering. No scientific rule/method change. No active experiment or
 Ollama process found; remote main883d7a4 current; unrelated minispeed work kept.
+
+
+## 2026-10-29 — Gemma32K block completed
+
+D3 PASS:20 SUCCESS,16 competent,188/188 calls,median11.0878265s,zero OOM,
+ERROR or TIMEOUT. One sequential twenty-query invocation,no completed retries.
+Only03879 and04003 materially change against same-host16K:86 and74 supported
+answers gained; total569→729 across16 queries,still incomplete retrieval. Other
+eighteen outcomes/sets unchanged;03762 no_answer,05366/03881 shortcuts,03991
+no_answer persist. All41 runtime samples pass; main43/43,draft5/5 GPU,f16
+sliding/non-sliding caches,actual32768,identical Flash Attention and speculative
+configuration. Configured context-only same-host reassessment,not replicated
+causal evidence or historical acceptance replacement.
+Network-forbidden offline reporting and1606 historical/21 new/51 source/input
+hashes pass. Model unloaded and isolated server stopped. Report:
+docs/S20_gemma4_5060ti_32k.md. No S21 or further model/condition.

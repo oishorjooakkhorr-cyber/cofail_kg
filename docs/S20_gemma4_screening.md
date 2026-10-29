@@ -74,3 +74,8 @@ Routine engineering: use agent ID Gemma4-E4B, candidate diagnostics directory `g
 - `official-console.txt`, `official-per-query.csv` and `official-final-integrity.json`: complete continuous execution and preservation evidence.
 
 No S21 work, other candidate, commit or push was performed.
+
+
+32K follow-up (2026-10-29):explicitly authorized separate reassessment completed
+20 SUCCESS/16 competent,D3 PASS. [Separate report](S20_gemma4_5060ti_32k.md).
+Historical results/acceptance above remain intact; no S21 selection.
