@@ -2073,3 +2073,23 @@ The separate host/runtime condition prevents GPU-only causal attribution.
 Historical acceptance is preserved; no S21 selection is made. Publish only
 this task's scoped changes, then verify actual Drive uploads under the
 documented ten-minute rule.
+
+
+## 2026-10-29 - S20 - Gemma publication and Drive quota blocker
+
+Scoped result/report commit 8c53402 and prior launcher/authorization b49ac91
+were pushed normally to GitHub main. The documented Drive wrapper staged
+1939 stable files; the 69 Gemma scientific files were all older than ten
+minutes. Drive repeatedly rejected new uploads with HTTP 403
+storageQuotaExceeded. Stop only this copy process rather than repeating a
+permanent storage failure; preserve all local/shared data.
+
+A subsequent exact-list one-way rclone checksum check at 14:22:51 UTC exited
+1: all 69 Gemma scientific files were missing, zero present. Backup is not
+complete, despite successful Git publication. Raw episodes and their original
+hashes remain local; diagnostics are published on GitHub. Full expected local
+MD5 inventory and blocker: docs/S20_gemma4_5060ti_backup.md. The researcher
+must restore available storage in the authenticated Drive account before
+upload/verification can finish. Do not delete research data, substitute a
+backup destination, bypass the age rule, or rerun model episodes to address
+this external blocker. No S21 or additional-model work follows.

@@ -5,8 +5,10 @@ one retained PARSE_FAIL, 14 competent. Tested/committed launcher before
 inference; exact digest/frozen order/f16 KV/full GPU checks passed.
 Investigated all six material changes against historical 8K/full 16K traces;
 offline reporting and 1315 historical/21 new/46 source hashes verified.
-Publish scoped report/evidence to GitHub main and verify ignored research
-outputs in the existing Drive backup; Git push alone is not backup evidence.
+Scoped report/evidence pushed to GitHub main as 8c53402 (launcher b49ac91).
+Drive upload is blocked by storageQuotaExceeded: exact checksum check found
+all 69 scientific outputs missing. Free account capacity, rerun the documented
+backup, then verify all paths; no additional inference is needed.
 [Report](../docs/S20_gemma4_5060ti_16k.md). Stop after publication; no new model,
 experimental retries or S21. Older plans below retain their dated history.
 

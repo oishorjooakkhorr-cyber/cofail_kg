@@ -11,6 +11,9 @@ BH2_03762 now parses no_answer after invalid-relation/budget failures and remain
 noncompetent. Six changed outcomes investigated against both historical blocks.
 [Report](S20_gemma4_5060ti_16k.md). Historical acceptance remains intact;
 this host/runtime condition cannot isolate a GPU-only causal effect. No S21 work.
+Results pushed to GitHub main as 8c53402. **Drive backup blocked by account
+storage quota:** exact check found 0/69 scientific outputs present.
+[Backup blocker](S20_gemma4_5060ti_backup.md); all local raw records are intact.
 
 # Current S20 status — 2026-10-28
 

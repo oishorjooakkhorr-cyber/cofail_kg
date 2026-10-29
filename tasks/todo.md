@@ -6,7 +6,8 @@
 - [x] Compute all five unchanged D3 criteria: PASS; competence 14/20.
 - [x] Investigate BH2_03879 and all six material changes versus historical full blocks.
 - [x] Pass network-forbidden offline replay and historical/new/source integrity checks.
-- [ ] Commit/push scoped report and verify this run's ignored files on shared Drive.
+- [x] Commit/push scoped report and evidence (results 8c53402; launcher b49ac91).
+- [ ] Complete Drive upload: blocked by storageQuotaExceeded; exact check found 0/69 present.
 - [x] Preserve historical acceptance and stop inference; no S21 or another model.
 
 [Report](../docs/S20_gemma4_5060ti_16k.md). Older checklists below are historical.
