@@ -335,3 +335,21 @@ Only approved test users may authorize this app. Other developers must use their
 own Google accounts, receive access to the shared backup folder, and configure
 that folder explicitly; never share this machine's rclone config/token. See
 [Google's refresh-token expiration rules](https://developers.google.com/identity/protocols/oauth2#expiration).
+
+
+## New-host account recovery (2026-10-29)
+
+On D:\cofailKG the installed rclone is
+`C:\Users\USERAS\.local\bin\rclone.exe`. The researcher-authorized university
+account is now authenticated under the existing `cofail_gdrive` remote; its
+identity and write access to the pinned shared folder were verified. Tokens
+remain in rclone's local user configuration. Future commands using this remote
+use that account. No profile, destination or backup-policy change was made.
+
+Gemma S20's 69 scientific-output files were uploaded through the documented
+manual repair workflow and independently checksum-verified: 69 matches, zero
+differences. [Verification and preserved failed attempt](S20_gemma4_5060ti_backup.md).
+The overall copy still reports `cannotAddParent` when archiving nine older
+S13-S15 files. Their move/ownership permissions need separate repair; do not
+remove version preservation or treat Gemma's scoped check as proof that every
+repository output was refreshed.

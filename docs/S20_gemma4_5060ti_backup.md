@@ -1,3 +1,43 @@
+# Gemma S20 backup completed - 2026-10-29
+
+**Current verified status: 69/69 Gemma scientific-output files match Drive;
+zero differences.** This supersedes the historical quota-blocked check below.
+The researcher authorized the alternate university Google account, completed
+reauthentication, and its exact email plus write access to the existing folder
+were verified privately before upload. The cofail_gdrive remote now uses this
+account; credentials remain outside the repository. The folder ID and backup
+policy were not changed.
+
+The documented manual repair workflow staged 1939 stable files, with the
+normal ten-minute rule, under backup ID
+20261029T143019162Z-9bd75fe433dc468788cf19d527aba302. Gemma uploads succeeded.
+A separate exact-list, one-way rclone checksum check at **14:33:42 UTC** exited
+zero and reported:
+
+```text
+Google drive root 'current': 0 differences found
+Google drive root 'current': 69 matching files
+```
+
+The matching set includes all twenty raw attempt-1 episodes, their immutable
+configuration, twenty evaluator metrics, and 28 other diagnostic/evidence files.
+Every local MD5 still matches the inventory retained below. No inference or
+scientific output was rerun or modified. Local transcripts:
+`.venv/gemma-bracu-check.txt` and `.venv/gemma-bracu-check-combined.txt`.
+
+**Broader backup limitation:** the whole-repository copy exited 1 because it
+could not archive nine older S13-S15 files: Drive returned `cannotAddParent`
+while moving their existing versions into history. Those files are outside
+this Gemma run. Their existing remote versions were not deleted or overwritten;
+no preservation rule was bypassed. Gemma's separate 69-file check passed, but
+this is not a claim that all 1939 repository outputs were refreshed.
+The backup log is
+`C:\Users\USERAS\AppData\Local\CoFail-KG-Backup\20261029T143019162Z-9bd75fe433dc468788cf19d527aba302.log`.
+Resolve those older-file ownership/move permissions separately before relying
+on an overall zero-exit backup. No code or profile change was needed here.
+
+---
+
 # Gemma S20 Drive publication check - 2026-10-29
 
 GitHub result commit 8c53402 was pushed to main, following pre-inference

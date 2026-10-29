@@ -2093,3 +2093,27 @@ must restore available storage in the authenticated Drive account before
 upload/verification can finish. Do not delete research data, substitute a
 backup destination, bypass the age rule, or rerun model episodes to address
 this external blocker. No S21 or additional-model work follows.
+
+
+## 2026-10-29 - S20 - Gemma Drive backup recovered with authorized alternate account
+
+The researcher instructed use of their university Google account, already an
+Editor of the existing shared folder, and completed rclone reauthentication.
+The exact requested account identity and canAddChildren capability were
+verified privately through Drive metadata before retrying. Credentials remain
+outside Git. The cofail_gdrive remote now uses that account; no folder ID,
+profile, backup script, age rule, experiment or preservation policy changed.
+
+The documented manual backup-repair workflow uploaded the Gemma outputs.
+At 14:33:42 UTC an independent exact-list rclone checksum check exited zero:
+69 matching Gemma scientific files, zero differences. All local MD5 values
+still match the retained inventory; the twenty raw attempt-1 episodes and
+configuration are now verified on Drive. No model calls/retries were made.
+The previous quota-blocked attempt remains dated history.
+
+The whole-repository copy still exited 1 because nine older S13-S15 files
+could not be archived into history (Google cannotAddParent). They are outside
+this run; their existing remote versions were preserved. Record that broader
+limitation without weakening backups or claiming all 1939 files were refreshed.
+Gemma's complete 69-file backup is independently verified. Evidence and expected
+hashes: docs/S20_gemma4_5060ti_backup.md. Stop; no next model or S21 work.

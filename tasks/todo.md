@@ -7,7 +7,8 @@
 - [x] Investigate BH2_03879 and all six material changes versus historical full blocks.
 - [x] Pass network-forbidden offline replay and historical/new/source integrity checks.
 - [x] Commit/push scoped report and evidence (results 8c53402; launcher b49ac91).
-- [ ] Complete Drive upload: blocked by storageQuotaExceeded; exact check found 0/69 present.
+- [x] Complete Gemma Drive upload using the authorized university account: 69 checksum matches, zero differences.
+- [ ] Separate broader-backup issue: nine older S13-S15 files cannot be moved into history (outside this Gemma run).
 - [x] Preserve historical acceptance and stop inference; no S21 or another model.
 
 [Report](../docs/S20_gemma4_5060ti_16k.md). Older checklists below are historical.
