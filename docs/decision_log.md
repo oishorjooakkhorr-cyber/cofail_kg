@@ -2295,3 +2295,17 @@ causal evidence or historical acceptance replacement.
 Network-forbidden offline reporting and1606 historical/21 new/51 source/input
 hashes pass. Model unloaded and isolated server stopped. Report:
 docs/S20_gemma4_5060ti_32k.md. No S21 or further model/condition.
+
+
+## 2026-10-30 — Authorized Ministral3-8B same-host 32K S20 reassessment
+Researcher explicitly authorizes a fresh complete twenty-query block at num_ctx32768,
+chosen after observing same-host16K18 SUCCESS/17 competent with two parse failures.
+This supersedes guide16K-only scope for this block. Preserve all historical outcomes
+and acceptance. Keep num_predict4096,f16 KV,Q4_K_M digest1922accd5827ebe6829e536369195db25eaf664528dc66206d646ea3bb386b71,
+installed PATH Ollama version and Flash Attention on,one sequence,D:\Models.
+All other scientific settings,prompts,tools,parser,JSON re-prompt,evaluators and D3
+unchanged. Commit executable code before synthetic or official inference. Require
+actual32768,f16 K/V,API size_vram=size and35/35 GPU logs or publish blocker.
+Explicit authorization includes launcher tests,investigation,records,commit,push main,
+existing shared Drive backup with default age/checksums. No extra condition,other
+model,S21 selection or replacement/retry of completed outcomes is authorized.
