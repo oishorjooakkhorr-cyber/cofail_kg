@@ -1,3 +1,8 @@
+**Separate new-host follow-up (2026-10-29):** Fresh RTX 5060 Ti / Ollama 0.40.12
+16K block passes D3: 20 SUCCESS, 16 competent, no read timeouts.
+[New-host report](S20_granite41_5060ti_16k.md). All historical outcomes and
+the stopped block's incomplete status below remain unchanged.
+
 # S20 Granite 4.1 8B screening complete (2026-10-21)
 
 All twenty frozen screening queries completed for `ibm/granite4.1:8b`.

@@ -2149,3 +2149,16 @@ timeout queries recover SUCCESS; no invented outcomes or verdict for that
 stopped block. Nine material8K changes investigated. Network-forbidden offline
 report and1388 historical/21 new/46 source hashes pass. See
 docs/S20_granite41_5060ti_16k.md. No retries,tuning,new model or S21.
+
+
+## 2026-10-29 - Granite41 publication and verified Drive backup
+
+Results7826348 pushed to main; launcher/authorization fe0aab2 preceded inference.
+Initial backup deferred recent files. After all65 became age-eligible, repeated
+documented backup staged2004 stable files. Exact checksum check at15:07:33 UTC
+exited0:65 matching Granite files,zero differences,including twenty raw episodes
+and configuration. Local MD5 values match the retained inventory. Same shared
+folder and authorized university account; no age-rule bypass or deletion.
+Nine broader historical archive move errors remain outside this run, so global
+backup success is not claimed. See docs/S20_granite41_5060ti_backup.md.
+No extra experiment,model retry or S21 work. Historical evidence preserved.

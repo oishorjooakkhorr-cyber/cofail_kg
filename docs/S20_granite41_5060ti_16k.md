@@ -29,14 +29,16 @@ historical runtime was 0.40.4. Server explicitly uses D:\Models, port11435,
 f16 KV, Flash Attention on, one sequence. No model experiment/server was running
 before preparation; the new model was unloaded and its isolated server stopped
 after the block. Host RTX5060Ti 16311MiB, driver610.88, Ryzen7 7700, Windows11.
-Full host memory and OS evidence is in host.json.
+Before model loading, available VRAM was 14758 MiB; usable RAM was
+32626236 KiB with 19180140 KiB free. Python 3.13.9 used the requested
+D:\cofailKG\.venv\Scripts\python.exe. Full host evidence is in host.json.
 
 Settings: think=false, temperature0, seed42, num_ctx16384, num_predict4096,
 budget30, page_size50, request timeout120s, episode timeout600s. Prompts, tools,
 parsers, evaluator and all five D3 thresholds remained unchanged.
 Synthetic native add(2,3) returned5 with no thinking. Actual context16384,
-size_vram=size=8055475404 bytes, all41/41 model layers on GPU, and K/V f16
-(1280MiB each, 2560MiB cache) are corroborated by runtime logs. All41 during-block
+size_vram=size=8055475404 bytes, all 41/41 model layers on GPU, and K/V f16
+(1280MiB each, 2560MiB cache) are corroborated by runtime logs. All 41 during-block
 samples passed context/cache/identity/full-residency guards.
 
 | D3 criterion | Observed | Required | Result |
@@ -53,17 +55,17 @@ below the120s read deadline. There were no TEXT_TOOL_CALL or thinking messages.
 Two queries hit the tool budget. Largest reported prompt16196; runtime token
 accounting is retained as reported, not assumed to prove unused headroom.
 
-Of659 scored answer items,593 are GOLD/SUPPORTED,17 ALT_VALID/SUPPORTED and49
-OFF_QUESTION/PATH_INVALID:610 supported items across16 competent queries.
+Of 659 scored answer items,593 are GOLD/SUPPORTED,17 ALT_VALID/SUPPORTED and49
+OFF_QUESTION/PATH_INVALID:610 supported items across 16 competent queries.
 Valid final JSON, well-formed native calls and supported answers are distinct.
 
 ### Historical comparison
 
-Complete old8K:20/20 SUCCESS,14/20 competent,217/217 well-formed calls,
-median61.3250475s, D3 PASS. New full16K:20/20 SUCCESS,16/20 competent,236/236,
+Complete old 8K:20/20 SUCCESS,14/20 competent,217/217 well-formed calls,
+median61.3250475s, D3 PASS. New full 16K:20/20 SUCCESS,16/20 competent,236/236,
 median38.870718s, D3 PASS.
 
-Old3060Ti16K remains **incomplete**:15 saved outcomes,6 SUCCESS and9
+Old 3060 Ti 16K remains **incomplete**:15 saved outcomes,6 SUCCESS and9
 ERROR/CONNECTION, each explicitly recording Read timed out(read timeout=120).
 No episode TIMEOUT or OOM was recorded. The final five have no saved outcome;
 no full-block verdict or competence is assigned. Missing responses are not
@@ -92,33 +94,33 @@ unscored, never fabricated. Nine queries change supported sets or labels:
 | BH2_04003 | 40 -> 64 | 64 | 20 | [(16196, 1301, 'stop'), (14893, 1033, 'stop')] |
 
 BH2_03619 coverage declines84->50; guessed adverse_event fails, as do two
-missing drug_effect relations. BH2_03750 gains competence with44 supported
+missing drug_effect relations. BH2_03750 gains competence with 44 supported
 items despite four failed guessed relations. BH2_03762 declines50->1 supported;
 its final JSON contains Edema and Vascular skin abnormality, the latter an
-OFF_QUESTION shortcut. A drug_side_effect call failed. BH2_03850 retains67
+OFF_QUESTION shortcut. A drug_side_effect call failed. BH2_03850 retains 67
 supported items but the supported ID set changes. BH2_03856 grows65->66.
-BH2_03953 gains competence with99 supported items and no tool errors.
+BH2_03953 gains competence with 99 supported items and no tool errors.
 BH2_04003 grows40->64 supported, with one missing drug_effect relation.
 
-All four noncompetent new queries: BH2_03879 returns11 drug IDs instead of
-phenotypes after exhausting30 calls; BH2_03881 returns4 drug IDs after a
-missing drug_effect relation; BH2_03991 returns3 drug IDs after repeated
+All four noncompetent new queries: BH2_03879 returns 11 drug IDs instead of
+phenotypes after exhausting 30 calls; BH2_03881 returns 4 drug IDs after a
+missing drug_effect relation; BH2_03991 returns 3 drug IDs after repeated
 missing/guessed relation errors. Their evaluator reasons are wrong target type
-and hop count. BH2_05366 returns30 direct gene-disease shortcut answers after
-an invalid page request. All49 off-question items have invalid support.
+and hop count. BH2_05366 returns 30 direct gene-disease shortcut answers after
+an invalid page request. All 49 off-question items have invalid support.
 No formatting or setting adjustment was made to improve these outcomes.
 
-Observed: no timeouts under verified full-GPU16K; faster median than old8K;
-completion recovers on all nine old16K timeout queries. This supports feasibility
+Observed: no timeouts under verified full-GPU16K; faster median than old 8K;
+completion recovers on all nine old 16K timeout queries. This supports feasibility
 of this tested host/runtime condition. It does not isolate why: host hardware,
 CPU/RAM/driver and Ollama runtime changed together. The old offload samples
 alone did not prove causation; there is no replicated hardware-only control.
 
 Offline report ran with server stopped and Ollama API calls replaced by a
-failing guard; it exited zero and reproduced all metrics. All1388 historical
+failing guard; it exited zero and reproduced all metrics. All 1388 historical
 hashes,21 new run/config hashes and46 source/input pins match. Exactly20 unique
 attempt-1 records, sequential timestamps and identical initial messages versus
-old8K and all15 saved old16K episodes were verified. Historical acceptance,
+old 8K and all 15 saved old 16K episodes were verified. Historical acceptance,
 metrics, manifests and failed outcomes were preserved.
 
 ## 3. Small real example
@@ -144,4 +146,10 @@ scientific gate, threshold, evaluator rule or literature method.
 
 Inspect four noncompetent valid-JSON episodes, BH2_03762's loss of coverage,
 all nine former request-timeout recoveries, and the raw token/context evidence.
-Publication and exact Drive checksum status will be recorded after completion.
+Results commit `7826348` was pushed to GitHub main, following pre-inference
+launcher/authorization `fe0aab2`. After waiting for all files to meet the default
+ten-minute age rule, the repeated documented backup uploaded the full set.
+Exact verification at15:07:33 UTC: **65 checksum matches, zero differences**.
+[Backup evidence and MD5 inventory](S20_granite41_5060ti_backup.md). The broader
+repository backup retains nine unrelated historical archival move errors; only
+this independently checked Granite set is claimed complete.
