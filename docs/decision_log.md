@@ -2162,3 +2162,13 @@ folder and authorized university account; no age-rule bypass or deletion.
 Nine broader historical archive move errors remain outside this run, so global
 backup success is not claimed. See docs/S20_granite41_5060ti_backup.md.
 No extra experiment,model retry or S21 work. Historical evidence preserved.
+
+## 2026-10-29 — Authorized Qwen35-9B fresh RTX 5060 Ti 16K S20
+Researcher explicitly authorizes launcher implementation/testing, synthetic preflight,
+one fresh sequential twenty-query block, investigation, records, commit/push to main
+and existing shared Drive backup. Installed PATH Ollama is authorized unchanged
+(departure from historical 0.40.4; verify actual client/server). D:\Models, pinned
+Q4_K_M digest, f16 only, actual16384, full GPU API equality plus runtime logs required.
+All other protocol settings and D3 thresholds unchanged. Stop on preflight blocker;
+keep every final status, resume unfinished only, no extra conditions or S21.
+Execution note: initial commit failed because local Git author was unset; synthetic preflight inadvertently continued before commit. No official query ran. Reuse existing repository author via per-command Git settings; commit executable launcher before official inference. Preflight passed exact identity, tools/no-thinking, actual16K, f16 and33/33 GPU layers with size equality.
