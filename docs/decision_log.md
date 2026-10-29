@@ -2179,3 +2179,34 @@ Fresh16K D3 FAIL:16/20 SUCCESS,12 competent,259/259 well-formed calls,
 median30.627939s,zero OOM. Four retained PARSE_FAIL. Full GPU/f16/actual16K
 verified; historical8K and16K PASS preserved. See docs/S20_qwen35_5060ti_16k.md.
 No retries,additional condition,other model or S21.
+
+
+## 2026-10-29 — Authorized Qwen35-9B 32K context reassessment
+
+Researcher explicitly authorizes one fresh complete twenty-query S20 block at
+num_ctx=32768 on the RTX 5060 Ti, launcher implementation/tests, investigation,
+scoped commits/push to GitHub main and existing shared Drive backup. This is a
+post-result reassessment chosen after observing historical 8K (18 SUCCESS/15
+competent), historical 16K (19/13) and same-host 16K (16/12, D3 FAIL). It does
+not replace any prior run or acceptance, select S21, or authorize another model
+or condition. This explicit amendment supersedes the guide's 16K-only scope for
+this block; frozen protocol and decision-rule documents remain unchanged.
+
+Run ID qwen35-5060ti-32k-20261029. Reuse tested new-host Qwen launcher and
+unchanged runner, prompt, tools, parser, evaluators and all five D3 thresholds.
+Pinned qwen3.5:9b Q4_K_M digest
+56671c2ab9385f9cfcb404638e32cd62d88e3501d44822208363c010179a3c90.
+Only context changes: think=false, temperature=0, seed=42, num_predict=4096,
+budget=30, page_size=50, request timeout=120s, episode timeout=600s remain.
+Installed PATH runtime preserved (baseline client/server 0.40.12, distinct from
+historical 0.40.4), existing Flash Attention configuration preserved, f16 only,
+D:\Models explicitly set on isolated port11435. Commit executable changes and
+this authorization before synthetic/official inference. Require actual32768,
+f16 K/V runtime logs, size_vram=size and33/33 GPU layers; stop/publish blocker
+if any fails. Keep every final status, resume only unfinished queries.
+
+No active model experiment or Ollama server found; unrelated graphify services
+and untracked ministral_speed directory preserved. Remote main matched dc8a553.
+Routine engineering: unique output roots, adapt tested guards to32768, retain
+source/input/history pins, per-episode memory samples, offline paired reporting.
+No new scientific rule or method.
