@@ -1,0 +1,41 @@
+{
+  "screening_row": {
+    "run_id": "granite41-5060ti-32k-20261030",
+    "agent_id": "Granite41-8B",
+    "tag": "ibm/granite4.1:8b",
+    "digest": "444af1c4b2fedd6b54041aca558e7300b0b3d5c0468c44619126240323ba2852",
+    "quantization": "Q4_K_M",
+    "parameter_size": "8.8B",
+    "family": "Granite",
+    "episodes_completed": 20,
+    "episodes_expected": 20,
+    "complete": true,
+    "native_calls": 233,
+    "text_tool_calls": 0,
+    "attempted_calls": 233,
+    "well_formed_calls": 233,
+    "well_formed_rate": 1.0,
+    "success_episodes": 20,
+    "success_rate": 1.0,
+    "competent_episodes": 16,
+    "competence": 0.8,
+    "median_wall_seconds": 37.384036,
+    "out_of_memory_episodes": 0,
+    "largest_prompt_eval_count": 18192,
+    "median_tool_calls": 10.0,
+    "budget_hit_share": 0.1,
+    "pass_well_formed": true,
+    "pass_success": true,
+    "pass_competence": true,
+    "pass_time": true,
+    "pass_oom": true,
+    "d3_pass": true
+  },
+  "status_counts": {
+    "SUCCESS": 20
+  },
+  "historical_files_verified": 1755,
+  "runtime": "0.40.12",
+  "kv_cache": "f16"
+}
+COMPLETE 20/20

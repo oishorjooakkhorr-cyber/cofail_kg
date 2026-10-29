@@ -2339,3 +2339,14 @@ Require actual32768,f16 K/V,API size_vram=size and41/41 GPU logs or publish bloc
 Authorization includes tests,investigation,records,commit,push main,existing shared
 Drive workflow with default age and independent checksums. Retain all final statuses,
 resume only unfinished after crash; no extra condition,other model or S21 selection.
+
+
+## Granite41-8B 32K reassessment completed — 2026-10-30
+Fresh same-host32K D3 PASS:20/20 SUCCESS,16 competent,233/233 well-formed calls,
+median37.384036s,zero errors/timeouts/OOM. Competence unchanged from16K;610
+supported items.04003 exchanges two supported IDs;06427 adds25 shortcut errors.
+Other18 labels/sets unchanged. Actual32768,f16 KV5120MiB,41/41 GPU,API equality,
+unchanged Flash Attention verified in41 samples. Baseline04003 context shift
+(discard8189) is absent in new log; coverage does not grow. Historical stopped
+3060Ti16K remains incomplete. Offline/hash checks pass; no S21 or other condition.
+Report: docs/S20_granite41_5060ti_32k.md. Publication/Drive proof follows.

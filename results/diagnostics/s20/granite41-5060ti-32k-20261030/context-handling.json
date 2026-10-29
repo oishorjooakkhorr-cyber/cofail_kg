@@ -1,0 +1,56 @@
+{
+  "baseline16k": {
+    "log_path": "results/diagnostics/s20/granite41-5060ti-16k-20261029/server.stderr.log",
+    "runtime_spans": [
+      {
+        "line_number": 4631,
+        "lines": [
+          "\tmirostat = 0, mirostat_lr = 0.100, mirostat_ent = 5.000, adaptive_target = -1.000, adaptive_decay = 0.900",
+          "slot launch_slot_: id  0 | task 30768 | processing task, is_child = 0",
+          "slot   operator(): id  0 | task 30768 | new prompt, n_ctx_slot = 16384, n_keep = 4, task.n_tokens = 16196",
+          "slot   operator(): id  0 | task 30768 | cached n_tokens = 15862, memory_seq_rm [15862, end)",
+          "slot init_sampler: id  0 | task 30768 | init sampler, took 1.60 ms, tokens: text = 16196, total = 16196",
+          "slot print_timing: id  0 | task 30768 | n_gen =    144, tg =  47.40 t/s, tg_3s =  47.74 t/s"
+        ]
+      },
+      {
+        "line_number": 4635,
+        "lines": [
+          "slot init_sampler: id  0 | task 30768 | init sampler, took 1.60 ms, tokens: text = 16196, total = 16196",
+          "slot print_timing: id  0 | task 30768 | n_gen =    144, tg =  47.40 t/s, tg_3s =  47.74 t/s",
+          "slot   operator(): id  0 | task 30768 | slot context shift, n_keep = 4, n_left = 16379, n_discard = 8189",
+          "slot print_timing: id  0 | task 30768 | n_gen =    291, tg =  48.16 t/s, tg_3s =  48.92 t/s",
+          "slot print_timing: id  0 | task 30768 | n_gen =    435, tg =  48.08 t/s, tg_3s =  47.91 t/s",
+          "slot print_timing: id  0 | task 30768 | n_gen =    579, tg =  47.97 t/s, tg_3s =  47.66 t/s"
+        ]
+      },
+      {
+        "line_number": 4649,
+        "lines": [
+          "slot print_timing: id  0 | task 30768 |    graphs reused =      31316",
+          "slot print_timing: id  0 | task 30768 |   graph reallocs =          0    /     0        (same size) / (changed size)",
+          "slot      release: id  0 | task 30768 | stop processing: n_tokens = 9307, truncated = 1",
+          "srv  update_slots: all slots are idle",
+          "srv  server_strea: conv_id= (empty=1)",
+          "slot get_availabl: id  0 | task -1 |  - checking sim = 0.000 (4/14893) > 0.100"
+        ]
+      }
+    ]
+  },
+  "new32k": {
+    "log_path": "results/diagnostics/s20/granite41-5060ti-32k-20261030/server.stderr.log",
+    "runtime_spans": [
+      {
+        "line_number": 4629,
+        "lines": [
+          "\tmirostat = 0, mirostat_lr = 0.100, mirostat_ent = 5.000, adaptive_target = -1.000, adaptive_decay = 0.900",
+          "slot launch_slot_: id  0 | task 30768 | processing task, is_child = 0",
+          "slot   operator(): id  0 | task 30768 | new prompt, n_ctx_slot = 32768, n_keep = 4, task.n_tokens = 16196",
+          "slot   operator(): id  0 | task 30768 | cached n_tokens = 15862, memory_seq_rm [15862, end)",
+          "slot init_sampler: id  0 | task 30768 | init sampler, took 1.46 ms, tokens: text = 16196, total = 16196",
+          "slot print_timing: id  0 | task 30768 | n_gen =    150, tg =  49.55 t/s, tg_3s =  49.89 t/s"
+        ]
+      }
+    ]
+  }
+}

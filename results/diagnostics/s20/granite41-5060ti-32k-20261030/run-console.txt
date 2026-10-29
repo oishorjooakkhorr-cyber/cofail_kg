@@ -1,0 +1,102 @@
+CHECKED 0/20; context 32768; f16 KV; full GPU
+CHECKED 0/20; context 32768; f16 KV; full GPU
+Starting BH2_00461 / ibm/granite4.1:8b (new episode 1)
+CHECKED 1/20; context 32768; f16 KV; full GPU
+CHECKED 1/20; context 32768; f16 KV; full GPU
+Starting BH2_02033 / ibm/granite4.1:8b (new episode 2)
+CHECKED 2/20; context 32768; f16 KV; full GPU
+CHECKED 2/20; context 32768; f16 KV; full GPU
+Starting BH2_03434 / ibm/granite4.1:8b (new episode 3)
+CHECKED 3/20; context 32768; f16 KV; full GPU
+CHECKED 3/20; context 32768; f16 KV; full GPU
+Starting BH2_03619 / ibm/granite4.1:8b (new episode 4)
+CHECKED 4/20; context 32768; f16 KV; full GPU
+CHECKED 4/20; context 32768; f16 KV; full GPU
+Starting BH2_03750 / ibm/granite4.1:8b (new episode 5)
+CHECKED 5/20; context 32768; f16 KV; full GPU
+CHECKED 5/20; context 32768; f16 KV; full GPU
+Starting BH2_03760 / ibm/granite4.1:8b (new episode 6)
+CHECKED 6/20; context 32768; f16 KV; full GPU
+CHECKED 6/20; context 32768; f16 KV; full GPU
+Starting BH2_03762 / ibm/granite4.1:8b (new episode 7)
+CHECKED 7/20; context 32768; f16 KV; full GPU
+CHECKED 7/20; context 32768; f16 KV; full GPU
+Starting BH2_03850 / ibm/granite4.1:8b (new episode 8)
+CHECKED 8/20; context 32768; f16 KV; full GPU
+CHECKED 8/20; context 32768; f16 KV; full GPU
+Starting BH2_03856 / ibm/granite4.1:8b (new episode 9)
+CHECKED 9/20; context 32768; f16 KV; full GPU
+CHECKED 9/20; context 32768; f16 KV; full GPU
+Starting BH2_03879 / ibm/granite4.1:8b (new episode 10)
+CHECKED 10/20; context 32768; f16 KV; full GPU
+CHECKED 10/20; context 32768; f16 KV; full GPU
+Starting BH2_03881 / ibm/granite4.1:8b (new episode 11)
+CHECKED 11/20; context 32768; f16 KV; full GPU
+CHECKED 11/20; context 32768; f16 KV; full GPU
+Starting BH2_03953 / ibm/granite4.1:8b (new episode 12)
+CHECKED 12/20; context 32768; f16 KV; full GPU
+CHECKED 12/20; context 32768; f16 KV; full GPU
+Starting BH2_03991 / ibm/granite4.1:8b (new episode 13)
+CHECKED 13/20; context 32768; f16 KV; full GPU
+CHECKED 13/20; context 32768; f16 KV; full GPU
+Starting BH2_04003 / ibm/granite4.1:8b (new episode 14)
+CHECKED 14/20; context 32768; f16 KV; full GPU
+CHECKED 14/20; context 32768; f16 KV; full GPU
+Starting BH2_04007 / ibm/granite4.1:8b (new episode 15)
+CHECKED 15/20; context 32768; f16 KV; full GPU
+CHECKED 15/20; context 32768; f16 KV; full GPU
+Starting BH2_04425 / ibm/granite4.1:8b (new episode 16)
+CHECKED 16/20; context 32768; f16 KV; full GPU
+CHECKED 16/20; context 32768; f16 KV; full GPU
+Starting BH2_05366 / ibm/granite4.1:8b (new episode 17)
+CHECKED 17/20; context 32768; f16 KV; full GPU
+CHECKED 17/20; context 32768; f16 KV; full GPU
+Starting BH2_05686 / ibm/granite4.1:8b (new episode 18)
+CHECKED 18/20; context 32768; f16 KV; full GPU
+CHECKED 18/20; context 32768; f16 KV; full GPU
+Starting BH2_05843 / ibm/granite4.1:8b (new episode 19)
+CHECKED 19/20; context 32768; f16 KV; full GPU
+CHECKED 19/20; context 32768; f16 KV; full GPU
+Starting BH2_06427 / ibm/granite4.1:8b (new episode 20)
+CHECKED 20/20; context 32768; f16 KV; full GPU
+{
+  "screening_row": {
+    "run_id": "granite41-5060ti-32k-20261030",
+    "agent_id": "Granite41-8B",
+    "tag": "ibm/granite4.1:8b",
+    "digest": "444af1c4b2fedd6b54041aca558e7300b0b3d5c0468c44619126240323ba2852",
+    "quantization": "Q4_K_M",
+    "parameter_size": "8.8B",
+    "family": "Granite",
+    "episodes_completed": 20,
+    "episodes_expected": 20,
+    "complete": true,
+    "native_calls": 233,
+    "text_tool_calls": 0,
+    "attempted_calls": 233,
+    "well_formed_calls": 233,
+    "well_formed_rate": 1.0,
+    "success_episodes": 20,
+    "success_rate": 1.0,
+    "competent_episodes": 16,
+    "competence": 0.8,
+    "median_wall_seconds": 37.384036,
+    "out_of_memory_episodes": 0,
+    "largest_prompt_eval_count": 18192,
+    "median_tool_calls": 10.0,
+    "budget_hit_share": 0.1,
+    "pass_well_formed": true,
+    "pass_success": true,
+    "pass_competence": true,
+    "pass_time": true,
+    "pass_oom": true,
+    "d3_pass": true
+  },
+  "status_counts": {
+    "SUCCESS": 20
+  },
+  "historical_files_verified": 1755,
+  "runtime": "0.40.12",
+  "kv_cache": "f16"
+}
+COMPLETE 20/20
