@@ -2117,3 +2117,24 @@ this run; their existing remote versions were preserved. Record that broader
 limitation without weakening backups or claiming all 1939 files were refreshed.
 Gemma's complete 69-file backup is independently verified. Evidence and expected
 hashes: docs/S20_gemma4_5060ti_backup.md. Stop; no next model or S21 work.
+
+
+## 2026-10-29 - Authorized fresh Granite41-8B S20 on RTX 5060 Ti
+
+Researcher explicitly authorizes launcher adaptation/tests, one fresh complete
+20-query block, investigation, scoped records/commits/push and shared Drive
+backup. This does not resume or replace the stopped 3060 Ti block. No further
+model or S21 work. Use installed PATH Ollama 0.40.12 without version changes,
+separate from historical 0.40.4; D:\Models; f16 KV only; Q4_K_M pinned weights.
+Run granite41-5060ti-16k-20261029; digest
+444af1c4b2fedd6b54041aca558e7300b0b3d5c0468c44619126240323ba2852.
+Context 16384, think=false, temperature0, seed42, num_predict4096, budget30,
+page_size50, request120s, episode600s. Unchanged prompts/tools/parsers/D3.
+Require actual context, f16 logs, size_vram=size and all-layer GPU evidence
+before official inference. Preserve every final status, no completed retries.
+Data already seen: old 8K 20 SUCCESS/14 competent; stopped 16K 15 outcomes,
+six SUCCESS/nine read-timeout CONNECTION errors; Gemma and Ministral new-host
+results. Hardware/runtime changed together; no GPU-only causal attribution.
+Routine engineering: adapt tested Gemma driver, isolated port/manifests,
+source/history pins, all-status resume and separate offline evaluation.
+No other model experiment or Ollama process was running at preparation.
