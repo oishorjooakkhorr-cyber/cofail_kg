@@ -1,3 +1,14 @@
+# Gemma new-host result — investigation 2026-10-29
+
+**Gemma4-E4B passes D3 on RTX 5060 Ti / Ollama 0.40.12 at 16K with f16 KV.**
+Fresh run gemma4-5060ti-16k-20261028: 19/20 SUCCESS, 14/20 competent,
+185/185 well-formed native calls, median 10.8510705 s, no OOM/errors/timeouts.
+BH2_03879 is the retained PARSE_FAIL. BH2_03762 now returns valid no_answer
+but no supported answer; aggregate counts match the old full 16K block while
+six outcomes change. Historical/new integrity and offline checks pass.
+[New-host report](S20_gemma4_5060ti_16k.md). This separate condition neither
+replaces historical acceptance nor selects the S21 panel.
+
 # S20 screening status — 2026-10-28
 
 **New-host result: Ministral 3 8B passes D3 on RTX 5060 Ti at 16K.** The fresh

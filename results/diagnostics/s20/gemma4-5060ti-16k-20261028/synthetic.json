@@ -1,0 +1,30 @@
+{
+  "model": "gemma4:e4b-it-q4_K_M",
+  "created_at": "2026-10-28T17:04:41.1919674Z",
+  "message": {
+    "role": "assistant",
+    "content": "",
+    "tool_calls": [
+      {
+        "id": "call_5s361orh",
+        "function": {
+          "index": 0,
+          "name": "add",
+          "arguments": {
+            "a": 2,
+            "b": 3
+          }
+        }
+      }
+    ]
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 68150940800,
+  "load_duration": 41498456800,
+  "prompt_eval_count": 82,
+  "prompt_eval_cached_count": 0,
+  "prompt_eval_duration": 25583026000,
+  "eval_count": 15,
+  "eval_duration": 1065836000
+}

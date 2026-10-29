@@ -1,5 +1,11 @@
 # S20 Gemma 4 E4B screening complete (2026-10-20)
 
+**New-host follow-up (investigation 2026-10-29; run 2026-10-28):** The fresh
+RTX 5060 Ti / Ollama 0.40.12 full 16K block also passes D3: 19/20 SUCCESS,
+14/20 competent, with f16 KV and verified full GPU residency. Its retained
+parse failure is BH2_03879; BH2_03762 parses no_answer but remains noncompetent.
+See [new-host report](S20_gemma4_5060ti_16k.md). Results below remain history.
+
 **Follow-up (2026-10-20):** Gemma subsequently passed a complete fresh twenty-query 16K D3 reassessment (19 SUCCESS, 14 competent). The original 8K FAIL below remains historical evidence. See [full 16K reassessment](S20_full_16k_reassessment.md).
 
 All **20 frozen queries completed uninterrupted in one launcher invocation**, as explicitly requested by the researcher. **Gemma4-E4B fails D3 only on SUCCESS rate: 16/20 (80%), below 90%.** The other four criteria pass. The four PARSE_FAIL outcomes remain in the denominator, with no reruns or replacements.

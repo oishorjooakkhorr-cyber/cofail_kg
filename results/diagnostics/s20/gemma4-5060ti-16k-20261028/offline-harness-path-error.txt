@@ -1,0 +1,14 @@
+Traceback (most recent call last):
+  File "<stdin>", line 7, in <module>
+  File "<frozen runpy>", line 287, in run_path
+  File "<frozen runpy>", line 98, in _run_module_code
+  File "<frozen runpy>", line 88, in _run_code
+  File "results/diagnostics/s20/gemma4-5060ti-16k-20261028/run_model.py", line 144, in <module>
+    main()
+    ~~~~^^
+  File "results/diagnostics/s20/gemma4-5060ti-16k-20261028/run_model.py", line 74, in main
+    config["source_sha256"][path.relative_to(ROOT).as_posix()] = launcher.file_hash(path)
+                            ~~~~~~~~~~~~~~~~^^^^^^
+  File "D:\cofailKG\.tools\python\Lib\pathlib\_local.py", line 385, in relative_to
+    raise ValueError(f"{str(self)!r} is not in the subpath of {str(other)!r}")
+ValueError: 'results\\diagnostics\\s20\\gemma4-5060ti-16k-20261028\\run_model.py' is not in the subpath of 'D:\\cofailKG'

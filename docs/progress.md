@@ -1,3 +1,17 @@
+# Gemma S20 update — 2026-10-29 (run 2026-10-28)
+
+**Fresh RTX 5060 Ti Gemma4-E4B 16K block complete: D3 PASS.** All twenty
+outcomes retained: 19 SUCCESS, one PARSE_FAIL (BH2_03879), 14 competent,
+185/185 well-formed native calls, median 10.8510705 s, zero errors/timeouts/OOM.
+Pinned Q4_K_M weights, f16 KV, context 16384, installed Ollama 0.40.12;
+43/43 GPU layers and all 41 placement samples verified. Launcher/authorization
+committed before inference as b49ac91. Network-forbidden offline replay passes;
+21 new run hashes, 1315 historical files and 46 source/input pins match.
+BH2_03762 now parses no_answer after invalid-relation/budget failures and remains
+noncompetent. Six changed outcomes investigated against both historical blocks.
+[Report](S20_gemma4_5060ti_16k.md). Historical acceptance remains intact;
+this host/runtime condition cannot isolate a GPU-only causal effect. No S21 work.
+
 # Current S20 status — 2026-10-28
 
 **Fresh RTX 5060 Ti Ministral 16K block complete: D3 PASS.** Q4_K_M weights,

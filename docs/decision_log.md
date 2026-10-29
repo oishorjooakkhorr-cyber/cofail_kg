@@ -2038,3 +2038,38 @@ normalize CRLF only when validating historical source identities, pin actual
 new-host bytes, and verify historical hashes plus runtime samples throughout.
 Host CPU is Ryzen 7 7700; usable RAM about 31 GiB; GPU RTX 5060 Ti 16311 MiB,
 driver 610.88. New host/runtime results cannot isolate a GPU-only causal effect.
+
+
+## 2026-10-29 - S20 - Gemma new-host block investigated
+
+The authorized 2026-10-28 run gemma4-5060ti-16k-20261028 completed all twenty
+queries in one invocation: 19 SUCCESS, one PARSE_FAIL (BH2_03879), zero
+ERROR/TIMEOUT/OOM. All five D3 criteria PASS: 185/185 calls well formed,
+95% SUCCESS, 70% competence, median 10.8510705 s, zero OOM. Preserve each
+final outcome; no further inference or retry follows the repeated request.
+
+Runtime checks: exact pinned Q4_K_M digest, Ollama 0.40.12 client/server,
+context 16384, f16 K/V logs, 43/43 GPU layers and size_vram=size in all 41
+samples. All generation/episode settings, prompts/tools/parsers/evaluators
+and D3 definitions remain unchanged. Launcher/authorization commit b49ac91
+preceded all inference. Historical source relocation differs only in CRLF
+for seven files; actual bytes are pinned.
+
+Six material outcome changes were investigated against both historical full
+blocks. BH2_03762 recovers valid no_answer JSON after missing-relation calls
+and budget exhaustion; competence remains zero. BH2_03879 newly fails after
+prose at the 4096-output cap and truncated JSON near 16K. BH2_03619 submits
+79 supported items versus 77; BH2_03953 submits 82 versus 90. BH2_04003
+returns four wrong-type/hop answers; BH2_05366 returns thirty shortcut answers.
+All fourteen competent query identities remain the same as the old full 16K
+block. Full evidence and limitations: docs/S20_gemma4_5060ti_16k.md.
+
+Network-forbidden offline reporting passes with the isolated server stopped,
+reproducing the metrics and preserving all 21 new run/configuration hashes,
+1315 historical evidence hashes and 46 source/input pins. One initial relative
+runpy-path harness error was corrected in the test invocation only; its
+transcript is retained. Production/scientific code and records were unchanged.
+The separate host/runtime condition prevents GPU-only causal attribution.
+Historical acceptance is preserved; no S21 selection is made. Publish only
+this task's scoped changes, then verify actual Drive uploads under the
+documented ten-minute rule.

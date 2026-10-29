@@ -1,0 +1,44 @@
+{
+  "historical_files": 1315,
+  "new_run_files": 21,
+  "queries": [
+    "BH2_00461",
+    "BH2_02033",
+    "BH2_03434",
+    "BH2_03619",
+    "BH2_03750",
+    "BH2_03760",
+    "BH2_03762",
+    "BH2_03850",
+    "BH2_03856",
+    "BH2_03879",
+    "BH2_03881",
+    "BH2_03953",
+    "BH2_03991",
+    "BH2_04003",
+    "BH2_04007",
+    "BH2_04425",
+    "BH2_05366",
+    "BH2_05686",
+    "BH2_05843",
+    "BH2_06427"
+  ],
+  "source_files": 46,
+  "runtime_samples": 41,
+  "sequential": true,
+  "identical_initial_messages": true,
+  "new_statuses": {
+    "SUCCESS": 19,
+    "PARSE_FAIL": 1
+  },
+  "changed_vs_16k": [
+    "BH2_03619",
+    "BH2_03762",
+    "BH2_03879",
+    "BH2_03953",
+    "BH2_04003",
+    "BH2_05366"
+  ],
+  "all_hashes_match": true,
+  "report_is_offline": true
+}

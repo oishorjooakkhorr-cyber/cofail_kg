@@ -1,3 +1,15 @@
+# Gemma RTX 5060 Ti S20 — 2026-10-29 investigation
+
+Completed the authorized fresh 2026-10-28 block: D3 PASS, 19 SUCCESS,
+one retained PARSE_FAIL, 14 competent. Tested/committed launcher before
+inference; exact digest/frozen order/f16 KV/full GPU checks passed.
+Investigated all six material changes against historical 8K/full 16K traces;
+offline reporting and 1315 historical/21 new/46 source hashes verified.
+Publish scoped report/evidence to GitHub main and verify ignored research
+outputs in the existing Drive backup; Git push alone is not backup evidence.
+[Report](../docs/S20_gemma4_5060ti_16k.md). Stop after publication; no new model,
+experimental retries or S21. Older plans below retain their dated history.
+
 # Current S20 plan/status — 2026-10-21
 
 **Command R7B full 8K block completed: D3 FAIL.** Twenty saved outcomes,

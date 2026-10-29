@@ -1,3 +1,36 @@
+# Tested Gemma launcher update — 2026-10-29
+
+The Gemma-specific launcher is now tested and its authorized fresh block is
+complete: **D3 PASS, 19 SUCCESS / 14 competent**. See
+[S20 Gemma on RTX 5060 Ti](S20_gemma4_5060ti_16k.md). The older setup proposal
+below is retained as history; its runtime and host assumptions are superseded
+for this run by the explicit researcher authorization in decision_log.md.
+
+Actual project `D:\cofailKG`; Python `D:\cofailKG\.venv\Scripts\python.exe`;
+installed user-PATH Ollama client/server 0.40.12 (historical 0.40.4 unchanged),
+model store `D:\Models`. Host Ryzen 7 7700, about 31 GiB usable RAM,
+RTX 5060 Ti 16311 MiB, driver 610.88. The tool shell may omit user PATH;
+resolve the installed host user PATH rather than replacing/upgrading Ollama.
+Full model digest remains the Gemma digest in section 4 below.
+
+Launcher:
+`results/diagnostics/s20/gemma4-5060ti-16k-20261028/run_model.py`.
+It reuses unchanged runner/evaluators with isolated records and preserves all
+final statuses on resume. Inference is complete: use only offline reporting
+for this run, without an Ollama server:
+
+```powershell
+& D:\cofailKG\.venv\Scripts\python.exe D:\cofailKG\results\diagnostics\s20\gemma4-5060ti-16k-20261028\run_model.py --report-only
+```
+
+Before any separately authorized future run, create its own run ID/manifests;
+do not edit/reuse this completed run to retry failures. Require f16 K/V runtime
+evidence, actual context 16384, /api/ps size_vram=size and all-layer GPU logs.
+Gemma was verified 43/43 layers with 41 runtime samples; small API byte accounting
+does not measure total VRAM. Results establish this host/runtime condition and
+do not attribute differences solely to hardware. No further model or S21
+action is authorized by this completed task.
+
 # S20 on the RTX 5060 Ti host — run guide (draft, 2026-10-21)
 
 Status: setup/run plan, not an executable launcher. Publishing this guide does not authorize

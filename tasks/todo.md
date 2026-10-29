@@ -1,3 +1,16 @@
+# Gemma RTX 5060 Ti S20 — 2026-10-29
+
+- [x] Record authorization and commit tested launcher before inference (b49ac91).
+- [x] Verify pinned model, frozen inputs/order, f16 KV, actual 16K and 43/43 GPU layers.
+- [x] Save all twenty outcomes once in one invocation: 19 SUCCESS, one PARSE_FAIL.
+- [x] Compute all five unchanged D3 criteria: PASS; competence 14/20.
+- [x] Investigate BH2_03879 and all six material changes versus historical full blocks.
+- [x] Pass network-forbidden offline replay and historical/new/source integrity checks.
+- [ ] Commit/push scoped report and verify this run's ignored files on shared Drive.
+- [x] Preserve historical acceptance and stop inference; no S21 or another model.
+
+[Report](../docs/S20_gemma4_5060ti_16k.md). Older checklists below are historical.
+
 # Current S20 checklist — 2026-10-21
 
 - [x] Run the researcher-requested full Command R7B original 8K S20 block:

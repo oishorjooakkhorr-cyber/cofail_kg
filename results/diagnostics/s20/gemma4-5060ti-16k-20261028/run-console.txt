@@ -1,0 +1,103 @@
+CHECKED 0/20; context 16384; f16 KV; full GPU
+CHECKED 0/20; context 16384; f16 KV; full GPU
+Starting BH2_00461 / gemma4:e4b-it-q4_K_M (new episode 1)
+CHECKED 1/20; context 16384; f16 KV; full GPU
+CHECKED 1/20; context 16384; f16 KV; full GPU
+Starting BH2_02033 / gemma4:e4b-it-q4_K_M (new episode 2)
+CHECKED 2/20; context 16384; f16 KV; full GPU
+CHECKED 2/20; context 16384; f16 KV; full GPU
+Starting BH2_03434 / gemma4:e4b-it-q4_K_M (new episode 3)
+CHECKED 3/20; context 16384; f16 KV; full GPU
+CHECKED 3/20; context 16384; f16 KV; full GPU
+Starting BH2_03619 / gemma4:e4b-it-q4_K_M (new episode 4)
+CHECKED 4/20; context 16384; f16 KV; full GPU
+CHECKED 4/20; context 16384; f16 KV; full GPU
+Starting BH2_03750 / gemma4:e4b-it-q4_K_M (new episode 5)
+CHECKED 5/20; context 16384; f16 KV; full GPU
+CHECKED 5/20; context 16384; f16 KV; full GPU
+Starting BH2_03760 / gemma4:e4b-it-q4_K_M (new episode 6)
+CHECKED 6/20; context 16384; f16 KV; full GPU
+CHECKED 6/20; context 16384; f16 KV; full GPU
+Starting BH2_03762 / gemma4:e4b-it-q4_K_M (new episode 7)
+CHECKED 7/20; context 16384; f16 KV; full GPU
+CHECKED 7/20; context 16384; f16 KV; full GPU
+Starting BH2_03850 / gemma4:e4b-it-q4_K_M (new episode 8)
+CHECKED 8/20; context 16384; f16 KV; full GPU
+CHECKED 8/20; context 16384; f16 KV; full GPU
+Starting BH2_03856 / gemma4:e4b-it-q4_K_M (new episode 9)
+CHECKED 9/20; context 16384; f16 KV; full GPU
+CHECKED 9/20; context 16384; f16 KV; full GPU
+Starting BH2_03879 / gemma4:e4b-it-q4_K_M (new episode 10)
+CHECKED 10/20; context 16384; f16 KV; full GPU
+CHECKED 10/20; context 16384; f16 KV; full GPU
+Starting BH2_03881 / gemma4:e4b-it-q4_K_M (new episode 11)
+CHECKED 11/20; context 16384; f16 KV; full GPU
+CHECKED 11/20; context 16384; f16 KV; full GPU
+Starting BH2_03953 / gemma4:e4b-it-q4_K_M (new episode 12)
+CHECKED 12/20; context 16384; f16 KV; full GPU
+CHECKED 12/20; context 16384; f16 KV; full GPU
+Starting BH2_03991 / gemma4:e4b-it-q4_K_M (new episode 13)
+CHECKED 13/20; context 16384; f16 KV; full GPU
+CHECKED 13/20; context 16384; f16 KV; full GPU
+Starting BH2_04003 / gemma4:e4b-it-q4_K_M (new episode 14)
+CHECKED 14/20; context 16384; f16 KV; full GPU
+CHECKED 14/20; context 16384; f16 KV; full GPU
+Starting BH2_04007 / gemma4:e4b-it-q4_K_M (new episode 15)
+CHECKED 15/20; context 16384; f16 KV; full GPU
+CHECKED 15/20; context 16384; f16 KV; full GPU
+Starting BH2_04425 / gemma4:e4b-it-q4_K_M (new episode 16)
+CHECKED 16/20; context 16384; f16 KV; full GPU
+CHECKED 16/20; context 16384; f16 KV; full GPU
+Starting BH2_05366 / gemma4:e4b-it-q4_K_M (new episode 17)
+CHECKED 17/20; context 16384; f16 KV; full GPU
+CHECKED 17/20; context 16384; f16 KV; full GPU
+Starting BH2_05686 / gemma4:e4b-it-q4_K_M (new episode 18)
+CHECKED 18/20; context 16384; f16 KV; full GPU
+CHECKED 18/20; context 16384; f16 KV; full GPU
+Starting BH2_05843 / gemma4:e4b-it-q4_K_M (new episode 19)
+CHECKED 19/20; context 16384; f16 KV; full GPU
+CHECKED 19/20; context 16384; f16 KV; full GPU
+Starting BH2_06427 / gemma4:e4b-it-q4_K_M (new episode 20)
+CHECKED 20/20; context 16384; f16 KV; full GPU
+{
+  "screening_row": {
+    "run_id": "gemma4-5060ti-16k-20261028",
+    "agent_id": "Gemma4-E4B",
+    "tag": "gemma4:e4b-it-q4_K_M",
+    "digest": "dc35e8d9c6061baa6f0fa870975ab6932e2542b579b13ea0f199fa4bb7300c9c",
+    "quantization": "Q4_K_M",
+    "parameter_size": "7.5B",
+    "family": "Gemma",
+    "episodes_completed": 20,
+    "episodes_expected": 20,
+    "complete": true,
+    "native_calls": 185,
+    "text_tool_calls": 0,
+    "attempted_calls": 185,
+    "well_formed_calls": 185,
+    "well_formed_rate": 1.0,
+    "success_episodes": 19,
+    "success_rate": 0.95,
+    "competent_episodes": 14,
+    "competence": 0.7,
+    "median_wall_seconds": 10.8510705,
+    "out_of_memory_episodes": 0,
+    "largest_prompt_eval_count": 16299,
+    "median_tool_calls": 8.0,
+    "budget_hit_share": 0.05,
+    "pass_well_formed": true,
+    "pass_success": true,
+    "pass_competence": true,
+    "pass_time": true,
+    "pass_oom": true,
+    "d3_pass": true
+  },
+  "status_counts": {
+    "SUCCESS": 19,
+    "PARSE_FAIL": 1
+  },
+  "historical_files_verified": 1315,
+  "runtime": "0.40.12",
+  "kv_cache": "f16"
+}
+COMPLETE 20/20
