@@ -2210,3 +2210,16 @@ and untracked ministral_speed directory preserved. Remote main matched dc8a553.
 Routine engineering: unique output roots, adapt tested guards to32768, retain
 source/input/history pins, per-episode memory samples, offline paired reporting.
 No new scientific rule or method.
+
+32K preflight engineering correction: committed launcher3bc7b69 preceded all
+inference. Synthetic native add/result, identity, actual32768, f16 K/V,
+size_vram=size and33/33 GPU layers passed. An extra guard incorrectly required
+the server environment string FLASH_ATTENTION:true. The inherited environment
+had no override (preserved), server reported false, but backend explicitly
+logged "warmup: flash attention is enabled". Correct guard to require effective
+backend Flash Attention, without changing environment/runtime/model settings.
+Initial manifest/config preserved as preflight-initial.* before repinning the
+corrected executable; no official episode exists and no synthetic retry needed.
+Baseline16K configured FLASH_ATTENTION:true; both backends enable it, but the
+configuration-string difference is disclosed rather than claiming an exact
+context-only controlled comparison. No scientific component or check weakened.

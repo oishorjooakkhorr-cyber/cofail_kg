@@ -11,7 +11,7 @@ spec.loader.exec_module(driver)
 
 def test_runtime_guard():
     model = {"digest": driver.DIGEST, "context_length": 32768, "size": 10, "size_vram": 10}
-    log = "OLLAMA_FLASH_ATTENTION:true OLLAMA_KV_CACHE_TYPE:f16 K (f16): 1088 MiB, V (f16): 1088 MiB offloaded 33/33 layers to GPU"
+    log = "warmup: flash attention is enabled OLLAMA_KV_CACHE_TYPE:f16 K (f16): 1088 MiB, V (f16): 1088 MiB offloaded 33/33 layers to GPU"
     driver.guard_runtime({"models": [model]}, log)
     for key, value in (("digest", "wrong"), ("context_length", 8192), ("size_vram", 9)):
         with pytest.raises(AssertionError):

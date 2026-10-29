@@ -32,7 +32,7 @@ def guard_runtime(ps, log):
     model = models[0]
     assert model["context_length"] == 32768, model
     assert model["size"] > 0 and model["size_vram"] == model["size"], model
-    assert "OLLAMA_FLASH_ATTENTION:true" in log, "Flash Attention differs from same-host baseline"
+    assert "warmup: flash attention is enabled" in log, "Runtime Flash Attention is not enabled"
     assert "OLLAMA_KV_CACHE_TYPE:f16" in log, "Server cache setting differs"
     assert "K (f16):" in log and "V (f16):" in log, "Actual KV cache is not verified f16"
     assert "offloaded 33/33 layers to GPU" in log, "Full model layer residency unverified"
