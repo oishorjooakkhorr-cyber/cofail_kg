@@ -2250,3 +2250,32 @@ archive failures; no global backup-success claim or preservation-policy change.
 See docs/S20_qwen35_5060ti_32k_backup.md for all74 expected hashes. Final docs
 restore an unintended encoding change in older task text; original text verified.
 No further model inference or S21.
+
+
+## 2026-10-29 — Authorized Gemma4-E4B 32K context reassessment
+
+Researcher explicitly authorizes one fresh complete20-query S20 block at32768,
+launcher/tests, investigation, scoped records/commits/push to GitHub main and
+existing shared Drive backup. Post-result reassessment after same-host16K
+19 SUCCESS/14 competent and historical8K16/11,16K19/14; Qwen32K13/12 also seen.
+Supersedes guide's16K-only scope for this block only, preserving historical
+acceptance. No other model,extra condition,retry,output repair or S21 selection.
+
+Run gemma4-5060ti-32k-20261029; gemma4:e4b-it-q4_K_M,Gemma4-E4B,digest
+dc35e8d9c6061baa6f0fa870975ab6932e2542b579b13ea0f199fa4bb7300c9c.
+Only scientific setting change:num_ctx16384→32768. Keep4096 output,f16 KV,
+think=false,temp0,seed42,budget30,page50,request120s,episode600s,original query
+order,prompt/tools/parser/evaluator/re-prompt and all five D3 thresholds.
+Installed PATH client/server0.40.12 unchanged,historical0.40.4 separate.
+Recreate tested Gemma16K server configuration:Flash Attention true,one sequence,
+D:\Models,isolated11435; server default context follows authorized32768.
+Preserve runtime-selected draft-mtp,max3,backend sampling,draft blob identity,
+main43/43 and draft5/5 GPU layers,f16 sliding/non-sliding caches. No speculative
+tuning. Require API actual32768,size_vram=size and corroborating runtime logs;
+stop/publish blocker before official block if unmet.
+
+Commit authorization/executable code before synthetic or official inference.
+Unique output roots,exact source/input/history pins,all-status write-once resume,
+per-episode memory samples,network-forbidden reporting and paired inspection are
+routine engineering. No scientific rule/method change. No active experiment or
+Ollama process found; remote main883d7a4 current; unrelated minispeed work kept.
