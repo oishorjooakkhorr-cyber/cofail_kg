@@ -342,3 +342,10 @@ Local guide checks: all eight PowerShell blocks parse; the model guard accepts m
 fixtures and rejects missing models, changed digests and changed quantization. The current
 project passes the interpreter/site-packages location check and `pip check`. No dependency
 reinstallation, model download or new inference was performed to validate this document.
+
+
+## Qwen RTX 5060 Ti S20 completed — 2026-10-29
+Fresh16K D3 FAIL:16/20 SUCCESS,12 competent,259/259 well-formed calls,
+median30.627939s,zero OOM. Four retained PARSE_FAIL. Full GPU/f16/actual16K
+verified; historical8K and16K PASS preserved. See docs/S20_qwen35_5060ti_16k.md.
+No retries,additional condition,other model or S21.

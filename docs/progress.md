@@ -683,3 +683,10 @@ S12 completed (2026-10-15): trace, trace graph, paths and write-once episode rec
   x = s: the length-0 path is the only simple path (coded WRONG_HOP_COUNT under §14.2).
   No experimental agents have been run. Next action: S13 when requested by the researcher.
 Note for S14: on resume, count only final …__a<attempt>.json records and ignore leftover .tmp files.
+
+
+## Qwen RTX 5060 Ti S20 completed — 2026-10-29
+Fresh16K D3 FAIL:16/20 SUCCESS,12 competent,259/259 well-formed calls,
+median30.627939s,zero OOM. Four retained PARSE_FAIL. Full GPU/f16/actual16K
+verified; historical8K and16K PASS preserved. See docs/S20_qwen35_5060ti_16k.md.
+No retries,additional condition,other model or S21.

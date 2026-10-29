@@ -2172,3 +2172,10 @@ Q4_K_M digest, f16 only, actual16384, full GPU API equality plus runtime logs re
 All other protocol settings and D3 thresholds unchanged. Stop on preflight blocker;
 keep every final status, resume unfinished only, no extra conditions or S21.
 Execution note: initial commit failed because local Git author was unset; synthetic preflight inadvertently continued before commit. No official query ran. Reuse existing repository author via per-command Git settings; commit executable launcher before official inference. Preflight passed exact identity, tools/no-thinking, actual16K, f16 and33/33 GPU layers with size equality.
+
+
+## Qwen RTX 5060 Ti S20 completed — 2026-10-29
+Fresh16K D3 FAIL:16/20 SUCCESS,12 competent,259/259 well-formed calls,
+median30.627939s,zero OOM. Four retained PARSE_FAIL. Full GPU/f16/actual16K
+verified; historical8K and16K PASS preserved. See docs/S20_qwen35_5060ti_16k.md.
+No retries,additional condition,other model or S21.

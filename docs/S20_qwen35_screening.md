@@ -152,3 +152,10 @@ collected in `official-manual-inspection.json`; the complete original records
 remain in the run directory. Per-query values are also in
 `official-per-query.csv`, and the cumulative candidate verdict is in
 `screening_table.csv`.
+
+
+## Qwen RTX 5060 Ti S20 completed — 2026-10-29
+Fresh16K D3 FAIL:16/20 SUCCESS,12 competent,259/259 well-formed calls,
+median30.627939s,zero OOM. Four retained PARSE_FAIL. Full GPU/f16/actual16K
+verified; historical8K and16K PASS preserved. See docs/S20_qwen35_5060ti_16k.md.
+No retries,additional condition,other model or S21.

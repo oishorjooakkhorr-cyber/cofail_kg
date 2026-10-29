@@ -130,3 +130,10 @@ This update adds the researcher-authorized complete Command R7B block.
 All earlier rows and failed outcomes are preserved; no failed result was
 retried, metric definition changed, protocol amended or S21 configuration frozen.
 Older dated reports and decision entries remain history.
+
+
+## Qwen RTX 5060 Ti S20 completed — 2026-10-29
+Fresh16K D3 FAIL:16/20 SUCCESS,12 competent,259/259 well-formed calls,
+median30.627939s,zero OOM. Four retained PARSE_FAIL. Full GPU/f16/actual16K
+verified; historical8K and16K PASS preserved. See docs/S20_qwen35_5060ti_16k.md.
+No retries,additional condition,other model or S21.
