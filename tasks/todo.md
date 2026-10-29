@@ -1,3 +1,11 @@
+# Granite41 RTX 5060 Ti S20 completed - 2026-10-29
+
+D3 PASS:20/20 SUCCESS,16/20 competent,236/236 well-formed calls,
+median38.870718s,zero errors/timeouts/OOM. Full GPU,f16,actual16K verified.
+Historical stopped16K remains incomplete and untouched. Offline/hash checks pass.
+Report: ../docs/S20_granite41_5060ti_16k.md.
+Publication/Drive verification pending; no further inference or S21.
+
 # Gemma RTX 5060 Ti S20 — 2026-10-29
 
 - [x] Record authorization and commit tested launcher before inference (b49ac91).

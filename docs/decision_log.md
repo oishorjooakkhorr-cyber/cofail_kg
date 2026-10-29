@@ -2138,3 +2138,14 @@ results. Hardware/runtime changed together; no GPU-only causal attribution.
 Routine engineering: adapt tested Gemma driver, isolated port/manifests,
 source/history pins, all-status resume and separate offline evaluation.
 No other model experiment or Ollama process was running at preparation.
+
+
+## 2026-10-29 - Granite41 fresh 5060 Ti block completed
+
+D3 PASS:20 SUCCESS,16 competent,236/236 calls,median38.870718s,zero OOM,
+ERROR,HTTP read timeout or episode TIMEOUT. Max response69.404479s. All41
+runtime samples confirm f16/context16384/full GPU. Nine old incomplete16K
+timeout queries recover SUCCESS; no invented outcomes or verdict for that
+stopped block. Nine material8K changes investigated. Network-forbidden offline
+report and1388 historical/21 new/46 source hashes pass. See
+docs/S20_granite41_5060ti_16k.md. No retries,tuning,new model or S21.

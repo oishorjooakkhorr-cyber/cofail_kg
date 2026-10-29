@@ -1,3 +1,11 @@
+# Granite41 RTX 5060 Ti S20 completed - 2026-10-29
+
+D3 PASS:20/20 SUCCESS,16/20 competent,236/236 well-formed calls,
+median38.870718s,zero errors/timeouts/OOM. Full GPU,f16,actual16K verified.
+Historical stopped16K remains incomplete and untouched. Offline/hash checks pass.
+Report: S20_granite41_5060ti_16k.md.
+Publication/Drive verification pending; no further inference or S21.
+
 # Gemma new-host result — investigation 2026-10-29
 
 **Gemma4-E4B passes D3 on RTX 5060 Ti / Ollama 0.40.12 at 16K with f16 KV.**
