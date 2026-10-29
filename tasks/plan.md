@@ -514,3 +514,7 @@ unchanged Flash Attention verified in41 samples. Baseline04003 context shift
 (discard8189) is absent in new log; coverage does not grow. Historical stopped
 3060Ti16K remains incomplete. Offline/hash checks pass; no S21 or other condition.
 Report: docs/S20_granite41_5060ti_32k.md. Publication/Drive proof follows.
+
+Granite32K publication:results a1f5727 pushed to main; Drive70/70 checksum
+matches,zero differences at01:51:48 Dhaka2026-10-30. Nine unrelated historical
+archive errors remain. Proof:docs/S20_granite41_5060ti_32k_backup.md. Complete; no S21.

@@ -207,3 +207,11 @@ four unchanged noncompetent queries,03762 very low recall and03953 retained99.
 |BH2_05686|SUCCESS/15|SUCCESS/15|0.06666666666666667|1.0|10|21.725435|
 |BH2_05843|SUCCESS/4|SUCCESS/4|0.25|1.0|18|16.477076|
 |BH2_06427|SUCCESS/3|SUCCESS/3|0.10714285714285714|1.0|8|13.103137|
+
+## Publication
+
+Results commit `a1f5727` pushed to GitHub main after pre-inference `473e92c`.
+Drive independently verified70 checksum matches,zero differences at01:51:48
+Dhaka on2026-10-30 after default ten-minute age wait.
+[Checksum inventory and preserved broad-backup errors](S20_granite41_5060ti_32k_backup.md).
+Nine unrelated historical archive errors remain; no global backup success claimed.
