@@ -2323,3 +2323,19 @@ See [Ministral32K report](S20_ministral3_5060ti_32k.md); publication/Drive proof
 Ministral32K publication:results d7ff97b pushed to main; Drive69/69 checksum
 matches,zero differences at01:21:33 Dhaka2026-10-30. Nine unrelated historical
 archive errors remain. Proof:docs/S20_ministral3_5060ti_32k_backup.md. Task complete; no S21.
+
+
+## 2026-10-30 — Authorized Granite41-8B same-host 32K S20 reassessment
+Researcher explicitly authorizes a fresh complete twenty-query S20 block at
+num_ctx32768, chosen after observing same-host16K20 SUCCESS/16 competent.
+This supersedes the guide16K-only scope for this block. Preserve every previous
+run and acceptance; the stopped3060Ti16K block remains incomplete, never resumed.
+Pinned Q4_K_M digest444af1c4b2fedd6b54041aca558e7300b0b3d5c0468c44619126240323ba2852,
+num_predict4096,f16 KV,installed PATH runtime and Flash Attention on unchanged.
+D:\Models,isolated server,one sequence; all other scientific settings,prompts,
+tools,parser,JSON re-prompt,evaluators and five D3 thresholds unchanged.
+Commit executable code and this record before synthetic or official inference.
+Require actual32768,f16 K/V,API size_vram=size and41/41 GPU logs or publish blocker.
+Authorization includes tests,investigation,records,commit,push main,existing shared
+Drive workflow with default age and independent checksums. Retain all final statuses,
+resume only unfinished after crash; no extra condition,other model or S21 selection.
