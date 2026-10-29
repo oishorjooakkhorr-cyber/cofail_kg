@@ -375,3 +375,13 @@ Fresh16K D3 FAIL:16/20 SUCCESS,12 competent,259/259 well-formed calls,
 median30.627939s,zero OOM. Four retained PARSE_FAIL. Full GPU/f16/actual16K
 verified; historical8K and16K PASS preserved. See docs/S20_qwen35_5060ti_16k.md.
 No retries,additional condition,other model or S21.
+
+
+## Ministral3-8B 32K reassessment completed — 2026-10-30
+Fresh same-host32K D3 PASS:20/20 SUCCESS,19/20 competent,180/180 well-formed calls,
+median45.076370s,zero ERROR/TIMEOUT/OOM. Baseline16K18/17 preserved. BH2_03619
+and BH2_03879 recover15 and113 supported answers; other18 supported sets unchanged.
+Actual32768,f16 KV4352MiB,35/35 GPU,API size equality and unchanged Flash Attention
+verified in41 samples. Offline/hash checks pass. Outcome-informed reassessment;
+no historical acceptance replacement,additional condition,other model or S21.
+See [Ministral32K report](S20_ministral3_5060ti_32k.md); publication/Drive proof follows.

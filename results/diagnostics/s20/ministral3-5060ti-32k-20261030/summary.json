@@ -1,0 +1,40 @@
+{
+  "historical_files_verified": 1682,
+  "kv_cache": "f16",
+  "runtime": "0.40.12",
+  "screening_row": {
+    "agent_id": "Ministral3-8B",
+    "attempted_calls": 180,
+    "budget_hit_share": 0.0,
+    "competence": 0.95,
+    "competent_episodes": 19,
+    "complete": true,
+    "d3_pass": true,
+    "digest": "1922accd5827ebe6829e536369195db25eaf664528dc66206d646ea3bb386b71",
+    "episodes_completed": 20,
+    "episodes_expected": 20,
+    "family": "Mistral",
+    "largest_prompt_eval_count": 19305,
+    "median_tool_calls": 8.0,
+    "median_wall_seconds": 45.07637,
+    "native_calls": 180,
+    "out_of_memory_episodes": 0,
+    "parameter_size": "8.9B",
+    "pass_competence": true,
+    "pass_oom": true,
+    "pass_success": true,
+    "pass_time": true,
+    "pass_well_formed": true,
+    "quantization": "Q4_K_M",
+    "run_id": "ministral3-5060ti-32k-20261030",
+    "success_episodes": 20,
+    "success_rate": 1.0,
+    "tag": "ministral-3:8b",
+    "text_tool_calls": 0,
+    "well_formed_calls": 180,
+    "well_formed_rate": 1.0
+  },
+  "status_counts": {
+    "SUCCESS": 20
+  }
+}

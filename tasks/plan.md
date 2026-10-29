@@ -489,3 +489,13 @@ unchanged Flash Attention/speculative setup verified in41 samples. Offline/hash
 checks pass;1606 historical,21 new,51 source/input files verified. This is an
 explicit post-result reassessment,preserving historical acceptance,no S21.
 [Separate report](../docs/S20_gemma4_5060ti_32k.md). Publication/Drive proof follows.
+
+
+## Ministral3-8B 32K reassessment completed — 2026-10-30
+Fresh same-host32K D3 PASS:20/20 SUCCESS,19/20 competent,180/180 well-formed calls,
+median45.076370s,zero ERROR/TIMEOUT/OOM. Baseline16K18/17 preserved. BH2_03619
+and BH2_03879 recover15 and113 supported answers; other18 supported sets unchanged.
+Actual32768,f16 KV4352MiB,35/35 GPU,API size equality and unchanged Flash Attention
+verified in41 samples. Offline/hash checks pass. Outcome-informed reassessment;
+no historical acceptance replacement,additional condition,other model or S21.
+See docs/S20_ministral3_5060ti_32k.md; publication/Drive proof follows.
