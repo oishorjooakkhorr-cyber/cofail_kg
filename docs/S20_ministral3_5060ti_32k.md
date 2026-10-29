@@ -176,3 +176,11 @@ BH2_03881 low recall, BH2_03879/BH2_03953 output-cap hits, and ALT_VALID labels.
 |BH2_05686|SUCCESS/15|SUCCESS/15|0.06666666666666667|1.0|7|25.505755|
 |BH2_05843|SUCCESS/4|SUCCESS/4|0.25|1.0|7|15.909287|
 |BH2_06427|SUCCESS/3|SUCCESS/3|1.0|1.0|4|6.381499|
+
+## Publication
+
+Results commit `d7ff97b` pushed to GitHub main after pre-inference `5584e3d`.
+Drive independently verified69 checksum matches,zero differences at01:21:33
+Dhaka on2026-10-30 after default ten-minute age wait.
+[Checksum inventory and preserved broad-backup errors](S20_ministral3_5060ti_32k_backup.md).
+The nine unrelated historical archive errors remain; no global backup success claimed.

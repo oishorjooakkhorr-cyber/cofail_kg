@@ -360,3 +360,7 @@ Actual32768,f16 KV4352MiB,35/35 GPU,API size equality and unchanged Flash Attent
 verified in41 samples. Offline/hash checks pass. Outcome-informed reassessment;
 no historical acceptance replacement,additional condition,other model or S21.
 See docs/S20_ministral3_5060ti_32k.md; publication/Drive proof follows.
+
+Ministral32K publication:results d7ff97b pushed to main; Drive69/69 checksum
+matches,zero differences at01:21:33 Dhaka2026-10-30. Nine unrelated historical
+archive errors remain. Proof:docs/S20_ministral3_5060ti_32k_backup.md. Task complete; no S21.
