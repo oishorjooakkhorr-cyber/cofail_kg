@@ -518,3 +518,129 @@ Report: docs/S20_granite41_5060ti_32k.md. Publication/Drive proof follows.
 Granite32K publication:results a1f5727 pushed to main; Drive70/70 checksum
 matches,zero differences at01:51:48 Dhaka2026-10-30. Nine unrelated historical
 archive errors remain. Proof:docs/S20_granite41_5060ti_32k_backup.md. Complete; no S21.
+
+## Proposed shared four-model reassessment — 2026-10-30
+
+Planning only, requested by the researcher. Extends S20 planning; preserves all
+earlier work and unrelated open tasks. No authorization to implement, infer,
+change frozen documents, publish, or select S21 is implied by this proposal.
+
+### Objective and evidence
+Evaluate one common configuration for Gemma4-E4B, Ministral3-8B, Granite41-8B,
+and Qwen35-9B against unchanged D3. Do not guarantee passing or optimize gates.
+Existing same-host32K baseline: SUCCESS 20/20,20/20,20/20,13/20; competence
+16/20,19/20,16/20,12/20 respectively. Qwen has four output-cap cases, two
+context-boundary cases, and one below-cap finalization failure. Recovery of only
+the four output-cap cases would give17/20, below18/20 required, assuming no
+other changes. Every prediction is provisional; larger output can alter traces.
+Sources: docs/S20_{gemma4,ministral3,granite41,qwen35}_5060ti_32k.md.
+
+### Candidate configuration and boundaries
+- num_ctx32768; num_predict8192; request timeout240s; episode timeout600s.
+- Preserve P1, tool availability, finalization behavior, the exact existing single
+  JSON re-prompt, parser and D3 thresholds. No conditional P2 rescue stage belongs
+  to this official reassessment. Researcher confirmed this separation on2026-10-30.
+- Keep budget30,page_size50,temperature0,seed42,think=false; same model digests,
+  runtime, f16 KV and per-model speculative settings; sequential isolated runs.
+- Verify effective backend Flash Attention, actual context/cache and placement;
+  a server config boolean alone is not proof of the active attention kernel.
+- 240s is precautionary headroom, not a measured minimum. D3 median time remains
+  <=300s. 8192 is a candidate, not the established S21 answer-size requirement.
+- No output repair, answer-count cap, extra retry, hidden truncation, automatic
+  history compaction, or early exploration cutoff. Preserve full raw evidence.
+- Context diagnostics must include prompt/completion counts, final and retry
+  headroom, length reasons, shifts/discard events and complete answer quality.
+  A prompt of24576 leaves8192 within32768 before additional overhead; a retained
+  failed output and retry consume further space. This is not a reserved split.
+
+### Ordered tasks and acceptance
+1. **Freeze the proposed comparison and amendments (small).** Review protocol
+   sections9.1,9.3,9.4 and D3; record the resource changes and verify that prompt,
+   tools, finalization and parsing remain unchanged. Record unique run IDs,
+   frozen question/model order, source hashes and stop rules.
+   Dependencies:none. Files: decision_log and scoped launcher/config;
+   frozen protocol changes require explicit researcher authorization.
+   Acceptance: exact configuration and stop rules recorded before inference; no gold
+   data reaches the agent. Verification: manifest/source/leakage review.
+2. **Implement/test the resource-only reassessment (medium, after1).** Retain P1,
+   parser, tools and exact existing single re-prompt. Set output8192/request240s
+   at32K using isolated configuration. Files: scoped launcher, launcher tests,
+   manifest. Acceptance: all four models receive identical limits; original
+   runs remain immutable; all-final-status resume works. Verification: focused
+   launcher/runner/client/trace/screening tests and four-model synthetic preflight.
+   Stop on infrastructure failure before official queries; do not silently tune.
+3. **Run and assess the official reassessment (after2).** One complete20-query block per model,80 episodes,
+   all results retained. Compare all five D3 criteria and paired supported IDs,
+   competence, precision/recall, wrong-target/shortcut errors, latency and context
+   pressure. Verification: stopped-server offline evaluation and integrity hashes.
+   This is a resource-package comparison (output and request time change together),
+   not an isolated causal estimate of output tokens. Retain and report failures;
+   no automatic prompt/finalization intervention follows an unfavorable result.
+
+### Checkpoints and decision rules
+- Before tasks2-3: researcher authorizes the concrete resource amendment;
+  this plan does not modify the frozen protocol or acceptance records.
+- Before each official block: code/tests/configuration pinned and synthetic
+  preflight passes for every model. S20 thresholds are not weakened.
+- After each block: D3 requires >=90% well-formed calls, >=18/20 SUCCESS,
+  >=8/20 competent, median<=300s, zero OOM. These do not mean full correctness.
+- Report competence and supported-set losses and answer-quality regressions even
+  if D3 passes; researcher assesses material tradeoffs before final selection.
+- Persistent context-boundary failures are not cured by formatting alone. Stop
+  tuning and prepare a separate capacity decision; do not force no_answer or
+  truncate evidence to manufacture parsing success.
+- Do not add navigation coaching or schema-constrained decoding to this official run. Either
+  is a separately versioned intervention requiring compatibility tests and a
+  fresh complete shared comparison if later requested. Avoid unbounded tuning
+  on the twenty already-inspected screening queries; use the existing later
+  smoke/calibration stages for validation only when separately authorized.
+
+### Separate optional P2 exploration (unofficial; not scheduled)
+P2 may be studied as an outcome-informed methods experiment, not a conditional
+stage of official screening. The current request authorizes this plan revision,
+not implementation or inference. No P2 run is started by an official failure.
+
+Candidate P2-format addition: "When finished, output the required JSON immediately.
+Do not first explain your reasoning, summarize your search, list answers in prose,
+or use Markdown fences. Use compact JSON without unnecessary whitespace. Include
+each answer once." A tool-free final_turn is a separate runner intervention;
+P2 wording does not imply authorization to change tool availability. If both are
+later tested together, label the condition P2-format plus tool-free finalization
+and attribute results to the combined intervention, not the prompt alone.
+
+Before any separately requested exploratory execution: specify exact changes,
+pin an isolated configuration/code path, test it, and record distinct experimental
+run IDs/output roots and prompt hashes. Official P1 must remain unchanged.
+Use the same exploratory condition for all four models and complete20-query blocks
+for a comparative claim. Any smaller diagnostic subset must be explicitly labeled
+as such and cannot establish a full-block result. Preserve every attempt, raw
+trace and failure; do not use gold answers, evaluator labels or query-specific
+hints in agent inputs. Report this as exploratory development on inspected data,
+not independent confirmation or a guaranteed fix.
+
+Exploratory outputs must be excluded from official acceptance files, D3 pass/fail
+decisions and S21 model selection. Metrics may be computed descriptively in a
+separate report, but no replacement, merging, best-of-runs stitching or promotion
+of an unofficial pass is allowed. Later adoption requires an explicit protocol
+revision and a newly declared official evaluation; existing outcomes remain intact.
+
+### Future S21 sizing considerations (not a change to this 32K proposal)
+The researcher requested32K for this reassessment; there is no automatic64K step.
+32K fits the tested host;64K full-GPU f16 is not established for all four.
+At64K, Granite KV allocation would approximately double5120->10240MiB,
+adding5120MiB versus sampled4541-4888MiB free at32K. Ministral adds about4352MiB
+versus4538-4898MiB free, leaving little sampled margin. These estimates are not
+actual64K measurements. Require preflight before any capacity expansion; CPU
+offload or cache quantization changes runtime conditions and needs a separate
+recorded decision, not an automatic fallback.
+Protocol9.1 final context rule uses1.25*largest observed prompt, rounded to a
+power of two: applying it to32750 gives40937.5, hence65536. Applicability of the
+outcome-informed reassessment counts and any change to the frozen sizing
+procedure is a future S21 question, not a requirement to replace the requested
+32K experiment. Before declaring final S21 values, establish the S3 answer-size
+p90 using its original population/definition; final output sizing requires
+max(4096,next_power_of_two(25*S3_answer_size_p90)).
+
+Deliverable after authorized execution: a paired four-model report with all
+attempts, unchanged gates, answer-quality tradeoffs, measured context/memory,
+time budgets and reproducibility proof. No promise that all four will pass.

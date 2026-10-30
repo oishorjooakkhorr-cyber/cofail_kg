@@ -379,3 +379,26 @@ Report: docs/S20_granite41_5060ti_32k.md. Publication/Drive proof follows.
 Granite32K publication:results a1f5727 pushed to main; Drive70/70 checksum
 matches,zero differences at01:51:48 Dhaka2026-10-30. Nine unrelated historical
 archive errors remain. Proof:docs/S20_granite41_5060ti_32k_backup.md. Complete; no S21.
+
+## Proposed shared four-model reassessment — 2026-10-30 (not authorized to run)
+- [x] Review four-model16K/32K evidence, runner finalization and protocol9.1-9.4;
+  record shared candidate and limits in tasks/plan.md.
+- [x] Remove conditional finalization from official tasks as requested. Separate
+  optional unofficial P2 exploration; preserve the requested32K context.
+- [ ] Task1: researcher authorizes the resource amendment; prerecord the shared
+  configuration, run IDs and acceptance checks with P1/interaction unchanged.
+- [ ] Task2: implement/test the resource-only reassessment (32K context,8192
+  output,240s request,600s episode; P1,tools,finalization,parser and exact existing
+  single re-prompt unchanged); pass four-model preflight.
+- [ ] Checkpoint: pinned executable/configuration, tests and runtime proof before
+  official inference; historical results and unrelated tasks preserved.
+- [ ] Task3: run all80 official episodes; offline D3, paired quality/context/time
+  report and integrity checks. Retain failures without an automatic P2 rescue.
+- [ ] Checkpoint: resolve remaining context pressure and frozen final-sizing
+  requirements before any S21 selection; do not silently adopt64K/offload/KV
+  quantization, navigation coaching, output repair, extra retries or lower gates.
+
+Optional unofficial P2 work is documented separately in tasks/plan.md and is not
+scheduled or authorized for execution. Any future request must specify prompt-only
+versus prompt-plus-runner changes; use separate IDs/artifacts and exclude results
+from official D3 acceptance and S21 selection. No experiments were run by this edit.
