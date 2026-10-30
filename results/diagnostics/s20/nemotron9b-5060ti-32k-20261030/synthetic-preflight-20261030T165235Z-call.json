@@ -1,0 +1,30 @@
+{
+  "model": "cofailkg/nemotron-nano-9b-v2-nothink:q4_k_m",
+  "created_at": "2026-10-30T16:52:48.743355Z",
+  "message": {
+    "role": "assistant",
+    "content": "",
+    "tool_calls": [
+      {
+        "id": "LvRkYMVwR9X5eT0dmJiOosNwOni8WZN9",
+        "function": {
+          "index": 0,
+          "name": "add",
+          "arguments": {
+            "a": 2,
+            "b": 3
+          }
+        }
+      }
+    ]
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 2915860200,
+  "load_duration": 2034888400,
+  "prompt_eval_count": 250,
+  "prompt_eval_cached_count": 0,
+  "prompt_eval_duration": 294709000,
+  "eval_count": 34,
+  "eval_duration": 582699000
+}

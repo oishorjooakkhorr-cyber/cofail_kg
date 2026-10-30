@@ -1,0 +1,15 @@
+FROM D:\cofailKG\.venv\nemotron-nothink\nemotron-nano-9b-v2-nothink-Q4_K_M.gguf
+TEMPLATE """{{ if .System }}<SPECIAL_10>System
+{{ .System }}
+{{ end }}{{ if .Prompt }}_11>User
+{{ .Prompt }}
+{{ end }}<SPECIAL_11>Assistant
+<think>
+{{ .Response }}
+<SPECIAL_12>
+"""
+PARAMETER stop "<SPECIAL_10>"
+PARAMETER stop "<SPECIAL_11>"
+PARAMETER stop "<think>"
+PARAMETER stop "<SPECIAL_12>"
+PARAMETER stop "_11>User"

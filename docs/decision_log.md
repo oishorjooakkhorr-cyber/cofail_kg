@@ -2495,3 +2495,23 @@ S21 for researcher review; no runtime change made. Report-step fix: summary code
 crashed on episodes without label counts; fixed and tested; the report exempts
 only the two summary-only files from the source pin and records their hashes.
 Summary: results/diagnostics/smoke_single_summary.md. Researcher decision pending.
+
+## 2026-10-30 — Authorized Nemotron-Nano-9B-v2 32K S20 candidate block
+Researcher request: fresh S20 block for hf.co/bartowski/nvidia_NVIDIA-Nemotron-Nano-9B-v2-GGUF:Q4_K_M
+at num_ctx 32768, num_predict 8192, f16 KV, as a possible replacement for Qwen35-9B.
+Probe: the shipped template ignores Ollama think=false (thinking only off via /no_think in a
+message; P1 is frozen). Researcher chose a derived no-think model built from an edited GGUF copy:
+only the embedded chat_template default enable_thinking=true -> false; 341 tensors and all other
+metadata verified identical (derive_model.py, gguf 0.17.1 installed in .venv). ollama create
+auto-assigned the built-in nemotron-3-nano renderer (ChatML), so the tag's manifest was written to
+mirror the source tag's structure (make_manifest.py); llama-server flags then equal the source's.
+Tag cofailkg/nemotron-nano-9b-v2-nothink:q4_k_m, digest c0c59955...bb13d. Other settings as the
+panel's 32K agents: request 240 s, episode 600 s, budget 30, page 50, temperature 0, seed 42,
+Flash Attention on, Ollama 0.40.12. P1, tools, parser, re-prompt, evaluators and D3 unchanged.
+Run ID nemotron9b-5060ti-32k-20261030. No panel change without researcher decision.
+
+## Nemotron-Nano-9B-v2 32K block completed — 2026-10-30
+D3 FAIL on competence: 20/20 SUCCESS, 0/20 competent, 60/60 well-formed calls,
+median 5.64 s, zero ERROR/OOM. 14 no_answer; 61 submitted items, none SUPPORTED.
+13 episodes stop right after one failed tool call. Report:
+docs/S20_nemotron9b_5060ti_32k.md. Qwen35-9B remains in the panel; no change.

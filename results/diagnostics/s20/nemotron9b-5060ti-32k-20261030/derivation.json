@@ -1,0 +1,24 @@
+{
+  "source_tag": "hf.co/bartowski/nvidia_NVIDIA-Nemotron-Nano-9B-v2-GGUF:Q4_K_M",
+  "source_manifest_digest": "b1066467b580f048ef2b3f15890c78f3a1907c8a283f80c6933bc4836aa66ebe",
+  "source_gguf_sha256": "be84528231457f766a35612386e2638d9af10beb10a9d8d23f0cc73c20818da7",
+  "derived_gguf": "D:\\cofailKG\\.venv\\nemotron-nothink\\nemotron-nano-9b-v2-nothink-Q4_K_M.gguf",
+  "derived_gguf_sha256": "be640973754a4aa58216c1f08b7b2097c72c23e4b22aaf4ecfa491e102437435",
+  "derived_tag": "cofailkg/nemotron-nano-9b-v2-nothink:q4_k_m",
+  "gguf_package": "0.17.1",
+  "changed_key": "tokenizer.chat_template",
+  "old": "{%- set ns = namespace(enable_thinking=true) %}",
+  "new": "{%- set ns = namespace(enable_thinking=false) %}",
+  "original_template_sha256": "b7a3a520a4bc1beae6a25d615f9215580df8eea926f488256c2bef74039433c0",
+  "derived_template_sha256": "db9d61dab97576963f0c7d2626db53744456af8fa2373be8b084491c3c68e0f9",
+  "tensors_verified_identical": 341,
+  "other_metadata_identical": true,
+  "go_template_layer_sha256": "e50819c9c50e5c8f46ffbaf2bb5386fd2e0dacafacf9b124b672829eebc1a147",
+  "stop": [
+    "<SPECIAL_10>",
+    "<SPECIAL_11>",
+    "<think>",
+    "<SPECIAL_12>",
+    "_11>User"
+  ]
+}

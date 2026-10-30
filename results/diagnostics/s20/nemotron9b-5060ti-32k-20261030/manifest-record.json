@@ -1,0 +1,50 @@
+{
+  "manifest": "D:\\Models\\manifests-v2\\ollama.com\\cofailkg\\nemotron-nano-9b-v2-nothink\\q4_k_m",
+  "manifest_sha256": "c0c599553b1251777d1b9637a25dcd97f33b5453b846d54c0ddb1423771bb13d",
+  "config_digest": "sha256:a32e774c5f3d1d98b40bccdad10f79b40d39bf5fceb2a3e80196b139243a969e",
+  "config": {
+    "model_format": "gguf",
+    "model_family": "nemotron_h",
+    "model_families": [
+      "nemotron_h"
+    ],
+    "model_type": "8.89B",
+    "file_type": "unknown",
+    "architecture": "amd64",
+    "os": "linux",
+    "config": {
+      "format": "gguf",
+      "architecture": "nemotron_h",
+      "parameters": "8.89B",
+      "size": "6.53B"
+    },
+    "descriptor": {
+      "created": "2025-08-29T14:12:23.000Z"
+    },
+    "rootfs": {
+      "type": "layers",
+      "diff_ids": [
+        "sha256:be640973754a4aa58216c1f08b7b2097c72c23e4b22aaf4ecfa491e102437435",
+        "sha256:e50819c9c50e5c8f46ffbaf2bb5386fd2e0dacafacf9b124b672829eebc1a147",
+        "sha256:72fd1b50d4daa93933017e7c414a9f4a2c6fd7f4f8fa949236fdda64314ce97e"
+      ]
+    }
+  },
+  "layers": [
+    {
+      "digest": "sha256:be640973754a4aa58216c1f08b7b2097c72c23e4b22aaf4ecfa491e102437435",
+      "mediaType": "application/vnd.ollama.image.model",
+      "size": 6525629280
+    },
+    {
+      "digest": "sha256:e50819c9c50e5c8f46ffbaf2bb5386fd2e0dacafacf9b124b672829eebc1a147",
+      "mediaType": "application/vnd.ollama.image.template",
+      "size": 165
+    },
+    {
+      "digest": "sha256:72fd1b50d4daa93933017e7c414a9f4a2c6fd7f4f8fa949236fdda64314ce97e",
+      "mediaType": "application/vnd.ollama.image.params",
+      "size": 76
+    }
+  ]
+}

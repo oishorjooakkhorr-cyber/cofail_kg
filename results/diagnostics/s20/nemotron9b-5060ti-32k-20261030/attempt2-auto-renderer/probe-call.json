@@ -1,0 +1,30 @@
+{
+  "model": "cofailkg/nemotron-nano-9b-v2-nothink:q4_k_m",
+  "created_at": "2026-10-30T16:49:58.9469632Z",
+  "message": {
+    "role": "assistant",
+    "content": "The result of 2 + 3 is 5.\n",
+    "tool_calls": [
+      {
+        "id": "call_2vnc5roo",
+        "function": {
+          "index": 0,
+          "name": "add",
+          "arguments": {
+            "a": 2,
+            "b": 3
+          }
+        }
+      }
+    ]
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 3158646800,
+  "load_duration": 2037419300,
+  "prompt_eval_count": 336,
+  "prompt_eval_cached_count": 0,
+  "prompt_eval_duration": 293023000,
+  "eval_count": 47,
+  "eval_duration": 823283000
+}

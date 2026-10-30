@@ -1,0 +1,6 @@
+FROM D:\cofailKG\.venv\nemotron-nothink\nemotron-nano-9b-v2-nothink-Q4_K_M.gguf
+PARAMETER stop "<SPECIAL_10>"
+PARAMETER stop "<SPECIAL_11>"
+PARAMETER stop "<think>"
+PARAMETER stop "<SPECIAL_12>"
+PARAMETER stop "_11>User"
