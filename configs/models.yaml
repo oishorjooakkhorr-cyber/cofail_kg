@@ -1,1 +1,27 @@
-# filled in at a later stage — see docs/pipeline_runbook.md
+# S21 frozen agents — protocol §9.1 (revised at S21) and Gate D3. Written by
+# scripts/21_freeze_models.py from get_model_identity(); never edit by hand.
+agents:
+- agent_id: Ministral3-8B
+  tag: ministral-3:8b
+  digest: 1922accd5827ebe6829e536369195db25eaf664528dc66206d646ea3bb386b71
+  quantization: Q4_K_M
+  parameter_size: 8.9B
+  family: Mistral
+- agent_id: Gemma4-E4B
+  tag: gemma4:e4b-it-q4_K_M
+  digest: dc35e8d9c6061baa6f0fa870975ab6932e2542b579b13ea0f199fa4bb7300c9c
+  quantization: Q4_K_M
+  parameter_size: 7.5B
+  family: Gemma
+- agent_id: Granite41-8B
+  tag: ibm/granite4.1:8b
+  digest: 444af1c4b2fedd6b54041aca558e7300b0b3d5c0468c44619126240323ba2852
+  quantization: Q4_K_M
+  parameter_size: 8.8B
+  family: Granite
+- agent_id: Qwen35-9B
+  tag: qwen3.5:9b
+  digest: 56671c2ab9385f9cfcb404638e32cd62d88e3501d44822208363c010179a3c90
+  quantization: Q4_K_M
+  parameter_size: 9.0B
+  family: Qwen

@@ -2442,3 +2442,29 @@ runtime guards passed (8192, f32 K/V, 33/33 GPU, Flash Attention). Six queries
 differ from the 3060 Ti 8K block in both directions; the cause is not isolated
 (host, runtime build, placement and KV type all differ). No S21 selection.
 Report: docs/S20_qwen35_5060ti_8k_f32.md. Not committed.
+
+## 2026-10-30 — S21 — Gate D3 panel and runtime frozen; protocol §9.1 revised
+Researcher decisions (this session): (1) D3 evidence uses mixed setups — Qwen35-9B
+from the 5060 Ti 8K f32-KV block, Gemma4-E4B, Ministral3-8B and Granite41-8B from
+the shared-resources 32K blocks; (2) "The options we selected in s20 we finalize
+it for s21. so no need for new multipliers" — each agent keeps the exact runtime
+of its evidence block; (3) KV cache per model as screened; (4) researcher
+explicitly asked to revise protocol §9.1. The former [FROZEN] value-selection
+rules (1.25 × largest-prompt context, 2 × median-call budget, 25 × answer-list
+p90 output cap, 3 × median-time timeout) are replaced by a per-agent table.
+D3: all four evidence blocks pass all five criteria; four families (Mistral,
+Gemma, Granite, Qwen) -> D3 row 1, freeze. Agent order follows D3's tie-break
+ranking (competence, then median wall time): Ministral3-8B (18), Gemma4-E4B
+(16, 10.8 s), Granite41-8B (16, 36.9 s), Qwen35-9B (14).
+Final runtime: temperature 0, seed 42, think=false, budget 30, page size 50,
+episode 600 s, one sequence. Ministral/Gemma/Granite: num_ctx 32768,
+num_predict 8192, f16 KV, request 240 s. Qwen: num_ctx 8192, num_predict 4096,
+f32 KV, request 120 s. For reference, the former rules would have given
+num_ctx 65536, num_predict 4096, budget 20, timeout 10 min.
+Known consequences: Ministral's evidence includes one sleep-contaminated TIMEOUT
+(19/20 SUCCESS); Qwen's largest screening prompt is 8189/8192, so the unchanged
+§9.1 re-selection trigger (S22 prompt > 90% of num_ctx) is likely to fire, and
+that paragraph still says "with the same rules", which were removed.
+Written: configs/models.yaml, frozen_hashes.yaml `models`, pilot.yaml `runtime`
+(scripts/21_freeze_models.py); installed-digest check passes for all four.
+Protocol version string left at 1.3.4 pending researcher decision.

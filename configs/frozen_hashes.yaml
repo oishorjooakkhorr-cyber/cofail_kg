@@ -11,6 +11,19 @@ manifests:
   data/processed/manifests/pilot.jsonl: 102a1cb1133ae7ea3bf36972965101c3842b26b231739363b53e7250714a28d4
   data/processed/manifests/screening.jsonl: 58421a410eb32413b7af7dfa157ef4a430b5ccf7e087dc1f8d60d597730c12b9
   data/processed/manifests/smoke.jsonl: f6295231dbbe9822ccb0254e0b0bdfac35f4be993abe0283eb3db124eb0d27a9
+models:
+  Gemma4-E4B:
+    digest: dc35e8d9c6061baa6f0fa870975ab6932e2542b579b13ea0f199fa4bb7300c9c
+    tag: gemma4:e4b-it-q4_K_M
+  Granite41-8B:
+    digest: 444af1c4b2fedd6b54041aca558e7300b0b3d5c0468c44619126240323ba2852
+    tag: ibm/granite4.1:8b
+  Ministral3-8B:
+    digest: 1922accd5827ebe6829e536369195db25eaf664528dc66206d646ea3bb386b71
+    tag: ministral-3:8b
+  Qwen35-9B:
+    digest: 56671c2ab9385f9cfcb404638e32cd62d88e3501d44822208363c010179a3c90
+    tag: qwen3.5:9b
 prompt: 8f93b7c42ef7a90f64bbcd83e6b77db62e4f3c6b0c08a45f068b435a9c655265
 relation_mapping: 2d609332b6a4ff48423bd7b2f1cb98d8d2d9cafc2fe80c20f7cee8184b8bb8c0
 tools: fe95093be50073aca922360645240d4410737fb39f11061aa1f5f2df0a8b0bab

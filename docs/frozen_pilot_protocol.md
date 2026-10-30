@@ -383,25 +383,32 @@ the queries not yet drawn:
 |---|---|---|
 | Runtime | Ollama | Ollama |
 | Temperature / seed | 0 / 42 | 0 / 42 `[FROZEN]` |
-| `num_ctx` | 8192 | `[TBD@S21]` |
-| Max output tokens per turn (`num_predict`) | 4096 | `[TBD@S21]` |
-| Tool-call budget | 30 | `[TBD@S21]` |
-| Page size | 50 | `[TBD@S21]` |
-| Episode timeout | 10 minutes | `[TBD@S21]` |
+| `num_ctx` | 8192 | Per agent, below `[FROZEN]` |
+| Max output tokens per turn (`num_predict`) | 4096 | Per agent, below `[FROZEN]` |
+| Tool-call budget | 30 | 30 `[FROZEN]` |
+| Page size | 50 | 50 `[FROZEN]` |
+| Episode timeout | 10 minutes | 10 minutes `[FROZEN]` |
 
-**Rules for choosing the final values `[FROZEN]` (applied at S21):**
-- `num_ctx`: the smallest power of 2 that is ≥ 8192 and ≥ 1.25 × the largest prompt token count
-  seen for the chosen models. Because screening caps context at 8192, if any chosen model's largest
-  screening prompt count exceeds 0.8 × 8192, rerun 5 screening queries for that model with
-  `num_ctx` 16384 and use those counts. The value must run without out-of-memory errors.
-- Page size: 50; 25 if the chosen `num_ctx` cannot fit in memory.
-- Budget: 2 × the median tool calls of the chosen models in screening, bounded to 20–40; if more
-  than 20% of their screening episodes hit the budget, use the next value up to 40.
-- `num_predict`: at least 25 tokens × the 90th percentile of BioHopR answer-list size (S3),
-  rounded up to a power of 2, at least 4096.
-- Timeout: 3 × the slowest chosen model's median screening episode time, at least 10 minutes.
+**Final configuration `[FROZEN]` (revised at S21, 2026-10-30; see `docs/decision_log.md`).** Each
+agent keeps the exact runtime settings of the S20 block that is its Gate D3 evidence of record. No
+multiplier or rounding rule is applied. The researcher chose this in place of the earlier
+value-selection rules (largest-prompt × 1.25 context, 2 × median-call budget, 25 × answer-list p90
+output cap, 3 × median-time timeout), which no longer apply.
 
-Models: four, chosen by Gate D3 `[TBD@S21]`, recorded by tag, digest and quantization.
+| Agent | Ollama tag | D3 evidence block (S20) | `num_ctx` | `num_predict` | KV cache | Request timeout |
+|---|---|---|---|---|---|---|
+| Ministral3-8B | `ministral-3:8b` | `ministral3-5060ti-32k-resources-20261030` | 32768 | 8192 | f16 | 240 s |
+| Gemma4-E4B | `gemma4:e4b-it-q4_K_M` | `gemma4-5060ti-32k-resources-20261030` | 32768 | 8192 | f16 | 240 s |
+| Granite41-8B | `ibm/granite4.1:8b` | `granite41-5060ti-32k-resources-20261030` | 32768 | 8192 | f16 | 240 s |
+| Qwen35-9B | `qwen3.5:9b` | `qwen35-5060ti-8k-f32-20261030` | 8192 | 4096 | f32 | 120 s |
+
+All four agents use think=false. D3 evidence is taken from these blocks although their screening
+conditions differ (three at 32K, one at the 8K screening context); this mixed basis is the
+researcher's decision.
+
+Models: four, chosen by Gate D3 from the evidence blocks above (four families: Mistral, Gemma,
+Granite, Qwen), recorded by tag, digest and quantization in `configs/models.yaml` and
+`configs/frozen_hashes.yaml`.
 
 **Re-selection `[FROZEN]`:** if S22 shows any episode with prompt tokens above 90% of `num_ctx`, or
 any OUT_OF_MEMORY error, the final values are chosen again with the same rules, using the S22

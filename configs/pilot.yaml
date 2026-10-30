@@ -32,3 +32,46 @@ sets:
     per_type_floor: 1
     manifest: data/processed/manifests/expansion.jsonl
     agent_inputs: data/agent_inputs/expansion.jsonl
+runtime:
+  ollama_version: 0.40.12
+  temperature: 0
+  seed: 42
+  think: false
+  budget: 30
+  page_size: 50
+  timeout_seconds: 600
+  num_parallel: 1
+  agent_order:
+  - Ministral3-8B
+  - Gemma4-E4B
+  - Granite41-8B
+  - Qwen35-9B
+  agents:
+    Ministral3-8B:
+      num_ctx: 32768
+      num_predict: 8192
+      kv_cache_type: f16
+      request_timeout_seconds: 240
+      flash_attention_env: 'true'
+      evidence_run_id: ministral3-5060ti-32k-resources-20261030
+    Gemma4-E4B:
+      num_ctx: 32768
+      num_predict: 8192
+      kv_cache_type: f16
+      request_timeout_seconds: 240
+      flash_attention_env: 'true'
+      evidence_run_id: gemma4-5060ti-32k-resources-20261030
+    Granite41-8B:
+      num_ctx: 32768
+      num_predict: 8192
+      kv_cache_type: f16
+      request_timeout_seconds: 240
+      flash_attention_env: 'true'
+      evidence_run_id: granite41-5060ti-32k-resources-20261030
+    Qwen35-9B:
+      num_ctx: 8192
+      num_predict: 4096
+      kv_cache_type: f32
+      request_timeout_seconds: 120
+      flash_attention_env: inherited
+      evidence_run_id: qwen35-5060ti-8k-f32-20261030
