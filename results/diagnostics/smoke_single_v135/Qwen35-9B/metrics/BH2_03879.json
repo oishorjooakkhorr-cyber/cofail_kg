@@ -1,0 +1,99 @@
+{
+  "agent_id": "Qwen35-9B",
+  "answer_count": null,
+  "answers": [],
+  "attempt": 1,
+  "benchmark_f1": null,
+  "benchmark_precision": null,
+  "benchmark_recall": null,
+  "bridge_conditional_recall": {
+    "14945": null,
+    "14975": null
+  },
+  "bridge_rank": {
+    "14945": 1,
+    "14975": 2
+  },
+  "bridge_recall_counts": {
+    "14945": {
+      "correct": null,
+      "total": 89
+    },
+    "14975": {
+      "correct": null,
+      "total": 145
+    }
+  },
+  "bridges_explored": [
+    "14945",
+    "14975"
+  ],
+  "budget_exhausted": false,
+  "cause": null,
+  "construction": "UNION",
+  "denominators": {
+    "benchmark_f1": null,
+    "benchmark_precision": null,
+    "benchmark_recall": 271,
+    "off_question_rate": null,
+    "question_valid_precision": null,
+    "ungrounded_rate": null,
+    "unresolved_rate": null
+  },
+  "early_stop": null,
+  "episode_status": "PARSE_FAIL",
+  "found_r1": true,
+  "hop1_status": "H1_CLEAN",
+  "label_a_counts": null,
+  "label_b_counts": null,
+  "node_statistics": {
+    "14945": {
+      "degree": 2130,
+      "degree_percentile": 99.50986552720875
+    },
+    "14975": {
+      "degree": 1456,
+      "degree_percentile": 94.73419630514013
+    },
+    "36937": {
+      "degree": 165,
+      "degree_percentile": 98.61826697892272
+    }
+  },
+  "numerators": {
+    "benchmark_f1": null,
+    "benchmark_precision": null,
+    "benchmark_recall": null,
+    "off_question_rate": null,
+    "question_valid_precision": null,
+    "ungrounded_rate": null,
+    "unresolved_rate": null
+  },
+  "off_question_rate": null,
+  "pages_requested": 11,
+  "primary_reason_counts": null,
+  "query_id": "BH2_03879",
+  "question_valid_precision": null,
+  "reason_counts": null,
+  "resolved_count": null,
+  "run_id": "smoke_single_v135",
+  "text_tool_call_count": 0,
+  "tool_calls_used": 19,
+  "undefined_counts": {
+    "benchmark_f1": 1,
+    "benchmark_precision": 1,
+    "benchmark_recall": 1,
+    "bridge_conditional_recall": 2,
+    "bridge_rank": 0,
+    "degree": 0,
+    "degree_percentile": 0,
+    "list_size": 0,
+    "off_question_rate": 1,
+    "primary_path_max_list_size": 0,
+    "question_valid_precision": 1,
+    "ungrounded_rate": 1,
+    "unresolved_rate": 1
+  },
+  "ungrounded_rate": null,
+  "unresolved_rate": null
+}

@@ -1,0 +1,277 @@
+PHASE run: Ministral3-8B
+Ollama GET http://127.0.0.1:11435/api/version connection error; retry 1/2: HTTPConnectionPool(host='127.0.0.1', port=11435): Max retries exceeded with url: /api/version (Caused by NewConnectionError("HTTPConnection(host='127.0.0.1', port=11435): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it"))
+Ollama GET http://127.0.0.1:11435/api/version connection error; retry 2/2: HTTPConnectionPool(host='127.0.0.1', port=11435): Max retries exceeded with url: /api/version (Caused by NewConnectionError("HTTPConnection(host='127.0.0.1', port=11435): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it"))
+Ollama GET http://127.0.0.1:11435/api/version failed after 3 attempts: HTTPConnectionPool(host='127.0.0.1', port=11435): Max retries exceeded with url: /api/version (Caused by NewConnectionError("HTTPConnection(host='127.0.0.1', port=11435): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it"))
+CHECKED Ministral3-8B 0/20; ctx 32768; f16 KV; full GPU
+CHECKED Ministral3-8B 0/20; ctx 32768; f16 KV; full GPU
+Starting BH2_00461 / ministral-3:8b (new episode 1)
+CHECKED Ministral3-8B 1/20; ctx 32768; f16 KV; full GPU
+CHECKED Ministral3-8B 1/20; ctx 32768; f16 KV; full GPU
+Starting BH2_02033 / ministral-3:8b (new episode 2)
+CHECKED Ministral3-8B 2/20; ctx 32768; f16 KV; full GPU
+CHECKED Ministral3-8B 2/20; ctx 32768; f16 KV; full GPU
+Starting BH2_03434 / ministral-3:8b (new episode 3)
+CHECKED Ministral3-8B 3/20; ctx 32768; f16 KV; full GPU
+CHECKED Ministral3-8B 3/20; ctx 32768; f16 KV; full GPU
+Starting BH2_03619 / ministral-3:8b (new episode 4)
+CHECKED Ministral3-8B 4/20; ctx 32768; f16 KV; full GPU
+CHECKED Ministral3-8B 4/20; ctx 32768; f16 KV; full GPU
+Starting BH2_03750 / ministral-3:8b (new episode 5)
+CHECKED Ministral3-8B 5/20; ctx 32768; f16 KV; full GPU
+CHECKED Ministral3-8B 5/20; ctx 32768; f16 KV; full GPU
+Starting BH2_03760 / ministral-3:8b (new episode 6)
+CHECKED Ministral3-8B 6/20; ctx 32768; f16 KV; full GPU
+CHECKED Ministral3-8B 6/20; ctx 32768; f16 KV; full GPU
+Starting BH2_03762 / ministral-3:8b (new episode 7)
+CHECKED Ministral3-8B 7/20; ctx 32768; f16 KV; full GPU
+CHECKED Ministral3-8B 7/20; ctx 32768; f16 KV; full GPU
+Starting BH2_03850 / ministral-3:8b (new episode 8)
+CHECKED Ministral3-8B 8/20; ctx 32768; f16 KV; full GPU
+CHECKED Ministral3-8B 8/20; ctx 32768; f16 KV; full GPU
+Starting BH2_03856 / ministral-3:8b (new episode 9)
+CHECKED Ministral3-8B 9/20; ctx 32768; f16 KV; full GPU
+CHECKED Ministral3-8B 9/20; ctx 32768; f16 KV; full GPU
+Starting BH2_03879 / ministral-3:8b (new episode 10)
+CHECKED Ministral3-8B 10/20; ctx 32768; f16 KV; full GPU
+CHECKED Ministral3-8B 10/20; ctx 32768; f16 KV; full GPU
+Starting BH2_03881 / ministral-3:8b (new episode 11)
+CHECKED Ministral3-8B 11/20; ctx 32768; f16 KV; full GPU
+CHECKED Ministral3-8B 11/20; ctx 32768; f16 KV; full GPU
+Starting BH2_03953 / ministral-3:8b (new episode 12)
+CHECKED Ministral3-8B 12/20; ctx 32768; f16 KV; full GPU
+CHECKED Ministral3-8B 12/20; ctx 32768; f16 KV; full GPU
+Starting BH2_03991 / ministral-3:8b (new episode 13)
+CHECKED Ministral3-8B 13/20; ctx 32768; f16 KV; full GPU
+CHECKED Ministral3-8B 13/20; ctx 32768; f16 KV; full GPU
+Starting BH2_04003 / ministral-3:8b (new episode 14)
+CHECKED Ministral3-8B 14/20; ctx 32768; f16 KV; full GPU
+CHECKED Ministral3-8B 14/20; ctx 32768; f16 KV; full GPU
+Starting BH2_04007 / ministral-3:8b (new episode 15)
+CHECKED Ministral3-8B 15/20; ctx 32768; f16 KV; full GPU
+CHECKED Ministral3-8B 15/20; ctx 32768; f16 KV; full GPU
+Starting BH2_04425 / ministral-3:8b (new episode 16)
+CHECKED Ministral3-8B 16/20; ctx 32768; f16 KV; full GPU
+CHECKED Ministral3-8B 16/20; ctx 32768; f16 KV; full GPU
+Starting BH2_05366 / ministral-3:8b (new episode 17)
+CHECKED Ministral3-8B 17/20; ctx 32768; f16 KV; full GPU
+CHECKED Ministral3-8B 17/20; ctx 32768; f16 KV; full GPU
+Starting BH2_05686 / ministral-3:8b (new episode 18)
+CHECKED Ministral3-8B 18/20; ctx 32768; f16 KV; full GPU
+CHECKED Ministral3-8B 18/20; ctx 32768; f16 KV; full GPU
+Starting BH2_05843 / ministral-3:8b (new episode 19)
+CHECKED Ministral3-8B 19/20; ctx 32768; f16 KV; full GPU
+CHECKED Ministral3-8B 19/20; ctx 32768; f16 KV; full GPU
+Starting BH2_06427 / ministral-3:8b (new episode 20)
+CHECKED Ministral3-8B 20/20; ctx 32768; f16 KV; full GPU
+PHASE run: Gemma4-E4B
+Ollama GET http://127.0.0.1:11435/api/version connection error; retry 1/2: HTTPConnectionPool(host='127.0.0.1', port=11435): Max retries exceeded with url: /api/version (Caused by NewConnectionError("HTTPConnection(host='127.0.0.1', port=11435): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it"))
+Ollama GET http://127.0.0.1:11435/api/version connection error; retry 2/2: HTTPConnectionPool(host='127.0.0.1', port=11435): Max retries exceeded with url: /api/version (Caused by NewConnectionError("HTTPConnection(host='127.0.0.1', port=11435): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it"))
+Ollama GET http://127.0.0.1:11435/api/version failed after 3 attempts: HTTPConnectionPool(host='127.0.0.1', port=11435): Max retries exceeded with url: /api/version (Caused by NewConnectionError("HTTPConnection(host='127.0.0.1', port=11435): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it"))
+CHECKED Gemma4-E4B 0/20; ctx 32768; f16 KV; full GPU
+CHECKED Gemma4-E4B 0/20; ctx 32768; f16 KV; full GPU
+Starting BH2_00461 / gemma4:e4b-it-q4_K_M (new episode 1)
+CHECKED Gemma4-E4B 1/20; ctx 32768; f16 KV; full GPU
+CHECKED Gemma4-E4B 1/20; ctx 32768; f16 KV; full GPU
+Starting BH2_02033 / gemma4:e4b-it-q4_K_M (new episode 2)
+CHECKED Gemma4-E4B 2/20; ctx 32768; f16 KV; full GPU
+CHECKED Gemma4-E4B 2/20; ctx 32768; f16 KV; full GPU
+Starting BH2_03434 / gemma4:e4b-it-q4_K_M (new episode 3)
+CHECKED Gemma4-E4B 3/20; ctx 32768; f16 KV; full GPU
+CHECKED Gemma4-E4B 3/20; ctx 32768; f16 KV; full GPU
+Starting BH2_03619 / gemma4:e4b-it-q4_K_M (new episode 4)
+CHECKED Gemma4-E4B 4/20; ctx 32768; f16 KV; full GPU
+CHECKED Gemma4-E4B 4/20; ctx 32768; f16 KV; full GPU
+Starting BH2_03750 / gemma4:e4b-it-q4_K_M (new episode 5)
+CHECKED Gemma4-E4B 5/20; ctx 32768; f16 KV; full GPU
+CHECKED Gemma4-E4B 5/20; ctx 32768; f16 KV; full GPU
+Starting BH2_03760 / gemma4:e4b-it-q4_K_M (new episode 6)
+CHECKED Gemma4-E4B 6/20; ctx 32768; f16 KV; full GPU
+CHECKED Gemma4-E4B 6/20; ctx 32768; f16 KV; full GPU
+Starting BH2_03762 / gemma4:e4b-it-q4_K_M (new episode 7)
+CHECKED Gemma4-E4B 7/20; ctx 32768; f16 KV; full GPU
+CHECKED Gemma4-E4B 7/20; ctx 32768; f16 KV; full GPU
+Starting BH2_03850 / gemma4:e4b-it-q4_K_M (new episode 8)
+CHECKED Gemma4-E4B 8/20; ctx 32768; f16 KV; full GPU
+CHECKED Gemma4-E4B 8/20; ctx 32768; f16 KV; full GPU
+Starting BH2_03856 / gemma4:e4b-it-q4_K_M (new episode 9)
+CHECKED Gemma4-E4B 9/20; ctx 32768; f16 KV; full GPU
+CHECKED Gemma4-E4B 9/20; ctx 32768; f16 KV; full GPU
+Starting BH2_03879 / gemma4:e4b-it-q4_K_M (new episode 10)
+CHECKED Gemma4-E4B 10/20; ctx 32768; f16 KV; full GPU
+CHECKED Gemma4-E4B 10/20; ctx 32768; f16 KV; full GPU
+Starting BH2_03881 / gemma4:e4b-it-q4_K_M (new episode 11)
+CHECKED Gemma4-E4B 11/20; ctx 32768; f16 KV; full GPU
+CHECKED Gemma4-E4B 11/20; ctx 32768; f16 KV; full GPU
+Starting BH2_03953 / gemma4:e4b-it-q4_K_M (new episode 12)
+CHECKED Gemma4-E4B 12/20; ctx 32768; f16 KV; full GPU
+CHECKED Gemma4-E4B 12/20; ctx 32768; f16 KV; full GPU
+Starting BH2_03991 / gemma4:e4b-it-q4_K_M (new episode 13)
+CHECKED Gemma4-E4B 13/20; ctx 32768; f16 KV; full GPU
+CHECKED Gemma4-E4B 13/20; ctx 32768; f16 KV; full GPU
+Starting BH2_04003 / gemma4:e4b-it-q4_K_M (new episode 14)
+CHECKED Gemma4-E4B 14/20; ctx 32768; f16 KV; full GPU
+CHECKED Gemma4-E4B 14/20; ctx 32768; f16 KV; full GPU
+Starting BH2_04007 / gemma4:e4b-it-q4_K_M (new episode 15)
+CHECKED Gemma4-E4B 15/20; ctx 32768; f16 KV; full GPU
+CHECKED Gemma4-E4B 15/20; ctx 32768; f16 KV; full GPU
+Starting BH2_04425 / gemma4:e4b-it-q4_K_M (new episode 16)
+CHECKED Gemma4-E4B 16/20; ctx 32768; f16 KV; full GPU
+CHECKED Gemma4-E4B 16/20; ctx 32768; f16 KV; full GPU
+Starting BH2_05366 / gemma4:e4b-it-q4_K_M (new episode 17)
+CHECKED Gemma4-E4B 17/20; ctx 32768; f16 KV; full GPU
+CHECKED Gemma4-E4B 17/20; ctx 32768; f16 KV; full GPU
+Starting BH2_05686 / gemma4:e4b-it-q4_K_M (new episode 18)
+CHECKED Gemma4-E4B 18/20; ctx 32768; f16 KV; full GPU
+CHECKED Gemma4-E4B 18/20; ctx 32768; f16 KV; full GPU
+Starting BH2_05843 / gemma4:e4b-it-q4_K_M (new episode 19)
+CHECKED Gemma4-E4B 19/20; ctx 32768; f16 KV; full GPU
+CHECKED Gemma4-E4B 19/20; ctx 32768; f16 KV; full GPU
+Starting BH2_06427 / gemma4:e4b-it-q4_K_M (new episode 20)
+CHECKED Gemma4-E4B 20/20; ctx 32768; f16 KV; full GPU
+PHASE run: Granite41-8B
+Ollama GET http://127.0.0.1:11435/api/version connection error; retry 1/2: HTTPConnectionPool(host='127.0.0.1', port=11435): Max retries exceeded with url: /api/version (Caused by NewConnectionError("HTTPConnection(host='127.0.0.1', port=11435): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it"))
+Ollama GET http://127.0.0.1:11435/api/version connection error; retry 2/2: HTTPConnectionPool(host='127.0.0.1', port=11435): Max retries exceeded with url: /api/version (Caused by NewConnectionError("HTTPConnection(host='127.0.0.1', port=11435): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it"))
+Ollama GET http://127.0.0.1:11435/api/version failed after 3 attempts: HTTPConnectionPool(host='127.0.0.1', port=11435): Max retries exceeded with url: /api/version (Caused by NewConnectionError("HTTPConnection(host='127.0.0.1', port=11435): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it"))
+CHECKED Granite41-8B 0/20; ctx 32768; f16 KV; full GPU
+CHECKED Granite41-8B 0/20; ctx 32768; f16 KV; full GPU
+Starting BH2_00461 / ibm/granite4.1:8b (new episode 1)
+CHECKED Granite41-8B 1/20; ctx 32768; f16 KV; full GPU
+CHECKED Granite41-8B 1/20; ctx 32768; f16 KV; full GPU
+Starting BH2_02033 / ibm/granite4.1:8b (new episode 2)
+CHECKED Granite41-8B 2/20; ctx 32768; f16 KV; full GPU
+CHECKED Granite41-8B 2/20; ctx 32768; f16 KV; full GPU
+Starting BH2_03434 / ibm/granite4.1:8b (new episode 3)
+CHECKED Granite41-8B 3/20; ctx 32768; f16 KV; full GPU
+CHECKED Granite41-8B 3/20; ctx 32768; f16 KV; full GPU
+Starting BH2_03619 / ibm/granite4.1:8b (new episode 4)
+CHECKED Granite41-8B 4/20; ctx 32768; f16 KV; full GPU
+CHECKED Granite41-8B 4/20; ctx 32768; f16 KV; full GPU
+Starting BH2_03750 / ibm/granite4.1:8b (new episode 5)
+CHECKED Granite41-8B 5/20; ctx 32768; f16 KV; full GPU
+CHECKED Granite41-8B 5/20; ctx 32768; f16 KV; full GPU
+Starting BH2_03760 / ibm/granite4.1:8b (new episode 6)
+CHECKED Granite41-8B 6/20; ctx 32768; f16 KV; full GPU
+CHECKED Granite41-8B 6/20; ctx 32768; f16 KV; full GPU
+Starting BH2_03762 / ibm/granite4.1:8b (new episode 7)
+CHECKED Granite41-8B 7/20; ctx 32768; f16 KV; full GPU
+CHECKED Granite41-8B 7/20; ctx 32768; f16 KV; full GPU
+Starting BH2_03850 / ibm/granite4.1:8b (new episode 8)
+CHECKED Granite41-8B 8/20; ctx 32768; f16 KV; full GPU
+CHECKED Granite41-8B 8/20; ctx 32768; f16 KV; full GPU
+Starting BH2_03856 / ibm/granite4.1:8b (new episode 9)
+CHECKED Granite41-8B 9/20; ctx 32768; f16 KV; full GPU
+CHECKED Granite41-8B 9/20; ctx 32768; f16 KV; full GPU
+Starting BH2_03879 / ibm/granite4.1:8b (new episode 10)
+CHECKED Granite41-8B 10/20; ctx 32768; f16 KV; full GPU
+CHECKED Granite41-8B 10/20; ctx 32768; f16 KV; full GPU
+Starting BH2_03881 / ibm/granite4.1:8b (new episode 11)
+CHECKED Granite41-8B 11/20; ctx 32768; f16 KV; full GPU
+CHECKED Granite41-8B 11/20; ctx 32768; f16 KV; full GPU
+Starting BH2_03953 / ibm/granite4.1:8b (new episode 12)
+CHECKED Granite41-8B 12/20; ctx 32768; f16 KV; full GPU
+CHECKED Granite41-8B 12/20; ctx 32768; f16 KV; full GPU
+Starting BH2_03991 / ibm/granite4.1:8b (new episode 13)
+CHECKED Granite41-8B 13/20; ctx 32768; f16 KV; full GPU
+CHECKED Granite41-8B 13/20; ctx 32768; f16 KV; full GPU
+Starting BH2_04003 / ibm/granite4.1:8b (new episode 14)
+CHECKED Granite41-8B 14/20; ctx 32768; f16 KV; full GPU
+CHECKED Granite41-8B 14/20; ctx 32768; f16 KV; full GPU
+Starting BH2_04007 / ibm/granite4.1:8b (new episode 15)
+CHECKED Granite41-8B 15/20; ctx 32768; f16 KV; full GPU
+CHECKED Granite41-8B 15/20; ctx 32768; f16 KV; full GPU
+Starting BH2_04425 / ibm/granite4.1:8b (new episode 16)
+CHECKED Granite41-8B 16/20; ctx 32768; f16 KV; full GPU
+CHECKED Granite41-8B 16/20; ctx 32768; f16 KV; full GPU
+Starting BH2_05366 / ibm/granite4.1:8b (new episode 17)
+CHECKED Granite41-8B 17/20; ctx 32768; f16 KV; full GPU
+CHECKED Granite41-8B 17/20; ctx 32768; f16 KV; full GPU
+Starting BH2_05686 / ibm/granite4.1:8b (new episode 18)
+CHECKED Granite41-8B 18/20; ctx 32768; f16 KV; full GPU
+CHECKED Granite41-8B 18/20; ctx 32768; f16 KV; full GPU
+Starting BH2_05843 / ibm/granite4.1:8b (new episode 19)
+CHECKED Granite41-8B 19/20; ctx 32768; f16 KV; full GPU
+CHECKED Granite41-8B 19/20; ctx 32768; f16 KV; full GPU
+Starting BH2_06427 / ibm/granite4.1:8b (new episode 20)
+CHECKED Granite41-8B 20/20; ctx 32768; f16 KV; full GPU
+PHASE run: Qwen35-9B
+Ollama GET http://127.0.0.1:11435/api/version connection error; retry 1/2: HTTPConnectionPool(host='127.0.0.1', port=11435): Max retries exceeded with url: /api/version (Caused by NewConnectionError("HTTPConnection(host='127.0.0.1', port=11435): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it"))
+Ollama GET http://127.0.0.1:11435/api/version connection error; retry 2/2: HTTPConnectionPool(host='127.0.0.1', port=11435): Max retries exceeded with url: /api/version (Caused by NewConnectionError("HTTPConnection(host='127.0.0.1', port=11435): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it"))
+Ollama GET http://127.0.0.1:11435/api/version failed after 3 attempts: HTTPConnectionPool(host='127.0.0.1', port=11435): Max retries exceeded with url: /api/version (Caused by NewConnectionError("HTTPConnection(host='127.0.0.1', port=11435): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it"))
+CHECKED Qwen35-9B 0/20; ctx 8192; f32 KV; full GPU
+CHECKED Qwen35-9B 0/20; ctx 8192; f32 KV; full GPU
+Starting BH2_00461 / qwen3.5:9b (new episode 1)
+CHECKED Qwen35-9B 1/20; ctx 8192; f32 KV; full GPU
+CHECKED Qwen35-9B 1/20; ctx 8192; f32 KV; full GPU
+Starting BH2_02033 / qwen3.5:9b (new episode 2)
+CHECKED Qwen35-9B 2/20; ctx 8192; f32 KV; full GPU
+CHECKED Qwen35-9B 2/20; ctx 8192; f32 KV; full GPU
+Starting BH2_03434 / qwen3.5:9b (new episode 3)
+CHECKED Qwen35-9B 3/20; ctx 8192; f32 KV; full GPU
+CHECKED Qwen35-9B 3/20; ctx 8192; f32 KV; full GPU
+Starting BH2_03619 / qwen3.5:9b (new episode 4)
+CHECKED Qwen35-9B 4/20; ctx 8192; f32 KV; full GPU
+CHECKED Qwen35-9B 4/20; ctx 8192; f32 KV; full GPU
+Starting BH2_03750 / qwen3.5:9b (new episode 5)
+CHECKED Qwen35-9B 5/20; ctx 8192; f32 KV; full GPU
+CHECKED Qwen35-9B 5/20; ctx 8192; f32 KV; full GPU
+Starting BH2_03760 / qwen3.5:9b (new episode 6)
+CHECKED Qwen35-9B 6/20; ctx 8192; f32 KV; full GPU
+CHECKED Qwen35-9B 6/20; ctx 8192; f32 KV; full GPU
+Starting BH2_03762 / qwen3.5:9b (new episode 7)
+CHECKED Qwen35-9B 7/20; ctx 8192; f32 KV; full GPU
+CHECKED Qwen35-9B 7/20; ctx 8192; f32 KV; full GPU
+Starting BH2_03850 / qwen3.5:9b (new episode 8)
+CHECKED Qwen35-9B 8/20; ctx 8192; f32 KV; full GPU
+CHECKED Qwen35-9B 8/20; ctx 8192; f32 KV; full GPU
+Starting BH2_03856 / qwen3.5:9b (new episode 9)
+CHECKED Qwen35-9B 9/20; ctx 8192; f32 KV; full GPU
+CHECKED Qwen35-9B 9/20; ctx 8192; f32 KV; full GPU
+Starting BH2_03879 / qwen3.5:9b (new episode 10)
+CHECKED Qwen35-9B 10/20; ctx 8192; f32 KV; full GPU
+CHECKED Qwen35-9B 10/20; ctx 8192; f32 KV; full GPU
+Starting BH2_03881 / qwen3.5:9b (new episode 11)
+CHECKED Qwen35-9B 11/20; ctx 8192; f32 KV; full GPU
+CHECKED Qwen35-9B 11/20; ctx 8192; f32 KV; full GPU
+Starting BH2_03953 / qwen3.5:9b (new episode 12)
+CHECKED Qwen35-9B 12/20; ctx 8192; f32 KV; full GPU
+CHECKED Qwen35-9B 12/20; ctx 8192; f32 KV; full GPU
+Starting BH2_03991 / qwen3.5:9b (new episode 13)
+CHECKED Qwen35-9B 13/20; ctx 8192; f32 KV; full GPU
+CHECKED Qwen35-9B 13/20; ctx 8192; f32 KV; full GPU
+Starting BH2_04003 / qwen3.5:9b (new episode 14)
+CHECKED Qwen35-9B 14/20; ctx 8192; f32 KV; full GPU
+CHECKED Qwen35-9B 14/20; ctx 8192; f32 KV; full GPU
+Starting BH2_04007 / qwen3.5:9b (new episode 15)
+CHECKED Qwen35-9B 15/20; ctx 8192; f32 KV; full GPU
+CHECKED Qwen35-9B 15/20; ctx 8192; f32 KV; full GPU
+Starting BH2_04425 / qwen3.5:9b (new episode 16)
+CHECKED Qwen35-9B 16/20; ctx 8192; f32 KV; full GPU
+CHECKED Qwen35-9B 16/20; ctx 8192; f32 KV; full GPU
+Starting BH2_05366 / qwen3.5:9b (new episode 17)
+CHECKED Qwen35-9B 17/20; ctx 8192; f32 KV; full GPU
+CHECKED Qwen35-9B 17/20; ctx 8192; f32 KV; full GPU
+Starting BH2_05686 / qwen3.5:9b (new episode 18)
+CHECKED Qwen35-9B 18/20; ctx 8192; f32 KV; full GPU
+CHECKED Qwen35-9B 18/20; ctx 8192; f32 KV; full GPU
+Starting BH2_05843 / qwen3.5:9b (new episode 19)
+CHECKED Qwen35-9B 19/20; ctx 8192; f32 KV; full GPU
+CHECKED Qwen35-9B 19/20; ctx 8192; f32 KV; full GPU
+Starting BH2_06427 / qwen3.5:9b (new episode 20)
+CHECKED Qwen35-9B 20/20; ctx 8192; f32 KV; full GPU
+Traceback (most recent call last):
+  File "D:\cofailKG\scripts\22_smoke_single.py", line 311, in <module>
+    main()
+    ~~~~^^
+  File "D:\cofailKG\scripts\22_smoke_single.py", line 306, in main
+    report(launcher, panel)
+    ~~~~~~^^^^^^^^^^^^^^^^^
+  File "D:\cofailKG\scripts\22_smoke_single.py", line 276, in report
+    summaries[row["agent_id"]] = model_summary(records, metrics, settings["num_ctx"])
+                                 ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\cofailKG\src\cofail_kg\evaluation\smoke_summary.py", line 45, in model_summary
+    "label_a": _sum(m["label_a_counts"] for m in metrics),
+               ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\cofailKG\src\cofail_kg\evaluation\smoke_summary.py", line 26, in _sum
+    total.update({k: v for k, v in row.items() if v})
+                                   ^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'items'

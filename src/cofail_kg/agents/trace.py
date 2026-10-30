@@ -45,7 +45,7 @@ from collections import deque
 from dataclasses import dataclass
 from pathlib import Path
 
-PROTOCOL_VERSION = "1.3.4"
+PROTOCOL_VERSION = "1.3.5"
 RECORD_SCHEMA_VERSION = 1
 DEFAULT_RUNS_ROOT = Path("results/runs")
 

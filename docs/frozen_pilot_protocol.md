@@ -1,6 +1,6 @@
 # CoFail-KG — Frozen Pilot Protocol
 
-**Version:** 1.3.4 (2026-10-15) · **Owner:** the researcher · **Implemented by:** Claude Code (read-only for Claude)
+**Version:** 1.3.5 (2026-10-30) · **Owner:** the researcher · **Implemented by:** Claude Code (read-only for Claude)
 **What changed since v1.0:** see `docs/CHANGES.md` (one page).
 
 This file is the single source of truth for every scientific rule in the project. Claude Code
@@ -410,9 +410,10 @@ Models: four, chosen by Gate D3 from the evidence blocks above (four families: M
 Granite, Qwen), recorded by tag, digest and quantization in `configs/models.yaml` and
 `configs/frozen_hashes.yaml`.
 
-**Re-selection `[FROZEN]`:** if S22 shows any episode with prompt tokens above 90% of `num_ctx`, or
-any OUT_OF_MEMORY error, the final values are chosen again with the same rules, using the S22
-measurements in place of the screening ones. Allowed only before S26; logged.
+**Re-selection `[FROZEN]`:** If S22 records prompt usage above 90% of an agent’s context window or
+an out-of-memory error, pause progression and return the affected agent to S21 for researcher
+review. Any runtime revision must be documented and frozen, followed by repeat S22 testing for that
+agent. Preserve all earlier results. Changes are allowed only before S26.
 
 ### 9.2 Independence and agent count `[FROZEN]`
 

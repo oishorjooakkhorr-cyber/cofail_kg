@@ -1160,8 +1160,10 @@ Do not interpret.
 **Evaluate — manual reading (plan 2–3 hours).**
 1. Read at least one full episode per model.
 2. Check Label A and Label B by hand for 6 answers across models.
-3. Any episode with prompt tokens above 90% of `num_ctx`, or any OUT_OF_MEMORY error: apply the
-   protocol §9.1 re-selection rule with the S22 measurements (log it).
+3. Any episode with prompt tokens above 90% of the agent's `num_ctx`, or any OUT_OF_MEMORY error:
+   apply the protocol §9.1 re-selection rule — pause, return that agent to S21 for your review,
+   document and freeze any runtime revision, then repeat S22 for that agent (log it). Passing D3
+   does not satisfy this check.
 4. Systematic technical problems (a model never calls tools; JSON always fails): return to S21 (log it).
 
 **Decide.** Proceed, or return to S21. Log.
@@ -1489,8 +1491,8 @@ Each table in results/reports/final/ as CSV and Markdown, with the commit hash t
 | Symptom | Likely cause | What to do |
 |---|---|---|
 | A model writes tool calls as text instead of calling tools | The model or its Ollama template lacks native tool support | It is recorded as `TEXT_TOOL_CALL` and not executed. If frequent, the model fails D3; choose another. |
-| `prompt_eval_count` close to `num_ctx` | Long tool outputs fill the context; Ollama may drop earlier messages | Before S26: apply the protocol §9.1 re-selection rule (log it). From S26 on: do not change; report affected episodes. |
-| Out-of-memory from Ollama | `num_ctx` too large for 8 GB VRAM | Before S26: apply the protocol §9.1 re-selection rule; if no value fits, choose another model through Gate D3 (S21). Log it. |
+| `prompt_eval_count` close to `num_ctx` | Long tool outputs fill the context; Ollama may drop earlier messages | Before S26: apply the protocol §9.1 re-selection rule (return the agent to S21 for review, then repeat its S22; log it). From S26 on: do not change; report affected episodes. |
+| Out-of-memory from Ollama | `num_ctx` too large for the GPU | Before S26: apply the protocol §9.1 re-selection rule (return the agent to S21 for review; if no runtime fits, choose another model through Gate D3). Log it. |
 | PrimeKG loading is slow or uses too much RAM | 8 million rows in pandas | Ask Claude to load from the parquet cache with only the needed columns; keep one index object alive per run. |
 | Claude says a test "should" be changed to pass | The code or the test is wrong | Use the bug-found prompt: ask which one is wrong and why, before any change. |
 | Claude proposes changing a definition | Normal eagerness | Use the "Claude proposes changing the science" prompt. |

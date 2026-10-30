@@ -2468,3 +2468,30 @@ that paragraph still says "with the same rules", which were removed.
 Written: configs/models.yaml, frozen_hashes.yaml `models`, pilot.yaml `runtime`
 (scripts/21_freeze_models.py); installed-digest check passes for all four.
 Protocol version string left at 1.3.4 pending researcher decision.
+
+## 2026-10-30 — S22 — protocol v1.3.5; first smoke_single run stopped
+Researcher decision: bump the protocol to 1.3.5 (2026-10-30) documenting the S21
+runtime changes, and replace the §9.1 re-selection paragraph with the
+researcher's wording: an S22 prompt above 90% of an agent's context window or an
+OUT_OF_MEMORY error pauses progression and returns the affected agent to S21 for
+review; any runtime revision is documented, frozen and followed by repeat S22
+testing for that agent; earlier results are preserved; only before S26. Passing
+D3 does not satisfy this check. Qwen keeps its 8K setting for S22.
+Runbook S22 step 3 and troubleshooting rows updated; CHANGES.md amended;
+PROTOCOL_VERSION in trace.py set to 1.3.5.
+The S22 run `smoke_single`, already started under v1.3.4 wording, was stopped by
+researcher choice at 15:04:53 UTC with 9/80 episodes saved (Ministral3-8B,
+BH2_00461–BH2_03856; the 10th, BH2_03879, was in progress and has no record).
+Those records are retained unchanged and never resumed (interruption.json).
+S22 reruns all 80 episodes fresh under run ID `smoke_single_v135`.
+
+## 2026-10-30 — S22 smoke_single_v135 complete; §9.1 re-selection triggered
+80/80 episodes saved under protocol v1.3.5. Ministral3-8B, Gemma4-E4B and
+Granite41-8B 20 SUCCESS each; Qwen35-9B 18 SUCCESS, 2 PARSE_FAIL. Zero ERROR or
+OUT_OF_MEMORY. No answer is both OFF_QUESTION and SUPPORTED. Prompt above 90% of
+num_ctx: Gemma4-E4B BH2_04003 (29500/32768, 90.03%); Qwen35-9B eight episodes
+(largest 8189/8192). Per §9.1, progression is paused and both agents return to
+S21 for researcher review; no runtime change made. Report-step fix: summary code
+crashed on episodes without label counts; fixed and tested; the report exempts
+only the two summary-only files from the source pin and records their hashes.
+Summary: results/diagnostics/smoke_single_summary.md. Researcher decision pending.

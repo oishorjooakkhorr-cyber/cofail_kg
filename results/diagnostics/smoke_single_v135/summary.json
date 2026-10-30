@@ -1,0 +1,154 @@
+{
+  "off_question_supported": [],
+  "report_only_source_sha256": {
+    "scripts/22_smoke_single.py": "6f8b17cc83b0273b5ef46c8be1fb022c8fe4e659734397c4438630b4502bc5e8",
+    "src/cofail_kg/evaluation/smoke_summary.py": "8c3f8c6b89bfbe89060a036a7fc143aeb46d048c60aa3efd3c3a017b0fe02c93"
+  },
+  "summaries": {
+    "Gemma4-E4B": {
+      "budget_hit_share": 0.05,
+      "early_stop_share": 0.45,
+      "episodes": 20,
+      "episodes_prompt_over_90pct_num_ctx": [
+        "BH2_04003"
+      ],
+      "error_causes": {},
+      "hop1_status": {
+        "H1_CLEAN": 17,
+        "H1_MIXED": 3
+      },
+      "label_a": {
+        "ALT_VALID": 17,
+        "GOLD": 740,
+        "OFF_QUESTION": 60
+      },
+      "label_b": {
+        "PATH_INVALID": 80,
+        "SUPPORTED": 737
+      },
+      "largest_prompt_share_of_num_ctx": 0.9002685546875,
+      "largest_prompt_tokens": 29500,
+      "num_ctx": 32768,
+      "out_of_memory_episodes": 0,
+      "primary_reason_codes": {
+        "SHORTCUT": 80
+      },
+      "reason_codes": {
+        "SHORTCUT": 80
+      },
+      "status_counts": {
+        "SUCCESS": 20
+      }
+    },
+    "Granite41-8B": {
+      "budget_hit_share": 0.1,
+      "early_stop_share": 0.35,
+      "episodes": 20,
+      "episodes_prompt_over_90pct_num_ctx": [],
+      "error_causes": {},
+      "hop1_status": {
+        "H1_CLEAN": 17,
+        "H1_MIXED": 2,
+        "H1_WRONG": 1
+      },
+      "label_a": {
+        "ALT_VALID": 17,
+        "GOLD": 593,
+        "OFF_QUESTION": 74
+      },
+      "label_b": {
+        "PATH_INVALID": 74,
+        "SUPPORTED": 610
+      },
+      "largest_prompt_share_of_num_ctx": 0.55517578125,
+      "largest_prompt_tokens": 18192,
+      "num_ctx": 32768,
+      "out_of_memory_episodes": 0,
+      "primary_reason_codes": {
+        "SHORTCUT": 56,
+        "WRONG_HOP_COUNT": 18,
+        "WRONG_TARGET_TYPE": 18
+      },
+      "reason_codes": {
+        "SHORTCUT": 56,
+        "WRONG_HOP_COUNT": 18,
+        "WRONG_TARGET_TYPE": 18
+      },
+      "status_counts": {
+        "SUCCESS": 20
+      }
+    },
+    "Ministral3-8B": {
+      "budget_hit_share": 0.0,
+      "early_stop_share": 0.5,
+      "episodes": 20,
+      "episodes_prompt_over_90pct_num_ctx": [],
+      "error_causes": {},
+      "hop1_status": {
+        "H1_CLEAN": 18,
+        "H1_MIXED": 2
+      },
+      "label_a": {
+        "ALT_VALID": 17,
+        "GOLD": 703
+      },
+      "label_b": {
+        "SUPPORTED": 720
+      },
+      "largest_prompt_share_of_num_ctx": 0.64996337890625,
+      "largest_prompt_tokens": 21298,
+      "num_ctx": 32768,
+      "out_of_memory_episodes": 0,
+      "primary_reason_codes": {},
+      "reason_codes": {},
+      "status_counts": {
+        "SUCCESS": 20
+      }
+    },
+    "Qwen35-9B": {
+      "budget_hit_share": 0.05,
+      "early_stop_share": 0.15,
+      "episodes": 20,
+      "episodes_prompt_over_90pct_num_ctx": [
+        "BH2_03619",
+        "BH2_03760",
+        "BH2_03856",
+        "BH2_03879",
+        "BH2_03881",
+        "BH2_03953",
+        "BH2_03991",
+        "BH2_04003"
+      ],
+      "error_causes": {},
+      "hop1_status": {
+        "H1_CLEAN": 18,
+        "H1_MIXED": 2
+      },
+      "label_a": {
+        "ALT_VALID": 17,
+        "GOLD": 284,
+        "OFF_QUESTION": 3
+      },
+      "label_b": {
+        "PATH_INVALID": 3,
+        "SUPPORTED": 301
+      },
+      "largest_prompt_share_of_num_ctx": 0.9996337890625,
+      "largest_prompt_tokens": 8189,
+      "num_ctx": 8192,
+      "out_of_memory_episodes": 0,
+      "primary_reason_codes": {
+        "WRONG_HOP_COUNT": 3,
+        "WRONG_TARGET_TYPE": 3
+      },
+      "reason_codes": {
+        "WRONG_HOP_COUNT": 3,
+        "WRONG_TARGET_TYPE": 3
+      },
+      "status_counts": {
+        "PARSE_FAIL": 2,
+        "SUCCESS": 18
+      }
+    }
+  }
+}

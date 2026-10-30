@@ -1,0 +1,52 @@
+# S22 single-agent smoke summary — run `smoke_single_v135`
+
+Descriptive tallies of S16–S19 evaluation over all saved episodes. No interpretation.
+
+## Overview
+
+|Agent|Episodes|Status counts|ERROR causes|Early-stop share|Budget-hit share|Largest prompt / num_ctx|Episodes > 90% num_ctx|
+|---|---:|---|---|---:|---:|---|---|
+|Ministral3-8B|20|SUCCESS 20|none|0.50|0.00|21298 / 32768 (65.0%)|none|
+|Gemma4-E4B|20|SUCCESS 20|none|0.45|0.05|29500 / 32768 (90.0%)|BH2_04003|
+|Granite41-8B|20|SUCCESS 20|none|0.35|0.10|18192 / 32768 (55.5%)|none|
+|Qwen35-9B|20|PARSE_FAIL 2, SUCCESS 18|none|0.15|0.05|8189 / 8192 (100.0%)|BH2_03619, BH2_03760, BH2_03856, BH2_03879, BH2_03881, BH2_03953, BH2_03991, BH2_04003|
+
+## Ministral3-8B
+
+- Label A: ALT_VALID 17, GOLD 703
+- Label B: SUPPORTED 720
+- Reason codes (all): none
+- Reason codes (primary path): none
+- Hop-1 status: H1_CLEAN 18, H1_MIXED 2
+- OUT_OF_MEMORY episodes: 0
+
+## Gemma4-E4B
+
+- Label A: ALT_VALID 17, GOLD 740, OFF_QUESTION 60
+- Label B: PATH_INVALID 80, SUPPORTED 737
+- Reason codes (all): SHORTCUT 80
+- Reason codes (primary path): SHORTCUT 80
+- Hop-1 status: H1_CLEAN 17, H1_MIXED 3
+- OUT_OF_MEMORY episodes: 0
+
+## Granite41-8B
+
+- Label A: ALT_VALID 17, GOLD 593, OFF_QUESTION 74
+- Label B: PATH_INVALID 74, SUPPORTED 610
+- Reason codes (all): SHORTCUT 56, WRONG_HOP_COUNT 18, WRONG_TARGET_TYPE 18
+- Reason codes (primary path): SHORTCUT 56, WRONG_HOP_COUNT 18, WRONG_TARGET_TYPE 18
+- Hop-1 status: H1_CLEAN 17, H1_MIXED 2, H1_WRONG 1
+- OUT_OF_MEMORY episodes: 0
+
+## Qwen35-9B
+
+- Label A: ALT_VALID 17, GOLD 284, OFF_QUESTION 3
+- Label B: PATH_INVALID 3, SUPPORTED 301
+- Reason codes (all): WRONG_HOP_COUNT 3, WRONG_TARGET_TYPE 3
+- Reason codes (primary path): WRONG_HOP_COUNT 3, WRONG_TARGET_TYPE 3
+- Hop-1 status: H1_CLEAN 18, H1_MIXED 2
+- OUT_OF_MEMORY episodes: 0
+
+## Assertion: no answer is both OFF_QUESTION and SUPPORTED
+
+PASS: none found.

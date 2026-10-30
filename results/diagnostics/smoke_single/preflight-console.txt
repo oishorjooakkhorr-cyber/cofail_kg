@@ -1,0 +1,9 @@
+PHASE preflight: Ministral3-8B
+CHECKED Ministral3-8B 0/20; ctx 32768; f16 KV; full GPU
+PHASE preflight: Gemma4-E4B
+CHECKED Gemma4-E4B 0/20; ctx 32768; f16 KV; full GPU
+PHASE preflight: Granite41-8B
+CHECKED Granite41-8B 0/20; ctx 32768; f16 KV; full GPU
+PHASE preflight: Qwen35-9B
+CHECKED Qwen35-9B 0/20; ctx 8192; f32 KV; full GPU
+PHASE preflight COMPLETE

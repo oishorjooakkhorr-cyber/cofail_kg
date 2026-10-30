@@ -78,3 +78,15 @@ Protocol version 1.3.3 → **1.3.4 (2026-10-15)**. §14.2 tie-break (3) now stat
 each edge u –r→ v contributes the pair (numeric u, r), so paths are compared in the
 order s, r1, n1, r2, …. Only paths of ≥ 3 edges can be affected (secondary path-level
 metrics). Decision log: "S12 — §14.2 tie-break pairing (protocol v1.3.4)".
+
+## Amendment 2026-10-30 (S21) — per-agent final runtime and S22 re-selection (protocol v1.3.5)
+
+Protocol version 1.3.4 → **1.3.5 (2026-10-30)**. §9.1: the final runtime is now a per-agent
+table; each frozen agent keeps the exact settings of its S20 D3 evidence block (Ministral3-8B,
+Gemma4-E4B, Granite41-8B at 32K/8192/f16; Qwen35-9B at 8K/4096/f32). The former value-selection
+rules (1.25 × largest prompt, 2 × median calls, 25 × answer-list p90, 3 × median time) are
+removed. The re-selection paragraph now says: an S22 prompt above 90% of an agent's context or an
+out-of-memory error pauses progression and returns that agent to S21 for researcher review; any
+runtime revision is documented, frozen and followed by a repeat S22 for that agent; earlier
+results are preserved; only before S26. Runbook S22 and troubleshooting rows match. Decision log:
+"S21 — Gate D3 panel and runtime frozen; protocol §9.1 revised" and "S22 — protocol v1.3.5".

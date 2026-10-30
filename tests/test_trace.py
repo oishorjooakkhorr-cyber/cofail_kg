@@ -245,7 +245,7 @@ def test_primary_path_matches_brute_force_on_seeded_synthetic_graphs():
 def test_record_requires_every_field_and_derives_graph():
     rec = record([nb("1", "r", [2])])
     assert rec["trace_graph"] == [{"creation_index": 0, "u": "1", "label": "r", "v": "2"}]
-    assert rec["protocol_version"] == "1.3.4" and rec["ignored_tool_calls"] == []
+    assert rec["protocol_version"] == "1.3.5" and rec["ignored_tool_calls"] == []
     for key in ("model", "num_ctx", "prompt_version", "tool_config", "kg_fingerprint",
                 "git_commit", "raw_final_output", "token_counts"):
         with pytest.raises(RecordError, match=key):
