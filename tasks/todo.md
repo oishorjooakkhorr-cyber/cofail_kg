@@ -392,11 +392,22 @@ archive errors remain. Proof:docs/S20_granite41_5060ti_32k_backup.md. Complete; 
   single re-prompt unchanged); pass four-model preflight.
 - [x] Checkpoint: pinned executable/configuration, tests and runtime proof before
   official inference; historical results and unrelated tasks preserved.
-- [ ] Task3: run all80 official episodes; offline D3, paired quality/context/time
+- [x] Task3: run all80 official episodes; offline D3, paired quality/context/time
   report and integrity checks. Retain failures without an automatic P2 rescue.
 - [ ] Checkpoint: resolve remaining context pressure and frozen final-sizing
   requirements before any S21 selection; do not silently adopt64K/offload/KV
   quantization, navigation coaching, output repair, extra retries or lower gates.
+
+Execution complete:20 saved final episodes per model,80 total. Gemma PASS20/16,
+Ministral PASS19/18 (one retained host-sleep TIMEOUT),Granite PASS20/16,
+Qwen FAIL14/13 with six PARSE_FAIL. S21 checkpoint remains pending: only three
+models pass this common condition and Qwen retains32K pressure/format failures.
+S3 p90=102 across7633 rows verifies4096 output floor; final context rule points
+to65536 for max prompt32750,whose shared full-GPU f16 feasibility is unestablished.
+All1829 historical hashes and84 new raw/config hashes verified; sources pinned.
+Qwen's last seven unsaved queries resumed after recovering isolated0.40.12 from
+the existing signed installer following an app update to0.40.13. No completed
+record retried; no P2 or S21. Report:docs/S20_shared_resources_32k.md.
 
 Optional unofficial P2 work is documented separately in tasks/plan.md and is not
 scheduled or authorized for execution. Any future request must specify prompt-only

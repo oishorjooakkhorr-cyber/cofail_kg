@@ -527,6 +527,14 @@ the proposal's earlier planning-only wording below is retained as history.
 Scoped amendment and run IDs are recorded in docs/decision_log.md before inference.
 Optional P2 and S21 selection remain separate and unstarted.
 
+Completion update: tasks1–3 executed and verified; see
+docs/S20_shared_resources_32k.md and
+results/diagnostics/s20/shared-resources-32k-20261030/comparison.json.
+80 saved final episodes:Gemma PASS,Ministral PASS (host-sleep TIMEOUT retained),
+Granite PASS,Qwen FAIL. All earlier scientific history is unchanged. Final S21
+checkpoint is pending: Qwen has six parse failures and shared context/capacity
+sizing needs a separate decision. No automatic further experiment follows.
+
 Planning only, requested by the researcher. Extends S20 planning; preserves all
 earlier work and unrelated open tasks. No authorization to implement, infer,
 change frozen documents, publish, or select S21 is implied by this proposal.

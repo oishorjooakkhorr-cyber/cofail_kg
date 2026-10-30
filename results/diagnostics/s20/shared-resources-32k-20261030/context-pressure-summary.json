@@ -1,0 +1,103 @@
+{
+  "gemma4": {
+    "source_files": 54,
+    "run_files": 21,
+    "length_responses": 0,
+    "at_output_cap": 0,
+    "at_context_boundary": 0,
+    "maximum_prompt": 29500,
+    "maximum_completion": 7183,
+    "nonempty_thinking": 0,
+    "queries_with_failed_tools": [
+      "BH2_03434",
+      "BH2_03619",
+      "BH2_03760",
+      "BH2_03762",
+      "BH2_03850",
+      "BH2_03879",
+      "BH2_03881",
+      "BH2_03991",
+      "BH2_04003",
+      "BH2_04007",
+      "BH2_05366",
+      "BH2_05686",
+      "BH2_05843",
+      "BH2_06427"
+    ],
+    "server_truncated_1_lines": [],
+    "server_discard_shift_lines": []
+  },
+  "ministral3": {
+    "source_files": 53,
+    "run_files": 21,
+    "length_responses": 0,
+    "at_output_cap": 0,
+    "at_context_boundary": 0,
+    "maximum_prompt": 21298,
+    "maximum_completion": 6090,
+    "nonempty_thinking": 0,
+    "queries_with_failed_tools": [
+      "BH2_03434",
+      "BH2_03619",
+      "BH2_03750",
+      "BH2_03760",
+      "BH2_03850",
+      "BH2_05366"
+    ],
+    "server_truncated_1_lines": [],
+    "server_discard_shift_lines": []
+  },
+  "granite41": {
+    "source_files": 53,
+    "run_files": 21,
+    "length_responses": 0,
+    "at_output_cap": 0,
+    "at_context_boundary": 0,
+    "maximum_prompt": 18192,
+    "maximum_completion": 3873,
+    "nonempty_thinking": 0,
+    "queries_with_failed_tools": [
+      "BH2_03619",
+      "BH2_03750",
+      "BH2_03760",
+      "BH2_03762",
+      "BH2_03850",
+      "BH2_03879",
+      "BH2_03881",
+      "BH2_03991",
+      "BH2_04003",
+      "BH2_04425",
+      "BH2_05686",
+      "BH2_05843",
+      "BH2_06427"
+    ],
+    "server_truncated_1_lines": [],
+    "server_discard_shift_lines": []
+  },
+  "qwen35": {
+    "source_files": 54,
+    "run_files": 21,
+    "length_responses": 6,
+    "at_output_cap": 1,
+    "at_context_boundary": 5,
+    "maximum_prompt": 32750,
+    "maximum_completion": 8192,
+    "nonempty_thinking": 0,
+    "queries_with_failed_tools": [
+      "BH2_03619",
+      "BH2_03762",
+      "BH2_03856",
+      "BH2_03881",
+      "BH2_04003",
+      "BH2_05686"
+    ],
+    "server_truncated_1_lines": [
+      "slot      release: id  0 | task 20134 | stop processing: n_tokens = 32767, truncated = 1",
+      "slot      release: id  0 | task 23046 | stop processing: n_tokens = 32767, truncated = 1",
+      "slot      release: id  0 | task 26702 | stop processing: n_tokens = 32767, truncated = 1",
+      "slot      release: id  0 | task 5059 | stop processing: n_tokens = 32767, truncated = 1",
+      "slot      release: id  0 | task 5768 | stop processing: n_tokens = 32767, truncated = 1"
+    ],
+    "server_discard_shift_lines": []
+  }
+}

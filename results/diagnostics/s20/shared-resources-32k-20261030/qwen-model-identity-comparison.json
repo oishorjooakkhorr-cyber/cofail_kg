@@ -1,0 +1,21 @@
+{
+  "digest": "56671c2ab9385f9cfcb404638e32cd62d88e3501d44822208363c010179a3c90",
+  "tag": "qwen3.5:9b",
+  "details": {
+    "parent_model": "model.gguf",
+    "format": "gguf",
+    "family": "qwen35",
+    "families": [
+      "qwen35"
+    ],
+    "parameter_size": "9.0B",
+    "quantization_level": "Q4_K_M",
+    "runner": "llamacpp"
+  },
+  "metadata_identical": true,
+  "capabilities_identical": true,
+  "compared_3060ti_show": "results/diagnostics/s20/qwen35/show.json",
+  "compared_5060ti_identity": "results/diagnostics/s20/qwen35-5060ti-32k-20261029/identity.json",
+  "current_api_runtime": "0.40.13",
+  "metadata_check_only_no_inference": true
+}

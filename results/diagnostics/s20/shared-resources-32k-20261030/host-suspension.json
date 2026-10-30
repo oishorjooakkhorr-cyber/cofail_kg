@@ -1,0 +1,38 @@
+[
+  {
+    "TimeCreated": "2026-10-30T14:29:05.6514904+06:00",
+    "ProviderName": "Microsoft-Windows-Power-Troubleshooter",
+    "Id": 1,
+    "Message": "The system has returned from a low power state.\r\n\r\nSleep Time: ‎2026‎-‎10‎-‎30T07:04:55.699000600Z\r\nWake Time: ‎2026‎-‎10‎-‎30T08:29:04.632065900Z\r\n\r\nWake Source: Unknown"
+  },
+  {
+    "TimeCreated": "2026-10-30T14:29:02.5002336+06:00",
+    "ProviderName": "Microsoft-Windows-Kernel-General",
+    "Id": 1,
+    "Message": "The system time has changed to ‎2026‎-‎10‎-‎30T08:29:02.500000000Z from ‎2026‎-‎10‎-‎30T07:05:08.667349800Z.\r\nTime Delta: 5033832 ms\r\n\r\nChange Reason: System time synchronized with the hardware clock.\r\nProcess: '' (PID 4).\r\n\r\nRTC time: ‎2026‎-‎10‎-‎30T14:29:02.500000000Z\r\nCurrent time zone bias: -360\r\nRTC time is in UTC: false\r\nSystem time was based on RTC time: false"
+  },
+  {
+    "TimeCreated": "2026-10-30T13:05:08.667405+06:00",
+    "ProviderName": "Microsoft-Windows-Kernel-Power",
+    "Id": 107,
+    "Message": "The system has resumed from sleep."
+  },
+  {
+    "TimeCreated": "2026-10-30T13:05:02.8329643+06:00",
+    "ProviderName": "Microsoft-Windows-Kernel-Power",
+    "Id": 42,
+    "Message": "The system is entering sleep.\r\n\r\nSleep Reason: Application API"
+  },
+  {
+    "TimeCreated": "2026-10-30T12:35:04.7245801+06:00",
+    "ProviderName": "Microsoft-Windows-Power-Troubleshooter",
+    "Id": 1,
+    "Message": "The system has returned from a low power state.\r\n\r\nSleep Time: ‎2026‎-‎10‎-‎30T05:28:33.551526900Z\r\nWake Time: ‎2026‎-‎10‎-‎30T06:35:03.722715100Z\r\n\r\nWake Source: Unknown"
+  },
+  {
+    "TimeCreated": "2026-10-30T12:35:02.5002117+06:00",
+    "ProviderName": "Microsoft-Windows-Kernel-General",
+    "Id": 1,
+    "Message": "The system time has changed to ‎2026‎-‎10‎-‎30T06:35:02.500000000Z from ‎2026‎-‎10‎-‎30T05:28:38.303630700Z.\r\nTime Delta: 3984196 ms\r\n\r\nChange Reason: System time synchronized with the hardware clock.\r\nProcess: '' (PID 4).\r\n\r\nRTC time: ‎2026‎-‎10‎-‎30T12:35:02.500000000Z\r\nCurrent time zone bias: -360\r\nRTC time is in UTC: false\r\nSystem time was based on RTC time: false"
+  }
+]

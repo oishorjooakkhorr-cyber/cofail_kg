@@ -2385,3 +2385,52 @@ PARSE_FAIL, TIMEOUT or ERROR outcomes remain in the denominator; proceed only
 while identity, server health and placement guards pass. No automatic content
 retry, replacement, prompt intervention, context increase, offload or cache tuning.
 No P2 exploration or S21 selection/freeze is authorized by this execution.
+
+## 2026-10-30 — Shared resource reassessment completed; S21 remains pending
+
+All eighty final episodes are saved and evaluated offline. At common32768 context,
+8192 output,240s request and600s episode limits: Gemma PASS20 SUCCESS/16 competent,
+Ministral PASS19/18,Granite PASS20/16,Qwen FAIL14/13. Every tool call is well formed;
+median seconds10.777069,44.5842285,36.901580,28.2654795;zero OOM. Status totals73
+SUCCESS,six PARSE_FAIL and one TIMEOUT; no completed result retried or replaced.
+The TIMEOUT is Ministral BH2_03953 during documented84-minute host sleep. It stays
+in the denominator; this is not evidence of uninterrupted model latency. Qwen's
+process exited during unsaved query14. Resume found installed0.40.13 and stopped
+before inference. Recovered isolated0.40.12 from existing signed installer,
+verified source/runtime guards and synthetic preflight,then resumed seven unsaved
+queries. Installed app/model/global configuration unchanged; canceled partial
+logs retained. Details and cleanup-path exception disclosure are in the report.
+
+Paired supported counts:Gemma729->737,Ministral635->589,Granite610->610,Qwen422->658.
+Ministral loses44 on interrupted query and two separately onBH2_03879. Qwen recovers
+BH2_03881 with236 supported answers but six final formats remain invalid; three
+failures encounter32K boundary and three fail despite token headroom. No P2 or
+further tuning. Historical acceptance remains unchanged. Only three pass this
+shared condition; no four-model S21 panel frozen. S3 original p90=102 over7633
+rows verifies4096 output floor; final context sizing for32750 prompt implies65536,
+whose common full-GPU f16 feasibility is unestablished. Separate decision required
+before S21; no automatic64K/offload/cache quantization/protocol change.
+
+All1829 preceding scientific files,84 new raw/config files and54/53/53/54 source
+pins verified. Detailed per-query quality,failed tools,token headroom and context
+logs retained. Final experiment server stopped and model unloaded. Researcher
+model check also confirms identical Qwen digest,details,capabilities and full
+model_info between historical3060Ti and current5060Ti. Full report:
+docs/S20_shared_resources_32k.md. Tasks1-3 complete; final S21 checkpoint pending.
+
+
+
+## 2026-10-30 — Authorized Qwen35-9B same-host 8K f32-KV S20 block
+Researcher instruction: "8k context window and f32 kv cache, run s 20 with this
+setting of only Qwen model". One fresh twenty-query block, run ID
+qwen35-5060ti-8k-f32-20261030, on the RTX 5060 Ti. Protocol §9.1 screening
+configuration exactly (num_ctx 8192, num_predict 4096, budget 30, page size 50,
+episode 600 s, temperature 0, seed 42, think=false); request 120 s; P1, tools,
+parser, single JSON re-prompt, evaluators and D3 unchanged. Only the server KV
+cache type differs from the same-host blocks (f16 -> f32). Pinned extracted
+Ollama 0.40.12, isolated port 11435, D:\Models, one sequence, Flash Attention
+env inherited (effective state guarded). Synthetic probe before this entry
+confirmed actual K/V f32 allocation and 33/33 GPU layers. Outcome-informed
+diagnostic on already inspected questions; preserves every previous run and
+acceptance; no S21 selection. Not committed (commit not authorized); sources
+are SHA256-pinned in the run manifest.

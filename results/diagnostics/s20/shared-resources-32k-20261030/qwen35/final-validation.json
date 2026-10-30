@@ -1,0 +1,52 @@
+{
+  "all_hashes_match": true,
+  "changed_queries": [
+    "BH2_03881"
+  ],
+  "context_log_events": 185,
+  "identical_initial_messages": true,
+  "offline_report": true,
+  "quality": {
+    "baseline32k": {
+      "label_a_counts": {
+        "ALT_VALID": 17,
+        "GOLD": 405,
+        "GOLD_BRIDGE_EXTRA": 0,
+        "OFF_QUESTION": 0,
+        "UNRESOLVED": 0
+      },
+      "label_b_counts": {
+        "KG_UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "PATH_INVALID": 0,
+        "SUPPORTED": 422,
+        "UNGROUNDED": 0
+      },
+      "mean_query_precision": 0.5158333333333334,
+      "mean_query_recall": 0.5984920634920635,
+      "supported_items": 422
+    },
+    "resources32k": {
+      "label_a_counts": {
+        "ALT_VALID": 17,
+        "GOLD": 641,
+        "GOLD_BRIDGE_EXTRA": 0,
+        "OFF_QUESTION": 0,
+        "UNRESOLVED": 0
+      },
+      "label_b_counts": {
+        "KG_UNSUPPORTED": 0,
+        "NOT_APPLICABLE": 0,
+        "PATH_INVALID": 0,
+        "SUPPORTED": 658,
+        "UNGROUNDED": 0
+      },
+      "mean_query_precision": 0.5658333333333333,
+      "mean_query_recall": 0.6456920634920634,
+      "supported_items": 658
+    }
+  },
+  "queries": 20,
+  "runtime_samples": 44,
+  "sequential": true
+}

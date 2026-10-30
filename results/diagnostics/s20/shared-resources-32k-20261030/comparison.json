@@ -1,0 +1,364 @@
+[
+  {
+    "model": "gemma4",
+    "screening_row": {
+      "agent_id": "Gemma4-E4B",
+      "attempted_calls": 188,
+      "budget_hit_share": 0.05,
+      "competence": 0.8,
+      "competent_episodes": 16,
+      "complete": true,
+      "d3_pass": true,
+      "digest": "dc35e8d9c6061baa6f0fa870975ab6932e2542b579b13ea0f199fa4bb7300c9c",
+      "episodes_completed": 20,
+      "episodes_expected": 20,
+      "family": "Gemma",
+      "largest_prompt_eval_count": 29500,
+      "median_tool_calls": 8.0,
+      "median_wall_seconds": 10.777069000000001,
+      "native_calls": 188,
+      "out_of_memory_episodes": 0,
+      "parameter_size": "7.5B",
+      "pass_competence": true,
+      "pass_oom": true,
+      "pass_success": true,
+      "pass_time": true,
+      "pass_well_formed": true,
+      "quantization": "Q4_K_M",
+      "run_id": "gemma4-5060ti-32k-resources-20261030",
+      "success_episodes": 20,
+      "success_rate": 1.0,
+      "tag": "gemma4:e4b-it-q4_K_M",
+      "text_tool_calls": 0,
+      "well_formed_calls": 188,
+      "well_formed_rate": 1.0
+    },
+    "status_counts": {
+      "SUCCESS": 20
+    },
+    "validation": {
+      "all_hashes_match": true,
+      "changed_queries": [
+        "BH2_03879",
+        "BH2_04003"
+      ],
+      "context_log_events": 232,
+      "identical_initial_messages": true,
+      "offline_report": true,
+      "quality": {
+        "baseline32k": {
+          "label_a_counts": {
+            "ALT_VALID": 17,
+            "GOLD": 732,
+            "GOLD_BRIDGE_EXTRA": 0,
+            "OFF_QUESTION": 60,
+            "UNRESOLVED": 0
+          },
+          "label_b_counts": {
+            "KG_UNSUPPORTED": 0,
+            "NOT_APPLICABLE": 0,
+            "PATH_INVALID": 80,
+            "SUPPORTED": 729,
+            "UNGROUNDED": 0
+          },
+          "mean_query_precision": 0.7358333333333333,
+          "mean_query_recall": 0.6544237692391344,
+          "supported_items": 729
+        },
+        "resources32k": {
+          "label_a_counts": {
+            "ALT_VALID": 17,
+            "GOLD": 740,
+            "GOLD_BRIDGE_EXTRA": 0,
+            "OFF_QUESTION": 60,
+            "UNRESOLVED": 0
+          },
+          "label_b_counts": {
+            "KG_UNSUPPORTED": 0,
+            "NOT_APPLICABLE": 0,
+            "PATH_INVALID": 80,
+            "SUPPORTED": 737,
+            "UNGROUNDED": 0
+          },
+          "mean_query_precision": 0.7358333333333333,
+          "mean_query_recall": 0.6569054489855094,
+          "supported_items": 737
+        }
+      },
+      "queries": 20,
+      "runtime_samples": 42,
+      "sequential": true
+    }
+  },
+  {
+    "model": "ministral3",
+    "screening_row": {
+      "agent_id": "Ministral3-8B",
+      "attempted_calls": 180,
+      "budget_hit_share": 0.0,
+      "competence": 0.9,
+      "competent_episodes": 18,
+      "complete": true,
+      "d3_pass": true,
+      "digest": "1922accd5827ebe6829e536369195db25eaf664528dc66206d646ea3bb386b71",
+      "episodes_completed": 20,
+      "episodes_expected": 20,
+      "family": "Mistral",
+      "largest_prompt_eval_count": 21298,
+      "median_tool_calls": 8.0,
+      "median_wall_seconds": 44.5842285,
+      "native_calls": 180,
+      "out_of_memory_episodes": 0,
+      "parameter_size": "8.9B",
+      "pass_competence": true,
+      "pass_oom": true,
+      "pass_success": true,
+      "pass_time": true,
+      "pass_well_formed": true,
+      "quantization": "Q4_K_M",
+      "run_id": "ministral3-5060ti-32k-resources-20261030",
+      "success_episodes": 19,
+      "success_rate": 0.95,
+      "tag": "ministral-3:8b",
+      "text_tool_calls": 0,
+      "well_formed_calls": 180,
+      "well_formed_rate": 1.0
+    },
+    "status_counts": {
+      "SUCCESS": 19,
+      "TIMEOUT": 1
+    },
+    "validation": {
+      "all_hashes_match": true,
+      "changed_queries": [
+        "BH2_03879",
+        "BH2_03953"
+      ],
+      "context_log_events": 225,
+      "identical_initial_messages": true,
+      "offline_report": true,
+      "quality": {
+        "baseline32k": {
+          "label_a_counts": {
+            "ALT_VALID": 17,
+            "GOLD": 618,
+            "GOLD_BRIDGE_EXTRA": 0,
+            "OFF_QUESTION": 0,
+            "UNRESOLVED": 0
+          },
+          "label_b_counts": {
+            "KG_UNSUPPORTED": 0,
+            "NOT_APPLICABLE": 0,
+            "PATH_INVALID": 0,
+            "SUPPORTED": 635,
+            "UNGROUNDED": 0
+          },
+          "mean_query_precision": 0.8658333333333333,
+          "mean_query_recall": 0.62180314984867,
+          "supported_items": 635
+        },
+        "resources32k": {
+          "label_a_counts": {
+            "ALT_VALID": 17,
+            "GOLD": 572,
+            "GOLD_BRIDGE_EXTRA": 0,
+            "OFF_QUESTION": 0,
+            "UNRESOLVED": 0
+          },
+          "label_b_counts": {
+            "KG_UNSUPPORTED": 0,
+            "NOT_APPLICABLE": 0,
+            "PATH_INVALID": 0,
+            "SUPPORTED": 589,
+            "UNGROUNDED": 0
+          },
+          "mean_query_precision": 0.8158333333333333,
+          "mean_query_recall": 0.6060495307740177,
+          "supported_items": 589
+        }
+      },
+      "queries": 20,
+      "runtime_samples": 42,
+      "sequential": true
+    }
+  },
+  {
+    "model": "granite41",
+    "screening_row": {
+      "agent_id": "Granite41-8B",
+      "attempted_calls": 233,
+      "budget_hit_share": 0.1,
+      "competence": 0.8,
+      "competent_episodes": 16,
+      "complete": true,
+      "d3_pass": true,
+      "digest": "444af1c4b2fedd6b54041aca558e7300b0b3d5c0468c44619126240323ba2852",
+      "episodes_completed": 20,
+      "episodes_expected": 20,
+      "family": "Granite",
+      "largest_prompt_eval_count": 18192,
+      "median_tool_calls": 10.0,
+      "median_wall_seconds": 36.901579999999996,
+      "native_calls": 233,
+      "out_of_memory_episodes": 0,
+      "parameter_size": "8.8B",
+      "pass_competence": true,
+      "pass_oom": true,
+      "pass_success": true,
+      "pass_time": true,
+      "pass_well_formed": true,
+      "quantization": "Q4_K_M",
+      "run_id": "granite41-5060ti-32k-resources-20261030",
+      "success_episodes": 20,
+      "success_rate": 1.0,
+      "tag": "ibm/granite4.1:8b",
+      "text_tool_calls": 0,
+      "well_formed_calls": 233,
+      "well_formed_rate": 1.0
+    },
+    "status_counts": {
+      "SUCCESS": 20
+    },
+    "validation": {
+      "all_hashes_match": true,
+      "changed_queries": [],
+      "context_log_events": 274,
+      "identical_initial_messages": true,
+      "offline_report": true,
+      "quality": {
+        "baseline32k": {
+          "label_a_counts": {
+            "ALT_VALID": 17,
+            "GOLD": 593,
+            "GOLD_BRIDGE_EXTRA": 0,
+            "OFF_QUESTION": 74,
+            "UNRESOLVED": 0
+          },
+          "label_b_counts": {
+            "KG_UNSUPPORTED": 0,
+            "NOT_APPLICABLE": 0,
+            "PATH_INVALID": 74,
+            "SUPPORTED": 610,
+            "UNGROUNDED": 0
+          },
+          "mean_query_precision": 0.6461904761904762,
+          "mean_query_recall": 0.6231012033140446,
+          "supported_items": 610
+        },
+        "resources32k": {
+          "label_a_counts": {
+            "ALT_VALID": 17,
+            "GOLD": 593,
+            "GOLD_BRIDGE_EXTRA": 0,
+            "OFF_QUESTION": 74,
+            "UNRESOLVED": 0
+          },
+          "label_b_counts": {
+            "KG_UNSUPPORTED": 0,
+            "NOT_APPLICABLE": 0,
+            "PATH_INVALID": 74,
+            "SUPPORTED": 610,
+            "UNGROUNDED": 0
+          },
+          "mean_query_precision": 0.6461904761904762,
+          "mean_query_recall": 0.6231012033140446,
+          "supported_items": 610
+        }
+      },
+      "queries": 20,
+      "runtime_samples": 42,
+      "sequential": true
+    }
+  },
+  {
+    "model": "qwen35",
+    "screening_row": {
+      "agent_id": "Qwen35-9B",
+      "attempted_calls": 301,
+      "budget_hit_share": 0.15,
+      "competence": 0.65,
+      "competent_episodes": 13,
+      "complete": true,
+      "d3_pass": false,
+      "digest": "56671c2ab9385f9cfcb404638e32cd62d88e3501d44822208363c010179a3c90",
+      "episodes_completed": 20,
+      "episodes_expected": 20,
+      "family": "Qwen",
+      "largest_prompt_eval_count": 32750,
+      "median_tool_calls": 9.5,
+      "median_wall_seconds": 28.265479499999998,
+      "native_calls": 301,
+      "out_of_memory_episodes": 0,
+      "parameter_size": "9.0B",
+      "pass_competence": true,
+      "pass_oom": true,
+      "pass_success": false,
+      "pass_time": true,
+      "pass_well_formed": true,
+      "quantization": "Q4_K_M",
+      "run_id": "qwen35-5060ti-32k-resources-20261030",
+      "success_episodes": 14,
+      "success_rate": 0.7,
+      "tag": "qwen3.5:9b",
+      "text_tool_calls": 0,
+      "well_formed_calls": 301,
+      "well_formed_rate": 1.0
+    },
+    "status_counts": {
+      "PARSE_FAIL": 6,
+      "SUCCESS": 14
+    },
+    "validation": {
+      "all_hashes_match": true,
+      "changed_queries": [
+        "BH2_03881"
+      ],
+      "context_log_events": 185,
+      "identical_initial_messages": true,
+      "offline_report": true,
+      "quality": {
+        "baseline32k": {
+          "label_a_counts": {
+            "ALT_VALID": 17,
+            "GOLD": 405,
+            "GOLD_BRIDGE_EXTRA": 0,
+            "OFF_QUESTION": 0,
+            "UNRESOLVED": 0
+          },
+          "label_b_counts": {
+            "KG_UNSUPPORTED": 0,
+            "NOT_APPLICABLE": 0,
+            "PATH_INVALID": 0,
+            "SUPPORTED": 422,
+            "UNGROUNDED": 0
+          },
+          "mean_query_precision": 0.5158333333333334,
+          "mean_query_recall": 0.5984920634920635,
+          "supported_items": 422
+        },
+        "resources32k": {
+          "label_a_counts": {
+            "ALT_VALID": 17,
+            "GOLD": 641,
+            "GOLD_BRIDGE_EXTRA": 0,
+            "OFF_QUESTION": 0,
+            "UNRESOLVED": 0
+          },
+          "label_b_counts": {
+            "KG_UNSUPPORTED": 0,
+            "NOT_APPLICABLE": 0,
+            "PATH_INVALID": 0,
+            "SUPPORTED": 658,
+            "UNGROUNDED": 0
+          },
+          "mean_query_precision": 0.5658333333333333,
+          "mean_query_recall": 0.6456920634920634,
+          "supported_items": 658
+        }
+      },
+      "queries": 20,
+      "runtime_samples": 44,
+      "sequential": true
+    }
+  }
+]

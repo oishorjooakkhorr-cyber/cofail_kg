@@ -1,3 +1,17 @@
+## Shared 32K resource reassessment completed — 2026-10-30
+
+All80 final episodes saved at context32768/output8192/request240s/episode600s.
+Gemma D3 PASS20 SUCCESS/16 competent; Ministral PASS19/18 (one host-sleep
+TIMEOUT retained); Granite PASS20/16; Qwen FAIL14/13,six PARSE_FAIL. P1,tools,
+finalization,parser,single re-prompt and gates unchanged. Qwen recovered one
+236-answer query but still has formatting/context failures; no P2 rescue.
+S21 remains unselected: only three pass this shared condition, and final sizing
+needs a separate capacity/protocol decision. Historical acceptance below remains
+unchanged. All1829 historical hashes,84 new raw/config hashes and source pins
+verified. Qwen resumed seven unsaved queries after restoring isolated0.40.12
+following the installed app's0.40.13 update; no completed record retried.
+[Full comparison and interruption disclosures](S20_shared_resources_32k.md).
+
 ## Gemma4-E4B 32K reassessment completed — 2026-10-29
 
 **D3 PASS:20/20 SUCCESS,16/20 competent**,188/188 well-formed calls,
