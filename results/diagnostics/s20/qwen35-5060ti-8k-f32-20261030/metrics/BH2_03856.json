@@ -1,0 +1,158 @@
+{
+  "agent_id": "Qwen35-9B",
+  "answer_count": 1,
+  "answers": [
+    {
+      "degree": 1097,
+      "degree_percentile": 99.94774998367187,
+      "first_seen_page": 1,
+      "h1": 1,
+      "label_a": "GOLD",
+      "label_b": "SUPPORTED",
+      "list_size": 28,
+      "node_id": "84409",
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "label": "indication",
+          "u": "36106",
+          "v": "15180"
+        },
+        {
+          "creation_index": 13,
+          "label": "drug_effect",
+          "u": "15180",
+          "v": "84409"
+        }
+      ],
+      "primary_path_max_list_size": 28,
+      "primary_reason_codes": [],
+      "reason_codes": [],
+      "submitted_index": 0
+    }
+  ],
+  "attempt": 1,
+  "benchmark_f1": 0.02631578947368421,
+  "benchmark_precision": 1.0,
+  "benchmark_recall": 0.013333333333333334,
+  "bridge_conditional_recall": {
+    "15180": 0.03571428571428571,
+    "15425": 0.016666666666666666
+  },
+  "bridge_rank": {
+    "15180": 1,
+    "15425": 2
+  },
+  "bridge_recall_counts": {
+    "15180": {
+      "correct": 1,
+      "total": 28
+    },
+    "15425": {
+      "correct": 1,
+      "total": 60
+    }
+  },
+  "bridges_explored": [
+    "15180",
+    "15425"
+  ],
+  "budget_exhausted": false,
+  "cause": null,
+  "construction": "UNION",
+  "denominators": {
+    "benchmark_f1": 76,
+    "benchmark_precision": 1,
+    "benchmark_recall": 75,
+    "off_question_rate": 1,
+    "question_valid_precision": 1,
+    "ungrounded_rate": 1,
+    "unresolved_rate": 1
+  },
+  "early_stop": true,
+  "episode_status": "SUCCESS",
+  "found_r1": true,
+  "hop1_status": "H1_MIXED",
+  "label_a_counts": {
+    "ALT_VALID": 0,
+    "GOLD": 1,
+    "GOLD_BRIDGE_EXTRA": 0,
+    "OFF_QUESTION": 0,
+    "UNRESOLVED": 0
+  },
+  "label_b_counts": {
+    "KG_UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0,
+    "PATH_INVALID": 0,
+    "SUPPORTED": 1,
+    "UNGROUNDED": 0
+  },
+  "node_statistics": {
+    "15180": {
+      "degree": 911,
+      "degree_percentile": 84.37853462360187
+    },
+    "15425": {
+      "degree": 1316,
+      "degree_percentile": 92.22068618826191
+    },
+    "36106": {
+      "degree": 16,
+      "degree_percentile": 70.63231850117097
+    },
+    "84409": {
+      "degree": 1097,
+      "degree_percentile": 99.94774998367187
+    }
+  },
+  "numerators": {
+    "benchmark_f1": 2,
+    "benchmark_precision": 1,
+    "benchmark_recall": 1,
+    "off_question_rate": 0,
+    "question_valid_precision": 1,
+    "ungrounded_rate": 0,
+    "unresolved_rate": 0
+  },
+  "off_question_rate": 0.0,
+  "pages_requested": 12,
+  "primary_reason_counts": {
+    "SHORTCUT": 0,
+    "WRONG_BRIDGE_TYPE": 0,
+    "WRONG_HOP_COUNT": 0,
+    "WRONG_RELATION_HOP1": 0,
+    "WRONG_RELATION_HOP2": 0,
+    "WRONG_TARGET_TYPE": 0
+  },
+  "query_id": "BH2_03856",
+  "question_valid_precision": 1.0,
+  "reason_counts": {
+    "SHORTCUT": 0,
+    "WRONG_BRIDGE_TYPE": 0,
+    "WRONG_HOP_COUNT": 0,
+    "WRONG_RELATION_HOP1": 0,
+    "WRONG_RELATION_HOP2": 0,
+    "WRONG_TARGET_TYPE": 0
+  },
+  "resolved_count": 1,
+  "run_id": "qwen35-5060ti-8k-f32-20261030",
+  "text_tool_call_count": 0,
+  "tool_calls_used": 24,
+  "undefined_counts": {
+    "benchmark_f1": 0,
+    "benchmark_precision": 0,
+    "benchmark_recall": 0,
+    "bridge_conditional_recall": 0,
+    "bridge_rank": 0,
+    "degree": 0,
+    "degree_percentile": 0,
+    "list_size": 0,
+    "off_question_rate": 0,
+    "primary_path_max_list_size": 0,
+    "question_valid_precision": 0,
+    "ungrounded_rate": 0,
+    "unresolved_rate": 0
+  },
+  "ungrounded_rate": 0.0,
+  "unresolved_rate": 0.0
+}

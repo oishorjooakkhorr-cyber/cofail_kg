@@ -1,0 +1,105 @@
+Ollama GET http://127.0.0.1:11435/api/version connection error; retry 1/2: HTTPConnectionPool(host='127.0.0.1', port=11435): Max retries exceeded with url: /api/version (Caused by NewConnectionError("HTTPConnection(host='127.0.0.1', port=11435): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it"))
+Ollama GET http://127.0.0.1:11435/api/version connection error; retry 2/2: HTTPConnectionPool(host='127.0.0.1', port=11435): Max retries exceeded with url: /api/version (Caused by NewConnectionError("HTTPConnection(host='127.0.0.1', port=11435): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it"))
+Ollama GET http://127.0.0.1:11435/api/version failed after 3 attempts: HTTPConnectionPool(host='127.0.0.1', port=11435): Max retries exceeded with url: /api/version (Caused by NewConnectionError("HTTPConnection(host='127.0.0.1', port=11435): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it"))
+CHECKED 0/20; context 8192; f32 KV; full GPU
+CHECKED 0/20; context 8192; f32 KV; full GPU
+Starting BH2_00461 / qwen3.5:9b (new episode 1)
+CHECKED 1/20; context 8192; f32 KV; full GPU
+CHECKED 1/20; context 8192; f32 KV; full GPU
+Starting BH2_02033 / qwen3.5:9b (new episode 2)
+CHECKED 2/20; context 8192; f32 KV; full GPU
+CHECKED 2/20; context 8192; f32 KV; full GPU
+Starting BH2_03434 / qwen3.5:9b (new episode 3)
+CHECKED 3/20; context 8192; f32 KV; full GPU
+CHECKED 3/20; context 8192; f32 KV; full GPU
+Starting BH2_03619 / qwen3.5:9b (new episode 4)
+CHECKED 4/20; context 8192; f32 KV; full GPU
+CHECKED 4/20; context 8192; f32 KV; full GPU
+Starting BH2_03750 / qwen3.5:9b (new episode 5)
+CHECKED 5/20; context 8192; f32 KV; full GPU
+CHECKED 5/20; context 8192; f32 KV; full GPU
+Starting BH2_03760 / qwen3.5:9b (new episode 6)
+CHECKED 6/20; context 8192; f32 KV; full GPU
+CHECKED 6/20; context 8192; f32 KV; full GPU
+Starting BH2_03762 / qwen3.5:9b (new episode 7)
+CHECKED 7/20; context 8192; f32 KV; full GPU
+CHECKED 7/20; context 8192; f32 KV; full GPU
+Starting BH2_03850 / qwen3.5:9b (new episode 8)
+CHECKED 8/20; context 8192; f32 KV; full GPU
+CHECKED 8/20; context 8192; f32 KV; full GPU
+Starting BH2_03856 / qwen3.5:9b (new episode 9)
+CHECKED 9/20; context 8192; f32 KV; full GPU
+CHECKED 9/20; context 8192; f32 KV; full GPU
+Starting BH2_03879 / qwen3.5:9b (new episode 10)
+CHECKED 10/20; context 8192; f32 KV; full GPU
+CHECKED 10/20; context 8192; f32 KV; full GPU
+Starting BH2_03881 / qwen3.5:9b (new episode 11)
+CHECKED 11/20; context 8192; f32 KV; full GPU
+CHECKED 11/20; context 8192; f32 KV; full GPU
+Starting BH2_03953 / qwen3.5:9b (new episode 12)
+CHECKED 12/20; context 8192; f32 KV; full GPU
+CHECKED 12/20; context 8192; f32 KV; full GPU
+Starting BH2_03991 / qwen3.5:9b (new episode 13)
+CHECKED 13/20; context 8192; f32 KV; full GPU
+CHECKED 13/20; context 8192; f32 KV; full GPU
+Starting BH2_04003 / qwen3.5:9b (new episode 14)
+CHECKED 14/20; context 8192; f32 KV; full GPU
+CHECKED 14/20; context 8192; f32 KV; full GPU
+Starting BH2_04007 / qwen3.5:9b (new episode 15)
+CHECKED 15/20; context 8192; f32 KV; full GPU
+CHECKED 15/20; context 8192; f32 KV; full GPU
+Starting BH2_04425 / qwen3.5:9b (new episode 16)
+CHECKED 16/20; context 8192; f32 KV; full GPU
+CHECKED 16/20; context 8192; f32 KV; full GPU
+Starting BH2_05366 / qwen3.5:9b (new episode 17)
+CHECKED 17/20; context 8192; f32 KV; full GPU
+CHECKED 17/20; context 8192; f32 KV; full GPU
+Starting BH2_05686 / qwen3.5:9b (new episode 18)
+CHECKED 18/20; context 8192; f32 KV; full GPU
+CHECKED 18/20; context 8192; f32 KV; full GPU
+Starting BH2_05843 / qwen3.5:9b (new episode 19)
+CHECKED 19/20; context 8192; f32 KV; full GPU
+CHECKED 19/20; context 8192; f32 KV; full GPU
+Starting BH2_06427 / qwen3.5:9b (new episode 20)
+CHECKED 20/20; context 8192; f32 KV; full GPU
+{
+  "screening_row": {
+    "run_id": "qwen35-5060ti-8k-f32-20261030",
+    "agent_id": "Qwen35-9B",
+    "tag": "qwen3.5:9b",
+    "digest": "56671c2ab9385f9cfcb404638e32cd62d88e3501d44822208363c010179a3c90",
+    "quantization": "Q4_K_M",
+    "parameter_size": "9.0B",
+    "family": "Qwen",
+    "episodes_completed": 20,
+    "episodes_expected": 20,
+    "complete": true,
+    "native_calls": 232,
+    "text_tool_calls": 0,
+    "attempted_calls": 232,
+    "well_formed_calls": 232,
+    "well_formed_rate": 1.0,
+    "success_episodes": 18,
+    "success_rate": 0.9,
+    "competent_episodes": 14,
+    "competence": 0.7,
+    "median_wall_seconds": 18.516922,
+    "out_of_memory_episodes": 0,
+    "largest_prompt_eval_count": 8189,
+    "median_tool_calls": 9.0,
+    "budget_hit_share": 0.05,
+    "pass_well_formed": true,
+    "pass_success": true,
+    "pass_competence": true,
+    "pass_time": true,
+    "pass_oom": true,
+    "d3_pass": true
+  },
+  "status_counts": {
+    "SUCCESS": 18,
+    "PARSE_FAIL": 2
+  },
+  "runtime": "0.40.12",
+  "kv_cache": "f32"
+}
+PHASE run COMPLETE

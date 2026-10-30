@@ -2434,3 +2434,11 @@ confirmed actual K/V f32 allocation and 33/33 GPU layers. Outcome-informed
 diagnostic on already inspected questions; preserves every previous run and
 acceptance; no S21 selection. Not committed (commit not authorized); sources
 are SHA256-pinned in the run manifest.
+
+## Qwen35-9B 8K f32-KV block completed — 2026-10-30
+D3 PASS: 18/20 SUCCESS, 14/20 competent, 232/232 well-formed calls, median
+18.516922 s, zero OOM/ERROR. Two PARSE_FAIL (BH2_03879, BH2_03991). All 41
+runtime guards passed (8192, f32 K/V, 33/33 GPU, Flash Attention). Six queries
+differ from the 3060 Ti 8K block in both directions; the cause is not isolated
+(host, runtime build, placement and KV type all differ). No S21 selection.
+Report: docs/S20_qwen35_5060ti_8k_f32.md. Not committed.

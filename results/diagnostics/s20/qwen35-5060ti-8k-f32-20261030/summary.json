@@ -1,0 +1,40 @@
+{
+  "kv_cache": "f32",
+  "runtime": "0.40.12",
+  "screening_row": {
+    "agent_id": "Qwen35-9B",
+    "attempted_calls": 232,
+    "budget_hit_share": 0.05,
+    "competence": 0.7,
+    "competent_episodes": 14,
+    "complete": true,
+    "d3_pass": true,
+    "digest": "56671c2ab9385f9cfcb404638e32cd62d88e3501d44822208363c010179a3c90",
+    "episodes_completed": 20,
+    "episodes_expected": 20,
+    "family": "Qwen",
+    "largest_prompt_eval_count": 8189,
+    "median_tool_calls": 9.0,
+    "median_wall_seconds": 18.516922,
+    "native_calls": 232,
+    "out_of_memory_episodes": 0,
+    "parameter_size": "9.0B",
+    "pass_competence": true,
+    "pass_oom": true,
+    "pass_success": true,
+    "pass_time": true,
+    "pass_well_formed": true,
+    "quantization": "Q4_K_M",
+    "run_id": "qwen35-5060ti-8k-f32-20261030",
+    "success_episodes": 18,
+    "success_rate": 0.9,
+    "tag": "qwen3.5:9b",
+    "text_tool_calls": 0,
+    "well_formed_calls": 232,
+    "well_formed_rate": 1.0
+  },
+  "status_counts": {
+    "PARSE_FAIL": 2,
+    "SUCCESS": 18
+  }
+}
