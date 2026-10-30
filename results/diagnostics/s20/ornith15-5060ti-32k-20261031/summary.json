@@ -1,0 +1,49 @@
+{
+  "error_causes": {
+    "RUNTIME": 1
+  },
+  "runtime": {
+    "executable_sha256": "aa76635f0a54c663093a9d1c307f6abde3fb4fa0b1aebfd42f71b6faeec0a8e5",
+    "flash_attention_env": "true",
+    "kv_cache_type": "f16",
+    "num_parallel": 1,
+    "ollama": "0.40.12"
+  },
+  "screening_row": {
+    "agent_id": "Ornith15-9B",
+    "attempted_calls": 315,
+    "budget_hit_share": 0.15,
+    "competence": 0.55,
+    "competent_episodes": 11,
+    "complete": true,
+    "d3_pass": true,
+    "digest": "e5df7dcdd8a263994df62d610317e07be0d6af23f96fcbd8543273058fce575e",
+    "episodes_completed": 20,
+    "episodes_expected": 20,
+    "family": "UNVERIFIED-qwen35-architecture",
+    "largest_prompt_eval_count": 32723,
+    "median_tool_calls": 12.5,
+    "median_wall_seconds": 47.5706245,
+    "native_calls": 315,
+    "out_of_memory_episodes": 0,
+    "parameter_size": "9.0B",
+    "pass_competence": true,
+    "pass_oom": true,
+    "pass_success": true,
+    "pass_time": true,
+    "pass_well_formed": true,
+    "quantization": "Q4_K_M",
+    "run_id": "ornith15-5060ti-32k-20261031",
+    "success_episodes": 18,
+    "success_rate": 0.9,
+    "tag": "ornith-1.5:9b",
+    "text_tool_calls": 0,
+    "well_formed_calls": 315,
+    "well_formed_rate": 1.0
+  },
+  "status_counts": {
+    "ERROR": 1,
+    "PARSE_FAIL": 1,
+    "SUCCESS": 18
+  }
+}

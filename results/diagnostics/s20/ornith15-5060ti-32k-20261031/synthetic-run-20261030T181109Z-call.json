@@ -1,0 +1,30 @@
+{
+  "model": "ornith-1.5:9b",
+  "created_at": "2026-10-30T18:11:22.0214376Z",
+  "message": {
+    "role": "assistant",
+    "content": "",
+    "tool_calls": [
+      {
+        "id": "4zCrqThtTlaPAZW4NJ2JJtSUZgB7swwK",
+        "function": {
+          "index": 0,
+          "name": "add",
+          "arguments": {
+            "a": 2,
+            "b": 3
+          }
+        }
+      }
+    ]
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 3514400500,
+  "load_duration": 2810992600,
+  "prompt_eval_count": 294,
+  "prompt_eval_cached_count": 0,
+  "prompt_eval_duration": 201782000,
+  "eval_count": 35,
+  "eval_duration": 498092000
+}

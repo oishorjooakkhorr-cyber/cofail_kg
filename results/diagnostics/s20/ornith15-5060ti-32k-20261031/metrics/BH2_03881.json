@@ -1,0 +1,121 @@
+{
+  "agent_id": "Ornith15-9B",
+  "answer_count": null,
+  "answers": [],
+  "attempt": 1,
+  "benchmark_f1": null,
+  "benchmark_precision": null,
+  "benchmark_recall": null,
+  "bridge_conditional_recall": {
+    "14281": null,
+    "14992": null,
+    "15456": null,
+    "15502": null
+  },
+  "bridge_rank": {
+    "14281": 1,
+    "14992": 2,
+    "15456": 3,
+    "15502": 4
+  },
+  "bridge_recall_counts": {
+    "14281": {
+      "correct": null,
+      "total": 47
+    },
+    "14992": {
+      "correct": null,
+      "total": 97
+    },
+    "15456": {
+      "correct": null,
+      "total": 158
+    },
+    "15502": {
+      "correct": null,
+      "total": 186
+    }
+  },
+  "bridges_explored": [
+    "14281",
+    "14992",
+    "15456",
+    "15502"
+  ],
+  "budget_exhausted": false,
+  "cause": null,
+  "construction": "UNION",
+  "denominators": {
+    "benchmark_f1": null,
+    "benchmark_precision": null,
+    "benchmark_recall": 250,
+    "off_question_rate": null,
+    "question_valid_precision": null,
+    "ungrounded_rate": null,
+    "unresolved_rate": null
+  },
+  "early_stop": null,
+  "episode_status": "PARSE_FAIL",
+  "found_r1": true,
+  "hop1_status": "H1_CLEAN",
+  "label_a_counts": null,
+  "label_b_counts": null,
+  "node_statistics": {
+    "14281": {
+      "degree": 1401,
+      "degree_percentile": 93.96757571949227
+    },
+    "14992": {
+      "degree": 1186,
+      "degree_percentile": 90.02136483599347
+    },
+    "15456": {
+      "degree": 1519,
+      "degree_percentile": 95.57622219429433
+    },
+    "15502": {
+      "degree": 935,
+      "degree_percentile": 84.81839889405555
+    },
+    "32651": {
+      "degree": 82,
+      "degree_percentile": 95.81381733021077
+    }
+  },
+  "numerators": {
+    "benchmark_f1": null,
+    "benchmark_precision": null,
+    "benchmark_recall": null,
+    "off_question_rate": null,
+    "question_valid_precision": null,
+    "ungrounded_rate": null,
+    "unresolved_rate": null
+  },
+  "off_question_rate": null,
+  "pages_requested": 12,
+  "primary_reason_counts": null,
+  "query_id": "BH2_03881",
+  "question_valid_precision": null,
+  "reason_counts": null,
+  "resolved_count": null,
+  "run_id": "ornith15-5060ti-32k-20261031",
+  "text_tool_call_count": 0,
+  "tool_calls_used": 19,
+  "undefined_counts": {
+    "benchmark_f1": 1,
+    "benchmark_precision": 1,
+    "benchmark_recall": 1,
+    "bridge_conditional_recall": 4,
+    "bridge_rank": 0,
+    "degree": 0,
+    "degree_percentile": 0,
+    "list_size": 0,
+    "off_question_rate": 1,
+    "primary_path_max_list_size": 0,
+    "question_valid_precision": 1,
+    "ungrounded_rate": 1,
+    "unresolved_rate": 1
+  },
+  "ungrounded_rate": null,
+  "unresolved_rate": null
+}

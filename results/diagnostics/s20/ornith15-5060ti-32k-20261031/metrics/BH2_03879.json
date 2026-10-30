@@ -1,0 +1,143 @@
+{
+  "agent_id": "Ornith15-9B",
+  "answer_count": null,
+  "answers": [],
+  "attempt": 1,
+  "benchmark_f1": null,
+  "benchmark_precision": null,
+  "benchmark_recall": null,
+  "bridge_conditional_recall": {
+    "14945": null,
+    "14975": null,
+    "15002": null,
+    "15012": null,
+    "15176": null,
+    "15205": null
+  },
+  "bridge_rank": {
+    "14945": 1,
+    "14975": 2,
+    "15002": 3,
+    "15012": 4,
+    "15176": 6,
+    "15205": 7
+  },
+  "bridge_recall_counts": {
+    "14945": {
+      "correct": null,
+      "total": 89
+    },
+    "14975": {
+      "correct": null,
+      "total": 145
+    },
+    "15002": {
+      "correct": null,
+      "total": 124
+    },
+    "15012": {
+      "correct": null,
+      "total": 76
+    },
+    "15176": {
+      "correct": null,
+      "total": 172
+    },
+    "15205": {
+      "correct": null,
+      "total": 86
+    }
+  },
+  "bridges_explored": [
+    "14945",
+    "14975",
+    "15002",
+    "15012",
+    "15176",
+    "15205"
+  ],
+  "budget_exhausted": false,
+  "cause": "RUNTIME",
+  "construction": "UNION",
+  "denominators": {
+    "benchmark_f1": null,
+    "benchmark_precision": null,
+    "benchmark_recall": 271,
+    "off_question_rate": null,
+    "question_valid_precision": null,
+    "ungrounded_rate": null,
+    "unresolved_rate": null
+  },
+  "early_stop": null,
+  "episode_status": "ERROR",
+  "found_r1": true,
+  "hop1_status": "H1_CLEAN",
+  "label_a_counts": null,
+  "label_b_counts": null,
+  "node_statistics": {
+    "14945": {
+      "degree": 2130,
+      "degree_percentile": 99.50986552720875
+    },
+    "14975": {
+      "degree": 1456,
+      "degree_percentile": 94.73419630514013
+    },
+    "15002": {
+      "degree": 1593,
+      "degree_percentile": 96.36797788111096
+    },
+    "15012": {
+      "degree": 1443,
+      "degree_percentile": 94.55825059695864
+    },
+    "15176": {
+      "degree": 1504,
+      "degree_percentile": 95.3248711826065
+    },
+    "15205": {
+      "degree": 1582,
+      "degree_percentile": 96.22973482468267
+    },
+    "36937": {
+      "degree": 165,
+      "degree_percentile": 98.61826697892272
+    }
+  },
+  "numerators": {
+    "benchmark_f1": null,
+    "benchmark_precision": null,
+    "benchmark_recall": null,
+    "off_question_rate": null,
+    "question_valid_precision": null,
+    "ungrounded_rate": null,
+    "unresolved_rate": null
+  },
+  "off_question_rate": null,
+  "pages_requested": 17,
+  "primary_reason_counts": null,
+  "query_id": "BH2_03879",
+  "question_valid_precision": null,
+  "reason_counts": null,
+  "resolved_count": null,
+  "run_id": "ornith15-5060ti-32k-20261031",
+  "text_tool_call_count": 0,
+  "tool_calls_used": 29,
+  "undefined_counts": {
+    "benchmark_f1": 1,
+    "benchmark_precision": 1,
+    "benchmark_recall": 1,
+    "bridge_conditional_recall": 6,
+    "bridge_rank": 0,
+    "degree": 0,
+    "degree_percentile": 0,
+    "list_size": 0,
+    "off_question_rate": 1,
+    "primary_path_max_list_size": 0,
+    "question_valid_precision": 1,
+    "ungrounded_rate": 1,
+    "unresolved_rate": 1
+  },
+  "ungrounded_rate": null,
+  "unresolved_rate": null
+}

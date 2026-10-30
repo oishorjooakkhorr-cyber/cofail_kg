@@ -2515,3 +2515,20 @@ D3 FAIL on competence: 20/20 SUCCESS, 0/20 competent, 60/60 well-formed calls,
 median 5.64 s, zero ERROR/OOM. 14 no_answer; 61 submitted items, none SUPPORTED.
 13 episodes stop right after one failed tool call. Report:
 docs/S20_nemotron9b_5060ti_32k.md. Qwen35-9B remains in the panel; no change.
+
+## 2026-10-31 — Authorized ornith-1.5:9b 32K S20 candidate block
+Researcher request: fresh S20 block for ornith-1.5:9b at num_ctx 32768, num_predict 8192,
+f16 KV, as a possible replacement for Qwen35-9B. Model pulled by the researcher (Ollama
+library, digest e5df7dcd...575e, Q4_K_M, 9.0B, architecture qwen35). Synthetic probe on
+pinned 0.40.12: think=false honoured, native tool call, 33/33 GPU, embedded template; used
+unmodified. Settings as the panel's 32K agents: request 240 s, episode 600 s, budget 30,
+page 50, temperature 0, seed 42, Flash Attention on. P1, tools, parser, re-prompt,
+evaluators and D3 unchanged. Family recorded as unverified (no model-card lineage checked).
+Run ID ornith15-5060ti-32k-20261031. No panel change without researcher decision.
+
+## ornith-1.5:9b 32K block completed — 2026-10-31
+D3 PASS: 18/20 SUCCESS, 11/20 competent, 315/315 well-formed calls, median 47.57 s, zero OOM;
+one ERROR/RUNTIME (truncated tool-call JSON) and one PARSE_FAIL. Largest prompt 32723/32768;
+three episodes above 90% of num_ctx. Seven episodes answer only the start entity. Qwen35-9B
+8K f32 on the same queries: 14 competent. Family unverified (qwen35 architecture).
+Report: docs/S20_ornith15_5060ti_32k.md. No panel change; researcher decision pending.
