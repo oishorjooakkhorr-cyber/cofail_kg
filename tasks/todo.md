@@ -387,10 +387,10 @@ archive errors remain. Proof:docs/S20_granite41_5060ti_32k_backup.md. Complete; 
   optional unofficial P2 exploration; preserve the requested32K context.
 - [x] Task1: researcher authorizes the resource amendment; prerecord the shared
   configuration, run IDs and acceptance checks with P1/interaction unchanged.
-- [ ] Task2: implement/test the resource-only reassessment (32K context,8192
+- [x] Task2: implement/test the resource-only reassessment (32K context,8192
   output,240s request,600s episode; P1,tools,finalization,parser and exact existing
   single re-prompt unchanged); pass four-model preflight.
-- [ ] Checkpoint: pinned executable/configuration, tests and runtime proof before
+- [x] Checkpoint: pinned executable/configuration, tests and runtime proof before
   official inference; historical results and unrelated tasks preserved.
 - [ ] Task3: run all80 official episodes; offline D3, paired quality/context/time
   report and integrity checks. Retain failures without an automatic P2 rescue.
