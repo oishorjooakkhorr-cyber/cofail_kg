@@ -2354,3 +2354,34 @@ Report: docs/S20_granite41_5060ti_32k.md. Publication/Drive proof follows.
 Granite32K publication:results a1f5727 pushed to main; Drive70/70 checksum
 matches,zero differences at01:51:48 Dhaka2026-10-30. Nine unrelated historical
 archive errors remain. Proof:docs/S20_granite41_5060ti_32k_backup.md. Complete; no S21.
+## 2026-10-30 — Shared 32K resource reassessment authorized
+
+Researcher instruction: "do these one by one following the list and let me know
+when its done", referring to commit 914fe42 and its ordered checklist. This
+authorizes tasks 1–3, including implementation, synthetic preflight and all 80
+official episodes. Scoped section 20 resource amendment to screening section 9.1:
+num_ctx=32768, num_predict=8192, request timeout=240s, episode timeout=600s.
+The comparison changes output cap and request deadline together relative to each
+same-host 32K baseline. It is outcome-informed development, not independent
+confirmation or an isolated output-token causal estimate.
+
+Fixed model order: Gemma4-E4B, Ministral3-8B, Granite41-8B, Qwen35-9B. Run IDs:
+gemma4-5060ti-32k-resources-20261030,
+ministral3-5060ti-32k-resources-20261030,
+granite41-5060ti-32k-resources-20261030,
+qwen35-5060ti-32k-resources-20261030. Each uses the original twenty-query order,
+exact same-host baseline digest, Q4_K_M, Ollama 0.40.12, f16 KV, full GPU residency,
+effective Flash Attention and existing per-model speculative configuration.
+Temperature=0, seed=42, think=false, budget=30, page_size=50.
+
+Protocol sections 9.3/9.4 and D3 remain unchanged: P1, two tools, final-turn
+behavior, exact single JSON re-prompt, parser, source/input and model identities
+are pinned before inference. Gold references and evaluator labels are loaded only
+offline after the server stops. Every saved final status is immutable and skipped
+on resume. All four synthetic preflights must pass before any official episode.
+Stop on source/history/identity/runtime/cache/placement guard failure, server
+failure or infrastructure exception; preserve all existing evidence. Model-level
+PARSE_FAIL, TIMEOUT or ERROR outcomes remain in the denominator; proceed only
+while identity, server health and placement guards pass. No automatic content
+retry, replacement, prompt intervention, context increase, offload or cache tuning.
+No P2 exploration or S21 selection/freeze is authorized by this execution.

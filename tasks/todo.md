@@ -380,12 +380,12 @@ Granite32K publication:results a1f5727 pushed to main; Drive70/70 checksum
 matches,zero differences at01:51:48 Dhaka2026-10-30. Nine unrelated historical
 archive errors remain. Proof:docs/S20_granite41_5060ti_32k_backup.md. Complete; no S21.
 
-## Proposed shared four-model reassessment — 2026-10-30 (not authorized to run)
+## Shared four-model reassessment — 2026-10-30 (execution authorized)
 - [x] Review four-model16K/32K evidence, runner finalization and protocol9.1-9.4;
   record shared candidate and limits in tasks/plan.md.
 - [x] Remove conditional finalization from official tasks as requested. Separate
   optional unofficial P2 exploration; preserve the requested32K context.
-- [ ] Task1: researcher authorizes the resource amendment; prerecord the shared
+- [x] Task1: researcher authorizes the resource amendment; prerecord the shared
   configuration, run IDs and acceptance checks with P1/interaction unchanged.
 - [ ] Task2: implement/test the resource-only reassessment (32K context,8192
   output,240s request,600s episode; P1,tools,finalization,parser and exact existing

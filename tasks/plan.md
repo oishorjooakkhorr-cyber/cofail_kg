@@ -521,6 +521,12 @@ archive errors remain. Proof:docs/S20_granite41_5060ti_32k_backup.md. Complete; 
 
 ## Proposed shared four-model reassessment — 2026-10-30
 
+Execution update: the researcher subsequently instructed "do these one by one
+following the list and let me know when its done". Tasks 1–3 are now authorized;
+the proposal's earlier planning-only wording below is retained as history.
+Scoped amendment and run IDs are recorded in docs/decision_log.md before inference.
+Optional P2 and S21 selection remain separate and unstarted.
+
 Planning only, requested by the researcher. Extends S20 planning; preserves all
 earlier work and unrelated open tasks. No authorization to implement, infer,
 change frozen documents, publish, or select S21 is implied by this proposal.
