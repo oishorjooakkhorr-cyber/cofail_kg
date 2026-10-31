@@ -1,0 +1,30 @@
+{
+  "model": "hf.co/bartowski/MiMo-V2.6-Distill-Qwen-9B-GGUF:Q4_K_M",
+  "created_at": "2026-10-31T17:48:52.388387Z",
+  "message": {
+    "role": "assistant",
+    "content": "",
+    "tool_calls": [
+      {
+        "id": "Nz5VMCHoRMvyn1a0qALyFJsddzRhClQu",
+        "function": {
+          "index": 0,
+          "name": "add",
+          "arguments": {
+            "a": 2,
+            "b": 3
+          }
+        }
+      }
+    ]
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 2807393200,
+  "load_duration": 2257837200,
+  "prompt_eval_count": 110,
+  "prompt_eval_cached_count": 0,
+  "prompt_eval_duration": 223012000,
+  "eval_count": 23,
+  "eval_duration": 323850000
+}

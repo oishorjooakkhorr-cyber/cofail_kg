@@ -1,0 +1,110 @@
+Ollama GET http://127.0.0.1:11435/api/version connection error; retry 1/2: HTTPConnectionPool(host='127.0.0.1', port=11435): Max retries exceeded with url: /api/version (Caused by NewConnectionError("HTTPConnection(host='127.0.0.1', port=11435): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it"))
+Ollama GET http://127.0.0.1:11435/api/version connection error; retry 2/2: HTTPConnectionPool(host='127.0.0.1', port=11435): Max retries exceeded with url: /api/version (Caused by NewConnectionError("HTTPConnection(host='127.0.0.1', port=11435): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it"))
+Ollama GET http://127.0.0.1:11435/api/version failed after 3 attempts: HTTPConnectionPool(host='127.0.0.1', port=11435): Max retries exceeded with url: /api/version (Caused by NewConnectionError("HTTPConnection(host='127.0.0.1', port=11435): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it"))
+CHECKED 0/20; ctx 32768; f16 KV; 33/33 GPU; embedded template
+CHECKED 0/20; ctx 32768; f16 KV; 33/33 GPU; embedded template
+Starting BH2_00461 / hf.co/bartowski/MiMo-V2.6-Distill-Qwen-9B-GGUF:Q4_K_M (new episode 1)
+CHECKED 1/20; ctx 32768; f16 KV; 33/33 GPU; embedded template
+CHECKED 1/20; ctx 32768; f16 KV; 33/33 GPU; embedded template
+Starting BH2_02033 / hf.co/bartowski/MiMo-V2.6-Distill-Qwen-9B-GGUF:Q4_K_M (new episode 2)
+CHECKED 2/20; ctx 32768; f16 KV; 33/33 GPU; embedded template
+CHECKED 2/20; ctx 32768; f16 KV; 33/33 GPU; embedded template
+Starting BH2_03434 / hf.co/bartowski/MiMo-V2.6-Distill-Qwen-9B-GGUF:Q4_K_M (new episode 3)
+CHECKED 3/20; ctx 32768; f16 KV; 33/33 GPU; embedded template
+CHECKED 3/20; ctx 32768; f16 KV; 33/33 GPU; embedded template
+Starting BH2_03619 / hf.co/bartowski/MiMo-V2.6-Distill-Qwen-9B-GGUF:Q4_K_M (new episode 4)
+CHECKED 4/20; ctx 32768; f16 KV; 33/33 GPU; embedded template
+CHECKED 4/20; ctx 32768; f16 KV; 33/33 GPU; embedded template
+Starting BH2_03750 / hf.co/bartowski/MiMo-V2.6-Distill-Qwen-9B-GGUF:Q4_K_M (new episode 5)
+CHECKED 5/20; ctx 32768; f16 KV; 33/33 GPU; embedded template
+CHECKED 5/20; ctx 32768; f16 KV; 33/33 GPU; embedded template
+Starting BH2_03760 / hf.co/bartowski/MiMo-V2.6-Distill-Qwen-9B-GGUF:Q4_K_M (new episode 6)
+CHECKED 6/20; ctx 32768; f16 KV; 33/33 GPU; embedded template
+CHECKED 6/20; ctx 32768; f16 KV; 33/33 GPU; embedded template
+Starting BH2_03762 / hf.co/bartowski/MiMo-V2.6-Distill-Qwen-9B-GGUF:Q4_K_M (new episode 7)
+CHECKED 7/20; ctx 32768; f16 KV; 33/33 GPU; embedded template
+CHECKED 7/20; ctx 32768; f16 KV; 33/33 GPU; embedded template
+Starting BH2_03850 / hf.co/bartowski/MiMo-V2.6-Distill-Qwen-9B-GGUF:Q4_K_M (new episode 8)
+CHECKED 8/20; ctx 32768; f16 KV; 33/33 GPU; embedded template
+CHECKED 8/20; ctx 32768; f16 KV; 33/33 GPU; embedded template
+Starting BH2_03856 / hf.co/bartowski/MiMo-V2.6-Distill-Qwen-9B-GGUF:Q4_K_M (new episode 9)
+CHECKED 9/20; ctx 32768; f16 KV; 33/33 GPU; embedded template
+CHECKED 9/20; ctx 32768; f16 KV; 33/33 GPU; embedded template
+Starting BH2_03879 / hf.co/bartowski/MiMo-V2.6-Distill-Qwen-9B-GGUF:Q4_K_M (new episode 10)
+CHECKED 10/20; ctx 32768; f16 KV; 33/33 GPU; embedded template
+CHECKED 10/20; ctx 32768; f16 KV; 33/33 GPU; embedded template
+Starting BH2_03881 / hf.co/bartowski/MiMo-V2.6-Distill-Qwen-9B-GGUF:Q4_K_M (new episode 11)
+CHECKED 11/20; ctx 32768; f16 KV; 33/33 GPU; embedded template
+CHECKED 11/20; ctx 32768; f16 KV; 33/33 GPU; embedded template
+Starting BH2_03953 / hf.co/bartowski/MiMo-V2.6-Distill-Qwen-9B-GGUF:Q4_K_M (new episode 12)
+CHECKED 12/20; ctx 32768; f16 KV; 33/33 GPU; embedded template
+CHECKED 12/20; ctx 32768; f16 KV; 33/33 GPU; embedded template
+Starting BH2_03991 / hf.co/bartowski/MiMo-V2.6-Distill-Qwen-9B-GGUF:Q4_K_M (new episode 13)
+CHECKED 13/20; ctx 32768; f16 KV; 33/33 GPU; embedded template
+CHECKED 13/20; ctx 32768; f16 KV; 33/33 GPU; embedded template
+Starting BH2_04003 / hf.co/bartowski/MiMo-V2.6-Distill-Qwen-9B-GGUF:Q4_K_M (new episode 14)
+CHECKED 14/20; ctx 32768; f16 KV; 33/33 GPU; embedded template
+CHECKED 14/20; ctx 32768; f16 KV; 33/33 GPU; embedded template
+Starting BH2_04007 / hf.co/bartowski/MiMo-V2.6-Distill-Qwen-9B-GGUF:Q4_K_M (new episode 15)
+CHECKED 15/20; ctx 32768; f16 KV; 33/33 GPU; embedded template
+CHECKED 15/20; ctx 32768; f16 KV; 33/33 GPU; embedded template
+Starting BH2_04425 / hf.co/bartowski/MiMo-V2.6-Distill-Qwen-9B-GGUF:Q4_K_M (new episode 16)
+CHECKED 16/20; ctx 32768; f16 KV; 33/33 GPU; embedded template
+CHECKED 16/20; ctx 32768; f16 KV; 33/33 GPU; embedded template
+Starting BH2_05366 / hf.co/bartowski/MiMo-V2.6-Distill-Qwen-9B-GGUF:Q4_K_M (new episode 17)
+CHECKED 17/20; ctx 32768; f16 KV; 33/33 GPU; embedded template
+CHECKED 17/20; ctx 32768; f16 KV; 33/33 GPU; embedded template
+Starting BH2_05686 / hf.co/bartowski/MiMo-V2.6-Distill-Qwen-9B-GGUF:Q4_K_M (new episode 18)
+CHECKED 18/20; ctx 32768; f16 KV; 33/33 GPU; embedded template
+CHECKED 18/20; ctx 32768; f16 KV; 33/33 GPU; embedded template
+Starting BH2_05843 / hf.co/bartowski/MiMo-V2.6-Distill-Qwen-9B-GGUF:Q4_K_M (new episode 19)
+CHECKED 19/20; ctx 32768; f16 KV; 33/33 GPU; embedded template
+CHECKED 19/20; ctx 32768; f16 KV; 33/33 GPU; embedded template
+Starting BH2_06427 / hf.co/bartowski/MiMo-V2.6-Distill-Qwen-9B-GGUF:Q4_K_M (new episode 20)
+CHECKED 20/20; ctx 32768; f16 KV; 33/33 GPU; embedded template
+{
+  "screening_row": {
+    "run_id": "mimo9b-5060ti-32k-20261031",
+    "agent_id": "MiMoV26DistillQwen-9B",
+    "tag": "hf.co/bartowski/MiMo-V2.6-Distill-Qwen-9B-GGUF:Q4_K_M",
+    "digest": "e2eb00850f5e50b1d49e0456eac740e10d61f47bccd9d8cf29877c97d6897bef",
+    "quantization": "Q4_K_M",
+    "parameter_size": "8.95B",
+    "family": "UNVERIFIED-qwen35-architecture",
+    "episodes_completed": 20,
+    "episodes_expected": 20,
+    "complete": true,
+    "native_calls": 0,
+    "text_tool_calls": 0,
+    "attempted_calls": 0,
+    "well_formed_calls": 0,
+    "well_formed_rate": null,
+    "success_episodes": 20,
+    "success_rate": 1.0,
+    "competent_episodes": 0,
+    "competence": 0.0,
+    "median_wall_seconds": 1.9731545000000001,
+    "out_of_memory_episodes": 0,
+    "largest_prompt_eval_count": 8795,
+    "median_tool_calls": 0.0,
+    "budget_hit_share": 0.0,
+    "pass_well_formed": false,
+    "pass_success": true,
+    "pass_competence": false,
+    "pass_time": true,
+    "pass_oom": true,
+    "d3_pass": false
+  },
+  "status_counts": {
+    "SUCCESS": 20
+  },
+  "error_causes": {},
+  "runtime": {
+    "executable_sha256": "aa76635f0a54c663093a9d1c307f6abde3fb4fa0b1aebfd42f71b6faeec0a8e5",
+    "flash_attention_env": "true",
+    "kv_cache_type": "f16",
+    "num_parallel": 1,
+    "ollama": "0.40.12"
+  }
+}
+PHASE run COMPLETE

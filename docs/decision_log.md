@@ -2532,3 +2532,19 @@ one ERROR/RUNTIME (truncated tool-call JSON) and one PARSE_FAIL. Largest prompt 
 three episodes above 90% of num_ctx. Seven episodes answer only the start entity. Qwen35-9B
 8K f32 on the same queries: 14 competent. Family unverified (qwen35 architecture).
 Report: docs/S20_ornith15_5060ti_32k.md. No panel change; researcher decision pending.
+
+## 2026-10-31 — Authorized MiMo-V2.6-Distill-Qwen-9B 32K S20 candidate block
+Researcher request: fresh S20 block for hf.co/bartowski/MiMo-V2.6-Distill-Qwen-9B-GGUF:Q4_K_M
+at num_ctx 32768, num_predict 8192, f16 KV, as a possible replacement for Qwen35-9B. Digest
+e2eb0085...7bef, 8.95B, architecture qwen35. Synthetic probe on pinned 0.40.12: think=false
+honoured (template enable_thinking path), native tool call, 33/33 GPU, embedded template; used
+unmodified. Settings as the panel's 32K agents: request 240 s, episode 600 s, budget 30, page 50,
+temperature 0, seed 42, Flash Attention on. P1, tools, parser, re-prompt, evaluators and D3
+unchanged. Family recorded as unverified. Run ID mimo9b-5060ti-32k-20261031. No panel change
+without researcher decision.
+
+## MiMo-V2.6-Distill-Qwen-9B 32K block completed — 2026-10-31
+D3 FAIL: no tool call attempted in any of 20 episodes (well-formed criterion fails), 0/20
+competent, 20/20 SUCCESS, median 1.97 s, zero ERROR/OOM. 18 immediate no_answer; two answers
+name the start entity; BH2_03750 lists invented IDs to the output cap. Report:
+docs/S20_mimo9b_5060ti_32k.md. Qwen35-9B remains in the panel; no change.
