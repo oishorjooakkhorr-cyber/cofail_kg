@@ -757,3 +757,35 @@ Report: docs/S20_granite41_5060ti_32k.md. Publication/Drive proof follows.
 Granite32K publication:results a1f5727 pushed to main; Drive70/70 checksum
 matches,zero differences at01:51:48 Dhaka2026-10-30. Nine unrelated historical
 archive errors remain. Proof:docs/S20_granite41_5060ti_32k_backup.md. Complete; no S21.
+
+
+## S22 review packet and S23 co-failure metrics (engineering) — 2026-11-01
+S22 software/evidence review, offline, read-only: all 80 smoke_single_v135 records match the
+committed final-run-hashes.json files; coverage is exactly 20 queries x 4 agents; trace
+reconstruction holds for 80/80; independent Label A/B/H1 re-derivation agrees 9/9.
+Context triggers (strict > 90% of num_ctx): Gemma4-E4B BH2_04003 29500/32768;
+Qwen35-9B eight episodes, max 8189/8192. There are five Qwen context-length cut-offs
+(prompt + output = 8192), and both PARSE_FAILs are among them.
+Packet: docs/S22_review_packet.md. S22 is NOT accepted; the §9.1 researcher review of
+Gemma4-E4B and Qwen35-9B is pending.
+S23: src/cofail_kg/evaluation/cofailure.py implements §16.1–§16.4 with 42 tests; the full
+suite passes (676 passed, 2 skipped: BioHopR not downloaded). An offline example on the S22
+metrics is an implementation exercise only.
+Report: docs/S23_cofailure_report.md, with three open researcher questions.
+Not committed. S24 not started.
+
+## Exploratory S23 comparison with Ornith15-9B substituted for Qwen35-9B — 2026-11-05
+Researcher request; offline, no inference, no panel change. scripts/23_ornith_substitution_example.py
+-> results/diagnostics/s23/ornith_substitution_example.json. Question/grounded/hop-1-clean CF3 and
+CF4 are 0 in both panels. CF^BH: frozen panel 2/2, Ornith panel 2/1. Granite-Ornith agreement 0/2.
+In 7 of the 10 queries where Ornith has wrong answers, its only wrong answer is the start entity.
+Ornith rows come from its S20 run, the others from S22. See docs/S23_cofailure_report.md.
+
+## EXPLORATORY P2-draft run on six configurations + §16 co-failure — 2026-11-05
+Researcher request; run ID p2-explore-20261105; P1 stays frozen; no panel change. P2-draft
+changes only rule 3. 120/120 episodes on the 20 screening queries; each configuration used its
+own earlier settings. Competent P1→P2: Ministral 19→17, Gemma 16→17, Granite 16→17,
+Qwen 8K 14→6, Qwen 16K 12→10, Ornith 11→12. Ornith start-entity-only 7→0, but PARSE_FAIL 1→6.
+Qwen 8K's 11 PARSE_FAILs all fill the 8192 context. Qwen/Ornith tool calls about double.
+§16 on all 15 panels: question-level CF = 0; CF^BH3 = 2 (BH2_05686, BH2_05843, BOTH_AMBIGUOUS).
+Report: docs/P2_exploratory_report.md. Not committed.

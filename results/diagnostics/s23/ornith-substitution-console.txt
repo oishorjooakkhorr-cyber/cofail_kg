@@ -1,0 +1,20 @@
+﻿== frozen_panel ['Ministral3-8B', 'Gemma4-E4B', 'Granite41-8B', 'Qwen35-9B']
+{"question_cf3": 0, "question_cf4": 0, "grounded_cf3": 0, "grounded_cf4": 0, "hop1_clean_cf3": 0, "hop1_clean_cf4": 0, "benchmark_cf3": 2, "benchmark_cf4": 2, "pcf_rel3": 0, "pcf_rel4": 0, "pcf_node3": 0, "pcf_node4": 0, "pcf_shortcut3": 0}
+  BH2_05686 BOTH_AMBIGUOUS {'question': 0, 'grounded': 0, 'hop1_clean': 0, 'benchmark': 1, 'pcf_rel3': 0, 'pcf_node3': 0, 'pcf_shortcut3': 0} failures: []
+  BH2_05843 BOTH_AMBIGUOUS {'question': 0, 'grounded': 0, 'hop1_clean': 0, 'benchmark': 1, 'pcf_rel3': 0, 'pcf_node3': 0, 'pcf_shortcut3': 0} failures: []
+  Ministral3-8B Gemma4-E4B 0/0 None
+  Ministral3-8B Granite41-8B 0/0 None
+  Ministral3-8B Qwen35-9B 0/0 None
+  Gemma4-E4B Granite41-8B 1/2 0.5
+  Gemma4-E4B Qwen35-9B 0/0 None
+  Granite41-8B Qwen35-9B 0/0 None
+== ornith_panel ['Ministral3-8B', 'Gemma4-E4B', 'Granite41-8B', 'Ornith15-9B']
+{"question_cf3": 0, "question_cf4": 0, "grounded_cf3": 0, "grounded_cf4": 0, "hop1_clean_cf3": 0, "hop1_clean_cf4": 0, "benchmark_cf3": 2, "benchmark_cf4": 1, "pcf_rel3": 0, "pcf_rel4": 0, "pcf_node3": 0, "pcf_node4": 0, "pcf_shortcut3": 0}
+  BH2_05686 BOTH_AMBIGUOUS {'question': 0, 'grounded': 0, 'hop1_clean': 0, 'benchmark': 1, 'pcf_rel3': 0, 'pcf_node3': 0, 'pcf_shortcut3': 0} failures: []
+  BH2_05843 BOTH_AMBIGUOUS {'question': 0, 'grounded': 0, 'hop1_clean': 0, 'benchmark': 1, 'pcf_rel3': 0, 'pcf_node3': 0, 'pcf_shortcut3': 0} failures: []
+  Ministral3-8B Gemma4-E4B 0/0 None
+  Ministral3-8B Granite41-8B 0/0 None
+  Ministral3-8B Ornith15-9B 0/0 None
+  Gemma4-E4B Granite41-8B 1/2 0.5
+  Gemma4-E4B Ornith15-9B 0/0 None
+  Granite41-8B Ornith15-9B 0/2 0.0

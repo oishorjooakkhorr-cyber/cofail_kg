@@ -1,0 +1,31 @@
+﻿Ministral3-8B + Gemma4-E4B + Granite41-8B + Qwen35-9B-8K  {'benchmark_cf3': 2, 'benchmark_cf4': 1}
+Ministral3-8B + Gemma4-E4B + Granite41-8B + Qwen35-9B-16K  {'benchmark_cf3': 2, 'benchmark_cf4': 2}
+Ministral3-8B + Gemma4-E4B + Granite41-8B + Ornith15-9B  {'benchmark_cf3': 2, 'benchmark_cf4': 1}
+Ministral3-8B + Gemma4-E4B + Qwen35-9B-8K + Qwen35-9B-16K | same-weights {'benchmark_cf3': 2, 'benchmark_cf4': 1}
+Ministral3-8B + Gemma4-E4B + Qwen35-9B-8K + Ornith15-9B  {'benchmark_cf3': 2}
+Ministral3-8B + Gemma4-E4B + Qwen35-9B-16K + Ornith15-9B  {'benchmark_cf3': 2, 'benchmark_cf4': 1}
+Ministral3-8B + Granite41-8B + Qwen35-9B-8K + Qwen35-9B-16K | same-weights {'benchmark_cf3': 2, 'benchmark_cf4': 1}
+Ministral3-8B + Granite41-8B + Qwen35-9B-8K + Ornith15-9B  {'benchmark_cf3': 2}
+Ministral3-8B + Granite41-8B + Qwen35-9B-16K + Ornith15-9B  {'benchmark_cf3': 2, 'benchmark_cf4': 1}
+Ministral3-8B + Qwen35-9B-8K + Qwen35-9B-16K + Ornith15-9B | same-weights {'benchmark_cf3': 2}
+Gemma4-E4B + Granite41-8B + Qwen35-9B-8K + Qwen35-9B-16K | same-weights {'benchmark_cf3': 2, 'benchmark_cf4': 1}
+Gemma4-E4B + Granite41-8B + Qwen35-9B-8K + Ornith15-9B  {'benchmark_cf3': 2}
+Gemma4-E4B + Granite41-8B + Qwen35-9B-16K + Ornith15-9B  {'benchmark_cf3': 2, 'benchmark_cf4': 1}
+Gemma4-E4B + Qwen35-9B-8K + Qwen35-9B-16K + Ornith15-9B | same-weights {'benchmark_cf3': 2}
+Granite41-8B + Qwen35-9B-8K + Qwen35-9B-16K + Ornith15-9B | same-weights {'benchmark_cf3': 2}
+Ministral3-8B Gemma4-E4B 1/1 1.0 
+Ministral3-8B Granite41-8B 0/0 None 
+Ministral3-8B Qwen35-9B-8K 0/0 None 
+Ministral3-8B Qwen35-9B-16K 0/0 None 
+Ministral3-8B Ornith15-9B 0/0 None 
+Gemma4-E4B Granite41-8B 0/0 None 
+Gemma4-E4B Qwen35-9B-8K 0/0 None 
+Gemma4-E4B Qwen35-9B-16K 0/0 None 
+Gemma4-E4B Ornith15-9B 0/0 None 
+Granite41-8B Qwen35-9B-8K 0/0 None 
+Granite41-8B Qwen35-9B-16K 0/0 None 
+Granite41-8B Ornith15-9B 0/0 None 
+Qwen35-9B-8K Qwen35-9B-16K 0/0 None (same weights)
+Qwen35-9B-8K Ornith15-9B 0/0 None 
+Qwen35-9B-16K Ornith15-9B 0/0 None 
+PHASE cofailure COMPLETE

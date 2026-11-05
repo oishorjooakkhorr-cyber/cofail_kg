@@ -1,0 +1,518 @@
+[
+  {
+    "query_id": "BH2_03762",
+    "agent_id": "Ministral3-8B",
+    "relation_type": "disease:drug:effect/phenotype",
+    "s": "39540",
+    "R1": [
+      "indication"
+    ],
+    "R2": [
+      "drug_effect"
+    ],
+    "Type_B": "drug",
+    "Type_T": "effect/phenotype",
+    "submitted": {
+      "id": "22262",
+      "name": "Edema"
+    },
+    "canonical_answer_id": "22262",
+    "canonical_name": "Edema",
+    "answer_type": "effect/phenotype",
+    "recorded": {
+      "label_a": "GOLD",
+      "label_b": "SUPPORTED",
+      "h1": 1,
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "label": "indication",
+          "u": "39540",
+          "v": "14024"
+        },
+        {
+          "creation_index": 3,
+          "label": "drug_effect",
+          "u": "14024",
+          "v": "22262"
+        }
+      ],
+      "primary_reason_codes": []
+    },
+    "independent": {
+      "label_a": "GOLD",
+      "label_b": "SUPPORTED",
+      "h1": 1
+    },
+    "evidence": {
+      "in_A_star_q": true,
+      "in_G_q": true,
+      "in_T_q": true,
+      "appeared": true,
+      "supporting_bridges": [
+        [
+          "14024",
+          "drug_effect"
+        ],
+        [
+          "14028",
+          "drug_effect"
+        ],
+        [
+          "14320",
+          "drug_effect"
+        ]
+      ],
+      "shortest_trace_path": [
+        "39540 -indication-> 14024",
+        "14024 -drug_effect-> 22262"
+      ]
+    },
+    "agree": true
+  },
+  {
+    "query_id": "BH2_05686",
+    "agent_id": "Gemma4-E4B",
+    "relation_type": "effect/phenotype:disease:drug",
+    "s": "89391",
+    "R1": [
+      "disease_phenotype_positive"
+    ],
+    "R2": [
+      "indication"
+    ],
+    "Type_B": "disease",
+    "Type_T": "drug",
+    "submitted": {
+      "id": "14557",
+      "name": "Turoctocog alfa pegol"
+    },
+    "canonical_answer_id": "14557",
+    "canonical_name": "Turoctocog alfa pegol",
+    "answer_type": "drug",
+    "recorded": {
+      "label_a": "ALT_VALID",
+      "label_b": "SUPPORTED",
+      "h1": 1,
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "label": "disease_phenotype_positive",
+          "u": "89391",
+          "v": "27361"
+        },
+        {
+          "creation_index": 3,
+          "label": "indication",
+          "u": "27361",
+          "v": "14557"
+        }
+      ],
+      "primary_reason_codes": []
+    },
+    "independent": {
+      "label_a": "ALT_VALID",
+      "label_b": "SUPPORTED",
+      "h1": 1
+    },
+    "evidence": {
+      "in_A_star_q": false,
+      "in_G_q": false,
+      "in_T_q": true,
+      "appeared": true,
+      "supporting_bridges": [
+        [
+          "27361",
+          "indication"
+        ]
+      ],
+      "shortest_trace_path": [
+        "89391 -disease_phenotype_positive-> 27361",
+        "27361 -indication-> 14557"
+      ]
+    },
+    "agree": true
+  },
+  {
+    "query_id": "BH2_03881",
+    "agent_id": "Gemma4-E4B",
+    "relation_type": "disease:drug:effect/phenotype",
+    "s": "32651",
+    "R1": [
+      "indication"
+    ],
+    "R2": [
+      "drug_effect"
+    ],
+    "Type_B": "drug",
+    "Type_T": "effect/phenotype",
+    "submitted": {
+      "id": "22304",
+      "name": "Hearing impairment"
+    },
+    "canonical_answer_id": "22304",
+    "canonical_name": "Hearing impairment",
+    "answer_type": "effect/phenotype",
+    "recorded": {
+      "label_a": "GOLD",
+      "label_b": "PATH_INVALID",
+      "h1": 0,
+      "primary_path": [
+        {
+          "creation_index": 7,
+          "label": "disease_phenotype_positive",
+          "u": "32651",
+          "v": "22304"
+        }
+      ],
+      "primary_reason_codes": [
+        "SHORTCUT"
+      ]
+    },
+    "independent": {
+      "label_a": "GOLD",
+      "label_b": "PATH_INVALID",
+      "h1": 0
+    },
+    "evidence": {
+      "in_A_star_q": true,
+      "in_G_q": true,
+      "in_T_q": true,
+      "appeared": true,
+      "supporting_bridges": [],
+      "shortest_trace_path": [
+        "32651 -disease_phenotype_positive-> 22304"
+      ]
+    },
+    "agree": true
+  },
+  {
+    "query_id": "BH2_03881",
+    "agent_id": "Gemma4-E4B",
+    "relation_type": "disease:drug:effect/phenotype",
+    "s": "32651",
+    "R1": [
+      "indication"
+    ],
+    "R2": [
+      "drug_effect"
+    ],
+    "Type_B": "drug",
+    "Type_T": "effect/phenotype",
+    "submitted": {
+      "id": "22121",
+      "name": "Abnormality of the female genitalia"
+    },
+    "canonical_answer_id": "22121",
+    "canonical_name": "Abnormality of the female genitalia",
+    "answer_type": "effect/phenotype",
+    "recorded": {
+      "label_a": "OFF_QUESTION",
+      "label_b": "PATH_INVALID",
+      "h1": 0,
+      "primary_path": [
+        {
+          "creation_index": 7,
+          "label": "disease_phenotype_positive",
+          "u": "32651",
+          "v": "22121"
+        }
+      ],
+      "primary_reason_codes": [
+        "SHORTCUT"
+      ]
+    },
+    "independent": {
+      "label_a": "OFF_QUESTION",
+      "label_b": "PATH_INVALID",
+      "h1": 0
+    },
+    "evidence": {
+      "in_A_star_q": false,
+      "in_G_q": false,
+      "in_T_q": false,
+      "appeared": true,
+      "supporting_bridges": [],
+      "shortest_trace_path": [
+        "32651 -disease_phenotype_positive-> 22121"
+      ]
+    },
+    "agree": true
+  },
+  {
+    "query_id": "BH2_05366",
+    "agent_id": "Granite41-8B",
+    "relation_type": "gene/protein:drug:disease",
+    "s": "321",
+    "R1": [
+      "drug_protein"
+    ],
+    "R2": [
+      "indication"
+    ],
+    "Type_B": "drug",
+    "Type_T": "disease",
+    "submitted": {
+      "id": "27933",
+      "name": "anxiety disorder"
+    },
+    "canonical_answer_id": "27933",
+    "canonical_name": "anxiety disorder",
+    "answer_type": "disease",
+    "recorded": {
+      "label_a": "OFF_QUESTION",
+      "label_b": "PATH_INVALID",
+      "h1": 0,
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "label": "disease_protein",
+          "u": "321",
+          "v": "27933"
+        }
+      ],
+      "primary_reason_codes": [
+        "SHORTCUT"
+      ]
+    },
+    "independent": {
+      "label_a": "OFF_QUESTION",
+      "label_b": "PATH_INVALID",
+      "h1": 0
+    },
+    "evidence": {
+      "in_A_star_q": false,
+      "in_G_q": false,
+      "in_T_q": false,
+      "appeared": true,
+      "supporting_bridges": [],
+      "shortest_trace_path": [
+        "321 -disease_protein-> 27933"
+      ]
+    },
+    "agree": true
+  },
+  {
+    "query_id": "BH2_03762",
+    "agent_id": "Granite41-8B",
+    "relation_type": "disease:drug:effect/phenotype",
+    "s": "39540",
+    "R1": [
+      "indication"
+    ],
+    "R2": [
+      "drug_effect"
+    ],
+    "Type_B": "drug",
+    "Type_T": "effect/phenotype",
+    "submitted": {
+      "id": "22540",
+      "name": "Vascular skin abnormality"
+    },
+    "canonical_answer_id": "22540",
+    "canonical_name": "Vascular skin abnormality",
+    "answer_type": "effect/phenotype",
+    "recorded": {
+      "label_a": "OFF_QUESTION",
+      "label_b": "PATH_INVALID",
+      "h1": 0,
+      "primary_path": [
+        {
+          "creation_index": 7,
+          "label": "disease_phenotype_positive",
+          "u": "39540",
+          "v": "22540"
+        }
+      ],
+      "primary_reason_codes": [
+        "SHORTCUT"
+      ]
+    },
+    "independent": {
+      "label_a": "OFF_QUESTION",
+      "label_b": "PATH_INVALID",
+      "h1": 0
+    },
+    "evidence": {
+      "in_A_star_q": false,
+      "in_G_q": false,
+      "in_T_q": false,
+      "appeared": true,
+      "supporting_bridges": [],
+      "shortest_trace_path": [
+        "39540 -disease_phenotype_positive-> 22540"
+      ]
+    },
+    "agree": true
+  },
+  {
+    "query_id": "BH2_06427",
+    "agent_id": "Granite41-8B",
+    "relation_type": "disease:gene/protein:drug",
+    "s": "39126",
+    "R1": [
+      "disease_protein"
+    ],
+    "R2": [
+      "drug_protein"
+    ],
+    "Type_B": "gene/protein",
+    "Type_T": "drug",
+    "submitted": {
+      "id": "14143",
+      "name": "Dicoumarol"
+    },
+    "canonical_answer_id": "14143",
+    "canonical_name": "Dicoumarol",
+    "answer_type": "drug",
+    "recorded": {
+      "label_a": "OFF_QUESTION",
+      "label_b": "PATH_INVALID",
+      "h1": 0,
+      "primary_path": [
+        {
+          "creation_index": 4,
+          "label": "contraindication",
+          "u": "39126",
+          "v": "14143"
+        }
+      ],
+      "primary_reason_codes": [
+        "SHORTCUT"
+      ]
+    },
+    "independent": {
+      "label_a": "OFF_QUESTION",
+      "label_b": "PATH_INVALID",
+      "h1": 0
+    },
+    "evidence": {
+      "in_A_star_q": false,
+      "in_G_q": false,
+      "in_T_q": false,
+      "appeared": true,
+      "supporting_bridges": [],
+      "shortest_trace_path": [
+        "39126 -contraindication-> 14143"
+      ]
+    },
+    "agree": true
+  },
+  {
+    "query_id": "BH2_03760",
+    "agent_id": "Qwen35-9B",
+    "relation_type": "disease:drug:effect/phenotype",
+    "s": "31630",
+    "R1": [
+      "indication"
+    ],
+    "R2": [
+      "drug_effect"
+    ],
+    "Type_B": "drug",
+    "Type_T": "effect/phenotype",
+    "submitted": {
+      "id": "14208",
+      "name": "Testosterone"
+    },
+    "canonical_answer_id": "14208",
+    "canonical_name": "Testosterone",
+    "answer_type": "drug",
+    "recorded": {
+      "label_a": "OFF_QUESTION",
+      "label_b": "PATH_INVALID",
+      "h1": 0,
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "label": "indication",
+          "u": "31630",
+          "v": "14208"
+        }
+      ],
+      "primary_reason_codes": [
+        "WRONG_HOP_COUNT",
+        "WRONG_TARGET_TYPE"
+      ]
+    },
+    "independent": {
+      "label_a": "OFF_QUESTION",
+      "label_b": "PATH_INVALID",
+      "h1": 0
+    },
+    "evidence": {
+      "in_A_star_q": false,
+      "in_G_q": false,
+      "in_T_q": false,
+      "appeared": true,
+      "supporting_bridges": [],
+      "shortest_trace_path": [
+        "31630 -indication-> 14208"
+      ]
+    },
+    "agree": true
+  },
+  {
+    "query_id": "BH2_05843",
+    "agent_id": "Qwen35-9B",
+    "relation_type": "effect/phenotype:disease:drug",
+    "s": "88994",
+    "R1": [
+      "disease_phenotype_positive"
+    ],
+    "R2": [
+      "indication"
+    ],
+    "Type_B": "disease",
+    "Type_T": "drug",
+    "submitted": {
+      "id": "14699",
+      "name": "Lusutrombopag"
+    },
+    "canonical_answer_id": "14699",
+    "canonical_name": "Lusutrombopag",
+    "answer_type": "drug",
+    "recorded": {
+      "label_a": "ALT_VALID",
+      "label_b": "SUPPORTED",
+      "h1": 1,
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "label": "disease_phenotype_positive",
+          "u": "88994",
+          "v": "27626"
+        },
+        {
+          "creation_index": 6,
+          "label": "indication",
+          "u": "27626",
+          "v": "14699"
+        }
+      ],
+      "primary_reason_codes": []
+    },
+    "independent": {
+      "label_a": "ALT_VALID",
+      "label_b": "SUPPORTED",
+      "h1": 1
+    },
+    "evidence": {
+      "in_A_star_q": false,
+      "in_G_q": false,
+      "in_T_q": true,
+      "appeared": true,
+      "supporting_bridges": [
+        [
+          "27626",
+          "indication"
+        ]
+      ],
+      "shortest_trace_path": [
+        "88994 -disease_phenotype_positive-> 27626",
+        "27626 -indication-> 14699"
+      ]
+    },
+    "agree": true
+  }
+]

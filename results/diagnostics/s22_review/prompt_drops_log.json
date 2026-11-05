@@ -1,0 +1,178 @@
+{
+  "log": "results/diagnostics/smoke_single_v135/Qwen35-9B/server-run-20261030T154436Z.stderr.log",
+  "turns_matched": 145,
+  "drops": [
+    {
+      "query_id": "BH2_03619",
+      "from_message": 22,
+      "to_message": 24,
+      "prompt_before": 8189,
+      "prompt_after": 6353,
+      "n_tokens": 6353,
+      "f_sim": 0.112,
+      "f_keep": 0.087
+    },
+    {
+      "query_id": "BH2_03762",
+      "from_message": 16,
+      "to_message": 18,
+      "prompt_before": 6562,
+      "prompt_after": 6507,
+      "n_tokens": 6507,
+      "f_sim": 0.12,
+      "f_keep": 0.118
+    },
+    {
+      "query_id": "BH2_03856",
+      "from_message": 30,
+      "to_message": 32,
+      "prompt_before": 7470,
+      "prompt_after": 7395,
+      "n_tokens": 7395,
+      "f_sim": null,
+      "f_keep": null
+    },
+    {
+      "query_id": "BH2_03879",
+      "from_message": 16,
+      "to_message": 18,
+      "prompt_before": 7439,
+      "prompt_after": 6533,
+      "n_tokens": 6533,
+      "f_sim": 0.107,
+      "f_keep": 0.092
+    },
+    {
+      "query_id": "BH2_03879",
+      "from_message": 26,
+      "to_message": 28,
+      "prompt_before": 7957,
+      "prompt_after": 7654,
+      "n_tokens": 7654,
+      "f_sim": null,
+      "f_keep": null
+    },
+    {
+      "query_id": "BH2_03879",
+      "from_message": 30,
+      "to_message": 32,
+      "prompt_before": 7898,
+      "prompt_after": 7841,
+      "n_tokens": 7841,
+      "f_sim": null,
+      "f_keep": null
+    },
+    {
+      "query_id": "BH2_03879",
+      "from_message": 36,
+      "to_message": 38,
+      "prompt_before": 8151,
+      "prompt_after": 7995,
+      "n_tokens": 7995,
+      "f_sim": null,
+      "f_keep": null
+    },
+    {
+      "query_id": "BH2_03881",
+      "from_message": 17,
+      "to_message": 19,
+      "prompt_before": 8138,
+      "prompt_after": 6576,
+      "n_tokens": 6576,
+      "f_sim": 0.108,
+      "f_keep": 0.087
+    },
+    {
+      "query_id": "BH2_03881",
+      "from_message": 19,
+      "to_message": 21,
+      "prompt_before": 6576,
+      "prompt_after": 6492,
+      "n_tokens": 6492,
+      "f_sim": 0.131,
+      "f_keep": 0.128
+    },
+    {
+      "query_id": "BH2_03881",
+      "from_message": 21,
+      "to_message": 23,
+      "prompt_before": 6492,
+      "prompt_after": 6412,
+      "n_tokens": 6412,
+      "f_sim": 0.122,
+      "f_keep": 0.119
+    },
+    {
+      "query_id": "BH2_03953",
+      "from_message": 14,
+      "to_message": 17,
+      "prompt_before": 7737,
+      "prompt_after": 7215,
+      "n_tokens": 7215,
+      "f_sim": null,
+      "f_keep": null
+    },
+    {
+      "query_id": "BH2_03953",
+      "from_message": 20,
+      "to_message": 22,
+      "prompt_before": 7972,
+      "prompt_after": 6349,
+      "n_tokens": 6349,
+      "f_sim": 0.112,
+      "f_keep": 0.087
+    },
+    {
+      "query_id": "BH2_03991",
+      "from_message": 20,
+      "to_message": 22,
+      "prompt_before": 8161,
+      "prompt_after": 6467,
+      "n_tokens": 6467,
+      "f_sim": 0.121,
+      "f_keep": 0.095
+    },
+    {
+      "query_id": "BH2_03991",
+      "from_message": 22,
+      "to_message": 24,
+      "prompt_before": 6467,
+      "prompt_after": 6386,
+      "n_tokens": 6386,
+      "f_sim": 0.111,
+      "f_keep": 0.109
+    },
+    {
+      "query_id": "BH2_03991",
+      "from_message": 24,
+      "to_message": 26,
+      "prompt_before": 6386,
+      "prompt_after": 6379,
+      "n_tokens": 6379,
+      "f_sim": 0.111,
+      "f_keep": 0.11
+    },
+    {
+      "query_id": "BH2_03991",
+      "from_message": 28,
+      "to_message": 30,
+      "prompt_before": 8181,
+      "prompt_after": 6334,
+      "n_tokens": 6334,
+      "f_sim": 0.11,
+      "f_keep": 0.085
+    },
+    {
+      "query_id": "BH2_04003",
+      "from_message": 32,
+      "to_message": 38,
+      "prompt_before": 7464,
+      "prompt_after": 6590,
+      "n_tokens": 6590,
+      "f_sim": 0.106,
+      "f_keep": 0.092
+    }
+  ],
+  "non_drop_f_keep_min": 0.106,
+  "non_drop_f_keep_median": 0.955
+}

@@ -1,0 +1,30 @@
+{
+  "model": "qwen3.5:9b",
+  "created_at": "2026-11-05T15:13:25.4097113Z",
+  "message": {
+    "role": "assistant",
+    "content": "",
+    "tool_calls": [
+      {
+        "id": "call_a3hswep0",
+        "function": {
+          "index": 0,
+          "name": "add",
+          "arguments": {
+            "a": 2,
+            "b": 3
+          }
+        }
+      }
+    ]
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 5291566900,
+  "load_duration": 4544807800,
+  "prompt_eval_count": 294,
+  "prompt_eval_cached_count": 0,
+  "prompt_eval_duration": 195453000,
+  "eval_count": 35,
+  "eval_duration": 548393000
+}

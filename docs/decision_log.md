@@ -2548,3 +2548,16 @@ D3 FAIL: no tool call attempted in any of 20 episodes (well-formed criterion fai
 competent, 20/20 SUCCESS, median 1.97 s, zero ERROR/OOM. 18 immediate no_answer; two answers
 name the start entity; BH2_03750 lists invented IDs to the output cap. Report:
 docs/S20_mimo9b_5060ti_32k.md. Qwen35-9B remains in the panel; no change.
+
+## 2026-11-01 — S22 review packet prepared; S23 implemented offline; no decision taken
+Engineering record, not a researcher decision. The S22 evidence review (hashes, coverage,
+reconstruction, 9/9 independent label checks, context triggers) is in docs/S22_review_packet.md.
+S22 remains unaccepted. The §9.1 re-selection review of Gemma4-E4B (BH2_04003, 29500/32768) and
+Qwen35-9B (eight episodes, max 8189/8192) is pending with the researcher. No runtime, panel or
+protocol change.
+S23 §16 code and tests were added (docs/S23_cofailure_report.md). Three questions are open for
+the researcher:
+- whether failed-episode queries enter the §16 metrics;
+- the literal wrong-turn reading for paths whose length is not 2;
+- where the SOURCE_NAME_OVERLAP exclusion is applied.
+No stage after S23 has been started.

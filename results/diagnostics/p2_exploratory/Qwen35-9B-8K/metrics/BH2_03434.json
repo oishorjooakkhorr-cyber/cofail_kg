@@ -1,0 +1,88 @@
+{
+  "agent_id": "Qwen35-9B-8K",
+  "answer_count": null,
+  "answers": [],
+  "attempt": 1,
+  "benchmark_f1": null,
+  "benchmark_precision": null,
+  "benchmark_recall": null,
+  "bridge_conditional_recall": {
+    "37805": null
+  },
+  "bridge_rank": {
+    "37805": 1
+  },
+  "bridge_recall_counts": {
+    "37805": {
+      "correct": null,
+      "total": 33
+    }
+  },
+  "bridges_explored": [
+    "37805"
+  ],
+  "budget_exhausted": true,
+  "cause": null,
+  "construction": "BRIDGE",
+  "denominators": {
+    "benchmark_f1": null,
+    "benchmark_precision": null,
+    "benchmark_recall": 33,
+    "off_question_rate": null,
+    "question_valid_precision": null,
+    "ungrounded_rate": null,
+    "unresolved_rate": null
+  },
+  "early_stop": null,
+  "episode_status": "PARSE_FAIL",
+  "found_r1": true,
+  "hop1_status": "H1_CLEAN",
+  "label_a_counts": null,
+  "label_b_counts": null,
+  "node_statistics": {
+    "3248": {
+      "degree": 313,
+      "degree_percentile": 97.41968125474322
+    },
+    "37805": {
+      "degree": 146,
+      "degree_percentile": 98.30796252927401
+    }
+  },
+  "numerators": {
+    "benchmark_f1": null,
+    "benchmark_precision": null,
+    "benchmark_recall": null,
+    "off_question_rate": null,
+    "question_valid_precision": null,
+    "ungrounded_rate": null,
+    "unresolved_rate": null
+  },
+  "off_question_rate": null,
+  "pages_requested": 2,
+  "primary_reason_counts": null,
+  "query_id": "BH2_03434",
+  "question_valid_precision": null,
+  "reason_counts": null,
+  "resolved_count": null,
+  "run_id": "p2-explore-20261105",
+  "text_tool_call_count": 0,
+  "tool_calls_used": 30,
+  "undefined_counts": {
+    "benchmark_f1": 1,
+    "benchmark_precision": 1,
+    "benchmark_recall": 1,
+    "bridge_conditional_recall": 1,
+    "bridge_rank": 0,
+    "degree": 0,
+    "degree_percentile": 0,
+    "list_size": 0,
+    "off_question_rate": 1,
+    "primary_path_max_list_size": 0,
+    "question_valid_precision": 1,
+    "ungrounded_rate": 1,
+    "unresolved_rate": 1
+  },
+  "ungrounded_rate": null,
+  "unresolved_rate": null
+}

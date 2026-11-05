@@ -1,0 +1,123 @@
+{
+  "agents": [
+    "Ministral3-8B",
+    "Gemma4-E4B",
+    "Granite41-8B",
+    "Qwen35-9B"
+  ],
+  "extra_or_missing": [],
+  "per_agent": {
+    "Gemma4-E4B": {
+      "context_triggers": [
+        {
+          "num_ctx": 32768,
+          "prompt_eval_count": 29500,
+          "query_id": "BH2_04003",
+          "share": 0.9002685546875
+        }
+      ],
+      "hash_entries": 20,
+      "hash_file_equals_HEAD": true,
+      "hash_mismatches": [],
+      "max_prompt_eval_count": 29500,
+      "metrics_paired": true,
+      "num_ctx": 32768,
+      "reconstruction_checked": 20,
+      "status_counts": {
+        "SUCCESS": 20
+      }
+    },
+    "Granite41-8B": {
+      "context_triggers": [],
+      "hash_entries": 20,
+      "hash_file_equals_HEAD": true,
+      "hash_mismatches": [],
+      "max_prompt_eval_count": 18192,
+      "metrics_paired": true,
+      "num_ctx": 32768,
+      "reconstruction_checked": 20,
+      "status_counts": {
+        "SUCCESS": 20
+      }
+    },
+    "Ministral3-8B": {
+      "context_triggers": [],
+      "hash_entries": 20,
+      "hash_file_equals_HEAD": true,
+      "hash_mismatches": [],
+      "max_prompt_eval_count": 21298,
+      "metrics_paired": true,
+      "num_ctx": 32768,
+      "reconstruction_checked": 20,
+      "status_counts": {
+        "SUCCESS": 20
+      }
+    },
+    "Qwen35-9B": {
+      "context_triggers": [
+        {
+          "num_ctx": 8192,
+          "prompt_eval_count": 8189,
+          "query_id": "BH2_03619",
+          "share": 0.9996337890625
+        },
+        {
+          "num_ctx": 8192,
+          "prompt_eval_count": 8048,
+          "query_id": "BH2_03760",
+          "share": 0.982421875
+        },
+        {
+          "num_ctx": 8192,
+          "prompt_eval_count": 7470,
+          "query_id": "BH2_03856",
+          "share": 0.911865234375
+        },
+        {
+          "num_ctx": 8192,
+          "prompt_eval_count": 8151,
+          "query_id": "BH2_03879",
+          "share": 0.9949951171875
+        },
+        {
+          "num_ctx": 8192,
+          "prompt_eval_count": 8138,
+          "query_id": "BH2_03881",
+          "share": 0.993408203125
+        },
+        {
+          "num_ctx": 8192,
+          "prompt_eval_count": 7972,
+          "query_id": "BH2_03953",
+          "share": 0.97314453125
+        },
+        {
+          "num_ctx": 8192,
+          "prompt_eval_count": 8181,
+          "query_id": "BH2_03991",
+          "share": 0.9986572265625
+        },
+        {
+          "num_ctx": 8192,
+          "prompt_eval_count": 7464,
+          "query_id": "BH2_04003",
+          "share": 0.9111328125
+        }
+      ],
+      "hash_entries": 20,
+      "hash_file_equals_HEAD": true,
+      "hash_mismatches": [],
+      "max_prompt_eval_count": 8189,
+      "metrics_paired": true,
+      "num_ctx": 8192,
+      "reconstruction_checked": 20,
+      "status_counts": {
+        "PARSE_FAIL": 2,
+        "SUCCESS": 18
+      }
+    }
+  },
+  "query_count": 20,
+  "record_files_match_manifest_x_agents": true,
+  "run_id": "smoke_single_v135"
+}

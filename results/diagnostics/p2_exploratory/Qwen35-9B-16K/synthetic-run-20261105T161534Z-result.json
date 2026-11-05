@@ -1,0 +1,17 @@
+{
+  "model": "qwen3.5:9b",
+  "created_at": "2026-11-05T16:15:47.2329966Z",
+  "message": {
+    "role": "assistant",
+    "content": "The result of 2 + 3 is 5."
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 255390900,
+  "load_duration": 2010700,
+  "prompt_eval_count": 343,
+  "prompt_eval_cached_count": 290,
+  "prompt_eval_duration": 70802000,
+  "eval_count": 13,
+  "eval_duration": 180344000
+}

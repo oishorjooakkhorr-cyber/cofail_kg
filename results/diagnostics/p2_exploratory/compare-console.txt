@@ -1,0 +1,106 @@
+﻿== Ministral3-8B (P1 from S22)
+  competent                      P1=19  P2=17
+  d3_pass                        P1=True  P2=True
+  status                         P1={'SUCCESS': 20}  P2={'PARSE_FAIL': 2, 'SUCCESS': 18}
+  reprompted                     P1=17  P2=17
+  start_only                     P1=0  P2=0
+  hit_context_or_output_limit    P1=0  P2=1
+  well_formed_rate               P1=1.0  P2=1.0
+  median_wall_s                  P1=44.300335  P2=57.9884215
+  largest_prompt                 P1=21298  P2=32744
+  median_tool_calls              P1=8.0  P2=7.5
+  budget_hit_share               P1=0.0  P2=0.05
+  median_answers_success         P1=30  P2=65
+  causes                         P1={}  P2={'PARSE_FAIL:None': 2}
+== Gemma4-E4B (P1 from S22)
+  competent                      P1=16  P2=17
+  d3_pass                        P1=True  P2=True
+  status                         P1={'SUCCESS': 20}  P2={'SUCCESS': 20}
+  reprompted                     P1=16  P2=16
+  start_only                     P1=0  P2=0
+  hit_context_or_output_limit    P1=0  P2=0
+  well_formed_rate               P1=1.0  P2=1.0
+  median_wall_s                  P1=11.0227295  P2=12.3174995
+  largest_prompt                 P1=29500  P2=23789
+  median_tool_calls              P1=8.0  P2=8.0
+  budget_hit_share               P1=0.05  P2=0.05
+  median_answers_success         P1=44  P2=44
+  causes                         P1={}  P2={}
+== Granite41-8B (P1 from S22)
+  competent                      P1=16  P2=17
+  d3_pass                        P1=True  P2=True
+  status                         P1={'SUCCESS': 20}  P2={'PARSE_FAIL': 1, 'SUCCESS': 19}
+  reprompted                     P1=15  P2=13
+  start_only                     P1=0  P2=0
+  hit_context_or_output_limit    P1=0  P2=0
+  well_formed_rate               P1=1.0  P2=1.0
+  median_wall_s                  P1=37.264739500000005  P2=30.510767
+  largest_prompt                 P1=18192  P2=30445
+  median_tool_calls              P1=10.0  P2=10.5
+  budget_hit_share               P1=0.1  P2=0.05
+  median_answers_success         P1=30  P2=44
+  causes                         P1={}  P2={'PARSE_FAIL:None': 1}
+== Qwen35-9B-8K (P1 from S22)
+  competent                      P1=14  P2=6
+  d3_pass                        P1=True  P2=False
+  status                         P1={'PARSE_FAIL': 2, 'SUCCESS': 18}  P2={'PARSE_FAIL': 11, 'SUCCESS': 9}
+  reprompted                     P1=4  P2=15
+  start_only                     P1=0  P2=0
+  hit_context_or_output_limit    P1=4  P2=14
+  well_formed_rate               P1=1.0  P2=1.0
+  median_wall_s                  P1=18.443952  P2=35.827676499999995
+  largest_prompt                 P1=8189  P2=8191
+  median_tool_calls              P1=9.0  P2=16.0
+  budget_hit_share               P1=0.05  P2=0.35
+  median_answers_success         P1=3  P2=3
+  causes                         P1={'PARSE_FAIL:None': 2}  P2={'PARSE_FAIL:None': 11}
+== Qwen35-9B-16K (P1 from S20)
+  competent                      P1=12  P2=10
+  d3_pass                        P1=False  P2=False
+  status                         P1={'PARSE_FAIL': 4, 'SUCCESS': 16}  P2={'PARSE_FAIL': 9, 'SUCCESS': 11}
+  reprompted                     P1=5  P2=13
+  start_only                     P1=0  P2=0
+  hit_context_or_output_limit    P1=6  P2=9
+  well_formed_rate               P1=1.0  P2=1.0
+  median_wall_s                  P1=30.627938999999998  P2=50.4954995
+  largest_prompt                 P1=16368  P2=16374
+  median_tool_calls              P1=9.5  P2=21.5
+  budget_hit_share               P1=0.05  P2=0.4
+  median_answers_success         P1=15  P2=15
+  causes                         P1={'PARSE_FAIL:None': 4}  P2={'PARSE_FAIL:None': 9}
+== Ornith15-9B (P1 from S20)
+  competent                      P1=11  P2=12
+  d3_pass                        P1=True  P2=False
+  status                         P1={'ERROR': 1, 'PARSE_FAIL': 1, 'SUCCESS': 18}  P2={'ERROR': 1, 'PARSE_FAIL': 6, 'SUCCESS': 13}
+  reprompted                     P1=20  P2=20
+  start_only                     P1=7  P2=0
+  hit_context_or_output_limit    P1=2  P2=4
+  well_formed_rate               P1=1.0  P2=1.0
+  median_wall_s                  P1=47.5706245  P2=60.676754
+  largest_prompt                 P1=32723  P2=32753
+  median_tool_calls              P1=12.5  P2=29.5
+  budget_hit_share               P1=0.15  P2=0.5
+  median_answers_success         P1=3  P2=33
+  causes                         P1={'ERROR:RUNTIME': 1, 'PARSE_FAIL:None': 1}  P2={'ERROR:RUNTIME': 1, 'PARSE_FAIL:None': 6}
+
+|Query|Ministral3-8B|Gemma4-E4B|Granite41-8B|Qwen35-9B-8K|Qwen35-9B-16K|Ornith15-9B|
+|BH2_00461|correct 21/21 → correct 21/21|correct 21/21 → correct 21/21|correct 21/21 → correct 21/21|correct 21/21 → correct 21/21|correct 21/21 → correct 21/21|correct 21/21 → correct 21/21|
+|BH2_02033|correct 3/3 → correct 3/5|correct 3/3 → correct 3/3|correct 3/3 → correct 3/3|correct 3/3 → correct 3/3|correct 3/3 → correct 3/3|correct 3/3 → PARSE_FAIL|
+|BH2_03434|correct 32/32 → correct 33/33|correct 33/33 → correct 33/33|correct 33/33 → correct 33/33|correct 33/33 → PARSE_FAIL|correct 33/33 → correct 33/33|correct 33/34 → correct 33/33|
+|BH2_03619|correct 15/15 → correct 93/93|correct 79/79 → correct 73/73|correct 50/50 → correct 88/88|no answer → PARSE_FAIL|no answer → PARSE_FAIL|correct 175/175 → correct 173/173|
+|BH2_03750|no answer → PARSE_FAIL|correct 44/44 → correct 44/44|correct 44/44 → correct 44/44|correct 44/44 → PARSE_FAIL|correct 44/44 → correct 44/44|correct 44/157 → correct 44/161|
+|BH2_03760|correct 57/57 → correct 126/126|correct 57/57 → correct 57/57|correct 50/50 → correct 100/100|wrong 0/3 → PARSE_FAIL|correct 124/124 → PARSE_FAIL|start only → correct 125/125|
+|BH2_03762|correct 47/47 → correct 99/99|no answer → no answer|correct 1/2 → correct 83/83|correct 1/1 → no answer|no answer → PARSE_FAIL|start only → PARSE_FAIL|
+|BH2_03850|correct 67/67 → correct 66/66|correct 66/66 → correct 66/66|correct 67/67 → correct 66/66|correct 69/69 → correct 52/52|correct 69/69 → correct 69/69|correct 70/70 → correct 65/70|
+|BH2_03856|correct 65/65 → correct 66/66|correct 66/66 → correct 66/66|correct 66/66 → PARSE_FAIL|correct 1/1 → PARSE_FAIL|PARSE_FAIL → no answer|start only → correct 75/205|
+|BH2_03879|correct 111/111 → correct 109/109|correct 88/88 → correct 89/89|wrong 0/11 → correct 50/50|PARSE_FAIL → PARSE_FAIL|PARSE_FAIL → PARSE_FAIL|ERROR → ERROR|
+|BH2_03881|correct 13/13 → PARSE_FAIL|wrong 20/50 → correct 47/47|wrong 0/4 → wrong 0/5|correct 1/1 → PARSE_FAIL|no answer → PARSE_FAIL|PARSE_FAIL → PARSE_FAIL|
+|BH2_03953|correct 131/131 → correct 102/102|correct 82/82 → correct 100/100|correct 99/99 → correct 96/96|no answer → PARSE_FAIL|PARSE_FAIL → PARSE_FAIL|correct 143/143 → PARSE_FAIL|
+|BH2_03991|correct 15/15 → correct 72/72|no answer → no answer|wrong 0/3 → correct 50/50|PARSE_FAIL → no answer|PARSE_FAIL → PARSE_FAIL|start only → correct 116/169|
+|BH2_04003|correct 40/40 → correct 57/57|correct 80/80 → correct 73/73|correct 64/64 → correct 83/83|no answer → PARSE_FAIL|no answer → PARSE_FAIL|start only → PARSE_FAIL|
+|BH2_04007|correct 30/30 → correct 30/30|correct 30/30 → correct 30/30|correct 30/30 → correct 13/13|correct 30/30 → PARSE_FAIL|correct 30/30 → correct 30/30|start only → correct 30/30|
+|BH2_04425|correct 50/50 → correct 65/65|correct 66/66 → correct 66/66|correct 60/60 → correct 60/60|correct 75/75 → PARSE_FAIL|correct 75/75 → PARSE_FAIL|correct 75/78 → wrong 0/3|
+|BH2_05366|correct 1/1 → wrong 0/29|wrong 0/30 → wrong 0/30|wrong 0/30 → correct 1/1|correct 1/1 → correct 1/1|correct 1/1 → correct 1/1|correct 1/1 → correct 1/1|
+|BH2_05686|correct 15/15 → correct 15/15|correct 15/15 → correct 15/15|correct 15/15 → correct 15/15|correct 15/15 → correct 15/15|correct 15/15 → correct 15/15|start only → PARSE_FAIL|
+|BH2_05843|correct 4/4 → correct 4/4|correct 4/4 → correct 4/4|correct 4/4 → correct 4/4|correct 4/4 → no answer|correct 4/4 → correct 4/4|correct 4/4 → correct 4/4|
+|BH2_06427|correct 3/3 → correct 3/3|correct 3/3 → correct 3/3|correct 3/28 → wrong 0/25|correct 3/3 → correct 3/3|correct 3/3 → correct 3/3|correct 3/3 → correct 3/3|

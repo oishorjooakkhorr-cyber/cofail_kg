@@ -1,0 +1,91 @@
+﻿PHASE preflight: Ministral3-8B
+.venv\Scripts\python.exe : Ollama GET http://127.0.0.1:11435/api/version connection error; retry 1/2: 
+HTTPConnectionPool(host='127.0.0.1', port=11435): Max retries exceeded with url: /api/version (Caused by 
+NewConnectionError("HTTPConnection(host='127.0.0.1', port=11435): Failed to establish a new connection: [WinError 
+10061] No connection could be made because the target machine actively refused it"))
+At line:1 char:302
++ ... tch {} } }; .venv\Scripts\python.exe -I results\diagnostics\p2_explor ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Ollama GET http...y refused it")):String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+Ollama GET http://127.0.0.1:11435/api/version connection error; retry 2/2: HTTPConnectionPool(host='127.0.0.1', 
+port=11435): Max retries exceeded with url: /api/version (Caused by 
+NewConnectionError("HTTPConnection(host='127.0.0.1', port=11435): Failed to establish a new connection: [WinError 
+10061] No connection could be made because the target machine actively refused it"))
+Ollama GET http://127.0.0.1:11435/api/version failed after 3 attempts: HTTPConnectionPool(host='127.0.0.1', 
+port=11435): Max retries exceeded with url: /api/version (Caused by 
+NewConnectionError("HTTPConnection(host='127.0.0.1', port=11435): Failed to establish a new connection: [WinError 
+10061] No connection could be made because the target machine actively refused it"))
+CHECKED Ministral3-8B 0/20; ctx 32768; f16 KV; full GPU; P2-draft
+PHASE preflight: Gemma4-E4B
+Ollama GET http://127.0.0.1:11435/api/version connection error; retry 1/2: HTTPConnectionPool(host='127.0.0.1', 
+port=11435): Max retries exceeded with url: /api/version (Caused by 
+NewConnectionError("HTTPConnection(host='127.0.0.1', port=11435): Failed to establish a new connection: [WinError 
+10061] No connection could be made because the target machine actively refused it"))
+Ollama GET http://127.0.0.1:11435/api/version connection error; retry 2/2: HTTPConnectionPool(host='127.0.0.1', 
+port=11435): Max retries exceeded with url: /api/version (Caused by 
+NewConnectionError("HTTPConnection(host='127.0.0.1', port=11435): Failed to establish a new connection: [WinError 
+10061] No connection could be made because the target machine actively refused it"))
+Ollama GET http://127.0.0.1:11435/api/version failed after 3 attempts: HTTPConnectionPool(host='127.0.0.1', 
+port=11435): Max retries exceeded with url: /api/version (Caused by 
+NewConnectionError("HTTPConnection(host='127.0.0.1', port=11435): Failed to establish a new connection: [WinError 
+10061] No connection could be made because the target machine actively refused it"))
+CHECKED Gemma4-E4B 0/20; ctx 32768; f16 KV; full GPU; P2-draft
+PHASE preflight: Granite41-8B
+Ollama GET http://127.0.0.1:11435/api/version connection error; retry 1/2: HTTPConnectionPool(host='127.0.0.1', 
+port=11435): Max retries exceeded with url: /api/version (Caused by 
+NewConnectionError("HTTPConnection(host='127.0.0.1', port=11435): Failed to establish a new connection: [WinError 
+10061] No connection could be made because the target machine actively refused it"))
+Ollama GET http://127.0.0.1:11435/api/version connection error; retry 2/2: HTTPConnectionPool(host='127.0.0.1', 
+port=11435): Max retries exceeded with url: /api/version (Caused by 
+NewConnectionError("HTTPConnection(host='127.0.0.1', port=11435): Failed to establish a new connection: [WinError 
+10061] No connection could be made because the target machine actively refused it"))
+Ollama GET http://127.0.0.1:11435/api/version failed after 3 attempts: HTTPConnectionPool(host='127.0.0.1', 
+port=11435): Max retries exceeded with url: /api/version (Caused by 
+NewConnectionError("HTTPConnection(host='127.0.0.1', port=11435): Failed to establish a new connection: [WinError 
+10061] No connection could be made because the target machine actively refused it"))
+CHECKED Granite41-8B 0/20; ctx 32768; f16 KV; full GPU; P2-draft
+PHASE preflight: Qwen35-9B-8K
+Ollama GET http://127.0.0.1:11435/api/version connection error; retry 1/2: HTTPConnectionPool(host='127.0.0.1', 
+port=11435): Max retries exceeded with url: /api/version (Caused by 
+NewConnectionError("HTTPConnection(host='127.0.0.1', port=11435): Failed to establish a new connection: [WinError 
+10061] No connection could be made because the target machine actively refused it"))
+Ollama GET http://127.0.0.1:11435/api/version connection error; retry 2/2: HTTPConnectionPool(host='127.0.0.1', 
+port=11435): Max retries exceeded with url: /api/version (Caused by 
+NewConnectionError("HTTPConnection(host='127.0.0.1', port=11435): Failed to establish a new connection: [WinError 
+10061] No connection could be made because the target machine actively refused it"))
+Ollama GET http://127.0.0.1:11435/api/version failed after 3 attempts: HTTPConnectionPool(host='127.0.0.1', 
+port=11435): Max retries exceeded with url: /api/version (Caused by 
+NewConnectionError("HTTPConnection(host='127.0.0.1', port=11435): Failed to establish a new connection: [WinError 
+10061] No connection could be made because the target machine actively refused it"))
+CHECKED Qwen35-9B-8K 0/20; ctx 8192; f32 KV; full GPU; P2-draft
+PHASE preflight: Qwen35-9B-16K
+Ollama GET http://127.0.0.1:11435/api/version connection error; retry 1/2: HTTPConnectionPool(host='127.0.0.1', 
+port=11435): Max retries exceeded with url: /api/version (Caused by 
+NewConnectionError("HTTPConnection(host='127.0.0.1', port=11435): Failed to establish a new connection: [WinError 
+10061] No connection could be made because the target machine actively refused it"))
+Ollama GET http://127.0.0.1:11435/api/version connection error; retry 2/2: HTTPConnectionPool(host='127.0.0.1', 
+port=11435): Max retries exceeded with url: /api/version (Caused by 
+NewConnectionError("HTTPConnection(host='127.0.0.1', port=11435): Failed to establish a new connection: [WinError 
+10061] No connection could be made because the target machine actively refused it"))
+Ollama GET http://127.0.0.1:11435/api/version failed after 3 attempts: HTTPConnectionPool(host='127.0.0.1', 
+port=11435): Max retries exceeded with url: /api/version (Caused by 
+NewConnectionError("HTTPConnection(host='127.0.0.1', port=11435): Failed to establish a new connection: [WinError 
+10061] No connection could be made because the target machine actively refused it"))
+CHECKED Qwen35-9B-16K 0/20; ctx 16384; f16 KV; full GPU; P2-draft
+PHASE preflight: Ornith15-9B
+Ollama GET http://127.0.0.1:11435/api/version connection error; retry 1/2: HTTPConnectionPool(host='127.0.0.1', 
+port=11435): Max retries exceeded with url: /api/version (Caused by 
+NewConnectionError("HTTPConnection(host='127.0.0.1', port=11435): Failed to establish a new connection: [WinError 
+10061] No connection could be made because the target machine actively refused it"))
+Ollama GET http://127.0.0.1:11435/api/version connection error; retry 2/2: HTTPConnectionPool(host='127.0.0.1', 
+port=11435): Max retries exceeded with url: /api/version (Caused by 
+NewConnectionError("HTTPConnection(host='127.0.0.1', port=11435): Failed to establish a new connection: [WinError 
+10061] No connection could be made because the target machine actively refused it"))
+Ollama GET http://127.0.0.1:11435/api/version failed after 3 attempts: HTTPConnectionPool(host='127.0.0.1', 
+port=11435): Max retries exceeded with url: /api/version (Caused by 
+NewConnectionError("HTTPConnection(host='127.0.0.1', port=11435): Failed to establish a new connection: [WinError 
+10061] No connection could be made because the target machine actively refused it"))
+CHECKED Ornith15-9B 0/20; ctx 32768; f16 KV; full GPU; P2-draft
+PHASE preflight COMPLETE

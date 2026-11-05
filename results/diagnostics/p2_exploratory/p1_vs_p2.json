@@ -1,0 +1,516 @@
+{
+  "Gemma4-E4B": {
+    "p1": {
+      "budget_hit_share": 0.05,
+      "causes": {},
+      "cells": {
+        "BH2_00461": "correct 21/21",
+        "BH2_02033": "correct 3/3",
+        "BH2_03434": "correct 33/33",
+        "BH2_03619": "correct 79/79",
+        "BH2_03750": "correct 44/44",
+        "BH2_03760": "correct 57/57",
+        "BH2_03762": "no answer",
+        "BH2_03850": "correct 66/66",
+        "BH2_03856": "correct 66/66",
+        "BH2_03879": "correct 88/88",
+        "BH2_03881": "wrong 20/50",
+        "BH2_03953": "correct 82/82",
+        "BH2_03991": "no answer",
+        "BH2_04003": "correct 80/80",
+        "BH2_04007": "correct 30/30",
+        "BH2_04425": "correct 66/66",
+        "BH2_05366": "wrong 0/30",
+        "BH2_05686": "correct 15/15",
+        "BH2_05843": "correct 4/4",
+        "BH2_06427": "correct 3/3"
+      },
+      "competent": 16,
+      "d3_pass": true,
+      "hit_context_or_output_limit": 0,
+      "largest_prompt": 29500,
+      "median_answers_success": 44,
+      "median_tool_calls": 8.0,
+      "median_wall_s": 11.0227295,
+      "reprompted": 16,
+      "start_only": 0,
+      "status": {
+        "SUCCESS": 20
+      },
+      "well_formed_rate": 1.0
+    },
+    "p1_source": "S22",
+    "p2": {
+      "budget_hit_share": 0.05,
+      "causes": {},
+      "cells": {
+        "BH2_00461": "correct 21/21",
+        "BH2_02033": "correct 3/3",
+        "BH2_03434": "correct 33/33",
+        "BH2_03619": "correct 73/73",
+        "BH2_03750": "correct 44/44",
+        "BH2_03760": "correct 57/57",
+        "BH2_03762": "no answer",
+        "BH2_03850": "correct 66/66",
+        "BH2_03856": "correct 66/66",
+        "BH2_03879": "correct 89/89",
+        "BH2_03881": "correct 47/47",
+        "BH2_03953": "correct 100/100",
+        "BH2_03991": "no answer",
+        "BH2_04003": "correct 73/73",
+        "BH2_04007": "correct 30/30",
+        "BH2_04425": "correct 66/66",
+        "BH2_05366": "wrong 0/30",
+        "BH2_05686": "correct 15/15",
+        "BH2_05843": "correct 4/4",
+        "BH2_06427": "correct 3/3"
+      },
+      "competent": 17,
+      "d3_pass": true,
+      "hit_context_or_output_limit": 0,
+      "largest_prompt": 23789,
+      "median_answers_success": 44,
+      "median_tool_calls": 8.0,
+      "median_wall_s": 12.3174995,
+      "reprompted": 16,
+      "start_only": 0,
+      "status": {
+        "SUCCESS": 20
+      },
+      "well_formed_rate": 1.0
+    }
+  },
+  "Granite41-8B": {
+    "p1": {
+      "budget_hit_share": 0.1,
+      "causes": {},
+      "cells": {
+        "BH2_00461": "correct 21/21",
+        "BH2_02033": "correct 3/3",
+        "BH2_03434": "correct 33/33",
+        "BH2_03619": "correct 50/50",
+        "BH2_03750": "correct 44/44",
+        "BH2_03760": "correct 50/50",
+        "BH2_03762": "correct 1/2",
+        "BH2_03850": "correct 67/67",
+        "BH2_03856": "correct 66/66",
+        "BH2_03879": "wrong 0/11",
+        "BH2_03881": "wrong 0/4",
+        "BH2_03953": "correct 99/99",
+        "BH2_03991": "wrong 0/3",
+        "BH2_04003": "correct 64/64",
+        "BH2_04007": "correct 30/30",
+        "BH2_04425": "correct 60/60",
+        "BH2_05366": "wrong 0/30",
+        "BH2_05686": "correct 15/15",
+        "BH2_05843": "correct 4/4",
+        "BH2_06427": "correct 3/28"
+      },
+      "competent": 16,
+      "d3_pass": true,
+      "hit_context_or_output_limit": 0,
+      "largest_prompt": 18192,
+      "median_answers_success": 30,
+      "median_tool_calls": 10.0,
+      "median_wall_s": 37.264739500000005,
+      "reprompted": 15,
+      "start_only": 0,
+      "status": {
+        "SUCCESS": 20
+      },
+      "well_formed_rate": 1.0
+    },
+    "p1_source": "S22",
+    "p2": {
+      "budget_hit_share": 0.05,
+      "causes": {
+        "PARSE_FAIL:None": 1
+      },
+      "cells": {
+        "BH2_00461": "correct 21/21",
+        "BH2_02033": "correct 3/3",
+        "BH2_03434": "correct 33/33",
+        "BH2_03619": "correct 88/88",
+        "BH2_03750": "correct 44/44",
+        "BH2_03760": "correct 100/100",
+        "BH2_03762": "correct 83/83",
+        "BH2_03850": "correct 66/66",
+        "BH2_03856": "PARSE_FAIL",
+        "BH2_03879": "correct 50/50",
+        "BH2_03881": "wrong 0/5",
+        "BH2_03953": "correct 96/96",
+        "BH2_03991": "correct 50/50",
+        "BH2_04003": "correct 83/83",
+        "BH2_04007": "correct 13/13",
+        "BH2_04425": "correct 60/60",
+        "BH2_05366": "correct 1/1",
+        "BH2_05686": "correct 15/15",
+        "BH2_05843": "correct 4/4",
+        "BH2_06427": "wrong 0/25"
+      },
+      "competent": 17,
+      "d3_pass": true,
+      "hit_context_or_output_limit": 0,
+      "largest_prompt": 30445,
+      "median_answers_success": 44,
+      "median_tool_calls": 10.5,
+      "median_wall_s": 30.510767,
+      "reprompted": 13,
+      "start_only": 0,
+      "status": {
+        "PARSE_FAIL": 1,
+        "SUCCESS": 19
+      },
+      "well_formed_rate": 1.0
+    }
+  },
+  "Ministral3-8B": {
+    "p1": {
+      "budget_hit_share": 0.0,
+      "causes": {},
+      "cells": {
+        "BH2_00461": "correct 21/21",
+        "BH2_02033": "correct 3/3",
+        "BH2_03434": "correct 32/32",
+        "BH2_03619": "correct 15/15",
+        "BH2_03750": "no answer",
+        "BH2_03760": "correct 57/57",
+        "BH2_03762": "correct 47/47",
+        "BH2_03850": "correct 67/67",
+        "BH2_03856": "correct 65/65",
+        "BH2_03879": "correct 111/111",
+        "BH2_03881": "correct 13/13",
+        "BH2_03953": "correct 131/131",
+        "BH2_03991": "correct 15/15",
+        "BH2_04003": "correct 40/40",
+        "BH2_04007": "correct 30/30",
+        "BH2_04425": "correct 50/50",
+        "BH2_05366": "correct 1/1",
+        "BH2_05686": "correct 15/15",
+        "BH2_05843": "correct 4/4",
+        "BH2_06427": "correct 3/3"
+      },
+      "competent": 19,
+      "d3_pass": true,
+      "hit_context_or_output_limit": 0,
+      "largest_prompt": 21298,
+      "median_answers_success": 30,
+      "median_tool_calls": 8.0,
+      "median_wall_s": 44.300335,
+      "reprompted": 17,
+      "start_only": 0,
+      "status": {
+        "SUCCESS": 20
+      },
+      "well_formed_rate": 1.0
+    },
+    "p1_source": "S22",
+    "p2": {
+      "budget_hit_share": 0.05,
+      "causes": {
+        "PARSE_FAIL:None": 2
+      },
+      "cells": {
+        "BH2_00461": "correct 21/21",
+        "BH2_02033": "correct 3/5",
+        "BH2_03434": "correct 33/33",
+        "BH2_03619": "correct 93/93",
+        "BH2_03750": "PARSE_FAIL",
+        "BH2_03760": "correct 126/126",
+        "BH2_03762": "correct 99/99",
+        "BH2_03850": "correct 66/66",
+        "BH2_03856": "correct 66/66",
+        "BH2_03879": "correct 109/109",
+        "BH2_03881": "PARSE_FAIL",
+        "BH2_03953": "correct 102/102",
+        "BH2_03991": "correct 72/72",
+        "BH2_04003": "correct 57/57",
+        "BH2_04007": "correct 30/30",
+        "BH2_04425": "correct 65/65",
+        "BH2_05366": "wrong 0/29",
+        "BH2_05686": "correct 15/15",
+        "BH2_05843": "correct 4/4",
+        "BH2_06427": "correct 3/3"
+      },
+      "competent": 17,
+      "d3_pass": true,
+      "hit_context_or_output_limit": 1,
+      "largest_prompt": 32744,
+      "median_answers_success": 65,
+      "median_tool_calls": 7.5,
+      "median_wall_s": 57.9884215,
+      "reprompted": 17,
+      "start_only": 0,
+      "status": {
+        "PARSE_FAIL": 2,
+        "SUCCESS": 18
+      },
+      "well_formed_rate": 1.0
+    }
+  },
+  "Ornith15-9B": {
+    "p1": {
+      "budget_hit_share": 0.15,
+      "causes": {
+        "ERROR:RUNTIME": 1,
+        "PARSE_FAIL:None": 1
+      },
+      "cells": {
+        "BH2_00461": "correct 21/21",
+        "BH2_02033": "correct 3/3",
+        "BH2_03434": "correct 33/34",
+        "BH2_03619": "correct 175/175",
+        "BH2_03750": "correct 44/157",
+        "BH2_03760": "start only",
+        "BH2_03762": "start only",
+        "BH2_03850": "correct 70/70",
+        "BH2_03856": "start only",
+        "BH2_03879": "ERROR",
+        "BH2_03881": "PARSE_FAIL",
+        "BH2_03953": "correct 143/143",
+        "BH2_03991": "start only",
+        "BH2_04003": "start only",
+        "BH2_04007": "start only",
+        "BH2_04425": "correct 75/78",
+        "BH2_05366": "correct 1/1",
+        "BH2_05686": "start only",
+        "BH2_05843": "correct 4/4",
+        "BH2_06427": "correct 3/3"
+      },
+      "competent": 11,
+      "d3_pass": true,
+      "hit_context_or_output_limit": 2,
+      "largest_prompt": 32723,
+      "median_answers_success": 3,
+      "median_tool_calls": 12.5,
+      "median_wall_s": 47.5706245,
+      "reprompted": 20,
+      "start_only": 7,
+      "status": {
+        "ERROR": 1,
+        "PARSE_FAIL": 1,
+        "SUCCESS": 18
+      },
+      "well_formed_rate": 1.0
+    },
+    "p1_source": "S20",
+    "p2": {
+      "budget_hit_share": 0.5,
+      "causes": {
+        "ERROR:RUNTIME": 1,
+        "PARSE_FAIL:None": 6
+      },
+      "cells": {
+        "BH2_00461": "correct 21/21",
+        "BH2_02033": "PARSE_FAIL",
+        "BH2_03434": "correct 33/33",
+        "BH2_03619": "correct 173/173",
+        "BH2_03750": "correct 44/161",
+        "BH2_03760": "correct 125/125",
+        "BH2_03762": "PARSE_FAIL",
+        "BH2_03850": "correct 65/70",
+        "BH2_03856": "correct 75/205",
+        "BH2_03879": "ERROR",
+        "BH2_03881": "PARSE_FAIL",
+        "BH2_03953": "PARSE_FAIL",
+        "BH2_03991": "correct 116/169",
+        "BH2_04003": "PARSE_FAIL",
+        "BH2_04007": "correct 30/30",
+        "BH2_04425": "wrong 0/3",
+        "BH2_05366": "correct 1/1",
+        "BH2_05686": "PARSE_FAIL",
+        "BH2_05843": "correct 4/4",
+        "BH2_06427": "correct 3/3"
+      },
+      "competent": 12,
+      "d3_pass": false,
+      "hit_context_or_output_limit": 4,
+      "largest_prompt": 32753,
+      "median_answers_success": 33,
+      "median_tool_calls": 29.5,
+      "median_wall_s": 60.676754,
+      "reprompted": 20,
+      "start_only": 0,
+      "status": {
+        "ERROR": 1,
+        "PARSE_FAIL": 6,
+        "SUCCESS": 13
+      },
+      "well_formed_rate": 1.0
+    }
+  },
+  "Qwen35-9B-16K": {
+    "p1": {
+      "budget_hit_share": 0.05,
+      "causes": {
+        "PARSE_FAIL:None": 4
+      },
+      "cells": {
+        "BH2_00461": "correct 21/21",
+        "BH2_02033": "correct 3/3",
+        "BH2_03434": "correct 33/33",
+        "BH2_03619": "no answer",
+        "BH2_03750": "correct 44/44",
+        "BH2_03760": "correct 124/124",
+        "BH2_03762": "no answer",
+        "BH2_03850": "correct 69/69",
+        "BH2_03856": "PARSE_FAIL",
+        "BH2_03879": "PARSE_FAIL",
+        "BH2_03881": "no answer",
+        "BH2_03953": "PARSE_FAIL",
+        "BH2_03991": "PARSE_FAIL",
+        "BH2_04003": "no answer",
+        "BH2_04007": "correct 30/30",
+        "BH2_04425": "correct 75/75",
+        "BH2_05366": "correct 1/1",
+        "BH2_05686": "correct 15/15",
+        "BH2_05843": "correct 4/4",
+        "BH2_06427": "correct 3/3"
+      },
+      "competent": 12,
+      "d3_pass": false,
+      "hit_context_or_output_limit": 6,
+      "largest_prompt": 16368,
+      "median_answers_success": 15,
+      "median_tool_calls": 9.5,
+      "median_wall_s": 30.627938999999998,
+      "reprompted": 5,
+      "start_only": 0,
+      "status": {
+        "PARSE_FAIL": 4,
+        "SUCCESS": 16
+      },
+      "well_formed_rate": 1.0
+    },
+    "p1_source": "S20",
+    "p2": {
+      "budget_hit_share": 0.4,
+      "causes": {
+        "PARSE_FAIL:None": 9
+      },
+      "cells": {
+        "BH2_00461": "correct 21/21",
+        "BH2_02033": "correct 3/3",
+        "BH2_03434": "correct 33/33",
+        "BH2_03619": "PARSE_FAIL",
+        "BH2_03750": "correct 44/44",
+        "BH2_03760": "PARSE_FAIL",
+        "BH2_03762": "PARSE_FAIL",
+        "BH2_03850": "correct 69/69",
+        "BH2_03856": "no answer",
+        "BH2_03879": "PARSE_FAIL",
+        "BH2_03881": "PARSE_FAIL",
+        "BH2_03953": "PARSE_FAIL",
+        "BH2_03991": "PARSE_FAIL",
+        "BH2_04003": "PARSE_FAIL",
+        "BH2_04007": "correct 30/30",
+        "BH2_04425": "PARSE_FAIL",
+        "BH2_05366": "correct 1/1",
+        "BH2_05686": "correct 15/15",
+        "BH2_05843": "correct 4/4",
+        "BH2_06427": "correct 3/3"
+      },
+      "competent": 10,
+      "d3_pass": false,
+      "hit_context_or_output_limit": 9,
+      "largest_prompt": 16374,
+      "median_answers_success": 15,
+      "median_tool_calls": 21.5,
+      "median_wall_s": 50.4954995,
+      "reprompted": 13,
+      "start_only": 0,
+      "status": {
+        "PARSE_FAIL": 9,
+        "SUCCESS": 11
+      },
+      "well_formed_rate": 1.0
+    }
+  },
+  "Qwen35-9B-8K": {
+    "p1": {
+      "budget_hit_share": 0.05,
+      "causes": {
+        "PARSE_FAIL:None": 2
+      },
+      "cells": {
+        "BH2_00461": "correct 21/21",
+        "BH2_02033": "correct 3/3",
+        "BH2_03434": "correct 33/33",
+        "BH2_03619": "no answer",
+        "BH2_03750": "correct 44/44",
+        "BH2_03760": "wrong 0/3",
+        "BH2_03762": "correct 1/1",
+        "BH2_03850": "correct 69/69",
+        "BH2_03856": "correct 1/1",
+        "BH2_03879": "PARSE_FAIL",
+        "BH2_03881": "correct 1/1",
+        "BH2_03953": "no answer",
+        "BH2_03991": "PARSE_FAIL",
+        "BH2_04003": "no answer",
+        "BH2_04007": "correct 30/30",
+        "BH2_04425": "correct 75/75",
+        "BH2_05366": "correct 1/1",
+        "BH2_05686": "correct 15/15",
+        "BH2_05843": "correct 4/4",
+        "BH2_06427": "correct 3/3"
+      },
+      "competent": 14,
+      "d3_pass": true,
+      "hit_context_or_output_limit": 4,
+      "largest_prompt": 8189,
+      "median_answers_success": 3,
+      "median_tool_calls": 9.0,
+      "median_wall_s": 18.443952,
+      "reprompted": 4,
+      "start_only": 0,
+      "status": {
+        "PARSE_FAIL": 2,
+        "SUCCESS": 18
+      },
+      "well_formed_rate": 1.0
+    },
+    "p1_source": "S22",
+    "p2": {
+      "budget_hit_share": 0.35,
+      "causes": {
+        "PARSE_FAIL:None": 11
+      },
+      "cells": {
+        "BH2_00461": "correct 21/21",
+        "BH2_02033": "correct 3/3",
+        "BH2_03434": "PARSE_FAIL",
+        "BH2_03619": "PARSE_FAIL",
+        "BH2_03750": "PARSE_FAIL",
+        "BH2_03760": "PARSE_FAIL",
+        "BH2_03762": "no answer",
+        "BH2_03850": "correct 52/52",
+        "BH2_03856": "PARSE_FAIL",
+        "BH2_03879": "PARSE_FAIL",
+        "BH2_03881": "PARSE_FAIL",
+        "BH2_03953": "PARSE_FAIL",
+        "BH2_03991": "no answer",
+        "BH2_04003": "PARSE_FAIL",
+        "BH2_04007": "PARSE_FAIL",
+        "BH2_04425": "PARSE_FAIL",
+        "BH2_05366": "correct 1/1",
+        "BH2_05686": "correct 15/15",
+        "BH2_05843": "no answer",
+        "BH2_06427": "correct 3/3"
+      },
+      "competent": 6,
+      "d3_pass": false,
+      "hit_context_or_output_limit": 14,
+      "largest_prompt": 8191,
+      "median_answers_success": 3,
+      "median_tool_calls": 16.0,
+      "median_wall_s": 35.827676499999995,
+      "reprompted": 15,
+      "start_only": 0,
+      "status": {
+        "PARSE_FAIL": 11,
+        "SUCCESS": 9
+      },
+      "well_formed_rate": 1.0
+    }
+  }
+}
