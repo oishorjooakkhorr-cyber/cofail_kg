@@ -1,0 +1,17 @@
+{
+  "model": "gemma4:12b",
+  "created_at": "2026-11-05T18:20:37.2695939Z",
+  "message": {
+    "role": "assistant",
+    "content": "The result of 2 + 3 is 5."
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 208430100,
+  "load_duration": 2010400,
+  "prompt_eval_count": 108,
+  "prompt_eval_cached_count": 81,
+  "prompt_eval_duration": 86305000,
+  "eval_count": 17,
+  "eval_duration": 117974000
+}

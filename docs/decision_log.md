@@ -2561,3 +2561,17 @@ the researcher:
 - the literal wrong-turn reading for paths whose length is not 2;
 - where the SOURCE_NAME_OVERLAP exclusion is applied.
 No stage after S23 has been started.
+
+## 2026-11-06 — Authorized gemma4:12b 32K S20 candidate block
+Researcher request: fresh S20 block for gemma4:12b (pulled by the researcher; Ollama library,
+digest 6114515d...ed0b, Q4_K_M, 11.9B, family gemma4) at num_ctx 32768, num_predict 8192,
+f16 KV. Synthetic probe on pinned 0.40.12: think=false honoured, native tool call, 49/49 main
++ 5/5 MTP-draft layers on GPU, Ollama gemma4 renderer (same path as panel Gemma4-E4B); used
+unmodified. Settings, P1, tools, parser, re-prompt, evaluators and D3 unchanged.
+Run ID gemma4-12b-5060ti-32k-20261106. No panel change without researcher decision.
+
+## gemma4:12b 32K block completed — 2026-11-06
+D3 PASS: 20/20 SUCCESS, 20/20 competent, 130/130 well-formed calls, median 16.95 s, zero
+ERROR/OOM. Largest prompt 21660/32768; budget-hit share 0; median 6 tool calls. Same family
+as Gemma4-E4B (three-family D3 rule). Report: docs/S20_gemma4_12b_5060ti_32k.md.
+No panel change; researcher decision pending.
