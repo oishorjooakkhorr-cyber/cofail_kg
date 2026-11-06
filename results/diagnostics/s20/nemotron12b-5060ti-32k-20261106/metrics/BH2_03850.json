@@ -1,0 +1,495 @@
+{
+  "agent_id": "NemotronNanoV2-12B",
+  "answer_count": 10,
+  "answers": [
+    {
+      "degree": 266,
+      "degree_percentile": 99.49648711943794,
+      "first_seen_page": 1,
+      "h1": 1,
+      "label_a": "OFF_QUESTION",
+      "label_b": "PATH_INVALID",
+      "list_size": 10,
+      "node_id": "27626",
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "label": "indication",
+          "u": "36665",
+          "v": "15481"
+        },
+        {
+          "creation_index": 2,
+          "label": "contraindication",
+          "u": "15481",
+          "v": "27626"
+        }
+      ],
+      "primary_path_max_list_size": 10,
+      "primary_reason_codes": [
+        "WRONG_RELATION_HOP2",
+        "WRONG_TARGET_TYPE"
+      ],
+      "reason_codes": [
+        "WRONG_RELATION_HOP2",
+        "WRONG_TARGET_TYPE"
+      ],
+      "submitted_index": 0
+    },
+    {
+      "degree": 107,
+      "degree_percentile": 97.23653395784542,
+      "first_seen_page": 1,
+      "h1": 1,
+      "label_a": "OFF_QUESTION",
+      "label_b": "PATH_INVALID",
+      "list_size": 10,
+      "node_id": "33594",
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "label": "indication",
+          "u": "36665",
+          "v": "15481"
+        },
+        {
+          "creation_index": 2,
+          "label": "contraindication",
+          "u": "15481",
+          "v": "33594"
+        }
+      ],
+      "primary_path_max_list_size": 10,
+      "primary_reason_codes": [
+        "WRONG_RELATION_HOP2",
+        "WRONG_TARGET_TYPE"
+      ],
+      "reason_codes": [
+        "WRONG_RELATION_HOP2",
+        "WRONG_TARGET_TYPE"
+      ],
+      "submitted_index": 1
+    },
+    {
+      "degree": 251,
+      "degree_percentile": 99.46135831381733,
+      "first_seen_page": 1,
+      "h1": 1,
+      "label_a": "OFF_QUESTION",
+      "label_b": "PATH_INVALID",
+      "list_size": 10,
+      "node_id": "33623",
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "label": "indication",
+          "u": "36665",
+          "v": "15481"
+        },
+        {
+          "creation_index": 2,
+          "label": "contraindication",
+          "u": "15481",
+          "v": "33623"
+        }
+      ],
+      "primary_path_max_list_size": 10,
+      "primary_reason_codes": [
+        "WRONG_RELATION_HOP2",
+        "WRONG_TARGET_TYPE"
+      ],
+      "reason_codes": [
+        "WRONG_RELATION_HOP2",
+        "WRONG_TARGET_TYPE"
+      ],
+      "submitted_index": 2
+    },
+    {
+      "degree": 278,
+      "degree_percentile": 99.50819672131146,
+      "first_seen_page": 1,
+      "h1": 1,
+      "label_a": "OFF_QUESTION",
+      "label_b": "PATH_INVALID",
+      "list_size": 10,
+      "node_id": "33632",
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "label": "indication",
+          "u": "36665",
+          "v": "15481"
+        },
+        {
+          "creation_index": 2,
+          "label": "contraindication",
+          "u": "15481",
+          "v": "33632"
+        }
+      ],
+      "primary_path_max_list_size": 10,
+      "primary_reason_codes": [
+        "WRONG_RELATION_HOP2",
+        "WRONG_TARGET_TYPE"
+      ],
+      "reason_codes": [
+        "WRONG_RELATION_HOP2",
+        "WRONG_TARGET_TYPE"
+      ],
+      "submitted_index": 3
+    },
+    {
+      "degree": 116,
+      "degree_percentile": 97.56440281030446,
+      "first_seen_page": 1,
+      "h1": 1,
+      "label_a": "OFF_QUESTION",
+      "label_b": "PATH_INVALID",
+      "list_size": 10,
+      "node_id": "35471",
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "label": "indication",
+          "u": "36665",
+          "v": "15481"
+        },
+        {
+          "creation_index": 2,
+          "label": "contraindication",
+          "u": "15481",
+          "v": "35471"
+        }
+      ],
+      "primary_path_max_list_size": 10,
+      "primary_reason_codes": [
+        "WRONG_RELATION_HOP2",
+        "WRONG_TARGET_TYPE"
+      ],
+      "reason_codes": [
+        "WRONG_RELATION_HOP2",
+        "WRONG_TARGET_TYPE"
+      ],
+      "submitted_index": 4
+    },
+    {
+      "degree": 220,
+      "degree_percentile": 99.30327868852459,
+      "first_seen_page": 1,
+      "h1": 1,
+      "label_a": "OFF_QUESTION",
+      "label_b": "PATH_INVALID",
+      "list_size": 10,
+      "node_id": "36104",
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "label": "indication",
+          "u": "36665",
+          "v": "15481"
+        },
+        {
+          "creation_index": 2,
+          "label": "contraindication",
+          "u": "15481",
+          "v": "36104"
+        }
+      ],
+      "primary_path_max_list_size": 10,
+      "primary_reason_codes": [
+        "WRONG_RELATION_HOP2",
+        "WRONG_TARGET_TYPE"
+      ],
+      "reason_codes": [
+        "WRONG_RELATION_HOP2",
+        "WRONG_TARGET_TYPE"
+      ],
+      "submitted_index": 5
+    },
+    {
+      "degree": 219,
+      "degree_percentile": 99.28571428571429,
+      "first_seen_page": 1,
+      "h1": 1,
+      "label_a": "OFF_QUESTION",
+      "label_b": "PATH_INVALID",
+      "list_size": 10,
+      "node_id": "36229",
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "label": "indication",
+          "u": "36665",
+          "v": "15481"
+        },
+        {
+          "creation_index": 2,
+          "label": "contraindication",
+          "u": "15481",
+          "v": "36229"
+        }
+      ],
+      "primary_path_max_list_size": 10,
+      "primary_reason_codes": [
+        "WRONG_RELATION_HOP2",
+        "WRONG_TARGET_TYPE"
+      ],
+      "reason_codes": [
+        "WRONG_RELATION_HOP2",
+        "WRONG_TARGET_TYPE"
+      ],
+      "submitted_index": 6
+    },
+    {
+      "degree": 131,
+      "degree_percentile": 98.02107728337236,
+      "first_seen_page": 1,
+      "h1": 1,
+      "label_a": "OFF_QUESTION",
+      "label_b": "PATH_INVALID",
+      "list_size": 10,
+      "node_id": "36253",
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "label": "indication",
+          "u": "36665",
+          "v": "15481"
+        },
+        {
+          "creation_index": 2,
+          "label": "contraindication",
+          "u": "15481",
+          "v": "36253"
+        }
+      ],
+      "primary_path_max_list_size": 10,
+      "primary_reason_codes": [
+        "WRONG_RELATION_HOP2",
+        "WRONG_TARGET_TYPE"
+      ],
+      "reason_codes": [
+        "WRONG_RELATION_HOP2",
+        "WRONG_TARGET_TYPE"
+      ],
+      "submitted_index": 7
+    },
+    {
+      "degree": 47,
+      "degree_percentile": 89.93559718969554,
+      "first_seen_page": 1,
+      "h1": 1,
+      "label_a": "OFF_QUESTION",
+      "label_b": "PATH_INVALID",
+      "list_size": 10,
+      "node_id": "36836",
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "label": "indication",
+          "u": "36665",
+          "v": "15481"
+        },
+        {
+          "creation_index": 2,
+          "label": "contraindication",
+          "u": "15481",
+          "v": "36836"
+        }
+      ],
+      "primary_path_max_list_size": 10,
+      "primary_reason_codes": [
+        "WRONG_RELATION_HOP2",
+        "WRONG_TARGET_TYPE"
+      ],
+      "reason_codes": [
+        "WRONG_RELATION_HOP2",
+        "WRONG_TARGET_TYPE"
+      ],
+      "submitted_index": 8
+    },
+    {
+      "degree": 107,
+      "degree_percentile": 97.23653395784542,
+      "first_seen_page": 1,
+      "h1": 1,
+      "label_a": "OFF_QUESTION",
+      "label_b": "PATH_INVALID",
+      "list_size": 10,
+      "node_id": "84056",
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "label": "indication",
+          "u": "36665",
+          "v": "15481"
+        },
+        {
+          "creation_index": 2,
+          "label": "contraindication",
+          "u": "15481",
+          "v": "84056"
+        }
+      ],
+      "primary_path_max_list_size": 10,
+      "primary_reason_codes": [
+        "WRONG_RELATION_HOP2",
+        "WRONG_TARGET_TYPE"
+      ],
+      "reason_codes": [
+        "WRONG_RELATION_HOP2",
+        "WRONG_TARGET_TYPE"
+      ],
+      "submitted_index": 9
+    }
+  ],
+  "attempt": 1,
+  "benchmark_f1": 0.0,
+  "benchmark_precision": 0.0,
+  "benchmark_recall": 0.0,
+  "bridge_conditional_recall": {
+    "15481": 0.0
+  },
+  "bridge_rank": {
+    "15481": 1
+  },
+  "bridge_recall_counts": {
+    "15481": {
+      "correct": 0,
+      "total": 52
+    }
+  },
+  "bridges_explored": [
+    "15481"
+  ],
+  "budget_exhausted": false,
+  "cause": null,
+  "construction": "UNION",
+  "denominators": {
+    "benchmark_f1": 80,
+    "benchmark_precision": 10,
+    "benchmark_recall": 70,
+    "off_question_rate": 10,
+    "question_valid_precision": 10,
+    "ungrounded_rate": 10,
+    "unresolved_rate": 10
+  },
+  "early_stop": false,
+  "episode_status": "SUCCESS",
+  "found_r1": true,
+  "hop1_status": "H1_CLEAN",
+  "label_a_counts": {
+    "ALT_VALID": 0,
+    "GOLD": 0,
+    "GOLD_BRIDGE_EXTRA": 0,
+    "OFF_QUESTION": 10,
+    "UNRESOLVED": 0
+  },
+  "label_b_counts": {
+    "KG_UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0,
+    "PATH_INVALID": 10,
+    "SUPPORTED": 0,
+    "UNGROUNDED": 0
+  },
+  "node_statistics": {
+    "15481": {
+      "degree": 1550,
+      "degree_percentile": 95.99095136357924
+    },
+    "27626": {
+      "degree": 266,
+      "degree_percentile": 99.49648711943794
+    },
+    "33594": {
+      "degree": 107,
+      "degree_percentile": 97.23653395784542
+    },
+    "33623": {
+      "degree": 251,
+      "degree_percentile": 99.46135831381733
+    },
+    "33632": {
+      "degree": 278,
+      "degree_percentile": 99.50819672131146
+    },
+    "35471": {
+      "degree": 116,
+      "degree_percentile": 97.56440281030446
+    },
+    "36104": {
+      "degree": 220,
+      "degree_percentile": 99.30327868852459
+    },
+    "36229": {
+      "degree": 219,
+      "degree_percentile": 99.28571428571429
+    },
+    "36253": {
+      "degree": 131,
+      "degree_percentile": 98.02107728337236
+    },
+    "36665": {
+      "degree": 36,
+      "degree_percentile": 85.76112412177986
+    },
+    "36836": {
+      "degree": 47,
+      "degree_percentile": 89.93559718969554
+    },
+    "84056": {
+      "degree": 107,
+      "degree_percentile": 97.23653395784542
+    }
+  },
+  "numerators": {
+    "benchmark_f1": 0,
+    "benchmark_precision": 0,
+    "benchmark_recall": 0,
+    "off_question_rate": 10,
+    "question_valid_precision": 0,
+    "ungrounded_rate": 0,
+    "unresolved_rate": 0
+  },
+  "off_question_rate": 1.0,
+  "pages_requested": 2,
+  "primary_reason_counts": {
+    "SHORTCUT": 0,
+    "WRONG_BRIDGE_TYPE": 0,
+    "WRONG_HOP_COUNT": 0,
+    "WRONG_RELATION_HOP1": 0,
+    "WRONG_RELATION_HOP2": 10,
+    "WRONG_TARGET_TYPE": 10
+  },
+  "query_id": "BH2_03850",
+  "question_valid_precision": 0.0,
+  "reason_counts": {
+    "SHORTCUT": 0,
+    "WRONG_BRIDGE_TYPE": 0,
+    "WRONG_HOP_COUNT": 0,
+    "WRONG_RELATION_HOP1": 0,
+    "WRONG_RELATION_HOP2": 10,
+    "WRONG_TARGET_TYPE": 10
+  },
+  "resolved_count": 10,
+  "run_id": "nemotron12b-5060ti-32k-20261106",
+  "text_tool_call_count": 0,
+  "tool_calls_used": 3,
+  "undefined_counts": {
+    "benchmark_f1": 0,
+    "benchmark_precision": 0,
+    "benchmark_recall": 0,
+    "bridge_conditional_recall": 0,
+    "bridge_rank": 0,
+    "degree": 0,
+    "degree_percentile": 0,
+    "list_size": 0,
+    "off_question_rate": 0,
+    "primary_path_max_list_size": 0,
+    "question_valid_precision": 0,
+    "ungrounded_rate": 0,
+    "unresolved_rate": 0
+  },
+  "ungrounded_rate": 0.0,
+  "unresolved_rate": 0.0
+}

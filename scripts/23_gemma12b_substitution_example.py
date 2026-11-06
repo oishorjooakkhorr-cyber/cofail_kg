@@ -1,4 +1,4 @@
-﻿"""EXPLORATORY S23 comparison: Â§16 co-failure with Gemma4-12B substituted for Qwen35-9B. Not a panel change.
+"""EXPLORATORY S23 comparison: §16 co-failure with Gemma4-12B substituted for Qwen35-9B. Not a panel change.
 
 Researcher request (2026-11-06): exploratory S23 with gemma4:12b, keeping Gemma4-E4B (replaces the 9B Qwen slot). Offline only; no inference.
 Panels compared on the 20 screening queries:

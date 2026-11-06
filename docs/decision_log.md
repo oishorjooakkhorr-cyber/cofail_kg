@@ -2575,3 +2575,20 @@ D3 PASS: 20/20 SUCCESS, 20/20 competent, 130/130 well-formed calls, median 16.95
 ERROR/OOM. Largest prompt 21660/32768; budget-hit share 0; median 6 tool calls. Same family
 as Gemma4-E4B (three-family D3 rule). Report: docs/S20_gemma4_12b_5060ti_32k.md.
 No panel change; researcher decision pending.
+
+## 2026-11-06 — Authorized Nemotron-Nano-12B-v2 (derived no-think) 32K S20 candidate block
+Researcher request: S20 and exploratory S23 for Nemotron-Nano-12B-v2, pulled by the researcher
+(hf.co/MaziyarPanahi/NVIDIA-Nemotron-Nano-12B-v2-GGUF:Q4_K_M, digest 9ef5b41b...bb4e, 12.3B).
+The source tag ignores think=false (probe: reasoning on both turns), so, as the researcher
+approved for this block ("same as 9B"), the 9B method was applied: edited GGUF copy with only
+the embedded template default enable_thinking=true -> false; 369 tensors and all other metadata
+verified identical. The derived file is 32 bytes larger (one GGUF alignment step). Derived tag
+cofailkg/nemotron-nano-12b-v2-nothink:q4_k_m (digest 1e01b4a7...8eae). Probe: no thinking,
+native tool call, 63/63 GPU, embedded template. Settings, P1, tools, parser, re-prompt,
+evaluators and D3 unchanged. Run ID nemotron12b-5060ti-32k-20261106. No panel change.
+
+## Nemotron-Nano-12B-v2 32K block completed — 2026-11-06
+D3 FAIL on competence: 20/20 SUCCESS, 0/20 competent, 50/50 well-formed calls, median 5.29 s,
+zero ERROR/OOM. 13 no_answer; 99 submitted items: 1 GOLD, 98 OFF_QUESTION, none SUPPORTED.
+Median 2 tool calls; largest prompt 3109/32768. Exploratory S23 (Qwen35-9B slot): benchmark
+CF3 2, CF4 0, all other totals 0. Report: docs/S20_nemotron12b_5060ti_32k.md. No panel change.

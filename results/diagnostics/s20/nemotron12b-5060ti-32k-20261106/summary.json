@@ -1,0 +1,52 @@
+{
+  "error_causes": {},
+  "runtime": {
+    "actual_quantization": "Q4_K_M",
+    "derived_gguf_sha256": "b632c40b5cca3ffbe9ab5533c9467610dced8484a6e40d68d1c7b5d85c1b0031",
+    "executable_sha256": "aa76635f0a54c663093a9d1c307f6abde3fb4fa0b1aebfd42f71b6faeec0a8e5",
+    "flash_attention_env": "true",
+    "kv_cache_type": "f16",
+    "num_parallel": 1,
+    "ollama": "0.40.12",
+    "source_gguf_sha256": "a32e35e74fedf50915ee0b451f9cccebc030e6934f7c197e23bdb06443128586",
+    "template_change": [
+      "{%- set ns = namespace(enable_thinking=true) %}",
+      "{%- set ns = namespace(enable_thinking=false) %}"
+    ]
+  },
+  "screening_row": {
+    "agent_id": "NemotronNanoV2-12B",
+    "attempted_calls": 50,
+    "budget_hit_share": 0.0,
+    "competence": 0.0,
+    "competent_episodes": 0,
+    "complete": true,
+    "d3_pass": false,
+    "digest": "1e01b4a7738e68d3478685d97dc0ffb7d9a2dba4112fc4bee3da2382d9368eae",
+    "episodes_completed": 20,
+    "episodes_expected": 20,
+    "family": "Nemotron",
+    "largest_prompt_eval_count": 3109,
+    "median_tool_calls": 2.0,
+    "median_wall_seconds": 5.286319499999999,
+    "native_calls": 50,
+    "out_of_memory_episodes": 0,
+    "parameter_size": "12.3B",
+    "pass_competence": false,
+    "pass_oom": true,
+    "pass_success": true,
+    "pass_time": true,
+    "pass_well_formed": true,
+    "quantization": "Q4_K_M",
+    "run_id": "nemotron12b-5060ti-32k-20261106",
+    "success_episodes": 20,
+    "success_rate": 1.0,
+    "tag": "cofailkg/nemotron-nano-12b-v2-nothink:q4_k_m",
+    "text_tool_calls": 0,
+    "well_formed_calls": 50,
+    "well_formed_rate": 1.0
+  },
+  "status_counts": {
+    "SUCCESS": 20
+  }
+}
