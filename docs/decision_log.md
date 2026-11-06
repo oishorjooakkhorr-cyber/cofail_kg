@@ -2626,3 +2626,10 @@ BH2_04425): the 240 s request timeout fired during runaway generations (about 58
 tokens at about 27 tok/s under partial offload). Answers: 632 correct, 0 OFF_QUESTION.
 Exploratory S23 (Qwen35-9B slot): benchmark CF3 2, CF4 2, all others 0.
 Report: docs/S20_cogito14b_5060ti_32k.md. No panel change.
+
+## 2026-11-06 — llama3.2-vision:11b probe failed; skipped
+Researcher request: S20 and exploratory S23 for llama3.2-vision:11b (Ollama library, digest
+6f2f9757...0b1e, Q4_K_M, 10.7B, architecture mllama). The probe on the pinned Ollama 0.40.12
+could not load the model: llama-server reported "unknown model architecture: 'mllama'". No
+episode was run. Researcher decision: do not use this model; it was removed from storage.
+Probe evidence: results/diagnostics/s20/llama32v11b-5060ti-32k-20261106/. No panel change.

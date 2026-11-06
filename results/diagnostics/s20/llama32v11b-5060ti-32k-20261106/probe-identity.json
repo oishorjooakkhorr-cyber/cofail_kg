@@ -1,0 +1,11 @@
+{
+  "tag": "llama3.2-vision:11b",
+  "digest": "6f2f9757ae97e8a3f8ea33d6adb2b11d93d9a35bef277cd2c0b1b5af8e8d0b1e",
+  "quantization": "Q4_K_M",
+  "parameter_size": "10.7B",
+  "capabilities": [
+    "tools",
+    "completion",
+    "vision"
+  ]
+}
