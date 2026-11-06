@@ -2633,3 +2633,14 @@ Researcher request: S20 and exploratory S23 for llama3.2-vision:11b (Ollama libr
 could not load the model: llama-server reported "unknown model architecture: 'mllama'". No
 episode was run. Researcher decision: do not use this model; it was removed from storage.
 Probe evidence: results/diagnostics/s20/llama32v11b-5060ti-32k-20261106/. No panel change.
+
+## 2026-11-07 — Qwen3.8-14B-Instruct-Turbo probe failed; skipped
+Researcher request: S20 and exploratory S23 for
+hf.co/mradermacher/Qwen3.8-14B-Instruct-Turbo-i1-GGUF:Q4_K_M (digest 3a4fa723...0dded, 14.7B,
+architecture qwen35; GGUF metadata: 14B Instruct-Turbo derived from Qwen3.8-27B, community
+upload). On the pinned Ollama 0.40.12 it fits fully on GPU (33/33) but output is degenerate
+with think on and off: no tool call on the synthetic add(2,3) probe and looping or broken text
+on a plain question (diagnose.py, no screening query). The S20 preflight requires the tool
+probe, so no episode was run. Cause (model vs quantization vs runtime) not established.
+Researcher decision: skip; model removed from storage.
+Evidence: results/diagnostics/s20/qwen38-14b-5060ti-32k-20261107/. No panel change.
