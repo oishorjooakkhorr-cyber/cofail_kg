@@ -2609,3 +2609,20 @@ that the runner does not detect as TEXT_TOOL_CALL; not counted as attempted (220
 still pass). Exploratory S23 (Qwen35-9B slot): question CF3 1 and PCF_REL3 / PCF_SHORTCUT3 1
 on BH2_05366 (shared with Gemma4-E4B and Granite41-8B); benchmark CF3 3, CF4 2.
 Same family as Ministral3-8B. Report: docs/S20_ministral3_14b_5060ti_32k.md. No panel change.
+
+## 2026-11-06 — Authorized cogito:14b 32K S20 candidate block (partial GPU offload)
+Researcher request: S20 and exploratory S23 for cogito:14b, pulled by the researcher (Ollama
+library, digest d0cac86a...16e0, Q4_K_M, 14.8B, architecture qwen2; family recorded as
+unverified). Probe on pinned 0.40.12: no thinking capability, native tool call, Ollama Go
+template. At 32K f16 the model does not fit the 16 GB GPU: 47/49 layers on GPU. Researcher
+choice: "Run with 47/49 offload"; the driver pins that exact split. Settings, P1, tools,
+parser, re-prompt, evaluators and D3 unchanged. Run ID cogito14b-5060ti-32k-20261106.
+No panel change.
+
+## cogito:14b 32K block completed — 2026-11-06
+D3 PASS: 18/20 SUCCESS (exactly the 90% threshold), 16/20 competent, 228/228 well-formed
+calls, median 51.20 s (mean 72.7 s), zero OOM. Two ERROR/CONNECTION episodes (BH2_03953,
+BH2_04425): the 240 s request timeout fired during runaway generations (about 5800 and 6100
+tokens at about 27 tok/s under partial offload). Answers: 632 correct, 0 OFF_QUESTION.
+Exploratory S23 (Qwen35-9B slot): benchmark CF3 2, CF4 2, all others 0.
+Report: docs/S20_cogito14b_5060ti_32k.md. No panel change.

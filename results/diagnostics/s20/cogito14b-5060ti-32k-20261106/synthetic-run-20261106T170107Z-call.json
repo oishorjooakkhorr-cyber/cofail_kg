@@ -1,0 +1,30 @@
+{
+  "model": "cogito:14b",
+  "created_at": "2026-11-06T17:01:20.7546601Z",
+  "message": {
+    "role": "assistant",
+    "content": "",
+    "tool_calls": [
+      {
+        "id": "call_fyhgp4hm",
+        "function": {
+          "index": 0,
+          "name": "add",
+          "arguments": {
+            "a": 2,
+            "b": 3
+          }
+        }
+      }
+    ]
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 4572786700,
+  "load_duration": 3027987200,
+  "prompt_eval_count": 149,
+  "prompt_eval_cached_count": 0,
+  "prompt_eval_duration": 574921000,
+  "eval_count": 25,
+  "eval_duration": 967179000
+}

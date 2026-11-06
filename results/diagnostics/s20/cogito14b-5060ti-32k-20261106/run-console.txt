@@ -1,0 +1,115 @@
+Ollama GET http://127.0.0.1:11435/api/version connection error; retry 1/2: HTTPConnectionPool(host='127.0.0.1', port=11435): Max retries exceeded with url: /api/version (Caused by NewConnectionError("HTTPConnection(host='127.0.0.1', port=11435): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it"))
+Ollama GET http://127.0.0.1:11435/api/version connection error; retry 2/2: HTTPConnectionPool(host='127.0.0.1', port=11435): Max retries exceeded with url: /api/version (Caused by NewConnectionError("HTTPConnection(host='127.0.0.1', port=11435): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it"))
+Ollama GET http://127.0.0.1:11435/api/version failed after 3 attempts: HTTPConnectionPool(host='127.0.0.1', port=11435): Max retries exceeded with url: /api/version (Caused by NewConnectionError("HTTPConnection(host='127.0.0.1', port=11435): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it"))
+CHECKED 0/20; ctx 32768; f16 KV; 47/49 GPU (partial); Go template
+CHECKED 0/20; ctx 32768; f16 KV; 47/49 GPU (partial); Go template
+Starting BH2_00461 / cogito:14b (new episode 1)
+CHECKED 1/20; ctx 32768; f16 KV; 47/49 GPU (partial); Go template
+CHECKED 1/20; ctx 32768; f16 KV; 47/49 GPU (partial); Go template
+Starting BH2_02033 / cogito:14b (new episode 2)
+CHECKED 2/20; ctx 32768; f16 KV; 47/49 GPU (partial); Go template
+CHECKED 2/20; ctx 32768; f16 KV; 47/49 GPU (partial); Go template
+Starting BH2_03434 / cogito:14b (new episode 3)
+CHECKED 3/20; ctx 32768; f16 KV; 47/49 GPU (partial); Go template
+CHECKED 3/20; ctx 32768; f16 KV; 47/49 GPU (partial); Go template
+Starting BH2_03619 / cogito:14b (new episode 4)
+CHECKED 4/20; ctx 32768; f16 KV; 47/49 GPU (partial); Go template
+CHECKED 4/20; ctx 32768; f16 KV; 47/49 GPU (partial); Go template
+Starting BH2_03750 / cogito:14b (new episode 5)
+CHECKED 5/20; ctx 32768; f16 KV; 47/49 GPU (partial); Go template
+CHECKED 5/20; ctx 32768; f16 KV; 47/49 GPU (partial); Go template
+Starting BH2_03760 / cogito:14b (new episode 6)
+CHECKED 6/20; ctx 32768; f16 KV; 47/49 GPU (partial); Go template
+CHECKED 6/20; ctx 32768; f16 KV; 47/49 GPU (partial); Go template
+Starting BH2_03762 / cogito:14b (new episode 7)
+CHECKED 7/20; ctx 32768; f16 KV; 47/49 GPU (partial); Go template
+CHECKED 7/20; ctx 32768; f16 KV; 47/49 GPU (partial); Go template
+Starting BH2_03850 / cogito:14b (new episode 8)
+CHECKED 8/20; ctx 32768; f16 KV; 47/49 GPU (partial); Go template
+CHECKED 8/20; ctx 32768; f16 KV; 47/49 GPU (partial); Go template
+Starting BH2_03856 / cogito:14b (new episode 9)
+CHECKED 9/20; ctx 32768; f16 KV; 47/49 GPU (partial); Go template
+CHECKED 9/20; ctx 32768; f16 KV; 47/49 GPU (partial); Go template
+Starting BH2_03879 / cogito:14b (new episode 10)
+CHECKED 10/20; ctx 32768; f16 KV; 47/49 GPU (partial); Go template
+CHECKED 10/20; ctx 32768; f16 KV; 47/49 GPU (partial); Go template
+Starting BH2_03881 / cogito:14b (new episode 11)
+CHECKED 11/20; ctx 32768; f16 KV; 47/49 GPU (partial); Go template
+CHECKED 11/20; ctx 32768; f16 KV; 47/49 GPU (partial); Go template
+Starting BH2_03953 / cogito:14b (new episode 12)
+Ollama POST http://127.0.0.1:11435/api/chat timed out: HTTPConnectionPool(host='127.0.0.1', port=11435): Read timed out. (read timeout=240)
+CHECKED 12/20; ctx 32768; f16 KV; 47/49 GPU (partial); Go template
+CHECKED 12/20; ctx 32768; f16 KV; 47/49 GPU (partial); Go template
+Starting BH2_03991 / cogito:14b (new episode 13)
+CHECKED 13/20; ctx 32768; f16 KV; 47/49 GPU (partial); Go template
+CHECKED 13/20; ctx 32768; f16 KV; 47/49 GPU (partial); Go template
+Starting BH2_04003 / cogito:14b (new episode 14)
+CHECKED 14/20; ctx 32768; f16 KV; 47/49 GPU (partial); Go template
+CHECKED 14/20; ctx 32768; f16 KV; 47/49 GPU (partial); Go template
+Starting BH2_04007 / cogito:14b (new episode 15)
+CHECKED 15/20; ctx 32768; f16 KV; 47/49 GPU (partial); Go template
+CHECKED 15/20; ctx 32768; f16 KV; 47/49 GPU (partial); Go template
+Starting BH2_04425 / cogito:14b (new episode 16)
+Ollama POST http://127.0.0.1:11435/api/chat timed out: HTTPConnectionPool(host='127.0.0.1', port=11435): Read timed out. (read timeout=240)
+CHECKED 16/20; ctx 32768; f16 KV; 47/49 GPU (partial); Go template
+CHECKED 16/20; ctx 32768; f16 KV; 47/49 GPU (partial); Go template
+Starting BH2_05366 / cogito:14b (new episode 17)
+CHECKED 17/20; ctx 32768; f16 KV; 47/49 GPU (partial); Go template
+CHECKED 17/20; ctx 32768; f16 KV; 47/49 GPU (partial); Go template
+Starting BH2_05686 / cogito:14b (new episode 18)
+CHECKED 18/20; ctx 32768; f16 KV; 47/49 GPU (partial); Go template
+CHECKED 18/20; ctx 32768; f16 KV; 47/49 GPU (partial); Go template
+Starting BH2_05843 / cogito:14b (new episode 19)
+CHECKED 19/20; ctx 32768; f16 KV; 47/49 GPU (partial); Go template
+CHECKED 19/20; ctx 32768; f16 KV; 47/49 GPU (partial); Go template
+Starting BH2_06427 / cogito:14b (new episode 20)
+CHECKED 20/20; ctx 32768; f16 KV; 47/49 GPU (partial); Go template
+{
+  "screening_row": {
+    "run_id": "cogito14b-5060ti-32k-20261106",
+    "agent_id": "Cogito-14B",
+    "tag": "cogito:14b",
+    "digest": "d0cac86a23474d1ed5c455a667879c8fbaf160440f7433e738eab814ae3316e0",
+    "quantization": "Q4_K_M",
+    "parameter_size": "14.8B",
+    "family": "UNVERIFIED-qwen2-architecture",
+    "episodes_completed": 20,
+    "episodes_expected": 20,
+    "complete": true,
+    "native_calls": 228,
+    "text_tool_calls": 0,
+    "attempted_calls": 228,
+    "well_formed_calls": 228,
+    "well_formed_rate": 1.0,
+    "success_episodes": 18,
+    "success_rate": 0.9,
+    "competent_episodes": 16,
+    "competence": 0.8,
+    "median_wall_seconds": 51.201915,
+    "out_of_memory_episodes": 0,
+    "largest_prompt_eval_count": 20914,
+    "median_tool_calls": 10.0,
+    "budget_hit_share": 0.0,
+    "pass_well_formed": true,
+    "pass_success": true,
+    "pass_competence": true,
+    "pass_time": true,
+    "pass_oom": true,
+    "d3_pass": true
+  },
+  "status_counts": {
+    "SUCCESS": 18,
+    "ERROR": 2
+  },
+  "error_causes": {
+    "CONNECTION": 2
+  },
+  "runtime": {
+    "executable_sha256": "aa76635f0a54c663093a9d1c307f6abde3fb4fa0b1aebfd42f71b6faeec0a8e5",
+    "flash_attention_env": "true",
+    "kv_cache_type": "f16",
+    "num_parallel": 1,
+    "ollama": "0.40.12"
+  }
+}
+PHASE run COMPLETE
