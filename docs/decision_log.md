@@ -2592,3 +2592,20 @@ D3 FAIL on competence: 20/20 SUCCESS, 0/20 competent, 50/50 well-formed calls, m
 zero ERROR/OOM. 13 no_answer; 99 submitted items: 1 GOLD, 98 OFF_QUESTION, none SUPPORTED.
 Median 2 tool calls; largest prompt 3109/32768. Exploratory S23 (Qwen35-9B slot): benchmark
 CF3 2, CF4 0, all other totals 0. Report: docs/S20_nemotron12b_5060ti_32k.md. No panel change.
+
+## 2026-11-06 — Authorized ministral-3:14b 32K S20 candidate block
+Researcher request: S20 and exploratory S23 for ministral-3:14b, pulled by the researcher
+(Ollama library, digest 4760c35a...dcf7, Q4_K_M, 13.9B, architecture mistral3). Probe on pinned
+0.40.12: no thinking capability, native tool call, 41/41 GPU at 32K f16 (about 13.5 GB),
+Ollama ministral parser (same path as panel Ministral3-8B); used unmodified. Settings, P1,
+tools, parser, re-prompt, evaluators and D3 unchanged. Run ID ministral3-14b-5060ti-32k-20261106.
+No panel change.
+
+## ministral-3:14b 32K block completed — 2026-11-06
+D3 PASS: 19/20 SUCCESS, 16/20 competent, 220/220 well-formed native calls, median 40.54 s
+(mean 77.3 s), zero ERROR/OOM. Largest prompt 30048/32768 (above 90% of num_ctx).
+BH2_02033 PARSE_FAIL: first turn was a raw-text Mistral tool call (`inspect_entity[ARGS]{...}`)
+that the runner does not detect as TEXT_TOOL_CALL; not counted as attempted (220/221 would
+still pass). Exploratory S23 (Qwen35-9B slot): question CF3 1 and PCF_REL3 / PCF_SHORTCUT3 1
+on BH2_05366 (shared with Gemma4-E4B and Granite41-8B); benchmark CF3 3, CF4 2.
+Same family as Ministral3-8B. Report: docs/S20_ministral3_14b_5060ti_32k.md. No panel change.
