@@ -2840,3 +2840,19 @@ today. On **06dbee4bf334d1554462c2660d69500c64731eee**:
    8 manifest/sheet entries, PrimeKG cache parquets, raw kg.csv, BioHopR.json content hash).
 5. BioHopR revision (by content, as before) and installed digests (`models_s21r2`, check exit 0): PASS.
 This entry is committed after 06dbee4 and changes only docs/decision_log.md (not a pinned run source).
+
+## 2026-11-07 — S25 — Gate D4: PASS (smoke_panel)
+Researcher decision: Gate D4 PASS on run `smoke_panel` (16 episodes, 4 smoke queries x 4 agents).
+D4 conditions (docs/decision_rules.md D4; results/runs/smoke_panel/analysis/verification.json):
+- Every episode has a §9.5 status: yes (16/16).
+- At least 7/8 SUCCESS (14 of 16): 15/16 SUCCESS; the one ERROR is Cogito-14B BH2_03951,
+  ERROR/CONNECTION (240 s request timeout), a technical failure; Cogito runtime kept at f16 (entry above).
+- Leakage (§19.1, 43 tests), reconstruction (16/16) and kill-and-resume (16 saved = 16 expected, no
+  duplicates, none missing; plus the resume after the pinned-source stop at 11/16): all pass.
+- Manual audit: zero Label A or Label B errors over the 8 audit episodes (557 answer rows). The
+  `my_label_A`/`my_label_B` columns were filled by an independent re-derivation at the researcher's
+  instruction (entry above, scripts/25_audit_independent_check.py), cross-checked by
+  results/diagnostics/s25_audit_check/ (0 disagreements over 1,115 answers). The researcher accepts this
+  as the D4 audit.
+- No answer is both OFF_QUESTION and SUPPORTED: none.
+Logged after S26 (D5 PASS on 06dbee4); this entry changes only docs/decision_log.md, not a pinned run source.
