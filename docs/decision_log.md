@@ -2717,3 +2717,18 @@ Researcher confirmed the literal reading implemented in src/cofail_kg/evaluation
 a 1-step path to a non-Type_T node whose label is not in R1 produces an event (step 1); for a path
 of 3 or more steps only steps 1 and 2 are checked; a 0-step path (answer = s) produces no event.
 No code change.
+
+## 2026-11-07 — S24 §17 95th-percentile method
+Researcher decision: the §17 95th percentile is NumPy's default linear interpolation
+(`numpy.percentile(totals, 95)`), as implemented in src/cofail_kg/evaluation/null_models.py.
+No code change.
+
+## 2026-11-07 — S24 §17 technical-failure convention; no CF2
+Researcher decisions:
+- §17 follows the §16 convention (2026-11-07): all queries are counted. An agent with a technical
+  failure has an empty observed set and draws nothing in the null. Gates D6 and D7 use the
+  all-queries aggregate (`aggregate` in null_models.py), matching D6's `N` over all pilot queries
+  (§17: the gate comparison matches the gate's case count). The aggregate excluding queries with a
+  failed episode is descriptive only and never feeds a gate.
+- No CF2 measure is added. CF3 stays the primary measure; the §16.4 pairwise error agreement covers
+  two-agent overlap. No protocol change.
