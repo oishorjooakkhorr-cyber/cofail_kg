@@ -1,0 +1,18 @@
+[
+  {
+    "ProcessId": 20376,
+    "ParentProcessId": 11452,
+    "Name": "ollama.exe",
+    "ExecutablePath": "E:\\Phitron Thesis\\cofail_kg\\.venv\\ollama\\ollama.exe",
+    "CommandLine": "\"E:\\Phitron Thesis\\cofail_kg\\.venv\\ollama\\ollama.exe\" serve",
+    "WorkingSetSize": 56320000
+  },
+  {
+    "ProcessId": 8152,
+    "ParentProcessId": 20376,
+    "Name": "llama-server.exe",
+    "ExecutablePath": "E:\\Phitron Thesis\\cofail_kg\\.venv\\ollama\\lib\\ollama\\llama-server.exe",
+    "CommandLine": "\"E:\\Phitron Thesis\\cofail_kg\\.venv\\ollama\\lib\\ollama\\llama-server.exe\" --model D:\\Models\\blobs\\sha256-3ea32f882c990baebcfe6ab5cda2e3167d54ab16d7937c0b9aa3db11aba01574 --port 9782 --host 127.0.0.1 --no-webui --offline -c 16384 -np 1 --log-verbosity 4 --no-log-prefix --no-log-timestamps --no-jinja --chat-template chatml --mmproj D:\\Models\\blobs\\sha256-3ea32f882c990baebcfe6ab5cda2e3167d54ab16d7937c0b9aa3db11aba01574 --load-mode none --flash-attn auto -b 512 -ub 512 --context-shift --keep 4",
+    "WorkingSetSize": 4442304512
+  }
+]

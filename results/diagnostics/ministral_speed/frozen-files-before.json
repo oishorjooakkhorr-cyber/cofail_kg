@@ -1,0 +1,1598 @@
+{
+  "configs/frozen_hashes.yaml": {
+    "size": 1332,
+    "mtime_ns": 1792130738539567700
+  },
+  "configs/models.yaml": {
+    "size": 63,
+    "mtime_ns": 1792072380663907600
+  },
+  "configs/ollama.yaml": {
+    "size": 242,
+    "mtime_ns": 1792122920299350700
+  },
+  "configs/pilot.yaml": {
+    "size": 842,
+    "mtime_ns": 1792072380664906900
+  },
+  "configs/qwen3_s14.Modelfile": {
+    "size": 1767,
+    "mtime_ns": 1792125752735236700
+  },
+  "src/cofail_kg/__init__.py": {
+    "size": 0,
+    "mtime_ns": 1792072380775048700
+  },
+  "src/cofail_kg.egg-info/dependency_links.txt": {
+    "size": 1,
+    "mtime_ns": 1792073438982311300
+  },
+  "src/cofail_kg.egg-info/PKG-INFO": {
+    "size": 81,
+    "mtime_ns": 1792073438982311300
+  },
+  "src/cofail_kg.egg-info/SOURCES.txt": {
+    "size": 1671,
+    "mtime_ns": 1792073438989314600
+  },
+  "src/cofail_kg.egg-info/top_level.txt": {
+    "size": 10,
+    "mtime_ns": 1792073438983316000
+  },
+  "src/cofail_kg/agents/kg_env.py": {
+    "size": 5530,
+    "mtime_ns": 1792072380775048700
+  },
+  "src/cofail_kg/agents/ollama_client.py": {
+    "size": 7632,
+    "mtime_ns": 1792079401619812200
+  },
+  "src/cofail_kg/agents/prompts.py": {
+    "size": 1272,
+    "mtime_ns": 1792123050033171600
+  },
+  "src/cofail_kg/agents/run_agent.py": {
+    "size": 12150,
+    "mtime_ns": 1792130536311162100
+  },
+  "src/cofail_kg/agents/tool_schemas.py": {
+    "size": 2178,
+    "mtime_ns": 1792072380776048600
+  },
+  "src/cofail_kg/agents/trace.py": {
+    "size": 19928,
+    "mtime_ns": 1792139413368603100
+  },
+  "src/cofail_kg/agents/__init__.py": {
+    "size": 0,
+    "mtime_ns": 1792072380775048700
+  },
+  "src/cofail_kg/analysis/__init__.py": {
+    "size": 0,
+    "mtime_ns": 1792072380776048600
+  },
+  "src/cofail_kg/data/biohopr_loader.py": {
+    "size": 5887,
+    "mtime_ns": 1792072380776048600
+  },
+  "src/cofail_kg/data/diagnostics.py": {
+    "size": 12136,
+    "mtime_ns": 1792072380777048100
+  },
+  "src/cofail_kg/data/field_roles.py": {
+    "size": 8290,
+    "mtime_ns": 1792072380777048100
+  },
+  "src/cofail_kg/data/sampling.py": {
+    "size": 3753,
+    "mtime_ns": 1792072380777048100
+  },
+  "src/cofail_kg/data/__init__.py": {
+    "size": 0,
+    "mtime_ns": 1792072380776048600
+  },
+  "src/cofail_kg/evaluation/agent_metrics.py": {
+    "size": 10290,
+    "mtime_ns": 1792252347104795400
+  },
+  "src/cofail_kg/evaluation/answer_labels.py": {
+    "size": 1659,
+    "mtime_ns": 1792248481739731700
+  },
+  "src/cofail_kg/evaluation/dataset_evidence.py": {
+    "size": 2884,
+    "mtime_ns": 1792072380777993900
+  },
+  "src/cofail_kg/evaluation/normalize.py": {
+    "size": 5271,
+    "mtime_ns": 1792246582190583200
+  },
+  "src/cofail_kg/evaluation/path_labels.py": {
+    "size": 4826,
+    "mtime_ns": 1792249818326178600
+  },
+  "src/cofail_kg/evaluation/primary_population.py": {
+    "size": 2407,
+    "mtime_ns": 1792072380777993900
+  },
+  "src/cofail_kg/evaluation/query_validation.py": {
+    "size": 3965,
+    "mtime_ns": 1792072380777993900
+  },
+  "src/cofail_kg/evaluation/reference_sets.py": {
+    "size": 6585,
+    "mtime_ns": 1792072380777993900
+  },
+  "src/cofail_kg/evaluation/relation_mapping.py": {
+    "size": 11424,
+    "mtime_ns": 1792072380779000300
+  },
+  "src/cofail_kg/evaluation/screening.py": {
+    "size": 5060,
+    "mtime_ns": 1792311101172394700
+  },
+  "src/cofail_kg/evaluation/__init__.py": {
+    "size": 0,
+    "mtime_ns": 1792072380777048100
+  },
+  "src/cofail_kg/kg/prepare.py": {
+    "size": 9267,
+    "mtime_ns": 1792072380779000300
+  },
+  "src/cofail_kg/kg/primekg_index.py": {
+    "size": 7501,
+    "mtime_ns": 1792072380779000300
+  },
+  "src/cofail_kg/kg/__init__.py": {
+    "size": 0,
+    "mtime_ns": 1792072380779000300
+  },
+  "src/cofail_kg/utils/frozen_hashes.py": {
+    "size": 2129,
+    "mtime_ns": 1792072380780001900
+  },
+  "src/cofail_kg/utils/__init__.py": {
+    "size": 0,
+    "mtime_ns": 1792072380780001900
+  },
+  "src/cofail_kg/__pycache__/__init__.cpython-313.pyc": {
+    "size": 150,
+    "mtime_ns": 1792073607337450200
+  },
+  "src/cofail_kg/utils/__pycache__/frozen_hashes.cpython-313.pyc": {
+    "size": 3016,
+    "mtime_ns": 1792078558756496100
+  },
+  "src/cofail_kg/utils/__pycache__/__init__.cpython-313.pyc": {
+    "size": 156,
+    "mtime_ns": 1792078558754498200
+  },
+  "src/cofail_kg/kg/__pycache__/prepare.cpython-313.pyc": {
+    "size": 13948,
+    "mtime_ns": 1792078559484590200
+  },
+  "src/cofail_kg/kg/__pycache__/primekg_index.cpython-313.pyc": {
+    "size": 11914,
+    "mtime_ns": 1792078558814495000
+  },
+  "src/cofail_kg/kg/__pycache__/__init__.cpython-313.pyc": {
+    "size": 153,
+    "mtime_ns": 1792078558811498000
+  },
+  "src/cofail_kg/evaluation/__pycache__/agent_metrics.cpython-313.pyc": {
+    "size": 16665,
+    "mtime_ns": 1792252349059203300
+  },
+  "src/cofail_kg/evaluation/__pycache__/answer_labels.cpython-313.pyc": {
+    "size": 2191,
+    "mtime_ns": 1792248491283348400
+  },
+  "src/cofail_kg/evaluation/__pycache__/dataset_evidence.cpython-313.pyc": {
+    "size": 4622,
+    "mtime_ns": 1792078558529748900
+  },
+  "src/cofail_kg/evaluation/__pycache__/normalize.cpython-313.pyc": {
+    "size": 7832,
+    "mtime_ns": 1792248234351099400
+  },
+  "src/cofail_kg/evaluation/__pycache__/path_labels.cpython-313.pyc": {
+    "size": 7324,
+    "mtime_ns": 1792249819700803800
+  },
+  "src/cofail_kg/evaluation/__pycache__/primary_population.cpython-313.pyc": {
+    "size": 4140,
+    "mtime_ns": 1792078559925814600
+  },
+  "src/cofail_kg/evaluation/__pycache__/query_validation.cpython-313.pyc": {
+    "size": 6666,
+    "mtime_ns": 1792078559952817000
+  },
+  "src/cofail_kg/evaluation/__pycache__/reference_sets.cpython-313.pyc": {
+    "size": 11106,
+    "mtime_ns": 1792078559975511500
+  },
+  "src/cofail_kg/evaluation/__pycache__/relation_mapping.cpython-313.pyc": {
+    "size": 17340,
+    "mtime_ns": 1792078560091512800
+  },
+  "src/cofail_kg/evaluation/__pycache__/screening.cpython-313.pyc": {
+    "size": 7984,
+    "mtime_ns": 1792311103122865700
+  },
+  "src/cofail_kg/evaluation/__pycache__/__init__.cpython-313.pyc": {
+    "size": 161,
+    "mtime_ns": 1792078558526747900
+  },
+  "src/cofail_kg/data/__pycache__/biohopr_loader.cpython-313.pyc": {
+    "size": 8623,
+    "mtime_ns": 1792078558512748700
+  },
+  "src/cofail_kg/data/__pycache__/diagnostics.cpython-313.pyc": {
+    "size": 18719,
+    "mtime_ns": 1792078558682260200
+  },
+  "src/cofail_kg/data/__pycache__/field_roles.cpython-313.pyc": {
+    "size": 11500,
+    "mtime_ns": 1792078558741498300
+  },
+  "src/cofail_kg/data/__pycache__/sampling.cpython-313.pyc": {
+    "size": 7129,
+    "mtime_ns": 1792078560135511700
+  },
+  "src/cofail_kg/data/__pycache__/__init__.cpython-313.pyc": {
+    "size": 155,
+    "mtime_ns": 1792078558509748300
+  },
+  "src/cofail_kg/agents/__pycache__/kg_env.cpython-313.pyc": {
+    "size": 7894,
+    "mtime_ns": 1792078558810494900
+  },
+  "src/cofail_kg/agents/__pycache__/ollama_client.cpython-313.pyc": {
+    "size": 11188,
+    "mtime_ns": 1792079403244031900
+  },
+  "src/cofail_kg/agents/__pycache__/prompts.cpython-313.pyc": {
+    "size": 1658,
+    "mtime_ns": 1792123104943366800
+  },
+  "src/cofail_kg/agents/__pycache__/run_agent.cpython-313.pyc": {
+    "size": 15552,
+    "mtime_ns": 1792130831016803500
+  },
+  "src/cofail_kg/agents/__pycache__/tool_schemas.cpython-313.pyc": {
+    "size": 1527,
+    "mtime_ns": 1792078560147512000
+  },
+  "src/cofail_kg/agents/__pycache__/trace.cpython-313.pyc": {
+    "size": 30192,
+    "mtime_ns": 1792139414928680300
+  },
+  "src/cofail_kg/agents/__pycache__/__init__.cpython-313.pyc": {
+    "size": 157,
+    "mtime_ns": 1792078416424435600
+  },
+  "scripts/.gitkeep": {
+    "size": 0,
+    "mtime_ns": 1792072380771048300
+  },
+  "scripts/02_download_biohopr.py": {
+    "size": 4887,
+    "mtime_ns": 1792072380772048600
+  },
+  "scripts/02_inspect_biohopr.py": {
+    "size": 4221,
+    "mtime_ns": 1792072380772048600
+  },
+  "scripts/03_biohopr_diagnostics.py": {
+    "size": 1098,
+    "mtime_ns": 1792072380772048600
+  },
+  "scripts/04_prepare_primekg.py": {
+    "size": 1434,
+    "mtime_ns": 1792072380772048600
+  },
+  "scripts/05_field_roles.py": {
+    "size": 6666,
+    "mtime_ns": 1792072380773048600
+  },
+  "scripts/06_investigate_remaining.py": {
+    "size": 10630,
+    "mtime_ns": 1792072380773048600
+  },
+  "scripts/06_relation_mapping.py": {
+    "size": 13099,
+    "mtime_ns": 1792072380773048600
+  },
+  "scripts/07_build_reference_sets.py": {
+    "size": 6810,
+    "mtime_ns": 1792072380773048600
+  },
+  "scripts/08_validate_queries.py": {
+    "size": 6668,
+    "mtime_ns": 1792072380774048700
+  },
+  "scripts/09_decision_evidence.py": {
+    "size": 6954,
+    "mtime_ns": 1792072380774048700
+  },
+  "scripts/09_primary_population.py": {
+    "size": 7203,
+    "mtime_ns": 1792072380774048700
+  },
+  "scripts/10_make_samples.py": {
+    "size": 8474,
+    "mtime_ns": 1792072380774048700
+  },
+  "scripts/13_test_ollama.py": {
+    "size": 3314,
+    "mtime_ns": 1792079401817810600
+  },
+  "scripts/14_run_episode.py": {
+    "size": 6807,
+    "mtime_ns": 1792139443520735400
+  },
+  "scripts/20_screen_models.py": {
+    "size": 14065,
+    "mtime_ns": 1792311189579776000
+  },
+  "scripts/backup_cofail_kg.ps1": {
+    "size": 10590,
+    "mtime_ns": 1792160459686268800
+  },
+  "scripts/enable_cofail_kg_backup.ps1": {
+    "size": 1211,
+    "mtime_ns": 1792160459687268500
+  },
+  "scripts/explore_s5_field_role_preview.py": {
+    "size": 10028,
+    "mtime_ns": 1792072380774048700
+  },
+  "scripts/explore_suffix_preview.py": {
+    "size": 7432,
+    "mtime_ns": 1792072380775048700
+  },
+  "scripts/git_cofail_kg.ps1": {
+    "size": 2235,
+    "mtime_ns": 1792127879459398500
+  },
+  "scripts/inspect_kg.py": {
+    "size": 1815,
+    "mtime_ns": 1792072380775048700
+  },
+  "scripts/__pycache__/06_investigate_remaining.cpython-313.pyc": {
+    "size": 17258,
+    "mtime_ns": 1792078560116512300
+  },
+  "scripts/__pycache__/06_relation_mapping.cpython-313.pyc": {
+    "size": 17991,
+    "mtime_ns": 1792078560106510300
+  },
+  "scripts/__pycache__/07_build_reference_sets.cpython-313.pyc": {
+    "size": 10384,
+    "mtime_ns": 1792078559992513000
+  },
+  "scripts/__pycache__/08_validate_queries.cpython-313.pyc": {
+    "size": 10746,
+    "mtime_ns": 1792078574088851800
+  },
+  "scripts/__pycache__/09_decision_evidence.cpython-313.pyc": {
+    "size": 10697,
+    "mtime_ns": 1792078561101515400
+  },
+  "scripts/__pycache__/09_primary_population.cpython-313.pyc": {
+    "size": 10735,
+    "mtime_ns": 1792078568850853100
+  },
+  "scripts/__pycache__/10_make_samples.cpython-313.pyc": {
+    "size": 12979,
+    "mtime_ns": 1792078574489851800
+  },
+  "scripts/__pycache__/13_test_ollama.cpython-313.pyc": {
+    "size": 5234,
+    "mtime_ns": 1792079403306031800
+  },
+  "scripts/__pycache__/14_run_episode.cpython-313.pyc": {
+    "size": 9581,
+    "mtime_ns": 1792139457522832200
+  },
+  "scripts/__pycache__/20_screen_models.cpython-313.pyc": {
+    "size": 19516,
+    "mtime_ns": 1792311191645365100
+  },
+  "scripts/__pycache__/explore_s5_field_role_preview.cpython-313.pyc": {
+    "size": 14436,
+    "mtime_ns": 1792078558702264600
+  },
+  "scripts/__pycache__/explore_suffix_preview.cpython-313.pyc": {
+    "size": 9324,
+    "mtime_ns": 1792078558716498200
+  },
+  "docs/CHANGES.md": {
+    "size": 5379,
+    "mtime_ns": 1792072380698475700
+  },
+  "docs/decision_log.md": {
+    "size": 140346,
+    "mtime_ns": 1792487538510221900
+  },
+  "docs/decision_rules.md": {
+    "size": 8118,
+    "mtime_ns": 1792072380701480200
+  },
+  "docs/frozen_pilot_protocol.md": {
+    "size": 50287,
+    "mtime_ns": 1792149041770001200
+  },
+  "docs/google_drive_backup.md": {
+    "size": 17798,
+    "mtime_ns": 1792160460315990600
+  },
+  "docs/pipeline_runbook.md": {
+    "size": 72981,
+    "mtime_ns": 1792248316835719100
+  },
+  "docs/progress.md": {
+    "size": 45062,
+    "mtime_ns": 1792487538500699700
+  },
+  "docs/provenance.md": {
+    "size": 6979,
+    "mtime_ns": 1792072380705479100
+  },
+  "docs/S10_implementation.md": {
+    "size": 6201,
+    "mtime_ns": 1792072380699479600
+  },
+  "docs/S11_implementation.md": {
+    "size": 10254,
+    "mtime_ns": 1792072380699479600
+  },
+  "docs/S12_environment_verification_20261016.md": {
+    "size": 4161,
+    "mtime_ns": 1792139556738854400
+  },
+  "docs/S12_rerun_20261016.md": {
+    "size": 5188,
+    "mtime_ns": 1792122564734789000
+  },
+  "docs/S12_sandbox_fix_20261016.md": {
+    "size": 5758,
+    "mtime_ns": 1792139556301333000
+  },
+  "docs/S13_implementation.md": {
+    "size": 12751,
+    "mtime_ns": 1792079565404948600
+  },
+  "docs/S13_review_reply.md": {
+    "size": 3452,
+    "mtime_ns": 1792079565590745000
+  },
+  "docs/S14_implementation.md": {
+    "size": 8664,
+    "mtime_ns": 1792123750274105400
+  },
+  "docs/S14_nothink6144_diagnostic.md": {
+    "size": 7619,
+    "mtime_ns": 1792125753255133200
+  },
+  "docs/S14_template_repair.md": {
+    "size": 7066,
+    "mtime_ns": 1792130739201908300
+  },
+  "docs/S15_implementation.md": {
+    "size": 19461,
+    "mtime_ns": 1792246581885089600
+  },
+  "docs/S16_implementation.md": {
+    "size": 10606,
+    "mtime_ns": 1792247310599853000
+  },
+  "docs/S17_implementation.md": {
+    "size": 9540,
+    "mtime_ns": 1792249049355336000
+  },
+  "docs/S18_implementation.md": {
+    "size": 9406,
+    "mtime_ns": 1792251166887644300
+  },
+  "docs/S19_implementation.md": {
+    "size": 8325,
+    "mtime_ns": 1792253047324145300
+  },
+  "docs/S1_audit_response.md": {
+    "size": 10512,
+    "mtime_ns": 1792072380699479600
+  },
+  "docs/S20_context_window_audit.md": {
+    "size": 10996,
+    "mtime_ns": 1792487538565493500
+  },
+  "docs/S20_continuation_preflight.md": {
+    "size": 5064,
+    "mtime_ns": 1792312832556648800
+  },
+  "docs/S20_full_16k_reassessment.md": {
+    "size": 13407,
+    "mtime_ns": 1792487538480948600
+  },
+  "docs/S20_gemma4_16k_diagnostic.md": {
+    "size": 7531,
+    "mtime_ns": 1792487538555493900
+  },
+  "docs/S20_gemma4_screening.md": {
+    "size": 7823,
+    "mtime_ns": 1792487538517219900
+  },
+  "docs/S20_granite33_screening.md": {
+    "size": 6558,
+    "mtime_ns": 1792383274277685200
+  },
+  "docs/S20_granite42_screening.md": {
+    "size": 9164,
+    "mtime_ns": 1792422819044786400
+  },
+  "docs/S20_implementation.md": {
+    "size": 7949,
+    "mtime_ns": 1792311484559440000
+  },
+  "docs/S20_llama_screening.md": {
+    "size": 8961,
+    "mtime_ns": 1792314084182936100
+  },
+  "docs/S20_ministral3_screening.md": {
+    "size": 9311,
+    "mtime_ns": 1792487538555493900
+  },
+  "docs/S20_ministral3_timeout_investigation.md": {
+    "size": 8329,
+    "mtime_ns": 1792396571291562200
+  },
+  "docs/S20_olmo3_screening.md": {
+    "size": 7017,
+    "mtime_ns": 1792411826529568300
+  },
+  "docs/S20_qwen35_preflight.md": {
+    "size": 6319,
+    "mtime_ns": 1792336169574746300
+  },
+  "docs/S20_qwen35_screening.md": {
+    "size": 8861,
+    "mtime_ns": 1792487538541692900
+  },
+  "docs/S20_updated_model_pool_proposal.md": {
+    "size": 8062,
+    "mtime_ns": 1792384784144644300
+  },
+  "docs/S4_findings.md": {
+    "size": 15434,
+    "mtime_ns": 1792072380699479600
+  },
+  "docs/S4_implementation.md": {
+    "size": 8622,
+    "mtime_ns": 1792072380700479100
+  },
+  "docs/S6_implementation.md": {
+    "size": 10225,
+    "mtime_ns": 1792072380700479100
+  },
+  "docs/S7_implementation.md": {
+    "size": 7954,
+    "mtime_ns": 1792072380700479100
+  },
+  "docs/S8_implementation.md": {
+    "size": 5459,
+    "mtime_ns": 1792072380700479100
+  },
+  "docs/S8_reconciliation.md": {
+    "size": 2006,
+    "mtime_ns": 1792072380700479100
+  },
+  "docs/S9_implementation.md": {
+    "size": 4627,
+    "mtime_ns": 1792072380701480200
+  },
+  "docs/S9_part1_implementation.md": {
+    "size": 3972,
+    "mtime_ns": 1792072380701480200
+  },
+  "docs/team_update_S4_S5.md": {
+    "size": 12856,
+    "mtime_ns": 1792072380706478900
+  },
+  "docs/handoff/S20_handoff.md": {
+    "size": 5326,
+    "mtime_ns": 1792302012498198100
+  },
+  "data/agent_inputs/expansion.jsonl": {
+    "size": 84024,
+    "mtime_ns": 1792072380664906900
+  },
+  "data/agent_inputs/pilot.jsonl": {
+    "size": 20285,
+    "mtime_ns": 1792072380664906900
+  },
+  "data/agent_inputs/screening.jsonl": {
+    "size": 4072,
+    "mtime_ns": 1792072380665907000
+  },
+  "data/agent_inputs/smoke.jsonl": {
+    "size": 779,
+    "mtime_ns": 1792072380665907000
+  },
+  "data/cache/.gitkeep": {
+    "size": 0,
+    "mtime_ns": 1792072380665907000
+  },
+  "data/cache/primekg_edges.parquet": {
+    "size": 13828505,
+    "mtime_ns": 1791770983923940000
+  },
+  "data/cache/primekg_metadata.json": {
+    "size": 16056,
+    "mtime_ns": 1791770987195511100
+  },
+  "data/cache/primekg_nodes.parquet": {
+    "size": 3462575,
+    "mtime_ns": 1791770937855740600
+  },
+  "data/cache/primekg_release.json": {
+    "size": 315,
+    "mtime_ns": 1791748881865373400
+  },
+  "data/processed/.gitkeep": {
+    "size": 0,
+    "mtime_ns": 1792072380665907000
+  },
+  "data/processed/primary_population.csv": {
+    "size": 1680598,
+    "mtime_ns": 1792072380669905900
+  },
+  "data/processed/primary_population_report.md": {
+    "size": 1212,
+    "mtime_ns": 1792072380669905900
+  },
+  "data/processed/primary_population_summary.json": {
+    "size": 4128,
+    "mtime_ns": 1792072380669905900
+  },
+  "data/processed/reference_queries.parquet": {
+    "size": 2724653,
+    "mtime_ns": 1792072380691945800
+  },
+  "data/processed/reference_summary.json": {
+    "size": 3835,
+    "mtime_ns": 1792072380691945800
+  },
+  "data/processed/reference_targets.parquet": {
+    "size": 672252,
+    "mtime_ns": 1792072380698475700
+  },
+  "data/raw/.gitkeep": {
+    "size": 0,
+    "mtime_ns": 1792072380698475700
+  },
+  "data/raw/biohopr/BioHopR.json": {
+    "size": 12811894,
+    "mtime_ns": 1791593676949877500
+  },
+  "data/raw/biohopr/metadata.json": {
+    "size": 548,
+    "mtime_ns": 1791593677882103000
+  },
+  "data/raw/biohopr/README.md": {
+    "size": 2184,
+    "mtime_ns": 1791593677779421400
+  },
+  "data/raw/primekg/kg.csv": {
+    "size": 981751236,
+    "mtime_ns": 1791770442462887100
+  },
+  "data/raw/primekg/nodes.csv": {
+    "size": 7869553,
+    "mtime_ns": 1791770442820112500
+  },
+  "data/processed/manifests/expansion.jsonl": {
+    "size": 63422,
+    "mtime_ns": 1792072380666906900
+  },
+  "data/processed/manifests/pilot.jsonl": {
+    "size": 15915,
+    "mtime_ns": 1792072380666906900
+  },
+  "data/processed/manifests/sampling_provenance.json": {
+    "size": 6011,
+    "mtime_ns": 1792072380666906900
+  },
+  "data/processed/manifests/sampling_report.md": {
+    "size": 3362,
+    "mtime_ns": 1792072380666906900
+  },
+  "data/processed/manifests/screening.jsonl": {
+    "size": 3161,
+    "mtime_ns": 1792072380666906900
+  },
+  "data/processed/manifests/smoke.jsonl": {
+    "size": 634,
+    "mtime_ns": 1792072380667906400
+  },
+  "results/runs/.gitkeep": {
+    "size": 0,
+    "mtime_ns": 1792072380758040600
+  },
+  "results/runs/s14-nothink6144-20261016/BH2_00461__S14-qwen3-4b__a1.json": {
+    "size": 135095,
+    "mtime_ns": 1792124911526442100
+  },
+  "results/runs/s14-review-20261016/BH2_00461__S14-qwen3-4b__a1.json": {
+    "size": 73985,
+    "mtime_ns": 1792123519204131000
+  },
+  "results/runs/s14-templatefix-20261016/BH2_00461__S14-qwen3-4b__a1.json": {
+    "size": 74931,
+    "mtime_ns": 1792125657390152500
+  },
+  "results/runs/screening-16k/context16k-3060ti-20261020/BH2_00461__Gemma4-E4B__a1.json": {
+    "size": 36783,
+    "mtime_ns": 1792482403981346500
+  },
+  "results/runs/screening-16k/context16k-3060ti-20261020/BH2_00461__Ministral3-8B__a1.json": {
+    "size": 37224,
+    "mtime_ns": 1792484049608863400
+  },
+  "results/runs/screening-16k/context16k-3060ti-20261020/BH2_00461__Qwen35-9B__a1.json": {
+    "size": 36470,
+    "mtime_ns": 1792482804248667400
+  },
+  "results/runs/screening-16k/context16k-3060ti-20261020/BH2_02033__Gemma4-E4B__a1.json": {
+    "size": 23238,
+    "mtime_ns": 1792482409130999100
+  },
+  "results/runs/screening-16k/context16k-3060ti-20261020/BH2_02033__Ministral3-8B__a1.json": {
+    "size": 24093,
+    "mtime_ns": 1792484069958173100
+  },
+  "results/runs/screening-16k/context16k-3060ti-20261020/BH2_02033__Qwen35-9B__a1.json": {
+    "size": 22925,
+    "mtime_ns": 1792482814888835400
+  },
+  "results/runs/screening-16k/context16k-3060ti-20261020/BH2_03434__Gemma4-E4B__a1.json": {
+    "size": 50553,
+    "mtime_ns": 1792482421714069800
+  },
+  "results/runs/screening-16k/context16k-3060ti-20261020/BH2_03434__Ministral3-8B__a1.json": {
+    "size": 50221,
+    "mtime_ns": 1792484243550723000
+  },
+  "results/runs/screening-16k/context16k-3060ti-20261020/BH2_03434__Qwen35-9B__a1.json": {
+    "size": 42441,
+    "mtime_ns": 1792482844815663900
+  },
+  "results/runs/screening-16k/context16k-3060ti-20261020/BH2_03619__Gemma4-E4B__a1.json": {
+    "size": 172521,
+    "mtime_ns": 1792482450022094600
+  },
+  "results/runs/screening-16k/context16k-3060ti-20261020/BH2_03619__Ministral3-8B__a1.json": {
+    "size": 171217,
+    "mtime_ns": 1792484464642475800
+  },
+  "results/runs/screening-16k/context16k-3060ti-20261020/BH2_03619__Qwen35-9B__a1.json": {
+    "size": 237962,
+    "mtime_ns": 1792482903827704100
+  },
+  "results/runs/screening-16k/context16k-3060ti-20261020/BH2_03750__Gemma4-E4B__a1.json": {
+    "size": 62247,
+    "mtime_ns": 1792482462355128300
+  },
+  "results/runs/screening-16k/context16k-3060ti-20261020/BH2_03750__Ministral3-8B__a1.json": {
+    "size": 41900,
+    "mtime_ns": 1792484607304269100
+  },
+  "results/runs/screening-16k/context16k-3060ti-20261020/BH2_03750__Qwen35-9B__a1.json": {
+    "size": 56646,
+    "mtime_ns": 1792482942728340800
+  },
+  "results/runs/screening-16k/context16k-3060ti-20261020/BH2_03760__Gemma4-E4B__a1.json": {
+    "size": 93881,
+    "mtime_ns": 1792482485223715500
+  },
+  "results/runs/screening-16k/context16k-3060ti-20261020/BH2_03760__Ministral3-8B__a1.json": {
+    "size": 99311,
+    "mtime_ns": 1792484894216143400
+  },
+  "results/runs/screening-16k/context16k-3060ti-20261020/BH2_03760__Qwen35-9B__a1.json": {
+    "size": 144130,
+    "mtime_ns": 1792483044763870400
+  },
+  "results/runs/screening-16k/context16k-3060ti-20261020/BH2_03762__Gemma4-E4B__a1.json": {
+    "size": 259324,
+    "mtime_ns": 1792482524169120300
+  },
+  "results/runs/screening-16k/context16k-3060ti-20261020/BH2_03762__Ministral3-8B__a1.json": {
+    "size": 169651,
+    "mtime_ns": 1792485157003406700
+  },
+  "results/runs/screening-16k/context16k-3060ti-20261020/BH2_03762__Qwen35-9B__a1.json": {
+    "size": 312200,
+    "mtime_ns": 1792483173523898800
+  },
+  "results/runs/screening-16k/context16k-3060ti-20261020/BH2_03850__Gemma4-E4B__a1.json": {
+    "size": 103307,
+    "mtime_ns": 1792482549196318100
+  },
+  "results/runs/screening-16k/context16k-3060ti-20261020/BH2_03850__Ministral3-8B__a1.json": {
+    "size": 94683,
+    "mtime_ns": 1792485434797741300
+  },
+  "results/runs/screening-16k/context16k-3060ti-20261020/BH2_03850__Qwen35-9B__a1.json": {
+    "size": 88654,
+    "mtime_ns": 1792483231829677700
+  },
+  "results/runs/screening-16k/context16k-3060ti-20261020/BH2_03856__Gemma4-E4B__a1.json": {
+    "size": 79342,
+    "mtime_ns": 1792482566142911100
+  },
+  "results/runs/screening-16k/context16k-3060ti-20261020/BH2_03856__Ministral3-8B__a1.json": {
+    "size": 63558,
+    "mtime_ns": 1792485587315552300
+  },
+  "results/runs/screening-16k/context16k-3060ti-20261020/BH2_03856__Qwen35-9B__a1.json": {
+    "size": 212404,
+    "mtime_ns": 1792483284520294900
+  },
+  "results/runs/screening-16k/context16k-3060ti-20261020/BH2_03879__Gemma4-E4B__a1.json": {
+    "size": 213654,
+    "mtime_ns": 1792482591503125000
+  },
+  "results/runs/screening-16k/context16k-3060ti-20261020/BH2_03879__Ministral3-8B__a1.json": {
+    "size": 202874,
+    "mtime_ns": 1792485820810690700
+  },
+  "results/runs/screening-16k/context16k-3060ti-20261020/BH2_03879__Qwen35-9B__a1.json": {
+    "size": 374414,
+    "mtime_ns": 1792483470120013600
+  },
+  "results/runs/screening-16k/context16k-3060ti-20261020/BH2_03881__Gemma4-E4B__a1.json": {
+    "size": 67481,
+    "mtime_ns": 1792482604573184400
+  },
+  "results/runs/screening-16k/context16k-3060ti-20261020/BH2_03881__Ministral3-8B__a1.json": {
+    "size": 146744,
+    "mtime_ns": 1792486130686554000
+  },
+  "results/runs/screening-16k/context16k-3060ti-20261020/BH2_03881__Qwen35-9B__a1.json": {
+    "size": 266656,
+    "mtime_ns": 1792483526996438200
+  },
+  "results/runs/screening-16k/context16k-3060ti-20261020/BH2_03953__Gemma4-E4B__a1.json": {
+    "size": 141875,
+    "mtime_ns": 1792482639096054600
+  },
+  "results/runs/screening-16k/context16k-3060ti-20261020/BH2_03953__Ministral3-8B__a1.json": {
+    "size": 138856,
+    "mtime_ns": 1792486308171180600
+  },
+  "results/runs/screening-16k/context16k-3060ti-20261020/BH2_03953__Qwen35-9B__a1.json": {
+    "size": 175500,
+    "mtime_ns": 1792483639329008000
+  },
+  "results/runs/screening-16k/context16k-3060ti-20261020/BH2_03991__Gemma4-E4B__a1.json": {
+    "size": 32060,
+    "mtime_ns": 1792482645556822300
+  },
+  "results/runs/screening-16k/context16k-3060ti-20261020/BH2_03991__Ministral3-8B__a1.json": {
+    "size": 168910,
+    "mtime_ns": 1792486517605609100
+  },
+  "results/runs/screening-16k/context16k-3060ti-20261020/BH2_03991__Qwen35-9B__a1.json": {
+    "size": 227386,
+    "mtime_ns": 1792483704434490400
+  },
+  "results/runs/screening-16k/context16k-3060ti-20261020/BH2_04003__Gemma4-E4B__a1.json": {
+    "size": 254531,
+    "mtime_ns": 1792482678635689400
+  },
+  "results/runs/screening-16k/context16k-3060ti-20261020/BH2_04003__Ministral3-8B__a1.json": {
+    "size": 76510,
+    "mtime_ns": 1792486681085597600
+  },
+  "results/runs/screening-16k/context16k-3060ti-20261020/BH2_04003__Qwen35-9B__a1.json": {
+    "size": 278325,
+    "mtime_ns": 1792483782268132600
+  },
+  "results/runs/screening-16k/context16k-3060ti-20261020/BH2_04007__Gemma4-E4B__a1.json": {
+    "size": 85385,
+    "mtime_ns": 1792482696145513800
+  },
+  "results/runs/screening-16k/context16k-3060ti-20261020/BH2_04007__Ministral3-8B__a1.json": {
+    "size": 76971,
+    "mtime_ns": 1792486898799931800
+  },
+  "results/runs/screening-16k/context16k-3060ti-20261020/BH2_04007__Qwen35-9B__a1.json": {
+    "size": 78291,
+    "mtime_ns": 1792483865700479600
+  },
+  "results/runs/screening-16k/context16k-3060ti-20261020/BH2_04425__Gemma4-E4B__a1.json": {
+    "size": 90179,
+    "mtime_ns": 1792482720350536000
+  },
+  "results/runs/screening-16k/context16k-3060ti-20261020/BH2_04425__Ministral3-8B__a1.json": {
+    "size": 63236,
+    "mtime_ns": 1792487049488678300
+  },
+  "results/runs/screening-16k/context16k-3060ti-20261020/BH2_04425__Qwen35-9B__a1.json": {
+    "size": 84758,
+    "mtime_ns": 1792483927223941800
+  },
+  "results/runs/screening-16k/context16k-3060ti-20261020/BH2_05366__Gemma4-E4B__a1.json": {
+    "size": 47160,
+    "mtime_ns": 1792482730783690100
+  },
+  "results/runs/screening-16k/context16k-3060ti-20261020/BH2_05366__Ministral3-8B__a1.json": {
+    "size": 29254,
+    "mtime_ns": 1792487082043382000
+  },
+  "results/runs/screening-16k/context16k-3060ti-20261020/BH2_05366__Qwen35-9B__a1.json": {
+    "size": 23457,
+    "mtime_ns": 1792483936783824500
+  },
+  "results/runs/screening-16k/context16k-3060ti-20261020/BH2_05686__Gemma4-E4B__a1.json": {
+    "size": 48099,
+    "mtime_ns": 1792482741227526700
+  },
+  "results/runs/screening-16k/context16k-3060ti-20261020/BH2_05686__Ministral3-8B__a1.json": {
+    "size": 47393,
+    "mtime_ns": 1792487196651522200
+  },
+  "results/runs/screening-16k/context16k-3060ti-20261020/BH2_05686__Qwen35-9B__a1.json": {
+    "size": 40610,
+    "mtime_ns": 1792483962002959900
+  },
+  "results/runs/screening-16k/context16k-3060ti-20261020/BH2_05843__Gemma4-E4B__a1.json": {
+    "size": 38891,
+    "mtime_ns": 1792482748031647500
+  },
+  "results/runs/screening-16k/context16k-3060ti-20261020/BH2_05843__Ministral3-8B__a1.json": {
+    "size": 34597,
+    "mtime_ns": 1792487217729858000
+  },
+  "results/runs/screening-16k/context16k-3060ti-20261020/BH2_05843__Qwen35-9B__a1.json": {
+    "size": 31350,
+    "mtime_ns": 1792483977417237400
+  },
+  "results/runs/screening-16k/context16k-3060ti-20261020/BH2_06427__Gemma4-E4B__a1.json": {
+    "size": 28205,
+    "mtime_ns": 1792482753234212500
+  },
+  "results/runs/screening-16k/context16k-3060ti-20261020/BH2_06427__Ministral3-8B__a1.json": {
+    "size": 25725,
+    "mtime_ns": 1792487239603172400
+  },
+  "results/runs/screening-16k/context16k-3060ti-20261020/BH2_06427__Qwen35-9B__a1.json": {
+    "size": 24372,
+    "mtime_ns": 1792483988113778600
+  },
+  "results/runs/screening-16k/context16k-3060ti-20261020/Gemma4-E4B.config.json": {
+    "size": 7532,
+    "mtime_ns": 1792482386897525700
+  },
+  "results/runs/screening-16k/context16k-3060ti-20261020/Ministral3-8B.config.json": {
+    "size": 7458,
+    "mtime_ns": 1792483997488439800
+  },
+  "results/runs/screening-16k/context16k-3060ti-20261020/Qwen35-9B.config.json": {
+    "size": 7477,
+    "mtime_ns": 1792482766237224200
+  },
+  "results/runs/screening/primary-3060ti-20261018/BH2_00461__Gemma4-E4B__a1.json": {
+    "size": 36774,
+    "mtime_ns": 1792480092492964500
+  },
+  "results/runs/screening/primary-3060ti-20261018/BH2_00461__Granite33-8B__a1.json": {
+    "size": 15037,
+    "mtime_ns": 1792382690008254000
+  },
+  "results/runs/screening/primary-3060ti-20261018/BH2_00461__Granite42-8B__a1.json": {
+    "size": 43543,
+    "mtime_ns": 1792418407866313800
+  },
+  "results/runs/screening/primary-3060ti-20261018/BH2_00461__Llama31-8B__a1.json": {
+    "size": 72944,
+    "mtime_ns": 1792311288076888000
+  },
+  "results/runs/screening/primary-3060ti-20261018/BH2_00461__Ministral3-8B__a1.json": {
+    "size": 36891,
+    "mtime_ns": 1792392409794244800
+  },
+  "results/runs/screening/primary-3060ti-20261018/BH2_00461__OLMo3-7B__a1.json": {
+    "size": 8816,
+    "mtime_ns": 1792411010359308100
+  },
+  "results/runs/screening/primary-3060ti-20261018/BH2_00461__Qwen35-9B__a1.json": {
+    "size": 36454,
+    "mtime_ns": 1792335905669120000
+  },
+  "results/runs/screening/primary-3060ti-20261018/BH2_02033__Gemma4-E4B__a1.json": {
+    "size": 23233,
+    "mtime_ns": 1792480096319803700
+  },
+  "results/runs/screening/primary-3060ti-20261018/BH2_02033__Granite33-8B__a1.json": {
+    "size": 13553,
+    "mtime_ns": 1792382705616999700
+  },
+  "results/runs/screening/primary-3060ti-20261018/BH2_02033__Granite42-8B__a1.json": {
+    "size": 25341,
+    "mtime_ns": 1792418426935953200
+  },
+  "results/runs/screening/primary-3060ti-20261018/BH2_02033__Llama31-8B__a1.json": {
+    "size": 72743,
+    "mtime_ns": 1792313306712312200
+  },
+  "results/runs/screening/primary-3060ti-20261018/BH2_02033__Ministral3-8B__a1.json": {
+    "size": 24085,
+    "mtime_ns": 1792392428445405000
+  },
+  "results/runs/screening/primary-3060ti-20261018/BH2_02033__OLMo3-7B__a1.json": {
+    "size": 10835,
+    "mtime_ns": 1792411024662204000
+  },
+  "results/runs/screening/primary-3060ti-20261018/BH2_02033__Qwen35-9B__a1.json": {
+    "size": 22916,
+    "mtime_ns": 1792335925576953800
+  },
+  "results/runs/screening/primary-3060ti-20261018/BH2_03434__Gemma4-E4B__a1.json": {
+    "size": 50547,
+    "mtime_ns": 1792480108597824600
+  },
+  "results/runs/screening/primary-3060ti-20261018/BH2_03434__Granite33-8B__a1.json": {
+    "size": 13635,
+    "mtime_ns": 1792382725740890400
+  },
+  "results/runs/screening/primary-3060ti-20261018/BH2_03434__Granite42-8B__a1.json": {
+    "size": 63077,
+    "mtime_ns": 1792418542028836600
+  },
+  "results/runs/screening/primary-3060ti-20261018/BH2_03434__Llama31-8B__a1.json": {
+    "size": 72790,
+    "mtime_ns": 1792313337733730800
+  },
+  "results/runs/screening/primary-3060ti-20261018/BH2_03434__Ministral3-8B__a1.json": {
+    "size": 59842,
+    "mtime_ns": 1792392492776330100
+  },
+  "results/runs/screening/primary-3060ti-20261018/BH2_03434__OLMo3-7B__a1.json": {
+    "size": 30653,
+    "mtime_ns": 1792411050730386800
+  },
+  "results/runs/screening/primary-3060ti-20261018/BH2_03434__Qwen35-9B__a1.json": {
+    "size": 42432,
+    "mtime_ns": 1792335956795394000
+  },
+  "results/runs/screening/primary-3060ti-20261018/BH2_03619__Gemma4-E4B__a1.json": {
+    "size": 115960,
+    "mtime_ns": 1792480127331039200
+  },
+  "results/runs/screening/primary-3060ti-20261018/BH2_03619__Granite33-8B__a1.json": {
+    "size": 13178,
+    "mtime_ns": 1792382741852615700
+  },
+  "results/runs/screening/primary-3060ti-20261018/BH2_03619__Granite42-8B__a1.json": {
+    "size": 149625,
+    "mtime_ns": 1792418600768952900
+  },
+  "results/runs/screening/primary-3060ti-20261018/BH2_03619__Llama31-8B__a1.json": {
+    "size": 73294,
+    "mtime_ns": 1792313367341944000
+  },
+  "results/runs/screening/primary-3060ti-20261018/BH2_03619__Ministral3-8B__a1.json": {
+    "size": 131175,
+    "mtime_ns": 1792392597018836900
+  },
+  "results/runs/screening/primary-3060ti-20261018/BH2_03619__OLMo3-7B__a1.json": {
+    "size": 10740,
+    "mtime_ns": 1792411093672496900
+  },
+  "results/runs/screening/primary-3060ti-20261018/BH2_03619__Qwen35-9B__a1.json": {
+    "size": 160218,
+    "mtime_ns": 1792335987480030900
+  },
+  "results/runs/screening/primary-3060ti-20261018/BH2_03750__Gemma4-E4B__a1.json": {
+    "size": 62236,
+    "mtime_ns": 1792480139259983900
+  },
+  "results/runs/screening/primary-3060ti-20261018/BH2_03750__Granite33-8B__a1.json": {
+    "size": 14323,
+    "mtime_ns": 1792382759181328900
+  },
+  "results/runs/screening/primary-3060ti-20261018/BH2_03750__Granite42-8B__a1.json": {
+    "size": 83001,
+    "mtime_ns": 1792418763128175500
+  },
+  "results/runs/screening/primary-3060ti-20261018/BH2_03750__Llama31-8B__a1.json": {
+    "size": 72384,
+    "mtime_ns": 1792313396768139700
+  },
+  "results/runs/screening/primary-3060ti-20261018/BH2_03750__Ministral3-8B__a1.json": {
+    "size": 47819,
+    "mtime_ns": 1792392658601375300
+  },
+  "results/runs/screening/primary-3060ti-20261018/BH2_03750__OLMo3-7B__a1.json": {
+    "size": 10861,
+    "mtime_ns": 1792411115789135200
+  },
+  "results/runs/screening/primary-3060ti-20261018/BH2_03750__Qwen35-9B__a1.json": {
+    "size": 56640,
+    "mtime_ns": 1792336021735731400
+  },
+  "results/runs/screening/primary-3060ti-20261018/BH2_03760__Gemma4-E4B__a1.json": {
+    "size": 93881,
+    "mtime_ns": 1792480163804833800
+  },
+  "results/runs/screening/primary-3060ti-20261018/BH2_03760__Granite33-8B__a1.json": {
+    "size": 18580,
+    "mtime_ns": 1792382783937848900
+  },
+  "results/runs/screening/primary-3060ti-20261018/BH2_03760__Granite42-8B__a1.json": {
+    "size": 145334,
+    "mtime_ns": 1792418880139609900
+  },
+  "results/runs/screening/primary-3060ti-20261018/BH2_03760__Llama31-8B__a1.json": {
+    "size": 73874,
+    "mtime_ns": 1792313425368296900
+  },
+  "results/runs/screening/primary-3060ti-20261018/BH2_03760__Ministral3-8B__a1.json": {
+    "size": 123870,
+    "mtime_ns": 1792392730069625900
+  },
+  "results/runs/screening/primary-3060ti-20261018/BH2_03760__OLMo3-7B__a1.json": {
+    "size": 11353,
+    "mtime_ns": 1792411130954030300
+  },
+  "results/runs/screening/primary-3060ti-20261018/BH2_03760__Qwen35-9B__a1.json": {
+    "size": 114044,
+    "mtime_ns": 1792336052440646600
+  },
+  "results/runs/screening/primary-3060ti-20261018/BH2_03762__Gemma4-E4B__a1.json": {
+    "size": 95630,
+    "mtime_ns": 1792480185189244700
+  },
+  "results/runs/screening/primary-3060ti-20261018/BH2_03762__Granite33-8B__a1.json": {
+    "size": 15479,
+    "mtime_ns": 1792382805515609300
+  },
+  "results/runs/screening/primary-3060ti-20261018/BH2_03762__Granite42-8B__a1.json": {
+    "size": 157890,
+    "mtime_ns": 1792418937414112900
+  },
+  "results/runs/screening/primary-3060ti-20261018/BH2_03762__Llama31-8B__a1.json": {
+    "size": 72444,
+    "mtime_ns": 1792313453646853300
+  },
+  "results/runs/screening/primary-3060ti-20261018/BH2_03762__Ministral3-8B__a1.json": {
+    "size": 158673,
+    "mtime_ns": 1792392899612349800
+  },
+  "results/runs/screening/primary-3060ti-20261018/BH2_03762__OLMo3-7B__a1.json": {
+    "size": 409482,
+    "mtime_ns": 1792411371725893300
+  },
+  "results/runs/screening/primary-3060ti-20261018/BH2_03762__Qwen35-9B__a1.json": {
+    "size": 178748,
+    "mtime_ns": 1792336084074367200
+  },
+  "results/runs/screening/primary-3060ti-20261018/BH2_03850__Gemma4-E4B__a1.json": {
+    "size": 91988,
+    "mtime_ns": 1792480206719589200
+  },
+  "results/runs/screening/primary-3060ti-20261018/BH2_03850__Granite33-8B__a1.json": {
+    "size": 41739,
+    "mtime_ns": 1792382875885465200
+  },
+  "results/runs/screening/primary-3060ti-20261018/BH2_03850__Granite42-8B__a1.json": {
+    "size": 243971,
+    "mtime_ns": 1792419101337535100
+  },
+  "results/runs/screening/primary-3060ti-20261018/BH2_03850__Llama31-8B__a1.json": {
+    "size": 72603,
+    "mtime_ns": 1792313481746109100
+  },
+  "results/runs/screening/primary-3060ti-20261018/BH2_03850__Ministral3-8B__a1.json": {
+    "size": 92799,
+    "mtime_ns": 1792393080818287400
+  },
+  "results/runs/screening/primary-3060ti-20261018/BH2_03850__OLMo3-7B__a1.json": {
+    "size": 11144,
+    "mtime_ns": 1792411398302130700
+  },
+  "results/runs/screening/primary-3060ti-20261018/BH2_03850__Qwen35-9B__a1.json": {
+    "size": 88647,
+    "mtime_ns": 1792336131746393400
+  },
+  "results/runs/screening/primary-3060ti-20261018/BH2_03856__Gemma4-E4B__a1.json": {
+    "size": 83516,
+    "mtime_ns": 1792480223778920700
+  },
+  "results/runs/screening/primary-3060ti-20261018/BH2_03856__Granite33-8B__a1.json": {
+    "size": 32400,
+    "mtime_ns": 1792382928415436300
+  },
+  "results/runs/screening/primary-3060ti-20261018/BH2_03856__Granite42-8B__a1.json": {
+    "size": 67011,
+    "mtime_ns": 1792419143266094000
+  },
+  "results/runs/screening/primary-3060ti-20261018/BH2_03856__Llama31-8B__a1.json": {
+    "size": 73548,
+    "mtime_ns": 1792313510385151800
+  },
+  "results/runs/screening/primary-3060ti-20261018/BH2_03856__Ministral3-8B__a1.json": {
+    "size": 99346,
+    "mtime_ns": 1792393280936971800
+  },
+  "results/runs/screening/primary-3060ti-20261018/BH2_03856__OLMo3-7B__a1.json": {
+    "size": 10782,
+    "mtime_ns": 1792411411830589100
+  },
+  "results/runs/screening/primary-3060ti-20261018/BH2_03856__Qwen35-9B__a1.json": {
+    "size": 307673,
+    "mtime_ns": 1792336198056484300
+  },
+  "results/runs/screening/primary-3060ti-20261018/BH2_03879__Gemma4-E4B__a1.json": {
+    "size": 71671,
+    "mtime_ns": 1792480231572315100
+  },
+  "results/runs/screening/primary-3060ti-20261018/BH2_03879__Granite33-8B__a1.json": {
+    "size": 14071,
+    "mtime_ns": 1792382947928010600
+  },
+  "results/runs/screening/primary-3060ti-20261018/BH2_03879__Granite42-8B__a1.json": {
+    "size": 262306,
+    "mtime_ns": 1792419323534795900
+  },
+  "results/runs/screening/primary-3060ti-20261018/BH2_03879__Llama31-8B__a1.json": {
+    "size": 71795,
+    "mtime_ns": 1792313538982533300
+  },
+  "results/runs/screening/primary-3060ti-20261018/BH2_03879__Ministral3-8B__a1.json": {
+    "size": 110483,
+    "mtime_ns": 1792393333596643100
+  },
+  "results/runs/screening/primary-3060ti-20261018/BH2_03879__OLMo3-7B__a1.json": {
+    "size": 10860,
+    "mtime_ns": 1792411424955471100
+  },
+  "results/runs/screening/primary-3060ti-20261018/BH2_03879__Qwen35-9B__a1.json": {
+    "size": 158319,
+    "mtime_ns": 1792336238302030700
+  },
+  "results/runs/screening/primary-3060ti-20261018/BH2_03881__Gemma4-E4B__a1.json": {
+    "size": 57367,
+    "mtime_ns": 1792480239830486600
+  },
+  "results/runs/screening/primary-3060ti-20261018/BH2_03881__Granite33-8B__a1.json": {
+    "size": 12642,
+    "mtime_ns": 1792382965455476800
+  },
+  "results/runs/screening/primary-3060ti-20261018/BH2_03881__Granite42-8B__a1.json": {
+    "size": 164461,
+    "mtime_ns": 1792419400995035400
+  },
+  "results/runs/screening/primary-3060ti-20261018/BH2_03881__Llama31-8B__a1.json": {
+    "size": 73263,
+    "mtime_ns": 1792313569010048200
+  },
+  "results/runs/screening/primary-3060ti-20261018/BH2_03881__Ministral3-8B__a1.json": {
+    "size": 109570,
+    "mtime_ns": 1792393422578856200
+  },
+  "results/runs/screening/primary-3060ti-20261018/BH2_03881__OLMo3-7B__a1.json": {
+    "size": 10883,
+    "mtime_ns": 1792411439961060600
+  },
+  "results/runs/screening/primary-3060ti-20261018/BH2_03881__Qwen35-9B__a1.json": {
+    "size": 205026,
+    "mtime_ns": 1792336350108266200
+  },
+  "results/runs/screening/primary-3060ti-20261018/BH2_03953__Gemma4-E4B__a1.json": {
+    "size": 105876,
+    "mtime_ns": 1792480253488017400
+  },
+  "results/runs/screening/primary-3060ti-20261018/BH2_03953__Granite33-8B__a1.json": {
+    "size": 16914,
+    "mtime_ns": 1792382986841319200
+  },
+  "results/runs/screening/primary-3060ti-20261018/BH2_03953__Granite42-8B__a1.json": {
+    "size": 97188,
+    "mtime_ns": 1792419552627863800
+  },
+  "results/runs/screening/primary-3060ti-20261018/BH2_03953__Llama31-8B__a1.json": {
+    "size": 73625,
+    "mtime_ns": 1792313597732082100
+  },
+  "results/runs/screening/primary-3060ti-20261018/BH2_03953__Ministral3-8B__a1.json": {
+    "size": 140523,
+    "mtime_ns": 1792393481230537200
+  },
+  "results/runs/screening/primary-3060ti-20261018/BH2_03953__OLMo3-7B__a1.json": {
+    "size": 11182,
+    "mtime_ns": 1792411454053824500
+  },
+  "results/runs/screening/primary-3060ti-20261018/BH2_03953__Qwen35-9B__a1.json": {
+    "size": 158505,
+    "mtime_ns": 1792336414309348500
+  },
+  "results/runs/screening/primary-3060ti-20261018/BH2_03991__Gemma4-E4B__a1.json": {
+    "size": 31946,
+    "mtime_ns": 1792480259441639400
+  },
+  "results/runs/screening/primary-3060ti-20261018/BH2_03991__Granite33-8B__a1.json": {
+    "size": 17617,
+    "mtime_ns": 1792383012665159200
+  },
+  "results/runs/screening/primary-3060ti-20261018/BH2_03991__Granite42-8B__a1.json": {
+    "size": 212389,
+    "mtime_ns": 1792420069046335000
+  },
+  "results/runs/screening/primary-3060ti-20261018/BH2_03991__Llama31-8B__a1.json": {
+    "size": 73470,
+    "mtime_ns": 1792313627617205400
+  },
+  "results/runs/screening/primary-3060ti-20261018/BH2_03991__Ministral3-8B__a1.json": {
+    "size": 146841,
+    "mtime_ns": 1792393609225367100
+  },
+  "results/runs/screening/primary-3060ti-20261018/BH2_03991__OLMo3-7B__a1.json": {
+    "size": 29268,
+    "mtime_ns": 1792411488614882800
+  },
+  "results/runs/screening/primary-3060ti-20261018/BH2_03991__Qwen35-9B__a1.json": {
+    "size": 181667,
+    "mtime_ns": 1792336452993204900
+  },
+  "results/runs/screening/primary-3060ti-20261018/BH2_04003__Gemma4-E4B__a1.json": {
+    "size": 176268,
+    "mtime_ns": 1792480286919810000
+  },
+  "results/runs/screening/primary-3060ti-20261018/BH2_04003__Granite33-8B__a1.json": {
+    "size": 12768,
+    "mtime_ns": 1792383029411700700
+  },
+  "results/runs/screening/primary-3060ti-20261018/BH2_04003__Granite42-8B__a1.json": {
+    "size": 294540,
+    "mtime_ns": 1792420256225575800
+  },
+  "results/runs/screening/primary-3060ti-20261018/BH2_04003__Llama31-8B__a1.json": {
+    "size": 72895,
+    "mtime_ns": 1792313655340182300
+  },
+  "results/runs/screening/primary-3060ti-20261018/BH2_04003__Ministral3-8B__a1.json": {
+    "size": 108727,
+    "mtime_ns": 1792393670794306700
+  },
+  "results/runs/screening/primary-3060ti-20261018/BH2_04003__OLMo3-7B__a1.json": {
+    "size": 38312,
+    "mtime_ns": 1792411539262029800
+  },
+  "results/runs/screening/primary-3060ti-20261018/BH2_04003__Qwen35-9B__a1.json": {
+    "size": 239892,
+    "mtime_ns": 1792336489546691200
+  },
+  "results/runs/screening/primary-3060ti-20261018/BH2_04007__Gemma4-E4B__a1.json": {
+    "size": 85409,
+    "mtime_ns": 1792480303931164200
+  },
+  "results/runs/screening/primary-3060ti-20261018/BH2_04007__Granite33-8B__a1.json": {
+    "size": 17187,
+    "mtime_ns": 1792383051076223400
+  },
+  "results/runs/screening/primary-3060ti-20261018/BH2_04007__Granite42-8B__a1.json": {
+    "size": 65975,
+    "mtime_ns": 1792420413698205400
+  },
+  "results/runs/screening/primary-3060ti-20261018/BH2_04007__Llama31-8B__a1.json": {
+    "size": 73637,
+    "mtime_ns": 1792313684536790500
+  },
+  "results/runs/screening/primary-3060ti-20261018/BH2_04007__Ministral3-8B__a1.json": {
+    "size": 77190,
+    "mtime_ns": 1792393803685815300
+  },
+  "results/runs/screening/primary-3060ti-20261018/BH2_04007__OLMo3-7B__a1.json": {
+    "size": 11014,
+    "mtime_ns": 1792411565576047700
+  },
+  "results/runs/screening/primary-3060ti-20261018/BH2_04007__Qwen35-9B__a1.json": {
+    "size": 79912,
+    "mtime_ns": 1792336568033253400
+  },
+  "results/runs/screening/primary-3060ti-20261018/BH2_04425__Gemma4-E4B__a1.json": {
+    "size": 90171,
+    "mtime_ns": 1792480327551179600
+  },
+  "results/runs/screening/primary-3060ti-20261018/BH2_04425__Granite33-8B__a1.json": {
+    "size": 14226,
+    "mtime_ns": 1792383071817113400
+  },
+  "results/runs/screening/primary-3060ti-20261018/BH2_04425__Granite42-8B__a1.json": {
+    "size": 68481,
+    "mtime_ns": 1792421993640487200
+  },
+  "results/runs/screening/primary-3060ti-20261018/BH2_04425__Llama31-8B__a1.json": {
+    "size": 72425,
+    "mtime_ns": 1792313713077970800
+  },
+  "results/runs/screening/primary-3060ti-20261018/BH2_04425__Ministral3-8B__a1.json": {
+    "size": 63229,
+    "mtime_ns": 1792393953962458800
+  },
+  "results/runs/screening/primary-3060ti-20261018/BH2_04425__OLMo3-7B__a1.json": {
+    "size": 46277,
+    "mtime_ns": 1792411627509485400
+  },
+  "results/runs/screening/primary-3060ti-20261018/BH2_04425__Qwen35-9B__a1.json": {
+    "size": 84757,
+    "mtime_ns": 1792336621123015400
+  },
+  "results/runs/screening/primary-3060ti-20261018/BH2_05366__Gemma4-E4B__a1.json": {
+    "size": 46907,
+    "mtime_ns": 1792480336343840000
+  },
+  "results/runs/screening/primary-3060ti-20261018/BH2_05366__Granite33-8B__a1.json": {
+    "size": 14750,
+    "mtime_ns": 1792383091260919700
+  },
+  "results/runs/screening/primary-3060ti-20261018/BH2_05366__Granite42-8B__a1.json": {
+    "size": 45113,
+    "mtime_ns": 1792422297633307600
+  },
+  "results/runs/screening/primary-3060ti-20261018/BH2_05366__Llama31-8B__a1.json": {
+    "size": 72167,
+    "mtime_ns": 1792313741728123600
+  },
+  "results/runs/screening/primary-3060ti-20261018/BH2_05366__Ministral3-8B__a1.json": {
+    "size": 82026,
+    "mtime_ns": 1792395236257680200
+  },
+  "results/runs/screening/primary-3060ti-20261018/BH2_05366__OLMo3-7B__a1.json": {
+    "size": 8739,
+    "mtime_ns": 1792411650056868400
+  },
+  "results/runs/screening/primary-3060ti-20261018/BH2_05366__Qwen35-9B__a1.json": {
+    "size": 23448,
+    "mtime_ns": 1792336634605991700
+  },
+  "results/runs/screening/primary-3060ti-20261018/BH2_05686__Gemma4-E4B__a1.json": {
+    "size": 48093,
+    "mtime_ns": 1792480346553895700
+  },
+  "results/runs/screening/primary-3060ti-20261018/BH2_05686__Granite33-8B__a1.json": {
+    "size": 17974,
+    "mtime_ns": 1792383118686559600
+  },
+  "results/runs/screening/primary-3060ti-20261018/BH2_05686__Granite42-8B__a1.json": {
+    "size": 194737,
+    "mtime_ns": 1792422452385628300
+  },
+  "results/runs/screening/primary-3060ti-20261018/BH2_05686__Llama31-8B__a1.json": {
+    "size": 73150,
+    "mtime_ns": 1792313771865258100
+  },
+  "results/runs/screening/primary-3060ti-20261018/BH2_05686__Ministral3-8B__a1.json": {
+    "size": 46738,
+    "mtime_ns": 1792395309864885200
+  },
+  "results/runs/screening/primary-3060ti-20261018/BH2_05686__OLMo3-7B__a1.json": {
+    "size": 10750,
+    "mtime_ns": 1792411665479334700
+  },
+  "results/runs/screening/primary-3060ti-20261018/BH2_05686__Qwen35-9B__a1.json": {
+    "size": 40602,
+    "mtime_ns": 1792336658620533000
+  },
+  "results/runs/screening/primary-3060ti-20261018/BH2_05843__Gemma4-E4B__a1.json": {
+    "size": 39014,
+    "mtime_ns": 1792480353280079300
+  },
+  "results/runs/screening/primary-3060ti-20261018/BH2_05843__Granite33-8B__a1.json": {
+    "size": 13371,
+    "mtime_ns": 1792383137224064600
+  },
+  "results/runs/screening/primary-3060ti-20261018/BH2_05843__Granite42-8B__a1.json": {
+    "size": 183127,
+    "mtime_ns": 1792422604566672600
+  },
+  "results/runs/screening/primary-3060ti-20261018/BH2_05843__Llama31-8B__a1.json": {
+    "size": 72311,
+    "mtime_ns": 1792313799453025100
+  },
+  "results/runs/screening/primary-3060ti-20261018/BH2_05843__Ministral3-8B__a1.json": {
+    "size": 34590,
+    "mtime_ns": 1792395329549632200
+  },
+  "results/runs/screening/primary-3060ti-20261018/BH2_05843__OLMo3-7B__a1.json": {
+    "size": 23342,
+    "mtime_ns": 1792411688834757300
+  },
+  "results/runs/screening/primary-3060ti-20261018/BH2_05843__Qwen35-9B__a1.json": {
+    "size": 31346,
+    "mtime_ns": 1792336676203572800
+  },
+  "results/runs/screening/primary-3060ti-20261018/BH2_06427__Gemma4-E4B__a1.json": {
+    "size": 28199,
+    "mtime_ns": 1792480358125553800
+  },
+  "results/runs/screening/primary-3060ti-20261018/BH2_06427__Granite33-8B__a1.json": {
+    "size": 12944,
+    "mtime_ns": 1792383152898888000
+  },
+  "results/runs/screening/primary-3060ti-20261018/BH2_06427__Granite42-8B__a1.json": {
+    "size": 50089,
+    "mtime_ns": 1792422659751902800
+  },
+  "results/runs/screening/primary-3060ti-20261018/BH2_06427__Llama31-8B__a1.json": {
+    "size": 72109,
+    "mtime_ns": 1792313828507449300
+  },
+  "results/runs/screening/primary-3060ti-20261018/BH2_06427__Ministral3-8B__a1.json": {
+    "size": 25904,
+    "mtime_ns": 1792395349763608800
+  },
+  "results/runs/screening/primary-3060ti-20261018/BH2_06427__OLMo3-7B__a1.json": {
+    "size": 10911,
+    "mtime_ns": 1792411706572731700
+  },
+  "results/runs/screening/primary-3060ti-20261018/BH2_06427__Qwen35-9B__a1.json": {
+    "size": 24365,
+    "mtime_ns": 1792336690200738900
+  },
+  "results/runs/screening/primary-3060ti-20261018/Gemma4-E4B.config.json": {
+    "size": 7051,
+    "mtime_ns": 1792480086650691700
+  },
+  "results/runs/screening/primary-3060ti-20261018/Granite33-8B.config.json": {
+    "size": 6937,
+    "mtime_ns": 1792382676049876500
+  },
+  "results/runs/screening/primary-3060ti-20261018/Granite42-8B.config.json": {
+    "size": 6975,
+    "mtime_ns": 1792418364952435300
+  },
+  "results/runs/screening/primary-3060ti-20261018/Llama31-8B.config.json": {
+    "size": 6929,
+    "mtime_ns": 1792311262142221500
+  },
+  "results/runs/screening/primary-3060ti-20261018/Ministral3-8B.config.json": {
+    "size": 6974,
+    "mtime_ns": 1792392385118703600
+  },
+  "results/runs/screening/primary-3060ti-20261018/OLMo3-7B.config.json": {
+    "size": 6940,
+    "mtime_ns": 1792411007188848100
+  },
+  "results/runs/screening/primary-3060ti-20261018/Qwen35-9B.config.json": {
+    "size": 6997,
+    "mtime_ns": 1792335881082808200
+  },
+  "results/runs/diagnostic/ministral3-bh204425-diagnostic-20261019T075024Z/BH2_04425__Ministral3-8B__a1.json": {
+    "size": 87162,
+    "mtime_ns": 1792396485657595100
+  },
+  "results/runs/context-diagnostics/gemma4-e4b-16k-20261020/BH2_03619__Gemma4-E4B__a1.json": {
+    "size": 183362,
+    "mtime_ns": 1792481519961235000
+  },
+  "results/runs/context-diagnostics/gemma4-e4b-16k-20261020/BH2_03762__Gemma4-E4B__a1.json": {
+    "size": 258544,
+    "mtime_ns": 1792481559570149800
+  },
+  "results/runs/context-diagnostics/gemma4-e4b-16k-20261020/BH2_03850__Gemma4-E4B__a1.json": {
+    "size": 103303,
+    "mtime_ns": 1792481584697580900
+  },
+  "results/runs/context-diagnostics/gemma4-e4b-16k-20261020/BH2_03953__Gemma4-E4B__a1.json": {
+    "size": 141868,
+    "mtime_ns": 1792481619612684200
+  },
+  "results/runs/context-diagnostics/gemma4-e4b-16k-20261020/diagnostic.config.json": {
+    "size": 73369,
+    "mtime_ns": 1792481467638463300
+  }
+}

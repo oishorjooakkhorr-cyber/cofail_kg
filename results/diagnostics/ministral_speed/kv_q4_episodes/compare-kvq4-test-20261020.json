@@ -1,0 +1,248 @@
+{
+  "BH2_02033": {
+    "official_f16": {
+      "status": "SUCCESS",
+      "cause": null,
+      "llm_calls": 5,
+      "gen_tokens": 286,
+      "max_prompt": 1349,
+      "last_gen_tok_s": 14.5,
+      "timestamps": [
+        "2026-10-20T08:14:10.000404+00:00",
+        "2026-10-20T08:14:29.957577+00:00"
+      ],
+      "answer_ids": [
+        "31332",
+        "36432",
+        "37659"
+      ],
+      "competent": true,
+      "precision": 1.0,
+      "recall": 1.0,
+      "tool_calls_used": 4
+    },
+    "kvq4-test-20261020": {
+      "status": "SUCCESS",
+      "cause": null,
+      "llm_calls": 5,
+      "gen_tokens": 280,
+      "max_prompt": 1343,
+      "last_gen_tok_s": 43.9,
+      "timestamps": [
+        "2026-10-20T10:59:35.509850+00:00",
+        "2026-10-20T10:59:54.383672+00:00"
+      ],
+      "answer_ids": [
+        "31332",
+        "36432",
+        "37659"
+      ],
+      "competent": true,
+      "precision": 1.0,
+      "recall": 1.0,
+      "tool_calls_used": 4
+    },
+    "tool_calls_identical": true,
+    "tool_call_common_prefix": 4,
+    "n_tool_calls": [
+      4,
+      4
+    ],
+    "same_answers": true
+  },
+  "BH2_03750": {
+    "official_f16": {
+      "status": "ERROR",
+      "cause": "CONNECTION",
+      "llm_calls": 4,
+      "gen_tokens": 283,
+      "max_prompt": 2199,
+      "last_gen_tok_s": 15.9,
+      "timestamps": [
+        "2026-10-20T08:21:05.233914+00:00",
+        "2026-10-20T08:23:27.299717+00:00"
+      ],
+      "answer_ids": [],
+      "competent": false,
+      "precision": null,
+      "recall": null,
+      "tool_calls_used": 4
+    },
+    "kvq4-test-20261020": {
+      "status": "SUCCESS",
+      "cause": null,
+      "llm_calls": 9,
+      "gen_tokens": 3048,
+      "max_prompt": 4324,
+      "last_gen_tok_s": 44.3,
+      "timestamps": [
+        "2026-10-20T10:59:54.452278+00:00",
+        "2026-10-20T11:01:10.008895+00:00"
+      ],
+      "answer_ids": [
+        "22442",
+        "22447",
+        "22581",
+        "22594",
+        "22786",
+        "22825",
+        "22966",
+        "22982",
+        "23002",
+        "23011",
+        "23113",
+        "23127",
+        "23157",
+        "23158",
+        "23545",
+        "23833",
+        "23864",
+        "24237",
+        "24337",
+        "24580",
+        "25150",
+        "25201",
+        "25620",
+        "25672",
+        "25945",
+        "26127",
+        "26160",
+        "26162",
+        "26629",
+        "26982",
+        "27007",
+        "84362",
+        "84409",
+        "84549",
+        "84696",
+        "84853",
+        "85015",
+        "85058",
+        "85848",
+        "85849",
+        "86151",
+        "87333",
+        "88984",
+        "89307",
+        "90322"
+      ],
+      "competent": true,
+      "precision": 0.9777777777777777,
+      "recall": 1.0,
+      "tool_calls_used": 7
+    },
+    "tool_calls_identical": false,
+    "tool_call_common_prefix": 2,
+    "n_tool_calls": [
+      4,
+      7
+    ],
+    "same_answers": false
+  },
+  "BH2_03760": {
+    "official_f16": {
+      "status": "SUCCESS",
+      "cause": null,
+      "llm_calls": 13,
+      "gen_tokens": 3158,
+      "max_prompt": 7464,
+      "last_gen_tok_s": 9.8,
+      "timestamps": [
+        "2026-10-20T08:23:27.757110+00:00",
+        "2026-10-20T08:28:14.213826+00:00"
+      ],
+      "answer_ids": [
+        "22133",
+        "22262",
+        "22447",
+        "22467",
+        "23072",
+        "23073",
+        "23079",
+        "23157",
+        "23158",
+        "23254",
+        "23417",
+        "23799",
+        "23833",
+        "23834",
+        "23855",
+        "25310",
+        "25515",
+        "25644",
+        "26948",
+        "27007",
+        "84409",
+        "87505"
+      ],
+      "competent": true,
+      "precision": 1.0,
+      "recall": 0.1746031746031746,
+      "tool_calls_used": 11
+    },
+    "kvq4-test-20261020": {
+      "status": "SUCCESS",
+      "cause": null,
+      "llm_calls": 14,
+      "gen_tokens": 2951,
+      "max_prompt": 6638,
+      "last_gen_tok_s": 40.5,
+      "timestamps": [
+        "2026-10-20T11:01:10.084254+00:00",
+        "2026-10-20T11:02:29.179397+00:00"
+      ],
+      "answer_ids": [
+        "22262",
+        "22447",
+        "22550",
+        "22581",
+        "22594",
+        "22731",
+        "22733",
+        "22786",
+        "22939",
+        "22953",
+        "22979",
+        "22982",
+        "23002",
+        "23072",
+        "23073",
+        "23157",
+        "23158",
+        "23417",
+        "23469",
+        "23544",
+        "23799",
+        "23833",
+        "23834",
+        "23855",
+        "23863",
+        "23864",
+        "23901",
+        "24010",
+        "24040",
+        "24337",
+        "24369",
+        "24461",
+        "25310",
+        "25515",
+        "25644",
+        "26948",
+        "27007",
+        "84409",
+        "87505"
+      ],
+      "competent": true,
+      "precision": 1.0,
+      "recall": 0.30952380952380953,
+      "tool_calls_used": 12
+    },
+    "tool_calls_identical": false,
+    "tool_call_common_prefix": 1,
+    "n_tool_calls": [
+      11,
+      12
+    ],
+    "same_answers": false
+  }
+}

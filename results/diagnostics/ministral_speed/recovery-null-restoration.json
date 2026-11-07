@@ -1,0 +1,139 @@
+{
+  "ps": {
+    "models": []
+  },
+  "version": {
+    "version": "0.40.4"
+  },
+  "success": true,
+  "timestamp_utc": "2026-10-20T10:19:23.7098803Z",
+  "os": {
+    "LastBootUpTime": "2026-10-20T16:14:33.5+06:00",
+    "TotalVisibleMemorySize": 16607704,
+    "FreePhysicalMemory": 9196100,
+    "TotalVirtualMemorySize": 26044888,
+    "FreeVirtualMemory": 17284760
+  },
+  "events": [
+    {
+      "TimeCreated": "2026-10-20T16:16:45.9761674+06:00",
+      "Id": 10016,
+      "ProviderName": "Microsoft-Windows-DistributedCOM",
+      "LevelDisplayName": "Warning",
+      "Message": "The application-specific permission settings do not grant Local Launch permission for the COM Server application with CLSID \r\nWindows.SecurityCenter.WscBrokerManager\r\n and APPID \r\nUnavailable\r\n to the user NT AUTHORITY\\SYSTEM SID (S-1-5-18) from address LocalHost (Using LRPC) running in the application container Unavailable SID (Unavailable). This security permission can be modified using the Component Services administrative tool."
+    },
+    {
+      "TimeCreated": "2026-10-20T16:16:45.9751679+06:00",
+      "Id": 10016,
+      "ProviderName": "Microsoft-Windows-DistributedCOM",
+      "LevelDisplayName": "Warning",
+      "Message": "The application-specific permission settings do not grant Local Launch permission for the COM Server application with CLSID \r\nWindows.SecurityCenter.SecurityAppBroker\r\n and APPID \r\nUnavailable\r\n to the user NT AUTHORITY\\SYSTEM SID (S-1-5-18) from address LocalHost (Using LRPC) running in the application container Unavailable SID (Unavailable). This security permission can be modified using the Component Services administrative tool."
+    },
+    {
+      "TimeCreated": "2026-10-20T16:16:45.9751679+06:00",
+      "Id": 10016,
+      "ProviderName": "Microsoft-Windows-DistributedCOM",
+      "LevelDisplayName": "Warning",
+      "Message": "The application-specific permission settings do not grant Local Launch permission for the COM Server application with CLSID \r\nWindows.SecurityCenter.WscDataProtection\r\n and APPID \r\nUnavailable\r\n to the user NT AUTHORITY\\SYSTEM SID (S-1-5-18) from address LocalHost (Using LRPC) running in the application container Unavailable SID (Unavailable). This security permission can be modified using the Component Services administrative tool."
+    },
+    {
+      "TimeCreated": "2026-10-20T16:16:44.5966548+06:00",
+      "Id": 10016,
+      "ProviderName": "Microsoft-Windows-DistributedCOM",
+      "LevelDisplayName": "Warning",
+      "Message": "The application-specific permission settings do not grant Local Activation permission for the COM Server application with CLSID \r\n{9EA82395-E31B-41CA-8DF7-EC1CEE7194DF}\r\n and APPID \r\n{2ED83BAA-B2FD-43B1-99BF-E6149C622692}\r\n to the user NT AUTHORITY\\NETWORK SERVICE SID (S-1-5-20) from address LocalHost (Using LRPC) running in the application container Unavailable SID (Unavailable). This security permission can be modified using the Component Services administrative tool."
+    },
+    {
+      "TimeCreated": "2026-10-20T16:16:03.9075377+06:00",
+      "Id": 10016,
+      "ProviderName": "Microsoft-Windows-DistributedCOM",
+      "LevelDisplayName": "Warning",
+      "Message": "The application-specific permission settings do not grant Local Activation permission for the COM Server application with CLSID \r\n{2593F8B9-4EAF-457C-B68A-50F6B8EA6B54}\r\n and APPID \r\n{15C20B67-12E7-4BB6-92BB-7AFF07997402}\r\n to the user DESKTOP-5903S8A\\User SID (S-1-5-21-1869652020-2349085804-1297793637-1001) from address LocalHost (Using LRPC) running in the application container OpenAI.Codex_26.1013.4894.0_x64__2p2nqsd0c76g0 SID (Unavailable). This security permission can be modified using the Component Services administrative tool."
+    },
+    {
+      "TimeCreated": "2026-10-20T16:14:36.5916358+06:00",
+      "Id": 41,
+      "ProviderName": "Microsoft-Windows-Kernel-Power",
+      "LevelDisplayName": "Critical",
+      "Message": "The system has rebooted without cleanly shutting down first. This error could be caused if the system stopped responding, crashed, or lost power unexpectedly."
+    },
+    {
+      "TimeCreated": "2026-10-20T16:14:42.3408281+06:00",
+      "Id": 2511,
+      "ProviderName": "Server",
+      "LevelDisplayName": "Warning",
+      "Message": "The server service was unable to recreate the share Udemy - The Complete JavaScript Course 2025 From Zero to Expert! because the directory G:\\Udemy - The Complete JavaScript Course 2025 From Zero to Expert! no longer exists.  Please run \"net share Udemy - The Complete JavaScript Course 2025 From Zero to Expert! /delete\" to delete the share, or recreate the directory G:\\Udemy - The Complete JavaScript Course 2025 From Zero to Expert!."
+    },
+    {
+      "TimeCreated": "2026-10-20T16:14:42.2491866+06:00",
+      "Id": 6008,
+      "ProviderName": "EventLog",
+      "LevelDisplayName": "Error",
+      "Message": "The previous system shutdown at 3:53:24 PM on ‎10/‎20/‎2026 was unexpected."
+    },
+    {
+      "TimeCreated": "2026-10-20T16:14:34.0563949+06:00",
+      "Id": 167,
+      "ProviderName": "Microsoft-Windows-Hyper-V-Hypervisor",
+      "LevelDisplayName": "Warning",
+      "Message": "The hypervisor did not enable mitigations for side channel vulnerabilities for virtual machines because HyperThreading is enabled. To enable mitigations for virtual machines, disable HyperThreading."
+    },
+    {
+      "TimeCreated": "2026-10-20T16:12:26.5067628+06:00",
+      "Id": 7023,
+      "ProviderName": "Service Control Manager",
+      "LevelDisplayName": "Error",
+      "Message": "The Software Protection service terminated with the following error: \r\n%%2410815872"
+    },
+    {
+      "TimeCreated": "2026-10-20T16:11:45.3899395+06:00",
+      "Id": 7034,
+      "ProviderName": "Service Control Manager",
+      "LevelDisplayName": "Error",
+      "Message": "The Web Threat Defense Service service terminated unexpectedly.  It has done this 3 time(s)."
+    },
+    {
+      "TimeCreated": "2026-10-20T16:06:07.7805107+06:00",
+      "Id": 7031,
+      "ProviderName": "Service Control Manager",
+      "LevelDisplayName": "Error",
+      "Message": "The Web Threat Defense Service service terminated unexpectedly.  It has done this 2 time(s).  The following corrective action will be taken in 120000 milliseconds: Restart the service."
+    },
+    {
+      "TimeCreated": "2026-10-20T16:03:08.8584408+06:00",
+      "Id": 1014,
+      "ProviderName": "Microsoft-Windows-DNS-Client",
+      "LevelDisplayName": "Warning",
+      "Message": "Name resolution for the name api.steampowered.com timed out after none of the configured DNS servers responded. Client PID 6408."
+    },
+    {
+      "TimeCreated": "2026-10-20T16:00:35.6454979+06:00",
+      "Id": 7031,
+      "ProviderName": "Service Control Manager",
+      "LevelDisplayName": "Error",
+      "Message": "The Web Threat Defense Service service terminated unexpectedly.  It has done this 1 time(s).  The following corrective action will be taken in 60000 milliseconds: Restart the service."
+    }
+  ],
+  "environment": [
+    {
+      "name": "OLLAMA_FLASH_ATTENTION",
+      "User": null,
+      "Machine": null
+    },
+    {
+      "name": "OLLAMA_KV_CACHE_TYPE",
+      "User": null,
+      "Machine": null
+    },
+    {
+      "name": "OLLAMA_NUM_PARALLEL",
+      "User": null,
+      "Machine": null
+    },
+    {
+      "name": "OLLAMA_GPU_OVERHEAD",
+      "User": null,
+      "Machine": null
+    }
+  ]
+}

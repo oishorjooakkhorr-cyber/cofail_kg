@@ -1,0 +1,300 @@
+time=2026-10-20T15:52:40.650+06:00 level=INFO source=routes.go:2439 msg="server config" env="map[CUDA_VISIBLE_DEVICES: GGML_VK_VISIBLE_DEVICES: GPU_DEVICE_ORDINAL: HIP_VISIBLE_DEVICES: HSA_OVERRIDE_GFX_VERSION: HTTPS_PROXY: HTTP_PROXY: LLAMA_ARG_FIT: LLAMA_ARG_FIT_TARGET: NO_PROXY: OLLAMA_CONTEXT_LENGTH:0 OLLAMA_CREATE_REMOTE:false OLLAMA_DEBUG:INFO OLLAMA_DEBUG_LOG_REQUESTS:false OLLAMA_EDITOR: OLLAMA_FLASH_ATTENTION:true OLLAMA_GO_TEMPLATE:true OLLAMA_GPU_OVERHEAD:0 OLLAMA_HOST:http://127.0.0.1:11434 OLLAMA_IGPU_ENABLE: OLLAMA_KEEP_ALIVE:5m0s OLLAMA_KV_CACHE_TYPE:q8_0 OLLAMA_LLM_LIBRARY: OLLAMA_LOAD_TIMEOUT:5m0s OLLAMA_MAX_LOADED_MODELS:0 OLLAMA_MAX_QUEUE:512 OLLAMA_MAX_TRANSFER_STREAMS:4 OLLAMA_MODELS:D:\\Models OLLAMA_NOHISTORY:false OLLAMA_NOPRUNE:false OLLAMA_NO_CLOUD:false OLLAMA_NUM_PARALLEL:1 OLLAMA_ORIGINS:[http://localhost https://localhost http://localhost:* https://localhost:* http://127.0.0.1 https://127.0.0.1 http://127.0.0.1:* https://127.0.0.1:* http://0.0.0.0 https://0.0.0.0 http://0.0.0.0:* https://0.0.0.0:* app://* file://* tauri://* vscode-webview://* vscode-file://*] OLLAMA_REMOTES:[ollama.com] OLLAMA_SCHED_SPREAD:false OLLAMA_VULKAN:true ROCR_VISIBLE_DEVICES:]"
+time=2026-10-20T15:52:40.660+06:00 level=INFO source=routes.go:2441 msg="Ollama cloud disabled: false"
+time=2026-10-20T15:52:40.677+06:00 level=INFO source=images.go:1000 msg="total blobs: 35"
+time=2026-10-20T15:52:40.681+06:00 level=INFO source=images.go:1009 msg="total unused blobs removed: 0"
+time=2026-10-20T15:52:40.703+06:00 level=INFO source=routes.go:2501 msg="Listening on 127.0.0.1:11434 (version 0.40.4)"
+time=2026-10-20T15:52:40.731+06:00 level=INFO source=runner.go:60 msg="discovering available GPUs..."
+time=2026-10-20T15:52:41.877+06:00 level=INFO source=model_recommendations.go:177 msg="model recommendations cache sleep scheduled" wait=3h57m47.788635192s consecutive_failures=0
+time=2026-10-20T15:52:58.667+06:00 level=INFO source=types.go:32 msg="inference compute" id=0 filter_id=0 library=CUDA compute=8.6 name=CUDA0 description="NVIDIA GeForce RTX 3060 Ti" libdirs=ollama,cuda_v13 driver=13.3 pci_id=0000:01:00.0 type=discrete total="8.0 GiB" available="3.3 GiB"
+time=2026-10-20T15:52:58.668+06:00 level=INFO source=routes.go:2551 msg="vram-based default context" total_vram="8.0 GiB" default_num_ctx=4096
+time=2026-10-20T15:53:00.960+06:00 level=INFO source=sched.go:1189 msg="disabling mmap for llama-server load by default" model=D:\Models\blobs\sha256-3ea32f882c990baebcfe6ab5cda2e3167d54ab16d7937c0b9aa3db11aba01574 reason=windows_cuda
+time=2026-10-20T15:53:00.961+06:00 level=INFO source=server.go:107 msg="using llama-server for model" model=D:\Models\blobs\sha256-3ea32f882c990baebcfe6ab5cda2e3167d54ab16d7937c0b9aa3db11aba01574
+time=2026-10-20T15:53:00.979+06:00 level=INFO source=llama_server.go:457 msg="starting llama-server" cmd="E:\\Phitron Thesis\\cofail_kg\\.venv\\ollama\\lib\\ollama\\llama-server.exe --model D:\\Models\\blobs\\sha256-3ea32f882c990baebcfe6ab5cda2e3167d54ab16d7937c0b9aa3db11aba01574 --port 12291 --host 127.0.0.1 --no-webui --offline -c 16384 -np 1 --log-verbosity 4 --no-log-prefix --no-log-timestamps --no-jinja --chat-template chatml --mmproj D:\\Models\\blobs\\sha256-3ea32f882c990baebcfe6ab5cda2e3167d54ab16d7937c0b9aa3db11aba01574 --load-mode none --cache-type-k q8_0 --cache-type-v q8_0 --flash-attn on -b 512 -ub 512 --context-shift --keep 4"
+time=2026-10-20T15:53:00.986+06:00 level=INFO source=sched.go:664 msg="system memory" total="15.8 GiB" free="2.1 GiB" free_swap="1.8 GiB"
+time=2026-10-20T15:53:00.986+06:00 level=INFO source=sched.go:671 msg="gpu memory" id=0 library=CUDA available="2.9 GiB" free="3.3 GiB" minimum="457.0 MiB" overhead="0 B"
+time=2026-10-20T15:53:00.986+06:00 level=INFO source=llama_server.go:1077 msg="loading model via llama-server" model=D:\Models\blobs\sha256-3ea32f882c990baebcfe6ab5cda2e3167d54ab16d7937c0b9aa3db11aba01574
+time=2026-10-20T15:53:00.986+06:00 level=INFO source=llama_server.go:1330 msg="waiting for llama-server to start responding"
+time=2026-10-20T15:53:00.999+06:00 level=INFO source=llama_server.go:1385 msg="waiting for llama-server to become available" status="llm server error"
+srv  llama_server: initializing ...
+load_backend: loaded CPU backend from E:\Phitron Thesis\cofail_kg\.venv\ollama\lib\ollama\ggml-cpu-alderlake.dll
+ggml_cuda_init: found 1 CUDA devices (Total VRAM: 8191 MiB):
+  Device 0: NVIDIA GeForce RTX 3060 Ti, compute capability 8.6, VMM: yes, VRAM: 8191 MiB
+load_backend: loaded CUDA backend from E:\Phitron Thesis\cofail_kg\.venv\ollama\lib\ollama\cuda_v13\ggml-cuda.dll
+cmn  common_param: common_params_print_info: build 1 (b42b7e6d3) with Clang 18.1.8 for Windows AMD64
+cmn  common_param: common_params_print_info: verbosity = 4 (adjust with the `-lv N` CLI arg)
+cmn  common_param: device_info:
+cmn  common_param:   - CPU     : 13th Gen Intel(R) Core(TM) i5-13400F (16218 MiB, 2042 MiB free)
+cmn  common_param:   - CUDA0   : NVIDIA GeForce RTX 3060 Ti (8191 MiB, 3385 MiB free)
+cmn  common_param: system_info: n_threads = 8 (n_threads_batch = 8) / 16 | CPU : SSE3 = 1 | SSSE3 = 1 | AVX = 1 | AVX_VNNI = 1 | AVX2 = 1 | F16C = 1 | FMA = 1 | BMI2 = 1 | LLAMAFILE = 1 | OPENMP = 1 | REPACK = 1 | CUDA : ARCHS = 750,800,860,890,1000,1200 | USE_GRAPHS = 1 | FA_QUANTS = q4_0-q4_0,q8_0-q8_0,f16-f16,bf16-bf16 | 
+srv  init_listene: The UI is disabled
+srv  init_listene: Use --ui/--no-ui (or deprecated --webui/--no-webui) to enable/disable
+srv          init: using 15 threads for HTTP server
+srv  llama_server: security: no API key is set and CORS allows all origins (see https://github.com/ggml-org/llama.cpp/pull/25655)
+srv    load_model: loading model 'D:\Models\blobs\sha256-3ea32f882c990baebcfe6ab5cda2e3167d54ab16d7937c0b9aa3db11aba01574'
+srv    load_model: local path 'D:\Models\blobs\sha256-3ea32f882c990baebcfe6ab5cda2e3167d54ab16d7937c0b9aa3db11aba01574'
+handle_mistral3_clip: detected Ollama-format mistral3 GGUF used as mmproj; translating
+time=2026-10-20T15:53:01.503+06:00 level=INFO source=llama_server.go:1385 msg="waiting for llama-server to become available" status="llm server loading model"
+srv    load_model: [mtmd] estimated worst-case memory usage of mmproj is 859.91 MiB (took 19296.16 ms)
+cmn  common_init_: fitting params to device memory ...
+cmn  common_init_: (for bugs during this step try to reproduce them with -fit off, or provide --verbose logs if the bug only occurs with -fit on)
+common_params_fit_impl: getting device memory data for initial parameters:
+common_memory_breakdown_print: | memory breakdown [MiB]  | total   free    self   model   context   compute    unaccounted |
+common_memory_breakdown_print: |   - CUDA0 (RTX 3060 Ti) |  8191 = 7140 + (5949 =  4661 +    1156 +     132) +       -4897 |
+common_memory_breakdown_print: |   - Host                |                  336 =   288 +       0 +      48                |
+common_params_fit_impl: projected to use 5949 MiB of device memory vs. 7140 MiB of free device memory
+common_params_fit_impl: cannot meet free memory target of 1819 MiB, need to reduce device memory by 628 MiB
+common_params_fit_impl: context size set by user to 16384 -> no change
+common_params_fit_impl: id=0, target=5320 MiB
+common_memory_breakdown_print: | memory breakdown [MiB]  | total   free    self   model   context   compute    unaccounted |
+common_memory_breakdown_print: |   - CUDA0 (RTX 3060 Ti) |  8191 = 7140 + ( 170 =     0 +       0 +     170) +         881 |
+common_memory_breakdown_print: |   - Host                |                 6153 =  4949 +    1156 +      48                |
+common_params_fit_impl: memory for test allocation by device:
+common_params_fit_impl: id=0, n_layer= 0, n_part= 0, overflow_type=4, mem=   170 MiB
+common_params_fit_impl: filling dense layers back-to-front:
+common_memory_breakdown_print: | memory breakdown [MiB]  | total   free    self   model   context   compute    unaccounted |
+common_memory_breakdown_print: |   - CUDA0 (RTX 3060 Ti) |  8191 = 7140 + (5949 =  4661 +    1156 +     132) +       -4897 |
+common_memory_breakdown_print: |   - Host                |                  336 =   288 +       0 +      48                |
+common_params_fit_impl: memory for test allocation by device:
+common_params_fit_impl: id=0, n_layer=35, n_part= 0, overflow_type=4, mem=  5949 MiB
+common_params_fit_impl: start filling device 0, delta=35
+common_memory_breakdown_print: | memory breakdown [MiB]  | total   free    self   model   context   compute    unaccounted |
+common_memory_breakdown_print: |   - CUDA0 (RTX 3060 Ti) |  8191 = 7140 + (5321 =  4131 +    1020 +     170) +       -4269 |
+common_memory_breakdown_print: |   - Host                |                 1002 =   818 +     136 +      48                |
+common_params_fit_impl: memory for test allocation by device:
+common_params_fit_impl: id=0, n_layer=31, n_part= 0, overflow_type=4, mem=  5321 MiB
+common_params_fit_impl: set ngl_per_device_high[0].n_layer=31
+common_memory_breakdown_print: | memory breakdown [MiB]  | total   free    self   model   context   compute    unaccounted |
+common_memory_breakdown_print: |   - CUDA0 (RTX 3060 Ti) |  8191 = 7140 + (5168 =  4012 +     986 +     170) +       -4117 |
+common_memory_breakdown_print: |   - Host                |                 1154 =   936 +     170 +      48                |
+common_params_fit_impl: memory for test allocation by device:
+common_params_fit_impl: id=0, n_layer=30, n_part= 0, overflow_type=4, mem=  5168 MiB
+common_params_fit_impl: set ngl_per_device[0].n_layer=30
+common_params_fit_impl:   - CUDA0 (NVIDIA GeForce RTX 3060 Ti): 30 layers,   5168 MiB used,   1971 MiB free
+common_fit_params: successfully fit params to free device memory
+common_fit_params: fitting params to free memory took 1.57 seconds
+handle_mistral3: detected Ollama-format mistral3 GGUF; applying compatibility fixes
+llama_model_loader: loaded meta data with 55 key-value pairs and 309 tensors from D:\Models\blobs\sha256-3ea32f882c990baebcfe6ab5cda2e3167d54ab16d7937c0b9aa3db11aba01574 (version GGUF V3 (latest))
+llama_model_loader: Dumping metadata keys/values. Note: KV overrides do not apply in this output.
+llama_model_loader: - kv   0:                       general.architecture str              = mistral3
+llama_model_loader: - kv   1:                          general.file_type u32              = 15
+llama_model_loader: - kv   2:                    general.parameter_count u64              = 8918026240
+llama_model_loader: - kv   3:               general.quantization_version u32              = 2
+llama_model_loader: - kv   4:              mistral3.attention.head_count u32              = 32
+llama_model_loader: - kv   5:           mistral3.attention.head_count_kv u32              = 8
+llama_model_loader: - kv   6:              mistral3.attention.key_length u32              = 128
+llama_model_loader: - kv   7:  mistral3.attention.layer_norm_rms_epsilon f32              = 0.000010
+llama_model_loader: - kv   8:            mistral3.attention.value_length u32              = 128
+llama_model_loader: - kv   9:                       mistral3.block_count u32              = 34
+llama_model_loader: - kv  10:                    mistral3.context_length u32              = 262144
+llama_model_loader: - kv  11:                  mistral3.embedding_length u32              = 4096
+llama_model_loader: - kv  12:               mistral3.feed_forward_length u32              = 14336
+llama_model_loader: - kv  13:                 mistral3.image_token_index u32              = 10
+llama_model_loader: - kv  14:                 mistral3.mm.projector_bias bool             = false
+llama_model_loader: - kv  15:           mistral3.mm.projector_hidden_act str              = gelu
+llama_model_loader: - kv  16:              mistral3.rope.dimension_count u32              = 128
+llama_model_loader: - kv  17:                    mistral3.rope.freq_base f32              = 1000000.000000
+llama_model_loader: - kv  18:            mistral3.rope.scaling.beta_fast f32              = 32.000000
+llama_model_loader: - kv  19:            mistral3.rope.scaling.beta_slow f32              = 1.000000
+llama_model_loader: - kv  20:               mistral3.rope.scaling.factor f32              = 16.000000
+llama_model_loader: - kv  21:               mistral3.rope.scaling.mscale f32              = 1.000000
+llama_model_loader: - kv  22:       mistral3.rope.scaling.mscale_all_dim f32              = 1.000000
+llama_model_loader: - kv  23: mistral3.rope.scaling.original_context_length u32              = 16384
+llama_model_loader: - kv  24:                 mistral3.rope.scaling.type str              = yarn
+llama_model_loader: - kv  25:                 mistral3.rope.scaling_beta f32              = 0.100000
+llama_model_loader: - kv  26:                mistral3.spatial_merge_size u32              = 2
+llama_model_loader: - kv  27:       mistral3.vision.attention.head_count u32              = 16
+llama_model_loader: - kv  28:       mistral3.vision.attention.key_length u32              = 64
+llama_model_loader: - kv  29:                mistral3.vision.block_count u32              = 24
+llama_model_loader: - kv  30:           mistral3.vision.embedding_length u32              = 1024
+llama_model_loader: - kv  31:        mistral3.vision.feed_forward_length u32              = 4096
+llama_model_loader: - kv  32:                 mistral3.vision.image_size u32              = 1540
+llama_model_loader: - kv  33:               mistral3.vision.num_channels u32              = 3
+llama_model_loader: - kv  34:                 mistral3.vision.patch_size u32              = 14
+llama_model_loader: - kv  35:             mistral3.vision.rope.freq_base f32              = 10000.000000
+llama_model_loader: - kv  36:                        mistral3.vocab_size u32              = 131072
+llama_model_loader: - kv  37:               tokenizer.ggml.add_bos_token bool             = true
+llama_model_loader: - kv  38:               tokenizer.ggml.add_eos_token bool             = false
+llama_model_loader: - kv  39:           tokenizer.ggml.add_padding_token bool             = false
+llama_model_loader: - kv  40:           tokenizer.ggml.add_unknown_token bool             = false
+llama_model_loader: - kv  41:                tokenizer.ggml.bos_token_id u32              = 1
+llama_model_loader: - kv  42:                tokenizer.ggml.eos_token_id u32              = 2
+llama_model_loader: - kv  43:                      tokenizer.ggml.merges arr[str,269443]  = ["Ġ Ġ", "Ġ t", "e r", "i n", "Ġ �...
+llama_model_loader: - kv  44:                       tokenizer.ggml.model str              = gpt2
+llama_model_loader: - kv  45:            tokenizer.ggml.padding_token_id u32              = 11
+llama_model_loader: - kv  46:                      tokenizer.ggml.scores arr[f32,131072]  = [0.000000, 1.000000, 2.000000, 3.0000...
+llama_model_loader: - kv  47:                  tokenizer.ggml.token_type arr[i32,131072]  = [3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, ...
+llama_model_loader: - kv  48:                      tokenizer.ggml.tokens arr[str,131072]  = ["<unk>", "<s>", "</s>", "[INST]", "[...
+llama_model_loader: - kv  49:            tokenizer.ggml.unknown_token_id u32              = 0
+llama_model_loader: - kv  50:       mistral3.rope.scaling.yarn_beta_fast f32              = 32.000000
+llama_model_loader: - kv  51:       mistral3.rope.scaling.yarn_beta_slow f32              = 1.000000
+llama_model_loader: - kv  52:  mistral3.rope.scaling.yarn_log_multiplier f32              = 1.000000
+llama_model_loader: - kv  53:       mistral3.attention.temperature_scale f32              = 0.100000
+llama_model_loader: - kv  54:                         tokenizer.ggml.pre str              = tekken
+llama_model_loader: - type  f32:   69 tensors
+llama_model_loader: - type q4_K:  206 tensors
+llama_model_loader: - type q6_K:   34 tensors
+print_info: file format = GGUF V3 (latest)
+print_info: file type   = Q4_K - Medium
+print_info: file size   = 4.83 GiB (4.89 BPW) 
+llama_prepare_model_devices: using device CUDA0 (NVIDIA GeForce RTX 3060 Ti) (0000:01:00.0) - 7140 MiB free
+load: 0 unused tokens
+load: printing all EOG tokens:
+load:   - 2 ('</s>')
+load: special tokens cache size = 1000
+load: token to piece cache size = 0.8498 MB
+print_info: arch                  = mistral3
+print_info: vocab_only            = 0
+print_info: no_alloc              = 0
+print_info: n_ctx_train           = 262144
+print_info: n_embd_inp            = 4096
+print_info: n_embd                = 4096
+print_info: n_embd_out            = 4096
+print_info: n_layer               = 34
+print_info: n_layer_all           = 34
+print_info: n_head                = 32
+print_info: n_head_kv             = 8
+print_info: n_rot                 = 128
+print_info: n_swa                 = 0
+print_info: is_swa_any            = 0
+print_info: non_causal_type       = 0
+print_info: n_embd_head_k         = 128
+print_info: n_embd_head_v         = 128
+print_info: n_gqa                 = 4
+print_info: n_embd_k_gqa          = 1024
+print_info: n_embd_v_gqa          = 1024
+print_info: f_norm_eps            = 0.0e+00
+print_info: f_norm_rms_eps        = 1.0e-05
+print_info: f_clamp_kqv           = 0.0e+00
+print_info: f_max_alibi_bias      = 0.0e+00
+print_info: f_logit_scale         = 0.0e+00
+print_info: f_attn_scale          = 0.0e+00
+print_info: f_attn_value_scale    = 0.0000
+print_info: n_ff                  = 14336
+print_info: n_expert              = 0
+print_info: n_expert_used         = 0
+print_info: n_expert_groups       = 0
+print_info: n_group_used          = 0
+print_info: causal attn           = 1
+print_info: pooling type          = -1
+print_info: rope type             = 0
+print_info: rope scaling          = yarn
+print_info: freq_base_train       = 1000000.0
+print_info: freq_scale_train      = 0.0625
+print_info: n_ctx_orig_yarn       = 16384
+print_info: rope_yarn_log_mul     = 1.0000
+print_info: rope_finetuned        = unknown
+print_info: model type            = 8B
+print_info: model params          = 8.49 B
+print_info: general.name          = n/a
+print_info: vocab type            = BPE
+print_info: n_vocab               = 131072
+print_info: n_merges              = 269443
+print_info: BOS token             = 1 '<s>'
+print_info: EOS token             = 2 '</s>'
+print_info: UNK token             = 0 '<unk>'
+print_info: PAD token             = 11 '<pad>'
+print_info: LF token              = 1010 'Ċ'
+print_info: EOG token             = 2 '</s>'
+print_info: max token length      = 150
+load_tensors: loading model tensors, this can take a while... (load_mode = none)
+load_tensors: offloading output layer to GPU
+load_tensors: offloading 29 repeating layers to GPU
+load_tensors: offloaded 30/35 layers to GPU
+load_tensors:        CUDA0 model buffer size =  4012.95 MiB
+load_tensors:          CPU model buffer size =   936.06 MiB
+cmn  common_init_: added </s> logit bias = -inf
+llama_context: constructing llama_context
+llama_context: setting new yarn_attn_factor = 1.0000 (mscale == 1.0, mscale_all_dim = 1.0)
+llama_context: n_seq_max             = 1
+llama_context: n_ctx                 = 16384
+llama_context: n_ctx_seq             = 16384
+llama_context: n_batch               = 512
+llama_context: n_ubatch              = 512
+llama_context: causal_attn           = 1
+llama_context: flash_attn            = enabled
+llama_context: kv_unified            = false
+llama_context: freq_base             = 1000000.0
+llama_context: freq_scale            = 0.0625
+llama_context: n_rs_seq              = 0
+llama_context: n_outputs_max         = 1
+llama_context: n_outputs_max_per_seq = 1
+llama_context: n_ctx_seq (16384) < n_ctx_train (262144) -- the full capacity of the model will not be utilized
+llama_context:        CPU  output buffer size =     0.50 MiB
+llama_kv_cache:        CPU KV buffer size =   170.00 MiB
+llama_kv_cache:      CUDA0 KV buffer size =   986.00 MiB
+llama_kv_cache: size = 1156.00 MiB ( 16384 cells,  34 layers,  1/1 seqs), K (q8_0):  578.00 MiB, V (q8_0):  578.00 MiB
+llama_kv_cache: n_rot_k = 128, n_embd_head_k_all = 128
+llama_kv_cache: n_rot_v = 64, n_embd_head_k_all = 128
+sched_reserve: reserving ...
+resolve_fused_ops: resolving fused DeepSeek V4 HC support:
+resolve_fused_ops: fused DeepSeek V4 HC pre enabled
+resolve_fused_ops: fused DeepSeek V4 HC comb enabled
+resolve_fused_ops: fused DeepSeek V4 HC post enabled
+sched_reserve:      CUDA0 compute buffer size =   170.00 MiB
+sched_reserve:  CUDA_Host compute buffer size =    48.10 MiB
+sched_reserve: graph (pp bs=512, tg bs=1): nodes = 1505 / 1505, splits = 57 / 2, input objects = 5 / 5, input tensors = 12 / 12
+sched_reserve: reserve took 6787.54 ms, sched copies = 1
+cmn          init: llama threadpool init, n_threads = 8
+cmn  common_init_: warming up the model with an empty run - please wait ... (--no-warmup to disable)
+CUDA error: shared object initialization failed
+C:\a\ollama\ollama\build\llama-server-cuda_v13\_deps\llama_cpp-src\ggml\src\ggml-cuda\ggml-cuda.cu:109: CUDA error
+time=2026-10-20T15:56:38.414+06:00 level=INFO source=llama_server.go:1385 msg="waiting for llama-server to become available" status="llm server not responding"
+time=2026-10-20T15:58:08.513+06:00 level=INFO source=llama_server.go:1385 msg="waiting for llama-server to become available" status="llm server error"
+time=2026-10-20T15:59:35.567+06:00 level=INFO source=llama_server.go:1385 msg="waiting for llama-server to become available" status="llm server not responding"
+time=2026-10-20T15:59:35.915+06:00 level=INFO source=llama_server.go:1385 msg="waiting for llama-server to become available" status="llm server error"
+time=2026-10-20T15:59:43.058+06:00 level=INFO source=llama_server.go:1385 msg="waiting for llama-server to become available" status="llm server not responding"
+time=2026-10-20T15:59:44.216+06:00 level=INFO source=llama_server.go:1385 msg="waiting for llama-server to become available" status="llm server error"
+time=2026-10-20T15:59:47.555+06:00 level=INFO source=llama_server.go:1385 msg="waiting for llama-server to become available" status="llm server not responding"
+time=2026-10-20T15:59:48.038+06:00 level=INFO source=llama_server.go:1385 msg="waiting for llama-server to become available" status="llm server error"
+time=2026-10-20T15:59:49.200+06:00 level=INFO source=llama_server.go:1385 msg="waiting for llama-server to become available" status="llm server not responding"
+time=2026-10-20T15:59:49.946+06:00 level=INFO source=llama_server.go:1385 msg="waiting for llama-server to become available" status="llm server error"
+time=2026-10-20T15:59:50.498+06:00 level=INFO source=llama_server.go:1385 msg="waiting for llama-server to become available" status="llm server not responding"
+time=2026-10-20T15:59:52.512+06:00 level=INFO source=llama_server.go:1385 msg="waiting for llama-server to become available" status="llm server error"
+time=2026-10-20T15:59:54.730+06:00 level=INFO source=llama_server.go:1385 msg="waiting for llama-server to become available" status="llm server not responding"
+time=2026-10-20T15:59:58.343+06:00 level=INFO source=llama_server.go:1385 msg="waiting for llama-server to become available" status="llm server error"
+time=2026-10-20T15:59:59.763+06:00 level=INFO source=llama_server.go:1385 msg="waiting for llama-server to become available" status="llm server not responding"
+time=2026-10-20T16:00:00.673+06:00 level=INFO source=llama_server.go:1385 msg="waiting for llama-server to become available" status="llm server error"
+time=2026-10-20T16:00:01.689+06:00 level=INFO source=llama_server.go:1385 msg="waiting for llama-server to become available" status="llm server not responding"
+time=2026-10-20T16:00:02.197+06:00 level=INFO source=llama_server.go:1385 msg="waiting for llama-server to become available" status="llm server error"
+time=2026-10-20T16:00:03.332+06:00 level=INFO source=llama_server.go:1385 msg="waiting for llama-server to become available" status="llm server not responding"
+time=2026-10-20T16:00:08.388+06:00 level=INFO source=llama_server.go:1385 msg="waiting for llama-server to become available" status="llm server error"
+time=2026-10-20T16:00:11.343+06:00 level=INFO source=llama_server.go:1385 msg="waiting for llama-server to become available" status="llm server not responding"
+time=2026-10-20T16:00:13.693+06:00 level=INFO source=llama_server.go:1385 msg="waiting for llama-server to become available" status="llm server error"
+time=2026-10-20T16:00:14.942+06:00 level=INFO source=llama_server.go:1385 msg="waiting for llama-server to become available" status="llm server not responding"
+time=2026-10-20T16:00:16.437+06:00 level=INFO source=llama_server.go:1385 msg="waiting for llama-server to become available" status="llm server error"
+time=2026-10-20T16:00:19.425+06:00 level=INFO source=llama_server.go:1385 msg="waiting for llama-server to become available" status="llm server not responding"
+time=2026-10-20T16:00:20.898+06:00 level=INFO source=llama_server.go:1385 msg="waiting for llama-server to become available" status="llm server error"
+time=2026-10-20T16:00:22.814+06:00 level=INFO source=llama_server.go:1385 msg="waiting for llama-server to become available" status="llm server not responding"
+time=2026-10-20T16:00:24.261+06:00 level=INFO source=llama_server.go:1385 msg="waiting for llama-server to become available" status="llm server error"
+time=2026-10-20T16:00:28.566+06:00 level=INFO source=llama_server.go:1385 msg="waiting for llama-server to become available" status="llm server not responding"
+time=2026-10-20T16:00:30.505+06:00 level=INFO source=llama_server.go:1385 msg="waiting for llama-server to become available" status="llm server error"
+time=2026-10-20T16:00:31.574+06:00 level=INFO source=llama_server.go:1385 msg="waiting for llama-server to become available" status="llm server not responding"
+time=2026-10-20T16:00:33.290+06:00 level=INFO source=llama_server.go:1385 msg="waiting for llama-server to become available" status="llm server error"
+time=2026-10-20T16:00:36.308+06:00 level=INFO source=llama_server.go:1385 msg="waiting for llama-server to become available" status="llm server not responding"
+time=2026-10-20T16:00:39.173+06:00 level=INFO source=llama_server.go:1385 msg="waiting for llama-server to become available" status="llm server error"
+time=2026-10-20T16:00:39.837+06:00 level=INFO source=llama_server.go:1385 msg="waiting for llama-server to become available" status="llm server not responding"
+time=2026-10-20T16:00:41.780+06:00 level=INFO source=llama_server.go:1385 msg="waiting for llama-server to become available" status="llm server error"
+time=2026-10-20T16:00:44.588+06:00 level=INFO source=llama_server.go:1385 msg="waiting for llama-server to become available" status="llm server not responding"
+time=2026-10-20T16:00:46.342+06:00 level=INFO source=llama_server.go:1385 msg="waiting for llama-server to become available" status="llm server error"
+time=2026-10-20T16:00:47.068+06:00 level=INFO source=llama_server.go:1385 msg="waiting for llama-server to become available" status="llm server not responding"
+time=2026-10-20T16:00:49.823+06:00 level=INFO source=llama_server.go:1385 msg="waiting for llama-server to become available" status="llm server error"
+time=2026-10-20T16:00:53.385+06:00 level=INFO source=llama_server.go:1385 msg="waiting for llama-server to become available" status="llm server not responding"
+time=2026-10-20T16:00:54.672+06:00 level=INFO source=llama_server.go:1385 msg="waiting for llama-server to become available" status="llm server error"
+time=2026-10-20T16:00:55.436+06:00 level=INFO source=llama_server.go:1385 msg="waiting for llama-server to become available" status="llm server not responding"
+time=2026-10-20T16:00:57.686+06:00 level=INFO source=llama_server.go:1385 msg="waiting for llama-server to become available" status="llm server error"
+time=2026-10-20T16:00:58.296+06:00 level=INFO source=llama_server.go:1385 msg="waiting for llama-server to become available" status="llm server not responding"
+time=2026-10-20T16:00:58.782+06:00 level=INFO source=llama_server.go:1385 msg="waiting for llama-server to become available" status="llm server error"
+time=2026-10-20T16:01:01.471+06:00 level=INFO source=llama_server.go:1385 msg="waiting for llama-server to become available" status="llm server not responding"
+time=2026-10-20T16:01:07.132+06:00 level=INFO source=llama_server.go:1385 msg="waiting for llama-server to become available" status="llm server error"
+time=2026-10-20T16:01:13.110+06:00 level=INFO source=llama_server.go:1385 msg="waiting for llama-server to become available" status="llm server not responding"
+time=2026-10-20T16:01:13.703+06:00 level=INFO source=llama_server.go:1385 msg="waiting for llama-server to become available" status="llm server error"
+time=2026-10-20T16:01:15.843+06:00 level=INFO source=llama_server.go:1385 msg="waiting for llama-server to become available" status="llm server not responding"
+time=2026-10-20T16:01:18.526+06:00 level=INFO source=llama_server.go:1385 msg="waiting for llama-server to become available" status="llm server error"
+time=2026-10-20T16:01:22.967+06:00 level=INFO source=llama_server.go:1385 msg="waiting for llama-server to become available" status="llm server not responding"
+time=2026-10-20T16:01:24.940+06:00 level=INFO source=llama_server.go:1385 msg="waiting for llama-server to become available" status="llm server error"
+time=2026-10-20T16:01:26.003+06:00 level=INFO source=llama_server.go:1385 msg="waiting for llama-server to become available" status="llm server not responding"
+time=2026-10-20T16:01:28.006+06:00 level=INFO source=llama_server.go:1385 msg="waiting for llama-server to become available" status="llm server error"
+time=2026-10-20T16:01:32.583+06:00 level=INFO source=llama_server.go:1385 msg="waiting for llama-server to become available" status="llm server not responding"
+time=2026-10-20T16:01:34.111+06:00 level=INFO source=llama_server.go:1385 msg="waiting for llama-server to become available" status="llm server error"
+time=2026-10-20T16:01:34.658+06:00 level=INFO source=llama_server.go:1385 msg="waiting for llama-server to become available" status="llm server not responding"
+time=2026-10-20T16:01:39.416+06:00 level=INFO source=sched.go:692 msg="Load failed" model=D:\Models\blobs\sha256-3ea32f882c990baebcfe6ab5cda2e3167d54ab16d7937c0b9aa3db11aba01574 error="timed out waiting for llama-server to start - CUDA error: shared object initialization failed\nCUDA error"

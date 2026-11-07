@@ -1,0 +1,21 @@
+{
+  "formula": "layers * KV_heads * (key_length + value_length) * bytes_per_value; one sequence, text KV only",
+  "elements_per_token": 69632,
+  "estimates": {
+    "f16": {
+      "bytes_per_token": 139264,
+      "bytes_at_16384": 2281701376,
+      "GiB_at_16384": 2.125
+    },
+    "q8_0": {
+      "bytes_per_token": 73984.0,
+      "bytes_at_16384": 1212153856.0,
+      "GiB_at_16384": 1.12890625
+    },
+    "q4_0": {
+      "bytes_per_token": 39168.0,
+      "bytes_at_16384": 641728512.0,
+      "GiB_at_16384": 0.59765625
+    }
+  }
+}

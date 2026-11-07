@@ -1,0 +1,68 @@
+{
+  "version": {
+    "version": "0.40.4"
+  },
+  "ps": {
+    "models": []
+  },
+  "environment": [
+    {
+      "name": "OLLAMA_FLASH_ATTENTION",
+      "User": null,
+      "Machine": null,
+      "server_process": null
+    },
+    {
+      "name": "OLLAMA_KV_CACHE_TYPE",
+      "User": null,
+      "Machine": null,
+      "server_process": null
+    },
+    {
+      "name": "OLLAMA_NUM_PARALLEL",
+      "User": null,
+      "Machine": null,
+      "server_process": null
+    },
+    {
+      "name": "OLLAMA_GPU_OVERHEAD",
+      "User": null,
+      "Machine": null,
+      "server_process": null
+    }
+  ],
+  "selected_server_environment": {
+    "OLLAMA_FLASH_ATTENTION": null,
+    "OLLAMA_KV_CACHE_TYPE": null,
+    "OLLAMA_NUM_PARALLEL": null,
+    "OLLAMA_GPU_OVERHEAD": null,
+    "OLLAMA_MODELS": "D:\\Models",
+    "OLLAMA_HOST": null,
+    "OLLAMA_CONTEXT_LENGTH": null,
+    "OLLAMA_MAX_LOADED_MODELS": null,
+    "OLLAMA_KEEP_ALIVE": null,
+    "OLLAMA_LLM_LIBRARY": null,
+    "OLLAMA_NEW_ENGINE": null,
+    "OLLAMA_SCHED_SPREAD": null,
+    "OLLAMA_DEBUG": null,
+    "CUDA_VISIBLE_DEVICES": null,
+    "GGML_CUDA_ENABLE_UNIFIED_MEMORY": null,
+    "TEMP": "C:\\Users\\User\\AppData\\Local\\Temp",
+    "TMP": "C:\\Users\\User\\AppData\\Local\\Temp",
+    "CUDA_CACHE_PATH": null
+  },
+  "owned_processes": [
+    {
+      "pid": 24384,
+      "exe": "E:\\Phitron Thesis\\cofail_kg\\.venv\\ollama\\ollama.exe",
+      "ppid": 11452,
+      "name": "ollama.exe",
+      "cmdline": [
+        "E:\\Phitron Thesis\\cofail_kg\\.venv\\ollama\\ollama.exe",
+        "serve"
+      ]
+    }
+  ],
+  "success": true,
+  "timestamp_utc": "2026-10-20T10:41:38.990245+00:00"
+}

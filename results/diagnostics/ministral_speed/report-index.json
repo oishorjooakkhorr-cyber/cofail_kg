@@ -1,0 +1,10 @@
+{
+  "authoritative_markdown": "clean/results.md",
+  "authoritative_json": "clean/results.json",
+  "benchmark_script": "clean/bench.py",
+  "preliminary_preserved": [
+    "results.md",
+    "results.json"
+  ],
+  "reason": "Final comparison verifies complete Ollama-owned runner cleanup and uses repeat-resistant synthetic prompts. Preliminary files were preserved to obey no-overwrite rule."
+}

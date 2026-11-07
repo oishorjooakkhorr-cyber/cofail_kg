@@ -1,0 +1,89 @@
+{
+  "gguf_path": "D:\\Models\\blobs\\sha256-3ea32f882c990baebcfe6ab5cda2e3167d54ab16d7937c0b9aa3db11aba01574",
+  "gguf_version": 3,
+  "total_tensors": 531,
+  "vision_tensor_count": 218,
+  "projector_tensors": [
+    {
+      "name": "mm.linear_1.weight",
+      "dimensions": [
+        1024,
+        4096
+      ],
+      "type": 1,
+      "offset": 4447010816
+    },
+    {
+      "name": "mm.linear_2.weight",
+      "dimensions": [
+        4096,
+        4096
+      ],
+      "type": 1,
+      "offset": 4455399424
+    },
+    {
+      "name": "mm.norm.weight",
+      "dimensions": [
+        1024
+      ],
+      "type": 0,
+      "offset": 4488953856
+    },
+    {
+      "name": "mm.patch_merger.merging_layer.weight",
+      "dimensions": [
+        4096,
+        1024
+      ],
+      "type": 1,
+      "offset": 4488957952
+    }
+  ],
+  "vision_tensor_examples": [
+    {
+      "name": "v.blk.0.attn_k.weight",
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "type": 1,
+      "offset": 5239754752
+    },
+    {
+      "name": "v.blk.0.attn_norm.weight",
+      "dimensions": [
+        1024
+      ],
+      "type": 0,
+      "offset": 5241851904
+    },
+    {
+      "name": "v.blk.0.attn_output.weight",
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "type": 1,
+      "offset": 5241856000
+    },
+    {
+      "name": "v.blk.0.attn_q.weight",
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "type": 1,
+      "offset": 5243953152
+    },
+    {
+      "name": "v.blk.0.attn_v.weight",
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "type": 12,
+      "offset": 5246050304
+    }
+  ]
+}

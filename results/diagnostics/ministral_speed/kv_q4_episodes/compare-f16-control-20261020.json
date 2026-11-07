@@ -1,0 +1,53 @@
+{
+  "BH2_02033": {
+    "official_f16": {
+      "status": "SUCCESS",
+      "cause": null,
+      "llm_calls": 5,
+      "gen_tokens": 286,
+      "max_prompt": 1349,
+      "last_gen_tok_s": 14.5,
+      "timestamps": [
+        "2026-10-20T08:14:10.000404+00:00",
+        "2026-10-20T08:14:29.957577+00:00"
+      ],
+      "answer_ids": [
+        "31332",
+        "36432",
+        "37659"
+      ],
+      "competent": true,
+      "precision": 1.0,
+      "recall": 1.0,
+      "tool_calls_used": 4
+    },
+    "f16-control-20261020": {
+      "status": "SUCCESS",
+      "cause": null,
+      "llm_calls": 5,
+      "gen_tokens": 284,
+      "max_prompt": 1347,
+      "last_gen_tok_s": 16.3,
+      "timestamps": [
+        "2026-10-20T10:58:25.487834+00:00",
+        "2026-10-20T10:59:02.743215+00:00"
+      ],
+      "answer_ids": [
+        "31332",
+        "36432",
+        "37659"
+      ],
+      "competent": true,
+      "precision": 1.0,
+      "recall": 1.0,
+      "tool_calls_used": 4
+    },
+    "tool_calls_identical": true,
+    "tool_call_common_prefix": 4,
+    "n_tool_calls": [
+      4,
+      4
+    ],
+    "same_answers": true
+  }
+}

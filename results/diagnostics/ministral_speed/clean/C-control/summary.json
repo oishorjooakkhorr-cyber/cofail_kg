@@ -1,0 +1,32 @@
+[
+  {
+    "config": "C-control",
+    "model": "qwen3.5:9b",
+    "target_tokens": 8000,
+    "timestamp_utc": "2026-10-20T10:39:37.917900+00:00",
+    "timeout_seconds": 900,
+    "status": "OK",
+    "prompt_tokens": 8000,
+    "prompt_tok_s": 993.4242763587126,
+    "gen_tokens": 256,
+    "gen_tok_s": 35.89905466290157,
+    "prompt_cached_tokens": 0,
+    "uncached_prompt_tok_s": 993.4242763587126,
+    "prompt_duration_ns": 8052954000,
+    "eval_duration_ns": 7131107000,
+    "total_duration_ns": 35953524900,
+    "total_duration_s": 35.9535249,
+    "load_duration_ns": 20726754600,
+    "wall_seconds": 35.9665394000001,
+    "size_bytes": 6486354816,
+    "vram_bytes": 5542720305,
+    "size_GB": 6.486354816,
+    "vram_GB": 5.542720305,
+    "percent_on_GPU": 85.45200597610972,
+    "full_GPU": false,
+    "context_length": 16384,
+    "done_reason": "length",
+    "thinking_present": false,
+    "warnings": []
+  }
+]

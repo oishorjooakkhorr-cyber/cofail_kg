@@ -1,0 +1,14 @@
+{
+  "model": "ministral-3:8b",
+  "prompt": "Benchmark case A target 500. Context data follows:\n tree be these night but those fire black had three but the or a and was of white earth black sun dark light light by as dark in five black blue who why four this this who to but leaf sun if the what red black night was when has a how star to six which it water those fire why if dark black four the when has as or the on how sea leaf for ten be tree from sun two where as or these four star as warm the six by star when for tree night blue three ten where blue red this green of green leaf these one was leaf water or four earth be why eight those warm day has for what if these one blue sun to four star why with the with blue to this as these which where where seven one those light has and tree three in air this where for be stone light air light as nine with with was but from these if stone has with three tree who moon fire two and to had six warm seven those this as star water it dark which sun where leaf had water these tree to blue earth this eight moon the has cold earth by it green blue warm where that when this eight black sun who or eight had has one red on that to five two why white one blue light earth if who stone earth it had in black three these nine night to that why three eight leaf it stone from fire as air six where what that from or dark is a in light those three five where why or moon water on when ten sun when fire green as five or black tree those had from stone five eight five blue and tree with light on blue at if tree day by or it with by three where but why when in tree dark ten earth by fire by these earth with ten in light sea blue nine seven fire star eight nine red by what the where on four had had by moon when which if those these eight from one how it it is or how what day when these how or stone be this air the warm and this eight was which\nEnd context data. Ignore the context words. Write a detailed scientific explanation of how a river changes the landscape from its source to the sea. Use complete prose sentences and several paragraphs. Explain erosion, transport, deposition, and the role of floods. Continue for at least 1500 words. Avoid lists, repeated phrases, and a conclusion.",
+  "system": "Follow the final instruction exactly.",
+  "think": false,
+  "stream": false,
+  "options": {
+    "num_ctx": 16384,
+    "temperature": 0,
+    "seed": 42,
+    "num_predict": 256
+  },
+  "keep_alive": "5m"
+}

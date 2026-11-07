@@ -1,0 +1,15 @@
+{
+  "config": "C",
+  "status": "INTERRUPTED",
+  "target_tokens": 500,
+  "error": "CUDA shared object initialization failed during warm-up; controller and Ollama absent after unclean Windows reboot. No response metrics were returned.",
+  "source_log": "C-server.stderr.log",
+  "reboot_evidence": "recovery-null-restoration.json",
+  "remaining_initial_cases_not_started": [
+    4000,
+    8000,
+    14000,
+    "C-control",
+    "D"
+  ]
+}

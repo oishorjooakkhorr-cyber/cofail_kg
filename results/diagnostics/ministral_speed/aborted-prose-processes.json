@@ -1,0 +1,18 @@
+{
+  "controller_pid": 21976,
+  "server": {
+    "ProcessId": 11652,
+    "ParentProcessId": 21976,
+    "Name": "ollama.exe",
+    "CommandLine": "\"E:\\Phitron Thesis\\cofail_kg\\.venv\\ollama\\ollama.exe\" serve"
+  },
+  "bench": [
+    {
+      "ProcessId": 13480,
+      "ParentProcessId": 21976,
+      "Name": "python.exe",
+      "CommandLine": "\"E:\\anaconda\\python.exe\" -B \"E:\\Phitron Thesis\\cofail_kg\\results\\diagnostics\\ministral_speed\\prose\\bench.py\" --label A"
+    }
+  ],
+  "reason": "CUDA shared object initialization failure recurred in baseline A. Additional matrix stopped."
+}

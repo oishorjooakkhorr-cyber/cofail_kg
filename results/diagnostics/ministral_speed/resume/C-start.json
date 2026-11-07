@@ -1,0 +1,35 @@
+{
+  "pid": 10636,
+  "version": {
+    "version": "0.40.4"
+  },
+  "executable": "E:\\Phitron Thesis\\cofail_kg\\.venv\\ollama\\ollama.exe",
+  "environment": [
+    {
+      "name": "OLLAMA_FLASH_ATTENTION",
+      "User": "1",
+      "Machine": null,
+      "Process": "1"
+    },
+    {
+      "name": "OLLAMA_KV_CACHE_TYPE",
+      "User": "q8_0",
+      "Machine": null,
+      "Process": "q8_0"
+    },
+    {
+      "name": "OLLAMA_NUM_PARALLEL",
+      "User": null,
+      "Machine": null,
+      "Process": null
+    },
+    {
+      "name": "OLLAMA_GPU_OVERHEAD",
+      "User": null,
+      "Machine": null,
+      "Process": null
+    }
+  ],
+  "models": "D:\\Models",
+  "timestamp_utc": "2026-10-20T10:20:50.2432752Z"
+}

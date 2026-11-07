@@ -1,0 +1,5359 @@
+{
+  "agent_id": "Ministral3-8B",
+  "appeared_entities": [
+    "14203",
+    "14528",
+    "14685",
+    "16572",
+    "16575",
+    "16580",
+    "22197",
+    "22212",
+    "22229",
+    "22250",
+    "22262",
+    "22304",
+    "22323",
+    "22364",
+    "22380",
+    "22442",
+    "22447",
+    "22454",
+    "22457",
+    "22458",
+    "22467",
+    "22478",
+    "22530",
+    "22539",
+    "22566",
+    "22574",
+    "22581",
+    "22585",
+    "22588",
+    "22594",
+    "22613",
+    "22658",
+    "22676",
+    "22718",
+    "22731",
+    "22733",
+    "22735",
+    "22786",
+    "22791",
+    "22811",
+    "22822",
+    "22831",
+    "22846",
+    "22859",
+    "22879",
+    "22916",
+    "22923",
+    "22934",
+    "22952",
+    "22953",
+    "22982",
+    "22998",
+    "22999",
+    "23000",
+    "23002",
+    "23011",
+    "23057",
+    "23059",
+    "23060",
+    "23072",
+    "23073",
+    "23079",
+    "23083",
+    "23097",
+    "23101",
+    "23135",
+    "23139",
+    "23157",
+    "23158",
+    "23183",
+    "23214",
+    "23244",
+    "23254",
+    "23279",
+    "23284",
+    "23351",
+    "23415",
+    "23417",
+    "23469",
+    "23488",
+    "23544",
+    "23764",
+    "23799",
+    "23833",
+    "23844",
+    "23855",
+    "23864",
+    "23875",
+    "23901",
+    "23950",
+    "24040",
+    "24289",
+    "24337",
+    "24423",
+    "24461",
+    "24475",
+    "25150",
+    "25201",
+    "25311",
+    "25620",
+    "25638",
+    "25644",
+    "25672",
+    "25945",
+    "26096",
+    "26322",
+    "26336",
+    "26629",
+    "26674",
+    "26948",
+    "26954",
+    "27007",
+    "29908",
+    "33730",
+    "33733",
+    "33739",
+    "84365",
+    "84374",
+    "84401",
+    "84409",
+    "84420",
+    "84429",
+    "84489",
+    "84519",
+    "84553",
+    "84693",
+    "84697",
+    "84764",
+    "84767",
+    "84874",
+    "84920",
+    "85015",
+    "85405",
+    "85848",
+    "85849",
+    "85859",
+    "88208",
+    "88528",
+    "89214"
+  ],
+  "attempt": 1,
+  "biohopr_revision": "08f06692c3900347e7405ba55ff6a6d330f55ddb",
+  "call_log": [
+    {
+      "arguments": {
+        "entity_id": "29908"
+      },
+      "elapsed_seconds": 0.008846199998515658,
+      "result": {
+        "id": "29908",
+        "name": "familial male-limited precocious puberty",
+        "relations": [
+          {
+            "display_labels": [
+              "parent-child"
+            ],
+            "label": "disease_disease",
+            "neighbor_count": 1,
+            "neighbor_types": [
+              "disease"
+            ]
+          },
+          {
+            "display_labels": [
+              "phenotype present"
+            ],
+            "label": "disease_phenotype_positive",
+            "neighbor_count": 11,
+            "neighbor_types": [
+              "effect/phenotype"
+            ]
+          },
+          {
+            "display_labels": [
+              "associated with"
+            ],
+            "label": "disease_protein",
+            "neighbor_count": 10,
+            "neighbor_types": [
+              "gene/protein"
+            ]
+          },
+          {
+            "display_labels": [
+              "indication"
+            ],
+            "label": "indication",
+            "neighbor_count": 3,
+            "neighbor_types": [
+              "drug"
+            ]
+          },
+          {
+            "display_labels": [
+              "off-label use"
+            ],
+            "label": "off-label use",
+            "neighbor_count": 3,
+            "neighbor_types": [
+              "drug"
+            ]
+          }
+        ],
+        "type": "disease"
+      },
+      "success": true,
+      "timestamp": "2026-10-20T14:47:31.783381+00:00",
+      "tool": "inspect_entity"
+    },
+    {
+      "arguments": {
+        "entity_id": "29908",
+        "page": 1,
+        "relation": "indication"
+      },
+      "elapsed_seconds": 0.014454299998760689,
+      "result": {
+        "has_more": false,
+        "items": [
+          {
+            "display_labels": [
+              "indication"
+            ],
+            "id": "16572",
+            "name": "Leuprolide",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "indication"
+            ],
+            "id": "16575",
+            "name": "Nafarelin",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "indication"
+            ],
+            "id": "16580",
+            "name": "Histrelin",
+            "type": "drug"
+          }
+        ],
+        "page": 1,
+        "page_size": 50,
+        "total_count": 3
+      },
+      "success": true,
+      "timestamp": "2026-10-20T14:47:39.276781+00:00",
+      "tool": "get_neighbors"
+    },
+    {
+      "arguments": {
+        "entity_id": "29908",
+        "page": 1,
+        "relation": "off-label use"
+      },
+      "elapsed_seconds": 0.012874700001702877,
+      "result": {
+        "has_more": false,
+        "items": [
+          {
+            "display_labels": [
+              "off-label use"
+            ],
+            "id": "14203",
+            "name": "Medroxyprogesterone acetate",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "off-label use"
+            ],
+            "id": "14528",
+            "name": "Danazol",
+            "type": "drug"
+          },
+          {
+            "display_labels": [
+              "off-label use"
+            ],
+            "id": "14685",
+            "name": "Progesterone",
+            "type": "drug"
+          }
+        ],
+        "page": 1,
+        "page_size": 50,
+        "total_count": 3
+      },
+      "success": true,
+      "timestamp": "2026-10-20T14:47:39.291292+00:00",
+      "tool": "get_neighbors"
+    },
+    {
+      "arguments": {
+        "entity_id": "16572"
+      },
+      "elapsed_seconds": 0.010633000001689652,
+      "result": {
+        "id": "16572",
+        "name": "Leuprolide",
+        "relations": [
+          {
+            "display_labels": [
+              "contraindication"
+            ],
+            "label": "contraindication",
+            "neighbor_count": 16,
+            "neighbor_types": [
+              "disease"
+            ]
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "label": "drug_drug",
+            "neighbor_count": 1166,
+            "neighbor_types": [
+              "drug"
+            ]
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "label": "drug_effect",
+            "neighbor_count": 117,
+            "neighbor_types": [
+              "effect/phenotype"
+            ]
+          },
+          {
+            "display_labels": [
+              "target"
+            ],
+            "label": "drug_protein",
+            "neighbor_count": 1,
+            "neighbor_types": [
+              "gene/protein"
+            ]
+          },
+          {
+            "display_labels": [
+              "indication"
+            ],
+            "label": "indication",
+            "neighbor_count": 5,
+            "neighbor_types": [
+              "disease"
+            ]
+          },
+          {
+            "display_labels": [
+              "off-label use"
+            ],
+            "label": "off-label use",
+            "neighbor_count": 21,
+            "neighbor_types": [
+              "disease"
+            ]
+          }
+        ],
+        "type": "drug"
+      },
+      "success": true,
+      "timestamp": "2026-10-20T14:47:48.214327+00:00",
+      "tool": "inspect_entity"
+    },
+    {
+      "arguments": {
+        "entity_id": "16572",
+        "neighbor_type": "effect/phenotype",
+        "page": 1,
+        "relation": "drug_effect"
+      },
+      "elapsed_seconds": 0.045405299999401905,
+      "result": {
+        "has_more": true,
+        "items": [
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "22229",
+            "name": "Hyperkeratosis",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "22250",
+            "name": "Sinusitis",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "22262",
+            "name": "Edema",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "22304",
+            "name": "Hearing impairment",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "22364",
+            "name": "Ophthalmoplegia",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "22447",
+            "name": "Anxiety",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "22457",
+            "name": "Peripheral neuropathy",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "22458",
+            "name": "Abnormal peripheral nervous system morphology",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "22478",
+            "name": "Growth delay",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "22539",
+            "name": "Inflammatory abnormality of the skin",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "22566",
+            "name": "Pallor",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "22574",
+            "name": "Neoplasm of the skin",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "22581",
+            "name": "Erythema",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "22588",
+            "name": "Abnormal joint morphology",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "22594",
+            "name": "Hyperhidrosis",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "22613",
+            "name": "Blurred vision",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "22658",
+            "name": "Abnormality of the nail",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "22718",
+            "name": "Arthritis",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "22731",
+            "name": "Decreased liver function",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "22786",
+            "name": "Increased body weight",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "22791",
+            "name": "Abdominal distention",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "22811",
+            "name": "Paralysis",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "22831",
+            "name": "Arrhythmia",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "22846",
+            "name": "Bradycardia",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "22859",
+            "name": "Congestive heart failure",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "22952",
+            "name": "Fever",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "22953",
+            "name": "Hypoglycemia",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "22982",
+            "name": "Pain",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "22998",
+            "name": "Gait disturbance",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "22999",
+            "name": "Dysphagia",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "23000",
+            "name": "Seizure",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "23002",
+            "name": "Headache",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "23011",
+            "name": "Dyspnea",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "23060",
+            "name": "Pulmonary infiltrates",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "23072",
+            "name": "Hirsutism",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "23073",
+            "name": "Alopecia",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "23079",
+            "name": "Gastrointestinal hemorrhage",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "23083",
+            "name": "Rhinitis",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "23101",
+            "name": "Tremor",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "23139",
+            "name": "Sensory impairment",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "23157",
+            "name": "Vomiting",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "23158",
+            "name": "Abdominal pain",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "23244",
+            "name": "Arthropathy",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "23254",
+            "name": "Bronchitis",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "23284",
+            "name": "Hematuria",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "23351",
+            "name": "Recurrent fractures",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "23469",
+            "name": "Back pain",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "23488",
+            "name": "Myopathy",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "23544",
+            "name": "Myalgia",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "23764",
+            "name": "Epistaxis",
+            "type": "effect/phenotype"
+          }
+        ],
+        "page": 1,
+        "page_size": 50,
+        "total_count": 117
+      },
+      "success": true,
+      "timestamp": "2026-10-20T14:47:52.430273+00:00",
+      "tool": "get_neighbors"
+    },
+    {
+      "arguments": {
+        "entity_id": "16575"
+      },
+      "elapsed_seconds": 0.008356599999387981,
+      "result": {
+        "id": "16575",
+        "name": "Nafarelin",
+        "relations": [
+          {
+            "display_labels": [
+              "contraindication"
+            ],
+            "label": "contraindication",
+            "neighbor_count": 10,
+            "neighbor_types": [
+              "disease"
+            ]
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "label": "drug_drug",
+            "neighbor_count": 103,
+            "neighbor_types": [
+              "drug"
+            ]
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "label": "drug_effect",
+            "neighbor_count": 54,
+            "neighbor_types": [
+              "effect/phenotype"
+            ]
+          },
+          {
+            "display_labels": [
+              "target"
+            ],
+            "label": "drug_protein",
+            "neighbor_count": 2,
+            "neighbor_types": [
+              "gene/protein"
+            ]
+          },
+          {
+            "display_labels": [
+              "indication"
+            ],
+            "label": "indication",
+            "neighbor_count": 5,
+            "neighbor_types": [
+              "disease"
+            ]
+          }
+        ],
+        "type": "drug"
+      },
+      "success": true,
+      "timestamp": "2026-10-20T14:47:58.199475+00:00",
+      "tool": "inspect_entity"
+    },
+    {
+      "arguments": {
+        "entity_id": "16575",
+        "neighbor_type": "effect/phenotype",
+        "page": 1,
+        "relation": "drug_effect"
+      },
+      "elapsed_seconds": 0.026070800002344185,
+      "result": {
+        "has_more": true,
+        "items": [
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "22250",
+            "name": "Sinusitis",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "22262",
+            "name": "Edema",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "22323",
+            "name": "Muscle weakness",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "22364",
+            "name": "Ophthalmoplegia",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "22539",
+            "name": "Inflammatory abnormality of the skin",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "22594",
+            "name": "Hyperhidrosis",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "22731",
+            "name": "Decreased liver function",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "22786",
+            "name": "Increased body weight",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "22791",
+            "name": "Abdominal distention",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "22879",
+            "name": "Ascites",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "23000",
+            "name": "Seizure",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "23002",
+            "name": "Headache",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "23011",
+            "name": "Dyspnea",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "23059",
+            "name": "Abnormal pulmonary Interstitial morphology",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "23072",
+            "name": "Hirsutism",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "23073",
+            "name": "Alopecia",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "23083",
+            "name": "Rhinitis",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "23097",
+            "name": "Incoordination",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "23157",
+            "name": "Vomiting",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "23544",
+            "name": "Myalgia",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "23764",
+            "name": "Epistaxis",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "23799",
+            "name": "Alopecia of scalp",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "23855",
+            "name": "Deep venous thrombosis",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "23864",
+            "name": "Respiratory distress",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "23901",
+            "name": "Arthralgia",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "24475",
+            "name": "Elevated hepatic transaminase",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "25150",
+            "name": "Pleural effusion",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "25201",
+            "name": "Vertigo",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "25311",
+            "name": "Urinary incontinence",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "25644",
+            "name": "Paresthesia",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "25945",
+            "name": "Pruritus",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "26096",
+            "name": "Ocular pain",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "26336",
+            "name": "Chest pain",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "26629",
+            "name": "Pulmonary fibrosis",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "84365",
+            "name": "Oliguria",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "84409",
+            "name": "Nausea",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "84420",
+            "name": "Polyphagia",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "84519",
+            "name": "Menorrhagia",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "84693",
+            "name": "Emotional lability",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "84697",
+            "name": "Mood swings",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "84764",
+            "name": "Osteopenia",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "84767",
+            "name": "Dry skin",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "84920",
+            "name": "Mood changes",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "85015",
+            "name": "Palpitations",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "85405",
+            "name": "Decreased HDL cholesterol concentration",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "85848",
+            "name": "Malnutrition",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "85849",
+            "name": "Poor appetite",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "88208",
+            "name": "Breast hypertrophy",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "88528",
+            "name": "Hypovolemia",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "89214",
+            "name": "Oculomotor nerve palsy",
+            "type": "effect/phenotype"
+          }
+        ],
+        "page": 1,
+        "page_size": 50,
+        "total_count": 54
+      },
+      "success": true,
+      "timestamp": "2026-10-20T14:48:03.214509+00:00",
+      "tool": "get_neighbors"
+    },
+    {
+      "arguments": {
+        "entity_id": "16580"
+      },
+      "elapsed_seconds": 0.007615499998792075,
+      "result": {
+        "id": "16580",
+        "name": "Histrelin",
+        "relations": [
+          {
+            "display_labels": [
+              "contraindication"
+            ],
+            "label": "contraindication",
+            "neighbor_count": 7,
+            "neighbor_types": [
+              "disease"
+            ]
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "label": "drug_drug",
+            "neighbor_count": 451,
+            "neighbor_types": [
+              "drug"
+            ]
+          },
+          {
+            "display_labels": [
+              "target"
+            ],
+            "label": "drug_protein",
+            "neighbor_count": 1,
+            "neighbor_types": [
+              "gene/protein"
+            ]
+          },
+          {
+            "display_labels": [
+              "indication"
+            ],
+            "label": "indication",
+            "neighbor_count": 3,
+            "neighbor_types": [
+              "disease"
+            ]
+          }
+        ],
+        "type": "drug"
+      },
+      "success": true,
+      "timestamp": "2026-10-20T14:48:07.773491+00:00",
+      "tool": "inspect_entity"
+    },
+    {
+      "arguments": {
+        "entity_id": "16580",
+        "relation": "drug_effect"
+      },
+      "elapsed_seconds": 0.007721300000412157,
+      "result": "Error: entity 16580 has no relation drug_effect.",
+      "success": false,
+      "timestamp": "2026-10-20T14:48:13.608495+00:00",
+      "tool": "get_neighbors"
+    },
+    {
+      "arguments": {
+        "entity_id": "14203"
+      },
+      "elapsed_seconds": 0.010124199998244876,
+      "result": {
+        "id": "14203",
+        "name": "Medroxyprogesterone acetate",
+        "relations": [
+          {
+            "display_labels": [
+              "contraindication"
+            ],
+            "label": "contraindication",
+            "neighbor_count": 81,
+            "neighbor_types": [
+              "disease"
+            ]
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "label": "drug_drug",
+            "neighbor_count": 1411,
+            "neighbor_types": [
+              "drug"
+            ]
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "label": "drug_effect",
+            "neighbor_count": 70,
+            "neighbor_types": [
+              "effect/phenotype"
+            ]
+          },
+          {
+            "display_labels": [
+              "carrier",
+              "enzyme",
+              "target",
+              "transporter"
+            ],
+            "label": "drug_protein",
+            "neighbor_count": 24,
+            "neighbor_types": [
+              "gene/protein"
+            ]
+          },
+          {
+            "display_labels": [
+              "indication"
+            ],
+            "label": "indication",
+            "neighbor_count": 9,
+            "neighbor_types": [
+              "disease"
+            ]
+          },
+          {
+            "display_labels": [
+              "off-label use"
+            ],
+            "label": "off-label use",
+            "neighbor_count": 4,
+            "neighbor_types": [
+              "disease"
+            ]
+          }
+        ],
+        "type": "drug"
+      },
+      "success": true,
+      "timestamp": "2026-10-20T14:48:19.571206+00:00",
+      "tool": "inspect_entity"
+    },
+    {
+      "arguments": {
+        "entity_id": "14203",
+        "neighbor_type": "effect/phenotype",
+        "page": 1,
+        "relation": "drug_effect"
+      },
+      "elapsed_seconds": 0.03324209999846062,
+      "result": {
+        "has_more": true,
+        "items": [
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "22250",
+            "name": "Sinusitis",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "22262",
+            "name": "Edema",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "22442",
+            "name": "Dementia",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "22447",
+            "name": "Anxiety",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "22539",
+            "name": "Inflammatory abnormality of the skin",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "22581",
+            "name": "Erythema",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "22585",
+            "name": "Jaundice",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "22594",
+            "name": "Hyperhidrosis",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "22786",
+            "name": "Increased body weight",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "22791",
+            "name": "Abdominal distention",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "22811",
+            "name": "Paralysis",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "22916",
+            "name": "Abnormality of blood and blood-forming tissues",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "22952",
+            "name": "Fever",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "23000",
+            "name": "Seizure",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "23002",
+            "name": "Headache",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "23011",
+            "name": "Dyspnea",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "23057",
+            "name": "Hypocalcemia",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "23072",
+            "name": "Hirsutism",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "23073",
+            "name": "Alopecia",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "23157",
+            "name": "Vomiting",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "23158",
+            "name": "Abdominal pain",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "23183",
+            "name": "Thrombophlebitis",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "23254",
+            "name": "Bronchitis",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "23469",
+            "name": "Back pain",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "23799",
+            "name": "Alopecia of scalp",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "23833",
+            "name": "Tachycardia",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "23855",
+            "name": "Deep venous thrombosis",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "23864",
+            "name": "Respiratory distress",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "23875",
+            "name": "Impaired glucose tolerance",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "23901",
+            "name": "Arthralgia",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "23950",
+            "name": "Pancreatitis",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "24040",
+            "name": "Generalized osteoporosis",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "24289",
+            "name": "Dysphonia",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "24337",
+            "name": "Abnormality of the gastrointestinal tract",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "24423",
+            "name": "Blindness",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "24461",
+            "name": "Abnormality of the skin",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "24475",
+            "name": "Elevated hepatic transaminase",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "25201",
+            "name": "Vertigo",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "25620",
+            "name": "Fatigue",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "25638",
+            "name": "Limb pain",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "25644",
+            "name": "Paresthesia",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "25672",
+            "name": "Syncope",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "25945",
+            "name": "Pruritus",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "26336",
+            "name": "Chest pain",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "26674",
+            "name": "Osteoporosis",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "26948",
+            "name": "Irregular menstruation",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "26954",
+            "name": "Optic neuritis",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "27007",
+            "name": "Anaphylactic shock",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "33733",
+            "name": "Migraine",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "33739",
+            "name": "Varicose veins",
+            "type": "effect/phenotype"
+          }
+        ],
+        "page": 1,
+        "page_size": 50,
+        "total_count": 70
+      },
+      "success": true,
+      "timestamp": "2026-10-20T14:48:25.977952+00:00",
+      "tool": "get_neighbors"
+    },
+    {
+      "arguments": {
+        "entity_id": "14528"
+      },
+      "elapsed_seconds": 0.009316499999840744,
+      "result": {
+        "id": "14528",
+        "name": "Danazol",
+        "relations": [
+          {
+            "display_labels": [
+              "contraindication"
+            ],
+            "label": "contraindication",
+            "neighbor_count": 13,
+            "neighbor_types": [
+              "disease"
+            ]
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "label": "drug_drug",
+            "neighbor_count": 389,
+            "neighbor_types": [
+              "drug"
+            ]
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "label": "drug_effect",
+            "neighbor_count": 49,
+            "neighbor_types": [
+              "effect/phenotype"
+            ]
+          },
+          {
+            "display_labels": [
+              "carrier",
+              "enzyme",
+              "target"
+            ],
+            "label": "drug_protein",
+            "neighbor_count": 9,
+            "neighbor_types": [
+              "gene/protein"
+            ]
+          },
+          {
+            "display_labels": [
+              "indication"
+            ],
+            "label": "indication",
+            "neighbor_count": 3,
+            "neighbor_types": [
+              "disease"
+            ]
+          },
+          {
+            "display_labels": [
+              "off-label use"
+            ],
+            "label": "off-label use",
+            "neighbor_count": 5,
+            "neighbor_types": [
+              "disease"
+            ]
+          }
+        ],
+        "type": "drug"
+      },
+      "success": true,
+      "timestamp": "2026-10-20T14:48:31.380000+00:00",
+      "tool": "inspect_entity"
+    },
+    {
+      "arguments": {
+        "entity_id": "14528",
+        "neighbor_type": "effect/phenotype",
+        "page": 1,
+        "relation": "drug_effect"
+      },
+      "elapsed_seconds": 0.02633330000026035,
+      "result": {
+        "has_more": false,
+        "items": [
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "22262",
+            "name": "Edema",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "22380",
+            "name": "Visual impairment",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "22447",
+            "name": "Anxiety",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "22539",
+            "name": "Inflammatory abnormality of the skin",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "22581",
+            "name": "Erythema",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "22585",
+            "name": "Jaundice",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "22594",
+            "name": "Hyperhidrosis",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "22613",
+            "name": "Blurred vision",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "22731",
+            "name": "Decreased liver function",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "22733",
+            "name": "Neoplasm of the liver",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "22786",
+            "name": "Increased body weight",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "22923",
+            "name": "Leukocytosis",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "22934",
+            "name": "Thrombocytopenia",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "22952",
+            "name": "Fever",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "23000",
+            "name": "Seizure",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "23002",
+            "name": "Headache",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "23059",
+            "name": "Abnormal pulmonary Interstitial morphology",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "23072",
+            "name": "Hirsutism",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "23073",
+            "name": "Alopecia",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "23101",
+            "name": "Tremor",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "23157",
+            "name": "Vomiting",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "23284",
+            "name": "Hematuria",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "23469",
+            "name": "Back pain",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "23799",
+            "name": "Alopecia of scalp",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "23833",
+            "name": "Tachycardia",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "23901",
+            "name": "Arthralgia",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "23950",
+            "name": "Pancreatitis",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "24289",
+            "name": "Dysphonia",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "24475",
+            "name": "Elevated hepatic transaminase",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "25201",
+            "name": "Vertigo",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "25620",
+            "name": "Fatigue",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "25644",
+            "name": "Paresthesia",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "25672",
+            "name": "Syncope",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "25945",
+            "name": "Pruritus",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "26322",
+            "name": "Eosinophilia",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "33730",
+            "name": "Leukopenia",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "33733",
+            "name": "Migraine",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "84374",
+            "name": "Loss of consciousness",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "84401",
+            "name": "Hyperkinetic movements",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "84409",
+            "name": "Nausea",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "84429",
+            "name": "Nasal obstruction",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "84489",
+            "name": "Testicular atrophy",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "84553",
+            "name": "Gingival bleeding",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "84693",
+            "name": "Emotional lability",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "84697",
+            "name": "Mood swings",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "84874",
+            "name": "Joint swelling",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "84920",
+            "name": "Mood changes",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "85015",
+            "name": "Palpitations",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "85859",
+            "name": "Arterial thrombosis",
+            "type": "effect/phenotype"
+          }
+        ],
+        "page": 1,
+        "page_size": 50,
+        "total_count": 49
+      },
+      "success": true,
+      "timestamp": "2026-10-20T14:48:38.558132+00:00",
+      "tool": "get_neighbors"
+    },
+    {
+      "arguments": {
+        "entity_id": "14685"
+      },
+      "elapsed_seconds": 0.010365900001488626,
+      "result": {
+        "id": "14685",
+        "name": "Progesterone",
+        "relations": [
+          {
+            "display_labels": [
+              "contraindication"
+            ],
+            "label": "contraindication",
+            "neighbor_count": 95,
+            "neighbor_types": [
+              "disease"
+            ]
+          },
+          {
+            "display_labels": [
+              "synergistic interaction"
+            ],
+            "label": "drug_drug",
+            "neighbor_count": 1206,
+            "neighbor_types": [
+              "drug"
+            ]
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "label": "drug_effect",
+            "neighbor_count": 116,
+            "neighbor_types": [
+              "effect/phenotype"
+            ]
+          },
+          {
+            "display_labels": [
+              "enzyme",
+              "target",
+              "transporter"
+            ],
+            "label": "drug_protein",
+            "neighbor_count": 29,
+            "neighbor_types": [
+              "gene/protein"
+            ]
+          },
+          {
+            "display_labels": [
+              "indication"
+            ],
+            "label": "indication",
+            "neighbor_count": 9,
+            "neighbor_types": [
+              "disease"
+            ]
+          },
+          {
+            "display_labels": [
+              "off-label use"
+            ],
+            "label": "off-label use",
+            "neighbor_count": 4,
+            "neighbor_types": [
+              "disease"
+            ]
+          }
+        ],
+        "type": "drug"
+      },
+      "success": true,
+      "timestamp": "2026-10-20T14:48:44.930777+00:00",
+      "tool": "inspect_entity"
+    },
+    {
+      "arguments": {
+        "entity_id": "14685",
+        "neighbor_type": "effect/phenotype",
+        "page": 1,
+        "relation": "drug_effect"
+      },
+      "elapsed_seconds": 0.05051100000127917,
+      "result": {
+        "has_more": true,
+        "items": [
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "22197",
+            "name": "Cleft upper lip",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "22212",
+            "name": "Cleft palate",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "22250",
+            "name": "Sinusitis",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "22262",
+            "name": "Edema",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "22380",
+            "name": "Visual impairment",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "22447",
+            "name": "Anxiety",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "22454",
+            "name": "Neurological speech impairment",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "22457",
+            "name": "Peripheral neuropathy",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "22458",
+            "name": "Abnormal peripheral nervous system morphology",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "22467",
+            "name": "Abnormality of the endocrine system",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "22530",
+            "name": "Cholestasis",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "22539",
+            "name": "Inflammatory abnormality of the skin",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "22581",
+            "name": "Erythema",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "22585",
+            "name": "Jaundice",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "22594",
+            "name": "Hyperhidrosis",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "22613",
+            "name": "Blurred vision",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "22676",
+            "name": "Hypertonia",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "22718",
+            "name": "Arthritis",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "22731",
+            "name": "Decreased liver function",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "22735",
+            "name": "Hepatic necrosis",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "22786",
+            "name": "Increased body weight",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "22791",
+            "name": "Abdominal distention",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "22822",
+            "name": "Abnormal heart morphology",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "22952",
+            "name": "Fever",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "22982",
+            "name": "Pain",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "22998",
+            "name": "Gait disturbance",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "22999",
+            "name": "Dysphagia",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "23000",
+            "name": "Seizure",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "23002",
+            "name": "Headache",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "23011",
+            "name": "Dyspnea",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "23057",
+            "name": "Hypocalcemia",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "23072",
+            "name": "Hirsutism",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "23073",
+            "name": "Alopecia",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "23083",
+            "name": "Rhinitis",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "23101",
+            "name": "Tremor",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "23135",
+            "name": "Dysarthria",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "23157",
+            "name": "Vomiting",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "23158",
+            "name": "Abdominal pain",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "23183",
+            "name": "Thrombophlebitis",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "23214",
+            "name": "Lymphadenopathy",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "23254",
+            "name": "Bronchitis",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "23279",
+            "name": "Abnormality of the liver",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "23415",
+            "name": "Infertility",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "23417",
+            "name": "Abnormality of coagulation",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "23469",
+            "name": "Back pain",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "23488",
+            "name": "Myopathy",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "23544",
+            "name": "Myalgia",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "23799",
+            "name": "Alopecia of scalp",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "23833",
+            "name": "Tachycardia",
+            "type": "effect/phenotype"
+          },
+          {
+            "display_labels": [
+              "side effect"
+            ],
+            "id": "23844",
+            "name": "Hepatitis",
+            "type": "effect/phenotype"
+          }
+        ],
+        "page": 1,
+        "page_size": 50,
+        "total_count": 116
+      },
+      "success": true,
+      "timestamp": "2026-10-20T14:48:53.829900+00:00",
+      "tool": "get_neighbors"
+    }
+  ],
+  "cause": "CONNECTION",
+  "git_commit": "663c1bd1b20e4b4a87bbc4dc73116fe4647191e6-dirty",
+  "ignored_tool_calls": [],
+  "kg_fingerprint": "bc5d3fd2f12aeb29398fe4684c83d8c65c7bd5c1edf704573322295bdc6b2e95",
+  "log_events": [
+    {
+      "agent_inputs_sha256": "4624021f742d1f7a8ece8ef8545033b5481c1de7ec62fba554f952d74f04ba27",
+      "draft_prompt": false,
+      "event": "EPISODE_CONFIG",
+      "request_timeout_seconds": 600,
+      "source_sha256": {
+        "configs/frozen_hashes.yaml": "7db879075c3893051fef0a91dfea528dd8daee6b79426d62db573461ce174b36",
+        "configs/ollama.yaml": "aa721697935e602b80845a00f53c6dbbea5c8729010b00deb1cfc285a83b9288",
+        "data/agent_inputs/screening.jsonl": "4624021f742d1f7a8ece8ef8545033b5481c1de7ec62fba554f952d74f04ba27",
+        "data/cache/primekg_metadata.json": "bc5d3fd2f12aeb29398fe4684c83d8c65c7bd5c1edf704573322295bdc6b2e95",
+        "data/processed/manifests/screening.jsonl": "58421a410eb32413b7af7dfa157ef4a430b5ccf7e087dc1f8d60d597730c12b9",
+        "data/processed/primary_population.csv": "24a876a1bcca9e4e4fc5d273460212b47e38d95b0949c1770096fb46b79b41b8",
+        "data/processed/reference_queries.parquet": "7d3be769ac5abfa99e3da94a03a70b2ada03c3b8ca5a21a2b61184cc33e0ad07",
+        "data/processed/reference_summary.json": "f9009e75a23e9c11dd131554a225038ad36256e13737d0612dde18f4f13c33d8",
+        "data/processed/reference_targets.parquet": "3cc447fb262fc29d3f9cf1de1b589deef249ef2c2fe257272bebbf70e9310943",
+        "docs/decision_rules.md": "c007b1afb96c2b1967fc3ba5964d0dcfdf0197ba0039d71a46c46febbe222175",
+        "docs/frozen_pilot_protocol.md": "d87b111cc2cd918882c95f75f1fcc757a0532bac26455e633d52d2e2490e773b",
+        "results/semantics/relation_mapping.json": "2d609332b6a4ff48423bd7b2f1cb98d8d2d9cafc2fe80c20f7cee8184b8bb8c0",
+        "scripts/20_screen_models.py": "c558a80d5a1f7a931432f366e173fb1c467ec37499c616950be810b953db8ed1",
+        "src/cofail_kg/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "src/cofail_kg/agents/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "src/cofail_kg/agents/kg_env.py": "957c31d77988add1804f127f2889297b55388c1a6401b9d6948b3a639c430549",
+        "src/cofail_kg/agents/ollama_client.py": "c5fc85390ab74233c5696ea68e8f5915dcca986480d731fd89f28544018988dd",
+        "src/cofail_kg/agents/prompts.py": "1b590b92db92da365b668112d981f05827d1d70600deb76297a969e5539d3e4e",
+        "src/cofail_kg/agents/run_agent.py": "ba12a6ccce5626c08fac066463713a9ace780495df6d6fa348a11800cd94016a",
+        "src/cofail_kg/agents/tool_schemas.py": "fe95093be50073aca922360645240d4410737fb39f11061aa1f5f2df0a8b0bab",
+        "src/cofail_kg/agents/trace.py": "6cff52a7646e5ceaef01a487db5427293ae62e7a3b2ca94f9c805b83cdec7ffc",
+        "src/cofail_kg/analysis/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "src/cofail_kg/data/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "src/cofail_kg/data/biohopr_loader.py": "0ab1de558c393c1b5a68c3fba7c3e2b688c72b00f300951fe3b4826a92f41a2a",
+        "src/cofail_kg/data/diagnostics.py": "9c0ca21667702af80892daadf78991a13415f5efcef1b5af73bdcb8eff3d33e3",
+        "src/cofail_kg/data/field_roles.py": "2058c020f46649d2e009c1849fb5f59ace3ba787a7102efb3d859b69dc7818ee",
+        "src/cofail_kg/data/sampling.py": "37a895cd5d7c48876a567a716ab8cab768aacaac522809257faee25bd72367f8",
+        "src/cofail_kg/evaluation/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "src/cofail_kg/evaluation/agent_metrics.py": "ad4de6694b6a1bdb8c02c7110e9a5f7a08cbabbdf3bd9a5960eb107d37fc3c1c",
+        "src/cofail_kg/evaluation/answer_labels.py": "35297976b8cf94909b5c0b78f097309a986a3221a7a62016c1c15cb71aa41537",
+        "src/cofail_kg/evaluation/dataset_evidence.py": "fed445c9731b187f0023c3e8d6b1a19cd8ab9a1d3a6c0c56136f69ba9a9790e4",
+        "src/cofail_kg/evaluation/normalize.py": "d6bb073cc92389d9b370c10de4f56ce0698fe99f05ec0392c89f3999c990d849",
+        "src/cofail_kg/evaluation/path_labels.py": "f42c25dbe1a1031f33061b2788431784a92af8da07f6735e92e1878fa3f709ab",
+        "src/cofail_kg/evaluation/primary_population.py": "d0e4bc52671616b97fbbb28935effb3bb4a69b413d5bce7cdd1c24fa7eae96e7",
+        "src/cofail_kg/evaluation/query_validation.py": "f0cf029d7e89d4c37f16f7366324a33d9b050461338486bf6905e65ee5838dd6",
+        "src/cofail_kg/evaluation/reference_sets.py": "f1bc1767f8f5460aab8534bd94a6c2cefd2883e02cb99ea4324dd9a93e07339d",
+        "src/cofail_kg/evaluation/relation_mapping.py": "138349d6e5cdbfa16a66c0f398c02a2846be86a1f71678d355c3cd0ddf8a4a27",
+        "src/cofail_kg/evaluation/screening.py": "afd33f7ce54b9537435ff4f112048040e5082b24f2e4972ab3e7159dceb9c1f9",
+        "src/cofail_kg/kg/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "src/cofail_kg/kg/prepare.py": "9b238ce9fecd81c127626122084d42d2e7d6f591fe2d5a1a491bb5cc275d720d",
+        "src/cofail_kg/kg/primekg_index.py": "048581ebcd38780cf43015de23749ba326d6fa7d6d3b039f664d6fc68704869a",
+        "src/cofail_kg/utils/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "src/cofail_kg/utils/frozen_hashes.py": "c6f03344020be7fb85a62af5adc0dcb16807a89b574378bc0d3afe23d0ee75bf"
+      },
+      "think": false,
+      "timeout_seconds": 1800
+    },
+    {
+      "event": "CHAT_RESPONSE",
+      "latency_seconds": 1.7930051000003004,
+      "message_index": 2,
+      "raw_response": {
+        "created_at": "2026-10-20T14:47:31.7817187Z",
+        "done": true,
+        "done_reason": "stop",
+        "eval_count": 17,
+        "eval_duration": 898952000,
+        "load_duration": 4168600,
+        "message": {
+          "content": "",
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": {
+                  "entity_id": "29908"
+                },
+                "index": 0,
+                "name": "inspect_entity"
+              },
+              "id": "call_kxc8s089"
+            }
+          ]
+        },
+        "model": "ministral-3:8b",
+        "prompt_eval_cached_count": 476,
+        "prompt_eval_count": 510,
+        "prompt_eval_duration": 112076000,
+        "total_duration": 1789515000
+      }
+    },
+    {
+      "event": "CHAT_RESPONSE",
+      "latency_seconds": 7.484340999999404,
+      "message_index": 4,
+      "raw_response": {
+        "created_at": "2026-10-20T14:47:39.2749514Z",
+        "done": true,
+        "done_reason": "stop",
+        "eval_count": 138,
+        "eval_duration": 7308391000,
+        "load_duration": 4035900,
+        "message": {
+          "content": "To find the side effects of drugs that treat **familial male-limited precocious puberty**, I will:\n1. Identify the drugs indicated or used off-label for this disease.\n2. Explore the side effects/phenotypes associated with those drugs.\n\n### Step 1: Retrieve drugs indicated or used off-label for **familial male-limited precocious puberty (29908)**.",
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": {
+                  "entity_id": "29908",
+                  "page": 1,
+                  "relation": "indication"
+                },
+                "index": 0,
+                "name": "get_neighbors"
+              },
+              "id": "call_o089qbwt"
+            },
+            {
+              "function": {
+                "arguments": {
+                  "entity_id": "29908",
+                  "page": 1,
+                  "relation": "off-label use"
+                },
+                "index": 1,
+                "name": "get_neighbors"
+              },
+              "id": "call_wtwz27a6"
+            }
+          ]
+        },
+        "model": "ministral-3:8b",
+        "prompt_eval_cached_count": 509,
+        "prompt_eval_count": 741,
+        "prompt_eval_duration": 157335000,
+        "total_duration": 7480812900
+      }
+    },
+    {
+      "event": "CHAT_RESPONSE",
+      "latency_seconds": 8.909942500002217,
+      "message_index": 7,
+      "raw_response": {
+        "created_at": "2026-10-20T14:47:48.2124549Z",
+        "done": true,
+        "done_reason": "stop",
+        "eval_count": 157,
+        "eval_duration": 8631566000,
+        "load_duration": 4258600,
+        "message": {
+          "content": "I identified **6 drugs** that are either indicated or used off-label for **familial male-limited precocious puberty**:\n1. **Leuprolide** (16572)\n2. **Nafarelin** (16575)\n3. **Histrelin** (16580)\n4. **Medroxyprogesterone acetate** (14203)\n5. **Danazol** (14528)\n6. **Progesterone** (14685)\n\nNext, I will inspect **Leuprolide (16572)** to retrieve its side effects/phenotypes.",
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": {
+                  "entity_id": "16572"
+                },
+                "index": 0,
+                "name": "inspect_entity"
+              },
+              "id": "call_q4vhq9wq"
+            }
+          ]
+        },
+        "model": "ministral-3:8b",
+        "prompt_eval_cached_count": 740,
+        "prompt_eval_count": 1156,
+        "prompt_eval_duration": 242853000,
+        "total_duration": 8897020100
+      }
+    },
+    {
+      "event": "CHAT_RESPONSE",
+      "latency_seconds": 4.205054099998961,
+      "message_index": 9,
+      "raw_response": {
+        "created_at": "2026-10-20T14:47:52.4281969Z",
+        "done": true,
+        "done_reason": "stop",
+        "eval_count": 68,
+        "eval_duration": 3918909000,
+        "load_duration": 4375500,
+        "message": {
+          "content": "**Leuprolide (16572)** has **117 side effects/phenotypes**. I will retrieve the first page of these effects.",
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": {
+                  "entity_id": "16572",
+                  "neighbor_type": "effect/phenotype",
+                  "page": 1,
+                  "relation": "drug_effect"
+                },
+                "index": 0,
+                "name": "get_neighbors"
+              },
+              "id": "call_p4dvmdq3"
+            }
+          ]
+        },
+        "model": "ministral-3:8b",
+        "prompt_eval_cached_count": 1155,
+        "prompt_eval_count": 1558,
+        "prompt_eval_duration": 260122000,
+        "total_duration": 4200540800
+      }
+    },
+    {
+      "event": "CHAT_RESPONSE",
+      "latency_seconds": 5.7234853000009025,
+      "message_index": 11,
+      "raw_response": {
+        "created_at": "2026-10-20T14:47:58.1979542Z",
+        "done": true,
+        "done_reason": "stop",
+        "eval_count": 66,
+        "eval_duration": 4571331000,
+        "load_duration": 4541300,
+        "message": {
+          "content": "I retrieved **50 side effects/phenotypes** for **Leuprolide (16572)**. I will now inspect **Nafarelin (16575)** to retrieve its side effects/phenotypes.",
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": {
+                  "entity_id": "16575"
+                },
+                "index": 0,
+                "name": "inspect_entity"
+              },
+              "id": "call_jmzcttx5"
+            }
+          ]
+        },
+        "model": "ministral-3:8b",
+        "prompt_eval_cached_count": 1557,
+        "prompt_eval_count": 3483,
+        "prompt_eval_duration": 1091137000,
+        "total_duration": 5702631500
+      }
+    },
+    {
+      "event": "CHAT_RESPONSE",
+      "latency_seconds": 5.006385299999238,
+      "message_index": 13,
+      "raw_response": {
+        "created_at": "2026-10-20T14:48:03.2127366Z",
+        "done": true,
+        "done_reason": "stop",
+        "eval_count": 67,
+        "eval_duration": 4742962000,
+        "load_duration": 3699100,
+        "message": {
+          "content": "**Nafarelin (16575)** has **54 side effects/phenotypes**. I will retrieve the first page of these effects.",
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": {
+                  "entity_id": "16575",
+                  "neighbor_type": "effect/phenotype",
+                  "page": 1,
+                  "relation": "drug_effect"
+                },
+                "index": 0,
+                "name": "get_neighbors"
+              },
+              "id": "call_ha9pfle2"
+            }
+          ]
+        },
+        "model": "ministral-3:8b",
+        "prompt_eval_cached_count": 3482,
+        "prompt_eval_count": 3757,
+        "prompt_eval_duration": 222369000,
+        "total_duration": 5003168300
+      }
+    },
+    {
+      "event": "CHAT_RESPONSE",
+      "latency_seconds": 4.532578099999228,
+      "message_index": 15,
+      "raw_response": {
+        "created_at": "2026-10-20T14:48:07.7721348Z",
+        "done": true,
+        "done_reason": "stop",
+        "eval_count": 40,
+        "eval_duration": 3264174000,
+        "load_duration": 4671000,
+        "message": {
+          "content": "I will now inspect **Histrelin (16580)** to retrieve its side effects/phenotypes.",
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": {
+                  "entity_id": "16580"
+                },
+                "index": 0,
+                "name": "inspect_entity"
+              },
+              "id": "call_cqbxq8qq"
+            }
+          ]
+        },
+        "model": "ministral-3:8b",
+        "prompt_eval_cached_count": 3756,
+        "prompt_eval_count": 5684,
+        "prompt_eval_duration": 1183029000,
+        "total_duration": 4529571600
+      }
+    },
+    {
+      "event": "CHAT_RESPONSE",
+      "latency_seconds": 5.8270564999984344,
+      "message_index": 17,
+      "raw_response": {
+        "created_at": "2026-10-20T14:48:13.6066185Z",
+        "done": true,
+        "done_reason": "stop",
+        "eval_count": 66,
+        "eval_duration": 5531653000,
+        "load_duration": 5220400,
+        "message": {
+          "content": "**Histrelin (16580)** does not have a direct `drug_effect` relation listed in the inspection. I will check if it has any other relations that might include side effects or phenotypes.",
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": {
+                  "entity_id": "16580",
+                  "relation": "drug_effect"
+                },
+                "index": 0,
+                "name": "get_neighbors"
+              },
+              "id": "call_9956oxqv"
+            }
+          ]
+        },
+        "model": "ministral-3:8b",
+        "prompt_eval_cached_count": 5683,
+        "prompt_eval_count": 5894,
+        "prompt_eval_duration": 210459000,
+        "total_duration": 5823535400
+      }
+    },
+    {
+      "event": "CHAT_RESPONSE",
+      "latency_seconds": 5.954701500002557,
+      "message_index": 19,
+      "raw_response": {
+        "created_at": "2026-10-20T14:48:19.5697933Z",
+        "done": true,
+        "done_reason": "stop",
+        "eval_count": 68,
+        "eval_duration": 5725820000,
+        "load_duration": 4882000,
+        "message": {
+          "content": "**Histrelin (16580)** has no documented side effects/phenotypes in this knowledge graph.\n\nI will now inspect **Medroxyprogesterone acetate (14203)** to retrieve its side effects/phenotypes.",
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": {
+                  "entity_id": "14203"
+                },
+                "index": 0,
+                "name": "inspect_entity"
+              },
+              "id": "call_kopwcwlt"
+            }
+          ]
+        },
+        "model": "ministral-3:8b",
+        "prompt_eval_cached_count": 5893,
+        "prompt_eval_count": 5977,
+        "prompt_eval_duration": 143148000,
+        "total_duration": 5951865700
+      }
+    },
+    {
+      "event": "CHAT_RESPONSE",
+      "latency_seconds": 6.396294499998476,
+      "message_index": 21,
+      "raw_response": {
+        "created_at": "2026-10-20T14:48:25.9764664Z",
+        "done": true,
+        "done_reason": "stop",
+        "eval_count": 70,
+        "eval_duration": 6042463000,
+        "load_duration": 5172800,
+        "message": {
+          "content": "**Medroxyprogesterone acetate (14203)** has **70 side effects/phenotypes**. I will retrieve the first page of these effects.",
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": {
+                  "entity_id": "14203",
+                  "neighbor_type": "effect/phenotype",
+                  "page": 1,
+                  "relation": "drug_effect"
+                },
+                "index": 0,
+                "name": "get_neighbors"
+              },
+              "id": "call_c1ib9757"
+            }
+          ]
+        },
+        "model": "ministral-3:8b",
+        "prompt_eval_cached_count": 5976,
+        "prompt_eval_count": 6303,
+        "prompt_eval_duration": 264086000,
+        "total_duration": 6393248300
+      }
+    },
+    {
+      "event": "CHAT_RESPONSE",
+      "latency_seconds": 5.368414099997608,
+      "message_index": 23,
+      "raw_response": {
+        "created_at": "2026-10-20T14:48:31.3785431Z",
+        "done": true,
+        "done_reason": "stop",
+        "eval_count": 39,
+        "eval_duration": 3944704000,
+        "load_duration": 5291700,
+        "message": {
+          "content": "I will now inspect **Danazol (14528)** to retrieve its side effects/phenotypes.",
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": {
+                  "entity_id": "14528"
+                },
+                "index": 0,
+                "name": "inspect_entity"
+              },
+              "id": "call_fut2ck4z"
+            }
+          ]
+        },
+        "model": "ministral-3:8b",
+        "prompt_eval_cached_count": 6302,
+        "prompt_eval_count": 8240,
+        "prompt_eval_duration": 1310272000,
+        "total_duration": 5365363100
+      }
+    },
+    {
+      "event": "CHAT_RESPONSE",
+      "latency_seconds": 7.168442599999253,
+      "message_index": 25,
+      "raw_response": {
+        "created_at": "2026-10-20T14:48:38.5566225Z",
+        "done": true,
+        "done_reason": "stop",
+        "eval_count": 65,
+        "eval_duration": 6805395000,
+        "load_duration": 4294400,
+        "message": {
+          "content": "**Danazol (14528)** has **49 side effects/phenotypes**. I will retrieve the first page of these effects.",
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": {
+                  "entity_id": "14528",
+                  "neighbor_type": "effect/phenotype",
+                  "page": 1,
+                  "relation": "drug_effect"
+                },
+                "index": 0,
+                "name": "get_neighbors"
+              },
+              "id": "call_7lnjfopw"
+            }
+          ]
+        },
+        "model": "ministral-3:8b",
+        "prompt_eval_cached_count": 8239,
+        "prompt_eval_count": 8526,
+        "prompt_eval_duration": 249334000,
+        "total_duration": 7164975000
+      }
+    },
+    {
+      "event": "CHAT_RESPONSE",
+      "latency_seconds": 6.345896800001356,
+      "message_index": 27,
+      "raw_response": {
+        "created_at": "2026-10-20T14:48:44.9291042Z",
+        "done": true,
+        "done_reason": "stop",
+        "eval_count": 40,
+        "eval_duration": 4844914000,
+        "load_duration": 5445200,
+        "message": {
+          "content": "I will now inspect **Progesterone (14685)** to retrieve its side effects/phenotypes.",
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": {
+                  "entity_id": "14685"
+                },
+                "index": 0,
+                "name": "inspect_entity"
+              },
+              "id": "call_8psunjc9"
+            }
+          ]
+        },
+        "model": "ministral-3:8b",
+        "prompt_eval_cached_count": 8525,
+        "prompt_eval_count": 10409,
+        "prompt_eval_duration": 1361737000,
+        "total_duration": 6342339400
+      }
+    },
+    {
+      "event": "CHAT_RESPONSE",
+      "latency_seconds": 8.888336200001504,
+      "message_index": 29,
+      "raw_response": {
+        "created_at": "2026-10-20T14:48:53.82816Z",
+        "done": true,
+        "done_reason": "stop",
+        "eval_count": 67,
+        "eval_duration": 8467040999,
+        "load_duration": 6542700,
+        "message": {
+          "content": "**Progesterone (14685)** has **116 side effects/phenotypes**. I will retrieve the first page of these effects.",
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": {
+                  "entity_id": "14685",
+                  "neighbor_type": "effect/phenotype",
+                  "page": 1,
+                  "relation": "drug_effect"
+                },
+                "index": 0,
+                "name": "get_neighbors"
+              },
+              "id": "call_4sheok3f"
+            }
+          ]
+        },
+        "model": "ministral-3:8b",
+        "prompt_eval_cached_count": 10408,
+        "prompt_eval_count": 10700,
+        "prompt_eval_duration": 279285000,
+        "total_duration": 8885018500
+      }
+    },
+    {
+      "event": "ERROR",
+      "http_status": null,
+      "message": "HTTPConnectionPool(host='127.0.0.1', port=11434): Read timed out. (read timeout=600)",
+      "response_text": null,
+      "type": "OllamaError"
+    }
+  ],
+  "messages": [
+    {
+      "content": "You are a biomedical knowledge-graph agent. You answer questions by exploring a knowledge graph\nwith two tools.\n\ninspect_entity(entity_id): shows an entity, its type, and the relations connected to it, with\nthe number of neighbors for each relation.\nget_neighbors(entity_id, relation, neighbor_type, page): lists the neighbors of an entity through\none relation, 50 per page. The result tells you the total number of neighbors and\nwhether more pages exist.\n\nRules:\n1. Use the tools to find the answer. Every entity in your answer must be one you saw in a tool\n   result; copy its ID exactly.\n2. You can make at most 30 tool calls.\n3. When you are finished, reply with only this JSON object and nothing else:\n   {\"status\": \"answered\", \"answers\": [{\"id\": \"<ID>\", \"name\": \"<name>\"}]}\n   If you cannot find an answer, reply with only:\n   {\"status\": \"no_answer\", \"answers\": []}",
+      "role": "system"
+    },
+    {
+      "content": "Name all effect/phenotypes which are side effects of drug that can treat disease familial male-limited precocious puberty.\nStarting entity: familial male-limited precocious puberty (PrimeKG ID: 29908)",
+      "role": "user"
+    },
+    {
+      "content": "",
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "function": {
+            "arguments": {
+              "entity_id": "29908"
+            },
+            "index": 0,
+            "name": "inspect_entity"
+          },
+          "id": "call_kxc8s089"
+        }
+      ]
+    },
+    {
+      "content": "{\"id\": \"29908\", \"name\": \"familial male-limited precocious puberty\", \"type\": \"disease\", \"relations\": [{\"label\": \"disease_disease\", \"display_labels\": [\"parent-child\"], \"neighbor_types\": [\"disease\"], \"neighbor_count\": 1}, {\"label\": \"disease_phenotype_positive\", \"display_labels\": [\"phenotype present\"], \"neighbor_types\": [\"effect/phenotype\"], \"neighbor_count\": 11}, {\"label\": \"disease_protein\", \"display_labels\": [\"associated with\"], \"neighbor_types\": [\"gene/protein\"], \"neighbor_count\": 10}, {\"label\": \"indication\", \"display_labels\": [\"indication\"], \"neighbor_types\": [\"drug\"], \"neighbor_count\": 3}, {\"label\": \"off-label use\", \"display_labels\": [\"off-label use\"], \"neighbor_types\": [\"drug\"], \"neighbor_count\": 3}]}",
+      "role": "tool",
+      "tool_call_id": "call_kxc8s089",
+      "tool_name": "inspect_entity"
+    },
+    {
+      "content": "To find the side effects of drugs that treat **familial male-limited precocious puberty**, I will:\n1. Identify the drugs indicated or used off-label for this disease.\n2. Explore the side effects/phenotypes associated with those drugs.\n\n### Step 1: Retrieve drugs indicated or used off-label for **familial male-limited precocious puberty (29908)**.",
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "function": {
+            "arguments": {
+              "entity_id": "29908",
+              "page": 1,
+              "relation": "indication"
+            },
+            "index": 0,
+            "name": "get_neighbors"
+          },
+          "id": "call_o089qbwt"
+        },
+        {
+          "function": {
+            "arguments": {
+              "entity_id": "29908",
+              "page": 1,
+              "relation": "off-label use"
+            },
+            "index": 1,
+            "name": "get_neighbors"
+          },
+          "id": "call_wtwz27a6"
+        }
+      ]
+    },
+    {
+      "content": "{\"items\": [{\"id\": \"16572\", \"name\": \"Leuprolide\", \"type\": \"drug\", \"display_labels\": [\"indication\"]}, {\"id\": \"16575\", \"name\": \"Nafarelin\", \"type\": \"drug\", \"display_labels\": [\"indication\"]}, {\"id\": \"16580\", \"name\": \"Histrelin\", \"type\": \"drug\", \"display_labels\": [\"indication\"]}], \"total_count\": 3, \"page\": 1, \"page_size\": 50, \"has_more\": false}",
+      "role": "tool",
+      "tool_call_id": "call_o089qbwt",
+      "tool_name": "get_neighbors"
+    },
+    {
+      "content": "{\"items\": [{\"id\": \"14203\", \"name\": \"Medroxyprogesterone acetate\", \"type\": \"drug\", \"display_labels\": [\"off-label use\"]}, {\"id\": \"14528\", \"name\": \"Danazol\", \"type\": \"drug\", \"display_labels\": [\"off-label use\"]}, {\"id\": \"14685\", \"name\": \"Progesterone\", \"type\": \"drug\", \"display_labels\": [\"off-label use\"]}], \"total_count\": 3, \"page\": 1, \"page_size\": 50, \"has_more\": false}",
+      "role": "tool",
+      "tool_call_id": "call_wtwz27a6",
+      "tool_name": "get_neighbors"
+    },
+    {
+      "content": "I identified **6 drugs** that are either indicated or used off-label for **familial male-limited precocious puberty**:\n1. **Leuprolide** (16572)\n2. **Nafarelin** (16575)\n3. **Histrelin** (16580)\n4. **Medroxyprogesterone acetate** (14203)\n5. **Danazol** (14528)\n6. **Progesterone** (14685)\n\nNext, I will inspect **Leuprolide (16572)** to retrieve its side effects/phenotypes.",
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "function": {
+            "arguments": {
+              "entity_id": "16572"
+            },
+            "index": 0,
+            "name": "inspect_entity"
+          },
+          "id": "call_q4vhq9wq"
+        }
+      ]
+    },
+    {
+      "content": "{\"id\": \"16572\", \"name\": \"Leuprolide\", \"type\": \"drug\", \"relations\": [{\"label\": \"contraindication\", \"display_labels\": [\"contraindication\"], \"neighbor_types\": [\"disease\"], \"neighbor_count\": 16}, {\"label\": \"drug_drug\", \"display_labels\": [\"synergistic interaction\"], \"neighbor_types\": [\"drug\"], \"neighbor_count\": 1166}, {\"label\": \"drug_effect\", \"display_labels\": [\"side effect\"], \"neighbor_types\": [\"effect/phenotype\"], \"neighbor_count\": 117}, {\"label\": \"drug_protein\", \"display_labels\": [\"target\"], \"neighbor_types\": [\"gene/protein\"], \"neighbor_count\": 1}, {\"label\": \"indication\", \"display_labels\": [\"indication\"], \"neighbor_types\": [\"disease\"], \"neighbor_count\": 5}, {\"label\": \"off-label use\", \"display_labels\": [\"off-label use\"], \"neighbor_types\": [\"disease\"], \"neighbor_count\": 21}]}",
+      "role": "tool",
+      "tool_call_id": "call_q4vhq9wq",
+      "tool_name": "inspect_entity"
+    },
+    {
+      "content": "**Leuprolide (16572)** has **117 side effects/phenotypes**. I will retrieve the first page of these effects.",
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "function": {
+            "arguments": {
+              "entity_id": "16572",
+              "neighbor_type": "effect/phenotype",
+              "page": 1,
+              "relation": "drug_effect"
+            },
+            "index": 0,
+            "name": "get_neighbors"
+          },
+          "id": "call_p4dvmdq3"
+        }
+      ]
+    },
+    {
+      "content": "{\"items\": [{\"id\": \"22229\", \"name\": \"Hyperkeratosis\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"22250\", \"name\": \"Sinusitis\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"22262\", \"name\": \"Edema\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"22304\", \"name\": \"Hearing impairment\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"22364\", \"name\": \"Ophthalmoplegia\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"22447\", \"name\": \"Anxiety\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"22457\", \"name\": \"Peripheral neuropathy\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"22458\", \"name\": \"Abnormal peripheral nervous system morphology\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"22478\", \"name\": \"Growth delay\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"22539\", \"name\": \"Inflammatory abnormality of the skin\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"22566\", \"name\": \"Pallor\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"22574\", \"name\": \"Neoplasm of the skin\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"22581\", \"name\": \"Erythema\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"22588\", \"name\": \"Abnormal joint morphology\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"22594\", \"name\": \"Hyperhidrosis\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"22613\", \"name\": \"Blurred vision\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"22658\", \"name\": \"Abnormality of the nail\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"22718\", \"name\": \"Arthritis\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"22731\", \"name\": \"Decreased liver function\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"22786\", \"name\": \"Increased body weight\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"22791\", \"name\": \"Abdominal distention\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"22811\", \"name\": \"Paralysis\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"22831\", \"name\": \"Arrhythmia\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"22846\", \"name\": \"Bradycardia\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"22859\", \"name\": \"Congestive heart failure\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"22952\", \"name\": \"Fever\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"22953\", \"name\": \"Hypoglycemia\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"22982\", \"name\": \"Pain\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"22998\", \"name\": \"Gait disturbance\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"22999\", \"name\": \"Dysphagia\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"23000\", \"name\": \"Seizure\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"23002\", \"name\": \"Headache\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"23011\", \"name\": \"Dyspnea\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"23060\", \"name\": \"Pulmonary infiltrates\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"23072\", \"name\": \"Hirsutism\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"23073\", \"name\": \"Alopecia\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"23079\", \"name\": \"Gastrointestinal hemorrhage\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"23083\", \"name\": \"Rhinitis\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"23101\", \"name\": \"Tremor\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"23139\", \"name\": \"Sensory impairment\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"23157\", \"name\": \"Vomiting\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"23158\", \"name\": \"Abdominal pain\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"23244\", \"name\": \"Arthropathy\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"23254\", \"name\": \"Bronchitis\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"23284\", \"name\": \"Hematuria\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"23351\", \"name\": \"Recurrent fractures\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"23469\", \"name\": \"Back pain\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"23488\", \"name\": \"Myopathy\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"23544\", \"name\": \"Myalgia\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"23764\", \"name\": \"Epistaxis\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}], \"total_count\": 117, \"page\": 1, \"page_size\": 50, \"has_more\": true}",
+      "role": "tool",
+      "tool_call_id": "call_p4dvmdq3",
+      "tool_name": "get_neighbors"
+    },
+    {
+      "content": "I retrieved **50 side effects/phenotypes** for **Leuprolide (16572)**. I will now inspect **Nafarelin (16575)** to retrieve its side effects/phenotypes.",
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "function": {
+            "arguments": {
+              "entity_id": "16575"
+            },
+            "index": 0,
+            "name": "inspect_entity"
+          },
+          "id": "call_jmzcttx5"
+        }
+      ]
+    },
+    {
+      "content": "{\"id\": \"16575\", \"name\": \"Nafarelin\", \"type\": \"drug\", \"relations\": [{\"label\": \"contraindication\", \"display_labels\": [\"contraindication\"], \"neighbor_types\": [\"disease\"], \"neighbor_count\": 10}, {\"label\": \"drug_drug\", \"display_labels\": [\"synergistic interaction\"], \"neighbor_types\": [\"drug\"], \"neighbor_count\": 103}, {\"label\": \"drug_effect\", \"display_labels\": [\"side effect\"], \"neighbor_types\": [\"effect/phenotype\"], \"neighbor_count\": 54}, {\"label\": \"drug_protein\", \"display_labels\": [\"target\"], \"neighbor_types\": [\"gene/protein\"], \"neighbor_count\": 2}, {\"label\": \"indication\", \"display_labels\": [\"indication\"], \"neighbor_types\": [\"disease\"], \"neighbor_count\": 5}]}",
+      "role": "tool",
+      "tool_call_id": "call_jmzcttx5",
+      "tool_name": "inspect_entity"
+    },
+    {
+      "content": "**Nafarelin (16575)** has **54 side effects/phenotypes**. I will retrieve the first page of these effects.",
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "function": {
+            "arguments": {
+              "entity_id": "16575",
+              "neighbor_type": "effect/phenotype",
+              "page": 1,
+              "relation": "drug_effect"
+            },
+            "index": 0,
+            "name": "get_neighbors"
+          },
+          "id": "call_ha9pfle2"
+        }
+      ]
+    },
+    {
+      "content": "{\"items\": [{\"id\": \"22250\", \"name\": \"Sinusitis\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"22262\", \"name\": \"Edema\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"22323\", \"name\": \"Muscle weakness\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"22364\", \"name\": \"Ophthalmoplegia\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"22539\", \"name\": \"Inflammatory abnormality of the skin\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"22594\", \"name\": \"Hyperhidrosis\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"22731\", \"name\": \"Decreased liver function\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"22786\", \"name\": \"Increased body weight\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"22791\", \"name\": \"Abdominal distention\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"22879\", \"name\": \"Ascites\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"23000\", \"name\": \"Seizure\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"23002\", \"name\": \"Headache\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"23011\", \"name\": \"Dyspnea\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"23059\", \"name\": \"Abnormal pulmonary Interstitial morphology\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"23072\", \"name\": \"Hirsutism\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"23073\", \"name\": \"Alopecia\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"23083\", \"name\": \"Rhinitis\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"23097\", \"name\": \"Incoordination\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"23157\", \"name\": \"Vomiting\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"23544\", \"name\": \"Myalgia\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"23764\", \"name\": \"Epistaxis\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"23799\", \"name\": \"Alopecia of scalp\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"23855\", \"name\": \"Deep venous thrombosis\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"23864\", \"name\": \"Respiratory distress\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"23901\", \"name\": \"Arthralgia\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"24475\", \"name\": \"Elevated hepatic transaminase\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"25150\", \"name\": \"Pleural effusion\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"25201\", \"name\": \"Vertigo\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"25311\", \"name\": \"Urinary incontinence\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"25644\", \"name\": \"Paresthesia\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"25945\", \"name\": \"Pruritus\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"26096\", \"name\": \"Ocular pain\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"26336\", \"name\": \"Chest pain\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"26629\", \"name\": \"Pulmonary fibrosis\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"84365\", \"name\": \"Oliguria\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"84409\", \"name\": \"Nausea\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"84420\", \"name\": \"Polyphagia\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"84519\", \"name\": \"Menorrhagia\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"84693\", \"name\": \"Emotional lability\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"84697\", \"name\": \"Mood swings\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"84764\", \"name\": \"Osteopenia\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"84767\", \"name\": \"Dry skin\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"84920\", \"name\": \"Mood changes\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"85015\", \"name\": \"Palpitations\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"85405\", \"name\": \"Decreased HDL cholesterol concentration\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"85848\", \"name\": \"Malnutrition\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"85849\", \"name\": \"Poor appetite\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"88208\", \"name\": \"Breast hypertrophy\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"88528\", \"name\": \"Hypovolemia\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"89214\", \"name\": \"Oculomotor nerve palsy\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}], \"total_count\": 54, \"page\": 1, \"page_size\": 50, \"has_more\": true}",
+      "role": "tool",
+      "tool_call_id": "call_ha9pfle2",
+      "tool_name": "get_neighbors"
+    },
+    {
+      "content": "I will now inspect **Histrelin (16580)** to retrieve its side effects/phenotypes.",
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "function": {
+            "arguments": {
+              "entity_id": "16580"
+            },
+            "index": 0,
+            "name": "inspect_entity"
+          },
+          "id": "call_cqbxq8qq"
+        }
+      ]
+    },
+    {
+      "content": "{\"id\": \"16580\", \"name\": \"Histrelin\", \"type\": \"drug\", \"relations\": [{\"label\": \"contraindication\", \"display_labels\": [\"contraindication\"], \"neighbor_types\": [\"disease\"], \"neighbor_count\": 7}, {\"label\": \"drug_drug\", \"display_labels\": [\"synergistic interaction\"], \"neighbor_types\": [\"drug\"], \"neighbor_count\": 451}, {\"label\": \"drug_protein\", \"display_labels\": [\"target\"], \"neighbor_types\": [\"gene/protein\"], \"neighbor_count\": 1}, {\"label\": \"indication\", \"display_labels\": [\"indication\"], \"neighbor_types\": [\"disease\"], \"neighbor_count\": 3}]}",
+      "role": "tool",
+      "tool_call_id": "call_cqbxq8qq",
+      "tool_name": "inspect_entity"
+    },
+    {
+      "content": "**Histrelin (16580)** does not have a direct `drug_effect` relation listed in the inspection. I will check if it has any other relations that might include side effects or phenotypes.",
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "function": {
+            "arguments": {
+              "entity_id": "16580",
+              "relation": "drug_effect"
+            },
+            "index": 0,
+            "name": "get_neighbors"
+          },
+          "id": "call_9956oxqv"
+        }
+      ]
+    },
+    {
+      "content": "Error: entity 16580 has no relation drug_effect.",
+      "role": "tool",
+      "tool_call_id": "call_9956oxqv",
+      "tool_name": "get_neighbors"
+    },
+    {
+      "content": "**Histrelin (16580)** has no documented side effects/phenotypes in this knowledge graph.\n\nI will now inspect **Medroxyprogesterone acetate (14203)** to retrieve its side effects/phenotypes.",
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "function": {
+            "arguments": {
+              "entity_id": "14203"
+            },
+            "index": 0,
+            "name": "inspect_entity"
+          },
+          "id": "call_kopwcwlt"
+        }
+      ]
+    },
+    {
+      "content": "{\"id\": \"14203\", \"name\": \"Medroxyprogesterone acetate\", \"type\": \"drug\", \"relations\": [{\"label\": \"contraindication\", \"display_labels\": [\"contraindication\"], \"neighbor_types\": [\"disease\"], \"neighbor_count\": 81}, {\"label\": \"drug_drug\", \"display_labels\": [\"synergistic interaction\"], \"neighbor_types\": [\"drug\"], \"neighbor_count\": 1411}, {\"label\": \"drug_effect\", \"display_labels\": [\"side effect\"], \"neighbor_types\": [\"effect/phenotype\"], \"neighbor_count\": 70}, {\"label\": \"drug_protein\", \"display_labels\": [\"carrier\", \"enzyme\", \"target\", \"transporter\"], \"neighbor_types\": [\"gene/protein\"], \"neighbor_count\": 24}, {\"label\": \"indication\", \"display_labels\": [\"indication\"], \"neighbor_types\": [\"disease\"], \"neighbor_count\": 9}, {\"label\": \"off-label use\", \"display_labels\": [\"off-label use\"], \"neighbor_types\": [\"disease\"], \"neighbor_count\": 4}]}",
+      "role": "tool",
+      "tool_call_id": "call_kopwcwlt",
+      "tool_name": "inspect_entity"
+    },
+    {
+      "content": "**Medroxyprogesterone acetate (14203)** has **70 side effects/phenotypes**. I will retrieve the first page of these effects.",
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "function": {
+            "arguments": {
+              "entity_id": "14203",
+              "neighbor_type": "effect/phenotype",
+              "page": 1,
+              "relation": "drug_effect"
+            },
+            "index": 0,
+            "name": "get_neighbors"
+          },
+          "id": "call_c1ib9757"
+        }
+      ]
+    },
+    {
+      "content": "{\"items\": [{\"id\": \"22250\", \"name\": \"Sinusitis\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"22262\", \"name\": \"Edema\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"22442\", \"name\": \"Dementia\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"22447\", \"name\": \"Anxiety\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"22539\", \"name\": \"Inflammatory abnormality of the skin\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"22581\", \"name\": \"Erythema\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"22585\", \"name\": \"Jaundice\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"22594\", \"name\": \"Hyperhidrosis\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"22786\", \"name\": \"Increased body weight\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"22791\", \"name\": \"Abdominal distention\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"22811\", \"name\": \"Paralysis\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"22916\", \"name\": \"Abnormality of blood and blood-forming tissues\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"22952\", \"name\": \"Fever\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"23000\", \"name\": \"Seizure\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"23002\", \"name\": \"Headache\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"23011\", \"name\": \"Dyspnea\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"23057\", \"name\": \"Hypocalcemia\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"23072\", \"name\": \"Hirsutism\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"23073\", \"name\": \"Alopecia\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"23157\", \"name\": \"Vomiting\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"23158\", \"name\": \"Abdominal pain\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"23183\", \"name\": \"Thrombophlebitis\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"23254\", \"name\": \"Bronchitis\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"23469\", \"name\": \"Back pain\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"23799\", \"name\": \"Alopecia of scalp\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"23833\", \"name\": \"Tachycardia\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"23855\", \"name\": \"Deep venous thrombosis\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"23864\", \"name\": \"Respiratory distress\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"23875\", \"name\": \"Impaired glucose tolerance\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"23901\", \"name\": \"Arthralgia\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"23950\", \"name\": \"Pancreatitis\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"24040\", \"name\": \"Generalized osteoporosis\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"24289\", \"name\": \"Dysphonia\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"24337\", \"name\": \"Abnormality of the gastrointestinal tract\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"24423\", \"name\": \"Blindness\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"24461\", \"name\": \"Abnormality of the skin\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"24475\", \"name\": \"Elevated hepatic transaminase\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"25201\", \"name\": \"Vertigo\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"25620\", \"name\": \"Fatigue\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"25638\", \"name\": \"Limb pain\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"25644\", \"name\": \"Paresthesia\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"25672\", \"name\": \"Syncope\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"25945\", \"name\": \"Pruritus\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"26336\", \"name\": \"Chest pain\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"26674\", \"name\": \"Osteoporosis\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"26948\", \"name\": \"Irregular menstruation\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"26954\", \"name\": \"Optic neuritis\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"27007\", \"name\": \"Anaphylactic shock\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"33733\", \"name\": \"Migraine\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"33739\", \"name\": \"Varicose veins\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}], \"total_count\": 70, \"page\": 1, \"page_size\": 50, \"has_more\": true}",
+      "role": "tool",
+      "tool_call_id": "call_c1ib9757",
+      "tool_name": "get_neighbors"
+    },
+    {
+      "content": "I will now inspect **Danazol (14528)** to retrieve its side effects/phenotypes.",
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "function": {
+            "arguments": {
+              "entity_id": "14528"
+            },
+            "index": 0,
+            "name": "inspect_entity"
+          },
+          "id": "call_fut2ck4z"
+        }
+      ]
+    },
+    {
+      "content": "{\"id\": \"14528\", \"name\": \"Danazol\", \"type\": \"drug\", \"relations\": [{\"label\": \"contraindication\", \"display_labels\": [\"contraindication\"], \"neighbor_types\": [\"disease\"], \"neighbor_count\": 13}, {\"label\": \"drug_drug\", \"display_labels\": [\"synergistic interaction\"], \"neighbor_types\": [\"drug\"], \"neighbor_count\": 389}, {\"label\": \"drug_effect\", \"display_labels\": [\"side effect\"], \"neighbor_types\": [\"effect/phenotype\"], \"neighbor_count\": 49}, {\"label\": \"drug_protein\", \"display_labels\": [\"carrier\", \"enzyme\", \"target\"], \"neighbor_types\": [\"gene/protein\"], \"neighbor_count\": 9}, {\"label\": \"indication\", \"display_labels\": [\"indication\"], \"neighbor_types\": [\"disease\"], \"neighbor_count\": 3}, {\"label\": \"off-label use\", \"display_labels\": [\"off-label use\"], \"neighbor_types\": [\"disease\"], \"neighbor_count\": 5}]}",
+      "role": "tool",
+      "tool_call_id": "call_fut2ck4z",
+      "tool_name": "inspect_entity"
+    },
+    {
+      "content": "**Danazol (14528)** has **49 side effects/phenotypes**. I will retrieve the first page of these effects.",
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "function": {
+            "arguments": {
+              "entity_id": "14528",
+              "neighbor_type": "effect/phenotype",
+              "page": 1,
+              "relation": "drug_effect"
+            },
+            "index": 0,
+            "name": "get_neighbors"
+          },
+          "id": "call_7lnjfopw"
+        }
+      ]
+    },
+    {
+      "content": "{\"items\": [{\"id\": \"22262\", \"name\": \"Edema\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"22380\", \"name\": \"Visual impairment\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"22447\", \"name\": \"Anxiety\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"22539\", \"name\": \"Inflammatory abnormality of the skin\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"22581\", \"name\": \"Erythema\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"22585\", \"name\": \"Jaundice\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"22594\", \"name\": \"Hyperhidrosis\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"22613\", \"name\": \"Blurred vision\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"22731\", \"name\": \"Decreased liver function\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"22733\", \"name\": \"Neoplasm of the liver\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"22786\", \"name\": \"Increased body weight\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"22923\", \"name\": \"Leukocytosis\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"22934\", \"name\": \"Thrombocytopenia\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"22952\", \"name\": \"Fever\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"23000\", \"name\": \"Seizure\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"23002\", \"name\": \"Headache\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"23059\", \"name\": \"Abnormal pulmonary Interstitial morphology\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"23072\", \"name\": \"Hirsutism\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"23073\", \"name\": \"Alopecia\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"23101\", \"name\": \"Tremor\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"23157\", \"name\": \"Vomiting\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"23284\", \"name\": \"Hematuria\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"23469\", \"name\": \"Back pain\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"23799\", \"name\": \"Alopecia of scalp\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"23833\", \"name\": \"Tachycardia\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"23901\", \"name\": \"Arthralgia\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"23950\", \"name\": \"Pancreatitis\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"24289\", \"name\": \"Dysphonia\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"24475\", \"name\": \"Elevated hepatic transaminase\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"25201\", \"name\": \"Vertigo\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"25620\", \"name\": \"Fatigue\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"25644\", \"name\": \"Paresthesia\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"25672\", \"name\": \"Syncope\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"25945\", \"name\": \"Pruritus\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"26322\", \"name\": \"Eosinophilia\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"33730\", \"name\": \"Leukopenia\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"33733\", \"name\": \"Migraine\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"84374\", \"name\": \"Loss of consciousness\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"84401\", \"name\": \"Hyperkinetic movements\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"84409\", \"name\": \"Nausea\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"84429\", \"name\": \"Nasal obstruction\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"84489\", \"name\": \"Testicular atrophy\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"84553\", \"name\": \"Gingival bleeding\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"84693\", \"name\": \"Emotional lability\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"84697\", \"name\": \"Mood swings\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"84874\", \"name\": \"Joint swelling\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"84920\", \"name\": \"Mood changes\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"85015\", \"name\": \"Palpitations\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"85859\", \"name\": \"Arterial thrombosis\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}], \"total_count\": 49, \"page\": 1, \"page_size\": 50, \"has_more\": false}",
+      "role": "tool",
+      "tool_call_id": "call_7lnjfopw",
+      "tool_name": "get_neighbors"
+    },
+    {
+      "content": "I will now inspect **Progesterone (14685)** to retrieve its side effects/phenotypes.",
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "function": {
+            "arguments": {
+              "entity_id": "14685"
+            },
+            "index": 0,
+            "name": "inspect_entity"
+          },
+          "id": "call_8psunjc9"
+        }
+      ]
+    },
+    {
+      "content": "{\"id\": \"14685\", \"name\": \"Progesterone\", \"type\": \"drug\", \"relations\": [{\"label\": \"contraindication\", \"display_labels\": [\"contraindication\"], \"neighbor_types\": [\"disease\"], \"neighbor_count\": 95}, {\"label\": \"drug_drug\", \"display_labels\": [\"synergistic interaction\"], \"neighbor_types\": [\"drug\"], \"neighbor_count\": 1206}, {\"label\": \"drug_effect\", \"display_labels\": [\"side effect\"], \"neighbor_types\": [\"effect/phenotype\"], \"neighbor_count\": 116}, {\"label\": \"drug_protein\", \"display_labels\": [\"enzyme\", \"target\", \"transporter\"], \"neighbor_types\": [\"gene/protein\"], \"neighbor_count\": 29}, {\"label\": \"indication\", \"display_labels\": [\"indication\"], \"neighbor_types\": [\"disease\"], \"neighbor_count\": 9}, {\"label\": \"off-label use\", \"display_labels\": [\"off-label use\"], \"neighbor_types\": [\"disease\"], \"neighbor_count\": 4}]}",
+      "role": "tool",
+      "tool_call_id": "call_8psunjc9",
+      "tool_name": "inspect_entity"
+    },
+    {
+      "content": "**Progesterone (14685)** has **116 side effects/phenotypes**. I will retrieve the first page of these effects.",
+      "role": "assistant",
+      "tool_calls": [
+        {
+          "function": {
+            "arguments": {
+              "entity_id": "14685",
+              "neighbor_type": "effect/phenotype",
+              "page": 1,
+              "relation": "drug_effect"
+            },
+            "index": 0,
+            "name": "get_neighbors"
+          },
+          "id": "call_4sheok3f"
+        }
+      ]
+    },
+    {
+      "content": "{\"items\": [{\"id\": \"22197\", \"name\": \"Cleft upper lip\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"22212\", \"name\": \"Cleft palate\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"22250\", \"name\": \"Sinusitis\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"22262\", \"name\": \"Edema\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"22380\", \"name\": \"Visual impairment\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"22447\", \"name\": \"Anxiety\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"22454\", \"name\": \"Neurological speech impairment\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"22457\", \"name\": \"Peripheral neuropathy\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"22458\", \"name\": \"Abnormal peripheral nervous system morphology\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"22467\", \"name\": \"Abnormality of the endocrine system\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"22530\", \"name\": \"Cholestasis\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"22539\", \"name\": \"Inflammatory abnormality of the skin\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"22581\", \"name\": \"Erythema\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"22585\", \"name\": \"Jaundice\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"22594\", \"name\": \"Hyperhidrosis\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"22613\", \"name\": \"Blurred vision\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"22676\", \"name\": \"Hypertonia\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"22718\", \"name\": \"Arthritis\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"22731\", \"name\": \"Decreased liver function\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"22735\", \"name\": \"Hepatic necrosis\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"22786\", \"name\": \"Increased body weight\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"22791\", \"name\": \"Abdominal distention\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"22822\", \"name\": \"Abnormal heart morphology\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"22952\", \"name\": \"Fever\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"22982\", \"name\": \"Pain\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"22998\", \"name\": \"Gait disturbance\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"22999\", \"name\": \"Dysphagia\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"23000\", \"name\": \"Seizure\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"23002\", \"name\": \"Headache\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"23011\", \"name\": \"Dyspnea\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"23057\", \"name\": \"Hypocalcemia\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"23072\", \"name\": \"Hirsutism\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"23073\", \"name\": \"Alopecia\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"23083\", \"name\": \"Rhinitis\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"23101\", \"name\": \"Tremor\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"23135\", \"name\": \"Dysarthria\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"23157\", \"name\": \"Vomiting\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"23158\", \"name\": \"Abdominal pain\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"23183\", \"name\": \"Thrombophlebitis\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"23214\", \"name\": \"Lymphadenopathy\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"23254\", \"name\": \"Bronchitis\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"23279\", \"name\": \"Abnormality of the liver\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"23415\", \"name\": \"Infertility\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"23417\", \"name\": \"Abnormality of coagulation\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"23469\", \"name\": \"Back pain\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"23488\", \"name\": \"Myopathy\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"23544\", \"name\": \"Myalgia\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"23799\", \"name\": \"Alopecia of scalp\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"23833\", \"name\": \"Tachycardia\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}, {\"id\": \"23844\", \"name\": \"Hepatitis\", \"type\": \"effect/phenotype\", \"display_labels\": [\"side effect\"]}], \"total_count\": 116, \"page\": 1, \"page_size\": 50, \"has_more\": true}",
+      "role": "tool",
+      "tool_call_id": "call_4sheok3f",
+      "tool_name": "get_neighbors"
+    }
+  ],
+  "model": {
+    "digest": "1922accd5827ebe6829e536369195db25eaf664528dc66206d646ea3bb386b71",
+    "quantization": "Q4_K_M",
+    "tag": "ministral-3:8b"
+  },
+  "num_ctx": 16384,
+  "num_predict": 4096,
+  "prompt_version": "P1:8f93b7c42ef7a90f64bbcd83e6b77db62e4f3c6b0c08a45f068b435a9c655265",
+  "protocol_version": "1.3.4",
+  "query_id": "BH2_03991",
+  "raw_final_output": null,
+  "record_schema_version": 1,
+  "run_id": "explore-f16-r2",
+  "seed": 42,
+  "status": "ERROR",
+  "temperature": 0,
+  "timestamps": {
+    "finished_at": "2026-10-20T14:58:53.930783+00:00",
+    "started_at": "2026-10-20T14:47:26.065253+00:00"
+  },
+  "token_counts": {
+    "completion": [
+      17,
+      138,
+      157,
+      68,
+      66,
+      67,
+      40,
+      66,
+      68,
+      70,
+      39,
+      65,
+      40,
+      67
+    ],
+    "prompt": [
+      510,
+      741,
+      1156,
+      1558,
+      3483,
+      3757,
+      5684,
+      5894,
+      5977,
+      6303,
+      8240,
+      8526,
+      10409,
+      10700
+    ]
+  },
+  "tool_config": {
+    "budget": 30,
+    "ordering_rule": "numeric-id",
+    "page_size": 50,
+    "prompt_values": {
+      "BUDGET": 30,
+      "PAGE_SIZE": 50
+    },
+    "tool_schema_sha256": "fe95093be50073aca922360645240d4410737fb39f11061aa1f5f2df0a8b0bab",
+    "tool_version": "T1"
+  },
+  "trace_graph": [
+    {
+      "creation_index": 1,
+      "label": "indication",
+      "u": "29908",
+      "v": "16572"
+    },
+    {
+      "creation_index": 1,
+      "label": "indication",
+      "u": "29908",
+      "v": "16575"
+    },
+    {
+      "creation_index": 1,
+      "label": "indication",
+      "u": "29908",
+      "v": "16580"
+    },
+    {
+      "creation_index": 2,
+      "label": "off-label use",
+      "u": "29908",
+      "v": "14203"
+    },
+    {
+      "creation_index": 2,
+      "label": "off-label use",
+      "u": "29908",
+      "v": "14528"
+    },
+    {
+      "creation_index": 2,
+      "label": "off-label use",
+      "u": "29908",
+      "v": "14685"
+    },
+    {
+      "creation_index": 4,
+      "label": "drug_effect",
+      "u": "16572",
+      "v": "22229"
+    },
+    {
+      "creation_index": 4,
+      "label": "drug_effect",
+      "u": "16572",
+      "v": "22250"
+    },
+    {
+      "creation_index": 4,
+      "label": "drug_effect",
+      "u": "16572",
+      "v": "22262"
+    },
+    {
+      "creation_index": 4,
+      "label": "drug_effect",
+      "u": "16572",
+      "v": "22304"
+    },
+    {
+      "creation_index": 4,
+      "label": "drug_effect",
+      "u": "16572",
+      "v": "22364"
+    },
+    {
+      "creation_index": 4,
+      "label": "drug_effect",
+      "u": "16572",
+      "v": "22447"
+    },
+    {
+      "creation_index": 4,
+      "label": "drug_effect",
+      "u": "16572",
+      "v": "22457"
+    },
+    {
+      "creation_index": 4,
+      "label": "drug_effect",
+      "u": "16572",
+      "v": "22458"
+    },
+    {
+      "creation_index": 4,
+      "label": "drug_effect",
+      "u": "16572",
+      "v": "22478"
+    },
+    {
+      "creation_index": 4,
+      "label": "drug_effect",
+      "u": "16572",
+      "v": "22539"
+    },
+    {
+      "creation_index": 4,
+      "label": "drug_effect",
+      "u": "16572",
+      "v": "22566"
+    },
+    {
+      "creation_index": 4,
+      "label": "drug_effect",
+      "u": "16572",
+      "v": "22574"
+    },
+    {
+      "creation_index": 4,
+      "label": "drug_effect",
+      "u": "16572",
+      "v": "22581"
+    },
+    {
+      "creation_index": 4,
+      "label": "drug_effect",
+      "u": "16572",
+      "v": "22588"
+    },
+    {
+      "creation_index": 4,
+      "label": "drug_effect",
+      "u": "16572",
+      "v": "22594"
+    },
+    {
+      "creation_index": 4,
+      "label": "drug_effect",
+      "u": "16572",
+      "v": "22613"
+    },
+    {
+      "creation_index": 4,
+      "label": "drug_effect",
+      "u": "16572",
+      "v": "22658"
+    },
+    {
+      "creation_index": 4,
+      "label": "drug_effect",
+      "u": "16572",
+      "v": "22718"
+    },
+    {
+      "creation_index": 4,
+      "label": "drug_effect",
+      "u": "16572",
+      "v": "22731"
+    },
+    {
+      "creation_index": 4,
+      "label": "drug_effect",
+      "u": "16572",
+      "v": "22786"
+    },
+    {
+      "creation_index": 4,
+      "label": "drug_effect",
+      "u": "16572",
+      "v": "22791"
+    },
+    {
+      "creation_index": 4,
+      "label": "drug_effect",
+      "u": "16572",
+      "v": "22811"
+    },
+    {
+      "creation_index": 4,
+      "label": "drug_effect",
+      "u": "16572",
+      "v": "22831"
+    },
+    {
+      "creation_index": 4,
+      "label": "drug_effect",
+      "u": "16572",
+      "v": "22846"
+    },
+    {
+      "creation_index": 4,
+      "label": "drug_effect",
+      "u": "16572",
+      "v": "22859"
+    },
+    {
+      "creation_index": 4,
+      "label": "drug_effect",
+      "u": "16572",
+      "v": "22952"
+    },
+    {
+      "creation_index": 4,
+      "label": "drug_effect",
+      "u": "16572",
+      "v": "22953"
+    },
+    {
+      "creation_index": 4,
+      "label": "drug_effect",
+      "u": "16572",
+      "v": "22982"
+    },
+    {
+      "creation_index": 4,
+      "label": "drug_effect",
+      "u": "16572",
+      "v": "22998"
+    },
+    {
+      "creation_index": 4,
+      "label": "drug_effect",
+      "u": "16572",
+      "v": "22999"
+    },
+    {
+      "creation_index": 4,
+      "label": "drug_effect",
+      "u": "16572",
+      "v": "23000"
+    },
+    {
+      "creation_index": 4,
+      "label": "drug_effect",
+      "u": "16572",
+      "v": "23002"
+    },
+    {
+      "creation_index": 4,
+      "label": "drug_effect",
+      "u": "16572",
+      "v": "23011"
+    },
+    {
+      "creation_index": 4,
+      "label": "drug_effect",
+      "u": "16572",
+      "v": "23060"
+    },
+    {
+      "creation_index": 4,
+      "label": "drug_effect",
+      "u": "16572",
+      "v": "23072"
+    },
+    {
+      "creation_index": 4,
+      "label": "drug_effect",
+      "u": "16572",
+      "v": "23073"
+    },
+    {
+      "creation_index": 4,
+      "label": "drug_effect",
+      "u": "16572",
+      "v": "23079"
+    },
+    {
+      "creation_index": 4,
+      "label": "drug_effect",
+      "u": "16572",
+      "v": "23083"
+    },
+    {
+      "creation_index": 4,
+      "label": "drug_effect",
+      "u": "16572",
+      "v": "23101"
+    },
+    {
+      "creation_index": 4,
+      "label": "drug_effect",
+      "u": "16572",
+      "v": "23139"
+    },
+    {
+      "creation_index": 4,
+      "label": "drug_effect",
+      "u": "16572",
+      "v": "23157"
+    },
+    {
+      "creation_index": 4,
+      "label": "drug_effect",
+      "u": "16572",
+      "v": "23158"
+    },
+    {
+      "creation_index": 4,
+      "label": "drug_effect",
+      "u": "16572",
+      "v": "23244"
+    },
+    {
+      "creation_index": 4,
+      "label": "drug_effect",
+      "u": "16572",
+      "v": "23254"
+    },
+    {
+      "creation_index": 4,
+      "label": "drug_effect",
+      "u": "16572",
+      "v": "23284"
+    },
+    {
+      "creation_index": 4,
+      "label": "drug_effect",
+      "u": "16572",
+      "v": "23351"
+    },
+    {
+      "creation_index": 4,
+      "label": "drug_effect",
+      "u": "16572",
+      "v": "23469"
+    },
+    {
+      "creation_index": 4,
+      "label": "drug_effect",
+      "u": "16572",
+      "v": "23488"
+    },
+    {
+      "creation_index": 4,
+      "label": "drug_effect",
+      "u": "16572",
+      "v": "23544"
+    },
+    {
+      "creation_index": 4,
+      "label": "drug_effect",
+      "u": "16572",
+      "v": "23764"
+    },
+    {
+      "creation_index": 6,
+      "label": "drug_effect",
+      "u": "16575",
+      "v": "22250"
+    },
+    {
+      "creation_index": 6,
+      "label": "drug_effect",
+      "u": "16575",
+      "v": "22262"
+    },
+    {
+      "creation_index": 6,
+      "label": "drug_effect",
+      "u": "16575",
+      "v": "22323"
+    },
+    {
+      "creation_index": 6,
+      "label": "drug_effect",
+      "u": "16575",
+      "v": "22364"
+    },
+    {
+      "creation_index": 6,
+      "label": "drug_effect",
+      "u": "16575",
+      "v": "22539"
+    },
+    {
+      "creation_index": 6,
+      "label": "drug_effect",
+      "u": "16575",
+      "v": "22594"
+    },
+    {
+      "creation_index": 6,
+      "label": "drug_effect",
+      "u": "16575",
+      "v": "22731"
+    },
+    {
+      "creation_index": 6,
+      "label": "drug_effect",
+      "u": "16575",
+      "v": "22786"
+    },
+    {
+      "creation_index": 6,
+      "label": "drug_effect",
+      "u": "16575",
+      "v": "22791"
+    },
+    {
+      "creation_index": 6,
+      "label": "drug_effect",
+      "u": "16575",
+      "v": "22879"
+    },
+    {
+      "creation_index": 6,
+      "label": "drug_effect",
+      "u": "16575",
+      "v": "23000"
+    },
+    {
+      "creation_index": 6,
+      "label": "drug_effect",
+      "u": "16575",
+      "v": "23002"
+    },
+    {
+      "creation_index": 6,
+      "label": "drug_effect",
+      "u": "16575",
+      "v": "23011"
+    },
+    {
+      "creation_index": 6,
+      "label": "drug_effect",
+      "u": "16575",
+      "v": "23059"
+    },
+    {
+      "creation_index": 6,
+      "label": "drug_effect",
+      "u": "16575",
+      "v": "23072"
+    },
+    {
+      "creation_index": 6,
+      "label": "drug_effect",
+      "u": "16575",
+      "v": "23073"
+    },
+    {
+      "creation_index": 6,
+      "label": "drug_effect",
+      "u": "16575",
+      "v": "23083"
+    },
+    {
+      "creation_index": 6,
+      "label": "drug_effect",
+      "u": "16575",
+      "v": "23097"
+    },
+    {
+      "creation_index": 6,
+      "label": "drug_effect",
+      "u": "16575",
+      "v": "23157"
+    },
+    {
+      "creation_index": 6,
+      "label": "drug_effect",
+      "u": "16575",
+      "v": "23544"
+    },
+    {
+      "creation_index": 6,
+      "label": "drug_effect",
+      "u": "16575",
+      "v": "23764"
+    },
+    {
+      "creation_index": 6,
+      "label": "drug_effect",
+      "u": "16575",
+      "v": "23799"
+    },
+    {
+      "creation_index": 6,
+      "label": "drug_effect",
+      "u": "16575",
+      "v": "23855"
+    },
+    {
+      "creation_index": 6,
+      "label": "drug_effect",
+      "u": "16575",
+      "v": "23864"
+    },
+    {
+      "creation_index": 6,
+      "label": "drug_effect",
+      "u": "16575",
+      "v": "23901"
+    },
+    {
+      "creation_index": 6,
+      "label": "drug_effect",
+      "u": "16575",
+      "v": "24475"
+    },
+    {
+      "creation_index": 6,
+      "label": "drug_effect",
+      "u": "16575",
+      "v": "25150"
+    },
+    {
+      "creation_index": 6,
+      "label": "drug_effect",
+      "u": "16575",
+      "v": "25201"
+    },
+    {
+      "creation_index": 6,
+      "label": "drug_effect",
+      "u": "16575",
+      "v": "25311"
+    },
+    {
+      "creation_index": 6,
+      "label": "drug_effect",
+      "u": "16575",
+      "v": "25644"
+    },
+    {
+      "creation_index": 6,
+      "label": "drug_effect",
+      "u": "16575",
+      "v": "25945"
+    },
+    {
+      "creation_index": 6,
+      "label": "drug_effect",
+      "u": "16575",
+      "v": "26096"
+    },
+    {
+      "creation_index": 6,
+      "label": "drug_effect",
+      "u": "16575",
+      "v": "26336"
+    },
+    {
+      "creation_index": 6,
+      "label": "drug_effect",
+      "u": "16575",
+      "v": "26629"
+    },
+    {
+      "creation_index": 6,
+      "label": "drug_effect",
+      "u": "16575",
+      "v": "84365"
+    },
+    {
+      "creation_index": 6,
+      "label": "drug_effect",
+      "u": "16575",
+      "v": "84409"
+    },
+    {
+      "creation_index": 6,
+      "label": "drug_effect",
+      "u": "16575",
+      "v": "84420"
+    },
+    {
+      "creation_index": 6,
+      "label": "drug_effect",
+      "u": "16575",
+      "v": "84519"
+    },
+    {
+      "creation_index": 6,
+      "label": "drug_effect",
+      "u": "16575",
+      "v": "84693"
+    },
+    {
+      "creation_index": 6,
+      "label": "drug_effect",
+      "u": "16575",
+      "v": "84697"
+    },
+    {
+      "creation_index": 6,
+      "label": "drug_effect",
+      "u": "16575",
+      "v": "84764"
+    },
+    {
+      "creation_index": 6,
+      "label": "drug_effect",
+      "u": "16575",
+      "v": "84767"
+    },
+    {
+      "creation_index": 6,
+      "label": "drug_effect",
+      "u": "16575",
+      "v": "84920"
+    },
+    {
+      "creation_index": 6,
+      "label": "drug_effect",
+      "u": "16575",
+      "v": "85015"
+    },
+    {
+      "creation_index": 6,
+      "label": "drug_effect",
+      "u": "16575",
+      "v": "85405"
+    },
+    {
+      "creation_index": 6,
+      "label": "drug_effect",
+      "u": "16575",
+      "v": "85848"
+    },
+    {
+      "creation_index": 6,
+      "label": "drug_effect",
+      "u": "16575",
+      "v": "85849"
+    },
+    {
+      "creation_index": 6,
+      "label": "drug_effect",
+      "u": "16575",
+      "v": "88208"
+    },
+    {
+      "creation_index": 6,
+      "label": "drug_effect",
+      "u": "16575",
+      "v": "88528"
+    },
+    {
+      "creation_index": 6,
+      "label": "drug_effect",
+      "u": "16575",
+      "v": "89214"
+    },
+    {
+      "creation_index": 10,
+      "label": "drug_effect",
+      "u": "14203",
+      "v": "22250"
+    },
+    {
+      "creation_index": 10,
+      "label": "drug_effect",
+      "u": "14203",
+      "v": "22262"
+    },
+    {
+      "creation_index": 10,
+      "label": "drug_effect",
+      "u": "14203",
+      "v": "22442"
+    },
+    {
+      "creation_index": 10,
+      "label": "drug_effect",
+      "u": "14203",
+      "v": "22447"
+    },
+    {
+      "creation_index": 10,
+      "label": "drug_effect",
+      "u": "14203",
+      "v": "22539"
+    },
+    {
+      "creation_index": 10,
+      "label": "drug_effect",
+      "u": "14203",
+      "v": "22581"
+    },
+    {
+      "creation_index": 10,
+      "label": "drug_effect",
+      "u": "14203",
+      "v": "22585"
+    },
+    {
+      "creation_index": 10,
+      "label": "drug_effect",
+      "u": "14203",
+      "v": "22594"
+    },
+    {
+      "creation_index": 10,
+      "label": "drug_effect",
+      "u": "14203",
+      "v": "22786"
+    },
+    {
+      "creation_index": 10,
+      "label": "drug_effect",
+      "u": "14203",
+      "v": "22791"
+    },
+    {
+      "creation_index": 10,
+      "label": "drug_effect",
+      "u": "14203",
+      "v": "22811"
+    },
+    {
+      "creation_index": 10,
+      "label": "drug_effect",
+      "u": "14203",
+      "v": "22916"
+    },
+    {
+      "creation_index": 10,
+      "label": "drug_effect",
+      "u": "14203",
+      "v": "22952"
+    },
+    {
+      "creation_index": 10,
+      "label": "drug_effect",
+      "u": "14203",
+      "v": "23000"
+    },
+    {
+      "creation_index": 10,
+      "label": "drug_effect",
+      "u": "14203",
+      "v": "23002"
+    },
+    {
+      "creation_index": 10,
+      "label": "drug_effect",
+      "u": "14203",
+      "v": "23011"
+    },
+    {
+      "creation_index": 10,
+      "label": "drug_effect",
+      "u": "14203",
+      "v": "23057"
+    },
+    {
+      "creation_index": 10,
+      "label": "drug_effect",
+      "u": "14203",
+      "v": "23072"
+    },
+    {
+      "creation_index": 10,
+      "label": "drug_effect",
+      "u": "14203",
+      "v": "23073"
+    },
+    {
+      "creation_index": 10,
+      "label": "drug_effect",
+      "u": "14203",
+      "v": "23157"
+    },
+    {
+      "creation_index": 10,
+      "label": "drug_effect",
+      "u": "14203",
+      "v": "23158"
+    },
+    {
+      "creation_index": 10,
+      "label": "drug_effect",
+      "u": "14203",
+      "v": "23183"
+    },
+    {
+      "creation_index": 10,
+      "label": "drug_effect",
+      "u": "14203",
+      "v": "23254"
+    },
+    {
+      "creation_index": 10,
+      "label": "drug_effect",
+      "u": "14203",
+      "v": "23469"
+    },
+    {
+      "creation_index": 10,
+      "label": "drug_effect",
+      "u": "14203",
+      "v": "23799"
+    },
+    {
+      "creation_index": 10,
+      "label": "drug_effect",
+      "u": "14203",
+      "v": "23833"
+    },
+    {
+      "creation_index": 10,
+      "label": "drug_effect",
+      "u": "14203",
+      "v": "23855"
+    },
+    {
+      "creation_index": 10,
+      "label": "drug_effect",
+      "u": "14203",
+      "v": "23864"
+    },
+    {
+      "creation_index": 10,
+      "label": "drug_effect",
+      "u": "14203",
+      "v": "23875"
+    },
+    {
+      "creation_index": 10,
+      "label": "drug_effect",
+      "u": "14203",
+      "v": "23901"
+    },
+    {
+      "creation_index": 10,
+      "label": "drug_effect",
+      "u": "14203",
+      "v": "23950"
+    },
+    {
+      "creation_index": 10,
+      "label": "drug_effect",
+      "u": "14203",
+      "v": "24040"
+    },
+    {
+      "creation_index": 10,
+      "label": "drug_effect",
+      "u": "14203",
+      "v": "24289"
+    },
+    {
+      "creation_index": 10,
+      "label": "drug_effect",
+      "u": "14203",
+      "v": "24337"
+    },
+    {
+      "creation_index": 10,
+      "label": "drug_effect",
+      "u": "14203",
+      "v": "24423"
+    },
+    {
+      "creation_index": 10,
+      "label": "drug_effect",
+      "u": "14203",
+      "v": "24461"
+    },
+    {
+      "creation_index": 10,
+      "label": "drug_effect",
+      "u": "14203",
+      "v": "24475"
+    },
+    {
+      "creation_index": 10,
+      "label": "drug_effect",
+      "u": "14203",
+      "v": "25201"
+    },
+    {
+      "creation_index": 10,
+      "label": "drug_effect",
+      "u": "14203",
+      "v": "25620"
+    },
+    {
+      "creation_index": 10,
+      "label": "drug_effect",
+      "u": "14203",
+      "v": "25638"
+    },
+    {
+      "creation_index": 10,
+      "label": "drug_effect",
+      "u": "14203",
+      "v": "25644"
+    },
+    {
+      "creation_index": 10,
+      "label": "drug_effect",
+      "u": "14203",
+      "v": "25672"
+    },
+    {
+      "creation_index": 10,
+      "label": "drug_effect",
+      "u": "14203",
+      "v": "25945"
+    },
+    {
+      "creation_index": 10,
+      "label": "drug_effect",
+      "u": "14203",
+      "v": "26336"
+    },
+    {
+      "creation_index": 10,
+      "label": "drug_effect",
+      "u": "14203",
+      "v": "26674"
+    },
+    {
+      "creation_index": 10,
+      "label": "drug_effect",
+      "u": "14203",
+      "v": "26948"
+    },
+    {
+      "creation_index": 10,
+      "label": "drug_effect",
+      "u": "14203",
+      "v": "26954"
+    },
+    {
+      "creation_index": 10,
+      "label": "drug_effect",
+      "u": "14203",
+      "v": "27007"
+    },
+    {
+      "creation_index": 10,
+      "label": "drug_effect",
+      "u": "14203",
+      "v": "33733"
+    },
+    {
+      "creation_index": 10,
+      "label": "drug_effect",
+      "u": "14203",
+      "v": "33739"
+    },
+    {
+      "creation_index": 12,
+      "label": "drug_effect",
+      "u": "14528",
+      "v": "22262"
+    },
+    {
+      "creation_index": 12,
+      "label": "drug_effect",
+      "u": "14528",
+      "v": "22380"
+    },
+    {
+      "creation_index": 12,
+      "label": "drug_effect",
+      "u": "14528",
+      "v": "22447"
+    },
+    {
+      "creation_index": 12,
+      "label": "drug_effect",
+      "u": "14528",
+      "v": "22539"
+    },
+    {
+      "creation_index": 12,
+      "label": "drug_effect",
+      "u": "14528",
+      "v": "22581"
+    },
+    {
+      "creation_index": 12,
+      "label": "drug_effect",
+      "u": "14528",
+      "v": "22585"
+    },
+    {
+      "creation_index": 12,
+      "label": "drug_effect",
+      "u": "14528",
+      "v": "22594"
+    },
+    {
+      "creation_index": 12,
+      "label": "drug_effect",
+      "u": "14528",
+      "v": "22613"
+    },
+    {
+      "creation_index": 12,
+      "label": "drug_effect",
+      "u": "14528",
+      "v": "22731"
+    },
+    {
+      "creation_index": 12,
+      "label": "drug_effect",
+      "u": "14528",
+      "v": "22733"
+    },
+    {
+      "creation_index": 12,
+      "label": "drug_effect",
+      "u": "14528",
+      "v": "22786"
+    },
+    {
+      "creation_index": 12,
+      "label": "drug_effect",
+      "u": "14528",
+      "v": "22923"
+    },
+    {
+      "creation_index": 12,
+      "label": "drug_effect",
+      "u": "14528",
+      "v": "22934"
+    },
+    {
+      "creation_index": 12,
+      "label": "drug_effect",
+      "u": "14528",
+      "v": "22952"
+    },
+    {
+      "creation_index": 12,
+      "label": "drug_effect",
+      "u": "14528",
+      "v": "23000"
+    },
+    {
+      "creation_index": 12,
+      "label": "drug_effect",
+      "u": "14528",
+      "v": "23002"
+    },
+    {
+      "creation_index": 12,
+      "label": "drug_effect",
+      "u": "14528",
+      "v": "23059"
+    },
+    {
+      "creation_index": 12,
+      "label": "drug_effect",
+      "u": "14528",
+      "v": "23072"
+    },
+    {
+      "creation_index": 12,
+      "label": "drug_effect",
+      "u": "14528",
+      "v": "23073"
+    },
+    {
+      "creation_index": 12,
+      "label": "drug_effect",
+      "u": "14528",
+      "v": "23101"
+    },
+    {
+      "creation_index": 12,
+      "label": "drug_effect",
+      "u": "14528",
+      "v": "23157"
+    },
+    {
+      "creation_index": 12,
+      "label": "drug_effect",
+      "u": "14528",
+      "v": "23284"
+    },
+    {
+      "creation_index": 12,
+      "label": "drug_effect",
+      "u": "14528",
+      "v": "23469"
+    },
+    {
+      "creation_index": 12,
+      "label": "drug_effect",
+      "u": "14528",
+      "v": "23799"
+    },
+    {
+      "creation_index": 12,
+      "label": "drug_effect",
+      "u": "14528",
+      "v": "23833"
+    },
+    {
+      "creation_index": 12,
+      "label": "drug_effect",
+      "u": "14528",
+      "v": "23901"
+    },
+    {
+      "creation_index": 12,
+      "label": "drug_effect",
+      "u": "14528",
+      "v": "23950"
+    },
+    {
+      "creation_index": 12,
+      "label": "drug_effect",
+      "u": "14528",
+      "v": "24289"
+    },
+    {
+      "creation_index": 12,
+      "label": "drug_effect",
+      "u": "14528",
+      "v": "24475"
+    },
+    {
+      "creation_index": 12,
+      "label": "drug_effect",
+      "u": "14528",
+      "v": "25201"
+    },
+    {
+      "creation_index": 12,
+      "label": "drug_effect",
+      "u": "14528",
+      "v": "25620"
+    },
+    {
+      "creation_index": 12,
+      "label": "drug_effect",
+      "u": "14528",
+      "v": "25644"
+    },
+    {
+      "creation_index": 12,
+      "label": "drug_effect",
+      "u": "14528",
+      "v": "25672"
+    },
+    {
+      "creation_index": 12,
+      "label": "drug_effect",
+      "u": "14528",
+      "v": "25945"
+    },
+    {
+      "creation_index": 12,
+      "label": "drug_effect",
+      "u": "14528",
+      "v": "26322"
+    },
+    {
+      "creation_index": 12,
+      "label": "drug_effect",
+      "u": "14528",
+      "v": "33730"
+    },
+    {
+      "creation_index": 12,
+      "label": "drug_effect",
+      "u": "14528",
+      "v": "33733"
+    },
+    {
+      "creation_index": 12,
+      "label": "drug_effect",
+      "u": "14528",
+      "v": "84374"
+    },
+    {
+      "creation_index": 12,
+      "label": "drug_effect",
+      "u": "14528",
+      "v": "84401"
+    },
+    {
+      "creation_index": 12,
+      "label": "drug_effect",
+      "u": "14528",
+      "v": "84409"
+    },
+    {
+      "creation_index": 12,
+      "label": "drug_effect",
+      "u": "14528",
+      "v": "84429"
+    },
+    {
+      "creation_index": 12,
+      "label": "drug_effect",
+      "u": "14528",
+      "v": "84489"
+    },
+    {
+      "creation_index": 12,
+      "label": "drug_effect",
+      "u": "14528",
+      "v": "84553"
+    },
+    {
+      "creation_index": 12,
+      "label": "drug_effect",
+      "u": "14528",
+      "v": "84693"
+    },
+    {
+      "creation_index": 12,
+      "label": "drug_effect",
+      "u": "14528",
+      "v": "84697"
+    },
+    {
+      "creation_index": 12,
+      "label": "drug_effect",
+      "u": "14528",
+      "v": "84874"
+    },
+    {
+      "creation_index": 12,
+      "label": "drug_effect",
+      "u": "14528",
+      "v": "84920"
+    },
+    {
+      "creation_index": 12,
+      "label": "drug_effect",
+      "u": "14528",
+      "v": "85015"
+    },
+    {
+      "creation_index": 12,
+      "label": "drug_effect",
+      "u": "14528",
+      "v": "85859"
+    },
+    {
+      "creation_index": 14,
+      "label": "drug_effect",
+      "u": "14685",
+      "v": "22197"
+    },
+    {
+      "creation_index": 14,
+      "label": "drug_effect",
+      "u": "14685",
+      "v": "22212"
+    },
+    {
+      "creation_index": 14,
+      "label": "drug_effect",
+      "u": "14685",
+      "v": "22250"
+    },
+    {
+      "creation_index": 14,
+      "label": "drug_effect",
+      "u": "14685",
+      "v": "22262"
+    },
+    {
+      "creation_index": 14,
+      "label": "drug_effect",
+      "u": "14685",
+      "v": "22380"
+    },
+    {
+      "creation_index": 14,
+      "label": "drug_effect",
+      "u": "14685",
+      "v": "22447"
+    },
+    {
+      "creation_index": 14,
+      "label": "drug_effect",
+      "u": "14685",
+      "v": "22454"
+    },
+    {
+      "creation_index": 14,
+      "label": "drug_effect",
+      "u": "14685",
+      "v": "22457"
+    },
+    {
+      "creation_index": 14,
+      "label": "drug_effect",
+      "u": "14685",
+      "v": "22458"
+    },
+    {
+      "creation_index": 14,
+      "label": "drug_effect",
+      "u": "14685",
+      "v": "22467"
+    },
+    {
+      "creation_index": 14,
+      "label": "drug_effect",
+      "u": "14685",
+      "v": "22530"
+    },
+    {
+      "creation_index": 14,
+      "label": "drug_effect",
+      "u": "14685",
+      "v": "22539"
+    },
+    {
+      "creation_index": 14,
+      "label": "drug_effect",
+      "u": "14685",
+      "v": "22581"
+    },
+    {
+      "creation_index": 14,
+      "label": "drug_effect",
+      "u": "14685",
+      "v": "22585"
+    },
+    {
+      "creation_index": 14,
+      "label": "drug_effect",
+      "u": "14685",
+      "v": "22594"
+    },
+    {
+      "creation_index": 14,
+      "label": "drug_effect",
+      "u": "14685",
+      "v": "22613"
+    },
+    {
+      "creation_index": 14,
+      "label": "drug_effect",
+      "u": "14685",
+      "v": "22676"
+    },
+    {
+      "creation_index": 14,
+      "label": "drug_effect",
+      "u": "14685",
+      "v": "22718"
+    },
+    {
+      "creation_index": 14,
+      "label": "drug_effect",
+      "u": "14685",
+      "v": "22731"
+    },
+    {
+      "creation_index": 14,
+      "label": "drug_effect",
+      "u": "14685",
+      "v": "22735"
+    },
+    {
+      "creation_index": 14,
+      "label": "drug_effect",
+      "u": "14685",
+      "v": "22786"
+    },
+    {
+      "creation_index": 14,
+      "label": "drug_effect",
+      "u": "14685",
+      "v": "22791"
+    },
+    {
+      "creation_index": 14,
+      "label": "drug_effect",
+      "u": "14685",
+      "v": "22822"
+    },
+    {
+      "creation_index": 14,
+      "label": "drug_effect",
+      "u": "14685",
+      "v": "22952"
+    },
+    {
+      "creation_index": 14,
+      "label": "drug_effect",
+      "u": "14685",
+      "v": "22982"
+    },
+    {
+      "creation_index": 14,
+      "label": "drug_effect",
+      "u": "14685",
+      "v": "22998"
+    },
+    {
+      "creation_index": 14,
+      "label": "drug_effect",
+      "u": "14685",
+      "v": "22999"
+    },
+    {
+      "creation_index": 14,
+      "label": "drug_effect",
+      "u": "14685",
+      "v": "23000"
+    },
+    {
+      "creation_index": 14,
+      "label": "drug_effect",
+      "u": "14685",
+      "v": "23002"
+    },
+    {
+      "creation_index": 14,
+      "label": "drug_effect",
+      "u": "14685",
+      "v": "23011"
+    },
+    {
+      "creation_index": 14,
+      "label": "drug_effect",
+      "u": "14685",
+      "v": "23057"
+    },
+    {
+      "creation_index": 14,
+      "label": "drug_effect",
+      "u": "14685",
+      "v": "23072"
+    },
+    {
+      "creation_index": 14,
+      "label": "drug_effect",
+      "u": "14685",
+      "v": "23073"
+    },
+    {
+      "creation_index": 14,
+      "label": "drug_effect",
+      "u": "14685",
+      "v": "23083"
+    },
+    {
+      "creation_index": 14,
+      "label": "drug_effect",
+      "u": "14685",
+      "v": "23101"
+    },
+    {
+      "creation_index": 14,
+      "label": "drug_effect",
+      "u": "14685",
+      "v": "23135"
+    },
+    {
+      "creation_index": 14,
+      "label": "drug_effect",
+      "u": "14685",
+      "v": "23157"
+    },
+    {
+      "creation_index": 14,
+      "label": "drug_effect",
+      "u": "14685",
+      "v": "23158"
+    },
+    {
+      "creation_index": 14,
+      "label": "drug_effect",
+      "u": "14685",
+      "v": "23183"
+    },
+    {
+      "creation_index": 14,
+      "label": "drug_effect",
+      "u": "14685",
+      "v": "23214"
+    },
+    {
+      "creation_index": 14,
+      "label": "drug_effect",
+      "u": "14685",
+      "v": "23254"
+    },
+    {
+      "creation_index": 14,
+      "label": "drug_effect",
+      "u": "14685",
+      "v": "23279"
+    },
+    {
+      "creation_index": 14,
+      "label": "drug_effect",
+      "u": "14685",
+      "v": "23415"
+    },
+    {
+      "creation_index": 14,
+      "label": "drug_effect",
+      "u": "14685",
+      "v": "23417"
+    },
+    {
+      "creation_index": 14,
+      "label": "drug_effect",
+      "u": "14685",
+      "v": "23469"
+    },
+    {
+      "creation_index": 14,
+      "label": "drug_effect",
+      "u": "14685",
+      "v": "23488"
+    },
+    {
+      "creation_index": 14,
+      "label": "drug_effect",
+      "u": "14685",
+      "v": "23544"
+    },
+    {
+      "creation_index": 14,
+      "label": "drug_effect",
+      "u": "14685",
+      "v": "23799"
+    },
+    {
+      "creation_index": 14,
+      "label": "drug_effect",
+      "u": "14685",
+      "v": "23833"
+    },
+    {
+      "creation_index": 14,
+      "label": "drug_effect",
+      "u": "14685",
+      "v": "23844"
+    }
+  ]
+}
