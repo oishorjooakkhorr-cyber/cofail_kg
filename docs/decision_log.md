@@ -2769,3 +2769,29 @@ Evidence considered (exploratory, not adopted; no frozen file changed):
 Also recorded: independent re-check of the smoke_panel labels (results/diagnostics/s25_audit_check/):
 0 disagreements over 1,115 answers incl. all 557 audit rows. It supplements, and does not replace,
 the researcher's D4 manual audit, which is still pending.
+
+## 2026-11-07 — S25 audit sheet filled; audit-selection and §19.1(b) readings confirmed
+Researcher decisions (S25 report, assumptions 1 and 2):
+- **Audit selection (protocol §19.1):** confirmed: when an agent has no OFF_QUESTION episode, the first
+  two eligible episodes in `SHA256("42" + query_id + agent_id)` order are chosen, so each agent
+  contributes 2 episodes (8 in smoke_panel). Implemented as such in
+  `src/cofail_kg/evaluation/panel_analysis.py`; no code change.
+- **§19.1(b) file rule:** confirmed: "open no files except the agent-input sheet and the PrimeKG cache"
+  concerns inputs; `agents/panel_runner.py` (like `agents/trace.py`) may read and write its own run
+  records and progress file, never evaluator data. No code change.
+- **Audit sheet:** at the researcher's instruction ("yes fill"), `my_label_A` / `my_label_B` of
+  `results/runs/smoke_panel/audit_sheet.csv` (557 rows) were filled by Claude with an independent
+  re-derivation (`scripts/25_audit_independent_check.py`), not by hand. The script imports nothing from
+  `cofail_kg`; it rebuilds s, B*_q, B_q, T_q, G_q and A*_q from raw `kg.csv`, `BioHopR.json` and the
+  frozen relation mapping (all equal the stored reference sets for the 4 smoke queries), rebuilds the
+  trace graph and "appeared" from each call log (equal the saved records; every trace edge exists in
+  PrimeKG), normalizes the parsed answers (§12) and applies §13, §14.1 and §14.2. Result: 557/557 rows
+  agree with the code on Label A, Label B and the primary path; answer counts per episode agree; the
+  audit selection re-derived from these labels equals the sheet's 8 episodes. Each filled row's
+  `notes` says it is an independent re-derivation, not a human audit. Machine columns unchanged.
+  Outputs: `results/runs/smoke_panel/analysis/independent_audit_check.{csv,json}` (gitignored).
+  The one OFF_QUESTION/UNGROUNDED row is **Cogito-14B** BH2_04474, answer 84470 (the S25 report said
+  Gemma4-12B; corrected). Cogito submitted id 84470 with name "Hypokalemia"; 84470 is "Brainstem
+  dysplasia" (effect/phenotype), so the ID wins (§12, NAME_ID_MISMATCH); it never appeared and is not in
+  T_q.
+- Gate D4 is not decided by this entry.

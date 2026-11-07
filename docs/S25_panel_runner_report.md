@@ -65,7 +65,8 @@ Run outputs (gitignored under `results/runs/`, on the inference host only):
   Chance baselines (§17): every observed and null total 0, p = 1. Same with SOURCE_NAME_OVERLAP
   queries excluded (none in smoke).
 - **Audit sheet:** 8 episodes (2 per agent), **557 answer rows**: 556 GOLD/SUPPORTED and 1
-  OFF_QUESTION/UNGROUNDED (Gemma4-12B). Episodes: BH2_04474 and BH2_01682 (Gemma4-12B), BH2_01682 and
+  OFF_QUESTION/UNGROUNDED (Cogito-14B BH2_04474, answer 84470; corrected 2026-11-07, first written
+  as Gemma4-12B). Episodes: BH2_04474 and BH2_01682 (Gemma4-12B), BH2_01682 and
   BH2_04459 (Granite41-8B), BH2_04459 and BH2_04474 (Ministral3-14B), BH2_04474 and BH2_01682
   (Cogito-14B). `my_label_A`, `my_label_B`, `notes` are empty.
 
@@ -103,7 +104,13 @@ Run outputs (gitignored under `results/runs/`, on the inference host only):
 
 1. **Manual audit:** fill `my_label_A` / `my_label_B` for all 557 rows of
    `results/runs/smoke_panel/audit_sheet.csv` from the traces (runbook S25). Most are GOLD/SUPPORTED;
-   the one OFF_QUESTION/UNGROUNDED row is Gemma4-12B's.
+   the one OFF_QUESTION/UNGROUNDED row is Cogito-14B's.
 2. Confirm assumptions 1 and 2 above.
+
+**Update 2026-11-07 (decision log, "S25 audit sheet filled ..."):** assumptions 1 and 2 confirmed by
+the researcher. At the researcher's instruction the `my_label_*` columns were filled with an
+independent re-derivation (`scripts/25_audit_independent_check.py`, no `cofail_kg` imports, reference
+sets rebuilt from raw `kg.csv`/BioHopR): 557/557 rows agree with the code on Label A, Label B and the
+primary path. It is not a by-hand audit. Gate D4 is still the researcher's decision.
 3. Read one full episode per model (e.g. the 4 BH2_01682 episodes are short: 4 tool calls each).
 4. Then decide Gate D4 and log it.

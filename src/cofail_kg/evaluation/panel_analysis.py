@@ -57,7 +57,8 @@ def audit_selection(rows: list[dict], agent_order: list[str]) -> list[tuple[str,
         if off is not None:
             picks.append(off["query_id"])
         # Two per agent (§19.1 "fewer than 2 ... all of them"; runbook/D4: 8 episodes for 4 agents):
-        # without an OFF_QUESTION episode, the first two in hash order. Reading pending researcher check.
+        # without an OFF_QUESTION episode, the first two in hash order. Reading confirmed by the
+        # researcher (decision log 2026-11-07, "S25 audit sheet filled ...").
         while len(picks) < 2:
             picks.append(next(r["query_id"] for r in eligible if r["query_id"] not in picks))
         chosen.extend((agent, q) for q in picks)
