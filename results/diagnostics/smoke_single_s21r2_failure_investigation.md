@@ -43,9 +43,10 @@ What the record shows, turn by turn:
 re-prompt it made the right tool call, but by then only a final JSON answer was accepted. The harness did
 what it is written to do. Whether that is the intended reading of §9.5 is your call.
 
-**Side finding (diagnostics only):** the harness has a `TEXT_TOOL_CALL` detector (`text_tool_call()`) that
-flags tool calls written as text. It did **not** fire here: the record has no `TEXT_TOOL_CALL` event. It
-doesn't recognise the `name[ARGS]{...}` form. This affects only the diagnostic event, not the status.
+**Note on the `TEXT_TOOL_CALL` event:** the record has no `TEXT_TOOL_CALL` event. This is correct:
+§9.5 defines a text tool call as a tool name "immediately followed by `(`", or a JSON object whose
+`"name"`/`"function"` is a tool name. `inspect_entity[ARGS]{...}` matches neither. (Corrected
+2026-11-07: an earlier version of this report called this a detector miss.)
 
 **How often:** 1 of 20 Ministral episodes. Ministral's screening didn't show this. I haven't searched the
 other Ministral episodes for text-form calls that were followed by a working native call.
@@ -150,5 +151,5 @@ exactly. This episode crosses the runbook's 90% line, so §9.1 re-selection appl
    tool call after the re-prompt?
 3. Cogito-14B: keep the frozen 240 s request timeout. Changing it is unlikely to turn these into successes
    (§2).
-4. Whether to fix `PROTOCOL_VERSION` (and how to mark these 80 records), and whether the text-call
-   detector should recognise `name[ARGS]{...}`. Both are engineering fixes; I'll make them only if you ask.
+4. Whether to fix `PROTOCOL_VERSION` (and how to mark these 80 records). This is an engineering fix;
+   I'll make it only if you ask. (The text-call detector already follows §9.5; see §1.)

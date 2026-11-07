@@ -2686,3 +2686,34 @@ and guards each agent's evidence-block runtime, including GPU layer residency fr
 (Cogito-14B 47/49 partial offload). Summary goes to results/diagnostics/smoke_single_s21r2_summary.md.
 No inference was run: this environment has no Ollama or GPU. The run is for the researcher's host
 after `scripts/21_freeze_models.py check` passes.
+
+## 2026-11-07 — protocol_version label in smoke_single_s21r2 records
+The 80 smoke_single_s21r2 episode records carry `protocol_version: "1.3.5"` because the code
+constant `PROTOCOL_VERSION` in src/cofail_kg/agents/trace.py was not updated at the v1.3.6
+re-freeze (fcf1c8a). The true version is 1.3.6, as confirmed by the docs/frozen_pilot_protocol.md
+hash in each record's `source_sha256`. Records unchanged. Researcher decision: fix the constant at
+the start of S25 (the next inference stage), not now, so that the pinned S22 sources stay unchanged
+and `22_smoke_single_s21r2.py report` can still be regenerated.
+
+## 2026-11-07 — S22 smoke_single_s21r2: technical failures and S23 §16 failure convention
+Researcher decisions:
+- Ministral3-14B BH2_02033 PARSE_FAIL (raw-text tool call `inspect_entity[ARGS]{...}`, then a native
+  tool call after the single re-prompt) is a technical failure as §9.4/§9.5 prescribe. No harness change.
+- Cogito-14B BH2_03953 and BH2_04425 ERROR/CONNECTION (240 s request timeout during ~6,000-token
+  replies) are technical failures. No runtime revision; request timeout stays 240 s; no repeat S22.
+- S23 question 1 (technical failures in §16): keep all queries, and report queries with a failed
+  episode separately (per-query `technical_failure_agents` already supports this; applied at reporting).
+Evidence: results/diagnostics/smoke_single_s21r2_failure_investigation.md.
+
+## 2026-11-07 — §9.1 re-selection review: Ministral3-14B; S22 smoke_single_s21r2 accepted
+Trigger: BH2_04003 peak prompt 30,048 / 32,768 tokens (91.7% of num_ctx) at 26 tool calls.
+Researcher S21 review outcome: no runtime revision; num_ctx 32768 kept; no repeat S22.
+Justification (researcher): the episode still ended in SUCCESS; it is 1 of 20 episodes, and the
+peak is the same deterministic one as at S20 screening.
+Researcher decision: S22 (smoke_single_s21r2) accepted. Results preserved unchanged.
+
+## 2026-11-07 — S23 §16.3 wrong-turn events: literal reading confirmed
+Researcher confirmed the literal reading implemented in src/cofail_kg/evaluation/cofailure.py:
+a 1-step path to a non-Type_T node whose label is not in R1 produces an event (step 1); for a path
+of 3 or more steps only steps 1 and 2 are checked; a 0-step path (answer = s) produces no event.
+No code change.
