@@ -2828,3 +2828,15 @@ are their frozen hashes (relation_mapping, tools, prompt). Header version unchan
 the S2 and S5 precedent of filling `[TBD@Sx]` values without a version change. Because
 docs/frozen_pilot_protocol.md is a pinned run source, S26 is rerun on the resulting commit and the
 pilot method commit is re-recorded (next entry); it supersedes ec99113.
+
+## 2026-11-07 — S26 rerun — Gate D5: PASS; pilot method commit 06dbee4bf334d1554462c2660d69500c64731eee
+Rerun after the protocol tag update (entry above). Supersedes the method commit ec99113 recorded earlier
+today. On **06dbee4bf334d1554462c2660d69500c64731eee**:
+1. TBD/DEFAULT: PASS. No `[TBD@Sx]` tag remains in the protocol or decision rules; the only `[DEFAULT]`
+   (§8 pilot 25/75) was confirmed at S10.
+2. Tests: PASS. 727 passed, 2 skipped (real-BioHopR loader tests; data/raw/biohopr/ absent), 0 failed.
+3. Clean tree: PASS (0 tracked or untracked changes).
+4. Frozen hashes: PASS. 16/16 recomputed values equal (kg_fingerprint, relation_mapping, tools, prompt,
+   8 manifest/sheet entries, PrimeKG cache parquets, raw kg.csv, BioHopR.json content hash).
+5. BioHopR revision (by content, as before) and installed digests (`models_s21r2`, check exit 0): PASS.
+This entry is committed after 06dbee4 and changes only docs/decision_log.md (not a pinned run source).
