@@ -208,7 +208,7 @@ For each query `q`:
 
 ## 5. Relation mapping and ambiguity tags
 
-### 5.1 Relation mapping — procedure `[FROZEN]`, result `[TBD@S6]`
+### 5.1 Relation mapping — procedure `[FROZEN]`, result `[FROZEN]` at S6
 
 **Candidates.** Hop-1 candidates: every label connecting Type_S and Type_B. Hop-2 candidates: every
 label connecting Type_B and Type_T. Candidate sets: every non-empty subset of a hop's candidates;
@@ -244,7 +244,7 @@ connects the same two node types. Computed by code; no manual judgment.
 Tag per relation type: `NONE`, `R1_AMBIGUOUS`, `R2_AMBIGUOUS`, or `BOTH_AMBIGUOUS`. Tags never
 change an answer set; they only split co-failure reporting. Limitation (thesis): the rule is coarse.
 
-### 5.3 Answer construction `[FROZEN]` rule, result `[TBD@S6]`
+### 5.3 Answer construction `[FROZEN]` rule, result `[FROZEN]` at S6
 
 BioHopR builds answer lists in one of two ways, and the way differs between relation types
 (`docs/S4_findings.md`, Report 2):
@@ -430,7 +430,7 @@ output cache. Runs proceed one model at a time, in agent order, through the mani
 
 Agent-facing code reads only the agent-input sheet (§8) and the PrimeKG index.
 
-1. **System prompt:** the template `P1` `[TBD@S14]` (text approved by the researcher at S14 and
+1. **System prompt:** the template `P1` `[FROZEN]` at S14 (text approved by the researcher at S14 and
    reproduced in the thesis appendix). It describes the two tools and the output format and may
    contain the placeholders `{PAGE_SIZE}` and `{BUDGET}`, filled from the configuration. It contains
    no BioHopR rows, entity names, PrimeKG labels, or examples drawn from the data. **Prompt version**
@@ -490,7 +490,7 @@ its display label(s), neighbor node type(s), and the number of unique neighbors.
 No `direction` argument is used: §3.2 fixes either-direction traversal with no directional
 exceptions (`[FROZEN]` at S4).
 
-Tool descriptions (wording of the tool schemas, version `T1`) `[TBD@S11]`: neutral; they describe
+Tool descriptions (wording of the tool schemas, version `T1`) `[FROZEN]` at S11: neutral; they describe
 what each tool does and never mention BioHopR relations, relation types or answers.
 
 | Rule | Value |

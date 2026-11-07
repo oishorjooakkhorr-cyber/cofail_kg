@@ -2818,3 +2818,13 @@ S26 rerun on **ec9911378343b07dd883d636951dfef82871e30d** — this commit is the
    `models_s21r2`.
 Note: this entry is committed after ec99113. That commit changes only docs/decision_log.md, which
 is not a pinned run source; pilot records will carry the HEAD at run time.
+
+## 2026-11-07 — S26 — Protocol status tags updated: §5.1, §5.3, §9.3 P1, §10 T1 → [FROZEN]
+Researcher instruction ("frozen"), after the S26 note that these tags still printed `[TBD@…]`.
+Changes to protocol: §5.1 result and §5.3 result `[TBD@S6]` → `[FROZEN]` at S6; §9.3 P1
+`[TBD@S14]` → `[FROZEN]` at S14; §10 T1 `[TBD@S11]` → `[FROZEN]` at S11. Tag text only: the values
+were frozen at those stages (decision log 2026-10-13, 2026-10-15, 2026-10-16) and are unchanged, as
+are their frozen hashes (relation_mapping, tools, prompt). Header version unchanged (1.3.6), following
+the S2 and S5 precedent of filling `[TBD@Sx]` values without a version change. Because
+docs/frozen_pilot_protocol.md is a pinned run source, S26 is rerun on the resulting commit and the
+pilot method commit is re-recorded (next entry); it supersedes ec99113.
