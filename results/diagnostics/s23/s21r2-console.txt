@@ -1,0 +1,25 @@
+{
+ "totals": {
+  "question_cf3": 0,
+  "question_cf4": 0,
+  "grounded_cf3": 0,
+  "grounded_cf4": 0,
+  "hop1_clean_cf3": 0,
+  "hop1_clean_cf4": 0,
+  "benchmark_cf3": 2,
+  "benchmark_cf4": 2,
+  "pcf_rel3": 0,
+  "pcf_rel4": 0,
+  "pcf_node3": 0,
+  "pcf_node4": 0,
+  "pcf_shortcut3": 0
+ }
+}
+BH2_05686 effect/phenotype:disease:drug BOTH_AMBIGUOUS {'question': 0, 'grounded': 0, 'hop1_clean': 0, 'benchmark': 1, 'pcf_rel3': 0, 'pcf_node3': 0, 'pcf_shortcut3': 0} failures: []
+BH2_05843 effect/phenotype:disease:drug BOTH_AMBIGUOUS {'question': 0, 'grounded': 0, 'hop1_clean': 0, 'benchmark': 1, 'pcf_rel3': 0, 'pcf_node3': 0, 'pcf_shortcut3': 0} failures: []
+Gemma4-12B Granite41-8B 0/1 0.0
+Gemma4-12B Ministral3-14B 0/0 None
+Gemma4-12B Cogito-14B 0/0 None
+Granite41-8B Ministral3-14B 1/1 1.0
+Granite41-8B Cogito-14B 0/0 None
+Ministral3-14B Cogito-14B 0/0 None
