@@ -1,0 +1,1505 @@
+{
+  "agent_order": [
+    "Gemma4-12B",
+    "Granite41-8B",
+    "Ministral3-14B",
+    "Cogito-14B"
+  ],
+  "aggregate": {
+    "N1": {
+      "cf3": {
+        "null_mean": 0.0,
+        "null_median": 0.0,
+        "null_p95": 0.0,
+        "observed_exceeds_null": false,
+        "observed_total": 0,
+        "p": 1.0,
+        "query_count": 20
+      },
+      "cf4": {
+        "null_mean": 0.0,
+        "null_median": 0.0,
+        "null_p95": 0.0,
+        "observed_exceeds_null": false,
+        "observed_total": 0,
+        "p": 1.0,
+        "query_count": 20
+      }
+    },
+    "N1-H1": {
+      "cf3": {
+        "null_mean": 0.0,
+        "null_median": 0.0,
+        "null_p95": 0.0,
+        "observed_exceeds_null": false,
+        "observed_total": 0,
+        "p": 1.0,
+        "query_count": 20
+      },
+      "cf4": {
+        "null_mean": 0.0,
+        "null_median": 0.0,
+        "null_p95": 0.0,
+        "observed_exceeds_null": false,
+        "observed_total": 0,
+        "p": 1.0,
+        "query_count": 20
+      }
+    },
+    "N2": {
+      "cf3": {
+        "null_mean": 0.0,
+        "null_median": 0.0,
+        "null_p95": 0.0,
+        "observed_exceeds_null": false,
+        "observed_total": 0,
+        "p": 1.0,
+        "query_count": 20
+      },
+      "cf4": {
+        "null_mean": 0.0,
+        "null_median": 0.0,
+        "null_p95": 0.0,
+        "observed_exceeds_null": false,
+        "observed_total": 0,
+        "p": 1.0,
+        "query_count": 20
+      }
+    }
+  },
+  "aggregate_excluding_technical_failures": {
+    "N1": {
+      "cf3": {
+        "null_mean": 0.0,
+        "null_median": 0.0,
+        "null_p95": 0.0,
+        "observed_exceeds_null": false,
+        "observed_total": 0,
+        "p": 1.0,
+        "query_count": 17
+      },
+      "cf4": {
+        "null_mean": 0.0,
+        "null_median": 0.0,
+        "null_p95": 0.0,
+        "observed_exceeds_null": false,
+        "observed_total": 0,
+        "p": 1.0,
+        "query_count": 17
+      }
+    },
+    "N1-H1": {
+      "cf3": {
+        "null_mean": 0.0,
+        "null_median": 0.0,
+        "null_p95": 0.0,
+        "observed_exceeds_null": false,
+        "observed_total": 0,
+        "p": 1.0,
+        "query_count": 17
+      },
+      "cf4": {
+        "null_mean": 0.0,
+        "null_median": 0.0,
+        "null_p95": 0.0,
+        "observed_exceeds_null": false,
+        "observed_total": 0,
+        "p": 1.0,
+        "query_count": 17
+      }
+    },
+    "N2": {
+      "cf3": {
+        "null_mean": 0.0,
+        "null_median": 0.0,
+        "null_p95": 0.0,
+        "observed_exceeds_null": false,
+        "observed_total": 0,
+        "p": 1.0,
+        "query_count": 17
+      },
+      "cf4": {
+        "null_mean": 0.0,
+        "null_median": 0.0,
+        "null_p95": 0.0,
+        "observed_exceeds_null": false,
+        "observed_total": 0,
+        "p": 1.0,
+        "query_count": 17
+      }
+    }
+  },
+  "note": "S24 implementation example on screening queries; not pilot data",
+  "queries": [
+    {
+      "nulls": {
+        "N1": {
+          "null_probability_cf3": 0.0,
+          "null_probability_cf4": 0.0,
+          "observed_cf3": 0,
+          "observed_cf4": 0,
+          "observed_sets": {
+            "Cogito-14B": [],
+            "Gemma4-12B": [],
+            "Granite41-8B": [],
+            "Ministral3-14B": []
+          },
+          "pool_sizes": {
+            "Cogito-14B": 0,
+            "Gemma4-12B": 0,
+            "Granite41-8B": 0,
+            "Ministral3-14B": 0
+          }
+        },
+        "N1-H1": {
+          "null_probability_cf3": 0.0,
+          "null_probability_cf4": 0.0,
+          "observed_cf3": 0,
+          "observed_cf4": 0,
+          "observed_sets": {
+            "Cogito-14B": [],
+            "Gemma4-12B": [],
+            "Granite41-8B": [],
+            "Ministral3-14B": []
+          },
+          "pool_sizes": {
+            "Cogito-14B": 0,
+            "Gemma4-12B": 0,
+            "Granite41-8B": 0,
+            "Ministral3-14B": 0
+          }
+        },
+        "N2": {
+          "null_probability_cf3": 0.0,
+          "null_probability_cf4": 0.0,
+          "observed_cf3": 0,
+          "observed_cf4": 0,
+          "observed_sets": {
+            "Cogito-14B": [],
+            "Gemma4-12B": [],
+            "Granite41-8B": [],
+            "Ministral3-14B": []
+          },
+          "pool_sizes": {
+            "Cogito-14B": 0,
+            "Gemma4-12B": 0,
+            "Granite41-8B": 0,
+            "Ministral3-14B": 0
+          }
+        }
+      },
+      "query_id": "BH2_00461",
+      "relation_type": "drug:gene/protein:disease",
+      "technical_failure_agents": []
+    },
+    {
+      "nulls": {
+        "N1": {
+          "null_probability_cf3": 0.0,
+          "null_probability_cf4": 0.0,
+          "observed_cf3": 0,
+          "observed_cf4": 0,
+          "observed_sets": {
+            "Cogito-14B": [],
+            "Gemma4-12B": [],
+            "Granite41-8B": [],
+            "Ministral3-14B": []
+          },
+          "pool_sizes": {
+            "Cogito-14B": 0,
+            "Gemma4-12B": 0,
+            "Granite41-8B": 0,
+            "Ministral3-14B": 0
+          }
+        },
+        "N1-H1": {
+          "null_probability_cf3": 0.0,
+          "null_probability_cf4": 0.0,
+          "observed_cf3": 0,
+          "observed_cf4": 0,
+          "observed_sets": {
+            "Cogito-14B": [],
+            "Gemma4-12B": [],
+            "Granite41-8B": [],
+            "Ministral3-14B": []
+          },
+          "pool_sizes": {
+            "Cogito-14B": 0,
+            "Gemma4-12B": 0,
+            "Granite41-8B": 0,
+            "Ministral3-14B": 0
+          }
+        },
+        "N2": {
+          "null_probability_cf3": 0.0,
+          "null_probability_cf4": 0.0,
+          "observed_cf3": 0,
+          "observed_cf4": 0,
+          "observed_sets": {
+            "Cogito-14B": [],
+            "Gemma4-12B": [],
+            "Granite41-8B": [],
+            "Ministral3-14B": []
+          },
+          "pool_sizes": {
+            "Cogito-14B": 0,
+            "Gemma4-12B": 0,
+            "Granite41-8B": 0,
+            "Ministral3-14B": 0
+          }
+        }
+      },
+      "query_id": "BH2_02033",
+      "relation_type": "drug:gene/protein:disease",
+      "technical_failure_agents": [
+        "Ministral3-14B"
+      ]
+    },
+    {
+      "nulls": {
+        "N1": {
+          "null_probability_cf3": 0.0,
+          "null_probability_cf4": 0.0,
+          "observed_cf3": 0,
+          "observed_cf4": 0,
+          "observed_sets": {
+            "Cogito-14B": [],
+            "Gemma4-12B": [],
+            "Granite41-8B": [],
+            "Ministral3-14B": []
+          },
+          "pool_sizes": {
+            "Cogito-14B": 3,
+            "Gemma4-12B": 0,
+            "Granite41-8B": 0,
+            "Ministral3-14B": 0
+          }
+        },
+        "N1-H1": {
+          "null_probability_cf3": 0.0,
+          "null_probability_cf4": 0.0,
+          "observed_cf3": 0,
+          "observed_cf4": 0,
+          "observed_sets": {
+            "Cogito-14B": [],
+            "Gemma4-12B": [],
+            "Granite41-8B": [],
+            "Ministral3-14B": []
+          },
+          "pool_sizes": {
+            "Cogito-14B": 3,
+            "Gemma4-12B": 0,
+            "Granite41-8B": 0,
+            "Ministral3-14B": 0
+          }
+        },
+        "N2": {
+          "null_probability_cf3": 0.0,
+          "null_probability_cf4": 0.0,
+          "observed_cf3": 0,
+          "observed_cf4": 0,
+          "observed_sets": {
+            "Cogito-14B": [],
+            "Gemma4-12B": [],
+            "Granite41-8B": [],
+            "Ministral3-14B": []
+          },
+          "pool_sizes": {
+            "Cogito-14B": 3,
+            "Gemma4-12B": 0,
+            "Granite41-8B": 0,
+            "Ministral3-14B": 0
+          }
+        }
+      },
+      "query_id": "BH2_03434",
+      "relation_type": "gene/protein:disease:drug",
+      "technical_failure_agents": []
+    },
+    {
+      "nulls": {
+        "N1": {
+          "null_probability_cf3": 0.0,
+          "null_probability_cf4": 0.0,
+          "observed_cf3": 0,
+          "observed_cf4": 0,
+          "observed_sets": {
+            "Cogito-14B": [],
+            "Gemma4-12B": [],
+            "Granite41-8B": [],
+            "Ministral3-14B": []
+          },
+          "pool_sizes": {
+            "Cogito-14B": 0,
+            "Gemma4-12B": 0,
+            "Granite41-8B": 0,
+            "Ministral3-14B": 0
+          }
+        },
+        "N1-H1": {
+          "null_probability_cf3": 0.0,
+          "null_probability_cf4": 0.0,
+          "observed_cf3": 0,
+          "observed_cf4": 0,
+          "observed_sets": {
+            "Cogito-14B": [],
+            "Gemma4-12B": [],
+            "Granite41-8B": [],
+            "Ministral3-14B": []
+          },
+          "pool_sizes": {
+            "Cogito-14B": 0,
+            "Gemma4-12B": 0,
+            "Granite41-8B": 0,
+            "Ministral3-14B": 0
+          }
+        },
+        "N2": {
+          "null_probability_cf3": 0.0,
+          "null_probability_cf4": 0.0,
+          "observed_cf3": 0,
+          "observed_cf4": 0,
+          "observed_sets": {
+            "Cogito-14B": [],
+            "Gemma4-12B": [],
+            "Granite41-8B": [],
+            "Ministral3-14B": []
+          },
+          "pool_sizes": {
+            "Cogito-14B": 0,
+            "Gemma4-12B": 0,
+            "Granite41-8B": 0,
+            "Ministral3-14B": 0
+          }
+        }
+      },
+      "query_id": "BH2_03619",
+      "relation_type": "disease:drug:effect/phenotype",
+      "technical_failure_agents": []
+    },
+    {
+      "nulls": {
+        "N1": {
+          "null_probability_cf3": 0.0,
+          "null_probability_cf4": 0.0,
+          "observed_cf3": 0,
+          "observed_cf4": 0,
+          "observed_sets": {
+            "Cogito-14B": [],
+            "Gemma4-12B": [],
+            "Granite41-8B": [],
+            "Ministral3-14B": []
+          },
+          "pool_sizes": {
+            "Cogito-14B": 0,
+            "Gemma4-12B": 0,
+            "Granite41-8B": 0,
+            "Ministral3-14B": 3
+          }
+        },
+        "N1-H1": {
+          "null_probability_cf3": 0.0,
+          "null_probability_cf4": 0.0,
+          "observed_cf3": 0,
+          "observed_cf4": 0,
+          "observed_sets": {
+            "Cogito-14B": [],
+            "Gemma4-12B": [],
+            "Granite41-8B": [],
+            "Ministral3-14B": []
+          },
+          "pool_sizes": {
+            "Cogito-14B": 0,
+            "Gemma4-12B": 0,
+            "Granite41-8B": 0,
+            "Ministral3-14B": 0
+          }
+        },
+        "N2": {
+          "null_probability_cf3": 0.0,
+          "null_probability_cf4": 0.0,
+          "observed_cf3": 0,
+          "observed_cf4": 0,
+          "observed_sets": {
+            "Cogito-14B": [],
+            "Gemma4-12B": [],
+            "Granite41-8B": [],
+            "Ministral3-14B": []
+          },
+          "pool_sizes": {
+            "Cogito-14B": 0,
+            "Gemma4-12B": 0,
+            "Granite41-8B": 0,
+            "Ministral3-14B": 3
+          }
+        }
+      },
+      "query_id": "BH2_03750",
+      "relation_type": "disease:drug:effect/phenotype",
+      "technical_failure_agents": []
+    },
+    {
+      "nulls": {
+        "N1": {
+          "null_probability_cf3": 0.0,
+          "null_probability_cf4": 0.0,
+          "observed_cf3": 0,
+          "observed_cf4": 0,
+          "observed_sets": {
+            "Cogito-14B": [],
+            "Gemma4-12B": [],
+            "Granite41-8B": [],
+            "Ministral3-14B": []
+          },
+          "pool_sizes": {
+            "Cogito-14B": 0,
+            "Gemma4-12B": 0,
+            "Granite41-8B": 0,
+            "Ministral3-14B": 0
+          }
+        },
+        "N1-H1": {
+          "null_probability_cf3": 0.0,
+          "null_probability_cf4": 0.0,
+          "observed_cf3": 0,
+          "observed_cf4": 0,
+          "observed_sets": {
+            "Cogito-14B": [],
+            "Gemma4-12B": [],
+            "Granite41-8B": [],
+            "Ministral3-14B": []
+          },
+          "pool_sizes": {
+            "Cogito-14B": 0,
+            "Gemma4-12B": 0,
+            "Granite41-8B": 0,
+            "Ministral3-14B": 0
+          }
+        },
+        "N2": {
+          "null_probability_cf3": 0.0,
+          "null_probability_cf4": 0.0,
+          "observed_cf3": 0,
+          "observed_cf4": 0,
+          "observed_sets": {
+            "Cogito-14B": [],
+            "Gemma4-12B": [],
+            "Granite41-8B": [],
+            "Ministral3-14B": []
+          },
+          "pool_sizes": {
+            "Cogito-14B": 0,
+            "Gemma4-12B": 0,
+            "Granite41-8B": 0,
+            "Ministral3-14B": 0
+          }
+        }
+      },
+      "query_id": "BH2_03760",
+      "relation_type": "disease:drug:effect/phenotype",
+      "technical_failure_agents": []
+    },
+    {
+      "nulls": {
+        "N1": {
+          "null_probability_cf3": 0.0,
+          "null_probability_cf4": 0.0,
+          "observed_cf3": 0,
+          "observed_cf4": 0,
+          "observed_sets": {
+            "Cogito-14B": [],
+            "Gemma4-12B": [],
+            "Granite41-8B": [
+              "22540"
+            ],
+            "Ministral3-14B": []
+          },
+          "pool_sizes": {
+            "Cogito-14B": 0,
+            "Gemma4-12B": 0,
+            "Granite41-8B": 1,
+            "Ministral3-14B": 0
+          }
+        },
+        "N1-H1": {
+          "null_probability_cf3": 0.0,
+          "null_probability_cf4": 0.0,
+          "observed_cf3": 0,
+          "observed_cf4": 0,
+          "observed_sets": {
+            "Cogito-14B": [],
+            "Gemma4-12B": [],
+            "Granite41-8B": [],
+            "Ministral3-14B": []
+          },
+          "pool_sizes": {
+            "Cogito-14B": 0,
+            "Gemma4-12B": 0,
+            "Granite41-8B": 0,
+            "Ministral3-14B": 0
+          }
+        },
+        "N2": {
+          "null_probability_cf3": 0.0,
+          "null_probability_cf4": 0.0,
+          "observed_cf3": 0,
+          "observed_cf4": 0,
+          "observed_sets": {
+            "Cogito-14B": [],
+            "Gemma4-12B": [],
+            "Granite41-8B": [
+              "22540"
+            ],
+            "Ministral3-14B": []
+          },
+          "pool_sizes": {
+            "Cogito-14B": 0,
+            "Gemma4-12B": 0,
+            "Granite41-8B": 1,
+            "Ministral3-14B": 0
+          }
+        }
+      },
+      "query_id": "BH2_03762",
+      "relation_type": "disease:drug:effect/phenotype",
+      "technical_failure_agents": []
+    },
+    {
+      "nulls": {
+        "N1": {
+          "null_probability_cf3": 0.0,
+          "null_probability_cf4": 0.0,
+          "observed_cf3": 0,
+          "observed_cf4": 0,
+          "observed_sets": {
+            "Cogito-14B": [],
+            "Gemma4-12B": [],
+            "Granite41-8B": [],
+            "Ministral3-14B": []
+          },
+          "pool_sizes": {
+            "Cogito-14B": 0,
+            "Gemma4-12B": 0,
+            "Granite41-8B": 0,
+            "Ministral3-14B": 0
+          }
+        },
+        "N1-H1": {
+          "null_probability_cf3": 0.0,
+          "null_probability_cf4": 0.0,
+          "observed_cf3": 0,
+          "observed_cf4": 0,
+          "observed_sets": {
+            "Cogito-14B": [],
+            "Gemma4-12B": [],
+            "Granite41-8B": [],
+            "Ministral3-14B": []
+          },
+          "pool_sizes": {
+            "Cogito-14B": 0,
+            "Gemma4-12B": 0,
+            "Granite41-8B": 0,
+            "Ministral3-14B": 0
+          }
+        },
+        "N2": {
+          "null_probability_cf3": 0.0,
+          "null_probability_cf4": 0.0,
+          "observed_cf3": 0,
+          "observed_cf4": 0,
+          "observed_sets": {
+            "Cogito-14B": [],
+            "Gemma4-12B": [],
+            "Granite41-8B": [],
+            "Ministral3-14B": []
+          },
+          "pool_sizes": {
+            "Cogito-14B": 0,
+            "Gemma4-12B": 0,
+            "Granite41-8B": 0,
+            "Ministral3-14B": 0
+          }
+        }
+      },
+      "query_id": "BH2_03850",
+      "relation_type": "disease:drug:effect/phenotype",
+      "technical_failure_agents": []
+    },
+    {
+      "nulls": {
+        "N1": {
+          "null_probability_cf3": 0.0,
+          "null_probability_cf4": 0.0,
+          "observed_cf3": 0,
+          "observed_cf4": 0,
+          "observed_sets": {
+            "Cogito-14B": [],
+            "Gemma4-12B": [],
+            "Granite41-8B": [],
+            "Ministral3-14B": []
+          },
+          "pool_sizes": {
+            "Cogito-14B": 0,
+            "Gemma4-12B": 0,
+            "Granite41-8B": 0,
+            "Ministral3-14B": 0
+          }
+        },
+        "N1-H1": {
+          "null_probability_cf3": 0.0,
+          "null_probability_cf4": 0.0,
+          "observed_cf3": 0,
+          "observed_cf4": 0,
+          "observed_sets": {
+            "Cogito-14B": [],
+            "Gemma4-12B": [],
+            "Granite41-8B": [],
+            "Ministral3-14B": []
+          },
+          "pool_sizes": {
+            "Cogito-14B": 0,
+            "Gemma4-12B": 0,
+            "Granite41-8B": 0,
+            "Ministral3-14B": 0
+          }
+        },
+        "N2": {
+          "null_probability_cf3": 0.0,
+          "null_probability_cf4": 0.0,
+          "observed_cf3": 0,
+          "observed_cf4": 0,
+          "observed_sets": {
+            "Cogito-14B": [],
+            "Gemma4-12B": [],
+            "Granite41-8B": [],
+            "Ministral3-14B": []
+          },
+          "pool_sizes": {
+            "Cogito-14B": 0,
+            "Gemma4-12B": 0,
+            "Granite41-8B": 0,
+            "Ministral3-14B": 0
+          }
+        }
+      },
+      "query_id": "BH2_03856",
+      "relation_type": "disease:drug:effect/phenotype",
+      "technical_failure_agents": []
+    },
+    {
+      "nulls": {
+        "N1": {
+          "null_probability_cf3": 0.0,
+          "null_probability_cf4": 0.0,
+          "observed_cf3": 0,
+          "observed_cf4": 0,
+          "observed_sets": {
+            "Cogito-14B": [],
+            "Gemma4-12B": [],
+            "Granite41-8B": [],
+            "Ministral3-14B": []
+          },
+          "pool_sizes": {
+            "Cogito-14B": 0,
+            "Gemma4-12B": 0,
+            "Granite41-8B": 0,
+            "Ministral3-14B": 0
+          }
+        },
+        "N1-H1": {
+          "null_probability_cf3": 0.0,
+          "null_probability_cf4": 0.0,
+          "observed_cf3": 0,
+          "observed_cf4": 0,
+          "observed_sets": {
+            "Cogito-14B": [],
+            "Gemma4-12B": [],
+            "Granite41-8B": [],
+            "Ministral3-14B": []
+          },
+          "pool_sizes": {
+            "Cogito-14B": 0,
+            "Gemma4-12B": 0,
+            "Granite41-8B": 0,
+            "Ministral3-14B": 0
+          }
+        },
+        "N2": {
+          "null_probability_cf3": 0.0,
+          "null_probability_cf4": 0.0,
+          "observed_cf3": 0,
+          "observed_cf4": 0,
+          "observed_sets": {
+            "Cogito-14B": [],
+            "Gemma4-12B": [],
+            "Granite41-8B": [],
+            "Ministral3-14B": []
+          },
+          "pool_sizes": {
+            "Cogito-14B": 0,
+            "Gemma4-12B": 0,
+            "Granite41-8B": 0,
+            "Ministral3-14B": 0
+          }
+        }
+      },
+      "query_id": "BH2_03879",
+      "relation_type": "disease:drug:effect/phenotype",
+      "technical_failure_agents": []
+    },
+    {
+      "nulls": {
+        "N1": {
+          "null_probability_cf3": 0.0,
+          "null_probability_cf4": 0.0,
+          "observed_cf3": 0,
+          "observed_cf4": 0,
+          "observed_sets": {
+            "Cogito-14B": [],
+            "Gemma4-12B": [],
+            "Granite41-8B": [],
+            "Ministral3-14B": []
+          },
+          "pool_sizes": {
+            "Cogito-14B": 0,
+            "Gemma4-12B": 0,
+            "Granite41-8B": 0,
+            "Ministral3-14B": 0
+          }
+        },
+        "N1-H1": {
+          "null_probability_cf3": 0.0,
+          "null_probability_cf4": 0.0,
+          "observed_cf3": 0,
+          "observed_cf4": 0,
+          "observed_sets": {
+            "Cogito-14B": [],
+            "Gemma4-12B": [],
+            "Granite41-8B": [],
+            "Ministral3-14B": []
+          },
+          "pool_sizes": {
+            "Cogito-14B": 0,
+            "Gemma4-12B": 0,
+            "Granite41-8B": 0,
+            "Ministral3-14B": 0
+          }
+        },
+        "N2": {
+          "null_probability_cf3": 0.0,
+          "null_probability_cf4": 0.0,
+          "observed_cf3": 0,
+          "observed_cf4": 0,
+          "observed_sets": {
+            "Cogito-14B": [],
+            "Gemma4-12B": [],
+            "Granite41-8B": [],
+            "Ministral3-14B": []
+          },
+          "pool_sizes": {
+            "Cogito-14B": 0,
+            "Gemma4-12B": 0,
+            "Granite41-8B": 0,
+            "Ministral3-14B": 0
+          }
+        }
+      },
+      "query_id": "BH2_03881",
+      "relation_type": "disease:drug:effect/phenotype",
+      "technical_failure_agents": []
+    },
+    {
+      "nulls": {
+        "N1": {
+          "null_probability_cf3": 0.0,
+          "null_probability_cf4": 0.0,
+          "observed_cf3": 0,
+          "observed_cf4": 0,
+          "observed_sets": {
+            "Cogito-14B": [],
+            "Gemma4-12B": [],
+            "Granite41-8B": [],
+            "Ministral3-14B": []
+          },
+          "pool_sizes": {
+            "Cogito-14B": 0,
+            "Gemma4-12B": 0,
+            "Granite41-8B": 0,
+            "Ministral3-14B": 0
+          }
+        },
+        "N1-H1": {
+          "null_probability_cf3": 0.0,
+          "null_probability_cf4": 0.0,
+          "observed_cf3": 0,
+          "observed_cf4": 0,
+          "observed_sets": {
+            "Cogito-14B": [],
+            "Gemma4-12B": [],
+            "Granite41-8B": [],
+            "Ministral3-14B": []
+          },
+          "pool_sizes": {
+            "Cogito-14B": 0,
+            "Gemma4-12B": 0,
+            "Granite41-8B": 0,
+            "Ministral3-14B": 0
+          }
+        },
+        "N2": {
+          "null_probability_cf3": 0.0,
+          "null_probability_cf4": 0.0,
+          "observed_cf3": 0,
+          "observed_cf4": 0,
+          "observed_sets": {
+            "Cogito-14B": [],
+            "Gemma4-12B": [],
+            "Granite41-8B": [],
+            "Ministral3-14B": []
+          },
+          "pool_sizes": {
+            "Cogito-14B": 0,
+            "Gemma4-12B": 0,
+            "Granite41-8B": 0,
+            "Ministral3-14B": 0
+          }
+        }
+      },
+      "query_id": "BH2_03953",
+      "relation_type": "disease:drug:effect/phenotype",
+      "technical_failure_agents": [
+        "Cogito-14B"
+      ]
+    },
+    {
+      "nulls": {
+        "N1": {
+          "null_probability_cf3": 0.0,
+          "null_probability_cf4": 0.0,
+          "observed_cf3": 0,
+          "observed_cf4": 0,
+          "observed_sets": {
+            "Cogito-14B": [],
+            "Gemma4-12B": [],
+            "Granite41-8B": [],
+            "Ministral3-14B": []
+          },
+          "pool_sizes": {
+            "Cogito-14B": 0,
+            "Gemma4-12B": 0,
+            "Granite41-8B": 0,
+            "Ministral3-14B": 0
+          }
+        },
+        "N1-H1": {
+          "null_probability_cf3": 0.0,
+          "null_probability_cf4": 0.0,
+          "observed_cf3": 0,
+          "observed_cf4": 0,
+          "observed_sets": {
+            "Cogito-14B": [],
+            "Gemma4-12B": [],
+            "Granite41-8B": [],
+            "Ministral3-14B": []
+          },
+          "pool_sizes": {
+            "Cogito-14B": 0,
+            "Gemma4-12B": 0,
+            "Granite41-8B": 0,
+            "Ministral3-14B": 0
+          }
+        },
+        "N2": {
+          "null_probability_cf3": 0.0,
+          "null_probability_cf4": 0.0,
+          "observed_cf3": 0,
+          "observed_cf4": 0,
+          "observed_sets": {
+            "Cogito-14B": [],
+            "Gemma4-12B": [],
+            "Granite41-8B": [],
+            "Ministral3-14B": []
+          },
+          "pool_sizes": {
+            "Cogito-14B": 0,
+            "Gemma4-12B": 0,
+            "Granite41-8B": 0,
+            "Ministral3-14B": 0
+          }
+        }
+      },
+      "query_id": "BH2_03991",
+      "relation_type": "disease:drug:effect/phenotype",
+      "technical_failure_agents": []
+    },
+    {
+      "nulls": {
+        "N1": {
+          "null_probability_cf3": 0.0,
+          "null_probability_cf4": 0.0,
+          "observed_cf3": 0,
+          "observed_cf4": 0,
+          "observed_sets": {
+            "Cogito-14B": [],
+            "Gemma4-12B": [],
+            "Granite41-8B": [],
+            "Ministral3-14B": []
+          },
+          "pool_sizes": {
+            "Cogito-14B": 0,
+            "Gemma4-12B": 0,
+            "Granite41-8B": 0,
+            "Ministral3-14B": 0
+          }
+        },
+        "N1-H1": {
+          "null_probability_cf3": 0.0,
+          "null_probability_cf4": 0.0,
+          "observed_cf3": 0,
+          "observed_cf4": 0,
+          "observed_sets": {
+            "Cogito-14B": [],
+            "Gemma4-12B": [],
+            "Granite41-8B": [],
+            "Ministral3-14B": []
+          },
+          "pool_sizes": {
+            "Cogito-14B": 0,
+            "Gemma4-12B": 0,
+            "Granite41-8B": 0,
+            "Ministral3-14B": 0
+          }
+        },
+        "N2": {
+          "null_probability_cf3": 0.0,
+          "null_probability_cf4": 0.0,
+          "observed_cf3": 0,
+          "observed_cf4": 0,
+          "observed_sets": {
+            "Cogito-14B": [],
+            "Gemma4-12B": [],
+            "Granite41-8B": [],
+            "Ministral3-14B": []
+          },
+          "pool_sizes": {
+            "Cogito-14B": 0,
+            "Gemma4-12B": 0,
+            "Granite41-8B": 0,
+            "Ministral3-14B": 0
+          }
+        }
+      },
+      "query_id": "BH2_04003",
+      "relation_type": "disease:drug:effect/phenotype",
+      "technical_failure_agents": []
+    },
+    {
+      "nulls": {
+        "N1": {
+          "null_probability_cf3": 0.0,
+          "null_probability_cf4": 0.0,
+          "observed_cf3": 0,
+          "observed_cf4": 0,
+          "observed_sets": {
+            "Cogito-14B": [],
+            "Gemma4-12B": [],
+            "Granite41-8B": [],
+            "Ministral3-14B": []
+          },
+          "pool_sizes": {
+            "Cogito-14B": 0,
+            "Gemma4-12B": 0,
+            "Granite41-8B": 0,
+            "Ministral3-14B": 0
+          }
+        },
+        "N1-H1": {
+          "null_probability_cf3": 0.0,
+          "null_probability_cf4": 0.0,
+          "observed_cf3": 0,
+          "observed_cf4": 0,
+          "observed_sets": {
+            "Cogito-14B": [],
+            "Gemma4-12B": [],
+            "Granite41-8B": [],
+            "Ministral3-14B": []
+          },
+          "pool_sizes": {
+            "Cogito-14B": 0,
+            "Gemma4-12B": 0,
+            "Granite41-8B": 0,
+            "Ministral3-14B": 0
+          }
+        },
+        "N2": {
+          "null_probability_cf3": 0.0,
+          "null_probability_cf4": 0.0,
+          "observed_cf3": 0,
+          "observed_cf4": 0,
+          "observed_sets": {
+            "Cogito-14B": [],
+            "Gemma4-12B": [],
+            "Granite41-8B": [],
+            "Ministral3-14B": []
+          },
+          "pool_sizes": {
+            "Cogito-14B": 0,
+            "Gemma4-12B": 0,
+            "Granite41-8B": 0,
+            "Ministral3-14B": 0
+          }
+        }
+      },
+      "query_id": "BH2_04007",
+      "relation_type": "disease:drug:effect/phenotype",
+      "technical_failure_agents": []
+    },
+    {
+      "nulls": {
+        "N1": {
+          "null_probability_cf3": 0.0,
+          "null_probability_cf4": 0.0,
+          "observed_cf3": 0,
+          "observed_cf4": 0,
+          "observed_sets": {
+            "Cogito-14B": [],
+            "Gemma4-12B": [],
+            "Granite41-8B": [],
+            "Ministral3-14B": []
+          },
+          "pool_sizes": {
+            "Cogito-14B": 0,
+            "Gemma4-12B": 0,
+            "Granite41-8B": 0,
+            "Ministral3-14B": 0
+          }
+        },
+        "N1-H1": {
+          "null_probability_cf3": 0.0,
+          "null_probability_cf4": 0.0,
+          "observed_cf3": 0,
+          "observed_cf4": 0,
+          "observed_sets": {
+            "Cogito-14B": [],
+            "Gemma4-12B": [],
+            "Granite41-8B": [],
+            "Ministral3-14B": []
+          },
+          "pool_sizes": {
+            "Cogito-14B": 0,
+            "Gemma4-12B": 0,
+            "Granite41-8B": 0,
+            "Ministral3-14B": 0
+          }
+        },
+        "N2": {
+          "null_probability_cf3": 0.0,
+          "null_probability_cf4": 0.0,
+          "observed_cf3": 0,
+          "observed_cf4": 0,
+          "observed_sets": {
+            "Cogito-14B": [],
+            "Gemma4-12B": [],
+            "Granite41-8B": [],
+            "Ministral3-14B": []
+          },
+          "pool_sizes": {
+            "Cogito-14B": 0,
+            "Gemma4-12B": 0,
+            "Granite41-8B": 0,
+            "Ministral3-14B": 0
+          }
+        }
+      },
+      "query_id": "BH2_04425",
+      "relation_type": "disease:drug:effect/phenotype",
+      "technical_failure_agents": [
+        "Cogito-14B"
+      ]
+    },
+    {
+      "nulls": {
+        "N1": {
+          "null_probability_cf3": 0.0,
+          "null_probability_cf4": 0.0,
+          "observed_cf3": 0,
+          "observed_cf4": 0,
+          "observed_sets": {
+            "Cogito-14B": [],
+            "Gemma4-12B": [],
+            "Granite41-8B": [
+              "27933",
+              "28313",
+              "28849",
+              "30035",
+              "31912",
+              "32296",
+              "33605",
+              "35641",
+              "35849",
+              "36105",
+              "36223",
+              "36240",
+              "36581",
+              "36743",
+              "36868",
+              "37144",
+              "37703",
+              "37717",
+              "37790",
+              "38957",
+              "39484",
+              "39815",
+              "83760",
+              "83761",
+              "83840",
+              "83841",
+              "83928",
+              "84223",
+              "84300",
+              "84310"
+            ],
+            "Ministral3-14B": [
+              "27933",
+              "35641",
+              "36105",
+              "37703",
+              "37717",
+              "38957",
+              "83760",
+              "83761",
+              "83840",
+              "83841",
+              "84310"
+            ]
+          },
+          "pool_sizes": {
+            "Cogito-14B": 4,
+            "Gemma4-12B": 0,
+            "Granite41-8B": 30,
+            "Ministral3-14B": 30
+          }
+        },
+        "N1-H1": {
+          "null_probability_cf3": 0.0,
+          "null_probability_cf4": 0.0,
+          "observed_cf3": 0,
+          "observed_cf4": 0,
+          "observed_sets": {
+            "Cogito-14B": [],
+            "Gemma4-12B": [],
+            "Granite41-8B": [],
+            "Ministral3-14B": []
+          },
+          "pool_sizes": {
+            "Cogito-14B": 4,
+            "Gemma4-12B": 0,
+            "Granite41-8B": 0,
+            "Ministral3-14B": 0
+          }
+        },
+        "N2": {
+          "null_probability_cf3": 0.0,
+          "null_probability_cf4": 0.0,
+          "observed_cf3": 0,
+          "observed_cf4": 0,
+          "observed_sets": {
+            "Cogito-14B": [],
+            "Gemma4-12B": [],
+            "Granite41-8B": [
+              "27933",
+              "28313",
+              "28849",
+              "30035",
+              "31912",
+              "32296",
+              "33605",
+              "35641",
+              "35849",
+              "36105",
+              "36223",
+              "36240",
+              "36581",
+              "36743",
+              "36868",
+              "37144",
+              "37703",
+              "37717",
+              "37790",
+              "38957",
+              "39484",
+              "39815",
+              "83760",
+              "83761",
+              "83840",
+              "83841",
+              "83928",
+              "84223",
+              "84300",
+              "84310"
+            ],
+            "Ministral3-14B": [
+              "27933",
+              "35641",
+              "36105",
+              "37703",
+              "37717",
+              "38957",
+              "83760",
+              "83761",
+              "83840",
+              "83841",
+              "84310"
+            ]
+          },
+          "pool_sizes": {
+            "Cogito-14B": 4,
+            "Gemma4-12B": 0,
+            "Granite41-8B": 30,
+            "Ministral3-14B": 30
+          }
+        }
+      },
+      "query_id": "BH2_05366",
+      "relation_type": "gene/protein:drug:disease",
+      "technical_failure_agents": []
+    },
+    {
+      "nulls": {
+        "N1": {
+          "null_probability_cf3": 0.0,
+          "null_probability_cf4": 0.0,
+          "observed_cf3": 0,
+          "observed_cf4": 0,
+          "observed_sets": {
+            "Cogito-14B": [],
+            "Gemma4-12B": [],
+            "Granite41-8B": [],
+            "Ministral3-14B": []
+          },
+          "pool_sizes": {
+            "Cogito-14B": 69,
+            "Gemma4-12B": 0,
+            "Granite41-8B": 0,
+            "Ministral3-14B": 0
+          }
+        },
+        "N1-H1": {
+          "null_probability_cf3": 0.0,
+          "null_probability_cf4": 0.0,
+          "observed_cf3": 0,
+          "observed_cf4": 0,
+          "observed_sets": {
+            "Cogito-14B": [],
+            "Gemma4-12B": [],
+            "Granite41-8B": [],
+            "Ministral3-14B": []
+          },
+          "pool_sizes": {
+            "Cogito-14B": 69,
+            "Gemma4-12B": 0,
+            "Granite41-8B": 0,
+            "Ministral3-14B": 0
+          }
+        },
+        "N2": {
+          "null_probability_cf3": 0.0,
+          "null_probability_cf4": 0.0,
+          "observed_cf3": 0,
+          "observed_cf4": 0,
+          "observed_sets": {
+            "Cogito-14B": [],
+            "Gemma4-12B": [],
+            "Granite41-8B": [],
+            "Ministral3-14B": []
+          },
+          "pool_sizes": {
+            "Cogito-14B": 69,
+            "Gemma4-12B": 0,
+            "Granite41-8B": 0,
+            "Ministral3-14B": 0
+          }
+        }
+      },
+      "query_id": "BH2_05686",
+      "relation_type": "effect/phenotype:disease:drug",
+      "technical_failure_agents": []
+    },
+    {
+      "nulls": {
+        "N1": {
+          "null_probability_cf3": 0.0,
+          "null_probability_cf4": 0.0,
+          "observed_cf3": 0,
+          "observed_cf4": 0,
+          "observed_sets": {
+            "Cogito-14B": [],
+            "Gemma4-12B": [],
+            "Granite41-8B": [],
+            "Ministral3-14B": []
+          },
+          "pool_sizes": {
+            "Cogito-14B": 210,
+            "Gemma4-12B": 0,
+            "Granite41-8B": 0,
+            "Ministral3-14B": 0
+          }
+        },
+        "N1-H1": {
+          "null_probability_cf3": 0.0,
+          "null_probability_cf4": 0.0,
+          "observed_cf3": 0,
+          "observed_cf4": 0,
+          "observed_sets": {
+            "Cogito-14B": [],
+            "Gemma4-12B": [],
+            "Granite41-8B": [],
+            "Ministral3-14B": []
+          },
+          "pool_sizes": {
+            "Cogito-14B": 210,
+            "Gemma4-12B": 0,
+            "Granite41-8B": 0,
+            "Ministral3-14B": 0
+          }
+        },
+        "N2": {
+          "null_probability_cf3": 0.0,
+          "null_probability_cf4": 0.0,
+          "observed_cf3": 0,
+          "observed_cf4": 0,
+          "observed_sets": {
+            "Cogito-14B": [],
+            "Gemma4-12B": [],
+            "Granite41-8B": [],
+            "Ministral3-14B": []
+          },
+          "pool_sizes": {
+            "Cogito-14B": 57,
+            "Gemma4-12B": 0,
+            "Granite41-8B": 0,
+            "Ministral3-14B": 0
+          }
+        }
+      },
+      "query_id": "BH2_05843",
+      "relation_type": "effect/phenotype:disease:drug",
+      "technical_failure_agents": []
+    },
+    {
+      "nulls": {
+        "N1": {
+          "null_probability_cf3": 0.0,
+          "null_probability_cf4": 0.0,
+          "observed_cf3": 0,
+          "observed_cf4": 0,
+          "observed_sets": {
+            "Cogito-14B": [],
+            "Gemma4-12B": [],
+            "Granite41-8B": [
+              "14143",
+              "14150",
+              "14182",
+              "14216",
+              "14256",
+              "14488",
+              "14652",
+              "14783",
+              "14921",
+              "15145",
+              "15485",
+              "15856",
+              "16350",
+              "16801",
+              "20146",
+              "20169",
+              "20172",
+              "20279",
+              "20298",
+              "20303",
+              "20304",
+              "20376",
+              "20403",
+              "20424",
+              "20427"
+            ],
+            "Ministral3-14B": []
+          },
+          "pool_sizes": {
+            "Cogito-14B": 0,
+            "Gemma4-12B": 0,
+            "Granite41-8B": 25,
+            "Ministral3-14B": 0
+          }
+        },
+        "N1-H1": {
+          "null_probability_cf3": 0.0,
+          "null_probability_cf4": 0.0,
+          "observed_cf3": 0,
+          "observed_cf4": 0,
+          "observed_sets": {
+            "Cogito-14B": [],
+            "Gemma4-12B": [],
+            "Granite41-8B": [],
+            "Ministral3-14B": []
+          },
+          "pool_sizes": {
+            "Cogito-14B": 0,
+            "Gemma4-12B": 0,
+            "Granite41-8B": 0,
+            "Ministral3-14B": 0
+          }
+        },
+        "N2": {
+          "null_probability_cf3": 0.0,
+          "null_probability_cf4": 0.0,
+          "observed_cf3": 0,
+          "observed_cf4": 0,
+          "observed_sets": {
+            "Cogito-14B": [],
+            "Gemma4-12B": [],
+            "Granite41-8B": [
+              "14143",
+              "14150",
+              "14182",
+              "14216",
+              "14256",
+              "14488",
+              "14652",
+              "14783",
+              "14921",
+              "15145",
+              "15485",
+              "15856",
+              "16350",
+              "16801",
+              "20146",
+              "20169",
+              "20172",
+              "20279",
+              "20298",
+              "20303",
+              "20304",
+              "20376",
+              "20403",
+              "20424",
+              "20427"
+            ],
+            "Ministral3-14B": []
+          },
+          "pool_sizes": {
+            "Cogito-14B": 0,
+            "Gemma4-12B": 0,
+            "Granite41-8B": 25,
+            "Ministral3-14B": 0
+          }
+        }
+      },
+      "query_id": "BH2_06427",
+      "relation_type": "disease:gene/protein:drug",
+      "technical_failure_agents": []
+    }
+  ],
+  "run_id": "smoke_single_s21r2",
+  "trials": 10000
+}
