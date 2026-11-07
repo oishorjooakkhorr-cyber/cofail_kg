@@ -2756,3 +2756,16 @@ confirmed byte-identical to the run configuration, the same command resumed the 
 episodes skipped, none rerun) and finished 16/16, then `git stash pop` restored the changes
 unchanged. All 16 episodes therefore ran with identical pinned sources; the §19 code-change rule
 needs no exception. This stop is separate from the planned kill-and-resume interruption at 8/16.
+
+## 2026-11-07 — Cogito-14B stays at f16 (47/49 GPU); q8_0 KV runs exploratory only
+Researcher decision: keep the frozen Cogito-14B runtime (f16 KV cache, 47/49 layers on GPU, 240 s
+request timeout). No runtime revision, no re-freeze, no repeat S22 or S25. S25 `smoke_panel` stands
+as run (15/16 SUCCESS; Cogito BH2_03951 ERROR/CONNECTION recorded as a technical failure).
+Evidence considered (exploratory, not adopted; no frozen file changed):
+- explore-cogito-kvq8-20261107 (4 smoke queries, Cogito only, q8_0 KV, 49/49 GPU): 4/4 SUCCESS.
+- cogito14b-5060ti-32k-kvq8-20261107 (20 screening queries): D3 PASS; f16 -> q8_0 SUCCESS 18 -> 19,
+  competent 16 -> 17, median 51.2 -> 41.3 s; both f16 timeouts succeed, one new timeout (BH2_03619),
+  two budget hits, outputs differ from f16 on 9/20 queries.
+Also recorded: independent re-check of the smoke_panel labels (results/diagnostics/s25_audit_check/):
+0 disagreements over 1,115 answers incl. all 557 audit rows. It supplements, and does not replace,
+the researcher's D4 manual audit, which is still pending.

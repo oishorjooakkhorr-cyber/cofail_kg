@@ -1,0 +1,10 @@
+RUN explore-cogito-kvq8-20261107: manifest smoke, 4 queries x 1 agents = 4 episodes; 0 already completed
+AGENT Cogito-14B: starting isolated server
+DONE Cogito-14B BH2_01682 status=SUCCESS | PROGRESS 1/4 episodes, 0 failures
+DONE Cogito-14B BH2_03951 status=SUCCESS | PROGRESS 2/4 episodes, 0 failures
+========================================================================
+HALFWAY: 2/4 episodes saved. Press Ctrl+C now for the kill-and-resume test.
+========================================================================
+DONE Cogito-14B BH2_04459 status=SUCCESS | PROGRESS 3/4 episodes, 0 failures
+DONE Cogito-14B BH2_04474 status=SUCCESS | PROGRESS 4/4 episodes, 0 failures
+RUN COMPLETE: 4/4 episodes, 0 failures

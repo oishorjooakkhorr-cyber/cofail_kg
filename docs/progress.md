@@ -801,3 +801,22 @@ ID (researcher). S22 not started.
 ## D5 wording fix and installed-digest check — 2026-11-07
 decision_rules.md D5 now checks the `models_s21r2` entry (was the superseded `models`). Installed-digest
 check run here: all four panel digests match `models_s21r2` (exit 0). See decision log 2026-11-07.
+
+## EXPLORATORY Cogito-14B q8_0 KV cache on the 4 smoke queries — 2026-11-07
+Researcher request; run ID explore-cogito-kvq8-20261107; no frozen file changed; no panel or runtime
+revision. scripts/25_explore_cogito_kvq8.py reuses 25_run_panel.py with Cogito only and, in memory,
+kv_cache_type f16->q8_0, gpu_layers 47/49->49/49 (guard passed). Result: 4/4 SUCCESS (f16 smoke_panel:
+3/4, one 240 s timeout). 49/49 layers on GPU; KV 6144->3264 MiB; ~2.9 GB VRAM free (was ~0.6 GB).
+Generation median 31.3->40.8 tok/s, slowest 14.1->25.0 tok/s. Outputs differ from f16 (q8_0 changes
+numerics): answer counts BH2_04459 102->50, BH2_04474 153->33. Independent labels: all GOLD/SUPPORTED.
+Comparison: results/diagnostics/explore_cogito_kvq8/comparison.json. Not committed.
+
+## EXPLORATORY Cogito-14B S20 block with q8_0 KV cache — 2026-11-07
+Researcher request; run ID cogito14b-5060ti-32k-kvq8-20261107; driver copied from the f16 block
+(results/diagnostics/s20/cogito14b-5060ti-32k-kvq8-20261107/run_model.py) with only KV f16->q8_0, GPU
+47/49->49/49 and run ID changed; 16/16 driver tests pass. No frozen file changed; no panel or runtime revision.
+D3 PASS. f16 -> q8_0: SUCCESS 18 -> 19/20; competent 16 -> 17/20; well-formed 228/228 -> 260/260;
+median 51.2 -> 41.3 s; budget hits 0 -> 2 (BH2_03879, BH2_03881); 0 OOM. Timeouts: f16 BH2_03953 and
+BH2_04425 now SUCCESS; new ERROR/CONNECTION on BH2_03619 (SUCCESS at f16). BH2_05366 reached the
+8192-token output cap (242 s), still SUCCESS, 1 OFF_QUESTION. Generation median 30.8 -> 40.7 tok/s,
+slowest 15.2 -> 25.4. Answer counts identical on 11/20 queries. Not committed.
