@@ -1,0 +1,111 @@
+{
+  "episodes_done": 400,
+  "episodes_total": 400,
+  "failures": [
+    {
+      "agent_id": "Gemma4-12B",
+      "cause": null,
+      "query_id": "BH2_04024",
+      "status": "PARSE_FAIL"
+    },
+    {
+      "agent_id": "Gemma4-12B",
+      "cause": null,
+      "query_id": "BH2_04048",
+      "status": "PARSE_FAIL"
+    },
+    {
+      "agent_id": "Granite41-8B",
+      "cause": null,
+      "query_id": "BH2_04084",
+      "status": "PARSE_FAIL"
+    },
+    {
+      "agent_id": "Granite41-8B",
+      "cause": null,
+      "query_id": "BH2_04105",
+      "status": "PARSE_FAIL"
+    },
+    {
+      "agent_id": "Granite41-8B",
+      "cause": null,
+      "query_id": "BH2_04244",
+      "status": "PARSE_FAIL"
+    },
+    {
+      "agent_id": "Ministral3-14B",
+      "cause": null,
+      "query_id": "BH2_01919",
+      "status": "PARSE_FAIL"
+    },
+    {
+      "agent_id": "Ministral3-14B",
+      "cause": null,
+      "query_id": "BH2_02911",
+      "status": "PARSE_FAIL"
+    },
+    {
+      "agent_id": "Ministral3-14B",
+      "cause": null,
+      "query_id": "BH2_03716",
+      "status": "PARSE_FAIL"
+    },
+    {
+      "agent_id": "Ministral3-14B",
+      "cause": "CONNECTION",
+      "query_id": "BH2_04016",
+      "status": "ERROR"
+    },
+    {
+      "agent_id": "Ministral3-14B",
+      "cause": null,
+      "query_id": "BH2_04244",
+      "status": "PARSE_FAIL"
+    },
+    {
+      "agent_id": "Ministral3-14B",
+      "cause": null,
+      "query_id": "BH2_04480",
+      "status": "PARSE_FAIL"
+    },
+    {
+      "agent_id": "Ministral3-14B",
+      "cause": null,
+      "query_id": "BH2_06865",
+      "status": "PARSE_FAIL"
+    },
+    {
+      "agent_id": "Cogito-14B",
+      "cause": "CONNECTION",
+      "query_id": "BH2_03687",
+      "status": "ERROR"
+    },
+    {
+      "agent_id": "Cogito-14B",
+      "cause": "CONNECTION",
+      "query_id": "BH2_04130",
+      "status": "ERROR"
+    },
+    {
+      "agent_id": "Cogito-14B",
+      "cause": "CONNECTION",
+      "query_id": "BH2_04269",
+      "status": "ERROR"
+    },
+    {
+      "agent_id": "Cogito-14B",
+      "cause": "CONNECTION",
+      "query_id": "BH2_04282",
+      "status": "ERROR"
+    },
+    {
+      "agent_id": "Cogito-14B",
+      "cause": "CONNECTION",
+      "query_id": "BH2_05964",
+      "status": "ERROR"
+    }
+  ],
+  "failures_so_far": 17,
+  "run_id": "pilot_v1",
+  "updated_at": "2026-11-07T18:56:34.970998+00:00"
+}

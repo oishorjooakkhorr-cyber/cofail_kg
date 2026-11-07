@@ -1,0 +1,1523 @@
+{
+  "agent_id": "Gemma4-12B",
+  "answer_count": 44,
+  "answers": [
+    {
+      "degree": 953,
+      "degree_percentile": 99.92815622754883,
+      "first_seen_page": 1,
+      "h1": 1,
+      "label_a": "GOLD",
+      "label_b": "SUPPORTED",
+      "list_size": 44,
+      "node_id": "22539",
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "label": "indication",
+          "u": "37893",
+          "v": "14545"
+        },
+        {
+          "creation_index": 3,
+          "label": "drug_effect",
+          "u": "14545",
+          "v": "22539"
+        }
+      ],
+      "primary_path_max_list_size": 44,
+      "primary_reason_codes": [],
+      "reason_codes": [],
+      "submitted_index": 0
+    },
+    {
+      "degree": 759,
+      "degree_percentile": 99.86284370713867,
+      "first_seen_page": 1,
+      "h1": 1,
+      "label_a": "GOLD",
+      "label_b": "SUPPORTED",
+      "list_size": 44,
+      "node_id": "22581",
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "label": "indication",
+          "u": "37893",
+          "v": "14545"
+        },
+        {
+          "creation_index": 3,
+          "label": "drug_effect",
+          "u": "14545",
+          "v": "22581"
+        }
+      ],
+      "primary_path_max_list_size": 44,
+      "primary_reason_codes": [],
+      "reason_codes": [],
+      "submitted_index": 1
+    },
+    {
+      "degree": 465,
+      "degree_percentile": 99.54934360916988,
+      "first_seen_page": 1,
+      "h1": 1,
+      "label_a": "GOLD",
+      "label_b": "SUPPORTED",
+      "list_size": 44,
+      "node_id": "22585",
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "label": "indication",
+          "u": "37893",
+          "v": "14545"
+        },
+        {
+          "creation_index": 3,
+          "label": "drug_effect",
+          "u": "14545",
+          "v": "22585"
+        }
+      ],
+      "primary_path_max_list_size": 44,
+      "primary_reason_codes": [],
+      "reason_codes": [],
+      "submitted_index": 2
+    },
+    {
+      "degree": 348,
+      "degree_percentile": 99.29462477957024,
+      "first_seen_page": 1,
+      "h1": 1,
+      "label_a": "GOLD",
+      "label_b": "SUPPORTED",
+      "list_size": 44,
+      "node_id": "22791",
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "label": "indication",
+          "u": "37893",
+          "v": "14545"
+        },
+        {
+          "creation_index": 3,
+          "label": "drug_effect",
+          "u": "14545",
+          "v": "22791"
+        }
+      ],
+      "primary_path_max_list_size": 44,
+      "primary_reason_codes": [],
+      "reason_codes": [],
+      "submitted_index": 3
+    },
+    {
+      "degree": 244,
+      "degree_percentile": 98.85703089282215,
+      "first_seen_page": 1,
+      "h1": 1,
+      "label_a": "GOLD",
+      "label_b": "SUPPORTED",
+      "list_size": 44,
+      "node_id": "22828",
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "label": "indication",
+          "u": "37893",
+          "v": "14545"
+        },
+        {
+          "creation_index": 3,
+          "label": "drug_effect",
+          "u": "14545",
+          "v": "22828"
+        }
+      ],
+      "primary_path_max_list_size": 44,
+      "primary_reason_codes": [],
+      "reason_codes": [],
+      "submitted_index": 4
+    },
+    {
+      "degree": 212,
+      "degree_percentile": 98.61537456730454,
+      "first_seen_page": 1,
+      "h1": 1,
+      "label_a": "GOLD",
+      "label_b": "SUPPORTED",
+      "list_size": 44,
+      "node_id": "22923",
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "label": "indication",
+          "u": "37893",
+          "v": "14545"
+        },
+        {
+          "creation_index": 3,
+          "label": "drug_effect",
+          "u": "14545",
+          "v": "22923"
+        }
+      ],
+      "primary_path_max_list_size": 44,
+      "primary_reason_codes": [],
+      "reason_codes": [],
+      "submitted_index": 5
+    },
+    {
+      "degree": 838,
+      "degree_percentile": 99.88896871530272,
+      "first_seen_page": 1,
+      "h1": 1,
+      "label_a": "GOLD",
+      "label_b": "SUPPORTED",
+      "list_size": 44,
+      "node_id": "22934",
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "label": "indication",
+          "u": "37893",
+          "v": "14545"
+        },
+        {
+          "creation_index": 3,
+          "label": "drug_effect",
+          "u": "14545",
+          "v": "22934"
+        }
+      ],
+      "primary_path_max_list_size": 44,
+      "primary_reason_codes": [],
+      "reason_codes": [],
+      "submitted_index": 6
+    },
+    {
+      "degree": 1000,
+      "degree_percentile": 99.94121873163085,
+      "first_seen_page": 1,
+      "h1": 1,
+      "label_a": "GOLD",
+      "label_b": "SUPPORTED",
+      "list_size": 44,
+      "node_id": "22952",
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "label": "indication",
+          "u": "37893",
+          "v": "14545"
+        },
+        {
+          "creation_index": 3,
+          "label": "drug_effect",
+          "u": "14545",
+          "v": "22952"
+        }
+      ],
+      "primary_path_max_list_size": 44,
+      "primary_reason_codes": [],
+      "reason_codes": [],
+      "submitted_index": 7
+    },
+    {
+      "degree": 66,
+      "degree_percentile": 95.2648422702632,
+      "first_seen_page": 1,
+      "h1": 1,
+      "label_a": "GOLD",
+      "label_b": "SUPPORTED",
+      "list_size": 44,
+      "node_id": "22967",
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "label": "indication",
+          "u": "37893",
+          "v": "14545"
+        },
+        {
+          "creation_index": 3,
+          "label": "drug_effect",
+          "u": "14545",
+          "v": "22967"
+        }
+      ],
+      "primary_path_max_list_size": 44,
+      "primary_reason_codes": [],
+      "reason_codes": [],
+      "submitted_index": 8
+    },
+    {
+      "degree": 796,
+      "degree_percentile": 99.86937495917968,
+      "first_seen_page": 1,
+      "h1": 1,
+      "label_a": "GOLD",
+      "label_b": "SUPPORTED",
+      "list_size": 44,
+      "node_id": "22982",
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "label": "indication",
+          "u": "37893",
+          "v": "14545"
+        },
+        {
+          "creation_index": 3,
+          "label": "drug_effect",
+          "u": "14545",
+          "v": "22982"
+        }
+      ],
+      "primary_path_max_list_size": 44,
+      "primary_reason_codes": [],
+      "reason_codes": [],
+      "submitted_index": 9
+    },
+    {
+      "degree": 1177,
+      "degree_percentile": 99.9608124877539,
+      "first_seen_page": 1,
+      "h1": 1,
+      "label_a": "GOLD",
+      "label_b": "SUPPORTED",
+      "list_size": 44,
+      "node_id": "23002",
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "label": "indication",
+          "u": "37893",
+          "v": "14545"
+        },
+        {
+          "creation_index": 3,
+          "label": "drug_effect",
+          "u": "14545",
+          "v": "23002"
+        }
+      ],
+      "primary_path_max_list_size": 44,
+      "primary_reason_codes": [],
+      "reason_codes": [],
+      "submitted_index": 10
+    },
+    {
+      "degree": 806,
+      "degree_percentile": 99.8759062112207,
+      "first_seen_page": 1,
+      "h1": 1,
+      "label_a": "GOLD",
+      "label_b": "SUPPORTED",
+      "list_size": 44,
+      "node_id": "23011",
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "label": "indication",
+          "u": "37893",
+          "v": "14545"
+        },
+        {
+          "creation_index": 3,
+          "label": "drug_effect",
+          "u": "14545",
+          "v": "23011"
+        }
+      ],
+      "primary_path_max_list_size": 44,
+      "primary_reason_codes": [],
+      "reason_codes": [],
+      "submitted_index": 11
+    },
+    {
+      "degree": 1190,
+      "degree_percentile": 99.96734373979493,
+      "first_seen_page": 1,
+      "h1": 1,
+      "label_a": "GOLD",
+      "label_b": "SUPPORTED",
+      "list_size": 44,
+      "node_id": "23157",
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "label": "indication",
+          "u": "37893",
+          "v": "14545"
+        },
+        {
+          "creation_index": 3,
+          "label": "drug_effect",
+          "u": "14545",
+          "v": "23157"
+        }
+      ],
+      "primary_path_max_list_size": 44,
+      "primary_reason_codes": [],
+      "reason_codes": [],
+      "submitted_index": 12
+    },
+    {
+      "degree": 943,
+      "degree_percentile": 99.91509372346678,
+      "first_seen_page": 1,
+      "h1": 1,
+      "label_a": "GOLD",
+      "label_b": "SUPPORTED",
+      "list_size": 44,
+      "node_id": "23158",
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "label": "indication",
+          "u": "37893",
+          "v": "14545"
+        },
+        {
+          "creation_index": 3,
+          "label": "drug_effect",
+          "u": "14545",
+          "v": "23158"
+        }
+      ],
+      "primary_path_max_list_size": 44,
+      "primary_reason_codes": [],
+      "reason_codes": [],
+      "submitted_index": 13
+    },
+    {
+      "degree": 194,
+      "degree_percentile": 98.45862451832016,
+      "first_seen_page": 1,
+      "h1": 1,
+      "label_a": "GOLD",
+      "label_b": "SUPPORTED",
+      "list_size": 44,
+      "node_id": "23183",
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "label": "indication",
+          "u": "37893",
+          "v": "14545"
+        },
+        {
+          "creation_index": 3,
+          "label": "drug_effect",
+          "u": "14545",
+          "v": "23183"
+        }
+      ],
+      "primary_path_max_list_size": 44,
+      "primary_reason_codes": [],
+      "reason_codes": [],
+      "submitted_index": 14
+    },
+    {
+      "degree": 317,
+      "degree_percentile": 99.20318725099602,
+      "first_seen_page": 1,
+      "h1": 1,
+      "label_a": "GOLD",
+      "label_b": "SUPPORTED",
+      "list_size": 44,
+      "node_id": "23368",
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "label": "indication",
+          "u": "37893",
+          "v": "14545"
+        },
+        {
+          "creation_index": 3,
+          "label": "drug_effect",
+          "u": "14545",
+          "v": "23368"
+        }
+      ],
+      "primary_path_max_list_size": 44,
+      "primary_reason_codes": [],
+      "reason_codes": [],
+      "submitted_index": 15
+    },
+    {
+      "degree": 482,
+      "degree_percentile": 99.57546861733394,
+      "first_seen_page": 1,
+      "h1": 1,
+      "label_a": "GOLD",
+      "label_b": "SUPPORTED",
+      "list_size": 44,
+      "node_id": "23469",
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "label": "indication",
+          "u": "37893",
+          "v": "14545"
+        },
+        {
+          "creation_index": 3,
+          "label": "drug_effect",
+          "u": "14545",
+          "v": "23469"
+        }
+      ],
+      "primary_path_max_list_size": 44,
+      "primary_reason_codes": [],
+      "reason_codes": [],
+      "submitted_index": 16
+    },
+    {
+      "degree": 406,
+      "degree_percentile": 99.44484357651362,
+      "first_seen_page": 1,
+      "h1": 1,
+      "label_a": "GOLD",
+      "label_b": "SUPPORTED",
+      "list_size": 44,
+      "node_id": "23764",
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "label": "indication",
+          "u": "37893",
+          "v": "14545"
+        },
+        {
+          "creation_index": 3,
+          "label": "drug_effect",
+          "u": "14545",
+          "v": "23764"
+        }
+      ],
+      "primary_path_max_list_size": 44,
+      "primary_reason_codes": [],
+      "reason_codes": [],
+      "submitted_index": 17
+    },
+    {
+      "degree": 818,
+      "degree_percentile": 99.88243746326171,
+      "first_seen_page": 1,
+      "h1": 1,
+      "label_a": "GOLD",
+      "label_b": "SUPPORTED",
+      "list_size": 44,
+      "node_id": "23864",
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "label": "indication",
+          "u": "37893",
+          "v": "14545"
+        },
+        {
+          "creation_index": 3,
+          "label": "drug_effect",
+          "u": "14545",
+          "v": "23864"
+        }
+      ],
+      "primary_path_max_list_size": 44,
+      "primary_reason_codes": [],
+      "reason_codes": [],
+      "submitted_index": 18
+    },
+    {
+      "degree": 654,
+      "degree_percentile": 99.76487492652342,
+      "first_seen_page": 1,
+      "h1": 1,
+      "label_a": "GOLD",
+      "label_b": "SUPPORTED",
+      "list_size": 44,
+      "node_id": "24337",
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "label": "indication",
+          "u": "37893",
+          "v": "14545"
+        },
+        {
+          "creation_index": 3,
+          "label": "drug_effect",
+          "u": "14545",
+          "v": "24337"
+        }
+      ],
+      "primary_path_max_list_size": 44,
+      "primary_reason_codes": [],
+      "reason_codes": [],
+      "submitted_index": 19
+    },
+    {
+      "degree": 231,
+      "degree_percentile": 98.78518712037098,
+      "first_seen_page": 1,
+      "h1": 1,
+      "label_a": "GOLD",
+      "label_b": "SUPPORTED",
+      "list_size": 44,
+      "node_id": "24338",
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "label": "indication",
+          "u": "37893",
+          "v": "14545"
+        },
+        {
+          "creation_index": 3,
+          "label": "drug_effect",
+          "u": "14545",
+          "v": "24338"
+        }
+      ],
+      "primary_path_max_list_size": 44,
+      "primary_reason_codes": [],
+      "reason_codes": [],
+      "submitted_index": 20
+    },
+    {
+      "degree": 979,
+      "degree_percentile": 99.93468747958984,
+      "first_seen_page": 1,
+      "h1": 1,
+      "label_a": "GOLD",
+      "label_b": "SUPPORTED",
+      "list_size": 44,
+      "node_id": "25201",
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "label": "indication",
+          "u": "37893",
+          "v": "14545"
+        },
+        {
+          "creation_index": 3,
+          "label": "drug_effect",
+          "u": "14545",
+          "v": "25201"
+        }
+      ],
+      "primary_path_max_list_size": 44,
+      "primary_reason_codes": [],
+      "reason_codes": [],
+      "submitted_index": 21
+    },
+    {
+      "degree": 76,
+      "degree_percentile": 95.83959244987264,
+      "first_seen_page": 1,
+      "h1": 1,
+      "label_a": "GOLD",
+      "label_b": "SUPPORTED",
+      "list_size": 44,
+      "node_id": "25488",
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "label": "indication",
+          "u": "37893",
+          "v": "14545"
+        },
+        {
+          "creation_index": 3,
+          "label": "drug_effect",
+          "u": "14545",
+          "v": "25488"
+        }
+      ],
+      "primary_path_max_list_size": 44,
+      "primary_reason_codes": [],
+      "reason_codes": [],
+      "submitted_index": 22
+    },
+    {
+      "degree": 323,
+      "degree_percentile": 99.21624975507804,
+      "first_seen_page": 1,
+      "h1": 1,
+      "label_a": "GOLD",
+      "label_b": "SUPPORTED",
+      "list_size": 44,
+      "node_id": "25569",
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "label": "indication",
+          "u": "37893",
+          "v": "14545"
+        },
+        {
+          "creation_index": 3,
+          "label": "drug_effect",
+          "u": "14545",
+          "v": "25569"
+        }
+      ],
+      "primary_path_max_list_size": 44,
+      "primary_reason_codes": [],
+      "reason_codes": [],
+      "submitted_index": 23
+    },
+    {
+      "degree": 898,
+      "degree_percentile": 99.90203121938475,
+      "first_seen_page": 1,
+      "h1": 1,
+      "label_a": "GOLD",
+      "label_b": "SUPPORTED",
+      "list_size": 44,
+      "node_id": "25620",
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "label": "indication",
+          "u": "37893",
+          "v": "14545"
+        },
+        {
+          "creation_index": 3,
+          "label": "drug_effect",
+          "u": "14545",
+          "v": "25620"
+        }
+      ],
+      "primary_path_max_list_size": 44,
+      "primary_reason_codes": [],
+      "reason_codes": [],
+      "submitted_index": 24
+    },
+    {
+      "degree": 55,
+      "degree_percentile": 94.55293579779244,
+      "first_seen_page": 1,
+      "h1": 1,
+      "label_a": "GOLD",
+      "label_b": "SUPPORTED",
+      "list_size": 44,
+      "node_id": "25700",
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "label": "indication",
+          "u": "37893",
+          "v": "14545"
+        },
+        {
+          "creation_index": 3,
+          "label": "drug_effect",
+          "u": "14545",
+          "v": "25700"
+        }
+      ],
+      "primary_path_max_list_size": 44,
+      "primary_reason_codes": [],
+      "reason_codes": [],
+      "submitted_index": 25
+    },
+    {
+      "degree": 197,
+      "degree_percentile": 98.51740578668931,
+      "first_seen_page": 1,
+      "h1": 1,
+      "label_a": "GOLD",
+      "label_b": "SUPPORTED",
+      "list_size": 44,
+      "node_id": "25882",
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "label": "indication",
+          "u": "37893",
+          "v": "14545"
+        },
+        {
+          "creation_index": 3,
+          "label": "drug_effect",
+          "u": "14545",
+          "v": "25882"
+        }
+      ],
+      "primary_path_max_list_size": 44,
+      "primary_reason_codes": [],
+      "reason_codes": [],
+      "submitted_index": 26
+    },
+    {
+      "degree": 945,
+      "degree_percentile": 99.92162497550781,
+      "first_seen_page": 1,
+      "h1": 1,
+      "label_a": "GOLD",
+      "label_b": "SUPPORTED",
+      "list_size": 44,
+      "node_id": "25945",
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "label": "indication",
+          "u": "37893",
+          "v": "14545"
+        },
+        {
+          "creation_index": 3,
+          "label": "drug_effect",
+          "u": "14545",
+          "v": "25945"
+        }
+      ],
+      "primary_path_max_list_size": 44,
+      "primary_reason_codes": [],
+      "reason_codes": [],
+      "submitted_index": 27
+    },
+    {
+      "degree": 324,
+      "degree_percentile": 99.22278100711907,
+      "first_seen_page": 1,
+      "h1": 1,
+      "label_a": "GOLD",
+      "label_b": "SUPPORTED",
+      "list_size": 44,
+      "node_id": "26322",
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "label": "indication",
+          "u": "37893",
+          "v": "14545"
+        },
+        {
+          "creation_index": 3,
+          "label": "drug_effect",
+          "u": "14545",
+          "v": "26322"
+        }
+      ],
+      "primary_path_max_list_size": 44,
+      "primary_reason_codes": [],
+      "reason_codes": [],
+      "submitted_index": 28
+    },
+    {
+      "degree": 49,
+      "degree_percentile": 93.94552935797792,
+      "first_seen_page": 1,
+      "h1": 1,
+      "label_a": "GOLD",
+      "label_b": "SUPPORTED",
+      "list_size": 44,
+      "node_id": "26337",
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "label": "indication",
+          "u": "37893",
+          "v": "14545"
+        },
+        {
+          "creation_index": 3,
+          "label": "drug_effect",
+          "u": "14545",
+          "v": "26337"
+        }
+      ],
+      "primary_path_max_list_size": 44,
+      "primary_reason_codes": [],
+      "reason_codes": [],
+      "submitted_index": 29
+    },
+    {
+      "degree": 566,
+      "degree_percentile": 99.6799686499902,
+      "first_seen_page": 1,
+      "h1": 1,
+      "label_a": "GOLD",
+      "label_b": "SUPPORTED",
+      "list_size": 44,
+      "node_id": "27007",
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "label": "indication",
+          "u": "37893",
+          "v": "14545"
+        },
+        {
+          "creation_index": 3,
+          "label": "drug_effect",
+          "u": "14545",
+          "v": "27007"
+        }
+      ],
+      "primary_path_max_list_size": 44,
+      "primary_reason_codes": [],
+      "reason_codes": [],
+      "submitted_index": 30
+    },
+    {
+      "degree": 517,
+      "degree_percentile": 99.62771863366207,
+      "first_seen_page": 1,
+      "h1": 1,
+      "label_a": "GOLD",
+      "label_b": "SUPPORTED",
+      "list_size": 44,
+      "node_id": "33730",
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "label": "indication",
+          "u": "37893",
+          "v": "14545"
+        },
+        {
+          "creation_index": 3,
+          "label": "drug_effect",
+          "u": "14545",
+          "v": "33730"
+        }
+      ],
+      "primary_path_max_list_size": 44,
+      "primary_reason_codes": [],
+      "reason_codes": [],
+      "submitted_index": 31
+    },
+    {
+      "degree": 81,
+      "degree_percentile": 96.00940500293906,
+      "first_seen_page": 1,
+      "h1": 1,
+      "label_a": "GOLD",
+      "label_b": "SUPPORTED",
+      "list_size": 44,
+      "node_id": "84355",
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "label": "indication",
+          "u": "37893",
+          "v": "14545"
+        },
+        {
+          "creation_index": 3,
+          "label": "drug_effect",
+          "u": "14545",
+          "v": "84355"
+        }
+      ],
+      "primary_path_max_list_size": 44,
+      "primary_reason_codes": [],
+      "reason_codes": [],
+      "submitted_index": 32
+    },
+    {
+      "degree": 133,
+      "degree_percentile": 97.57690549278296,
+      "first_seen_page": 1,
+      "h1": 1,
+      "label_a": "GOLD",
+      "label_b": "SUPPORTED",
+      "list_size": 44,
+      "node_id": "84365",
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "label": "indication",
+          "u": "37893",
+          "v": "14545"
+        },
+        {
+          "creation_index": 3,
+          "label": "drug_effect",
+          "u": "14545",
+          "v": "84365"
+        }
+      ],
+      "primary_path_max_list_size": 44,
+      "primary_reason_codes": [],
+      "reason_codes": [],
+      "submitted_index": 33
+    },
+    {
+      "degree": 518,
+      "degree_percentile": 99.63424988570308,
+      "first_seen_page": 1,
+      "h1": 1,
+      "label_a": "GOLD",
+      "label_b": "SUPPORTED",
+      "list_size": 44,
+      "node_id": "84401",
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "label": "indication",
+          "u": "37893",
+          "v": "14545"
+        },
+        {
+          "creation_index": 3,
+          "label": "drug_effect",
+          "u": "14545",
+          "v": "84401"
+        }
+      ],
+      "primary_path_max_list_size": 44,
+      "primary_reason_codes": [],
+      "reason_codes": [],
+      "submitted_index": 34
+    },
+    {
+      "degree": 1097,
+      "degree_percentile": 99.94774998367187,
+      "first_seen_page": 1,
+      "h1": 1,
+      "label_a": "GOLD",
+      "label_b": "SUPPORTED",
+      "list_size": 44,
+      "node_id": "84409",
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "label": "indication",
+          "u": "37893",
+          "v": "14545"
+        },
+        {
+          "creation_index": 3,
+          "label": "drug_effect",
+          "u": "14545",
+          "v": "84409"
+        }
+      ],
+      "primary_path_max_list_size": 44,
+      "primary_reason_codes": [],
+      "reason_codes": [],
+      "submitted_index": 35
+    },
+    {
+      "degree": 58,
+      "degree_percentile": 94.80112337535105,
+      "first_seen_page": 1,
+      "h1": 1,
+      "label_a": "GOLD",
+      "label_b": "SUPPORTED",
+      "list_size": 44,
+      "node_id": "84410",
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "label": "indication",
+          "u": "37893",
+          "v": "14545"
+        },
+        {
+          "creation_index": 3,
+          "label": "drug_effect",
+          "u": "14545",
+          "v": "84410"
+        }
+      ],
+      "primary_path_max_list_size": 44,
+      "primary_reason_codes": [],
+      "reason_codes": [],
+      "submitted_index": 36
+    },
+    {
+      "degree": 368,
+      "degree_percentile": 99.33381229181634,
+      "first_seen_page": 1,
+      "h1": 1,
+      "label_a": "GOLD",
+      "label_b": "SUPPORTED",
+      "list_size": 44,
+      "node_id": "84767",
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "label": "indication",
+          "u": "37893",
+          "v": "14545"
+        },
+        {
+          "creation_index": 3,
+          "label": "drug_effect",
+          "u": "14545",
+          "v": "84767"
+        }
+      ],
+      "primary_path_max_list_size": 44,
+      "primary_reason_codes": [],
+      "reason_codes": [],
+      "submitted_index": 37
+    },
+    {
+      "degree": 23,
+      "degree_percentile": 89.18424662007706,
+      "first_seen_page": 1,
+      "h1": 1,
+      "label_a": "GOLD",
+      "label_b": "SUPPORTED",
+      "list_size": 44,
+      "node_id": "85208",
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "label": "indication",
+          "u": "37893",
+          "v": "14545"
+        },
+        {
+          "creation_index": 3,
+          "label": "drug_effect",
+          "u": "14545",
+          "v": "85208"
+        }
+      ],
+      "primary_path_max_list_size": 44,
+      "primary_reason_codes": [],
+      "reason_codes": [],
+      "submitted_index": 38
+    },
+    {
+      "degree": 21,
+      "degree_percentile": 88.45274639148325,
+      "first_seen_page": 1,
+      "h1": 1,
+      "label_a": "GOLD",
+      "label_b": "SUPPORTED",
+      "list_size": 44,
+      "node_id": "86388",
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "label": "indication",
+          "u": "37893",
+          "v": "14545"
+        },
+        {
+          "creation_index": 3,
+          "label": "drug_effect",
+          "u": "14545",
+          "v": "86388"
+        }
+      ],
+      "primary_path_max_list_size": 44,
+      "primary_reason_codes": [],
+      "reason_codes": [],
+      "submitted_index": 39
+    },
+    {
+      "degree": 50,
+      "degree_percentile": 94.07615439879825,
+      "first_seen_page": 1,
+      "h1": 1,
+      "label_a": "GOLD",
+      "label_b": "SUPPORTED",
+      "list_size": 44,
+      "node_id": "90284",
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "label": "indication",
+          "u": "37893",
+          "v": "14545"
+        },
+        {
+          "creation_index": 3,
+          "label": "drug_effect",
+          "u": "14545",
+          "v": "90284"
+        }
+      ],
+      "primary_path_max_list_size": 44,
+      "primary_reason_codes": [],
+      "reason_codes": [],
+      "submitted_index": 40
+    },
+    {
+      "degree": 302,
+      "degree_percentile": 99.14440598262686,
+      "first_seen_page": 1,
+      "h1": 1,
+      "label_a": "GOLD",
+      "label_b": "SUPPORTED",
+      "list_size": 44,
+      "node_id": "93442",
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "label": "indication",
+          "u": "37893",
+          "v": "14545"
+        },
+        {
+          "creation_index": 3,
+          "label": "drug_effect",
+          "u": "14545",
+          "v": "93442"
+        }
+      ],
+      "primary_path_max_list_size": 44,
+      "primary_reason_codes": [],
+      "reason_codes": [],
+      "submitted_index": 41
+    },
+    {
+      "degree": 105,
+      "degree_percentile": 96.83234276010711,
+      "first_seen_page": 1,
+      "h1": 1,
+      "label_a": "GOLD",
+      "label_b": "SUPPORTED",
+      "list_size": 44,
+      "node_id": "93477",
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "label": "indication",
+          "u": "37893",
+          "v": "14545"
+        },
+        {
+          "creation_index": 3,
+          "label": "drug_effect",
+          "u": "14545",
+          "v": "93477"
+        }
+      ],
+      "primary_path_max_list_size": 44,
+      "primary_reason_codes": [],
+      "reason_codes": [],
+      "submitted_index": 42
+    },
+    {
+      "degree": 182,
+      "degree_percentile": 98.34106198158187,
+      "first_seen_page": 1,
+      "h1": 1,
+      "label_a": "GOLD",
+      "label_b": "SUPPORTED",
+      "list_size": 44,
+      "node_id": "94295",
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "label": "indication",
+          "u": "37893",
+          "v": "14545"
+        },
+        {
+          "creation_index": 3,
+          "label": "drug_effect",
+          "u": "14545",
+          "v": "94295"
+        }
+      ],
+      "primary_path_max_list_size": 44,
+      "primary_reason_codes": [],
+      "reason_codes": [],
+      "submitted_index": 43
+    }
+  ],
+  "attempt": 1,
+  "benchmark_f1": 0.5789473684210527,
+  "benchmark_precision": 1.0,
+  "benchmark_recall": 0.4074074074074074,
+  "bridge_conditional_recall": {
+    "14545": 1.0
+  },
+  "bridge_rank": {
+    "14545": 1
+  },
+  "bridge_recall_counts": {
+    "14545": {
+      "correct": 44,
+      "total": 44
+    }
+  },
+  "bridges_explored": [
+    "14545"
+  ],
+  "budget_exhausted": false,
+  "cause": null,
+  "construction": "UNION",
+  "denominators": {
+    "benchmark_f1": 152,
+    "benchmark_precision": 44,
+    "benchmark_recall": 108,
+    "off_question_rate": 44,
+    "question_valid_precision": 44,
+    "ungrounded_rate": 44,
+    "unresolved_rate": 44
+  },
+  "early_stop": false,
+  "episode_status": "SUCCESS",
+  "found_r1": true,
+  "hop1_status": "H1_CLEAN",
+  "label_a_counts": {
+    "ALT_VALID": 0,
+    "GOLD": 44,
+    "GOLD_BRIDGE_EXTRA": 0,
+    "OFF_QUESTION": 0,
+    "UNRESOLVED": 0
+  },
+  "label_b_counts": {
+    "KG_UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0,
+    "PATH_INVALID": 0,
+    "SUPPORTED": 44,
+    "UNGROUNDED": 0
+  },
+  "node_statistics": {
+    "14545": {
+      "degree": 779,
+      "degree_percentile": 79.87935151438984
+    },
+    "22539": {
+      "degree": 953,
+      "degree_percentile": 99.92815622754883
+    },
+    "22581": {
+      "degree": 759,
+      "degree_percentile": 99.86284370713867
+    },
+    "22585": {
+      "degree": 465,
+      "degree_percentile": 99.54934360916988
+    },
+    "22791": {
+      "degree": 348,
+      "degree_percentile": 99.29462477957024
+    },
+    "22828": {
+      "degree": 244,
+      "degree_percentile": 98.85703089282215
+    },
+    "22923": {
+      "degree": 212,
+      "degree_percentile": 98.61537456730454
+    },
+    "22934": {
+      "degree": 838,
+      "degree_percentile": 99.88896871530272
+    },
+    "22952": {
+      "degree": 1000,
+      "degree_percentile": 99.94121873163085
+    },
+    "22967": {
+      "degree": 66,
+      "degree_percentile": 95.2648422702632
+    },
+    "22982": {
+      "degree": 796,
+      "degree_percentile": 99.86937495917968
+    },
+    "23002": {
+      "degree": 1177,
+      "degree_percentile": 99.9608124877539
+    },
+    "23011": {
+      "degree": 806,
+      "degree_percentile": 99.8759062112207
+    },
+    "23157": {
+      "degree": 1190,
+      "degree_percentile": 99.96734373979493
+    },
+    "23158": {
+      "degree": 943,
+      "degree_percentile": 99.91509372346678
+    },
+    "23183": {
+      "degree": 194,
+      "degree_percentile": 98.45862451832016
+    },
+    "23368": {
+      "degree": 317,
+      "degree_percentile": 99.20318725099602
+    },
+    "23469": {
+      "degree": 482,
+      "degree_percentile": 99.57546861733394
+    },
+    "23764": {
+      "degree": 406,
+      "degree_percentile": 99.44484357651362
+    },
+    "23864": {
+      "degree": 818,
+      "degree_percentile": 99.88243746326171
+    },
+    "24337": {
+      "degree": 654,
+      "degree_percentile": 99.76487492652342
+    },
+    "24338": {
+      "degree": 231,
+      "degree_percentile": 98.78518712037098
+    },
+    "25201": {
+      "degree": 979,
+      "degree_percentile": 99.93468747958984
+    },
+    "25488": {
+      "degree": 76,
+      "degree_percentile": 95.83959244987264
+    },
+    "25569": {
+      "degree": 323,
+      "degree_percentile": 99.21624975507804
+    },
+    "25620": {
+      "degree": 898,
+      "degree_percentile": 99.90203121938475
+    },
+    "25700": {
+      "degree": 55,
+      "degree_percentile": 94.55293579779244
+    },
+    "25882": {
+      "degree": 197,
+      "degree_percentile": 98.51740578668931
+    },
+    "25945": {
+      "degree": 945,
+      "degree_percentile": 99.92162497550781
+    },
+    "26322": {
+      "degree": 324,
+      "degree_percentile": 99.22278100711907
+    },
+    "26337": {
+      "degree": 49,
+      "degree_percentile": 93.94552935797792
+    },
+    "27007": {
+      "degree": 566,
+      "degree_percentile": 99.6799686499902
+    },
+    "33730": {
+      "degree": 517,
+      "degree_percentile": 99.62771863366207
+    },
+    "37893": {
+      "degree": 15,
+      "degree_percentile": 69.596018735363
+    },
+    "84355": {
+      "degree": 81,
+      "degree_percentile": 96.00940500293906
+    },
+    "84365": {
+      "degree": 133,
+      "degree_percentile": 97.57690549278296
+    },
+    "84401": {
+      "degree": 518,
+      "degree_percentile": 99.63424988570308
+    },
+    "84409": {
+      "degree": 1097,
+      "degree_percentile": 99.94774998367187
+    },
+    "84410": {
+      "degree": 58,
+      "degree_percentile": 94.80112337535105
+    },
+    "84767": {
+      "degree": 368,
+      "degree_percentile": 99.33381229181634
+    },
+    "85208": {
+      "degree": 23,
+      "degree_percentile": 89.18424662007706
+    },
+    "86388": {
+      "degree": 21,
+      "degree_percentile": 88.45274639148325
+    },
+    "90284": {
+      "degree": 50,
+      "degree_percentile": 94.07615439879825
+    },
+    "93442": {
+      "degree": 302,
+      "degree_percentile": 99.14440598262686
+    },
+    "93477": {
+      "degree": 105,
+      "degree_percentile": 96.83234276010711
+    },
+    "94295": {
+      "degree": 182,
+      "degree_percentile": 98.34106198158187
+    }
+  },
+  "numerators": {
+    "benchmark_f1": 88,
+    "benchmark_precision": 44,
+    "benchmark_recall": 44,
+    "off_question_rate": 0,
+    "question_valid_precision": 44,
+    "ungrounded_rate": 0,
+    "unresolved_rate": 0
+  },
+  "off_question_rate": 0.0,
+  "pages_requested": 2,
+  "primary_reason_counts": {
+    "SHORTCUT": 0,
+    "WRONG_BRIDGE_TYPE": 0,
+    "WRONG_HOP_COUNT": 0,
+    "WRONG_RELATION_HOP1": 0,
+    "WRONG_RELATION_HOP2": 0,
+    "WRONG_TARGET_TYPE": 0
+  },
+  "query_id": "BH2_04554",
+  "question_valid_precision": 1.0,
+  "reason_counts": {
+    "SHORTCUT": 0,
+    "WRONG_BRIDGE_TYPE": 0,
+    "WRONG_HOP_COUNT": 0,
+    "WRONG_RELATION_HOP1": 0,
+    "WRONG_RELATION_HOP2": 0,
+    "WRONG_TARGET_TYPE": 0
+  },
+  "resolved_count": 44,
+  "run_id": "pilot_v1",
+  "text_tool_call_count": 0,
+  "tool_calls_used": 4,
+  "undefined_counts": {
+    "benchmark_f1": 0,
+    "benchmark_precision": 0,
+    "benchmark_recall": 0,
+    "bridge_conditional_recall": 0,
+    "bridge_rank": 0,
+    "degree": 0,
+    "degree_percentile": 0,
+    "list_size": 0,
+    "off_question_rate": 0,
+    "primary_path_max_list_size": 0,
+    "question_valid_precision": 0,
+    "ungrounded_rate": 0,
+    "unresolved_rate": 0
+  },
+  "ungrounded_rate": 0.0,
+  "unresolved_rate": 0.0
+}

@@ -1,0 +1,598 @@
+{
+  "agent_id": "Cogito-14B",
+  "answer_count": 12,
+  "answers": [
+    {
+      "degree": 691,
+      "degree_percentile": 99.81059369081052,
+      "first_seen_page": 1,
+      "h1": 1,
+      "label_a": "GOLD",
+      "label_b": "SUPPORTED",
+      "list_size": 7,
+      "node_id": "22380",
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "label": "indication",
+          "u": "37608",
+          "v": "14016"
+        },
+        {
+          "creation_index": 17,
+          "label": "drug_effect",
+          "u": "14016",
+          "v": "22380"
+        }
+      ],
+      "primary_path_max_list_size": 15,
+      "primary_reason_codes": [],
+      "reason_codes": [],
+      "submitted_index": 0
+    },
+    {
+      "degree": 132,
+      "degree_percentile": 97.53771798053687,
+      "first_seen_page": 1,
+      "h1": 1,
+      "label_a": "GOLD",
+      "label_b": "SUPPORTED",
+      "list_size": 7,
+      "node_id": "22604",
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "label": "indication",
+          "u": "37608",
+          "v": "14016"
+        },
+        {
+          "creation_index": 17,
+          "label": "drug_effect",
+          "u": "14016",
+          "v": "22604"
+        }
+      ],
+      "primary_path_max_list_size": 15,
+      "primary_reason_codes": [],
+      "reason_codes": [],
+      "submitted_index": 1
+    },
+    {
+      "degree": 463,
+      "degree_percentile": 99.54281235712887,
+      "first_seen_page": 1,
+      "h1": 1,
+      "label_a": "GOLD",
+      "label_b": "SUPPORTED",
+      "list_size": 7,
+      "node_id": "22613",
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "label": "indication",
+          "u": "37608",
+          "v": "14016"
+        },
+        {
+          "creation_index": 17,
+          "label": "drug_effect",
+          "u": "14016",
+          "v": "22613"
+        }
+      ],
+      "primary_path_max_list_size": 15,
+      "primary_reason_codes": [],
+      "reason_codes": [],
+      "submitted_index": 2
+    },
+    {
+      "degree": 796,
+      "degree_percentile": 99.86937495917968,
+      "first_seen_page": 1,
+      "h1": 1,
+      "label_a": "GOLD",
+      "label_b": "SUPPORTED",
+      "list_size": 7,
+      "node_id": "22982",
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "label": "indication",
+          "u": "37608",
+          "v": "14016"
+        },
+        {
+          "creation_index": 17,
+          "label": "drug_effect",
+          "u": "14016",
+          "v": "22982"
+        }
+      ],
+      "primary_path_max_list_size": 15,
+      "primary_reason_codes": [],
+      "reason_codes": [],
+      "submitted_index": 3
+    },
+    {
+      "degree": 40,
+      "degree_percentile": 92.90706028345633,
+      "first_seen_page": 1,
+      "h1": 1,
+      "label_a": "GOLD",
+      "label_b": "SUPPORTED",
+      "list_size": 7,
+      "node_id": "24408",
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "label": "indication",
+          "u": "37608",
+          "v": "14016"
+        },
+        {
+          "creation_index": 17,
+          "label": "drug_effect",
+          "u": "14016",
+          "v": "24408"
+        }
+      ],
+      "primary_path_max_list_size": 15,
+      "primary_reason_codes": [],
+      "reason_codes": [],
+      "submitted_index": 4
+    },
+    {
+      "degree": 47,
+      "degree_percentile": 93.72999804062438,
+      "first_seen_page": 1,
+      "h1": 1,
+      "label_a": "GOLD",
+      "label_b": "SUPPORTED",
+      "list_size": 7,
+      "node_id": "24416",
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "label": "indication",
+          "u": "37608",
+          "v": "14016"
+        },
+        {
+          "creation_index": 17,
+          "label": "drug_effect",
+          "u": "14016",
+          "v": "24416"
+        }
+      ],
+      "primary_path_max_list_size": 15,
+      "primary_reason_codes": [],
+      "reason_codes": [],
+      "submitted_index": 5
+    },
+    {
+      "degree": 126,
+      "degree_percentile": 97.40056168767552,
+      "first_seen_page": 1,
+      "h1": 1,
+      "label_a": "GOLD",
+      "label_b": "SUPPORTED",
+      "list_size": 7,
+      "node_id": "24438",
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "label": "indication",
+          "u": "37608",
+          "v": "14016"
+        },
+        {
+          "creation_index": 17,
+          "label": "drug_effect",
+          "u": "14016",
+          "v": "24438"
+        }
+      ],
+      "primary_path_max_list_size": 15,
+      "primary_reason_codes": [],
+      "reason_codes": [],
+      "submitted_index": 6
+    },
+    {
+      "degree": 513,
+      "degree_percentile": 99.61465612958004,
+      "first_seen_page": 1,
+      "h1": 1,
+      "label_a": "GOLD",
+      "label_b": "SUPPORTED",
+      "list_size": 12,
+      "node_id": "25608",
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "label": "indication",
+          "u": "37608",
+          "v": "14017"
+        },
+        {
+          "creation_index": 18,
+          "label": "drug_effect",
+          "u": "14017",
+          "v": "25608"
+        }
+      ],
+      "primary_path_max_list_size": 15,
+      "primary_reason_codes": [],
+      "reason_codes": [],
+      "submitted_index": 7
+    },
+    {
+      "degree": 217,
+      "degree_percentile": 98.67415583567369,
+      "first_seen_page": 1,
+      "h1": 1,
+      "label_a": "GOLD",
+      "label_b": "SUPPORTED",
+      "list_size": 12,
+      "node_id": "26096",
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "label": "indication",
+          "u": "37608",
+          "v": "14017"
+        },
+        {
+          "creation_index": 18,
+          "label": "drug_effect",
+          "u": "14017",
+          "v": "26096"
+        }
+      ],
+      "primary_path_max_list_size": 15,
+      "primary_reason_codes": [],
+      "reason_codes": [],
+      "submitted_index": 8
+    },
+    {
+      "degree": 159,
+      "degree_percentile": 98.02103063157207,
+      "first_seen_page": 1,
+      "h1": 1,
+      "label_a": "GOLD",
+      "label_b": "SUPPORTED",
+      "list_size": 12,
+      "node_id": "26262",
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "label": "indication",
+          "u": "37608",
+          "v": "14017"
+        },
+        {
+          "creation_index": 18,
+          "label": "drug_effect",
+          "u": "14017",
+          "v": "26262"
+        }
+      ],
+      "primary_path_max_list_size": 15,
+      "primary_reason_codes": [],
+      "reason_codes": [],
+      "submitted_index": 9
+    },
+    {
+      "degree": 305,
+      "degree_percentile": 99.17053099079094,
+      "first_seen_page": 1,
+      "h1": 1,
+      "label_a": "GOLD",
+      "label_b": "SUPPORTED",
+      "list_size": 13,
+      "node_id": "84469",
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "label": "indication",
+          "u": "37608",
+          "v": "14031"
+        },
+        {
+          "creation_index": 22,
+          "label": "drug_effect",
+          "u": "14031",
+          "v": "84469"
+        }
+      ],
+      "primary_path_max_list_size": 15,
+      "primary_reason_codes": [],
+      "reason_codes": [],
+      "submitted_index": 10
+    },
+    {
+      "degree": 79,
+      "degree_percentile": 95.9440924825289,
+      "first_seen_page": 1,
+      "h1": 1,
+      "label_a": "GOLD",
+      "label_b": "SUPPORTED",
+      "list_size": 13,
+      "node_id": "87212",
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "label": "indication",
+          "u": "37608",
+          "v": "14031"
+        },
+        {
+          "creation_index": 22,
+          "label": "drug_effect",
+          "u": "14031",
+          "v": "87212"
+        }
+      ],
+      "primary_path_max_list_size": 15,
+      "primary_reason_codes": [],
+      "reason_codes": [],
+      "submitted_index": 11
+    }
+  ],
+  "attempt": 1,
+  "benchmark_f1": 0.12244897959183673,
+  "benchmark_precision": 1.0,
+  "benchmark_recall": 0.06521739130434782,
+  "bridge_conditional_recall": {
+    "14016": 1.0,
+    "14017": 0.8333333333333334,
+    "14023": 0.0379746835443038,
+    "14028": 0.0449438202247191,
+    "14030": 0.12121212121212122,
+    "14031": 0.6153846153846154,
+    "14320": 0.07216494845360824,
+    "15180": 0.17857142857142858,
+    "15767": 0.2222222222222222,
+    "16063": 0.15384615384615385
+  },
+  "bridge_rank": {
+    "14016": 1,
+    "14017": 2,
+    "14023": 3,
+    "14028": 4,
+    "14030": 5,
+    "14031": 6,
+    "14320": 8,
+    "15180": 11,
+    "15767": 12,
+    "16063": 13
+  },
+  "bridge_recall_counts": {
+    "14016": {
+      "correct": 7,
+      "total": 7
+    },
+    "14017": {
+      "correct": 10,
+      "total": 12
+    },
+    "14023": {
+      "correct": 3,
+      "total": 79
+    },
+    "14028": {
+      "correct": 4,
+      "total": 89
+    },
+    "14030": {
+      "correct": 8,
+      "total": 66
+    },
+    "14031": {
+      "correct": 8,
+      "total": 13
+    },
+    "14320": {
+      "correct": 7,
+      "total": 97
+    },
+    "15180": {
+      "correct": 5,
+      "total": 28
+    },
+    "15767": {
+      "correct": 6,
+      "total": 27
+    },
+    "16063": {
+      "correct": 6,
+      "total": 39
+    }
+  },
+  "bridges_explored": [
+    "14016",
+    "14017",
+    "14023",
+    "14028",
+    "14030",
+    "14031",
+    "14320",
+    "15180",
+    "15767",
+    "16063"
+  ],
+  "budget_exhausted": true,
+  "cause": null,
+  "construction": "UNION",
+  "denominators": {
+    "benchmark_f1": 196,
+    "benchmark_precision": 12,
+    "benchmark_recall": 184,
+    "off_question_rate": 12,
+    "question_valid_precision": 12,
+    "ungrounded_rate": 12,
+    "unresolved_rate": 12
+  },
+  "early_stop": true,
+  "episode_status": "SUCCESS",
+  "found_r1": true,
+  "hop1_status": "H1_CLEAN",
+  "label_a_counts": {
+    "ALT_VALID": 0,
+    "GOLD": 12,
+    "GOLD_BRIDGE_EXTRA": 0,
+    "OFF_QUESTION": 0,
+    "UNRESOLVED": 0
+  },
+  "label_b_counts": {
+    "KG_UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0,
+    "PATH_INVALID": 0,
+    "SUPPORTED": 12,
+    "UNGROUNDED": 0
+  },
+  "node_statistics": {
+    "14016": {
+      "degree": 216,
+      "degree_percentile": 61.970591931632526
+    },
+    "14017": {
+      "degree": 819,
+      "degree_percentile": 81.23664697750408
+    },
+    "14023": {
+      "degree": 1616,
+      "degree_percentile": 96.64446399396758
+    },
+    "14028": {
+      "degree": 1504,
+      "degree_percentile": 95.3248711826065
+    },
+    "14030": {
+      "degree": 1386,
+      "degree_percentile": 93.69108960663567
+    },
+    "14031": {
+      "degree": 230,
+      "degree_percentile": 62.08369988689204
+    },
+    "14320": {
+      "degree": 1790,
+      "degree_percentile": 98.24054291818524
+    },
+    "15180": {
+      "degree": 911,
+      "degree_percentile": 84.37853462360187
+    },
+    "15767": {
+      "degree": 358,
+      "degree_percentile": 68.24179967324369
+    },
+    "16063": {
+      "degree": 1119,
+      "degree_percentile": 88.97825813748901
+    },
+    "22380": {
+      "degree": 691,
+      "degree_percentile": 99.81059369081052
+    },
+    "22604": {
+      "degree": 132,
+      "degree_percentile": 97.53771798053687
+    },
+    "22613": {
+      "degree": 463,
+      "degree_percentile": 99.54281235712887
+    },
+    "22982": {
+      "degree": 796,
+      "degree_percentile": 99.86937495917968
+    },
+    "24408": {
+      "degree": 40,
+      "degree_percentile": 92.90706028345633
+    },
+    "24416": {
+      "degree": 47,
+      "degree_percentile": 93.72999804062438
+    },
+    "24438": {
+      "degree": 126,
+      "degree_percentile": 97.40056168767552
+    },
+    "25608": {
+      "degree": 513,
+      "degree_percentile": 99.61465612958004
+    },
+    "26096": {
+      "degree": 217,
+      "degree_percentile": 98.67415583567369
+    },
+    "26262": {
+      "degree": 159,
+      "degree_percentile": 98.02103063157207
+    },
+    "37608": {
+      "degree": 40,
+      "degree_percentile": 87.3887587822014
+    },
+    "84469": {
+      "degree": 305,
+      "degree_percentile": 99.17053099079094
+    },
+    "87212": {
+      "degree": 79,
+      "degree_percentile": 95.9440924825289
+    }
+  },
+  "numerators": {
+    "benchmark_f1": 24,
+    "benchmark_precision": 12,
+    "benchmark_recall": 12,
+    "off_question_rate": 0,
+    "question_valid_precision": 12,
+    "ungrounded_rate": 0,
+    "unresolved_rate": 0
+  },
+  "off_question_rate": 0.0,
+  "pages_requested": 15,
+  "primary_reason_counts": {
+    "SHORTCUT": 0,
+    "WRONG_BRIDGE_TYPE": 0,
+    "WRONG_HOP_COUNT": 0,
+    "WRONG_RELATION_HOP1": 0,
+    "WRONG_RELATION_HOP2": 0,
+    "WRONG_TARGET_TYPE": 0
+  },
+  "query_id": "BH2_03875",
+  "question_valid_precision": 1.0,
+  "reason_counts": {
+    "SHORTCUT": 0,
+    "WRONG_BRIDGE_TYPE": 0,
+    "WRONG_HOP_COUNT": 0,
+    "WRONG_RELATION_HOP1": 0,
+    "WRONG_RELATION_HOP2": 0,
+    "WRONG_TARGET_TYPE": 0
+  },
+  "resolved_count": 12,
+  "run_id": "pilot_v1",
+  "text_tool_call_count": 0,
+  "tool_calls_used": 30,
+  "undefined_counts": {
+    "benchmark_f1": 0,
+    "benchmark_precision": 0,
+    "benchmark_recall": 0,
+    "bridge_conditional_recall": 0,
+    "bridge_rank": 0,
+    "degree": 0,
+    "degree_percentile": 0,
+    "list_size": 0,
+    "off_question_rate": 0,
+    "primary_path_max_list_size": 0,
+    "question_valid_precision": 0,
+    "ungrounded_rate": 0,
+    "unresolved_rate": 0
+  },
+  "ungrounded_rate": 0.0,
+  "unresolved_rate": 0.0
+}

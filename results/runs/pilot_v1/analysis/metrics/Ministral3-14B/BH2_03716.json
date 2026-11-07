@@ -1,0 +1,154 @@
+{
+  "agent_id": "Ministral3-14B",
+  "answer_count": null,
+  "answers": [],
+  "attempt": 1,
+  "benchmark_f1": null,
+  "benchmark_precision": null,
+  "benchmark_recall": null,
+  "bridge_conditional_recall": {
+    "14019": null,
+    "14194": null,
+    "14275": null,
+    "14764": null,
+    "14780": null,
+    "14789": null,
+    "14955": null
+  },
+  "bridge_rank": {
+    "14019": 1,
+    "14194": 7,
+    "14275": 9,
+    "14764": 14,
+    "14780": 15,
+    "14789": 16,
+    "14955": 18
+  },
+  "bridge_recall_counts": {
+    "14019": {
+      "correct": null,
+      "total": 97
+    },
+    "14194": {
+      "correct": null,
+      "total": 133
+    },
+    "14275": {
+      "correct": null,
+      "total": 211
+    },
+    "14764": {
+      "correct": null,
+      "total": 24
+    },
+    "14780": {
+      "correct": null,
+      "total": 106
+    },
+    "14789": {
+      "correct": null,
+      "total": 94
+    },
+    "14955": {
+      "correct": null,
+      "total": 69
+    }
+  },
+  "bridges_explored": [
+    "14019",
+    "14194",
+    "14275",
+    "14764",
+    "14780",
+    "14789",
+    "14955"
+  ],
+  "budget_exhausted": true,
+  "cause": null,
+  "construction": "UNION",
+  "denominators": {
+    "benchmark_f1": null,
+    "benchmark_precision": null,
+    "benchmark_recall": 355,
+    "off_question_rate": null,
+    "question_valid_precision": null,
+    "ungrounded_rate": null,
+    "unresolved_rate": null
+  },
+  "early_stop": null,
+  "episode_status": "PARSE_FAIL",
+  "found_r1": true,
+  "hop1_status": "H1_CLEAN",
+  "label_a_counts": null,
+  "label_b_counts": null,
+  "node_statistics": {
+    "14019": {
+      "degree": 1625,
+      "degree_percentile": 96.78270705039587
+    },
+    "14194": {
+      "degree": 1924,
+      "degree_percentile": 98.86892044740479
+    },
+    "14275": {
+      "degree": 1539,
+      "degree_percentile": 95.81500565539777
+    },
+    "14764": {
+      "degree": 986,
+      "degree_percentile": 86.20082945833857
+    },
+    "14780": {
+      "degree": 719,
+      "degree_percentile": 76.00854593439739
+    },
+    "14789": {
+      "degree": 983,
+      "degree_percentile": 86.12542415483222
+    },
+    "14955": {
+      "degree": 1277,
+      "degree_percentile": 91.39122784969209
+    },
+    "33621": {
+      "degree": 160,
+      "degree_percentile": 98.54215456674473
+    }
+  },
+  "numerators": {
+    "benchmark_f1": null,
+    "benchmark_precision": null,
+    "benchmark_recall": null,
+    "off_question_rate": null,
+    "question_valid_precision": null,
+    "ungrounded_rate": null,
+    "unresolved_rate": null
+  },
+  "off_question_rate": null,
+  "pages_requested": 19,
+  "primary_reason_counts": null,
+  "query_id": "BH2_03716",
+  "question_valid_precision": null,
+  "reason_counts": null,
+  "resolved_count": null,
+  "run_id": "pilot_v1",
+  "text_tool_call_count": 0,
+  "tool_calls_used": 30,
+  "undefined_counts": {
+    "benchmark_f1": 1,
+    "benchmark_precision": 1,
+    "benchmark_recall": 1,
+    "bridge_conditional_recall": 7,
+    "bridge_rank": 0,
+    "degree": 0,
+    "degree_percentile": 0,
+    "list_size": 0,
+    "off_question_rate": 1,
+    "primary_path_max_list_size": 0,
+    "question_valid_precision": 1,
+    "ungrounded_rate": 1,
+    "unresolved_rate": 1
+  },
+  "ungrounded_rate": null,
+  "unresolved_rate": null
+}
