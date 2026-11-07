@@ -102,15 +102,19 @@ def _query(query_id, config):
     return found
 
 
-def run_episode(query_id, agent_config, run_config):
-    """Run attempt 1 (§9.2–§9.5); any existing final record prevents another run.
+def run_episode(query_id, agent_config, run_config, attempt=1):
+    """Run one attempt (§9.2–§9.5); any existing final record prevents another run.
+
+    `attempt` is 1 for a first run; a §19 rerun (new run ID) passes a higher number.
 
     `draft_prompt=True` is for S14 review only; other callers must supply the
     approved `prompt_sha256`. `think` is always explicit in agent_config.
     """
     config = run_config
+    if type(attempt) is not int or attempt < 1:
+        raise ValueError("attempt must be a positive integer")
     target = record_path(config["runs_root"], config["run_id"], query_id,
-                         agent_config["agent_id"], 1)
+                         agent_config["agent_id"], attempt)
     if target.exists():
         raise FileExistsError(f"Episode already exists, refusing to overwrite: {target}")
     template_hash = prompt_sha256()
@@ -139,7 +143,7 @@ def run_episode(query_id, agent_config, run_config):
     options = {key: config[key] for key in ("temperature", "seed", "num_ctx", "num_predict")}
     started_at = datetime.now(timezone.utc).isoformat()
     fields = dict(run_id=config["run_id"], query_id=query_id, agent_id=agent_config["agent_id"],
-                  attempt=1, model={key: agent_config[key] for key in ("tag", "digest", "quantization")},
+                  attempt=attempt, model={key: agent_config[key] for key in ("tag", "digest", "quantization")},
                   **options, prompt_version=f"{PROMPT_VERSION}:{template_hash}",
                   tool_config={"tool_version": TOOL_VERSION, "page_size": tool_config.page_size,
                                "budget": tool_config.budget, "ordering_rule": "numeric-id",

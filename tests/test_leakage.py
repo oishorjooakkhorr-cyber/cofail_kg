@@ -27,7 +27,8 @@ from cofail_kg.utils.frozen_hashes import read_frozen_hashes
 
 ROOT = Path(__file__).resolve().parents[1]
 FIELDS = {"query_id", "question_text", "start_name", "start_id"}
-AGENT_MODULES = ("agents.kg_env", "agents.tool_schemas", "agents.prompts", "agents.run_agent")
+AGENT_MODULES = ("agents.kg_env", "agents.tool_schemas", "agents.prompts", "agents.run_agent",
+                 "agents.panel_runner")
 EVALUATOR_LABELS = (
     "UNRESOLVED", "GOLD", "GOLD_BRIDGE_EXTRA", "ALT_VALID", "OFF_QUESTION",
     "NOT_APPLICABLE", "UNGROUNDED", "SUPPORTED", "PATH_INVALID", "KG_UNSUPPORTED",
