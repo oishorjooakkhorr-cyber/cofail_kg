@@ -2795,3 +2795,26 @@ Researcher decisions (S25 report, assumptions 1 and 2):
   dysplasia" (effect/phenotype), so the ID wins (§12, NAME_ID_MISMATCH); it never appeared and is not in
   T_q.
 - Gate D4 is not decided by this entry.
+
+## 2026-11-07 — S26 — Gate D5: PASS; pilot method commit ec9911378343b07dd883d636951dfef82871e30d
+First S26 check (HEAD 211269a): FAIL on the clean-working-tree condition only. 542 untracked files
+under results/diagnostics/ministral_speed/ (exploratory Ministral3-8B speed diagnostics, 2026-10-20/21,
+17 MB, superseded panel). Fix, per runbook S26 ("if a fix was needed, commit it and rerun S26"): the
+folder was committed unchanged (ec99113); no code, config, frozen input or protocol text changed.
+S26 rerun on **ec9911378343b07dd883d636951dfef82871e30d** — this commit is the pilot's method:
+1. TBD/DEFAULT: PASS. The four tags still printed as `[TBD@…]` have their values frozen here:
+   §5.1/§5.3 `[TBD@S6]` (2026-10-13), §10 T1 `[TBD@S11]` (2026-10-15), §9.3 P1 `[TBD@S14]`
+   (2026-10-16). The only `[DEFAULT]` (§8 pilot 25/75) was confirmed at S10 (2026-10-15). The tag text
+   was not changed to `[FROZEN]` (protocol edit left to the researcher).
+2. Tests: PASS. 727 passed, 2 skipped, 0 failed. Skips: tests/test_biohopr_loader.py:142 and
+   tests/test_diagnostics.py:147 need data/raw/biohopr/ (BioHopR is at data/raw/BioHopR.json here).
+3. Clean tree: PASS (0 tracked or untracked changes); commit hash recorded above.
+4. Frozen hashes: PASS. kg_fingerprint, relation_mapping, tools, prompt and all 8 manifest/sheet
+   entries (incl. pilot manifest 102a1cb1… and pilot agent-input sheet 4c6190d8…) recomputed and equal;
+   the PrimeKG cache parquets and raw kg.csv also equal primekg_metadata.json.
+5. BioHopR revision and models: PASS. Revision 08f06692… : data/raw/biohopr/metadata.json is not on this
+   machine, so checked by content: BioHopR.json SHA256 1adda2f2…527d equals the hash recorded at S2 for
+   that revision. `scripts/21_freeze_models.py check` exit 0: all four installed digests equal
+   `models_s21r2`.
+Note: this entry is committed after ec99113. That commit changes only docs/decision_log.md, which
+is not a pinned run source; pilot records will carry the HEAD at run time.
