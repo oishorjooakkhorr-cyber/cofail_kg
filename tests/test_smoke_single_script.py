@@ -100,8 +100,26 @@ def test_load_panel_refuses_inconsistent_configs(tmp_path, kwargs):
         smoke.load_panel(tmp_path)
 
 
-def test_real_panel_matches_frozen_protocol_values():
-    panel = {r["agent_id"]: s for r, s in smoke.load_panel()}
+def superseded_root(tmp_path):
+    """The smoke_single_v135 panel as frozen on 2026-10-30 (configs/superseded/s21r1, `models` key)."""
+    configs = tmp_path / "configs"
+    configs.mkdir()
+    archive = smoke.ROOT / "configs/superseded/s21r1"
+    (configs / "pilot.yaml").write_text((archive / "pilot_runtime.yaml").read_text(encoding="utf-8"), encoding="utf-8")
+    (configs / "models.yaml").write_text((archive / "models.yaml").read_text(encoding="utf-8"), encoding="utf-8")
+    (configs / "frozen_hashes.yaml").write_text((smoke.ROOT / "configs/frozen_hashes.yaml").read_text(encoding="utf-8"),
+                                                encoding="utf-8")
+    return tmp_path
+
+
+def test_v135_script_refuses_the_s21r2_panel():
+    """smoke_single_v135 belongs to the superseded panel; it must not run or resume on the re-frozen one."""
+    with pytest.raises(ValueError, match="disagree"):
+        smoke.load_panel()
+
+
+def test_real_panel_matches_frozen_protocol_values(tmp_path):
+    panel = {r["agent_id"]: s for r, s in smoke.load_panel(superseded_root(tmp_path))}
     assert list(panel) == ["Ministral3-8B", "Gemma4-E4B", "Granite41-8B", "Qwen35-9B"]
     assert set(panel) == set(smoke.EXPECTED_LOG)
     assert panel["Qwen35-9B"]["kv_cache_type"] == "f32" and panel["Gemma4-E4B"]["num_ctx"] == 32768

@@ -2644,3 +2644,36 @@ on a plain question (diagnose.py, no screening query). The S20 preflight require
 probe, so no episode was run. Cause (model vs quantization vs runtime) not established.
 Researcher decision: skip; model removed from storage.
 Evidence: results/diagnostics/s20/qwen38-14b-5060ti-32k-20261107/. No panel change.
+
+## 2026-11-07 — S21 re-freeze — Gate D3 panel replaced; protocol §9.1 revised (v1.3.6)
+Researcher decisions (this session): (1) new panel gemma4:12b, ministral-3:14b, cogito:14b and
+Granite41-8B ("lets freeze these 4 models"); (2) protocol §9.1 edit authorized; the superseded
+`models` entry in configs/frozen_hashes.yaml is kept and the new panel is written once under
+`models_s21r2`; (3) Mistral slot: ministral-3:14b (16/20 competent) chosen over Ministral3-8B
+(19/20), a researcher override of the D3 competence tie-break; (4) cogito:14b family recorded as
+Qwen (its S20 block recorded "UNVERIFIED-qwen2-architecture"; no model card checked).
+Outcome-informed: chosen after the S22 results of the old panel and the exploratory S23
+substitution results for these exact models were seen. Asked for a reason, the researcher said:
+"i will do s22 with these models". No further reason was given.
+D3: every evidence block passes all five criteria. Gemma4-12B 20/20 SUCCESS, 20/20 competent,
+130/130 well-formed, median 16.9 s; Granite41-8B 20/20, 16/20, 233/233, 36.9 s; Ministral3-14B
+19/20, 16/20, 220/220, 40.5 s; Cogito-14B 18/20 (exactly 90%), 16/20, 228/228, 51.2 s; zero OOM.
+Four families (Gemma, Granite, Mistral, Qwen) -> D3 row 1. Agent order uses the 2026-10-30
+convention (competence, then median wall time): Gemma4-12B, Granite41-8B, Ministral3-14B, Cogito-14B.
+Runtime (§9.1, exact evidence-block settings): all four num_ctx 32768, num_predict 8192, f16 KV,
+request 240 s, Flash Attention on; shared temperature 0, seed 42, think=false, budget 30, page 50,
+episode 600 s. GPU layers as verified: Gemma 49/49 + MTP draft 5/5, Granite 41/41, Ministral 41/41,
+Cogito 47/49 (partial offload, researcher choice of 2026-11-06).
+Known consequences: Ministral3-14B's largest screening prompt is 30048/32768 (> 90% of num_ctx),
+so the §9.1 re-selection trigger may fire at S22; Cogito-14B had two ERROR/CONNECTION episodes
+(240 s request timeout during long generations under partial offload); Ministral3-14B had one
+PARSE_FAIL from a raw-text tool call the runner does not detect. The pending §9.1 review of
+Gemma4-E4B and Qwen35-9B (S22 packet §6) was not recorded; both have left the panel.
+Preserved: old models.yaml and pilot.yaml runtime in configs/superseded/s21r1/, `models` entry,
+smoke_single_v135. scripts/22_smoke_single.py is tied to smoke_single_v135 and now refuses the
+re-frozen configs; S22 for the new panel needs a new run ID.
+Written: configs/models.yaml, frozen_hashes.yaml `models_s21r2`, pilot.yaml `runtime`
+(scripts/21_freeze_models.py freeze --identities evidence: identities taken from the
+get_model_identity() results recorded in the evidence manifests, because this environment has no
+Ollama). The installed-digest check (`check`) has NOT been run; run it on the inference host
+before S22.

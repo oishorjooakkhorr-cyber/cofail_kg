@@ -42,25 +42,21 @@ runtime:
   timeout_seconds: 600
   num_parallel: 1
   agent_order:
-  - Ministral3-8B
-  - Gemma4-E4B
+  - Gemma4-12B
   - Granite41-8B
-  - Qwen35-9B
+  - Ministral3-14B
+  - Cogito-14B
   agents:
-    Ministral3-8B:
+    Gemma4-12B:
       num_ctx: 32768
       num_predict: 8192
       kv_cache_type: f16
       request_timeout_seconds: 240
       flash_attention_env: 'true'
-      evidence_run_id: ministral3-5060ti-32k-resources-20261030
-    Gemma4-E4B:
-      num_ctx: 32768
-      num_predict: 8192
-      kv_cache_type: f16
-      request_timeout_seconds: 240
-      flash_attention_env: 'true'
-      evidence_run_id: gemma4-5060ti-32k-resources-20261030
+      evidence_run_id: gemma4-12b-5060ti-32k-20261106
+      gpu_layers:
+      - 49/49
+      - 5/5
     Granite41-8B:
       num_ctx: 32768
       num_predict: 8192
@@ -68,10 +64,23 @@ runtime:
       request_timeout_seconds: 240
       flash_attention_env: 'true'
       evidence_run_id: granite41-5060ti-32k-resources-20261030
-    Qwen35-9B:
-      num_ctx: 8192
-      num_predict: 4096
-      kv_cache_type: f32
-      request_timeout_seconds: 120
-      flash_attention_env: inherited
-      evidence_run_id: qwen35-5060ti-8k-f32-20261030
+      gpu_layers:
+      - 41/41
+    Ministral3-14B:
+      num_ctx: 32768
+      num_predict: 8192
+      kv_cache_type: f16
+      request_timeout_seconds: 240
+      flash_attention_env: 'true'
+      evidence_run_id: ministral3-14b-5060ti-32k-20261106
+      gpu_layers:
+      - 41/41
+    Cogito-14B:
+      num_ctx: 32768
+      num_predict: 8192
+      kv_cache_type: f16
+      request_timeout_seconds: 240
+      flash_attention_env: 'true'
+      evidence_run_id: cogito14b-5060ti-32k-20261106
+      gpu_layers:
+      - 47/49

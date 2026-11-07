@@ -1,6 +1,6 @@
 # CoFail-KG — Frozen Pilot Protocol
 
-**Version:** 1.3.5 (2026-10-30) · **Owner:** the researcher · **Implemented by:** Claude Code (read-only for Claude)
+**Version:** 1.3.6 (2026-11-07) · **Owner:** the researcher · **Implemented by:** Claude Code (read-only for Claude)
 **What changed since v1.0:** see `docs/CHANGES.md` (one page).
 
 This file is the single source of truth for every scientific rule in the project. Claude Code
@@ -389,7 +389,8 @@ the queries not yet drawn:
 | Page size | 50 | 50 `[FROZEN]` |
 | Episode timeout | 10 minutes | 10 minutes `[FROZEN]` |
 
-**Final configuration `[FROZEN]` (revised at S21, 2026-10-30; see `docs/decision_log.md`).** Each
+**Final configuration `[FROZEN]` (revised at S21, 2026-10-30; panel re-frozen at S21, 2026-11-07;
+see `docs/decision_log.md`).** Each
 agent keeps the exact runtime settings of the S20 block that is its Gate D3 evidence of record. No
 multiplier or rounding rule is applied. The researcher chose this in place of the earlier
 value-selection rules (largest-prompt × 1.25 context, 2 × median-call budget, 25 × answer-list p90
@@ -397,18 +398,22 @@ output cap, 3 × median-time timeout), which no longer apply.
 
 | Agent | Ollama tag | D3 evidence block (S20) | `num_ctx` | `num_predict` | KV cache | Request timeout |
 |---|---|---|---|---|---|---|
-| Ministral3-8B | `ministral-3:8b` | `ministral3-5060ti-32k-resources-20261030` | 32768 | 8192 | f16 | 240 s |
-| Gemma4-E4B | `gemma4:e4b-it-q4_K_M` | `gemma4-5060ti-32k-resources-20261030` | 32768 | 8192 | f16 | 240 s |
+| Gemma4-12B | `gemma4:12b` | `gemma4-12b-5060ti-32k-20261106` | 32768 | 8192 | f16 | 240 s |
 | Granite41-8B | `ibm/granite4.1:8b` | `granite41-5060ti-32k-resources-20261030` | 32768 | 8192 | f16 | 240 s |
-| Qwen35-9B | `qwen3.5:9b` | `qwen35-5060ti-8k-f32-20261030` | 8192 | 4096 | f32 | 120 s |
+| Ministral3-14B | `ministral-3:14b` | `ministral3-14b-5060ti-32k-20261106` | 32768 | 8192 | f16 | 240 s |
+| Cogito-14B | `cogito:14b` | `cogito14b-5060ti-32k-20261106` | 32768 | 8192 | f16 | 240 s |
 
-All four agents use think=false. D3 evidence is taken from these blocks although their screening
-conditions differ (three at 32K, one at the 8K screening context); this mixed basis is the
-researcher's decision.
+All four agents use think=false. Each keeps the GPU layer residency its evidence block verified;
+Cogito-14B runs with partial offload (47 of 49 layers on GPU), as in its evidence block, by the
+researcher's choice.
 
-Models: four, chosen by Gate D3 from the evidence blocks above (four families: Mistral, Gemma,
-Granite, Qwen), recorded by tag, digest and quantization in `configs/models.yaml` and
-`configs/frozen_hashes.yaml`.
+Models: four, chosen by the researcher from Gate D3 passing evidence blocks (four families: Gemma,
+Granite, Mistral, Qwen; Cogito-14B is counted as Qwen by the researcher), recorded by tag, digest
+and quantization in `configs/models.yaml` and the `models_s21r2` entry of
+`configs/frozen_hashes.yaml`. For the Mistral slot the researcher chose Ministral3-14B over
+Ministral3-8B, overriding the D3 competence tie-break. The superseded 2026-10-30 panel
+(Ministral3-8B, Gemma4-E4B, Granite41-8B, Qwen35-9B; `models` entry) and its S22 run
+`smoke_single_v135` are preserved.
 
 **Re-selection `[FROZEN]`:** If S22 records prompt usage above 90% of an agent’s context window or
 an out-of-memory error, pause progression and return the affected agent to S21 for researcher

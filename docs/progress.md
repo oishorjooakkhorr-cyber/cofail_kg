@@ -789,3 +789,11 @@ Qwen 8K 14→6, Qwen 16K 12→10, Ornith 11→12. Ornith start-entity-only 7→0
 Qwen 8K's 11 PARSE_FAILs all fill the 8192 context. Qwen/Ornith tool calls about double.
 §16 on all 15 panels: question-level CF = 0; CF^BH3 = 2 (BH2_05686, BH2_05843, BOTH_AMBIGUOUS).
 Report: docs/P2_exploratory_report.md. Not committed.
+
+## S21 re-freeze: new panel frozen — 2026-11-07
+Researcher-chosen panel: Gemma4-12B, Granite41-8B, Ministral3-14B, Cogito-14B (Gemma, Granite,
+Mistral, Qwen), all 32K/8192/f16/240 s; Cogito 47/49 GPU. Protocol v1.3.6 (§9.1). New
+frozen_hashes entry `models_s21r2`; old `models` entry and configs/superseded/s21r1/ preserved.
+Mistral slot is a researcher override of the D3 tie-break; panel change is outcome-informed.
+Installed-digest check not yet run (no Ollama here). Next: S22 for the new panel under a new run
+ID (researcher). S22 not started.

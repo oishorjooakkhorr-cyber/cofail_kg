@@ -90,3 +90,13 @@ out-of-memory error pauses progression and returns that agent to S21 for researc
 runtime revision is documented, frozen and followed by a repeat S22 for that agent; earlier
 results are preserved; only before S26. Runbook S22 and troubleshooting rows match. Decision log:
 "S21 — Gate D3 panel and runtime frozen; protocol §9.1 revised" and "S22 — protocol v1.3.5".
+
+## Amendment 2026-11-07 (S21 re-freeze) — new agent panel (protocol v1.3.6)
+
+Protocol version 1.3.5 → **1.3.6 (2026-11-07)**. §9.1: the per-agent table now lists Gemma4-12B
+(`gemma4:12b`), Granite41-8B, Ministral3-14B (`ministral-3:14b`) and Cogito-14B (`cogito:14b`),
+all at 32K / 8192 / f16 / 240 s from their S20 evidence blocks; Cogito-14B keeps its 47/49 GPU
+partial offload. Researcher choices recorded in §9.1: Cogito-14B counted as Qwen; Ministral3-14B
+chosen over Ministral3-8B against the D3 competence tie-break. The 2026-10-30 panel and
+`smoke_single_v135` are preserved. Decision log: "S21 re-freeze — Gate D3 panel replaced;
+protocol §9.1 revised (v1.3.6)".
