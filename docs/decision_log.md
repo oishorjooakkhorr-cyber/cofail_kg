@@ -2677,3 +2677,12 @@ Written: configs/models.yaml, frozen_hashes.yaml `models_s21r2`, pilot.yaml `run
 get_model_identity() results recorded in the evidence manifests, because this environment has no
 Ollama). The installed-digest check (`check`) has NOT been run; run it on the inference host
 before S22.
+
+## 2026-11-07 — S22 for the re-frozen panel: driver prepared (not run)
+Researcher request: "start S22". New driver scripts/22_smoke_single_s21r2.py, run ID
+smoke_single_s21r2 (new run ID; smoke_single_v135 and scripts/22_smoke_single.py unchanged).
+Same runner, resume, evaluation and summary code as v135; it reads frozen_hashes `models_s21r2`
+and guards each agent's evidence-block runtime, including GPU layer residency from pilot.yaml
+(Cogito-14B 47/49 partial offload). Summary goes to results/diagnostics/smoke_single_s21r2_summary.md.
+No inference was run: this environment has no Ollama or GPU. The run is for the researcher's host
+after `scripts/21_freeze_models.py check` passes.
