@@ -2732,3 +2732,27 @@ Researcher decisions:
   failed episode is descriptive only and never feeds a gate.
 - No CF2 measure is added. CF3 stays the primary measure; the §16.4 pairwise error agreement covers
   two-agent overlap. No protocol change.
+
+## 2026-11-07 — D5 model-digest entry clarified; installed-digest check run
+Researcher request ("fix these problems"):
+- docs/decision_rules.md D5: the installed-digest condition now names the `models_s21r2` entry of
+  configs/frozen_hashes.yaml (the current panel, protocol §9.1 v1.3.6). It previously named `models`,
+  which is the superseded 2026-10-30 panel, kept as a record only. Wording fix to match the S21
+  re-freeze; no threshold or condition changed. frozen_hashes.yaml untouched.
+- Installed-digest check run on the inference host: `scripts/21_freeze_models.py check`, exit 0,
+  2026-11-07 14:06:10 BST. All four installed digests equal `models_s21r2`:
+  Cogito-14B d0cac86a…16e0, Gemma4-12B 6114515d…ed0b, Granite41-8B 444af1c4…a2852,
+  Ministral3-14B 4760c35a…cdcf7. D5 itself is still checked at S26.
+
+## 2026-11-07 — S25 smoke_panel: stop at 11/16 on a pinned-source change; stash and resume
+smoke_panel (commit f1451b5) stopped itself after 11/16 episodes (Gemma4-12B 4, Granite41-8B 4,
+Ministral3-14B 3) with "Pinned screening source/input changed: docs/decision_rules.md". Cause: the
+researcher's D5 wording edit (entry above), made in another session at 14:06 while the run was in
+progress; docs/decision_rules.md is one of the run's pinned sources. The 11th record was saved
+before the check failed; no record was changed.
+Researcher decision (option 1): the three uncommitted doc changes (docs/decision_rules.md,
+docs/decision_log.md, docs/progress.md) were set aside with `git stash`, every pinned source was
+confirmed byte-identical to the run configuration, the same command resumed the run (11 completed
+episodes skipped, none rerun) and finished 16/16, then `git stash pop` restored the changes
+unchanged. All 16 episodes therefore ran with identical pinned sources; the §19 code-change rule
+needs no exception. This stop is separate from the planned kill-and-resume interruption at 8/16.

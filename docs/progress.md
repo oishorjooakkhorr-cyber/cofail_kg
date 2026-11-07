@@ -797,3 +797,7 @@ frozen_hashes entry `models_s21r2`; old `models` entry and configs/superseded/s2
 Mistral slot is a researcher override of the D3 tie-break; panel change is outcome-informed.
 Installed-digest check not yet run (no Ollama here). Next: S22 for the new panel under a new run
 ID (researcher). S22 not started.
+
+## D5 wording fix and installed-digest check — 2026-11-07
+decision_rules.md D5 now checks the `models_s21r2` entry (was the superseded `models`). Installed-digest
+check run here: all four panel digests match `models_s21r2` (exit 0). See decision log 2026-11-07.

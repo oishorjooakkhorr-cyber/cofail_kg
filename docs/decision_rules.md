@@ -110,7 +110,9 @@ The pilot may start only if all hold:
 - all tests pass on a clean working tree; the commit hash is recorded;
 - the KG fingerprint, BioHopR revision, relation mapping, tool schema, prompt template, pilot
   manifest and pilot agent-input sheet all match `configs/frozen_hashes.yaml`;
-- the installed model digests match the `models` entry of `configs/frozen_hashes.yaml`.
+- the installed model digests match the `models_s21r2` entry of `configs/frozen_hashes.yaml`
+  (the current frozen panel, protocol §9.1 v1.3.6; the superseded `models` entry is kept as a record
+  only and is not checked).
 
 ---
 
