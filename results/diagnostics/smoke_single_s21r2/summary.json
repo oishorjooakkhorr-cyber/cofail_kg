@@ -1,0 +1,142 @@
+{
+  "off_question_supported": [],
+  "report_only_source_sha256": {
+    "scripts/22_smoke_single_s21r2.py": "ec0b7bed57adaccd5231b71fbd04654d993789c1285375c1dd400c0f9950b5ed",
+    "src/cofail_kg/evaluation/smoke_summary.py": "8c3f8c6b89bfbe89060a036a7fc143aeb46d048c60aa3efd3c3a017b0fe02c93"
+  },
+  "summaries": {
+    "Cogito-14B": {
+      "budget_hit_share": 0.0,
+      "early_stop_share": 0.25,
+      "episodes": 20,
+      "episodes_prompt_over_90pct_num_ctx": [],
+      "error_causes": {
+        "CONNECTION": 2
+      },
+      "hop1_status": {
+        "H1_CLEAN": 19,
+        "H1_MIXED": 1
+      },
+      "label_a": {
+        "ALT_VALID": 17,
+        "GOLD": 615
+      },
+      "label_b": {
+        "SUPPORTED": 632
+      },
+      "largest_prompt_share_of_num_ctx": 0.63824462890625,
+      "largest_prompt_tokens": 20914,
+      "num_ctx": 32768,
+      "out_of_memory_episodes": 0,
+      "primary_reason_codes": {},
+      "reason_codes": {},
+      "status_counts": {
+        "ERROR": 2,
+        "SUCCESS": 18
+      }
+    },
+    "Gemma4-12B": {
+      "budget_hit_share": 0.0,
+      "early_stop_share": 0.1,
+      "episodes": 20,
+      "episodes_prompt_over_90pct_num_ctx": [],
+      "error_causes": {},
+      "hop1_status": {
+        "H1_CLEAN": 20
+      },
+      "label_a": {
+        "ALT_VALID": 17,
+        "GOLD": 1265,
+        "OFF_QUESTION": 24
+      },
+      "label_b": {
+        "SUPPORTED": 1282,
+        "UNGROUNDED": 24
+      },
+      "largest_prompt_share_of_num_ctx": 0.6610107421875,
+      "largest_prompt_tokens": 21660,
+      "num_ctx": 32768,
+      "out_of_memory_episodes": 0,
+      "primary_reason_codes": {},
+      "reason_codes": {},
+      "status_counts": {
+        "SUCCESS": 20
+      }
+    },
+    "Granite41-8B": {
+      "budget_hit_share": 0.1,
+      "early_stop_share": 0.35,
+      "episodes": 20,
+      "episodes_prompt_over_90pct_num_ctx": [],
+      "error_causes": {},
+      "hop1_status": {
+        "H1_CLEAN": 17,
+        "H1_MIXED": 2,
+        "H1_WRONG": 1
+      },
+      "label_a": {
+        "ALT_VALID": 17,
+        "GOLD": 593,
+        "OFF_QUESTION": 74
+      },
+      "label_b": {
+        "PATH_INVALID": 74,
+        "SUPPORTED": 610
+      },
+      "largest_prompt_share_of_num_ctx": 0.55517578125,
+      "largest_prompt_tokens": 18192,
+      "num_ctx": 32768,
+      "out_of_memory_episodes": 0,
+      "primary_reason_codes": {
+        "SHORTCUT": 56,
+        "WRONG_HOP_COUNT": 18,
+        "WRONG_TARGET_TYPE": 18
+      },
+      "reason_codes": {
+        "SHORTCUT": 56,
+        "WRONG_HOP_COUNT": 18,
+        "WRONG_TARGET_TYPE": 18
+      },
+      "status_counts": {
+        "SUCCESS": 20
+      }
+    },
+    "Ministral3-14B": {
+      "budget_hit_share": 0.0,
+      "early_stop_share": 0.4,
+      "episodes": 20,
+      "episodes_prompt_over_90pct_num_ctx": [
+        "BH2_04003"
+      ],
+      "error_causes": {},
+      "hop1_status": {
+        "H1_CLEAN": 17,
+        "H1_MIXED": 2,
+        "H1_NONE": 1
+      },
+      "label_a": {
+        "ALT_VALID": 17,
+        "GOLD": 1143,
+        "OFF_QUESTION": 11
+      },
+      "label_b": {
+        "PATH_INVALID": 11,
+        "SUPPORTED": 1160
+      },
+      "largest_prompt_share_of_num_ctx": 0.9169921875,
+      "largest_prompt_tokens": 30048,
+      "num_ctx": 32768,
+      "out_of_memory_episodes": 0,
+      "primary_reason_codes": {
+        "SHORTCUT": 11
+      },
+      "reason_codes": {
+        "SHORTCUT": 11
+      },
+      "status_counts": {
+        "PARSE_FAIL": 1,
+        "SUCCESS": 19
+      }
+    }
+  }
+}

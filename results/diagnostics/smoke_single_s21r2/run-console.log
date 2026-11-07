@@ -1,0 +1,316 @@
+PHASE run: Gemma4-12B
+Ollama GET http://127.0.0.1:11435/api/version connection error; retry 1/2: HTTPConnectionPool(host='127.0.0.1', port=11435): Max retries exceeded with url: /api/version (Caused by NewConnectionError("HTTPConnection(host='127.0.0.1', port=11435): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it"))
+Ollama GET http://127.0.0.1:11435/api/version connection error; retry 2/2: HTTPConnectionPool(host='127.0.0.1', port=11435): Max retries exceeded with url: /api/version (Caused by NewConnectionError("HTTPConnection(host='127.0.0.1', port=11435): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it"))
+Ollama GET http://127.0.0.1:11435/api/version failed after 3 attempts: HTTPConnectionPool(host='127.0.0.1', port=11435): Max retries exceeded with url: /api/version (Caused by NewConnectionError("HTTPConnection(host='127.0.0.1', port=11435): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it"))
+CHECKED Gemma4-12B 0/20; ctx 32768; f16 KV; GPU layers 49/49+5/5
+CHECKED Gemma4-12B 0/20; ctx 32768; f16 KV; GPU layers 49/49+5/5
+Starting BH2_00461 / gemma4:12b (new episode 1)
+CHECKED Gemma4-12B 1/20; ctx 32768; f16 KV; GPU layers 49/49+5/5
+CHECKED Gemma4-12B 1/20; ctx 32768; f16 KV; GPU layers 49/49+5/5
+Starting BH2_02033 / gemma4:12b (new episode 2)
+CHECKED Gemma4-12B 2/20; ctx 32768; f16 KV; GPU layers 49/49+5/5
+CHECKED Gemma4-12B 2/20; ctx 32768; f16 KV; GPU layers 49/49+5/5
+Starting BH2_03434 / gemma4:12b (new episode 3)
+CHECKED Gemma4-12B 3/20; ctx 32768; f16 KV; GPU layers 49/49+5/5
+CHECKED Gemma4-12B 3/20; ctx 32768; f16 KV; GPU layers 49/49+5/5
+Starting BH2_03619 / gemma4:12b (new episode 4)
+CHECKED Gemma4-12B 4/20; ctx 32768; f16 KV; GPU layers 49/49+5/5
+CHECKED Gemma4-12B 4/20; ctx 32768; f16 KV; GPU layers 49/49+5/5
+Starting BH2_03750 / gemma4:12b (new episode 5)
+CHECKED Gemma4-12B 5/20; ctx 32768; f16 KV; GPU layers 49/49+5/5
+CHECKED Gemma4-12B 5/20; ctx 32768; f16 KV; GPU layers 49/49+5/5
+Starting BH2_03760 / gemma4:12b (new episode 6)
+CHECKED Gemma4-12B 6/20; ctx 32768; f16 KV; GPU layers 49/49+5/5
+CHECKED Gemma4-12B 6/20; ctx 32768; f16 KV; GPU layers 49/49+5/5
+Starting BH2_03762 / gemma4:12b (new episode 7)
+CHECKED Gemma4-12B 7/20; ctx 32768; f16 KV; GPU layers 49/49+5/5
+CHECKED Gemma4-12B 7/20; ctx 32768; f16 KV; GPU layers 49/49+5/5
+Starting BH2_03850 / gemma4:12b (new episode 8)
+CHECKED Gemma4-12B 8/20; ctx 32768; f16 KV; GPU layers 49/49+5/5
+CHECKED Gemma4-12B 8/20; ctx 32768; f16 KV; GPU layers 49/49+5/5
+Starting BH2_03856 / gemma4:12b (new episode 9)
+CHECKED Gemma4-12B 9/20; ctx 32768; f16 KV; GPU layers 49/49+5/5
+CHECKED Gemma4-12B 9/20; ctx 32768; f16 KV; GPU layers 49/49+5/5
+Starting BH2_03879 / gemma4:12b (new episode 10)
+CHECKED Gemma4-12B 10/20; ctx 32768; f16 KV; GPU layers 49/49+5/5
+CHECKED Gemma4-12B 10/20; ctx 32768; f16 KV; GPU layers 49/49+5/5
+Starting BH2_03881 / gemma4:12b (new episode 11)
+CHECKED Gemma4-12B 11/20; ctx 32768; f16 KV; GPU layers 49/49+5/5
+CHECKED Gemma4-12B 11/20; ctx 32768; f16 KV; GPU layers 49/49+5/5
+Starting BH2_03953 / gemma4:12b (new episode 12)
+CHECKED Gemma4-12B 12/20; ctx 32768; f16 KV; GPU layers 49/49+5/5
+CHECKED Gemma4-12B 12/20; ctx 32768; f16 KV; GPU layers 49/49+5/5
+Starting BH2_03991 / gemma4:12b (new episode 13)
+CHECKED Gemma4-12B 13/20; ctx 32768; f16 KV; GPU layers 49/49+5/5
+CHECKED Gemma4-12B 13/20; ctx 32768; f16 KV; GPU layers 49/49+5/5
+Starting BH2_04003 / gemma4:12b (new episode 14)
+CHECKED Gemma4-12B 14/20; ctx 32768; f16 KV; GPU layers 49/49+5/5
+CHECKED Gemma4-12B 14/20; ctx 32768; f16 KV; GPU layers 49/49+5/5
+Starting BH2_04007 / gemma4:12b (new episode 15)
+CHECKED Gemma4-12B 15/20; ctx 32768; f16 KV; GPU layers 49/49+5/5
+CHECKED Gemma4-12B 15/20; ctx 32768; f16 KV; GPU layers 49/49+5/5
+Starting BH2_04425 / gemma4:12b (new episode 16)
+CHECKED Gemma4-12B 16/20; ctx 32768; f16 KV; GPU layers 49/49+5/5
+CHECKED Gemma4-12B 16/20; ctx 32768; f16 KV; GPU layers 49/49+5/5
+Starting BH2_05366 / gemma4:12b (new episode 17)
+CHECKED Gemma4-12B 17/20; ctx 32768; f16 KV; GPU layers 49/49+5/5
+CHECKED Gemma4-12B 17/20; ctx 32768; f16 KV; GPU layers 49/49+5/5
+Starting BH2_05686 / gemma4:12b (new episode 18)
+CHECKED Gemma4-12B 18/20; ctx 32768; f16 KV; GPU layers 49/49+5/5
+CHECKED Gemma4-12B 18/20; ctx 32768; f16 KV; GPU layers 49/49+5/5
+Starting BH2_05843 / gemma4:12b (new episode 19)
+CHECKED Gemma4-12B 19/20; ctx 32768; f16 KV; GPU layers 49/49+5/5
+CHECKED Gemma4-12B 19/20; ctx 32768; f16 KV; GPU layers 49/49+5/5
+Starting BH2_06427 / gemma4:12b (new episode 20)
+CHECKED Gemma4-12B 20/20; ctx 32768; f16 KV; GPU layers 49/49+5/5
+PHASE run: Granite41-8B
+Ollama GET http://127.0.0.1:11435/api/version connection error; retry 1/2: HTTPConnectionPool(host='127.0.0.1', port=11435): Max retries exceeded with url: /api/version (Caused by NewConnectionError("HTTPConnection(host='127.0.0.1', port=11435): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it"))
+Ollama GET http://127.0.0.1:11435/api/version connection error; retry 2/2: HTTPConnectionPool(host='127.0.0.1', port=11435): Max retries exceeded with url: /api/version (Caused by NewConnectionError("HTTPConnection(host='127.0.0.1', port=11435): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it"))
+Ollama GET http://127.0.0.1:11435/api/version failed after 3 attempts: HTTPConnectionPool(host='127.0.0.1', port=11435): Max retries exceeded with url: /api/version (Caused by NewConnectionError("HTTPConnection(host='127.0.0.1', port=11435): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it"))
+CHECKED Granite41-8B 0/20; ctx 32768; f16 KV; GPU layers 41/41
+CHECKED Granite41-8B 0/20; ctx 32768; f16 KV; GPU layers 41/41
+Starting BH2_00461 / ibm/granite4.1:8b (new episode 1)
+CHECKED Granite41-8B 1/20; ctx 32768; f16 KV; GPU layers 41/41
+CHECKED Granite41-8B 1/20; ctx 32768; f16 KV; GPU layers 41/41
+Starting BH2_02033 / ibm/granite4.1:8b (new episode 2)
+CHECKED Granite41-8B 2/20; ctx 32768; f16 KV; GPU layers 41/41
+CHECKED Granite41-8B 2/20; ctx 32768; f16 KV; GPU layers 41/41
+Starting BH2_03434 / ibm/granite4.1:8b (new episode 3)
+CHECKED Granite41-8B 3/20; ctx 32768; f16 KV; GPU layers 41/41
+CHECKED Granite41-8B 3/20; ctx 32768; f16 KV; GPU layers 41/41
+Starting BH2_03619 / ibm/granite4.1:8b (new episode 4)
+CHECKED Granite41-8B 4/20; ctx 32768; f16 KV; GPU layers 41/41
+CHECKED Granite41-8B 4/20; ctx 32768; f16 KV; GPU layers 41/41
+Starting BH2_03750 / ibm/granite4.1:8b (new episode 5)
+CHECKED Granite41-8B 5/20; ctx 32768; f16 KV; GPU layers 41/41
+CHECKED Granite41-8B 5/20; ctx 32768; f16 KV; GPU layers 41/41
+Starting BH2_03760 / ibm/granite4.1:8b (new episode 6)
+CHECKED Granite41-8B 6/20; ctx 32768; f16 KV; GPU layers 41/41
+CHECKED Granite41-8B 6/20; ctx 32768; f16 KV; GPU layers 41/41
+Starting BH2_03762 / ibm/granite4.1:8b (new episode 7)
+CHECKED Granite41-8B 7/20; ctx 32768; f16 KV; GPU layers 41/41
+CHECKED Granite41-8B 7/20; ctx 32768; f16 KV; GPU layers 41/41
+Starting BH2_03850 / ibm/granite4.1:8b (new episode 8)
+CHECKED Granite41-8B 8/20; ctx 32768; f16 KV; GPU layers 41/41
+CHECKED Granite41-8B 8/20; ctx 32768; f16 KV; GPU layers 41/41
+Starting BH2_03856 / ibm/granite4.1:8b (new episode 9)
+CHECKED Granite41-8B 9/20; ctx 32768; f16 KV; GPU layers 41/41
+CHECKED Granite41-8B 9/20; ctx 32768; f16 KV; GPU layers 41/41
+Starting BH2_03879 / ibm/granite4.1:8b (new episode 10)
+CHECKED Granite41-8B 10/20; ctx 32768; f16 KV; GPU layers 41/41
+CHECKED Granite41-8B 10/20; ctx 32768; f16 KV; GPU layers 41/41
+Starting BH2_03881 / ibm/granite4.1:8b (new episode 11)
+CHECKED Granite41-8B 11/20; ctx 32768; f16 KV; GPU layers 41/41
+CHECKED Granite41-8B 11/20; ctx 32768; f16 KV; GPU layers 41/41
+Starting BH2_03953 / ibm/granite4.1:8b (new episode 12)
+CHECKED Granite41-8B 12/20; ctx 32768; f16 KV; GPU layers 41/41
+CHECKED Granite41-8B 12/20; ctx 32768; f16 KV; GPU layers 41/41
+Starting BH2_03991 / ibm/granite4.1:8b (new episode 13)
+CHECKED Granite41-8B 13/20; ctx 32768; f16 KV; GPU layers 41/41
+CHECKED Granite41-8B 13/20; ctx 32768; f16 KV; GPU layers 41/41
+Starting BH2_04003 / ibm/granite4.1:8b (new episode 14)
+CHECKED Granite41-8B 14/20; ctx 32768; f16 KV; GPU layers 41/41
+CHECKED Granite41-8B 14/20; ctx 32768; f16 KV; GPU layers 41/41
+Starting BH2_04007 / ibm/granite4.1:8b (new episode 15)
+CHECKED Granite41-8B 15/20; ctx 32768; f16 KV; GPU layers 41/41
+CHECKED Granite41-8B 15/20; ctx 32768; f16 KV; GPU layers 41/41
+Starting BH2_04425 / ibm/granite4.1:8b (new episode 16)
+CHECKED Granite41-8B 16/20; ctx 32768; f16 KV; GPU layers 41/41
+CHECKED Granite41-8B 16/20; ctx 32768; f16 KV; GPU layers 41/41
+Starting BH2_05366 / ibm/granite4.1:8b (new episode 17)
+CHECKED Granite41-8B 17/20; ctx 32768; f16 KV; GPU layers 41/41
+CHECKED Granite41-8B 17/20; ctx 32768; f16 KV; GPU layers 41/41
+Starting BH2_05686 / ibm/granite4.1:8b (new episode 18)
+CHECKED Granite41-8B 18/20; ctx 32768; f16 KV; GPU layers 41/41
+CHECKED Granite41-8B 18/20; ctx 32768; f16 KV; GPU layers 41/41
+Starting BH2_05843 / ibm/granite4.1:8b (new episode 19)
+CHECKED Granite41-8B 19/20; ctx 32768; f16 KV; GPU layers 41/41
+CHECKED Granite41-8B 19/20; ctx 32768; f16 KV; GPU layers 41/41
+Starting BH2_06427 / ibm/granite4.1:8b (new episode 20)
+CHECKED Granite41-8B 20/20; ctx 32768; f16 KV; GPU layers 41/41
+PHASE run: Ministral3-14B
+Ollama GET http://127.0.0.1:11435/api/version connection error; retry 1/2: HTTPConnectionPool(host='127.0.0.1', port=11435): Max retries exceeded with url: /api/version (Caused by NewConnectionError("HTTPConnection(host='127.0.0.1', port=11435): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it"))
+Ollama GET http://127.0.0.1:11435/api/version connection error; retry 2/2: HTTPConnectionPool(host='127.0.0.1', port=11435): Max retries exceeded with url: /api/version (Caused by NewConnectionError("HTTPConnection(host='127.0.0.1', port=11435): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it"))
+Ollama GET http://127.0.0.1:11435/api/version failed after 3 attempts: HTTPConnectionPool(host='127.0.0.1', port=11435): Max retries exceeded with url: /api/version (Caused by NewConnectionError("HTTPConnection(host='127.0.0.1', port=11435): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it"))
+CHECKED Ministral3-14B 0/20; ctx 32768; f16 KV; GPU layers 41/41
+CHECKED Ministral3-14B 0/20; ctx 32768; f16 KV; GPU layers 41/41
+Starting BH2_00461 / ministral-3:14b (new episode 1)
+CHECKED Ministral3-14B 1/20; ctx 32768; f16 KV; GPU layers 41/41
+CHECKED Ministral3-14B 1/20; ctx 32768; f16 KV; GPU layers 41/41
+Starting BH2_02033 / ministral-3:14b (new episode 2)
+CHECKED Ministral3-14B 2/20; ctx 32768; f16 KV; GPU layers 41/41
+CHECKED Ministral3-14B 2/20; ctx 32768; f16 KV; GPU layers 41/41
+Starting BH2_03434 / ministral-3:14b (new episode 3)
+CHECKED Ministral3-14B 3/20; ctx 32768; f16 KV; GPU layers 41/41
+CHECKED Ministral3-14B 3/20; ctx 32768; f16 KV; GPU layers 41/41
+Starting BH2_03619 / ministral-3:14b (new episode 4)
+CHECKED Ministral3-14B 4/20; ctx 32768; f16 KV; GPU layers 41/41
+CHECKED Ministral3-14B 4/20; ctx 32768; f16 KV; GPU layers 41/41
+Starting BH2_03750 / ministral-3:14b (new episode 5)
+CHECKED Ministral3-14B 5/20; ctx 32768; f16 KV; GPU layers 41/41
+CHECKED Ministral3-14B 5/20; ctx 32768; f16 KV; GPU layers 41/41
+Starting BH2_03760 / ministral-3:14b (new episode 6)
+CHECKED Ministral3-14B 6/20; ctx 32768; f16 KV; GPU layers 41/41
+CHECKED Ministral3-14B 6/20; ctx 32768; f16 KV; GPU layers 41/41
+Starting BH2_03762 / ministral-3:14b (new episode 7)
+CHECKED Ministral3-14B 7/20; ctx 32768; f16 KV; GPU layers 41/41
+CHECKED Ministral3-14B 7/20; ctx 32768; f16 KV; GPU layers 41/41
+Starting BH2_03850 / ministral-3:14b (new episode 8)
+CHECKED Ministral3-14B 8/20; ctx 32768; f16 KV; GPU layers 41/41
+CHECKED Ministral3-14B 8/20; ctx 32768; f16 KV; GPU layers 41/41
+Starting BH2_03856 / ministral-3:14b (new episode 9)
+CHECKED Ministral3-14B 9/20; ctx 32768; f16 KV; GPU layers 41/41
+CHECKED Ministral3-14B 9/20; ctx 32768; f16 KV; GPU layers 41/41
+Starting BH2_03879 / ministral-3:14b (new episode 10)
+CHECKED Ministral3-14B 10/20; ctx 32768; f16 KV; GPU layers 41/41
+CHECKED Ministral3-14B 10/20; ctx 32768; f16 KV; GPU layers 41/41
+Starting BH2_03881 / ministral-3:14b (new episode 11)
+CHECKED Ministral3-14B 11/20; ctx 32768; f16 KV; GPU layers 41/41
+CHECKED Ministral3-14B 11/20; ctx 32768; f16 KV; GPU layers 41/41
+Starting BH2_03953 / ministral-3:14b (new episode 12)
+CHECKED Ministral3-14B 12/20; ctx 32768; f16 KV; GPU layers 41/41
+CHECKED Ministral3-14B 12/20; ctx 32768; f16 KV; GPU layers 41/41
+Starting BH2_03991 / ministral-3:14b (new episode 13)
+CHECKED Ministral3-14B 13/20; ctx 32768; f16 KV; GPU layers 41/41
+CHECKED Ministral3-14B 13/20; ctx 32768; f16 KV; GPU layers 41/41
+Starting BH2_04003 / ministral-3:14b (new episode 14)
+CHECKED Ministral3-14B 14/20; ctx 32768; f16 KV; GPU layers 41/41
+CHECKED Ministral3-14B 14/20; ctx 32768; f16 KV; GPU layers 41/41
+Starting BH2_04007 / ministral-3:14b (new episode 15)
+CHECKED Ministral3-14B 15/20; ctx 32768; f16 KV; GPU layers 41/41
+CHECKED Ministral3-14B 15/20; ctx 32768; f16 KV; GPU layers 41/41
+Starting BH2_04425 / ministral-3:14b (new episode 16)
+CHECKED Ministral3-14B 16/20; ctx 32768; f16 KV; GPU layers 41/41
+CHECKED Ministral3-14B 16/20; ctx 32768; f16 KV; GPU layers 41/41
+Starting BH2_05366 / ministral-3:14b (new episode 17)
+CHECKED Ministral3-14B 17/20; ctx 32768; f16 KV; GPU layers 41/41
+CHECKED Ministral3-14B 17/20; ctx 32768; f16 KV; GPU layers 41/41
+Starting BH2_05686 / ministral-3:14b (new episode 18)
+CHECKED Ministral3-14B 18/20; ctx 32768; f16 KV; GPU layers 41/41
+CHECKED Ministral3-14B 18/20; ctx 32768; f16 KV; GPU layers 41/41
+Starting BH2_05843 / ministral-3:14b (new episode 19)
+CHECKED Ministral3-14B 19/20; ctx 32768; f16 KV; GPU layers 41/41
+CHECKED Ministral3-14B 19/20; ctx 32768; f16 KV; GPU layers 41/41
+Starting BH2_06427 / ministral-3:14b (new episode 20)
+CHECKED Ministral3-14B 20/20; ctx 32768; f16 KV; GPU layers 41/41
+PHASE run: Cogito-14B
+Ollama GET http://127.0.0.1:11435/api/version connection error; retry 1/2: HTTPConnectionPool(host='127.0.0.1', port=11435): Max retries exceeded with url: /api/version (Caused by NewConnectionError("HTTPConnection(host='127.0.0.1', port=11435): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it"))
+Ollama GET http://127.0.0.1:11435/api/version connection error; retry 2/2: HTTPConnectionPool(host='127.0.0.1', port=11435): Max retries exceeded with url: /api/version (Caused by NewConnectionError("HTTPConnection(host='127.0.0.1', port=11435): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it"))
+Ollama GET http://127.0.0.1:11435/api/version failed after 3 attempts: HTTPConnectionPool(host='127.0.0.1', port=11435): Max retries exceeded with url: /api/version (Caused by NewConnectionError("HTTPConnection(host='127.0.0.1', port=11435): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it"))
+CHECKED Cogito-14B 0/20; ctx 32768; f16 KV; GPU layers 47/49
+CHECKED Cogito-14B 0/20; ctx 32768; f16 KV; GPU layers 47/49
+Starting BH2_00461 / cogito:14b (new episode 1)
+CHECKED Cogito-14B 1/20; ctx 32768; f16 KV; GPU layers 47/49
+CHECKED Cogito-14B 1/20; ctx 32768; f16 KV; GPU layers 47/49
+Starting BH2_02033 / cogito:14b (new episode 2)
+CHECKED Cogito-14B 2/20; ctx 32768; f16 KV; GPU layers 47/49
+CHECKED Cogito-14B 2/20; ctx 32768; f16 KV; GPU layers 47/49
+Starting BH2_03434 / cogito:14b (new episode 3)
+CHECKED Cogito-14B 3/20; ctx 32768; f16 KV; GPU layers 47/49
+CHECKED Cogito-14B 3/20; ctx 32768; f16 KV; GPU layers 47/49
+Starting BH2_03619 / cogito:14b (new episode 4)
+CHECKED Cogito-14B 4/20; ctx 32768; f16 KV; GPU layers 47/49
+CHECKED Cogito-14B 4/20; ctx 32768; f16 KV; GPU layers 47/49
+Starting BH2_03750 / cogito:14b (new episode 5)
+CHECKED Cogito-14B 5/20; ctx 32768; f16 KV; GPU layers 47/49
+CHECKED Cogito-14B 5/20; ctx 32768; f16 KV; GPU layers 47/49
+Starting BH2_03760 / cogito:14b (new episode 6)
+CHECKED Cogito-14B 6/20; ctx 32768; f16 KV; GPU layers 47/49
+CHECKED Cogito-14B 6/20; ctx 32768; f16 KV; GPU layers 47/49
+Starting BH2_03762 / cogito:14b (new episode 7)
+CHECKED Cogito-14B 7/20; ctx 32768; f16 KV; GPU layers 47/49
+CHECKED Cogito-14B 7/20; ctx 32768; f16 KV; GPU layers 47/49
+Starting BH2_03850 / cogito:14b (new episode 8)
+CHECKED Cogito-14B 8/20; ctx 32768; f16 KV; GPU layers 47/49
+CHECKED Cogito-14B 8/20; ctx 32768; f16 KV; GPU layers 47/49
+Starting BH2_03856 / cogito:14b (new episode 9)
+CHECKED Cogito-14B 9/20; ctx 32768; f16 KV; GPU layers 47/49
+CHECKED Cogito-14B 9/20; ctx 32768; f16 KV; GPU layers 47/49
+Starting BH2_03879 / cogito:14b (new episode 10)
+CHECKED Cogito-14B 10/20; ctx 32768; f16 KV; GPU layers 47/49
+CHECKED Cogito-14B 10/20; ctx 32768; f16 KV; GPU layers 47/49
+Starting BH2_03881 / cogito:14b (new episode 11)
+CHECKED Cogito-14B 11/20; ctx 32768; f16 KV; GPU layers 47/49
+CHECKED Cogito-14B 11/20; ctx 32768; f16 KV; GPU layers 47/49
+Starting BH2_03953 / cogito:14b (new episode 12)
+Ollama POST http://127.0.0.1:11435/api/chat timed out: HTTPConnectionPool(host='127.0.0.1', port=11435): Read timed out. (read timeout=240)
+CHECKED Cogito-14B 12/20; ctx 32768; f16 KV; GPU layers 47/49
+CHECKED Cogito-14B 12/20; ctx 32768; f16 KV; GPU layers 47/49
+Starting BH2_03991 / cogito:14b (new episode 13)
+CHECKED Cogito-14B 13/20; ctx 32768; f16 KV; GPU layers 47/49
+CHECKED Cogito-14B 13/20; ctx 32768; f16 KV; GPU layers 47/49
+Starting BH2_04003 / cogito:14b (new episode 14)
+CHECKED Cogito-14B 14/20; ctx 32768; f16 KV; GPU layers 47/49
+CHECKED Cogito-14B 14/20; ctx 32768; f16 KV; GPU layers 47/49
+Starting BH2_04007 / cogito:14b (new episode 15)
+CHECKED Cogito-14B 15/20; ctx 32768; f16 KV; GPU layers 47/49
+CHECKED Cogito-14B 15/20; ctx 32768; f16 KV; GPU layers 47/49
+Starting BH2_04425 / cogito:14b (new episode 16)
+Ollama POST http://127.0.0.1:11435/api/chat timed out: HTTPConnectionPool(host='127.0.0.1', port=11435): Read timed out. (read timeout=240)
+CHECKED Cogito-14B 16/20; ctx 32768; f16 KV; GPU layers 47/49
+CHECKED Cogito-14B 16/20; ctx 32768; f16 KV; GPU layers 47/49
+Starting BH2_05366 / cogito:14b (new episode 17)
+CHECKED Cogito-14B 17/20; ctx 32768; f16 KV; GPU layers 47/49
+CHECKED Cogito-14B 17/20; ctx 32768; f16 KV; GPU layers 47/49
+Starting BH2_05686 / cogito:14b (new episode 18)
+CHECKED Cogito-14B 18/20; ctx 32768; f16 KV; GPU layers 47/49
+CHECKED Cogito-14B 18/20; ctx 32768; f16 KV; GPU layers 47/49
+Starting BH2_05843 / cogito:14b (new episode 19)
+CHECKED Cogito-14B 19/20; ctx 32768; f16 KV; GPU layers 47/49
+CHECKED Cogito-14B 19/20; ctx 32768; f16 KV; GPU layers 47/49
+Starting BH2_06427 / cogito:14b (new episode 20)
+CHECKED Cogito-14B 20/20; ctx 32768; f16 KV; GPU layers 47/49
+# S22 single-agent smoke summary — run `smoke_single_s21r2`
+
+Descriptive tallies of S16–S19 evaluation over all saved episodes. No interpretation.
+
+## Overview
+
+|Agent|Episodes|Status counts|ERROR causes|Early-stop share|Budget-hit share|Largest prompt / num_ctx|Episodes > 90% num_ctx|
+|---|---:|---|---|---:|---:|---|---|
+|Gemma4-12B|20|SUCCESS 20|none|0.10|0.00|21660 / 32768 (66.1%)|none|
+|Granite41-8B|20|SUCCESS 20|none|0.35|0.10|18192 / 32768 (55.5%)|none|
+|Ministral3-14B|20|PARSE_FAIL 1, SUCCESS 19|none|0.40|0.00|30048 / 32768 (91.7%)|BH2_04003|
+|Cogito-14B|20|ERROR 2, SUCCESS 18|CONNECTION 2|0.25|0.00|20914 / 32768 (63.8%)|none|
+
+## Gemma4-12B
+
+- Label A: ALT_VALID 17, GOLD 1265, OFF_QUESTION 24
+- Label B: SUPPORTED 1282, UNGROUNDED 24
+- Reason codes (all): none
+- Reason codes (primary path): none
+- Hop-1 status: H1_CLEAN 20
+- OUT_OF_MEMORY episodes: 0
+
+## Granite41-8B
+
+- Label A: ALT_VALID 17, GOLD 593, OFF_QUESTION 74
+- Label B: PATH_INVALID 74, SUPPORTED 610
+- Reason codes (all): SHORTCUT 56, WRONG_HOP_COUNT 18, WRONG_TARGET_TYPE 18
+- Reason codes (primary path): SHORTCUT 56, WRONG_HOP_COUNT 18, WRONG_TARGET_TYPE 18
+- Hop-1 status: H1_CLEAN 17, H1_MIXED 2, H1_WRONG 1
+- OUT_OF_MEMORY episodes: 0
+
+## Ministral3-14B
+
+- Label A: ALT_VALID 17, GOLD 1143, OFF_QUESTION 11
+- Label B: PATH_INVALID 11, SUPPORTED 1160
+- Reason codes (all): SHORTCUT 11
+- Reason codes (primary path): SHORTCUT 11
+- Hop-1 status: H1_CLEAN 17, H1_MIXED 2, H1_NONE 1
+- OUT_OF_MEMORY episodes: 0
+
+## Cogito-14B
+
+- Label A: ALT_VALID 17, GOLD 615
+- Label B: SUPPORTED 632
+- Reason codes (all): none
+- Reason codes (primary path): none
+- Hop-1 status: H1_CLEAN 19, H1_MIXED 1
+- OUT_OF_MEMORY episodes: 0
+
+## Assertion: no answer is both OFF_QUESTION and SUPPORTED
+
+PASS: none found.
+
+PHASE run COMPLETE
