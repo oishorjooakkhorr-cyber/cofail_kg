@@ -788,7 +788,7 @@ Changes made after seeing pilot results are reported as exploratory.
 
 ---
 
-## 21. Phase 2 — intervention design `[PROVISIONAL]`, frozen at S29
+## 21. Phase 2 — intervention design `[FROZEN]` at S29 (2026-11-08, after seeing pilot data)
 
 Frozen at S29, after Gate D6 and before the expansion run, using what the pilot showed (logged as
 frozen after seeing pilot data). Fan-out is analyzed descriptively (§15) and is not an

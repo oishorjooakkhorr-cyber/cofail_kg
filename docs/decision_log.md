@@ -2856,3 +2856,27 @@ D4 conditions (docs/decision_rules.md D4; results/runs/smoke_panel/analysis/veri
   as the D4 audit.
 - No answer is both OFF_QUESTION and SUPPORTED: none.
 Logged after S26 (D5 PASS on 06dbee4); this entry changes only docs/decision_log.md, not a pinned run source.
+
+## 2026-11-08 — S29 — Gate D6: YELLOW; protocol §21 frozen after seeing pilot data
+Decision: Gate D6 outcome YELLOW on run pilot_v1 (latest attempts). The pilot passes.
+Quantities (results/reports/pilot_v1_report.md, D6 section; mechanical check docs/S29_gate_d6_check.md):
+- E = 0.0425 (17/400)
+- H = 1.000 (100/100)
+- N = 3 (BH2_03356, BH2_05290, BH2_05778)
+- O > null: yes (O_H1 = 3, N1-H1 p95 = 2.0, p = 0.0107)
+- P = 3 (effect/phenotype:disease:drug; gene/protein:disease:drug; gene/protein:drug:disease)
+- HOLD not met (E ≤ 15%); RED not met (H ≥ 20%, N = 3 not < 3, O > null); GREEN not met (N < 10) → YELLOW.
+Interpretation flags: ordering flag not set (O_N1 and O_N2 both above their p95); ambiguity flag set
+(3/3 N queries R2_AMBIGUOUS or BOTH_AMBIGUOUS).
+BH2_05778 (the only SOURCE_NAME_OVERLAP query) is counted, as protocol §19.1 requires ("Gates use all
+queries"). Without it N would be 2 (RED); that view is reported only, not used for the gate.
+Why: Researcher instruction (2026-11-08): count BH2_05778; D6 applied in the stated order on all pilot queries.
+Data seen before deciding: pilot_v1 report and analysis outputs (all of them).
+Changes to protocol or decision rules: protocol §21 `[PROVISIONAL]` → `[FROZEN]` at S29, frozen as
+currently written (researcher instruction, 2026-11-08), after seeing pilot data. Tag text only; no §21
+content changed. Protocol version unchanged (1.3.6), following the S2, S5 and S26 tag-only precedent.
+§21 states no tie-break among several qualifying matched controls; the runbook S31 note ("closest by the
+§21 rule; if tied, the smaller numeric node ID") is to be written in this log before any intervention run.
+Next step: S30 expansion run (expansion_v1). Phase 2 is exploratory unless D7 is CONFIRMATORY.
+Supervisor: discussed before Phase I (researcher confirmation, 2026-11-08).
+Note: docs/frozen_pilot_protocol.md is a pinned run source; the S30 pre-run checks are run on this commit.
