@@ -35,11 +35,16 @@ Flags:
 - Ambiguity flag: 3 of 3 N queries are R2_AMBIGUOUS or BOTH_AMBIGUOUS → **set** (case sheets,
   Table 7).
 
-**Your call before moving on:** D6 is computed on all pilot queries. Without the one
-SOURCE_NAME_OVERLAP query (BH2_05778), N would be 2 → RED. D6 as written does not exclude it.
-Decide whether you accept YELLOW as written, and note your reasoning in Step 3. If you decide
-anything other than "D6 as written", that is a change to a frozen rule and needs its own
-decision-log entry (protocol §20).
+**BH2_05778 (SOURCE_NAME_OVERLAP) stays in the gate.** Protocol §19.1 (leakage test, line 772;
+frozen 2026-10-16, before any pilot results) says SOURCE_NAME_OVERLAP "never changes an answer
+set or a gate input" and "Gates use all queries". The analyses without these queries are a
+second reported view only. So D6 is computed on all 100 queries → YELLOW.
+
+For the record: without BH2_05778, N would be 2 → RED. Using that for the gate would change a
+frozen rule after seeing the results it affects. That needs a dated decision-log entry saying
+what data had been seen (§20), and the result would be reported as exploratory. If you think the
+start-name / bridge-name overlap makes BH2_05778's shared answers an artifact, say so in the
+interpretation and the without-overlap view, not in the gate.
 
 ---
 
@@ -120,8 +125,8 @@ Quantities (results/reports/pilot_v1_report.md, D6 section):
 - RED not met (H ≥ 20%, N = 3 not < 3, O > null); GREEN not met (N < 10) → YELLOW.
 Interpretation flags: ordering flag not set (O_N1 and O_N2 both above p95);
 ambiguity flag set (3/3 N queries R2_AMBIGUOUS or BOTH_AMBIGUOUS).
-Note: BH2_05778 is the only SOURCE_NAME_OVERLAP query; without it N = 2. D6 applied as written
-(all pilot queries). [your reasoning here]
+Note: BH2_05778 is the only SOURCE_NAME_OVERLAP query; without it N = 2. D6 uses all pilot
+queries, as protocol §19.1 requires ("Gates use all queries"). [your reading of BH2_05778 here]
 Why: [one or two sentences, e.g. recomputed by hand; matches the mechanical check]
 Data seen before deciding: pilot_v1 report and analysis outputs (all of them).
 Changes to protocol or decision rules: protocol §21 [PROVISIONAL] → [FROZEN], frozen after

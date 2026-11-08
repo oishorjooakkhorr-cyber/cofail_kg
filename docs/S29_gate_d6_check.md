@@ -43,6 +43,7 @@ Phase 2 exploratory unless D7 is CONFIRMATORY.
 
 - `N` = 3 sits exactly on the RED boundary (`N < 3` fails only by equality).
 - BH2_05778 is the only SOURCE_NAME_OVERLAP query. Without it: N = 2, O_H1 = 2 vs p95 1.0, P = 2,
-  and `N < 3` would give RED. D6 as written uses all pilot queries, so it was applied that way.
+  and `N < 3` would give RED. Protocol §19.1 (frozen 2026-10-16, before any pilot results) says
+  SOURCE_NAME_OVERLAP never changes a gate input and "Gates use all queries", so D6 includes it.
 - `O > null` holds by one query (3 vs p95 2.0).
 - H over SUCCESS episodes only is 0.990 (99/100); no rule changes.
