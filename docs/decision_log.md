@@ -2880,3 +2880,17 @@ content changed. Protocol version unchanged (1.3.6), following the S2, S5 and S2
 Next step: S30 expansion run (expansion_v1). Phase 2 is exploratory unless D7 is CONFIRMATORY.
 Supervisor: discussed before Phase I (researcher confirmation, 2026-11-08).
 Note: docs/frozen_pilot_protocol.md is a pinned run source; the S30 pre-run checks are run on this commit.
+
+## 2026-11-08 — S30 — Pre-run checks (S26 repeated, expansion added): PASS on c010d7e
+Checks run on **c010d7e8541ea507d6008eb0f6b2483318ac1ac4** (S29 commit; protocol §21 frozen):
+1. TBD/DEFAULT: PASS. No `[TBD@Sx]` remains; the only `[DEFAULT]` (§8 pilot 25/75) was confirmed at S10.
+2. Tests: PASS. 754 passed, 2 skipped (real-BioHopR loader tests, as at S26), 0 failed. Run with
+   `--basetemp` in the session scratchpad: the default pytest temp root was not accessible in this
+   sandbox (first attempt: 176 setup errors, all PermissionError on that folder; no test failed).
+3. Clean tree: PASS (0 tracked or untracked changes).
+4. Frozen hashes: PASS. 12/12 equal: all 8 manifest/sheet entries, including expansion manifest
+   2cfc09e1… and expansion agent-input sheet 290f4323…; kg_fingerprint; tools; relation_mapping; prompt.
+5. BioHopR revision (by content: BioHopR.json SHA256 1adda2f2…527d, as at S26) and installed digests
+   (`scripts/21_freeze_models.py check`, exit 0: all four equal `models_s21r2`): PASS.
+Run: `scripts/25_run_panel.py run --manifest expansion --run-id expansion_v1` (400 queries × 4 agents).
+This entry changes only docs/decision_log.md (not a pinned run source); the run records the HEAD at run time.
