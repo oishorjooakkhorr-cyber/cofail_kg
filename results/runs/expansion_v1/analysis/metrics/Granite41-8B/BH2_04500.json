@@ -1,0 +1,121 @@
+{
+  "agent_id": "Granite41-8B",
+  "answer_count": null,
+  "answers": [],
+  "attempt": 1,
+  "benchmark_f1": null,
+  "benchmark_precision": null,
+  "benchmark_recall": null,
+  "bridge_conditional_recall": {
+    "14250": null,
+    "14300": null,
+    "15296": null,
+    "17628": null
+  },
+  "bridge_rank": {
+    "14250": 1,
+    "14300": 2,
+    "15296": 3,
+    "17628": 4
+  },
+  "bridge_recall_counts": {
+    "14250": {
+      "correct": null,
+      "total": 58
+    },
+    "14300": {
+      "correct": null,
+      "total": 19
+    },
+    "15296": {
+      "correct": null,
+      "total": 21
+    },
+    "17628": {
+      "correct": null,
+      "total": 17
+    }
+  },
+  "bridges_explored": [
+    "14250",
+    "14300",
+    "15296",
+    "17628"
+  ],
+  "budget_exhausted": false,
+  "cause": null,
+  "construction": "UNION",
+  "denominators": {
+    "benchmark_f1": null,
+    "benchmark_precision": null,
+    "benchmark_recall": 76,
+    "off_question_rate": null,
+    "question_valid_precision": null,
+    "ungrounded_rate": null,
+    "unresolved_rate": null
+  },
+  "early_stop": null,
+  "episode_status": "PARSE_FAIL",
+  "found_r1": true,
+  "hop1_status": "H1_CLEAN",
+  "label_a_counts": null,
+  "label_b_counts": null,
+  "node_statistics": {
+    "14250": {
+      "degree": 1011,
+      "degree_percentile": 86.82920698755812
+    },
+    "14300": {
+      "degree": 777,
+      "degree_percentile": 79.80394621088351
+    },
+    "15296": {
+      "degree": 524,
+      "degree_percentile": 71.7481462862888
+    },
+    "17628": {
+      "degree": 29,
+      "degree_percentile": 53.110468769636796
+    },
+    "83929": {
+      "degree": 10,
+      "degree_percentile": 62.36533957845434
+    }
+  },
+  "numerators": {
+    "benchmark_f1": null,
+    "benchmark_precision": null,
+    "benchmark_recall": null,
+    "off_question_rate": null,
+    "question_valid_precision": null,
+    "ungrounded_rate": null,
+    "unresolved_rate": null
+  },
+  "off_question_rate": null,
+  "pages_requested": 7,
+  "primary_reason_counts": null,
+  "query_id": "BH2_04500",
+  "question_valid_precision": null,
+  "reason_counts": null,
+  "resolved_count": null,
+  "run_id": "expansion_v1",
+  "text_tool_call_count": 0,
+  "tool_calls_used": 9,
+  "undefined_counts": {
+    "benchmark_f1": 1,
+    "benchmark_precision": 1,
+    "benchmark_recall": 1,
+    "bridge_conditional_recall": 4,
+    "bridge_rank": 0,
+    "degree": 0,
+    "degree_percentile": 0,
+    "list_size": 0,
+    "off_question_rate": 1,
+    "primary_path_max_list_size": 0,
+    "question_valid_precision": 1,
+    "ungrounded_rate": 1,
+    "unresolved_rate": 1
+  },
+  "ungrounded_rate": null,
+  "unresolved_rate": null
+}

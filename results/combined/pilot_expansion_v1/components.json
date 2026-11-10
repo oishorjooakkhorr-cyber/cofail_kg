@@ -1,0 +1,23 @@
+{
+  "agent_order": [
+    "Gemma4-12B",
+    "Granite41-8B",
+    "Ministral3-14B",
+    "Cogito-14B"
+  ],
+  "components": {
+    "expansion_v1": {
+      "cofailure.json": "001edb0fe929f49987b40665478ccfcf7a326420df1d7a6406da848489fd458f",
+      "manifest": "expansion",
+      "nulls.json": "030b69706d0a7513643079d8c2c2a68556a84b6fb3ce00f43f25f79574eb7f96",
+      "queries": 400
+    },
+    "pilot_v1": {
+      "cofailure.json": "8d74e2b9673e2bd0c519db16d97a2d73037945a6f3b3178277cb9e187b680591",
+      "manifest": "pilot",
+      "nulls.json": "96f330ebf945a8736078c53f816d759b5f88195f02499b226e660eac46ec48cd",
+      "queries": 100
+    }
+  },
+  "out_id": "pilot_expansion_v1"
+}

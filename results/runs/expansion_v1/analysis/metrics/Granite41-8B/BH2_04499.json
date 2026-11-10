@@ -1,0 +1,198 @@
+{
+  "agent_id": "Granite41-8B",
+  "answer_count": null,
+  "answers": [],
+  "attempt": 1,
+  "benchmark_f1": null,
+  "benchmark_precision": null,
+  "benchmark_recall": null,
+  "bridge_conditional_recall": {
+    "14019": null,
+    "14250": null,
+    "14262": null,
+    "14281": null,
+    "14300": null,
+    "14819": null,
+    "15084": null,
+    "15219": null,
+    "15296": null,
+    "15422": null,
+    "15763": null
+  },
+  "bridge_rank": {
+    "14019": 1,
+    "14250": 3,
+    "14262": 4,
+    "14281": 5,
+    "14300": 6,
+    "14819": 7,
+    "15084": 9,
+    "15219": 10,
+    "15296": 11,
+    "15422": 12,
+    "15763": 14
+  },
+  "bridge_recall_counts": {
+    "14019": {
+      "correct": null,
+      "total": 97
+    },
+    "14250": {
+      "correct": null,
+      "total": 58
+    },
+    "14262": {
+      "correct": null,
+      "total": 21
+    },
+    "14281": {
+      "correct": null,
+      "total": 47
+    },
+    "14300": {
+      "correct": null,
+      "total": 19
+    },
+    "14819": {
+      "correct": null,
+      "total": 3
+    },
+    "15084": {
+      "correct": null,
+      "total": 13
+    },
+    "15219": {
+      "correct": null,
+      "total": 3
+    },
+    "15296": {
+      "correct": null,
+      "total": 21
+    },
+    "15422": {
+      "correct": null,
+      "total": 6
+    },
+    "15763": {
+      "correct": null,
+      "total": 8
+    }
+  },
+  "bridges_explored": [
+    "14019",
+    "14250",
+    "14262",
+    "14281",
+    "14300",
+    "14819",
+    "15084",
+    "15219",
+    "15296",
+    "15422",
+    "15763"
+  ],
+  "budget_exhausted": true,
+  "cause": null,
+  "construction": "UNION",
+  "denominators": {
+    "benchmark_f1": null,
+    "benchmark_precision": null,
+    "benchmark_recall": 164,
+    "off_question_rate": null,
+    "question_valid_precision": null,
+    "ungrounded_rate": null,
+    "unresolved_rate": null
+  },
+  "early_stop": null,
+  "episode_status": "PARSE_FAIL",
+  "found_r1": true,
+  "hop1_status": "H1_CLEAN",
+  "label_a_counts": null,
+  "label_b_counts": null,
+  "node_statistics": {
+    "14019": {
+      "degree": 1625,
+      "degree_percentile": 96.78270705039587
+    },
+    "14250": {
+      "degree": 1011,
+      "degree_percentile": 86.82920698755812
+    },
+    "14262": {
+      "degree": 1737,
+      "degree_percentile": 97.85094885006912
+    },
+    "14281": {
+      "degree": 1401,
+      "degree_percentile": 93.96757571949227
+    },
+    "14300": {
+      "degree": 777,
+      "degree_percentile": 79.80394621088351
+    },
+    "14819": {
+      "degree": 42,
+      "degree_percentile": 54.31695362573834
+    },
+    "15084": {
+      "degree": 68,
+      "degree_percentile": 56.11411335930627
+    },
+    "15219": {
+      "degree": 14,
+      "degree_percentile": 50.58439110217419
+    },
+    "15296": {
+      "degree": 524,
+      "degree_percentile": 71.7481462862888
+    },
+    "15422": {
+      "degree": 24,
+      "degree_percentile": 52.40668593691089
+    },
+    "15763": {
+      "degree": 132,
+      "degree_percentile": 59.36910896066357
+    },
+    "83753": {
+      "degree": 27,
+      "degree_percentile": 80.48009367681499
+    }
+  },
+  "numerators": {
+    "benchmark_f1": null,
+    "benchmark_precision": null,
+    "benchmark_recall": null,
+    "off_question_rate": null,
+    "question_valid_precision": null,
+    "ungrounded_rate": null,
+    "unresolved_rate": null
+  },
+  "off_question_rate": null,
+  "pages_requested": 16,
+  "primary_reason_counts": null,
+  "query_id": "BH2_04499",
+  "question_valid_precision": null,
+  "reason_counts": null,
+  "resolved_count": null,
+  "run_id": "expansion_v1",
+  "text_tool_call_count": 0,
+  "tool_calls_used": 30,
+  "undefined_counts": {
+    "benchmark_f1": 1,
+    "benchmark_precision": 1,
+    "benchmark_recall": 1,
+    "bridge_conditional_recall": 11,
+    "bridge_rank": 0,
+    "degree": 0,
+    "degree_percentile": 0,
+    "list_size": 0,
+    "off_question_rate": 1,
+    "primary_path_max_list_size": 0,
+    "question_valid_precision": 1,
+    "ungrounded_rate": 1,
+    "unresolved_rate": 1
+  },
+  "ungrounded_rate": null,
+  "unresolved_rate": null
+}

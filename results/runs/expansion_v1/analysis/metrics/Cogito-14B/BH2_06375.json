@@ -1,0 +1,179 @@
+{
+  "agent_id": "Cogito-14B",
+  "answer_count": 2,
+  "answers": [
+    {
+      "degree": 510,
+      "degree_percentile": 71.55963302752293,
+      "first_seen_page": 1,
+      "h1": 1,
+      "label_a": "GOLD",
+      "label_b": "SUPPORTED",
+      "list_size": 2,
+      "node_id": "15557",
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "label": "disease_protein",
+          "u": "36893",
+          "v": "13230"
+        },
+        {
+          "creation_index": 3,
+          "label": "drug_protein",
+          "u": "13230",
+          "v": "15557"
+        }
+      ],
+      "primary_path_max_list_size": 2,
+      "primary_reason_codes": [],
+      "reason_codes": [],
+      "submitted_index": 0
+    },
+    {
+      "degree": 655,
+      "degree_percentile": 74.75179087595828,
+      "first_seen_page": 1,
+      "h1": 1,
+      "label_a": "GOLD",
+      "label_b": "SUPPORTED",
+      "list_size": 2,
+      "node_id": "15566",
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "label": "disease_protein",
+          "u": "36893",
+          "v": "13230"
+        },
+        {
+          "creation_index": 3,
+          "label": "drug_protein",
+          "u": "13230",
+          "v": "15566"
+        }
+      ],
+      "primary_path_max_list_size": 2,
+      "primary_reason_codes": [],
+      "reason_codes": [],
+      "submitted_index": 1
+    }
+  ],
+  "attempt": 1,
+  "benchmark_f1": 1.0,
+  "benchmark_precision": 1.0,
+  "benchmark_recall": 1.0,
+  "bridge_conditional_recall": {
+    "13230": 1.0
+  },
+  "bridge_rank": {
+    "13230": 1
+  },
+  "bridge_recall_counts": {
+    "13230": {
+      "correct": 2,
+      "total": 2
+    }
+  },
+  "bridges_explored": [
+    "13230"
+  ],
+  "budget_exhausted": false,
+  "cause": null,
+  "construction": "BRIDGE",
+  "denominators": {
+    "benchmark_f1": 4,
+    "benchmark_precision": 2,
+    "benchmark_recall": 2,
+    "off_question_rate": 2,
+    "question_valid_precision": 2,
+    "ungrounded_rate": 2,
+    "unresolved_rate": 2
+  },
+  "early_stop": false,
+  "episode_status": "SUCCESS",
+  "found_r1": true,
+  "hop1_status": "H1_CLEAN",
+  "label_a_counts": {
+    "ALT_VALID": 0,
+    "GOLD": 2,
+    "GOLD_BRIDGE_EXTRA": 0,
+    "OFF_QUESTION": 0,
+    "UNRESOLVED": 0
+  },
+  "label_b_counts": {
+    "KG_UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0,
+    "PATH_INVALID": 0,
+    "SUPPORTED": 2,
+    "UNGROUNDED": 0
+  },
+  "node_statistics": {
+    "13230": {
+      "degree": 115,
+      "degree_percentile": 62.08666112536591
+    },
+    "15557": {
+      "degree": 510,
+      "degree_percentile": 71.55963302752293
+    },
+    "15566": {
+      "degree": 655,
+      "degree_percentile": 74.75179087595828
+    },
+    "36893": {
+      "degree": 50,
+      "degree_percentile": 90.87236533957845
+    }
+  },
+  "numerators": {
+    "benchmark_f1": 4,
+    "benchmark_precision": 2,
+    "benchmark_recall": 2,
+    "off_question_rate": 0,
+    "question_valid_precision": 2,
+    "ungrounded_rate": 0,
+    "unresolved_rate": 0
+  },
+  "off_question_rate": 0.0,
+  "pages_requested": 9,
+  "primary_reason_counts": {
+    "SHORTCUT": 0,
+    "WRONG_BRIDGE_TYPE": 0,
+    "WRONG_HOP_COUNT": 0,
+    "WRONG_RELATION_HOP1": 0,
+    "WRONG_RELATION_HOP2": 0,
+    "WRONG_TARGET_TYPE": 0
+  },
+  "query_id": "BH2_06375",
+  "question_valid_precision": 1.0,
+  "reason_counts": {
+    "SHORTCUT": 0,
+    "WRONG_BRIDGE_TYPE": 0,
+    "WRONG_HOP_COUNT": 0,
+    "WRONG_RELATION_HOP1": 0,
+    "WRONG_RELATION_HOP2": 0,
+    "WRONG_TARGET_TYPE": 0
+  },
+  "resolved_count": 2,
+  "run_id": "expansion_v1",
+  "text_tool_call_count": 0,
+  "tool_calls_used": 13,
+  "undefined_counts": {
+    "benchmark_f1": 0,
+    "benchmark_precision": 0,
+    "benchmark_recall": 0,
+    "bridge_conditional_recall": 0,
+    "bridge_rank": 0,
+    "degree": 0,
+    "degree_percentile": 0,
+    "list_size": 0,
+    "off_question_rate": 0,
+    "primary_path_max_list_size": 0,
+    "question_valid_precision": 0,
+    "ungrounded_rate": 0,
+    "unresolved_rate": 0
+  },
+  "ungrounded_rate": 0.0,
+  "unresolved_rate": 0.0
+}

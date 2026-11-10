@@ -1,0 +1,830 @@
+{
+  "agent_id": "Cogito-14B",
+  "answer_count": 22,
+  "answers": [
+    {
+      "degree": 1944,
+      "degree_percentile": 98.95689330149554,
+      "first_seen_page": 1,
+      "h1": 1,
+      "label_a": "GOLD",
+      "label_b": "SUPPORTED",
+      "list_size": 22,
+      "node_id": "14139",
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "label": "disease_phenotype_positive",
+          "u": "91124",
+          "v": "30093"
+        },
+        {
+          "creation_index": 5,
+          "label": "indication",
+          "u": "30093",
+          "v": "14139"
+        }
+      ],
+      "primary_path_max_list_size": 22,
+      "primary_reason_codes": [],
+      "reason_codes": [],
+      "submitted_index": 0
+    },
+    {
+      "degree": 1572,
+      "degree_percentile": 96.14176197059193,
+      "first_seen_page": 1,
+      "h1": 1,
+      "label_a": "GOLD",
+      "label_b": "SUPPORTED",
+      "list_size": 22,
+      "node_id": "14220",
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "label": "disease_phenotype_positive",
+          "u": "91124",
+          "v": "30093"
+        },
+        {
+          "creation_index": 5,
+          "label": "indication",
+          "u": "30093",
+          "v": "14220"
+        }
+      ],
+      "primary_path_max_list_size": 22,
+      "primary_reason_codes": [],
+      "reason_codes": [],
+      "submitted_index": 1
+    },
+    {
+      "degree": 1062,
+      "degree_percentile": 87.80947593314063,
+      "first_seen_page": 1,
+      "h1": 1,
+      "label_a": "GOLD",
+      "label_b": "SUPPORTED",
+      "list_size": 22,
+      "node_id": "14321",
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "label": "disease_phenotype_positive",
+          "u": "91124",
+          "v": "30093"
+        },
+        {
+          "creation_index": 5,
+          "label": "indication",
+          "u": "30093",
+          "v": "14321"
+        }
+      ],
+      "primary_path_max_list_size": 22,
+      "primary_reason_codes": [],
+      "reason_codes": [],
+      "submitted_index": 2
+    },
+    {
+      "degree": 1065,
+      "degree_percentile": 87.83461103430942,
+      "first_seen_page": 1,
+      "h1": 1,
+      "label_a": "GOLD",
+      "label_b": "SUPPORTED",
+      "list_size": 22,
+      "node_id": "14452",
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "label": "disease_phenotype_positive",
+          "u": "91124",
+          "v": "30093"
+        },
+        {
+          "creation_index": 5,
+          "label": "indication",
+          "u": "30093",
+          "v": "14452"
+        }
+      ],
+      "primary_path_max_list_size": 22,
+      "primary_reason_codes": [],
+      "reason_codes": [],
+      "submitted_index": 3
+    },
+    {
+      "degree": 1024,
+      "degree_percentile": 87.09312554983035,
+      "first_seen_page": 1,
+      "h1": 1,
+      "label_a": "GOLD",
+      "label_b": "SUPPORTED",
+      "list_size": 22,
+      "node_id": "14806",
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "label": "disease_phenotype_positive",
+          "u": "91124",
+          "v": "30093"
+        },
+        {
+          "creation_index": 5,
+          "label": "indication",
+          "u": "30093",
+          "v": "14806"
+        }
+      ],
+      "primary_path_max_list_size": 22,
+      "primary_reason_codes": [],
+      "reason_codes": [],
+      "submitted_index": 4
+    },
+    {
+      "degree": 1558,
+      "degree_percentile": 96.02865401533242,
+      "first_seen_page": 1,
+      "h1": 1,
+      "label_a": "GOLD",
+      "label_b": "SUPPORTED",
+      "list_size": 22,
+      "node_id": "14830",
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "label": "disease_phenotype_positive",
+          "u": "91124",
+          "v": "30093"
+        },
+        {
+          "creation_index": 5,
+          "label": "indication",
+          "u": "30093",
+          "v": "14830"
+        }
+      ],
+      "primary_path_max_list_size": 22,
+      "primary_reason_codes": [],
+      "reason_codes": [],
+      "submitted_index": 5
+    },
+    {
+      "degree": 1327,
+      "degree_percentile": 92.33379414352143,
+      "first_seen_page": 1,
+      "h1": 1,
+      "label_a": "GOLD",
+      "label_b": "SUPPORTED",
+      "list_size": 22,
+      "node_id": "14831",
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "label": "disease_phenotype_positive",
+          "u": "91124",
+          "v": "30093"
+        },
+        {
+          "creation_index": 5,
+          "label": "indication",
+          "u": "30093",
+          "v": "14831"
+        }
+      ],
+      "primary_path_max_list_size": 22,
+      "primary_reason_codes": [],
+      "reason_codes": [],
+      "submitted_index": 6
+    },
+    {
+      "degree": 1707,
+      "degree_percentile": 97.461354781953,
+      "first_seen_page": 1,
+      "h1": 1,
+      "label_a": "GOLD",
+      "label_b": "SUPPORTED",
+      "list_size": 22,
+      "node_id": "14904",
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "label": "disease_phenotype_positive",
+          "u": "91124",
+          "v": "30093"
+        },
+        {
+          "creation_index": 5,
+          "label": "indication",
+          "u": "30093",
+          "v": "14904"
+        }
+      ],
+      "primary_path_max_list_size": 22,
+      "primary_reason_codes": [],
+      "reason_codes": [],
+      "submitted_index": 7
+    },
+    {
+      "degree": 1141,
+      "degree_percentile": 89.45582505969587,
+      "first_seen_page": 1,
+      "h1": 1,
+      "label_a": "GOLD",
+      "label_b": "SUPPORTED",
+      "list_size": 22,
+      "node_id": "15124",
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "label": "disease_phenotype_positive",
+          "u": "91124",
+          "v": "30093"
+        },
+        {
+          "creation_index": 5,
+          "label": "indication",
+          "u": "30093",
+          "v": "15124"
+        }
+      ],
+      "primary_path_max_list_size": 22,
+      "primary_reason_codes": [],
+      "reason_codes": [],
+      "submitted_index": 8
+    },
+    {
+      "degree": 2065,
+      "degree_percentile": 99.29621716727411,
+      "first_seen_page": 1,
+      "h1": 1,
+      "label_a": "GOLD",
+      "label_b": "SUPPORTED",
+      "list_size": 22,
+      "node_id": "15138",
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "label": "disease_phenotype_positive",
+          "u": "91124",
+          "v": "30093"
+        },
+        {
+          "creation_index": 5,
+          "label": "indication",
+          "u": "30093",
+          "v": "15138"
+        }
+      ],
+      "primary_path_max_list_size": 22,
+      "primary_reason_codes": [],
+      "reason_codes": [],
+      "submitted_index": 9
+    },
+    {
+      "degree": 1427,
+      "degree_percentile": 94.31946713585522,
+      "first_seen_page": 1,
+      "h1": 1,
+      "label_a": "GOLD",
+      "label_b": "SUPPORTED",
+      "list_size": 22,
+      "node_id": "15193",
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "label": "disease_phenotype_positive",
+          "u": "91124",
+          "v": "30093"
+        },
+        {
+          "creation_index": 5,
+          "label": "indication",
+          "u": "30093",
+          "v": "15193"
+        }
+      ],
+      "primary_path_max_list_size": 22,
+      "primary_reason_codes": [],
+      "reason_codes": [],
+      "submitted_index": 10
+    },
+    {
+      "degree": 1460,
+      "degree_percentile": 94.79703405806208,
+      "first_seen_page": 1,
+      "h1": 1,
+      "label_a": "GOLD",
+      "label_b": "SUPPORTED",
+      "list_size": 22,
+      "node_id": "15291",
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "label": "disease_phenotype_positive",
+          "u": "91124",
+          "v": "30093"
+        },
+        {
+          "creation_index": 5,
+          "label": "indication",
+          "u": "30093",
+          "v": "15291"
+        }
+      ],
+      "primary_path_max_list_size": 22,
+      "primary_reason_codes": [],
+      "reason_codes": [],
+      "submitted_index": 11
+    },
+    {
+      "degree": 2112,
+      "degree_percentile": 99.4470277742868,
+      "first_seen_page": 1,
+      "h1": 1,
+      "label_a": "GOLD",
+      "label_b": "SUPPORTED",
+      "list_size": 22,
+      "node_id": "15333",
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "label": "disease_phenotype_positive",
+          "u": "91124",
+          "v": "30093"
+        },
+        {
+          "creation_index": 5,
+          "label": "indication",
+          "u": "30093",
+          "v": "15333"
+        }
+      ],
+      "primary_path_max_list_size": 22,
+      "primary_reason_codes": [],
+      "reason_codes": [],
+      "submitted_index": 12
+    },
+    {
+      "degree": 1838,
+      "degree_percentile": 98.49189392987306,
+      "first_seen_page": 1,
+      "h1": 1,
+      "label_a": "GOLD",
+      "label_b": "SUPPORTED",
+      "list_size": 22,
+      "node_id": "15493",
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "label": "disease_phenotype_positive",
+          "u": "91124",
+          "v": "30093"
+        },
+        {
+          "creation_index": 5,
+          "label": "indication",
+          "u": "30093",
+          "v": "15493"
+        }
+      ],
+      "primary_path_max_list_size": 22,
+      "primary_reason_codes": [],
+      "reason_codes": [],
+      "submitted_index": 13
+    },
+    {
+      "degree": 1723,
+      "degree_percentile": 97.73784089480961,
+      "first_seen_page": 1,
+      "h1": 1,
+      "label_a": "GOLD",
+      "label_b": "SUPPORTED",
+      "list_size": 22,
+      "node_id": "15772",
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "label": "disease_phenotype_positive",
+          "u": "91124",
+          "v": "30093"
+        },
+        {
+          "creation_index": 5,
+          "label": "indication",
+          "u": "30093",
+          "v": "15772"
+        }
+      ],
+      "primary_path_max_list_size": 22,
+      "primary_reason_codes": [],
+      "reason_codes": [],
+      "submitted_index": 14
+    },
+    {
+      "degree": 216,
+      "degree_percentile": 61.970591931632526,
+      "first_seen_page": 1,
+      "h1": 1,
+      "label_a": "GOLD",
+      "label_b": "SUPPORTED",
+      "list_size": 22,
+      "node_id": "15812",
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "label": "disease_phenotype_positive",
+          "u": "91124",
+          "v": "30093"
+        },
+        {
+          "creation_index": 5,
+          "label": "indication",
+          "u": "30093",
+          "v": "15812"
+        }
+      ],
+      "primary_path_max_list_size": 22,
+      "primary_reason_codes": [],
+      "reason_codes": [],
+      "submitted_index": 15
+    },
+    {
+      "degree": 1049,
+      "degree_percentile": 87.43244941560889,
+      "first_seen_page": 1,
+      "h1": 1,
+      "label_a": "GOLD",
+      "label_b": "SUPPORTED",
+      "list_size": 22,
+      "node_id": "16054",
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "label": "disease_phenotype_positive",
+          "u": "91124",
+          "v": "30093"
+        },
+        {
+          "creation_index": 5,
+          "label": "indication",
+          "u": "30093",
+          "v": "16054"
+        }
+      ],
+      "primary_path_max_list_size": 22,
+      "primary_reason_codes": [],
+      "reason_codes": [],
+      "submitted_index": 16
+    },
+    {
+      "degree": 1014,
+      "degree_percentile": 86.8794771898957,
+      "first_seen_page": 1,
+      "h1": 1,
+      "label_a": "GOLD",
+      "label_b": "SUPPORTED",
+      "list_size": 22,
+      "node_id": "16056",
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "label": "disease_phenotype_positive",
+          "u": "91124",
+          "v": "30093"
+        },
+        {
+          "creation_index": 5,
+          "label": "indication",
+          "u": "30093",
+          "v": "16056"
+        }
+      ],
+      "primary_path_max_list_size": 22,
+      "primary_reason_codes": [],
+      "reason_codes": [],
+      "submitted_index": 17
+    },
+    {
+      "degree": 967,
+      "degree_percentile": 85.76096518788489,
+      "first_seen_page": 1,
+      "h1": 1,
+      "label_a": "GOLD",
+      "label_b": "SUPPORTED",
+      "list_size": 22,
+      "node_id": "16315",
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "label": "disease_phenotype_positive",
+          "u": "91124",
+          "v": "30093"
+        },
+        {
+          "creation_index": 5,
+          "label": "indication",
+          "u": "30093",
+          "v": "16315"
+        }
+      ],
+      "primary_path_max_list_size": 22,
+      "primary_reason_codes": [],
+      "reason_codes": [],
+      "submitted_index": 18
+    },
+    {
+      "degree": 1786,
+      "degree_percentile": 98.21540781701647,
+      "first_seen_page": 1,
+      "h1": 1,
+      "label_a": "GOLD",
+      "label_b": "SUPPORTED",
+      "list_size": 22,
+      "node_id": "16842",
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "label": "disease_phenotype_positive",
+          "u": "91124",
+          "v": "30093"
+        },
+        {
+          "creation_index": 5,
+          "label": "indication",
+          "u": "30093",
+          "v": "16842"
+        }
+      ],
+      "primary_path_max_list_size": 22,
+      "primary_reason_codes": [],
+      "reason_codes": [],
+      "submitted_index": 19
+    },
+    {
+      "degree": 818,
+      "degree_percentile": 81.22407942691969,
+      "first_seen_page": 1,
+      "h1": 1,
+      "label_a": "GOLD",
+      "label_b": "SUPPORTED",
+      "list_size": 22,
+      "node_id": "17270",
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "label": "disease_phenotype_positive",
+          "u": "91124",
+          "v": "30093"
+        },
+        {
+          "creation_index": 5,
+          "label": "indication",
+          "u": "30093",
+          "v": "17270"
+        }
+      ],
+      "primary_path_max_list_size": 22,
+      "primary_reason_codes": [],
+      "reason_codes": [],
+      "submitted_index": 20
+    },
+    {
+      "degree": 992,
+      "degree_percentile": 86.32650496418248,
+      "first_seen_page": 1,
+      "h1": 1,
+      "label_a": "GOLD",
+      "label_b": "SUPPORTED",
+      "list_size": 22,
+      "node_id": "19207",
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "label": "disease_phenotype_positive",
+          "u": "91124",
+          "v": "30093"
+        },
+        {
+          "creation_index": 5,
+          "label": "indication",
+          "u": "30093",
+          "v": "19207"
+        }
+      ],
+      "primary_path_max_list_size": 22,
+      "primary_reason_codes": [],
+      "reason_codes": [],
+      "submitted_index": 21
+    }
+  ],
+  "attempt": 1,
+  "benchmark_f1": 1.0,
+  "benchmark_precision": 1.0,
+  "benchmark_recall": 1.0,
+  "bridge_conditional_recall": {
+    "30093": 1.0,
+    "33241": 1.0
+  },
+  "bridge_rank": {
+    "30093": 2,
+    "33241": 3
+  },
+  "bridge_recall_counts": {
+    "30093": {
+      "correct": 22,
+      "total": 22
+    },
+    "33241": {
+      "correct": 22,
+      "total": 22
+    }
+  },
+  "bridges_explored": [
+    "30093",
+    "33241"
+  ],
+  "budget_exhausted": false,
+  "cause": null,
+  "construction": "BRIDGE",
+  "denominators": {
+    "benchmark_f1": 44,
+    "benchmark_precision": 22,
+    "benchmark_recall": 22,
+    "off_question_rate": 22,
+    "question_valid_precision": 22,
+    "ungrounded_rate": 22,
+    "unresolved_rate": 22
+  },
+  "early_stop": false,
+  "episode_status": "SUCCESS",
+  "found_r1": true,
+  "hop1_status": "H1_CLEAN",
+  "label_a_counts": {
+    "ALT_VALID": 0,
+    "GOLD": 22,
+    "GOLD_BRIDGE_EXTRA": 0,
+    "OFF_QUESTION": 0,
+    "UNRESOLVED": 0
+  },
+  "label_b_counts": {
+    "KG_UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0,
+    "PATH_INVALID": 0,
+    "SUPPORTED": 22,
+    "UNGROUNDED": 0
+  },
+  "node_statistics": {
+    "14139": {
+      "degree": 1944,
+      "degree_percentile": 98.95689330149554
+    },
+    "14220": {
+      "degree": 1572,
+      "degree_percentile": 96.14176197059193
+    },
+    "14321": {
+      "degree": 1062,
+      "degree_percentile": 87.80947593314063
+    },
+    "14452": {
+      "degree": 1065,
+      "degree_percentile": 87.83461103430942
+    },
+    "14806": {
+      "degree": 1024,
+      "degree_percentile": 87.09312554983035
+    },
+    "14830": {
+      "degree": 1558,
+      "degree_percentile": 96.02865401533242
+    },
+    "14831": {
+      "degree": 1327,
+      "degree_percentile": 92.33379414352143
+    },
+    "14904": {
+      "degree": 1707,
+      "degree_percentile": 97.461354781953
+    },
+    "15124": {
+      "degree": 1141,
+      "degree_percentile": 89.45582505969587
+    },
+    "15138": {
+      "degree": 2065,
+      "degree_percentile": 99.29621716727411
+    },
+    "15193": {
+      "degree": 1427,
+      "degree_percentile": 94.31946713585522
+    },
+    "15291": {
+      "degree": 1460,
+      "degree_percentile": 94.79703405806208
+    },
+    "15333": {
+      "degree": 2112,
+      "degree_percentile": 99.4470277742868
+    },
+    "15493": {
+      "degree": 1838,
+      "degree_percentile": 98.49189392987306
+    },
+    "15772": {
+      "degree": 1723,
+      "degree_percentile": 97.73784089480961
+    },
+    "15812": {
+      "degree": 216,
+      "degree_percentile": 61.970591931632526
+    },
+    "16054": {
+      "degree": 1049,
+      "degree_percentile": 87.43244941560889
+    },
+    "16056": {
+      "degree": 1014,
+      "degree_percentile": 86.8794771898957
+    },
+    "16315": {
+      "degree": 967,
+      "degree_percentile": 85.76096518788489
+    },
+    "16842": {
+      "degree": 1786,
+      "degree_percentile": 98.21540781701647
+    },
+    "17270": {
+      "degree": 818,
+      "degree_percentile": 81.22407942691969
+    },
+    "19207": {
+      "degree": 992,
+      "degree_percentile": 86.32650496418248
+    },
+    "30093": {
+      "degree": 141,
+      "degree_percentile": 98.22014051522248
+    },
+    "33241": {
+      "degree": 145,
+      "degree_percentile": 98.30210772833723
+    },
+    "91124": {
+      "degree": 4,
+      "degree_percentile": 58.83351838547449
+    }
+  },
+  "numerators": {
+    "benchmark_f1": 44,
+    "benchmark_precision": 22,
+    "benchmark_recall": 22,
+    "off_question_rate": 0,
+    "question_valid_precision": 22,
+    "ungrounded_rate": 0,
+    "unresolved_rate": 0
+  },
+  "off_question_rate": 0.0,
+  "pages_requested": 3,
+  "primary_reason_counts": {
+    "SHORTCUT": 0,
+    "WRONG_BRIDGE_TYPE": 0,
+    "WRONG_HOP_COUNT": 0,
+    "WRONG_RELATION_HOP1": 0,
+    "WRONG_RELATION_HOP2": 0,
+    "WRONG_TARGET_TYPE": 0
+  },
+  "query_id": "BH2_05920",
+  "question_valid_precision": 1.0,
+  "reason_counts": {
+    "SHORTCUT": 0,
+    "WRONG_BRIDGE_TYPE": 0,
+    "WRONG_HOP_COUNT": 0,
+    "WRONG_RELATION_HOP1": 0,
+    "WRONG_RELATION_HOP2": 0,
+    "WRONG_TARGET_TYPE": 0
+  },
+  "resolved_count": 22,
+  "run_id": "expansion_v1",
+  "text_tool_call_count": 0,
+  "tool_calls_used": 7,
+  "undefined_counts": {
+    "benchmark_f1": 0,
+    "benchmark_precision": 0,
+    "benchmark_recall": 0,
+    "bridge_conditional_recall": 0,
+    "bridge_rank": 0,
+    "degree": 0,
+    "degree_percentile": 0,
+    "list_size": 0,
+    "off_question_rate": 0,
+    "primary_path_max_list_size": 0,
+    "question_valid_precision": 0,
+    "ungrounded_rate": 0,
+    "unresolved_rate": 0
+  },
+  "ungrounded_rate": 0.0,
+  "unresolved_rate": 0.0
+}

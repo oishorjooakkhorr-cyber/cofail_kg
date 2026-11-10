@@ -1,0 +1,110 @@
+{
+  "agent_id": "Ministral3-14B",
+  "answer_count": null,
+  "answers": [],
+  "attempt": 1,
+  "benchmark_f1": null,
+  "benchmark_precision": null,
+  "benchmark_recall": null,
+  "bridge_conditional_recall": {
+    "14161": null,
+    "14176": null,
+    "14177": null
+  },
+  "bridge_rank": {
+    "14161": 1,
+    "14176": 2,
+    "14177": 3
+  },
+  "bridge_recall_counts": {
+    "14161": {
+      "correct": null,
+      "total": 201
+    },
+    "14176": {
+      "correct": null,
+      "total": 240
+    },
+    "14177": {
+      "correct": null,
+      "total": 136
+    }
+  },
+  "bridges_explored": [
+    "14161",
+    "14176",
+    "14177"
+  ],
+  "budget_exhausted": false,
+  "cause": null,
+  "construction": "UNION",
+  "denominators": {
+    "benchmark_f1": null,
+    "benchmark_precision": null,
+    "benchmark_recall": 457,
+    "off_question_rate": null,
+    "question_valid_precision": null,
+    "ungrounded_rate": null,
+    "unresolved_rate": null
+  },
+  "early_stop": null,
+  "episode_status": "PARSE_FAIL",
+  "found_r1": true,
+  "hop1_status": "H1_CLEAN",
+  "label_a_counts": null,
+  "label_b_counts": null,
+  "node_statistics": {
+    "14161": {
+      "degree": 2139,
+      "degree_percentile": 99.54756817896192
+    },
+    "14176": {
+      "degree": 2157,
+      "degree_percentile": 99.59783838129948
+    },
+    "14177": {
+      "degree": 2396,
+      "degree_percentile": 99.8491893929873
+    },
+    "83841": {
+      "degree": 320,
+      "degree_percentile": 99.59016393442623
+    }
+  },
+  "numerators": {
+    "benchmark_f1": null,
+    "benchmark_precision": null,
+    "benchmark_recall": null,
+    "off_question_rate": null,
+    "question_valid_precision": null,
+    "ungrounded_rate": null,
+    "unresolved_rate": null
+  },
+  "off_question_rate": null,
+  "pages_requested": 14,
+  "primary_reason_counts": null,
+  "query_id": "BH2_03947",
+  "question_valid_precision": null,
+  "reason_counts": null,
+  "resolved_count": null,
+  "run_id": "expansion_v1",
+  "text_tool_call_count": 0,
+  "tool_calls_used": 17,
+  "undefined_counts": {
+    "benchmark_f1": 1,
+    "benchmark_precision": 1,
+    "benchmark_recall": 1,
+    "bridge_conditional_recall": 3,
+    "bridge_rank": 0,
+    "degree": 0,
+    "degree_percentile": 0,
+    "list_size": 0,
+    "off_question_rate": 1,
+    "primary_path_max_list_size": 0,
+    "question_valid_precision": 1,
+    "ungrounded_rate": 1,
+    "unresolved_rate": 1
+  },
+  "ungrounded_rate": null,
+  "unresolved_rate": null
+}

@@ -1,0 +1,38 @@
+{
+  "audit_answer_rows": 301,
+  "audit_selection": [
+    "BH2_05890__Gemma4-12B__a1",
+    "BH2_03986__Gemma4-12B__a1",
+    "BH2_05905__Granite41-8B__a1",
+    "BH2_03981__Granite41-8B__a1",
+    "BH2_05793__Ministral3-14B__a1",
+    "BH2_02234__Ministral3-14B__a1",
+    "BH2_04591__Cogito-14B__a1",
+    "BH2_01108__Cogito-14B__a1"
+  ],
+  "episodes": 1600,
+  "every_episode_has_status": true,
+  "kill_and_resume": {
+    "duplicates": [],
+    "expected": 1600,
+    "extra": [],
+    "missing": [],
+    "pass": true,
+    "saved": 1600
+  },
+  "leakage_test": "run separately: pytest tests/test_leakage.py (see analysis/leakage_test.txt)",
+  "manual_audit": "pending: researcher fills my_label_A / my_label_B in audit_sheet.csv",
+  "off_question_supported": [],
+  "reconstruction": {
+    "checked": 1600,
+    "pass": true
+  },
+  "run_id": "expansion_v1",
+  "status_counts": {
+    "ERROR": 36,
+    "PARSE_FAIL": 55,
+    "SUCCESS": 1509
+  },
+  "success_at_least_7_of_8": true,
+  "success_share": 0.943125
+}

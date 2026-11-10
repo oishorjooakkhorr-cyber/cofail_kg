@@ -2894,3 +2894,22 @@ Checks run on **c010d7e8541ea507d6008eb0f6b2483318ac1ac4** (S29 commit; protocol
    (`scripts/21_freeze_models.py check`, exit 0: all four equal `models_s21r2`): PASS.
 Run: `scripts/25_run_panel.py run --manifest expansion --run-id expansion_v1` (400 queries × 4 agents).
 This entry changes only docs/decision_log.md (not a pinned run source); the run records the HEAD at run time.
+
+## 2026-11-10 — S30 — expansion_v1 complete; two interruptions resumed under §19
+Run `expansion_v1` (400 queries × 4 agents) finished on 2026-11-10: 1600/1600 records, every one
+attempt 1 and git commit b8209e6c80a3ee4b1c263bc1479879ca74029110 (HEAD unchanged for the whole run;
+nothing was committed while the run was in progress or resumable). Analysis: PHASE run COMPLETE.
+Technical failures 91/1600 (Gemma4-12B 0, Granite41-8B 11, Ministral3-14B 47, Cogito-14B 33).
+Interruptions (both during Cogito-14B, the last agent; times UTC, local = UTC+6):
+1. Windows restarted cleanly at 2026-11-09 19:29:54 (not requested). The last completed episode
+   ended 19:29:40 (overall episode 1486). The episode in progress left no record (atomic writes),
+   so on resume (new server log 20261109T193215Z) it ran from the start as attempt 1 at 19:35:40.
+2. Paused on the researcher's instruction after overall episode 1513 (record ended 20:25:24; Ctrl-C;
+   any episode then in progress left no record); resumed on the researcher's instruction ("start again from 1514") at
+   2026-11-10 04:43:30 (server log 20261110T043939Z).
+Why no rerun or new attempt: protocol §19 — completed episodes (any status) are never rerun; an
+interrupted episode has no record, so it is not completed. The code-change rule did not apply
+(same commit for all 1600 records; the runner checks this on every resume).
+Data seen: run progress counts and failure statuses only; no co-failure or null results were seen
+before the run finished.
+This entry changes only docs/decision_log.md (not a pinned run source).

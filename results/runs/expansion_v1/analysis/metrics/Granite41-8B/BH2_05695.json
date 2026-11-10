@@ -1,0 +1,190 @@
+{
+  "agent_id": "Granite41-8B",
+  "answer_count": 3,
+  "answers": [
+    {
+      "degree": 559,
+      "degree_percentile": 72.18801055674248,
+      "first_seen_page": 1,
+      "h1": 0,
+      "label_a": "ALT_VALID",
+      "label_b": "PATH_INVALID",
+      "list_size": 3,
+      "node_id": "14919",
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "label": "drug_effect",
+          "u": "86308",
+          "v": "14919"
+        }
+      ],
+      "primary_path_max_list_size": 3,
+      "primary_reason_codes": [
+        "SHORTCUT"
+      ],
+      "reason_codes": [
+        "SHORTCUT"
+      ],
+      "submitted_index": 0
+    },
+    {
+      "degree": 2130,
+      "degree_percentile": 99.50986552720875,
+      "first_seen_page": 1,
+      "h1": 0,
+      "label_a": "OFF_QUESTION",
+      "label_b": "PATH_INVALID",
+      "list_size": 3,
+      "node_id": "15116",
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "label": "drug_effect",
+          "u": "86308",
+          "v": "15116"
+        }
+      ],
+      "primary_path_max_list_size": 3,
+      "primary_reason_codes": [
+        "SHORTCUT"
+      ],
+      "reason_codes": [
+        "SHORTCUT"
+      ],
+      "submitted_index": 1
+    },
+    {
+      "degree": 1786,
+      "degree_percentile": 98.21540781701647,
+      "first_seen_page": 1,
+      "h1": 0,
+      "label_a": "OFF_QUESTION",
+      "label_b": "PATH_INVALID",
+      "list_size": 3,
+      "node_id": "16842",
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "label": "drug_effect",
+          "u": "86308",
+          "v": "16842"
+        }
+      ],
+      "primary_path_max_list_size": 3,
+      "primary_reason_codes": [
+        "SHORTCUT"
+      ],
+      "reason_codes": [
+        "SHORTCUT"
+      ],
+      "submitted_index": 2
+    }
+  ],
+  "attempt": 1,
+  "benchmark_f1": 0.0,
+  "benchmark_precision": 0.0,
+  "benchmark_recall": 0.0,
+  "bridge_conditional_recall": {},
+  "bridge_rank": {},
+  "bridge_recall_counts": {},
+  "bridges_explored": [],
+  "budget_exhausted": false,
+  "cause": null,
+  "construction": "BRIDGE",
+  "denominators": {
+    "benchmark_f1": 12,
+    "benchmark_precision": 3,
+    "benchmark_recall": 9,
+    "off_question_rate": 3,
+    "question_valid_precision": 3,
+    "ungrounded_rate": 3,
+    "unresolved_rate": 3
+  },
+  "early_stop": false,
+  "episode_status": "SUCCESS",
+  "found_r1": false,
+  "hop1_status": "H1_WRONG",
+  "label_a_counts": {
+    "ALT_VALID": 1,
+    "GOLD": 0,
+    "GOLD_BRIDGE_EXTRA": 0,
+    "OFF_QUESTION": 2,
+    "UNRESOLVED": 0
+  },
+  "label_b_counts": {
+    "KG_UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0,
+    "PATH_INVALID": 3,
+    "SUPPORTED": 0,
+    "UNGROUNDED": 0
+  },
+  "node_statistics": {
+    "14919": {
+      "degree": 559,
+      "degree_percentile": 72.18801055674248
+    },
+    "15116": {
+      "degree": 2130,
+      "degree_percentile": 99.50986552720875
+    },
+    "16842": {
+      "degree": 1786,
+      "degree_percentile": 98.21540781701647
+    },
+    "86308": {
+      "degree": 10,
+      "degree_percentile": 79.20449350140422
+    }
+  },
+  "numerators": {
+    "benchmark_f1": 0,
+    "benchmark_precision": 0,
+    "benchmark_recall": 0,
+    "off_question_rate": 2,
+    "question_valid_precision": 1,
+    "ungrounded_rate": 0,
+    "unresolved_rate": 0
+  },
+  "off_question_rate": 0.6666666666666666,
+  "pages_requested": 1,
+  "primary_reason_counts": {
+    "SHORTCUT": 3,
+    "WRONG_BRIDGE_TYPE": 0,
+    "WRONG_HOP_COUNT": 0,
+    "WRONG_RELATION_HOP1": 0,
+    "WRONG_RELATION_HOP2": 0,
+    "WRONG_TARGET_TYPE": 0
+  },
+  "query_id": "BH2_05695",
+  "question_valid_precision": 0.3333333333333333,
+  "reason_counts": {
+    "SHORTCUT": 3,
+    "WRONG_BRIDGE_TYPE": 0,
+    "WRONG_HOP_COUNT": 0,
+    "WRONG_RELATION_HOP1": 0,
+    "WRONG_RELATION_HOP2": 0,
+    "WRONG_TARGET_TYPE": 0
+  },
+  "resolved_count": 3,
+  "run_id": "expansion_v1",
+  "text_tool_call_count": 0,
+  "tool_calls_used": 2,
+  "undefined_counts": {
+    "benchmark_f1": 0,
+    "benchmark_precision": 0,
+    "benchmark_recall": 0,
+    "bridge_conditional_recall": 0,
+    "bridge_rank": 0,
+    "degree": 0,
+    "degree_percentile": 0,
+    "list_size": 0,
+    "off_question_rate": 0,
+    "primary_path_max_list_size": 0,
+    "question_valid_precision": 0,
+    "ungrounded_rate": 0,
+    "unresolved_rate": 0
+  },
+  "ungrounded_rate": 0.0,
+  "unresolved_rate": 0.0
+}

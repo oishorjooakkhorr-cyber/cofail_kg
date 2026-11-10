@@ -1,0 +1,121 @@
+{
+  "agent_id": "Ministral3-14B",
+  "answer_count": null,
+  "answers": [],
+  "attempt": 1,
+  "benchmark_f1": null,
+  "benchmark_precision": null,
+  "benchmark_recall": null,
+  "bridge_conditional_recall": {
+    "14177": null,
+    "14238": null,
+    "15542": null,
+    "17558": null
+  },
+  "bridge_rank": {
+    "14177": 1,
+    "14238": 2,
+    "15542": 3,
+    "17558": 5
+  },
+  "bridge_recall_counts": {
+    "14177": {
+      "correct": null,
+      "total": 136
+    },
+    "14238": {
+      "correct": null,
+      "total": 170
+    },
+    "15542": {
+      "correct": null,
+      "total": 66
+    },
+    "17558": {
+      "correct": null,
+      "total": 338
+    }
+  },
+  "bridges_explored": [
+    "14177",
+    "14238",
+    "15542",
+    "17558"
+  ],
+  "budget_exhausted": false,
+  "cause": "CONNECTION",
+  "construction": "UNION",
+  "denominators": {
+    "benchmark_f1": null,
+    "benchmark_precision": null,
+    "benchmark_recall": 381,
+    "off_question_rate": null,
+    "question_valid_precision": null,
+    "ungrounded_rate": null,
+    "unresolved_rate": null
+  },
+  "early_stop": null,
+  "episode_status": "ERROR",
+  "found_r1": true,
+  "hop1_status": "H1_CLEAN",
+  "label_a_counts": null,
+  "label_b_counts": null,
+  "node_statistics": {
+    "14177": {
+      "degree": 2396,
+      "degree_percentile": 99.8491893929873
+    },
+    "14238": {
+      "degree": 2026,
+      "degree_percentile": 99.25851451552093
+    },
+    "15542": {
+      "degree": 1978,
+      "degree_percentile": 99.13283900967701
+    },
+    "17558": {
+      "degree": 2189,
+      "degree_percentile": 99.62297348246827
+    },
+    "83918": {
+      "degree": 19,
+      "degree_percentile": 73.91100702576112
+    }
+  },
+  "numerators": {
+    "benchmark_f1": null,
+    "benchmark_precision": null,
+    "benchmark_recall": null,
+    "off_question_rate": null,
+    "question_valid_precision": null,
+    "ungrounded_rate": null,
+    "unresolved_rate": null
+  },
+  "off_question_rate": null,
+  "pages_requested": 11,
+  "primary_reason_counts": null,
+  "query_id": "BH2_04005",
+  "question_valid_precision": null,
+  "reason_counts": null,
+  "resolved_count": null,
+  "run_id": "expansion_v1",
+  "text_tool_call_count": 0,
+  "tool_calls_used": 17,
+  "undefined_counts": {
+    "benchmark_f1": 1,
+    "benchmark_precision": 1,
+    "benchmark_recall": 1,
+    "bridge_conditional_recall": 4,
+    "bridge_rank": 0,
+    "degree": 0,
+    "degree_percentile": 0,
+    "list_size": 0,
+    "off_question_rate": 1,
+    "primary_path_max_list_size": 0,
+    "question_valid_precision": 1,
+    "ungrounded_rate": 1,
+    "unresolved_rate": 1
+  },
+  "ungrounded_rate": null,
+  "unresolved_rate": null
+}

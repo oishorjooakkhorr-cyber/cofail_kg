@@ -1,0 +1,190 @@
+{
+  "agent_id": "Granite41-8B",
+  "answer_count": 2,
+  "answers": [
+    {
+      "degree": 338,
+      "degree_percentile": 67.57571949227096,
+      "first_seen_page": 1,
+      "h1": 1,
+      "label_a": "ALT_VALID",
+      "label_b": "SUPPORTED",
+      "list_size": 1,
+      "node_id": "15477",
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "label": "disease_phenotype_positive",
+          "u": "94217",
+          "v": "28490"
+        },
+        {
+          "creation_index": 3,
+          "label": "indication",
+          "u": "28490",
+          "v": "15477"
+        }
+      ],
+      "primary_path_max_list_size": 3,
+      "primary_reason_codes": [],
+      "reason_codes": [],
+      "submitted_index": 0
+    },
+    {
+      "degree": 521,
+      "degree_percentile": 71.73557873570441,
+      "first_seen_page": 1,
+      "h1": 1,
+      "label_a": "GOLD",
+      "label_b": "SUPPORTED",
+      "list_size": 1,
+      "node_id": "14578",
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "label": "disease_phenotype_positive",
+          "u": "94217",
+          "v": "31541"
+        },
+        {
+          "creation_index": 5,
+          "label": "indication",
+          "u": "31541",
+          "v": "14578"
+        }
+      ],
+      "primary_path_max_list_size": 3,
+      "primary_reason_codes": [],
+      "reason_codes": [],
+      "submitted_index": 1
+    }
+  ],
+  "attempt": 1,
+  "benchmark_f1": 0.6666666666666666,
+  "benchmark_precision": 0.5,
+  "benchmark_recall": 1.0,
+  "bridge_conditional_recall": {
+    "28490": 1.0,
+    "31541": 1.0
+  },
+  "bridge_rank": {
+    "28490": 1,
+    "31541": 2
+  },
+  "bridge_recall_counts": {
+    "28490": {
+      "correct": 1,
+      "total": 1
+    },
+    "31541": {
+      "correct": 1,
+      "total": 1
+    }
+  },
+  "bridges_explored": [
+    "28490",
+    "31541"
+  ],
+  "budget_exhausted": false,
+  "cause": null,
+  "construction": "BRIDGE",
+  "denominators": {
+    "benchmark_f1": 3,
+    "benchmark_precision": 2,
+    "benchmark_recall": 1,
+    "off_question_rate": 2,
+    "question_valid_precision": 2,
+    "ungrounded_rate": 2,
+    "unresolved_rate": 2
+  },
+  "early_stop": false,
+  "episode_status": "SUCCESS",
+  "found_r1": true,
+  "hop1_status": "H1_CLEAN",
+  "label_a_counts": {
+    "ALT_VALID": 1,
+    "GOLD": 1,
+    "GOLD_BRIDGE_EXTRA": 0,
+    "OFF_QUESTION": 0,
+    "UNRESOLVED": 0
+  },
+  "label_b_counts": {
+    "KG_UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0,
+    "PATH_INVALID": 0,
+    "SUPPORTED": 2,
+    "UNGROUNDED": 0
+  },
+  "node_statistics": {
+    "14578": {
+      "degree": 521,
+      "degree_percentile": 71.73557873570441
+    },
+    "15477": {
+      "degree": 338,
+      "degree_percentile": 67.57571949227096
+    },
+    "28490": {
+      "degree": 25,
+      "degree_percentile": 79.04566744730678
+    },
+    "31541": {
+      "degree": 63,
+      "degree_percentile": 93.62412177985948
+    },
+    "94217": {
+      "degree": 3,
+      "degree_percentile": 50.83273463522957
+    }
+  },
+  "numerators": {
+    "benchmark_f1": 2,
+    "benchmark_precision": 1,
+    "benchmark_recall": 1,
+    "off_question_rate": 0,
+    "question_valid_precision": 2,
+    "ungrounded_rate": 0,
+    "unresolved_rate": 0
+  },
+  "off_question_rate": 0.0,
+  "pages_requested": 4,
+  "primary_reason_counts": {
+    "SHORTCUT": 0,
+    "WRONG_BRIDGE_TYPE": 0,
+    "WRONG_HOP_COUNT": 0,
+    "WRONG_RELATION_HOP1": 0,
+    "WRONG_RELATION_HOP2": 0,
+    "WRONG_TARGET_TYPE": 0
+  },
+  "query_id": "BH2_06087",
+  "question_valid_precision": 1.0,
+  "reason_counts": {
+    "SHORTCUT": 0,
+    "WRONG_BRIDGE_TYPE": 0,
+    "WRONG_HOP_COUNT": 0,
+    "WRONG_RELATION_HOP1": 0,
+    "WRONG_RELATION_HOP2": 0,
+    "WRONG_TARGET_TYPE": 0
+  },
+  "resolved_count": 2,
+  "run_id": "expansion_v1",
+  "text_tool_call_count": 0,
+  "tool_calls_used": 8,
+  "undefined_counts": {
+    "benchmark_f1": 0,
+    "benchmark_precision": 0,
+    "benchmark_recall": 0,
+    "bridge_conditional_recall": 0,
+    "bridge_rank": 0,
+    "degree": 0,
+    "degree_percentile": 0,
+    "list_size": 0,
+    "off_question_rate": 0,
+    "primary_path_max_list_size": 0,
+    "question_valid_precision": 0,
+    "ungrounded_rate": 0,
+    "unresolved_rate": 0
+  },
+  "ungrounded_rate": 0.0,
+  "unresolved_rate": 0.0
+}

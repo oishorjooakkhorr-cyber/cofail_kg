@@ -1,0 +1,1592 @@
+{
+  "agent_id": "Granite41-8B",
+  "answer_count": 32,
+  "answers": [
+    {
+      "degree": 4,
+      "degree_percentile": 45.82128943068996,
+      "first_seen_page": 1,
+      "h1": 1,
+      "label_a": "OFF_QUESTION",
+      "label_b": "PATH_INVALID",
+      "list_size": 7,
+      "node_id": "14113",
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "label": "disease_phenotype_positive",
+          "u": "22528",
+          "v": "28125"
+        },
+        {
+          "creation_index": 3,
+          "label": "disease_protein",
+          "u": "28125",
+          "v": "4312"
+        },
+        {
+          "creation_index": 5,
+          "label": "disease_protein",
+          "u": "4312",
+          "v": "29361"
+        },
+        {
+          "creation_index": 7,
+          "label": "indication",
+          "u": "29361",
+          "v": "14113"
+        }
+      ],
+      "primary_path_max_list_size": 40,
+      "primary_reason_codes": [
+        "WRONG_HOP_COUNT"
+      ],
+      "reason_codes": [],
+      "submitted_index": 0
+    },
+    {
+      "degree": 1442,
+      "degree_percentile": 94.52054794520548,
+      "first_seen_page": 1,
+      "h1": 1,
+      "label_a": "OFF_QUESTION",
+      "label_b": "PATH_INVALID",
+      "list_size": 7,
+      "node_id": "14229",
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "label": "disease_phenotype_positive",
+          "u": "22528",
+          "v": "28125"
+        },
+        {
+          "creation_index": 3,
+          "label": "disease_protein",
+          "u": "28125",
+          "v": "4312"
+        },
+        {
+          "creation_index": 5,
+          "label": "disease_protein",
+          "u": "4312",
+          "v": "29361"
+        },
+        {
+          "creation_index": 7,
+          "label": "indication",
+          "u": "29361",
+          "v": "14229"
+        }
+      ],
+      "primary_path_max_list_size": 40,
+      "primary_reason_codes": [
+        "WRONG_HOP_COUNT"
+      ],
+      "reason_codes": [],
+      "submitted_index": 1
+    },
+    {
+      "degree": 1753,
+      "degree_percentile": 97.92635415357547,
+      "first_seen_page": 1,
+      "h1": 1,
+      "label_a": "OFF_QUESTION",
+      "label_b": "PATH_INVALID",
+      "list_size": 7,
+      "node_id": "14313",
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "label": "disease_phenotype_positive",
+          "u": "22528",
+          "v": "28125"
+        },
+        {
+          "creation_index": 3,
+          "label": "disease_protein",
+          "u": "28125",
+          "v": "4312"
+        },
+        {
+          "creation_index": 5,
+          "label": "disease_protein",
+          "u": "4312",
+          "v": "29361"
+        },
+        {
+          "creation_index": 7,
+          "label": "indication",
+          "u": "29361",
+          "v": "14313"
+        }
+      ],
+      "primary_path_max_list_size": 40,
+      "primary_reason_codes": [
+        "WRONG_HOP_COUNT"
+      ],
+      "reason_codes": [],
+      "submitted_index": 2
+    },
+    {
+      "degree": 986,
+      "degree_percentile": 86.20082945833857,
+      "first_seen_page": 1,
+      "h1": 1,
+      "label_a": "OFF_QUESTION",
+      "label_b": "PATH_INVALID",
+      "list_size": 7,
+      "node_id": "14764",
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "label": "disease_phenotype_positive",
+          "u": "22528",
+          "v": "28125"
+        },
+        {
+          "creation_index": 3,
+          "label": "disease_protein",
+          "u": "28125",
+          "v": "4312"
+        },
+        {
+          "creation_index": 5,
+          "label": "disease_protein",
+          "u": "4312",
+          "v": "29361"
+        },
+        {
+          "creation_index": 7,
+          "label": "indication",
+          "u": "29361",
+          "v": "14764"
+        }
+      ],
+      "primary_path_max_list_size": 40,
+      "primary_reason_codes": [
+        "WRONG_HOP_COUNT"
+      ],
+      "reason_codes": [],
+      "submitted_index": 3
+    },
+    {
+      "degree": 719,
+      "degree_percentile": 76.00854593439739,
+      "first_seen_page": 1,
+      "h1": 1,
+      "label_a": "OFF_QUESTION",
+      "label_b": "PATH_INVALID",
+      "list_size": 7,
+      "node_id": "14780",
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "label": "disease_phenotype_positive",
+          "u": "22528",
+          "v": "28125"
+        },
+        {
+          "creation_index": 3,
+          "label": "disease_protein",
+          "u": "28125",
+          "v": "4312"
+        },
+        {
+          "creation_index": 5,
+          "label": "disease_protein",
+          "u": "4312",
+          "v": "29361"
+        },
+        {
+          "creation_index": 7,
+          "label": "indication",
+          "u": "29361",
+          "v": "14780"
+        }
+      ],
+      "primary_path_max_list_size": 40,
+      "primary_reason_codes": [
+        "WRONG_HOP_COUNT"
+      ],
+      "reason_codes": [],
+      "submitted_index": 4
+    },
+    {
+      "degree": 983,
+      "degree_percentile": 86.12542415483222,
+      "first_seen_page": 1,
+      "h1": 1,
+      "label_a": "OFF_QUESTION",
+      "label_b": "PATH_INVALID",
+      "list_size": 7,
+      "node_id": "14789",
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "label": "disease_phenotype_positive",
+          "u": "22528",
+          "v": "28125"
+        },
+        {
+          "creation_index": 3,
+          "label": "disease_protein",
+          "u": "28125",
+          "v": "4312"
+        },
+        {
+          "creation_index": 5,
+          "label": "disease_protein",
+          "u": "4312",
+          "v": "29361"
+        },
+        {
+          "creation_index": 7,
+          "label": "indication",
+          "u": "29361",
+          "v": "14789"
+        }
+      ],
+      "primary_path_max_list_size": 40,
+      "primary_reason_codes": [
+        "WRONG_HOP_COUNT"
+      ],
+      "reason_codes": [],
+      "submitted_index": 5
+    },
+    {
+      "degree": 1036,
+      "degree_percentile": 87.29420635918059,
+      "first_seen_page": 1,
+      "h1": 1,
+      "label_a": "OFF_QUESTION",
+      "label_b": "PATH_INVALID",
+      "list_size": 7,
+      "node_id": "15149",
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "label": "disease_phenotype_positive",
+          "u": "22528",
+          "v": "28125"
+        },
+        {
+          "creation_index": 3,
+          "label": "disease_protein",
+          "u": "28125",
+          "v": "4312"
+        },
+        {
+          "creation_index": 5,
+          "label": "disease_protein",
+          "u": "4312",
+          "v": "29361"
+        },
+        {
+          "creation_index": 7,
+          "label": "indication",
+          "u": "29361",
+          "v": "15149"
+        }
+      ],
+      "primary_path_max_list_size": 40,
+      "primary_reason_codes": [
+        "WRONG_HOP_COUNT"
+      ],
+      "reason_codes": [],
+      "submitted_index": 6
+    },
+    {
+      "degree": 659,
+      "degree_percentile": 74.80206107829585,
+      "first_seen_page": 1,
+      "h1": 1,
+      "label_a": "OFF_QUESTION",
+      "label_b": "PATH_INVALID",
+      "list_size": 2,
+      "node_id": "16510",
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "label": "disease_phenotype_positive",
+          "u": "22528",
+          "v": "28125"
+        },
+        {
+          "creation_index": 3,
+          "label": "disease_protein",
+          "u": "28125",
+          "v": "4312"
+        },
+        {
+          "creation_index": 5,
+          "label": "disease_protein",
+          "u": "4312",
+          "v": "32214"
+        },
+        {
+          "creation_index": 11,
+          "label": "indication",
+          "u": "32214",
+          "v": "16510"
+        }
+      ],
+      "primary_path_max_list_size": 40,
+      "primary_reason_codes": [
+        "WRONG_HOP_COUNT"
+      ],
+      "reason_codes": [],
+      "submitted_index": 7
+    },
+    {
+      "degree": 1497,
+      "degree_percentile": 95.1991956767626,
+      "first_seen_page": 1,
+      "h1": 1,
+      "label_a": "OFF_QUESTION",
+      "label_b": "PATH_INVALID",
+      "list_size": 2,
+      "node_id": "17524",
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "label": "disease_phenotype_positive",
+          "u": "22528",
+          "v": "28125"
+        },
+        {
+          "creation_index": 3,
+          "label": "disease_protein",
+          "u": "28125",
+          "v": "4312"
+        },
+        {
+          "creation_index": 5,
+          "label": "disease_protein",
+          "u": "4312",
+          "v": "32214"
+        },
+        {
+          "creation_index": 11,
+          "label": "indication",
+          "u": "32214",
+          "v": "17524"
+        }
+      ],
+      "primary_path_max_list_size": 40,
+      "primary_reason_codes": [
+        "WRONG_HOP_COUNT"
+      ],
+      "reason_codes": [],
+      "submitted_index": 8
+    },
+    {
+      "degree": 1504,
+      "degree_percentile": 95.3248711826065,
+      "first_seen_page": 1,
+      "h1": 1,
+      "label_a": "OFF_QUESTION",
+      "label_b": "PATH_INVALID",
+      "list_size": 23,
+      "node_id": "14028",
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "label": "disease_phenotype_positive",
+          "u": "22528",
+          "v": "28125"
+        },
+        {
+          "creation_index": 3,
+          "label": "disease_protein",
+          "u": "28125",
+          "v": "4312"
+        },
+        {
+          "creation_index": 5,
+          "label": "disease_protein",
+          "u": "4312",
+          "v": "36924"
+        },
+        {
+          "creation_index": 15,
+          "label": "indication",
+          "u": "36924",
+          "v": "14028"
+        }
+      ],
+      "primary_path_max_list_size": 40,
+      "primary_reason_codes": [
+        "WRONG_HOP_COUNT"
+      ],
+      "reason_codes": [],
+      "submitted_index": 9
+    },
+    {
+      "degree": 1088,
+      "degree_percentile": 88.29961040593189,
+      "first_seen_page": 1,
+      "h1": 1,
+      "label_a": "OFF_QUESTION",
+      "label_b": "PATH_INVALID",
+      "list_size": 23,
+      "node_id": "14032",
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "label": "disease_phenotype_positive",
+          "u": "22528",
+          "v": "28125"
+        },
+        {
+          "creation_index": 3,
+          "label": "disease_protein",
+          "u": "28125",
+          "v": "4312"
+        },
+        {
+          "creation_index": 5,
+          "label": "disease_protein",
+          "u": "4312",
+          "v": "36924"
+        },
+        {
+          "creation_index": 15,
+          "label": "indication",
+          "u": "36924",
+          "v": "14032"
+        }
+      ],
+      "primary_path_max_list_size": 40,
+      "primary_reason_codes": [
+        "WRONG_HOP_COUNT"
+      ],
+      "reason_codes": [],
+      "submitted_index": 10
+    },
+    {
+      "degree": 1119,
+      "degree_percentile": 88.97825813748901,
+      "first_seen_page": 1,
+      "h1": 1,
+      "label_a": "OFF_QUESTION",
+      "label_b": "PATH_INVALID",
+      "list_size": 23,
+      "node_id": "14033",
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "label": "disease_phenotype_positive",
+          "u": "22528",
+          "v": "28125"
+        },
+        {
+          "creation_index": 3,
+          "label": "disease_protein",
+          "u": "28125",
+          "v": "4312"
+        },
+        {
+          "creation_index": 5,
+          "label": "disease_protein",
+          "u": "4312",
+          "v": "36924"
+        },
+        {
+          "creation_index": 15,
+          "label": "indication",
+          "u": "36924",
+          "v": "14033"
+        }
+      ],
+      "primary_path_max_list_size": 40,
+      "primary_reason_codes": [
+        "WRONG_HOP_COUNT"
+      ],
+      "reason_codes": [],
+      "submitted_index": 11
+    },
+    {
+      "degree": 1302,
+      "degree_percentile": 91.98190272715848,
+      "first_seen_page": 1,
+      "h1": 1,
+      "label_a": "OFF_QUESTION",
+      "label_b": "PATH_INVALID",
+      "list_size": 23,
+      "node_id": "14042",
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "label": "disease_phenotype_positive",
+          "u": "22528",
+          "v": "28125"
+        },
+        {
+          "creation_index": 3,
+          "label": "disease_protein",
+          "u": "28125",
+          "v": "4312"
+        },
+        {
+          "creation_index": 5,
+          "label": "disease_protein",
+          "u": "4312",
+          "v": "36924"
+        },
+        {
+          "creation_index": 15,
+          "label": "indication",
+          "u": "36924",
+          "v": "14042"
+        }
+      ],
+      "primary_path_max_list_size": 40,
+      "primary_reason_codes": [
+        "WRONG_HOP_COUNT"
+      ],
+      "reason_codes": [],
+      "submitted_index": 12
+    },
+    {
+      "degree": 46,
+      "degree_percentile": 54.50546688450421,
+      "first_seen_page": 1,
+      "h1": 1,
+      "label_a": "OFF_QUESTION",
+      "label_b": "PATH_INVALID",
+      "list_size": 23,
+      "node_id": "14439",
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "label": "disease_phenotype_positive",
+          "u": "22528",
+          "v": "28125"
+        },
+        {
+          "creation_index": 3,
+          "label": "disease_protein",
+          "u": "28125",
+          "v": "4312"
+        },
+        {
+          "creation_index": 5,
+          "label": "disease_protein",
+          "u": "4312",
+          "v": "36924"
+        },
+        {
+          "creation_index": 15,
+          "label": "indication",
+          "u": "36924",
+          "v": "14439"
+        }
+      ],
+      "primary_path_max_list_size": 40,
+      "primary_reason_codes": [
+        "WRONG_HOP_COUNT"
+      ],
+      "reason_codes": [],
+      "submitted_index": 13
+    },
+    {
+      "degree": 6,
+      "degree_percentile": 47.34196305140128,
+      "first_seen_page": 1,
+      "h1": 1,
+      "label_a": "OFF_QUESTION",
+      "label_b": "PATH_INVALID",
+      "list_size": 23,
+      "node_id": "14489",
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "label": "disease_phenotype_positive",
+          "u": "22528",
+          "v": "28125"
+        },
+        {
+          "creation_index": 3,
+          "label": "disease_protein",
+          "u": "28125",
+          "v": "4312"
+        },
+        {
+          "creation_index": 5,
+          "label": "disease_protein",
+          "u": "4312",
+          "v": "36924"
+        },
+        {
+          "creation_index": 15,
+          "label": "indication",
+          "u": "36924",
+          "v": "14489"
+        }
+      ],
+      "primary_path_max_list_size": 40,
+      "primary_reason_codes": [
+        "WRONG_HOP_COUNT"
+      ],
+      "reason_codes": [],
+      "submitted_index": 14
+    },
+    {
+      "degree": 91,
+      "degree_percentile": 57.0566796531356,
+      "first_seen_page": 1,
+      "h1": 1,
+      "label_a": "OFF_QUESTION",
+      "label_b": "PATH_INVALID",
+      "list_size": 23,
+      "node_id": "14520",
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "label": "disease_phenotype_positive",
+          "u": "22528",
+          "v": "28125"
+        },
+        {
+          "creation_index": 3,
+          "label": "disease_protein",
+          "u": "28125",
+          "v": "4312"
+        },
+        {
+          "creation_index": 5,
+          "label": "disease_protein",
+          "u": "4312",
+          "v": "36924"
+        },
+        {
+          "creation_index": 15,
+          "label": "indication",
+          "u": "36924",
+          "v": "14520"
+        }
+      ],
+      "primary_path_max_list_size": 40,
+      "primary_reason_codes": [
+        "WRONG_HOP_COUNT"
+      ],
+      "reason_codes": [],
+      "submitted_index": 15
+    },
+    {
+      "degree": 1282,
+      "degree_percentile": 91.47920070378284,
+      "first_seen_page": 1,
+      "h1": 1,
+      "label_a": "OFF_QUESTION",
+      "label_b": "PATH_INVALID",
+      "list_size": 23,
+      "node_id": "14638",
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "label": "disease_phenotype_positive",
+          "u": "22528",
+          "v": "28125"
+        },
+        {
+          "creation_index": 3,
+          "label": "disease_protein",
+          "u": "28125",
+          "v": "4312"
+        },
+        {
+          "creation_index": 5,
+          "label": "disease_protein",
+          "u": "4312",
+          "v": "36924"
+        },
+        {
+          "creation_index": 15,
+          "label": "indication",
+          "u": "36924",
+          "v": "14638"
+        }
+      ],
+      "primary_path_max_list_size": 40,
+      "primary_reason_codes": [
+        "WRONG_HOP_COUNT"
+      ],
+      "reason_codes": [],
+      "submitted_index": 16
+    },
+    {
+      "degree": 202,
+      "degree_percentile": 61.70667336936031,
+      "first_seen_page": 1,
+      "h1": 1,
+      "label_a": "OFF_QUESTION",
+      "label_b": "PATH_INVALID",
+      "list_size": 23,
+      "node_id": "14680",
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "label": "disease_phenotype_positive",
+          "u": "22528",
+          "v": "28125"
+        },
+        {
+          "creation_index": 3,
+          "label": "disease_protein",
+          "u": "28125",
+          "v": "4312"
+        },
+        {
+          "creation_index": 5,
+          "label": "disease_protein",
+          "u": "4312",
+          "v": "36924"
+        },
+        {
+          "creation_index": 15,
+          "label": "indication",
+          "u": "36924",
+          "v": "14680"
+        }
+      ],
+      "primary_path_max_list_size": 40,
+      "primary_reason_codes": [
+        "WRONG_HOP_COUNT"
+      ],
+      "reason_codes": [],
+      "submitted_index": 17
+    },
+    {
+      "degree": 304,
+      "degree_percentile": 64.13221063214779,
+      "first_seen_page": 1,
+      "h1": 1,
+      "label_a": "OFF_QUESTION",
+      "label_b": "PATH_INVALID",
+      "list_size": 23,
+      "node_id": "14842",
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "label": "disease_phenotype_positive",
+          "u": "22528",
+          "v": "28125"
+        },
+        {
+          "creation_index": 3,
+          "label": "disease_protein",
+          "u": "28125",
+          "v": "4312"
+        },
+        {
+          "creation_index": 5,
+          "label": "disease_protein",
+          "u": "4312",
+          "v": "36924"
+        },
+        {
+          "creation_index": 15,
+          "label": "indication",
+          "u": "36924",
+          "v": "14842"
+        }
+      ],
+      "primary_path_max_list_size": 40,
+      "primary_reason_codes": [
+        "WRONG_HOP_COUNT"
+      ],
+      "reason_codes": [],
+      "submitted_index": 18
+    },
+    {
+      "degree": 1616,
+      "degree_percentile": 96.64446399396758,
+      "first_seen_page": 1,
+      "h1": 1,
+      "label_a": "OFF_QUESTION",
+      "label_b": "PATH_INVALID",
+      "list_size": 23,
+      "node_id": "14848",
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "label": "disease_phenotype_positive",
+          "u": "22528",
+          "v": "28125"
+        },
+        {
+          "creation_index": 3,
+          "label": "disease_protein",
+          "u": "28125",
+          "v": "4312"
+        },
+        {
+          "creation_index": 5,
+          "label": "disease_protein",
+          "u": "4312",
+          "v": "36924"
+        },
+        {
+          "creation_index": 15,
+          "label": "indication",
+          "u": "36924",
+          "v": "14848"
+        }
+      ],
+      "primary_path_max_list_size": 40,
+      "primary_reason_codes": [
+        "WRONG_HOP_COUNT"
+      ],
+      "reason_codes": [],
+      "submitted_index": 19
+    },
+    {
+      "degree": 1111,
+      "degree_percentile": 88.77717732813875,
+      "first_seen_page": 1,
+      "h1": 1,
+      "label_a": "OFF_QUESTION",
+      "label_b": "PATH_INVALID",
+      "list_size": 23,
+      "node_id": "14940",
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "label": "disease_phenotype_positive",
+          "u": "22528",
+          "v": "28125"
+        },
+        {
+          "creation_index": 3,
+          "label": "disease_protein",
+          "u": "28125",
+          "v": "4312"
+        },
+        {
+          "creation_index": 5,
+          "label": "disease_protein",
+          "u": "4312",
+          "v": "36924"
+        },
+        {
+          "creation_index": 15,
+          "label": "indication",
+          "u": "36924",
+          "v": "14940"
+        }
+      ],
+      "primary_path_max_list_size": 40,
+      "primary_reason_codes": [
+        "WRONG_HOP_COUNT"
+      ],
+      "reason_codes": [],
+      "submitted_index": 20
+    },
+    {
+      "degree": 1426,
+      "degree_percentile": 94.28176448410206,
+      "first_seen_page": 1,
+      "h1": 1,
+      "label_a": "OFF_QUESTION",
+      "label_b": "PATH_INVALID",
+      "list_size": 23,
+      "node_id": "15003",
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "label": "disease_phenotype_positive",
+          "u": "22528",
+          "v": "28125"
+        },
+        {
+          "creation_index": 3,
+          "label": "disease_protein",
+          "u": "28125",
+          "v": "4312"
+        },
+        {
+          "creation_index": 5,
+          "label": "disease_protein",
+          "u": "4312",
+          "v": "36924"
+        },
+        {
+          "creation_index": 15,
+          "label": "indication",
+          "u": "36924",
+          "v": "15003"
+        }
+      ],
+      "primary_path_max_list_size": 40,
+      "primary_reason_codes": [
+        "WRONG_HOP_COUNT"
+      ],
+      "reason_codes": [],
+      "submitted_index": 21
+    },
+    {
+      "degree": 850,
+      "degree_percentile": 82.10380796782707,
+      "first_seen_page": 1,
+      "h1": 1,
+      "label_a": "OFF_QUESTION",
+      "label_b": "PATH_INVALID",
+      "list_size": 23,
+      "node_id": "15088",
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "label": "disease_phenotype_positive",
+          "u": "22528",
+          "v": "28125"
+        },
+        {
+          "creation_index": 3,
+          "label": "disease_protein",
+          "u": "28125",
+          "v": "4312"
+        },
+        {
+          "creation_index": 5,
+          "label": "disease_protein",
+          "u": "4312",
+          "v": "36924"
+        },
+        {
+          "creation_index": 15,
+          "label": "indication",
+          "u": "36924",
+          "v": "15088"
+        }
+      ],
+      "primary_path_max_list_size": 40,
+      "primary_reason_codes": [
+        "WRONG_HOP_COUNT"
+      ],
+      "reason_codes": [],
+      "submitted_index": 22
+    },
+    {
+      "degree": 132,
+      "degree_percentile": 59.36910896066357,
+      "first_seen_page": 1,
+      "h1": 1,
+      "label_a": "OFF_QUESTION",
+      "label_b": "PATH_INVALID",
+      "list_size": 23,
+      "node_id": "15763",
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "label": "disease_phenotype_positive",
+          "u": "22528",
+          "v": "28125"
+        },
+        {
+          "creation_index": 3,
+          "label": "disease_protein",
+          "u": "28125",
+          "v": "4312"
+        },
+        {
+          "creation_index": 5,
+          "label": "disease_protein",
+          "u": "4312",
+          "v": "36924"
+        },
+        {
+          "creation_index": 15,
+          "label": "indication",
+          "u": "36924",
+          "v": "15763"
+        }
+      ],
+      "primary_path_max_list_size": 40,
+      "primary_reason_codes": [
+        "WRONG_HOP_COUNT"
+      ],
+      "reason_codes": [],
+      "submitted_index": 23
+    },
+    {
+      "degree": 739,
+      "degree_percentile": 77.62975995978384,
+      "first_seen_page": 1,
+      "h1": 1,
+      "label_a": "OFF_QUESTION",
+      "label_b": "PATH_INVALID",
+      "list_size": 23,
+      "node_id": "16544",
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "label": "disease_phenotype_positive",
+          "u": "22528",
+          "v": "28125"
+        },
+        {
+          "creation_index": 3,
+          "label": "disease_protein",
+          "u": "28125",
+          "v": "4312"
+        },
+        {
+          "creation_index": 5,
+          "label": "disease_protein",
+          "u": "4312",
+          "v": "36924"
+        },
+        {
+          "creation_index": 15,
+          "label": "indication",
+          "u": "36924",
+          "v": "16544"
+        }
+      ],
+      "primary_path_max_list_size": 40,
+      "primary_reason_codes": [
+        "WRONG_HOP_COUNT"
+      ],
+      "reason_codes": [],
+      "submitted_index": 24
+    },
+    {
+      "degree": 785,
+      "degree_percentile": 80.0804323237401,
+      "first_seen_page": 1,
+      "h1": 1,
+      "label_a": "OFF_QUESTION",
+      "label_b": "PATH_INVALID",
+      "list_size": 23,
+      "node_id": "17345",
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "label": "disease_phenotype_positive",
+          "u": "22528",
+          "v": "28125"
+        },
+        {
+          "creation_index": 3,
+          "label": "disease_protein",
+          "u": "28125",
+          "v": "4312"
+        },
+        {
+          "creation_index": 5,
+          "label": "disease_protein",
+          "u": "4312",
+          "v": "36924"
+        },
+        {
+          "creation_index": 15,
+          "label": "indication",
+          "u": "36924",
+          "v": "17345"
+        }
+      ],
+      "primary_path_max_list_size": 40,
+      "primary_reason_codes": [
+        "WRONG_HOP_COUNT"
+      ],
+      "reason_codes": [],
+      "submitted_index": 25
+    },
+    {
+      "degree": 78,
+      "degree_percentile": 56.491139876838005,
+      "first_seen_page": 1,
+      "h1": 1,
+      "label_a": "OFF_QUESTION",
+      "label_b": "PATH_INVALID",
+      "list_size": 23,
+      "node_id": "17377",
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "label": "disease_phenotype_positive",
+          "u": "22528",
+          "v": "28125"
+        },
+        {
+          "creation_index": 3,
+          "label": "disease_protein",
+          "u": "28125",
+          "v": "4312"
+        },
+        {
+          "creation_index": 5,
+          "label": "disease_protein",
+          "u": "4312",
+          "v": "36924"
+        },
+        {
+          "creation_index": 15,
+          "label": "indication",
+          "u": "36924",
+          "v": "17377"
+        }
+      ],
+      "primary_path_max_list_size": 40,
+      "primary_reason_codes": [
+        "WRONG_HOP_COUNT"
+      ],
+      "reason_codes": [],
+      "submitted_index": 26
+    },
+    {
+      "degree": 94,
+      "degree_percentile": 57.19492270956391,
+      "first_seen_page": 1,
+      "h1": 1,
+      "label_a": "OFF_QUESTION",
+      "label_b": "PATH_INVALID",
+      "list_size": 23,
+      "node_id": "17652",
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "label": "disease_phenotype_positive",
+          "u": "22528",
+          "v": "28125"
+        },
+        {
+          "creation_index": 3,
+          "label": "disease_protein",
+          "u": "28125",
+          "v": "4312"
+        },
+        {
+          "creation_index": 5,
+          "label": "disease_protein",
+          "u": "4312",
+          "v": "36924"
+        },
+        {
+          "creation_index": 15,
+          "label": "indication",
+          "u": "36924",
+          "v": "17652"
+        }
+      ],
+      "primary_path_max_list_size": 40,
+      "primary_reason_codes": [
+        "WRONG_HOP_COUNT"
+      ],
+      "reason_codes": [],
+      "submitted_index": 27
+    },
+    {
+      "degree": 66,
+      "degree_percentile": 56.05127560638432,
+      "first_seen_page": 1,
+      "h1": 1,
+      "label_a": "OFF_QUESTION",
+      "label_b": "PATH_INVALID",
+      "list_size": 23,
+      "node_id": "20193",
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "label": "disease_phenotype_positive",
+          "u": "22528",
+          "v": "28125"
+        },
+        {
+          "creation_index": 3,
+          "label": "disease_protein",
+          "u": "28125",
+          "v": "4312"
+        },
+        {
+          "creation_index": 5,
+          "label": "disease_protein",
+          "u": "4312",
+          "v": "36924"
+        },
+        {
+          "creation_index": 15,
+          "label": "indication",
+          "u": "36924",
+          "v": "20193"
+        }
+      ],
+      "primary_path_max_list_size": 40,
+      "primary_reason_codes": [
+        "WRONG_HOP_COUNT"
+      ],
+      "reason_codes": [],
+      "submitted_index": 28
+    },
+    {
+      "degree": 90,
+      "degree_percentile": 56.98127434962925,
+      "first_seen_page": 1,
+      "h1": 1,
+      "label_a": "OFF_QUESTION",
+      "label_b": "PATH_INVALID",
+      "list_size": 23,
+      "node_id": "20322",
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "label": "disease_phenotype_positive",
+          "u": "22528",
+          "v": "28125"
+        },
+        {
+          "creation_index": 3,
+          "label": "disease_protein",
+          "u": "28125",
+          "v": "4312"
+        },
+        {
+          "creation_index": 5,
+          "label": "disease_protein",
+          "u": "4312",
+          "v": "36924"
+        },
+        {
+          "creation_index": 15,
+          "label": "indication",
+          "u": "36924",
+          "v": "20322"
+        }
+      ],
+      "primary_path_max_list_size": 40,
+      "primary_reason_codes": [
+        "WRONG_HOP_COUNT"
+      ],
+      "reason_codes": [],
+      "submitted_index": 29
+    },
+    {
+      "degree": 59,
+      "degree_percentile": 55.28465502073646,
+      "first_seen_page": 1,
+      "h1": 1,
+      "label_a": "OFF_QUESTION",
+      "label_b": "PATH_INVALID",
+      "list_size": 23,
+      "node_id": "20335",
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "label": "disease_phenotype_positive",
+          "u": "22528",
+          "v": "28125"
+        },
+        {
+          "creation_index": 3,
+          "label": "disease_protein",
+          "u": "28125",
+          "v": "4312"
+        },
+        {
+          "creation_index": 5,
+          "label": "disease_protein",
+          "u": "4312",
+          "v": "36924"
+        },
+        {
+          "creation_index": 15,
+          "label": "indication",
+          "u": "36924",
+          "v": "20335"
+        }
+      ],
+      "primary_path_max_list_size": 40,
+      "primary_reason_codes": [
+        "WRONG_HOP_COUNT"
+      ],
+      "reason_codes": [],
+      "submitted_index": 30
+    },
+    {
+      "degree": 750,
+      "degree_percentile": 78.59746135478196,
+      "first_seen_page": 1,
+      "h1": 1,
+      "label_a": "OFF_QUESTION",
+      "label_b": "PATH_INVALID",
+      "list_size": 23,
+      "node_id": "20436",
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "label": "disease_phenotype_positive",
+          "u": "22528",
+          "v": "28125"
+        },
+        {
+          "creation_index": 3,
+          "label": "disease_protein",
+          "u": "28125",
+          "v": "4312"
+        },
+        {
+          "creation_index": 5,
+          "label": "disease_protein",
+          "u": "4312",
+          "v": "36924"
+        },
+        {
+          "creation_index": 15,
+          "label": "indication",
+          "u": "36924",
+          "v": "20436"
+        }
+      ],
+      "primary_path_max_list_size": 40,
+      "primary_reason_codes": [
+        "WRONG_HOP_COUNT"
+      ],
+      "reason_codes": [],
+      "submitted_index": 31
+    }
+  ],
+  "attempt": 1,
+  "benchmark_f1": 0.0,
+  "benchmark_precision": 0.0,
+  "benchmark_recall": 0.0,
+  "bridge_conditional_recall": {},
+  "bridge_rank": {},
+  "bridge_recall_counts": {},
+  "bridges_explored": [],
+  "budget_exhausted": false,
+  "cause": null,
+  "construction": "BRIDGE",
+  "denominators": {
+    "benchmark_f1": 33,
+    "benchmark_precision": 32,
+    "benchmark_recall": 1,
+    "off_question_rate": 32,
+    "question_valid_precision": 32,
+    "ungrounded_rate": 32,
+    "unresolved_rate": 32
+  },
+  "early_stop": false,
+  "episode_status": "SUCCESS",
+  "found_r1": true,
+  "hop1_status": "H1_CLEAN",
+  "label_a_counts": {
+    "ALT_VALID": 0,
+    "GOLD": 0,
+    "GOLD_BRIDGE_EXTRA": 0,
+    "OFF_QUESTION": 32,
+    "UNRESOLVED": 0
+  },
+  "label_b_counts": {
+    "KG_UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0,
+    "PATH_INVALID": 32,
+    "SUPPORTED": 0,
+    "UNGROUNDED": 0
+  },
+  "node_statistics": {
+    "14028": {
+      "degree": 1504,
+      "degree_percentile": 95.3248711826065
+    },
+    "14032": {
+      "degree": 1088,
+      "degree_percentile": 88.29961040593189
+    },
+    "14033": {
+      "degree": 1119,
+      "degree_percentile": 88.97825813748901
+    },
+    "14042": {
+      "degree": 1302,
+      "degree_percentile": 91.98190272715848
+    },
+    "14113": {
+      "degree": 4,
+      "degree_percentile": 45.82128943068996
+    },
+    "14229": {
+      "degree": 1442,
+      "degree_percentile": 94.52054794520548
+    },
+    "14313": {
+      "degree": 1753,
+      "degree_percentile": 97.92635415357547
+    },
+    "14439": {
+      "degree": 46,
+      "degree_percentile": 54.50546688450421
+    },
+    "14489": {
+      "degree": 6,
+      "degree_percentile": 47.34196305140128
+    },
+    "14520": {
+      "degree": 91,
+      "degree_percentile": 57.0566796531356
+    },
+    "14638": {
+      "degree": 1282,
+      "degree_percentile": 91.47920070378284
+    },
+    "14680": {
+      "degree": 202,
+      "degree_percentile": 61.70667336936031
+    },
+    "14764": {
+      "degree": 986,
+      "degree_percentile": 86.20082945833857
+    },
+    "14780": {
+      "degree": 719,
+      "degree_percentile": 76.00854593439739
+    },
+    "14789": {
+      "degree": 983,
+      "degree_percentile": 86.12542415483222
+    },
+    "14842": {
+      "degree": 304,
+      "degree_percentile": 64.13221063214779
+    },
+    "14848": {
+      "degree": 1616,
+      "degree_percentile": 96.64446399396758
+    },
+    "14940": {
+      "degree": 1111,
+      "degree_percentile": 88.77717732813875
+    },
+    "15003": {
+      "degree": 1426,
+      "degree_percentile": 94.28176448410206
+    },
+    "15088": {
+      "degree": 850,
+      "degree_percentile": 82.10380796782707
+    },
+    "15149": {
+      "degree": 1036,
+      "degree_percentile": 87.29420635918059
+    },
+    "15763": {
+      "degree": 132,
+      "degree_percentile": 59.36910896066357
+    },
+    "16510": {
+      "degree": 659,
+      "degree_percentile": 74.80206107829585
+    },
+    "16544": {
+      "degree": 739,
+      "degree_percentile": 77.62975995978384
+    },
+    "17345": {
+      "degree": 785,
+      "degree_percentile": 80.0804323237401
+    },
+    "17377": {
+      "degree": 78,
+      "degree_percentile": 56.491139876838005
+    },
+    "17524": {
+      "degree": 1497,
+      "degree_percentile": 95.1991956767626
+    },
+    "17652": {
+      "degree": 94,
+      "degree_percentile": 57.19492270956391
+    },
+    "20193": {
+      "degree": 66,
+      "degree_percentile": 56.05127560638432
+    },
+    "20322": {
+      "degree": 90,
+      "degree_percentile": 56.98127434962925
+    },
+    "20335": {
+      "degree": 59,
+      "degree_percentile": 55.28465502073646
+    },
+    "20436": {
+      "degree": 750,
+      "degree_percentile": 78.59746135478196
+    },
+    "22528": {
+      "degree": 9,
+      "degree_percentile": 77.46718045849389
+    },
+    "28125": {
+      "degree": 124,
+      "degree_percentile": 97.82786885245902
+    },
+    "29361": {
+      "degree": 92,
+      "degree_percentile": 96.59836065573771
+    },
+    "32214": {
+      "degree": 170,
+      "degree_percentile": 98.71779859484778
+    },
+    "36924": {
+      "degree": 114,
+      "degree_percentile": 97.45901639344262
+    },
+    "4312": {
+      "degree": 307,
+      "degree_percentile": 97.2317588811391
+    }
+  },
+  "numerators": {
+    "benchmark_f1": 0,
+    "benchmark_precision": 0,
+    "benchmark_recall": 0,
+    "off_question_rate": 32,
+    "question_valid_precision": 0,
+    "ungrounded_rate": 0,
+    "unresolved_rate": 0
+  },
+  "off_question_rate": 1.0,
+  "pages_requested": 8,
+  "primary_reason_counts": {
+    "SHORTCUT": 0,
+    "WRONG_BRIDGE_TYPE": 0,
+    "WRONG_HOP_COUNT": 32,
+    "WRONG_RELATION_HOP1": 0,
+    "WRONG_RELATION_HOP2": 0,
+    "WRONG_TARGET_TYPE": 0
+  },
+  "query_id": "BH2_05627",
+  "question_valid_precision": 0.0,
+  "reason_counts": {
+    "SHORTCUT": 0,
+    "WRONG_BRIDGE_TYPE": 0,
+    "WRONG_HOP_COUNT": 0,
+    "WRONG_RELATION_HOP1": 0,
+    "WRONG_RELATION_HOP2": 0,
+    "WRONG_TARGET_TYPE": 0
+  },
+  "resolved_count": 32,
+  "run_id": "expansion_v1",
+  "text_tool_call_count": 0,
+  "tool_calls_used": 16,
+  "undefined_counts": {
+    "benchmark_f1": 0,
+    "benchmark_precision": 0,
+    "benchmark_recall": 0,
+    "bridge_conditional_recall": 0,
+    "bridge_rank": 0,
+    "degree": 0,
+    "degree_percentile": 0,
+    "list_size": 0,
+    "off_question_rate": 0,
+    "primary_path_max_list_size": 0,
+    "question_valid_precision": 0,
+    "ungrounded_rate": 0,
+    "unresolved_rate": 0
+  },
+  "ungrounded_rate": 0.0,
+  "unresolved_rate": 0.0
+}

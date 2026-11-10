@@ -1,0 +1,4256 @@
+{
+  "agent_id": "Granite41-8B",
+  "answer_count": 98,
+  "answers": [
+    {
+      "degree": 313,
+      "degree_percentile": 64.24531858740733,
+      "first_seen_page": 1,
+      "h1": 1,
+      "label_a": "OFF_QUESTION",
+      "label_b": "PATH_INVALID",
+      "list_size": 9,
+      "node_id": "14436",
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "label": "disease_phenotype_positive",
+          "u": "24242",
+          "v": "27256"
+        },
+        {
+          "creation_index": 3,
+          "label": "disease_protein",
+          "u": "27256",
+          "v": "574"
+        },
+        {
+          "creation_index": 5,
+          "label": "drug_protein",
+          "u": "574",
+          "v": "14436"
+        }
+      ],
+      "primary_path_max_list_size": 12,
+      "primary_reason_codes": [
+        "WRONG_HOP_COUNT"
+      ],
+      "reason_codes": [
+        "WRONG_HOP_COUNT"
+      ],
+      "submitted_index": 0
+    },
+    {
+      "degree": 370,
+      "degree_percentile": 68.68166394369737,
+      "first_seen_page": 1,
+      "h1": 1,
+      "label_a": "OFF_QUESTION",
+      "label_b": "PATH_INVALID",
+      "list_size": 9,
+      "node_id": "14441",
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "label": "disease_phenotype_positive",
+          "u": "24242",
+          "v": "27256"
+        },
+        {
+          "creation_index": 3,
+          "label": "disease_protein",
+          "u": "27256",
+          "v": "574"
+        },
+        {
+          "creation_index": 5,
+          "label": "drug_protein",
+          "u": "574",
+          "v": "14441"
+        }
+      ],
+      "primary_path_max_list_size": 12,
+      "primary_reason_codes": [
+        "WRONG_HOP_COUNT"
+      ],
+      "reason_codes": [
+        "WRONG_HOP_COUNT"
+      ],
+      "submitted_index": 1
+    },
+    {
+      "degree": 125,
+      "degree_percentile": 59.11775794897574,
+      "first_seen_page": 1,
+      "h1": 1,
+      "label_a": "OFF_QUESTION",
+      "label_b": "PATH_INVALID",
+      "list_size": 9,
+      "node_id": "14486",
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "label": "disease_phenotype_positive",
+          "u": "24242",
+          "v": "27256"
+        },
+        {
+          "creation_index": 3,
+          "label": "disease_protein",
+          "u": "27256",
+          "v": "574"
+        },
+        {
+          "creation_index": 5,
+          "label": "drug_protein",
+          "u": "574",
+          "v": "14486"
+        }
+      ],
+      "primary_path_max_list_size": 12,
+      "primary_reason_codes": [
+        "WRONG_HOP_COUNT"
+      ],
+      "reason_codes": [
+        "WRONG_HOP_COUNT"
+      ],
+      "submitted_index": 2
+    },
+    {
+      "degree": 59,
+      "degree_percentile": 55.28465502073646,
+      "first_seen_page": 1,
+      "h1": 1,
+      "label_a": "OFF_QUESTION",
+      "label_b": "PATH_INVALID",
+      "list_size": 9,
+      "node_id": "14631",
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "label": "disease_phenotype_positive",
+          "u": "24242",
+          "v": "27256"
+        },
+        {
+          "creation_index": 3,
+          "label": "disease_protein",
+          "u": "27256",
+          "v": "574"
+        },
+        {
+          "creation_index": 5,
+          "label": "drug_protein",
+          "u": "574",
+          "v": "14631"
+        }
+      ],
+      "primary_path_max_list_size": 12,
+      "primary_reason_codes": [
+        "WRONG_HOP_COUNT"
+      ],
+      "reason_codes": [
+        "WRONG_HOP_COUNT"
+      ],
+      "submitted_index": 3
+    },
+    {
+      "degree": 547,
+      "degree_percentile": 72.01206484856102,
+      "first_seen_page": 1,
+      "h1": 1,
+      "label_a": "OFF_QUESTION",
+      "label_b": "PATH_INVALID",
+      "list_size": 9,
+      "node_id": "15135",
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "label": "disease_phenotype_positive",
+          "u": "24242",
+          "v": "27256"
+        },
+        {
+          "creation_index": 3,
+          "label": "disease_protein",
+          "u": "27256",
+          "v": "574"
+        },
+        {
+          "creation_index": 5,
+          "label": "drug_protein",
+          "u": "574",
+          "v": "15135"
+        }
+      ],
+      "primary_path_max_list_size": 12,
+      "primary_reason_codes": [
+        "WRONG_HOP_COUNT"
+      ],
+      "reason_codes": [
+        "WRONG_HOP_COUNT"
+      ],
+      "submitted_index": 4
+    },
+    {
+      "degree": 965,
+      "degree_percentile": 85.68555988437853,
+      "first_seen_page": 1,
+      "h1": 1,
+      "label_a": "OFF_QUESTION",
+      "label_b": "PATH_INVALID",
+      "list_size": 9,
+      "node_id": "17347",
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "label": "disease_phenotype_positive",
+          "u": "24242",
+          "v": "27256"
+        },
+        {
+          "creation_index": 3,
+          "label": "disease_protein",
+          "u": "27256",
+          "v": "574"
+        },
+        {
+          "creation_index": 5,
+          "label": "drug_protein",
+          "u": "574",
+          "v": "17347"
+        }
+      ],
+      "primary_path_max_list_size": 12,
+      "primary_reason_codes": [
+        "WRONG_HOP_COUNT"
+      ],
+      "reason_codes": [
+        "WRONG_HOP_COUNT"
+      ],
+      "submitted_index": 5
+    },
+    {
+      "degree": 2,
+      "degree_percentile": 40.9576473545306,
+      "first_seen_page": 1,
+      "h1": 1,
+      "label_a": "OFF_QUESTION",
+      "label_b": "PATH_INVALID",
+      "list_size": 9,
+      "node_id": "17348",
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "label": "disease_phenotype_positive",
+          "u": "24242",
+          "v": "27256"
+        },
+        {
+          "creation_index": 3,
+          "label": "disease_protein",
+          "u": "27256",
+          "v": "574"
+        },
+        {
+          "creation_index": 5,
+          "label": "drug_protein",
+          "u": "574",
+          "v": "17348"
+        }
+      ],
+      "primary_path_max_list_size": 12,
+      "primary_reason_codes": [
+        "WRONG_HOP_COUNT"
+      ],
+      "reason_codes": [
+        "WRONG_HOP_COUNT"
+      ],
+      "submitted_index": 6
+    },
+    {
+      "degree": 1,
+      "degree_percentile": 34.447656151816005,
+      "first_seen_page": 1,
+      "h1": 1,
+      "label_a": "OFF_QUESTION",
+      "label_b": "PATH_INVALID",
+      "list_size": 9,
+      "node_id": "17349",
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "label": "disease_phenotype_positive",
+          "u": "24242",
+          "v": "27256"
+        },
+        {
+          "creation_index": 3,
+          "label": "disease_protein",
+          "u": "27256",
+          "v": "574"
+        },
+        {
+          "creation_index": 5,
+          "label": "drug_protein",
+          "u": "574",
+          "v": "17349"
+        }
+      ],
+      "primary_path_max_list_size": 12,
+      "primary_reason_codes": [
+        "WRONG_HOP_COUNT"
+      ],
+      "reason_codes": [
+        "WRONG_HOP_COUNT"
+      ],
+      "submitted_index": 7
+    },
+    {
+      "degree": 2,
+      "degree_percentile": 40.9576473545306,
+      "first_seen_page": 1,
+      "h1": 1,
+      "label_a": "OFF_QUESTION",
+      "label_b": "PATH_INVALID",
+      "list_size": 9,
+      "node_id": "17350",
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "label": "disease_phenotype_positive",
+          "u": "24242",
+          "v": "27256"
+        },
+        {
+          "creation_index": 3,
+          "label": "disease_protein",
+          "u": "27256",
+          "v": "574"
+        },
+        {
+          "creation_index": 5,
+          "label": "drug_protein",
+          "u": "574",
+          "v": "17350"
+        }
+      ],
+      "primary_path_max_list_size": 12,
+      "primary_reason_codes": [
+        "WRONG_HOP_COUNT"
+      ],
+      "reason_codes": [
+        "WRONG_HOP_COUNT"
+      ],
+      "submitted_index": 8
+    },
+    {
+      "degree": 916,
+      "degree_percentile": 84.47907502827698,
+      "first_seen_page": 1,
+      "h1": 1,
+      "label_a": "OFF_QUESTION",
+      "label_b": "PATH_INVALID",
+      "list_size": 24,
+      "node_id": "14136",
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "label": "disease_phenotype_positive",
+          "u": "24242",
+          "v": "27256"
+        },
+        {
+          "creation_index": 3,
+          "label": "disease_protein",
+          "u": "27256",
+          "v": "1049"
+        },
+        {
+          "creation_index": 7,
+          "label": "drug_protein",
+          "u": "1049",
+          "v": "14136"
+        }
+      ],
+      "primary_path_max_list_size": 24,
+      "primary_reason_codes": [
+        "WRONG_HOP_COUNT"
+      ],
+      "reason_codes": [
+        "WRONG_HOP_COUNT"
+      ],
+      "submitted_index": 9
+    },
+    {
+      "degree": 2131,
+      "degree_percentile": 99.52243307779314,
+      "first_seen_page": 1,
+      "h1": 1,
+      "label_a": "OFF_QUESTION",
+      "label_b": "PATH_INVALID",
+      "list_size": 24,
+      "node_id": "14141",
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "label": "disease_phenotype_positive",
+          "u": "24242",
+          "v": "27256"
+        },
+        {
+          "creation_index": 3,
+          "label": "disease_protein",
+          "u": "27256",
+          "v": "1049"
+        },
+        {
+          "creation_index": 7,
+          "label": "drug_protein",
+          "u": "1049",
+          "v": "14141"
+        }
+      ],
+      "primary_path_max_list_size": 24,
+      "primary_reason_codes": [
+        "WRONG_HOP_COUNT"
+      ],
+      "reason_codes": [
+        "WRONG_HOP_COUNT"
+      ],
+      "submitted_index": 10
+    },
+    {
+      "degree": 1854,
+      "degree_percentile": 98.54216413221063,
+      "first_seen_page": 1,
+      "h1": 1,
+      "label_a": "OFF_QUESTION",
+      "label_b": "PATH_INVALID",
+      "list_size": 24,
+      "node_id": "14144",
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "label": "disease_phenotype_positive",
+          "u": "24242",
+          "v": "27256"
+        },
+        {
+          "creation_index": 3,
+          "label": "disease_protein",
+          "u": "27256",
+          "v": "1049"
+        },
+        {
+          "creation_index": 7,
+          "label": "drug_protein",
+          "u": "1049",
+          "v": "14144"
+        }
+      ],
+      "primary_path_max_list_size": 24,
+      "primary_reason_codes": [
+        "WRONG_HOP_COUNT"
+      ],
+      "reason_codes": [
+        "WRONG_HOP_COUNT"
+      ],
+      "submitted_index": 11
+    },
+    {
+      "degree": 1357,
+      "degree_percentile": 92.74852331280633,
+      "first_seen_page": 1,
+      "h1": 1,
+      "label_a": "OFF_QUESTION",
+      "label_b": "PATH_INVALID",
+      "list_size": 24,
+      "node_id": "14168",
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "label": "disease_phenotype_positive",
+          "u": "24242",
+          "v": "27256"
+        },
+        {
+          "creation_index": 3,
+          "label": "disease_protein",
+          "u": "27256",
+          "v": "1049"
+        },
+        {
+          "creation_index": 7,
+          "label": "drug_protein",
+          "u": "1049",
+          "v": "14168"
+        }
+      ],
+      "primary_path_max_list_size": 24,
+      "primary_reason_codes": [
+        "WRONG_HOP_COUNT"
+      ],
+      "reason_codes": [
+        "WRONG_HOP_COUNT"
+      ],
+      "submitted_index": 12
+    },
+    {
+      "degree": 777,
+      "degree_percentile": 79.80394621088351,
+      "first_seen_page": 1,
+      "h1": 1,
+      "label_a": "OFF_QUESTION",
+      "label_b": "PATH_INVALID",
+      "list_size": 24,
+      "node_id": "14300",
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "label": "disease_phenotype_positive",
+          "u": "24242",
+          "v": "27256"
+        },
+        {
+          "creation_index": 3,
+          "label": "disease_protein",
+          "u": "27256",
+          "v": "1049"
+        },
+        {
+          "creation_index": 7,
+          "label": "drug_protein",
+          "u": "1049",
+          "v": "14300"
+        }
+      ],
+      "primary_path_max_list_size": 24,
+      "primary_reason_codes": [
+        "WRONG_HOP_COUNT"
+      ],
+      "reason_codes": [
+        "WRONG_HOP_COUNT"
+      ],
+      "submitted_index": 13
+    },
+    {
+      "degree": 1875,
+      "degree_percentile": 98.69297473922333,
+      "first_seen_page": 1,
+      "h1": 1,
+      "label_a": "OFF_QUESTION",
+      "label_b": "PATH_INVALID",
+      "list_size": 24,
+      "node_id": "14302",
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "label": "disease_phenotype_positive",
+          "u": "24242",
+          "v": "27256"
+        },
+        {
+          "creation_index": 3,
+          "label": "disease_protein",
+          "u": "27256",
+          "v": "1049"
+        },
+        {
+          "creation_index": 7,
+          "label": "drug_protein",
+          "u": "1049",
+          "v": "14302"
+        }
+      ],
+      "primary_path_max_list_size": 24,
+      "primary_reason_codes": [
+        "WRONG_HOP_COUNT"
+      ],
+      "reason_codes": [
+        "WRONG_HOP_COUNT"
+      ],
+      "submitted_index": 14
+    },
+    {
+      "degree": 1543,
+      "degree_percentile": 95.85270830715093,
+      "first_seen_page": 1,
+      "h1": 1,
+      "label_a": "OFF_QUESTION",
+      "label_b": "PATH_INVALID",
+      "list_size": 24,
+      "node_id": "14368",
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "label": "disease_phenotype_positive",
+          "u": "24242",
+          "v": "27256"
+        },
+        {
+          "creation_index": 3,
+          "label": "disease_protein",
+          "u": "27256",
+          "v": "1049"
+        },
+        {
+          "creation_index": 7,
+          "label": "drug_protein",
+          "u": "1049",
+          "v": "14368"
+        }
+      ],
+      "primary_path_max_list_size": 24,
+      "primary_reason_codes": [
+        "WRONG_HOP_COUNT"
+      ],
+      "reason_codes": [
+        "WRONG_HOP_COUNT"
+      ],
+      "submitted_index": 15
+    },
+    {
+      "degree": 1232,
+      "degree_percentile": 90.71258011813498,
+      "first_seen_page": 1,
+      "h1": 1,
+      "label_a": "OFF_QUESTION",
+      "label_b": "PATH_INVALID",
+      "list_size": 24,
+      "node_id": "14422",
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "label": "disease_phenotype_positive",
+          "u": "24242",
+          "v": "27256"
+        },
+        {
+          "creation_index": 3,
+          "label": "disease_protein",
+          "u": "27256",
+          "v": "1049"
+        },
+        {
+          "creation_index": 7,
+          "label": "drug_protein",
+          "u": "1049",
+          "v": "14422"
+        }
+      ],
+      "primary_path_max_list_size": 24,
+      "primary_reason_codes": [
+        "WRONG_HOP_COUNT"
+      ],
+      "reason_codes": [
+        "WRONG_HOP_COUNT"
+      ],
+      "submitted_index": 16
+    },
+    {
+      "degree": 46,
+      "degree_percentile": 54.50546688450421,
+      "first_seen_page": 1,
+      "h1": 1,
+      "label_a": "OFF_QUESTION",
+      "label_b": "PATH_INVALID",
+      "list_size": 24,
+      "node_id": "14439",
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "label": "disease_phenotype_positive",
+          "u": "24242",
+          "v": "27256"
+        },
+        {
+          "creation_index": 3,
+          "label": "disease_protein",
+          "u": "27256",
+          "v": "1049"
+        },
+        {
+          "creation_index": 7,
+          "label": "drug_protein",
+          "u": "1049",
+          "v": "14439"
+        }
+      ],
+      "primary_path_max_list_size": 24,
+      "primary_reason_codes": [
+        "WRONG_HOP_COUNT"
+      ],
+      "reason_codes": [
+        "WRONG_HOP_COUNT"
+      ],
+      "submitted_index": 17
+    },
+    {
+      "degree": 1593,
+      "degree_percentile": 96.36797788111096,
+      "first_seen_page": 1,
+      "h1": 1,
+      "label_a": "OFF_QUESTION",
+      "label_b": "PATH_INVALID",
+      "list_size": 24,
+      "node_id": "14537",
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "label": "disease_phenotype_positive",
+          "u": "24242",
+          "v": "27256"
+        },
+        {
+          "creation_index": 3,
+          "label": "disease_protein",
+          "u": "27256",
+          "v": "1049"
+        },
+        {
+          "creation_index": 7,
+          "label": "drug_protein",
+          "u": "1049",
+          "v": "14537"
+        }
+      ],
+      "primary_path_max_list_size": 24,
+      "primary_reason_codes": [
+        "WRONG_HOP_COUNT"
+      ],
+      "reason_codes": [
+        "WRONG_HOP_COUNT"
+      ],
+      "submitted_index": 18
+    },
+    {
+      "degree": 257,
+      "degree_percentile": 62.46072640442378,
+      "first_seen_page": 1,
+      "h1": 1,
+      "label_a": "OFF_QUESTION",
+      "label_b": "PATH_INVALID",
+      "list_size": 24,
+      "node_id": "14560",
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "label": "disease_phenotype_positive",
+          "u": "24242",
+          "v": "27256"
+        },
+        {
+          "creation_index": 3,
+          "label": "disease_protein",
+          "u": "27256",
+          "v": "1049"
+        },
+        {
+          "creation_index": 7,
+          "label": "drug_protein",
+          "u": "1049",
+          "v": "14560"
+        }
+      ],
+      "primary_path_max_list_size": 24,
+      "primary_reason_codes": [
+        "WRONG_HOP_COUNT"
+      ],
+      "reason_codes": [
+        "WRONG_HOP_COUNT"
+      ],
+      "submitted_index": 19
+    },
+    {
+      "degree": 1593,
+      "degree_percentile": 96.36797788111096,
+      "first_seen_page": 1,
+      "h1": 1,
+      "label_a": "OFF_QUESTION",
+      "label_b": "PATH_INVALID",
+      "list_size": 24,
+      "node_id": "14731",
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "label": "disease_phenotype_positive",
+          "u": "24242",
+          "v": "27256"
+        },
+        {
+          "creation_index": 3,
+          "label": "disease_protein",
+          "u": "27256",
+          "v": "1049"
+        },
+        {
+          "creation_index": 7,
+          "label": "drug_protein",
+          "u": "1049",
+          "v": "14731"
+        }
+      ],
+      "primary_path_max_list_size": 24,
+      "primary_reason_codes": [
+        "WRONG_HOP_COUNT"
+      ],
+      "reason_codes": [
+        "WRONG_HOP_COUNT"
+      ],
+      "submitted_index": 20
+    },
+    {
+      "degree": 1191,
+      "degree_percentile": 90.15960789242176,
+      "first_seen_page": 1,
+      "h1": 1,
+      "label_a": "OFF_QUESTION",
+      "label_b": "PATH_INVALID",
+      "list_size": 24,
+      "node_id": "15039",
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "label": "disease_phenotype_positive",
+          "u": "24242",
+          "v": "27256"
+        },
+        {
+          "creation_index": 3,
+          "label": "disease_protein",
+          "u": "27256",
+          "v": "1049"
+        },
+        {
+          "creation_index": 7,
+          "label": "drug_protein",
+          "u": "1049",
+          "v": "15039"
+        }
+      ],
+      "primary_path_max_list_size": 24,
+      "primary_reason_codes": [
+        "WRONG_HOP_COUNT"
+      ],
+      "reason_codes": [
+        "WRONG_HOP_COUNT"
+      ],
+      "submitted_index": 21
+    },
+    {
+      "degree": 1357,
+      "degree_percentile": 92.74852331280633,
+      "first_seen_page": 1,
+      "h1": 1,
+      "label_a": "OFF_QUESTION",
+      "label_b": "PATH_INVALID",
+      "list_size": 24,
+      "node_id": "15237",
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "label": "disease_phenotype_positive",
+          "u": "24242",
+          "v": "27256"
+        },
+        {
+          "creation_index": 3,
+          "label": "disease_protein",
+          "u": "27256",
+          "v": "1049"
+        },
+        {
+          "creation_index": 7,
+          "label": "drug_protein",
+          "u": "1049",
+          "v": "15237"
+        }
+      ],
+      "primary_path_max_list_size": 24,
+      "primary_reason_codes": [
+        "WRONG_HOP_COUNT"
+      ],
+      "reason_codes": [
+        "WRONG_HOP_COUNT"
+      ],
+      "submitted_index": 22
+    },
+    {
+      "degree": 1264,
+      "degree_percentile": 91.227849692095,
+      "first_seen_page": 1,
+      "h1": 1,
+      "label_a": "OFF_QUESTION",
+      "label_b": "PATH_INVALID",
+      "list_size": 24,
+      "node_id": "15440",
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "label": "disease_phenotype_positive",
+          "u": "24242",
+          "v": "27256"
+        },
+        {
+          "creation_index": 3,
+          "label": "disease_protein",
+          "u": "27256",
+          "v": "1049"
+        },
+        {
+          "creation_index": 7,
+          "label": "drug_protein",
+          "u": "1049",
+          "v": "15440"
+        }
+      ],
+      "primary_path_max_list_size": 24,
+      "primary_reason_codes": [
+        "WRONG_HOP_COUNT"
+      ],
+      "reason_codes": [
+        "WRONG_HOP_COUNT"
+      ],
+      "submitted_index": 23
+    },
+    {
+      "degree": 662,
+      "degree_percentile": 74.83976373004901,
+      "first_seen_page": 1,
+      "h1": 1,
+      "label_a": "OFF_QUESTION",
+      "label_b": "PATH_INVALID",
+      "list_size": 24,
+      "node_id": "15468",
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "label": "disease_phenotype_positive",
+          "u": "24242",
+          "v": "27256"
+        },
+        {
+          "creation_index": 3,
+          "label": "disease_protein",
+          "u": "27256",
+          "v": "1049"
+        },
+        {
+          "creation_index": 7,
+          "label": "drug_protein",
+          "u": "1049",
+          "v": "15468"
+        }
+      ],
+      "primary_path_max_list_size": 24,
+      "primary_reason_codes": [
+        "WRONG_HOP_COUNT"
+      ],
+      "reason_codes": [
+        "WRONG_HOP_COUNT"
+      ],
+      "submitted_index": 24
+    },
+    {
+      "degree": 2005,
+      "degree_percentile": 99.23337941435214,
+      "first_seen_page": 1,
+      "h1": 1,
+      "label_a": "OFF_QUESTION",
+      "label_b": "PATH_INVALID",
+      "list_size": 24,
+      "node_id": "15616",
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "label": "disease_phenotype_positive",
+          "u": "24242",
+          "v": "27256"
+        },
+        {
+          "creation_index": 3,
+          "label": "disease_protein",
+          "u": "27256",
+          "v": "1049"
+        },
+        {
+          "creation_index": 7,
+          "label": "drug_protein",
+          "u": "1049",
+          "v": "15616"
+        }
+      ],
+      "primary_path_max_list_size": 24,
+      "primary_reason_codes": [
+        "WRONG_HOP_COUNT"
+      ],
+      "reason_codes": [
+        "WRONG_HOP_COUNT"
+      ],
+      "submitted_index": 25
+    },
+    {
+      "degree": 848,
+      "degree_percentile": 82.02840266432072,
+      "first_seen_page": 1,
+      "h1": 1,
+      "label_a": "OFF_QUESTION",
+      "label_b": "PATH_INVALID",
+      "list_size": 24,
+      "node_id": "15630",
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "label": "disease_phenotype_positive",
+          "u": "24242",
+          "v": "27256"
+        },
+        {
+          "creation_index": 3,
+          "label": "disease_protein",
+          "u": "27256",
+          "v": "1049"
+        },
+        {
+          "creation_index": 7,
+          "label": "drug_protein",
+          "u": "1049",
+          "v": "15630"
+        }
+      ],
+      "primary_path_max_list_size": 24,
+      "primary_reason_codes": [
+        "WRONG_HOP_COUNT"
+      ],
+      "reason_codes": [
+        "WRONG_HOP_COUNT"
+      ],
+      "submitted_index": 26
+    },
+    {
+      "degree": 204,
+      "degree_percentile": 61.78207867286666,
+      "first_seen_page": 1,
+      "h1": 1,
+      "label_a": "OFF_QUESTION",
+      "label_b": "PATH_INVALID",
+      "list_size": 24,
+      "node_id": "15719",
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "label": "disease_phenotype_positive",
+          "u": "24242",
+          "v": "27256"
+        },
+        {
+          "creation_index": 3,
+          "label": "disease_protein",
+          "u": "27256",
+          "v": "1049"
+        },
+        {
+          "creation_index": 7,
+          "label": "drug_protein",
+          "u": "1049",
+          "v": "15719"
+        }
+      ],
+      "primary_path_max_list_size": 24,
+      "primary_reason_codes": [
+        "WRONG_HOP_COUNT"
+      ],
+      "reason_codes": [
+        "WRONG_HOP_COUNT"
+      ],
+      "submitted_index": 27
+    },
+    {
+      "degree": 708,
+      "degree_percentile": 75.80746512504713,
+      "first_seen_page": 1,
+      "h1": 1,
+      "label_a": "OFF_QUESTION",
+      "label_b": "PATH_INVALID",
+      "list_size": 24,
+      "node_id": "15728",
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "label": "disease_phenotype_positive",
+          "u": "24242",
+          "v": "27256"
+        },
+        {
+          "creation_index": 3,
+          "label": "disease_protein",
+          "u": "27256",
+          "v": "1049"
+        },
+        {
+          "creation_index": 7,
+          "label": "drug_protein",
+          "u": "1049",
+          "v": "15728"
+        }
+      ],
+      "primary_path_max_list_size": 24,
+      "primary_reason_codes": [
+        "WRONG_HOP_COUNT"
+      ],
+      "reason_codes": [
+        "WRONG_HOP_COUNT"
+      ],
+      "submitted_index": 28
+    },
+    {
+      "degree": 1604,
+      "degree_percentile": 96.51878848812366,
+      "first_seen_page": 1,
+      "h1": 1,
+      "label_a": "OFF_QUESTION",
+      "label_b": "PATH_INVALID",
+      "list_size": 24,
+      "node_id": "20169",
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "label": "disease_phenotype_positive",
+          "u": "24242",
+          "v": "27256"
+        },
+        {
+          "creation_index": 3,
+          "label": "disease_protein",
+          "u": "27256",
+          "v": "1049"
+        },
+        {
+          "creation_index": 7,
+          "label": "drug_protein",
+          "u": "1049",
+          "v": "20169"
+        }
+      ],
+      "primary_path_max_list_size": 24,
+      "primary_reason_codes": [
+        "WRONG_HOP_COUNT"
+      ],
+      "reason_codes": [
+        "WRONG_HOP_COUNT"
+      ],
+      "submitted_index": 29
+    },
+    {
+      "degree": 2059,
+      "degree_percentile": 99.2836496166897,
+      "first_seen_page": 1,
+      "h1": 1,
+      "label_a": "OFF_QUESTION",
+      "label_b": "PATH_INVALID",
+      "list_size": 5,
+      "node_id": "14061",
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "label": "disease_phenotype_positive",
+          "u": "24242",
+          "v": "27256"
+        },
+        {
+          "creation_index": 3,
+          "label": "disease_protein",
+          "u": "27256",
+          "v": "3294"
+        },
+        {
+          "creation_index": 9,
+          "label": "drug_protein",
+          "u": "3294",
+          "v": "14061"
+        }
+      ],
+      "primary_path_max_list_size": 12,
+      "primary_reason_codes": [
+        "WRONG_HOP_COUNT"
+      ],
+      "reason_codes": [
+        "WRONG_HOP_COUNT"
+      ],
+      "submitted_index": 30
+    },
+    {
+      "degree": 2541,
+      "degree_percentile": 99.96229734824684,
+      "first_seen_page": 1,
+      "h1": 1,
+      "label_a": "OFF_QUESTION",
+      "label_b": "PATH_INVALID",
+      "list_size": 5,
+      "node_id": "14156",
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "label": "disease_phenotype_positive",
+          "u": "24242",
+          "v": "27256"
+        },
+        {
+          "creation_index": 3,
+          "label": "disease_protein",
+          "u": "27256",
+          "v": "3294"
+        },
+        {
+          "creation_index": 9,
+          "label": "drug_protein",
+          "u": "3294",
+          "v": "14156"
+        }
+      ],
+      "primary_path_max_list_size": 12,
+      "primary_reason_codes": [
+        "WRONG_HOP_COUNT"
+      ],
+      "reason_codes": [
+        "WRONG_HOP_COUNT"
+      ],
+      "submitted_index": 31
+    },
+    {
+      "degree": 1510,
+      "degree_percentile": 95.42541158728164,
+      "first_seen_page": 1,
+      "h1": 1,
+      "label_a": "OFF_QUESTION",
+      "label_b": "PATH_INVALID",
+      "list_size": 5,
+      "node_id": "14509",
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "label": "disease_phenotype_positive",
+          "u": "24242",
+          "v": "27256"
+        },
+        {
+          "creation_index": 3,
+          "label": "disease_protein",
+          "u": "27256",
+          "v": "3294"
+        },
+        {
+          "creation_index": 9,
+          "label": "drug_protein",
+          "u": "3294",
+          "v": "14509"
+        }
+      ],
+      "primary_path_max_list_size": 12,
+      "primary_reason_codes": [
+        "WRONG_HOP_COUNT"
+      ],
+      "reason_codes": [
+        "WRONG_HOP_COUNT"
+      ],
+      "submitted_index": 32
+    },
+    {
+      "degree": 1110,
+      "degree_percentile": 88.72690712580118,
+      "first_seen_page": 1,
+      "h1": 1,
+      "label_a": "OFF_QUESTION",
+      "label_b": "PATH_INVALID",
+      "list_size": 6,
+      "node_id": "14709",
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "label": "disease_phenotype_positive",
+          "u": "24242",
+          "v": "27256"
+        },
+        {
+          "creation_index": 3,
+          "label": "disease_protein",
+          "u": "27256",
+          "v": "13872"
+        },
+        {
+          "creation_index": 25,
+          "label": "drug_protein",
+          "u": "13872",
+          "v": "14709"
+        }
+      ],
+      "primary_path_max_list_size": 12,
+      "primary_reason_codes": [
+        "WRONG_HOP_COUNT"
+      ],
+      "reason_codes": [
+        "WRONG_HOP_COUNT"
+      ],
+      "submitted_index": 33
+    },
+    {
+      "degree": 1683,
+      "degree_percentile": 97.23513887143396,
+      "first_seen_page": 1,
+      "h1": 1,
+      "label_a": "OFF_QUESTION",
+      "label_b": "PATH_INVALID",
+      "list_size": 5,
+      "node_id": "15844",
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "label": "disease_phenotype_positive",
+          "u": "24242",
+          "v": "27256"
+        },
+        {
+          "creation_index": 3,
+          "label": "disease_protein",
+          "u": "27256",
+          "v": "3294"
+        },
+        {
+          "creation_index": 9,
+          "label": "drug_protein",
+          "u": "3294",
+          "v": "15844"
+        }
+      ],
+      "primary_path_max_list_size": 12,
+      "primary_reason_codes": [
+        "WRONG_HOP_COUNT"
+      ],
+      "reason_codes": [
+        "WRONG_HOP_COUNT"
+      ],
+      "submitted_index": 34
+    },
+    {
+      "degree": 5,
+      "degree_percentile": 46.77642327510368,
+      "first_seen_page": 1,
+      "h1": 1,
+      "label_a": "OFF_QUESTION",
+      "label_b": "PATH_INVALID",
+      "list_size": 5,
+      "node_id": "17544",
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "label": "disease_phenotype_positive",
+          "u": "24242",
+          "v": "27256"
+        },
+        {
+          "creation_index": 3,
+          "label": "disease_protein",
+          "u": "27256",
+          "v": "3294"
+        },
+        {
+          "creation_index": 9,
+          "label": "drug_protein",
+          "u": "3294",
+          "v": "17544"
+        }
+      ],
+      "primary_path_max_list_size": 12,
+      "primary_reason_codes": [
+        "WRONG_HOP_COUNT"
+      ],
+      "reason_codes": [
+        "WRONG_HOP_COUNT"
+      ],
+      "submitted_index": 35
+    },
+    {
+      "degree": 1762,
+      "degree_percentile": 97.97662435591303,
+      "first_seen_page": 1,
+      "h1": 1,
+      "label_a": "OFF_QUESTION",
+      "label_b": "PATH_INVALID",
+      "list_size": 75,
+      "node_id": "14137",
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "label": "disease_phenotype_positive",
+          "u": "24242",
+          "v": "27256"
+        },
+        {
+          "creation_index": 3,
+          "label": "disease_protein",
+          "u": "27256",
+          "v": "6963"
+        },
+        {
+          "creation_index": 11,
+          "label": "drug_protein",
+          "u": "6963",
+          "v": "14137"
+        }
+      ],
+      "primary_path_max_list_size": 75,
+      "primary_reason_codes": [
+        "WRONG_HOP_COUNT"
+      ],
+      "reason_codes": [
+        "WRONG_HOP_COUNT"
+      ],
+      "submitted_index": 36
+    },
+    {
+      "degree": 2386,
+      "degree_percentile": 99.83662184240292,
+      "first_seen_page": 1,
+      "h1": 1,
+      "label_a": "OFF_QUESTION",
+      "label_b": "PATH_INVALID",
+      "list_size": 75,
+      "node_id": "14192",
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "label": "disease_phenotype_positive",
+          "u": "24242",
+          "v": "27256"
+        },
+        {
+          "creation_index": 3,
+          "label": "disease_protein",
+          "u": "27256",
+          "v": "6963"
+        },
+        {
+          "creation_index": 11,
+          "label": "drug_protein",
+          "u": "6963",
+          "v": "14192"
+        }
+      ],
+      "primary_path_max_list_size": 75,
+      "primary_reason_codes": [
+        "WRONG_HOP_COUNT"
+      ],
+      "reason_codes": [
+        "WRONG_HOP_COUNT"
+      ],
+      "submitted_index": 37
+    },
+    {
+      "degree": 1597,
+      "degree_percentile": 96.41824808344853,
+      "first_seen_page": 1,
+      "h1": 1,
+      "label_a": "OFF_QUESTION",
+      "label_b": "PATH_INVALID",
+      "list_size": 75,
+      "node_id": "14203",
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "label": "disease_phenotype_positive",
+          "u": "24242",
+          "v": "27256"
+        },
+        {
+          "creation_index": 3,
+          "label": "disease_protein",
+          "u": "27256",
+          "v": "6963"
+        },
+        {
+          "creation_index": 11,
+          "label": "drug_protein",
+          "u": "6963",
+          "v": "14203"
+        }
+      ],
+      "primary_path_max_list_size": 75,
+      "primary_reason_codes": [
+        "WRONG_HOP_COUNT"
+      ],
+      "reason_codes": [
+        "WRONG_HOP_COUNT"
+      ],
+      "submitted_index": 38
+    },
+    {
+      "degree": 1645,
+      "degree_percentile": 96.95865275857736,
+      "first_seen_page": 1,
+      "h1": 1,
+      "label_a": "OFF_QUESTION",
+      "label_b": "PATH_INVALID",
+      "list_size": 75,
+      "node_id": "14228",
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "label": "disease_phenotype_positive",
+          "u": "24242",
+          "v": "27256"
+        },
+        {
+          "creation_index": 3,
+          "label": "disease_protein",
+          "u": "27256",
+          "v": "6963"
+        },
+        {
+          "creation_index": 11,
+          "label": "drug_protein",
+          "u": "6963",
+          "v": "14228"
+        }
+      ],
+      "primary_path_max_list_size": 75,
+      "primary_reason_codes": [
+        "WRONG_HOP_COUNT"
+      ],
+      "reason_codes": [
+        "WRONG_HOP_COUNT"
+      ],
+      "submitted_index": 39
+    },
+    {
+      "degree": 1921,
+      "degree_percentile": 98.85635289682041,
+      "first_seen_page": 1,
+      "h1": 1,
+      "label_a": "OFF_QUESTION",
+      "label_b": "PATH_INVALID",
+      "list_size": 75,
+      "node_id": "14244",
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "label": "disease_phenotype_positive",
+          "u": "24242",
+          "v": "27256"
+        },
+        {
+          "creation_index": 3,
+          "label": "disease_protein",
+          "u": "27256",
+          "v": "6963"
+        },
+        {
+          "creation_index": 11,
+          "label": "drug_protein",
+          "u": "6963",
+          "v": "14244"
+        }
+      ],
+      "primary_path_max_list_size": 75,
+      "primary_reason_codes": [
+        "WRONG_HOP_COUNT"
+      ],
+      "reason_codes": [
+        "WRONG_HOP_COUNT"
+      ],
+      "submitted_index": 40
+    },
+    {
+      "degree": 1986,
+      "degree_percentile": 99.17054166143019,
+      "first_seen_page": 1,
+      "h1": 1,
+      "label_a": "OFF_QUESTION",
+      "label_b": "PATH_INVALID",
+      "list_size": 75,
+      "node_id": "14245",
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "label": "disease_phenotype_positive",
+          "u": "24242",
+          "v": "27256"
+        },
+        {
+          "creation_index": 3,
+          "label": "disease_protein",
+          "u": "27256",
+          "v": "6963"
+        },
+        {
+          "creation_index": 11,
+          "label": "drug_protein",
+          "u": "6963",
+          "v": "14245"
+        }
+      ],
+      "primary_path_max_list_size": 75,
+      "primary_reason_codes": [
+        "WRONG_HOP_COUNT"
+      ],
+      "reason_codes": [
+        "WRONG_HOP_COUNT"
+      ],
+      "submitted_index": 41
+    },
+    {
+      "degree": 1475,
+      "degree_percentile": 94.96041221565918,
+      "first_seen_page": 1,
+      "h1": 1,
+      "label_a": "OFF_QUESTION",
+      "label_b": "PATH_INVALID",
+      "list_size": 75,
+      "node_id": "14246",
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "label": "disease_phenotype_positive",
+          "u": "24242",
+          "v": "27256"
+        },
+        {
+          "creation_index": 3,
+          "label": "disease_protein",
+          "u": "27256",
+          "v": "6963"
+        },
+        {
+          "creation_index": 11,
+          "label": "drug_protein",
+          "u": "6963",
+          "v": "14246"
+        }
+      ],
+      "primary_path_max_list_size": 75,
+      "primary_reason_codes": [
+        "WRONG_HOP_COUNT"
+      ],
+      "reason_codes": [
+        "WRONG_HOP_COUNT"
+      ],
+      "submitted_index": 42
+    },
+    {
+      "degree": 1719,
+      "degree_percentile": 97.64986804071887,
+      "first_seen_page": 1,
+      "h1": 1,
+      "label_a": "OFF_QUESTION",
+      "label_b": "PATH_INVALID",
+      "list_size": 75,
+      "node_id": "14294",
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "label": "disease_phenotype_positive",
+          "u": "24242",
+          "v": "27256"
+        },
+        {
+          "creation_index": 3,
+          "label": "disease_protein",
+          "u": "27256",
+          "v": "6963"
+        },
+        {
+          "creation_index": 11,
+          "label": "drug_protein",
+          "u": "6963",
+          "v": "14294"
+        }
+      ],
+      "primary_path_max_list_size": 75,
+      "primary_reason_codes": [
+        "WRONG_HOP_COUNT"
+      ],
+      "reason_codes": [
+        "WRONG_HOP_COUNT"
+      ],
+      "submitted_index": 43
+    },
+    {
+      "degree": 1479,
+      "degree_percentile": 95.01068241799673,
+      "first_seen_page": 1,
+      "h1": 1,
+      "label_a": "OFF_QUESTION",
+      "label_b": "PATH_INVALID",
+      "list_size": 75,
+      "node_id": "14312",
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "label": "disease_phenotype_positive",
+          "u": "24242",
+          "v": "27256"
+        },
+        {
+          "creation_index": 3,
+          "label": "disease_protein",
+          "u": "27256",
+          "v": "6963"
+        },
+        {
+          "creation_index": 11,
+          "label": "drug_protein",
+          "u": "6963",
+          "v": "14312"
+        }
+      ],
+      "primary_path_max_list_size": 75,
+      "primary_reason_codes": [
+        "WRONG_HOP_COUNT"
+      ],
+      "reason_codes": [
+        "WRONG_HOP_COUNT"
+      ],
+      "submitted_index": 44
+    },
+    {
+      "degree": 1481,
+      "degree_percentile": 95.04838506974991,
+      "first_seen_page": 1,
+      "h1": 1,
+      "label_a": "OFF_QUESTION",
+      "label_b": "PATH_INVALID",
+      "list_size": 75,
+      "node_id": "14315",
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "label": "disease_phenotype_positive",
+          "u": "24242",
+          "v": "27256"
+        },
+        {
+          "creation_index": 3,
+          "label": "disease_protein",
+          "u": "27256",
+          "v": "6963"
+        },
+        {
+          "creation_index": 11,
+          "label": "drug_protein",
+          "u": "6963",
+          "v": "14315"
+        }
+      ],
+      "primary_path_max_list_size": 75,
+      "primary_reason_codes": [
+        "WRONG_HOP_COUNT"
+      ],
+      "reason_codes": [
+        "WRONG_HOP_COUNT"
+      ],
+      "submitted_index": 45
+    },
+    {
+      "degree": 1815,
+      "degree_percentile": 98.34108332286038,
+      "first_seen_page": 1,
+      "h1": 1,
+      "label_a": "OFF_QUESTION",
+      "label_b": "PATH_INVALID",
+      "list_size": 75,
+      "node_id": "14322",
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "label": "disease_phenotype_positive",
+          "u": "24242",
+          "v": "27256"
+        },
+        {
+          "creation_index": 3,
+          "label": "disease_protein",
+          "u": "27256",
+          "v": "6963"
+        },
+        {
+          "creation_index": 11,
+          "label": "drug_protein",
+          "u": "6963",
+          "v": "14322"
+        }
+      ],
+      "primary_path_max_list_size": 75,
+      "primary_reason_codes": [
+        "WRONG_HOP_COUNT"
+      ],
+      "reason_codes": [
+        "WRONG_HOP_COUNT"
+      ],
+      "submitted_index": 46
+    },
+    {
+      "degree": 1528,
+      "degree_percentile": 95.73960035189143,
+      "first_seen_page": 1,
+      "h1": 1,
+      "label_a": "OFF_QUESTION",
+      "label_b": "PATH_INVALID",
+      "list_size": 75,
+      "node_id": "14345",
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "label": "disease_phenotype_positive",
+          "u": "24242",
+          "v": "27256"
+        },
+        {
+          "creation_index": 3,
+          "label": "disease_protein",
+          "u": "27256",
+          "v": "6963"
+        },
+        {
+          "creation_index": 11,
+          "label": "drug_protein",
+          "u": "6963",
+          "v": "14345"
+        }
+      ],
+      "primary_path_max_list_size": 75,
+      "primary_reason_codes": [
+        "WRONG_HOP_COUNT"
+      ],
+      "reason_codes": [
+        "WRONG_HOP_COUNT"
+      ],
+      "submitted_index": 47
+    },
+    {
+      "degree": 799,
+      "degree_percentile": 80.59570189770014,
+      "first_seen_page": 1,
+      "h1": 1,
+      "label_a": "OFF_QUESTION",
+      "label_b": "PATH_INVALID",
+      "list_size": 75,
+      "node_id": "14464",
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "label": "disease_phenotype_positive",
+          "u": "24242",
+          "v": "27256"
+        },
+        {
+          "creation_index": 3,
+          "label": "disease_protein",
+          "u": "27256",
+          "v": "6963"
+        },
+        {
+          "creation_index": 11,
+          "label": "drug_protein",
+          "u": "6963",
+          "v": "14464"
+        }
+      ],
+      "primary_path_max_list_size": 75,
+      "primary_reason_codes": [
+        "WRONG_HOP_COUNT"
+      ],
+      "reason_codes": [
+        "WRONG_HOP_COUNT"
+      ],
+      "submitted_index": 48
+    },
+    {
+      "degree": 1876,
+      "degree_percentile": 98.70554228980771,
+      "first_seen_page": 1,
+      "h1": 1,
+      "label_a": "OFF_QUESTION",
+      "label_b": "PATH_INVALID",
+      "list_size": 75,
+      "node_id": "14540",
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "label": "disease_phenotype_positive",
+          "u": "24242",
+          "v": "27256"
+        },
+        {
+          "creation_index": 3,
+          "label": "disease_protein",
+          "u": "27256",
+          "v": "6963"
+        },
+        {
+          "creation_index": 11,
+          "label": "drug_protein",
+          "u": "6963",
+          "v": "14540"
+        }
+      ],
+      "primary_path_max_list_size": 75,
+      "primary_reason_codes": [
+        "WRONG_HOP_COUNT"
+      ],
+      "reason_codes": [
+        "WRONG_HOP_COUNT"
+      ],
+      "submitted_index": 49
+    },
+    {
+      "degree": 1621,
+      "degree_percentile": 96.7450043986427,
+      "first_seen_page": 1,
+      "h1": 1,
+      "label_a": "OFF_QUESTION",
+      "label_b": "PATH_INVALID",
+      "list_size": 75,
+      "node_id": "14558",
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "label": "disease_phenotype_positive",
+          "u": "24242",
+          "v": "27256"
+        },
+        {
+          "creation_index": 3,
+          "label": "disease_protein",
+          "u": "27256",
+          "v": "6963"
+        },
+        {
+          "creation_index": 11,
+          "label": "drug_protein",
+          "u": "6963",
+          "v": "14558"
+        }
+      ],
+      "primary_path_max_list_size": 75,
+      "primary_reason_codes": [
+        "WRONG_HOP_COUNT"
+      ],
+      "reason_codes": [
+        "WRONG_HOP_COUNT"
+      ],
+      "submitted_index": 50
+    },
+    {
+      "degree": 1613,
+      "degree_percentile": 96.6067613422144,
+      "first_seen_page": 1,
+      "h1": 1,
+      "label_a": "OFF_QUESTION",
+      "label_b": "PATH_INVALID",
+      "list_size": 75,
+      "node_id": "14587",
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "label": "disease_phenotype_positive",
+          "u": "24242",
+          "v": "27256"
+        },
+        {
+          "creation_index": 3,
+          "label": "disease_protein",
+          "u": "27256",
+          "v": "6963"
+        },
+        {
+          "creation_index": 11,
+          "label": "drug_protein",
+          "u": "6963",
+          "v": "14587"
+        }
+      ],
+      "primary_path_max_list_size": 75,
+      "primary_reason_codes": [
+        "WRONG_HOP_COUNT"
+      ],
+      "reason_codes": [
+        "WRONG_HOP_COUNT"
+      ],
+      "submitted_index": 51
+    },
+    {
+      "degree": 109,
+      "degree_percentile": 58.275732059821536,
+      "first_seen_page": 1,
+      "h1": 1,
+      "label_a": "OFF_QUESTION",
+      "label_b": "PATH_INVALID",
+      "list_size": 75,
+      "node_id": "14623",
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "label": "disease_phenotype_positive",
+          "u": "24242",
+          "v": "27256"
+        },
+        {
+          "creation_index": 3,
+          "label": "disease_protein",
+          "u": "27256",
+          "v": "6963"
+        },
+        {
+          "creation_index": 11,
+          "label": "drug_protein",
+          "u": "6963",
+          "v": "14623"
+        }
+      ],
+      "primary_path_max_list_size": 75,
+      "primary_reason_codes": [
+        "WRONG_HOP_COUNT"
+      ],
+      "reason_codes": [
+        "WRONG_HOP_COUNT"
+      ],
+      "submitted_index": 52
+    },
+    {
+      "degree": 876,
+      "degree_percentile": 83.03380671107202,
+      "first_seen_page": 1,
+      "h1": 1,
+      "label_a": "OFF_QUESTION",
+      "label_b": "PATH_INVALID",
+      "list_size": 75,
+      "node_id": "14735",
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "label": "disease_phenotype_positive",
+          "u": "24242",
+          "v": "27256"
+        },
+        {
+          "creation_index": 3,
+          "label": "disease_protein",
+          "u": "27256",
+          "v": "6963"
+        },
+        {
+          "creation_index": 11,
+          "label": "drug_protein",
+          "u": "6963",
+          "v": "14735"
+        }
+      ],
+      "primary_path_max_list_size": 75,
+      "primary_reason_codes": [
+        "WRONG_HOP_COUNT"
+      ],
+      "reason_codes": [
+        "WRONG_HOP_COUNT"
+      ],
+      "submitted_index": 53
+    },
+    {
+      "degree": 26,
+      "degree_percentile": 52.72087470152067,
+      "first_seen_page": 1,
+      "h1": 1,
+      "label_a": "OFF_QUESTION",
+      "label_b": "PATH_INVALID",
+      "list_size": 75,
+      "node_id": "14922",
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "label": "disease_phenotype_positive",
+          "u": "24242",
+          "v": "27256"
+        },
+        {
+          "creation_index": 3,
+          "label": "disease_protein",
+          "u": "27256",
+          "v": "6963"
+        },
+        {
+          "creation_index": 11,
+          "label": "drug_protein",
+          "u": "6963",
+          "v": "14922"
+        }
+      ],
+      "primary_path_max_list_size": 75,
+      "primary_reason_codes": [
+        "WRONG_HOP_COUNT"
+      ],
+      "reason_codes": [
+        "WRONG_HOP_COUNT"
+      ],
+      "submitted_index": 54
+    },
+    {
+      "degree": 1849,
+      "degree_percentile": 98.52959658162625,
+      "first_seen_page": 1,
+      "h1": 1,
+      "label_a": "OFF_QUESTION",
+      "label_b": "PATH_INVALID",
+      "list_size": 75,
+      "node_id": "14963",
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "label": "disease_phenotype_positive",
+          "u": "24242",
+          "v": "27256"
+        },
+        {
+          "creation_index": 3,
+          "label": "disease_protein",
+          "u": "27256",
+          "v": "6963"
+        },
+        {
+          "creation_index": 11,
+          "label": "drug_protein",
+          "u": "6963",
+          "v": "14963"
+        }
+      ],
+      "primary_path_max_list_size": 75,
+      "primary_reason_codes": [
+        "WRONG_HOP_COUNT"
+      ],
+      "reason_codes": [
+        "WRONG_HOP_COUNT"
+      ],
+      "submitted_index": 55
+    },
+    {
+      "degree": 1740,
+      "degree_percentile": 97.8760839512379,
+      "first_seen_page": 1,
+      "h1": 1,
+      "label_a": "OFF_QUESTION",
+      "label_b": "PATH_INVALID",
+      "list_size": 75,
+      "node_id": "14976",
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "label": "disease_phenotype_positive",
+          "u": "24242",
+          "v": "27256"
+        },
+        {
+          "creation_index": 3,
+          "label": "disease_protein",
+          "u": "27256",
+          "v": "6963"
+        },
+        {
+          "creation_index": 11,
+          "label": "drug_protein",
+          "u": "6963",
+          "v": "14976"
+        }
+      ],
+      "primary_path_max_list_size": 75,
+      "primary_reason_codes": [
+        "WRONG_HOP_COUNT"
+      ],
+      "reason_codes": [
+        "WRONG_HOP_COUNT"
+      ],
+      "submitted_index": 56
+    },
+    {
+      "degree": 1881,
+      "degree_percentile": 98.7306773909765,
+      "first_seen_page": 1,
+      "h1": 1,
+      "label_a": "OFF_QUESTION",
+      "label_b": "PATH_INVALID",
+      "list_size": 75,
+      "node_id": "15090",
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "label": "disease_phenotype_positive",
+          "u": "24242",
+          "v": "27256"
+        },
+        {
+          "creation_index": 3,
+          "label": "disease_protein",
+          "u": "27256",
+          "v": "6963"
+        },
+        {
+          "creation_index": 11,
+          "label": "drug_protein",
+          "u": "6963",
+          "v": "15090"
+        }
+      ],
+      "primary_path_max_list_size": 75,
+      "primary_reason_codes": [
+        "WRONG_HOP_COUNT"
+      ],
+      "reason_codes": [
+        "WRONG_HOP_COUNT"
+      ],
+      "submitted_index": 57
+    },
+    {
+      "degree": 1499,
+      "degree_percentile": 95.26203342968455,
+      "first_seen_page": 1,
+      "h1": 1,
+      "label_a": "OFF_QUESTION",
+      "label_b": "PATH_INVALID",
+      "list_size": 75,
+      "node_id": "15136",
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "label": "disease_phenotype_positive",
+          "u": "24242",
+          "v": "27256"
+        },
+        {
+          "creation_index": 3,
+          "label": "disease_protein",
+          "u": "27256",
+          "v": "6963"
+        },
+        {
+          "creation_index": 11,
+          "label": "drug_protein",
+          "u": "6963",
+          "v": "15136"
+        }
+      ],
+      "primary_path_max_list_size": 75,
+      "primary_reason_codes": [
+        "WRONG_HOP_COUNT"
+      ],
+      "reason_codes": [
+        "WRONG_HOP_COUNT"
+      ],
+      "submitted_index": 58
+    },
+    {
+      "degree": 1916,
+      "degree_percentile": 98.83121779565163,
+      "first_seen_page": 1,
+      "h1": 1,
+      "label_a": "GOLD",
+      "label_b": "PATH_INVALID",
+      "list_size": 75,
+      "node_id": "15231",
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "label": "disease_phenotype_positive",
+          "u": "24242",
+          "v": "27256"
+        },
+        {
+          "creation_index": 3,
+          "label": "disease_protein",
+          "u": "27256",
+          "v": "6963"
+        },
+        {
+          "creation_index": 11,
+          "label": "drug_protein",
+          "u": "6963",
+          "v": "15231"
+        }
+      ],
+      "primary_path_max_list_size": 75,
+      "primary_reason_codes": [
+        "WRONG_HOP_COUNT"
+      ],
+      "reason_codes": [
+        "WRONG_HOP_COUNT"
+      ],
+      "submitted_index": 59
+    },
+    {
+      "degree": 1739,
+      "degree_percentile": 97.86351640065351,
+      "first_seen_page": 1,
+      "h1": 1,
+      "label_a": "OFF_QUESTION",
+      "label_b": "PATH_INVALID",
+      "list_size": 75,
+      "node_id": "15311",
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "label": "disease_phenotype_positive",
+          "u": "24242",
+          "v": "27256"
+        },
+        {
+          "creation_index": 3,
+          "label": "disease_protein",
+          "u": "27256",
+          "v": "6963"
+        },
+        {
+          "creation_index": 11,
+          "label": "drug_protein",
+          "u": "6963",
+          "v": "15311"
+        }
+      ],
+      "primary_path_max_list_size": 75,
+      "primary_reason_codes": [
+        "WRONG_HOP_COUNT"
+      ],
+      "reason_codes": [
+        "WRONG_HOP_COUNT"
+      ],
+      "submitted_index": 60
+    },
+    {
+      "degree": 1617,
+      "degree_percentile": 96.65703154455197,
+      "first_seen_page": 1,
+      "h1": 1,
+      "label_a": "OFF_QUESTION",
+      "label_b": "PATH_INVALID",
+      "list_size": 75,
+      "node_id": "15337",
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "label": "disease_phenotype_positive",
+          "u": "24242",
+          "v": "27256"
+        },
+        {
+          "creation_index": 3,
+          "label": "disease_protein",
+          "u": "27256",
+          "v": "6963"
+        },
+        {
+          "creation_index": 11,
+          "label": "drug_protein",
+          "u": "6963",
+          "v": "15337"
+        }
+      ],
+      "primary_path_max_list_size": 75,
+      "primary_reason_codes": [
+        "WRONG_HOP_COUNT"
+      ],
+      "reason_codes": [
+        "WRONG_HOP_COUNT"
+      ],
+      "submitted_index": 61
+    },
+    {
+      "degree": 1889,
+      "degree_percentile": 98.75581249214528,
+      "first_seen_page": 1,
+      "h1": 1,
+      "label_a": "OFF_QUESTION",
+      "label_b": "PATH_INVALID",
+      "list_size": 75,
+      "node_id": "15416",
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "label": "disease_phenotype_positive",
+          "u": "24242",
+          "v": "27256"
+        },
+        {
+          "creation_index": 3,
+          "label": "disease_protein",
+          "u": "27256",
+          "v": "6963"
+        },
+        {
+          "creation_index": 11,
+          "label": "drug_protein",
+          "u": "6963",
+          "v": "15416"
+        }
+      ],
+      "primary_path_max_list_size": 75,
+      "primary_reason_codes": [
+        "WRONG_HOP_COUNT"
+      ],
+      "reason_codes": [
+        "WRONG_HOP_COUNT"
+      ],
+      "submitted_index": 62
+    },
+    {
+      "degree": 1474,
+      "degree_percentile": 94.94784466507478,
+      "first_seen_page": 1,
+      "h1": 1,
+      "label_a": "OFF_QUESTION",
+      "label_b": "PATH_INVALID",
+      "list_size": 75,
+      "node_id": "15421",
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "label": "disease_phenotype_positive",
+          "u": "24242",
+          "v": "27256"
+        },
+        {
+          "creation_index": 3,
+          "label": "disease_protein",
+          "u": "27256",
+          "v": "6963"
+        },
+        {
+          "creation_index": 11,
+          "label": "drug_protein",
+          "u": "6963",
+          "v": "15421"
+        }
+      ],
+      "primary_path_max_list_size": 75,
+      "primary_reason_codes": [
+        "WRONG_HOP_COUNT"
+      ],
+      "reason_codes": [
+        "WRONG_HOP_COUNT"
+      ],
+      "submitted_index": 63
+    },
+    {
+      "degree": 1981,
+      "degree_percentile": 99.1579741108458,
+      "first_seen_page": 1,
+      "h1": 1,
+      "label_a": "OFF_QUESTION",
+      "label_b": "PATH_INVALID",
+      "list_size": 75,
+      "node_id": "15430",
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "label": "disease_phenotype_positive",
+          "u": "24242",
+          "v": "27256"
+        },
+        {
+          "creation_index": 3,
+          "label": "disease_protein",
+          "u": "27256",
+          "v": "6963"
+        },
+        {
+          "creation_index": 11,
+          "label": "drug_protein",
+          "u": "6963",
+          "v": "15430"
+        }
+      ],
+      "primary_path_max_list_size": 75,
+      "primary_reason_codes": [
+        "WRONG_HOP_COUNT"
+      ],
+      "reason_codes": [
+        "WRONG_HOP_COUNT"
+      ],
+      "submitted_index": 64
+    },
+    {
+      "degree": 1815,
+      "degree_percentile": 98.34108332286038,
+      "first_seen_page": 1,
+      "h1": 1,
+      "label_a": "OFF_QUESTION",
+      "label_b": "PATH_INVALID",
+      "list_size": 75,
+      "node_id": "15441",
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "label": "disease_phenotype_positive",
+          "u": "24242",
+          "v": "27256"
+        },
+        {
+          "creation_index": 3,
+          "label": "disease_protein",
+          "u": "27256",
+          "v": "6963"
+        },
+        {
+          "creation_index": 11,
+          "label": "drug_protein",
+          "u": "6963",
+          "v": "15441"
+        }
+      ],
+      "primary_path_max_list_size": 75,
+      "primary_reason_codes": [
+        "WRONG_HOP_COUNT"
+      ],
+      "reason_codes": [
+        "WRONG_HOP_COUNT"
+      ],
+      "submitted_index": 65
+    },
+    {
+      "degree": 821,
+      "degree_percentile": 81.27434962925726,
+      "first_seen_page": 1,
+      "h1": 1,
+      "label_a": "OFF_QUESTION",
+      "label_b": "PATH_INVALID",
+      "list_size": 75,
+      "node_id": "15445",
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "label": "disease_phenotype_positive",
+          "u": "24242",
+          "v": "27256"
+        },
+        {
+          "creation_index": 3,
+          "label": "disease_protein",
+          "u": "27256",
+          "v": "6963"
+        },
+        {
+          "creation_index": 11,
+          "label": "drug_protein",
+          "u": "6963",
+          "v": "15445"
+        }
+      ],
+      "primary_path_max_list_size": 75,
+      "primary_reason_codes": [
+        "WRONG_HOP_COUNT"
+      ],
+      "reason_codes": [
+        "WRONG_HOP_COUNT"
+      ],
+      "submitted_index": 66
+    },
+    {
+      "degree": 1480,
+      "degree_percentile": 95.02324996858113,
+      "first_seen_page": 1,
+      "h1": 1,
+      "label_a": "OFF_QUESTION",
+      "label_b": "PATH_INVALID",
+      "list_size": 75,
+      "node_id": "15454",
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "label": "disease_phenotype_positive",
+          "u": "24242",
+          "v": "27256"
+        },
+        {
+          "creation_index": 3,
+          "label": "disease_protein",
+          "u": "27256",
+          "v": "6963"
+        },
+        {
+          "creation_index": 11,
+          "label": "drug_protein",
+          "u": "6963",
+          "v": "15454"
+        }
+      ],
+      "primary_path_max_list_size": 75,
+      "primary_reason_codes": [
+        "WRONG_HOP_COUNT"
+      ],
+      "reason_codes": [
+        "WRONG_HOP_COUNT"
+      ],
+      "submitted_index": 67
+    },
+    {
+      "degree": 1538,
+      "degree_percentile": 95.80243810481338,
+      "first_seen_page": 1,
+      "h1": 1,
+      "label_a": "OFF_QUESTION",
+      "label_b": "PATH_INVALID",
+      "list_size": 75,
+      "node_id": "15457",
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "label": "disease_phenotype_positive",
+          "u": "24242",
+          "v": "27256"
+        },
+        {
+          "creation_index": 3,
+          "label": "disease_protein",
+          "u": "27256",
+          "v": "6963"
+        },
+        {
+          "creation_index": 11,
+          "label": "drug_protein",
+          "u": "6963",
+          "v": "15457"
+        }
+      ],
+      "primary_path_max_list_size": 75,
+      "primary_reason_codes": [
+        "WRONG_HOP_COUNT"
+      ],
+      "reason_codes": [
+        "WRONG_HOP_COUNT"
+      ],
+      "submitted_index": 68
+    },
+    {
+      "degree": 1619,
+      "degree_percentile": 96.70730174688953,
+      "first_seen_page": 1,
+      "h1": 1,
+      "label_a": "OFF_QUESTION",
+      "label_b": "PATH_INVALID",
+      "list_size": 75,
+      "node_id": "15495",
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "label": "disease_phenotype_positive",
+          "u": "24242",
+          "v": "27256"
+        },
+        {
+          "creation_index": 3,
+          "label": "disease_protein",
+          "u": "27256",
+          "v": "6963"
+        },
+        {
+          "creation_index": 11,
+          "label": "drug_protein",
+          "u": "6963",
+          "v": "15495"
+        }
+      ],
+      "primary_path_max_list_size": 75,
+      "primary_reason_codes": [
+        "WRONG_HOP_COUNT"
+      ],
+      "reason_codes": [
+        "WRONG_HOP_COUNT"
+      ],
+      "submitted_index": 69
+    },
+    {
+      "degree": 1179,
+      "degree_percentile": 89.94595953248712,
+      "first_seen_page": 1,
+      "h1": 1,
+      "label_a": "OFF_QUESTION",
+      "label_b": "PATH_INVALID",
+      "list_size": 75,
+      "node_id": "15515",
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "label": "disease_phenotype_positive",
+          "u": "24242",
+          "v": "27256"
+        },
+        {
+          "creation_index": 3,
+          "label": "disease_protein",
+          "u": "27256",
+          "v": "6963"
+        },
+        {
+          "creation_index": 11,
+          "label": "drug_protein",
+          "u": "6963",
+          "v": "15515"
+        }
+      ],
+      "primary_path_max_list_size": 75,
+      "primary_reason_codes": [
+        "WRONG_HOP_COUNT"
+      ],
+      "reason_codes": [
+        "WRONG_HOP_COUNT"
+      ],
+      "submitted_index": 70
+    },
+    {
+      "degree": 907,
+      "degree_percentile": 84.21515646600477,
+      "first_seen_page": 1,
+      "h1": 1,
+      "label_a": "OFF_QUESTION",
+      "label_b": "PATH_INVALID",
+      "list_size": 75,
+      "node_id": "15516",
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "label": "disease_phenotype_positive",
+          "u": "24242",
+          "v": "27256"
+        },
+        {
+          "creation_index": 3,
+          "label": "disease_protein",
+          "u": "27256",
+          "v": "6963"
+        },
+        {
+          "creation_index": 11,
+          "label": "drug_protein",
+          "u": "6963",
+          "v": "15516"
+        }
+      ],
+      "primary_path_max_list_size": 75,
+      "primary_reason_codes": [
+        "WRONG_HOP_COUNT"
+      ],
+      "reason_codes": [
+        "WRONG_HOP_COUNT"
+      ],
+      "submitted_index": 71
+    },
+    {
+      "degree": 825,
+      "degree_percentile": 81.5131330903607,
+      "first_seen_page": 1,
+      "h1": 1,
+      "label_a": "OFF_QUESTION",
+      "label_b": "PATH_INVALID",
+      "list_size": 75,
+      "node_id": "15517",
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "label": "disease_phenotype_positive",
+          "u": "24242",
+          "v": "27256"
+        },
+        {
+          "creation_index": 3,
+          "label": "disease_protein",
+          "u": "27256",
+          "v": "6963"
+        },
+        {
+          "creation_index": 11,
+          "label": "drug_protein",
+          "u": "6963",
+          "v": "15517"
+        }
+      ],
+      "primary_path_max_list_size": 75,
+      "primary_reason_codes": [
+        "WRONG_HOP_COUNT"
+      ],
+      "reason_codes": [
+        "WRONG_HOP_COUNT"
+      ],
+      "submitted_index": 72
+    },
+    {
+      "degree": 1092,
+      "degree_percentile": 88.43785346236018,
+      "first_seen_page": 1,
+      "h1": 1,
+      "label_a": "OFF_QUESTION",
+      "label_b": "PATH_INVALID",
+      "list_size": 75,
+      "node_id": "15518",
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "label": "disease_phenotype_positive",
+          "u": "24242",
+          "v": "27256"
+        },
+        {
+          "creation_index": 3,
+          "label": "disease_protein",
+          "u": "27256",
+          "v": "6963"
+        },
+        {
+          "creation_index": 11,
+          "label": "drug_protein",
+          "u": "6963",
+          "v": "15518"
+        }
+      ],
+      "primary_path_max_list_size": 75,
+      "primary_reason_codes": [
+        "WRONG_HOP_COUNT"
+      ],
+      "reason_codes": [
+        "WRONG_HOP_COUNT"
+      ],
+      "submitted_index": 73
+    },
+    {
+      "degree": 952,
+      "degree_percentile": 85.04461480457459,
+      "first_seen_page": 1,
+      "h1": 1,
+      "label_a": "OFF_QUESTION",
+      "label_b": "PATH_INVALID",
+      "list_size": 75,
+      "node_id": "15519",
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "label": "disease_phenotype_positive",
+          "u": "24242",
+          "v": "27256"
+        },
+        {
+          "creation_index": 3,
+          "label": "disease_protein",
+          "u": "27256",
+          "v": "6963"
+        },
+        {
+          "creation_index": 11,
+          "label": "drug_protein",
+          "u": "6963",
+          "v": "15519"
+        }
+      ],
+      "primary_path_max_list_size": 75,
+      "primary_reason_codes": [
+        "WRONG_HOP_COUNT"
+      ],
+      "reason_codes": [
+        "WRONG_HOP_COUNT"
+      ],
+      "submitted_index": 74
+    },
+    {
+      "degree": 801,
+      "degree_percentile": 80.68367475179087,
+      "first_seen_page": 1,
+      "h1": 1,
+      "label_a": "OFF_QUESTION",
+      "label_b": "PATH_INVALID",
+      "list_size": 75,
+      "node_id": "15608",
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "label": "disease_phenotype_positive",
+          "u": "24242",
+          "v": "27256"
+        },
+        {
+          "creation_index": 3,
+          "label": "disease_protein",
+          "u": "27256",
+          "v": "6963"
+        },
+        {
+          "creation_index": 11,
+          "label": "drug_protein",
+          "u": "6963",
+          "v": "15608"
+        }
+      ],
+      "primary_path_max_list_size": 75,
+      "primary_reason_codes": [
+        "WRONG_HOP_COUNT"
+      ],
+      "reason_codes": [
+        "WRONG_HOP_COUNT"
+      ],
+      "submitted_index": 75
+    },
+    {
+      "degree": 936,
+      "degree_percentile": 84.84353399522433,
+      "first_seen_page": 1,
+      "h1": 1,
+      "label_a": "OFF_QUESTION",
+      "label_b": "PATH_INVALID",
+      "list_size": 75,
+      "node_id": "15623",
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "label": "disease_phenotype_positive",
+          "u": "24242",
+          "v": "27256"
+        },
+        {
+          "creation_index": 3,
+          "label": "disease_protein",
+          "u": "27256",
+          "v": "6963"
+        },
+        {
+          "creation_index": 11,
+          "label": "drug_protein",
+          "u": "6963",
+          "v": "15623"
+        }
+      ],
+      "primary_path_max_list_size": 75,
+      "primary_reason_codes": [
+        "WRONG_HOP_COUNT"
+      ],
+      "reason_codes": [
+        "WRONG_HOP_COUNT"
+      ],
+      "submitted_index": 76
+    },
+    {
+      "degree": 8,
+      "degree_percentile": 48.05831343471157,
+      "first_seen_page": 1,
+      "h1": 1,
+      "label_a": "OFF_QUESTION",
+      "label_b": "PATH_INVALID",
+      "list_size": 2,
+      "node_id": "14051",
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "label": "disease_phenotype_positive",
+          "u": "24242",
+          "v": "27256"
+        },
+        {
+          "creation_index": 3,
+          "label": "disease_protein",
+          "u": "27256",
+          "v": "7618"
+        },
+        {
+          "creation_index": 13,
+          "label": "drug_protein",
+          "u": "7618",
+          "v": "14051"
+        }
+      ],
+      "primary_path_max_list_size": 12,
+      "primary_reason_codes": [
+        "WRONG_HOP_COUNT"
+      ],
+      "reason_codes": [
+        "WRONG_HOP_COUNT"
+      ],
+      "submitted_index": 77
+    },
+    {
+      "degree": 556,
+      "degree_percentile": 72.16287545557371,
+      "first_seen_page": 1,
+      "h1": 1,
+      "label_a": "OFF_QUESTION",
+      "label_b": "PATH_INVALID",
+      "list_size": 2,
+      "node_id": "17626",
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "label": "disease_phenotype_positive",
+          "u": "24242",
+          "v": "27256"
+        },
+        {
+          "creation_index": 3,
+          "label": "disease_protein",
+          "u": "27256",
+          "v": "7618"
+        },
+        {
+          "creation_index": 13,
+          "label": "drug_protein",
+          "u": "7618",
+          "v": "17626"
+        }
+      ],
+      "primary_path_max_list_size": 12,
+      "primary_reason_codes": [
+        "WRONG_HOP_COUNT"
+      ],
+      "reason_codes": [
+        "WRONG_HOP_COUNT"
+      ],
+      "submitted_index": 78
+    },
+    {
+      "degree": 1060,
+      "degree_percentile": 87.75920573080307,
+      "first_seen_page": 1,
+      "h1": 1,
+      "label_a": "OFF_QUESTION",
+      "label_b": "PATH_INVALID",
+      "list_size": 2,
+      "node_id": "15813",
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "label": "disease_phenotype_positive",
+          "u": "24242",
+          "v": "27256"
+        },
+        {
+          "creation_index": 3,
+          "label": "disease_protein",
+          "u": "27256",
+          "v": "9126"
+        },
+        {
+          "creation_index": 17,
+          "label": "drug_protein",
+          "u": "9126",
+          "v": "15813"
+        }
+      ],
+      "primary_path_max_list_size": 12,
+      "primary_reason_codes": [
+        "WRONG_HOP_COUNT"
+      ],
+      "reason_codes": [
+        "WRONG_HOP_COUNT"
+      ],
+      "submitted_index": 79
+    },
+    {
+      "degree": 1,
+      "degree_percentile": 34.447656151816005,
+      "first_seen_page": 1,
+      "h1": 1,
+      "label_a": "OFF_QUESTION",
+      "label_b": "PATH_INVALID",
+      "list_size": 2,
+      "node_id": "17710",
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "label": "disease_phenotype_positive",
+          "u": "24242",
+          "v": "27256"
+        },
+        {
+          "creation_index": 3,
+          "label": "disease_protein",
+          "u": "27256",
+          "v": "9126"
+        },
+        {
+          "creation_index": 17,
+          "label": "drug_protein",
+          "u": "9126",
+          "v": "17710"
+        }
+      ],
+      "primary_path_max_list_size": 12,
+      "primary_reason_codes": [
+        "WRONG_HOP_COUNT"
+      ],
+      "reason_codes": [
+        "WRONG_HOP_COUNT"
+      ],
+      "submitted_index": 80
+    },
+    {
+      "degree": 1419,
+      "degree_percentile": 94.21892673118009,
+      "first_seen_page": 1,
+      "h1": 1,
+      "label_a": "OFF_QUESTION",
+      "label_b": "PATH_INVALID",
+      "list_size": 2,
+      "node_id": "14668",
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "label": "disease_phenotype_positive",
+          "u": "24242",
+          "v": "27256"
+        },
+        {
+          "creation_index": 3,
+          "label": "disease_protein",
+          "u": "27256",
+          "v": "12040"
+        },
+        {
+          "creation_index": 23,
+          "label": "drug_protein",
+          "u": "12040",
+          "v": "14668"
+        }
+      ],
+      "primary_path_max_list_size": 12,
+      "primary_reason_codes": [
+        "WRONG_HOP_COUNT"
+      ],
+      "reason_codes": [
+        "WRONG_HOP_COUNT"
+      ],
+      "submitted_index": 81
+    },
+    {
+      "degree": 1092,
+      "degree_percentile": 88.43785346236018,
+      "first_seen_page": 1,
+      "h1": 1,
+      "label_a": "OFF_QUESTION",
+      "label_b": "PATH_INVALID",
+      "list_size": 2,
+      "node_id": "16085",
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "label": "disease_phenotype_positive",
+          "u": "24242",
+          "v": "27256"
+        },
+        {
+          "creation_index": 3,
+          "label": "disease_protein",
+          "u": "27256",
+          "v": "12040"
+        },
+        {
+          "creation_index": 23,
+          "label": "drug_protein",
+          "u": "12040",
+          "v": "16085"
+        }
+      ],
+      "primary_path_max_list_size": 12,
+      "primary_reason_codes": [
+        "WRONG_HOP_COUNT"
+      ],
+      "reason_codes": [
+        "WRONG_HOP_COUNT"
+      ],
+      "submitted_index": 82
+    },
+    {
+      "degree": 1953,
+      "degree_percentile": 99.01973105441749,
+      "first_seen_page": 1,
+      "h1": 1,
+      "label_a": "OFF_QUESTION",
+      "label_b": "PATH_INVALID",
+      "list_size": 24,
+      "node_id": "14153",
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "label": "disease_phenotype_positive",
+          "u": "24242",
+          "v": "27256"
+        },
+        {
+          "creation_index": 3,
+          "label": "disease_protein",
+          "u": "27256",
+          "v": "9441"
+        },
+        {
+          "creation_index": 21,
+          "label": "drug_protein",
+          "u": "9441",
+          "v": "14153"
+        }
+      ],
+      "primary_path_max_list_size": 24,
+      "primary_reason_codes": [
+        "WRONG_HOP_COUNT"
+      ],
+      "reason_codes": [
+        "WRONG_HOP_COUNT"
+      ],
+      "submitted_index": 91
+    },
+    {
+      "degree": 1299,
+      "degree_percentile": 91.91906497423652,
+      "first_seen_page": 1,
+      "h1": 1,
+      "label_a": "OFF_QUESTION",
+      "label_b": "PATH_INVALID",
+      "list_size": 24,
+      "node_id": "14234",
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "label": "disease_phenotype_positive",
+          "u": "24242",
+          "v": "27256"
+        },
+        {
+          "creation_index": 3,
+          "label": "disease_protein",
+          "u": "27256",
+          "v": "9441"
+        },
+        {
+          "creation_index": 21,
+          "label": "drug_protein",
+          "u": "9441",
+          "v": "14234"
+        }
+      ],
+      "primary_path_max_list_size": 24,
+      "primary_reason_codes": [
+        "WRONG_HOP_COUNT"
+      ],
+      "reason_codes": [
+        "WRONG_HOP_COUNT"
+      ],
+      "submitted_index": 93
+    },
+    {
+      "degree": 2107,
+      "degree_percentile": 99.39675757194922,
+      "first_seen_page": 1,
+      "h1": 1,
+      "label_a": "OFF_QUESTION",
+      "label_b": "PATH_INVALID",
+      "list_size": 24,
+      "node_id": "14295",
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "label": "disease_phenotype_positive",
+          "u": "24242",
+          "v": "27256"
+        },
+        {
+          "creation_index": 3,
+          "label": "disease_protein",
+          "u": "27256",
+          "v": "9441"
+        },
+        {
+          "creation_index": 21,
+          "label": "drug_protein",
+          "u": "9441",
+          "v": "14295"
+        }
+      ],
+      "primary_path_max_list_size": 24,
+      "primary_reason_codes": [
+        "WRONG_HOP_COUNT"
+      ],
+      "reason_codes": [
+        "WRONG_HOP_COUNT"
+      ],
+      "submitted_index": 94
+    },
+    {
+      "degree": 1321,
+      "degree_percentile": 92.25838884001509,
+      "first_seen_page": 1,
+      "h1": 1,
+      "label_a": "OFF_QUESTION",
+      "label_b": "PATH_INVALID",
+      "list_size": 24,
+      "node_id": "14581",
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "label": "disease_phenotype_positive",
+          "u": "24242",
+          "v": "27256"
+        },
+        {
+          "creation_index": 3,
+          "label": "disease_protein",
+          "u": "27256",
+          "v": "9441"
+        },
+        {
+          "creation_index": 21,
+          "label": "drug_protein",
+          "u": "9441",
+          "v": "14581"
+        }
+      ],
+      "primary_path_max_list_size": 24,
+      "primary_reason_codes": [
+        "WRONG_HOP_COUNT"
+      ],
+      "reason_codes": [
+        "WRONG_HOP_COUNT"
+      ],
+      "submitted_index": 96
+    },
+    {
+      "degree": 2464,
+      "degree_percentile": 99.92459469649366,
+      "first_seen_page": 1,
+      "h1": 1,
+      "label_a": "OFF_QUESTION",
+      "label_b": "PATH_INVALID",
+      "list_size": 24,
+      "node_id": "14956",
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "label": "disease_phenotype_positive",
+          "u": "24242",
+          "v": "27256"
+        },
+        {
+          "creation_index": 3,
+          "label": "disease_protein",
+          "u": "27256",
+          "v": "9441"
+        },
+        {
+          "creation_index": 21,
+          "label": "drug_protein",
+          "u": "9441",
+          "v": "14956"
+        }
+      ],
+      "primary_path_max_list_size": 24,
+      "primary_reason_codes": [
+        "WRONG_HOP_COUNT"
+      ],
+      "reason_codes": [
+        "WRONG_HOP_COUNT"
+      ],
+      "submitted_index": 97
+    },
+    {
+      "degree": 1664,
+      "degree_percentile": 97.00892296091493,
+      "first_seen_page": 1,
+      "h1": 1,
+      "label_a": "OFF_QUESTION",
+      "label_b": "PATH_INVALID",
+      "list_size": 24,
+      "node_id": "15551",
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "label": "disease_phenotype_positive",
+          "u": "24242",
+          "v": "27256"
+        },
+        {
+          "creation_index": 3,
+          "label": "disease_protein",
+          "u": "27256",
+          "v": "9441"
+        },
+        {
+          "creation_index": 21,
+          "label": "drug_protein",
+          "u": "9441",
+          "v": "15551"
+        }
+      ],
+      "primary_path_max_list_size": 24,
+      "primary_reason_codes": [
+        "WRONG_HOP_COUNT"
+      ],
+      "reason_codes": [
+        "WRONG_HOP_COUNT"
+      ],
+      "submitted_index": 98
+    },
+    {
+      "degree": 15,
+      "degree_percentile": 50.86087721503078,
+      "first_seen_page": 1,
+      "h1": 1,
+      "label_a": "OFF_QUESTION",
+      "label_b": "PATH_INVALID",
+      "list_size": 24,
+      "node_id": "15766",
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "label": "disease_phenotype_positive",
+          "u": "24242",
+          "v": "27256"
+        },
+        {
+          "creation_index": 3,
+          "label": "disease_protein",
+          "u": "27256",
+          "v": "9441"
+        },
+        {
+          "creation_index": 21,
+          "label": "drug_protein",
+          "u": "9441",
+          "v": "15766"
+        }
+      ],
+      "primary_path_max_list_size": 24,
+      "primary_reason_codes": [
+        "WRONG_HOP_COUNT"
+      ],
+      "reason_codes": [
+        "WRONG_HOP_COUNT"
+      ],
+      "submitted_index": 101
+    },
+    {
+      "degree": 73,
+      "degree_percentile": 56.36546437099409,
+      "first_seen_page": 1,
+      "h1": 1,
+      "label_a": "OFF_QUESTION",
+      "label_b": "PATH_INVALID",
+      "list_size": 24,
+      "node_id": "16306",
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "label": "disease_phenotype_positive",
+          "u": "24242",
+          "v": "27256"
+        },
+        {
+          "creation_index": 3,
+          "label": "disease_protein",
+          "u": "27256",
+          "v": "9441"
+        },
+        {
+          "creation_index": 21,
+          "label": "drug_protein",
+          "u": "9441",
+          "v": "16306"
+        }
+      ],
+      "primary_path_max_list_size": 24,
+      "primary_reason_codes": [
+        "WRONG_HOP_COUNT"
+      ],
+      "reason_codes": [
+        "WRONG_HOP_COUNT"
+      ],
+      "submitted_index": 102
+    },
+    {
+      "degree": 737,
+      "degree_percentile": 77.45381425160235,
+      "first_seen_page": 1,
+      "h1": 1,
+      "label_a": "OFF_QUESTION",
+      "label_b": "PATH_INVALID",
+      "list_size": 24,
+      "node_id": "16477",
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "label": "disease_phenotype_positive",
+          "u": "24242",
+          "v": "27256"
+        },
+        {
+          "creation_index": 3,
+          "label": "disease_protein",
+          "u": "27256",
+          "v": "9441"
+        },
+        {
+          "creation_index": 21,
+          "label": "drug_protein",
+          "u": "9441",
+          "v": "16477"
+        }
+      ],
+      "primary_path_max_list_size": 24,
+      "primary_reason_codes": [
+        "WRONG_HOP_COUNT"
+      ],
+      "reason_codes": [
+        "WRONG_HOP_COUNT"
+      ],
+      "submitted_index": 103
+    },
+    {
+      "degree": 94,
+      "degree_percentile": 57.19492270956391,
+      "first_seen_page": 1,
+      "h1": 1,
+      "label_a": "OFF_QUESTION",
+      "label_b": "PATH_INVALID",
+      "list_size": 24,
+      "node_id": "17652",
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "label": "disease_phenotype_positive",
+          "u": "24242",
+          "v": "27256"
+        },
+        {
+          "creation_index": 3,
+          "label": "disease_protein",
+          "u": "27256",
+          "v": "9441"
+        },
+        {
+          "creation_index": 21,
+          "label": "drug_protein",
+          "u": "9441",
+          "v": "17652"
+        }
+      ],
+      "primary_path_max_list_size": 24,
+      "primary_reason_codes": [
+        "WRONG_HOP_COUNT"
+      ],
+      "reason_codes": [
+        "WRONG_HOP_COUNT"
+      ],
+      "submitted_index": 104
+    },
+    {
+      "degree": 1187,
+      "degree_percentile": 90.05906748774663,
+      "first_seen_page": 1,
+      "h1": 1,
+      "label_a": "OFF_QUESTION",
+      "label_b": "PATH_INVALID",
+      "list_size": 24,
+      "node_id": "19160",
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "label": "disease_phenotype_positive",
+          "u": "24242",
+          "v": "27256"
+        },
+        {
+          "creation_index": 3,
+          "label": "disease_protein",
+          "u": "27256",
+          "v": "9441"
+        },
+        {
+          "creation_index": 21,
+          "label": "drug_protein",
+          "u": "9441",
+          "v": "19160"
+        }
+      ],
+      "primary_path_max_list_size": 24,
+      "primary_reason_codes": [
+        "WRONG_HOP_COUNT"
+      ],
+      "reason_codes": [
+        "WRONG_HOP_COUNT"
+      ],
+      "submitted_index": 105
+    },
+    {
+      "degree": 1,
+      "degree_percentile": 34.447656151816005,
+      "first_seen_page": 1,
+      "h1": 1,
+      "label_a": "OFF_QUESTION",
+      "label_b": "PATH_INVALID",
+      "list_size": 24,
+      "node_id": "19161",
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "label": "disease_phenotype_positive",
+          "u": "24242",
+          "v": "27256"
+        },
+        {
+          "creation_index": 3,
+          "label": "disease_protein",
+          "u": "27256",
+          "v": "9441"
+        },
+        {
+          "creation_index": 21,
+          "label": "drug_protein",
+          "u": "9441",
+          "v": "19161"
+        }
+      ],
+      "primary_path_max_list_size": 24,
+      "primary_reason_codes": [
+        "WRONG_HOP_COUNT"
+      ],
+      "reason_codes": [
+        "WRONG_HOP_COUNT"
+      ],
+      "submitted_index": 106
+    },
+    {
+      "degree": 750,
+      "degree_percentile": 78.59746135478196,
+      "first_seen_page": 1,
+      "h1": 1,
+      "label_a": "OFF_QUESTION",
+      "label_b": "PATH_INVALID",
+      "list_size": 24,
+      "node_id": "20154",
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "label": "disease_phenotype_positive",
+          "u": "24242",
+          "v": "27256"
+        },
+        {
+          "creation_index": 3,
+          "label": "disease_protein",
+          "u": "27256",
+          "v": "9441"
+        },
+        {
+          "creation_index": 21,
+          "label": "drug_protein",
+          "u": "9441",
+          "v": "20154"
+        }
+      ],
+      "primary_path_max_list_size": 24,
+      "primary_reason_codes": [
+        "WRONG_HOP_COUNT"
+      ],
+      "reason_codes": [
+        "WRONG_HOP_COUNT"
+      ],
+      "submitted_index": 107
+    },
+    {
+      "degree": 10,
+      "degree_percentile": 48.950609526203344,
+      "first_seen_page": 1,
+      "h1": 1,
+      "label_a": "OFF_QUESTION",
+      "label_b": "PATH_INVALID",
+      "list_size": 24,
+      "node_id": "20192",
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "label": "disease_phenotype_positive",
+          "u": "24242",
+          "v": "27256"
+        },
+        {
+          "creation_index": 3,
+          "label": "disease_protein",
+          "u": "27256",
+          "v": "9441"
+        },
+        {
+          "creation_index": 21,
+          "label": "drug_protein",
+          "u": "9441",
+          "v": "20192"
+        }
+      ],
+      "primary_path_max_list_size": 24,
+      "primary_reason_codes": [
+        "WRONG_HOP_COUNT"
+      ],
+      "reason_codes": [
+        "WRONG_HOP_COUNT"
+      ],
+      "submitted_index": 108
+    },
+    {
+      "degree": 66,
+      "degree_percentile": 56.05127560638432,
+      "first_seen_page": 1,
+      "h1": 1,
+      "label_a": "OFF_QUESTION",
+      "label_b": "PATH_INVALID",
+      "list_size": 24,
+      "node_id": "20193",
+      "primary_path": [
+        {
+          "creation_index": 1,
+          "label": "disease_phenotype_positive",
+          "u": "24242",
+          "v": "27256"
+        },
+        {
+          "creation_index": 3,
+          "label": "disease_protein",
+          "u": "27256",
+          "v": "9441"
+        },
+        {
+          "creation_index": 21,
+          "label": "drug_protein",
+          "u": "9441",
+          "v": "20193"
+        }
+      ],
+      "primary_path_max_list_size": 24,
+      "primary_reason_codes": [
+        "WRONG_HOP_COUNT"
+      ],
+      "reason_codes": [
+        "WRONG_HOP_COUNT"
+      ],
+      "submitted_index": 109
+    }
+  ],
+  "attempt": 1,
+  "benchmark_f1": 0.019801980198019802,
+  "benchmark_precision": 0.01020408163265306,
+  "benchmark_recall": 0.3333333333333333,
+  "bridge_conditional_recall": {},
+  "bridge_rank": {},
+  "bridge_recall_counts": {},
+  "bridges_explored": [],
+  "budget_exhausted": false,
+  "cause": null,
+  "construction": "BRIDGE",
+  "denominators": {
+    "benchmark_f1": 101,
+    "benchmark_precision": 98,
+    "benchmark_recall": 3,
+    "off_question_rate": 98,
+    "question_valid_precision": 98,
+    "ungrounded_rate": 98,
+    "unresolved_rate": 98
+  },
+  "early_stop": true,
+  "episode_status": "SUCCESS",
+  "found_r1": true,
+  "hop1_status": "H1_CLEAN",
+  "label_a_counts": {
+    "ALT_VALID": 0,
+    "GOLD": 1,
+    "GOLD_BRIDGE_EXTRA": 0,
+    "OFF_QUESTION": 97,
+    "UNRESOLVED": 0
+  },
+  "label_b_counts": {
+    "KG_UNSUPPORTED": 0,
+    "NOT_APPLICABLE": 0,
+    "PATH_INVALID": 98,
+    "SUPPORTED": 0,
+    "UNGROUNDED": 0
+  },
+  "node_statistics": {
+    "1049": {
+      "degree": 163,
+      "degree_percentile": 79.39358895594665
+    },
+    "12040": {
+      "degree": 136,
+      "degree_percentile": 69.31444472552492
+    },
+    "13872": {
+      "degree": 101,
+      "degree_percentile": 58.0318745256767
+    },
+    "14051": {
+      "degree": 8,
+      "degree_percentile": 48.05831343471157
+    },
+    "14061": {
+      "degree": 2059,
+      "degree_percentile": 99.2836496166897
+    },
+    "14136": {
+      "degree": 916,
+      "degree_percentile": 84.47907502827698
+    },
+    "14137": {
+      "degree": 1762,
+      "degree_percentile": 97.97662435591303
+    },
+    "14141": {
+      "degree": 2131,
+      "degree_percentile": 99.52243307779314
+    },
+    "14144": {
+      "degree": 1854,
+      "degree_percentile": 98.54216413221063
+    },
+    "14153": {
+      "degree": 1953,
+      "degree_percentile": 99.01973105441749
+    },
+    "14156": {
+      "degree": 2541,
+      "degree_percentile": 99.96229734824684
+    },
+    "14168": {
+      "degree": 1357,
+      "degree_percentile": 92.74852331280633
+    },
+    "14192": {
+      "degree": 2386,
+      "degree_percentile": 99.83662184240292
+    },
+    "14203": {
+      "degree": 1597,
+      "degree_percentile": 96.41824808344853
+    },
+    "14228": {
+      "degree": 1645,
+      "degree_percentile": 96.95865275857736
+    },
+    "14234": {
+      "degree": 1299,
+      "degree_percentile": 91.91906497423652
+    },
+    "14244": {
+      "degree": 1921,
+      "degree_percentile": 98.85635289682041
+    },
+    "14245": {
+      "degree": 1986,
+      "degree_percentile": 99.17054166143019
+    },
+    "14246": {
+      "degree": 1475,
+      "degree_percentile": 94.96041221565918
+    },
+    "14294": {
+      "degree": 1719,
+      "degree_percentile": 97.64986804071887
+    },
+    "14295": {
+      "degree": 2107,
+      "degree_percentile": 99.39675757194922
+    },
+    "14300": {
+      "degree": 777,
+      "degree_percentile": 79.80394621088351
+    },
+    "14302": {
+      "degree": 1875,
+      "degree_percentile": 98.69297473922333
+    },
+    "14312": {
+      "degree": 1479,
+      "degree_percentile": 95.01068241799673
+    },
+    "14315": {
+      "degree": 1481,
+      "degree_percentile": 95.04838506974991
+    },
+    "14322": {
+      "degree": 1815,
+      "degree_percentile": 98.34108332286038
+    },
+    "14345": {
+      "degree": 1528,
+      "degree_percentile": 95.73960035189143
+    },
+    "14368": {
+      "degree": 1543,
+      "degree_percentile": 95.85270830715093
+    },
+    "14422": {
+      "degree": 1232,
+      "degree_percentile": 90.71258011813498
+    },
+    "14436": {
+      "degree": 313,
+      "degree_percentile": 64.24531858740733
+    },
+    "14439": {
+      "degree": 46,
+      "degree_percentile": 54.50546688450421
+    },
+    "14441": {
+      "degree": 370,
+      "degree_percentile": 68.68166394369737
+    },
+    "14464": {
+      "degree": 799,
+      "degree_percentile": 80.59570189770014
+    },
+    "14486": {
+      "degree": 125,
+      "degree_percentile": 59.11775794897574
+    },
+    "14509": {
+      "degree": 1510,
+      "degree_percentile": 95.42541158728164
+    },
+    "14537": {
+      "degree": 1593,
+      "degree_percentile": 96.36797788111096
+    },
+    "14540": {
+      "degree": 1876,
+      "degree_percentile": 98.70554228980771
+    },
+    "14558": {
+      "degree": 1621,
+      "degree_percentile": 96.7450043986427
+    },
+    "14560": {
+      "degree": 257,
+      "degree_percentile": 62.46072640442378
+    },
+    "14581": {
+      "degree": 1321,
+      "degree_percentile": 92.25838884001509
+    },
+    "14587": {
+      "degree": 1613,
+      "degree_percentile": 96.6067613422144
+    },
+    "14623": {
+      "degree": 109,
+      "degree_percentile": 58.275732059821536
+    },
+    "14631": {
+      "degree": 59,
+      "degree_percentile": 55.28465502073646
+    },
+    "14668": {
+      "degree": 1419,
+      "degree_percentile": 94.21892673118009
+    },
+    "14709": {
+      "degree": 1110,
+      "degree_percentile": 88.72690712580118
+    },
+    "14731": {
+      "degree": 1593,
+      "degree_percentile": 96.36797788111096
+    },
+    "14735": {
+      "degree": 876,
+      "degree_percentile": 83.03380671107202
+    },
+    "14922": {
+      "degree": 26,
+      "degree_percentile": 52.72087470152067
+    },
+    "14956": {
+      "degree": 2464,
+      "degree_percentile": 99.92459469649366
+    },
+    "14963": {
+      "degree": 1849,
+      "degree_percentile": 98.52959658162625
+    },
+    "14976": {
+      "degree": 1740,
+      "degree_percentile": 97.8760839512379
+    },
+    "15039": {
+      "degree": 1191,
+      "degree_percentile": 90.15960789242176
+    },
+    "15090": {
+      "degree": 1881,
+      "degree_percentile": 98.7306773909765
+    },
+    "15135": {
+      "degree": 547,
+      "degree_percentile": 72.01206484856102
+    },
+    "15136": {
+      "degree": 1499,
+      "degree_percentile": 95.26203342968455
+    },
+    "15231": {
+      "degree": 1916,
+      "degree_percentile": 98.83121779565163
+    },
+    "15237": {
+      "degree": 1357,
+      "degree_percentile": 92.74852331280633
+    },
+    "15311": {
+      "degree": 1739,
+      "degree_percentile": 97.86351640065351
+    },
+    "15337": {
+      "degree": 1617,
+      "degree_percentile": 96.65703154455197
+    },
+    "15416": {
+      "degree": 1889,
+      "degree_percentile": 98.75581249214528
+    },
+    "15421": {
+      "degree": 1474,
+      "degree_percentile": 94.94784466507478
+    },
+    "15430": {
+      "degree": 1981,
+      "degree_percentile": 99.1579741108458
+    },
+    "15440": {
+      "degree": 1264,
+      "degree_percentile": 91.227849692095
+    },
+    "15441": {
+      "degree": 1815,
+      "degree_percentile": 98.34108332286038
+    },
+    "15445": {
+      "degree": 821,
+      "degree_percentile": 81.27434962925726
+    },
+    "15454": {
+      "degree": 1480,
+      "degree_percentile": 95.02324996858113
+    },
+    "15457": {
+      "degree": 1538,
+      "degree_percentile": 95.80243810481338
+    },
+    "15468": {
+      "degree": 662,
+      "degree_percentile": 74.83976373004901
+    },
+    "15495": {
+      "degree": 1619,
+      "degree_percentile": 96.70730174688953
+    },
+    "15515": {
+      "degree": 1179,
+      "degree_percentile": 89.94595953248712
+    },
+    "15516": {
+      "degree": 907,
+      "degree_percentile": 84.21515646600477
+    },
+    "15517": {
+      "degree": 825,
+      "degree_percentile": 81.5131330903607
+    },
+    "15518": {
+      "degree": 1092,
+      "degree_percentile": 88.43785346236018
+    },
+    "15519": {
+      "degree": 952,
+      "degree_percentile": 85.04461480457459
+    },
+    "15551": {
+      "degree": 1664,
+      "degree_percentile": 97.00892296091493
+    },
+    "15608": {
+      "degree": 801,
+      "degree_percentile": 80.68367475179087
+    },
+    "15616": {
+      "degree": 2005,
+      "degree_percentile": 99.23337941435214
+    },
+    "15623": {
+      "degree": 936,
+      "degree_percentile": 84.84353399522433
+    },
+    "15630": {
+      "degree": 848,
+      "degree_percentile": 82.02840266432072
+    },
+    "15719": {
+      "degree": 204,
+      "degree_percentile": 61.78207867286666
+    },
+    "15728": {
+      "degree": 708,
+      "degree_percentile": 75.80746512504713
+    },
+    "15766": {
+      "degree": 15,
+      "degree_percentile": 50.86087721503078
+    },
+    "15813": {
+      "degree": 1060,
+      "degree_percentile": 87.75920573080307
+    },
+    "15844": {
+      "degree": 1683,
+      "degree_percentile": 97.23513887143396
+    },
+    "16085": {
+      "degree": 1092,
+      "degree_percentile": 88.43785346236018
+    },
+    "16306": {
+      "degree": 73,
+      "degree_percentile": 56.36546437099409
+    },
+    "16477": {
+      "degree": 737,
+      "degree_percentile": 77.45381425160235
+    },
+    "17347": {
+      "degree": 965,
+      "degree_percentile": 85.68555988437853
+    },
+    "17348": {
+      "degree": 2,
+      "degree_percentile": 40.9576473545306
+    },
+    "17349": {
+      "degree": 1,
+      "degree_percentile": 34.447656151816005
+    },
+    "17350": {
+      "degree": 2,
+      "degree_percentile": 40.9576473545306
+    },
+    "17544": {
+      "degree": 5,
+      "degree_percentile": 46.77642327510368
+    },
+    "17626": {
+      "degree": 556,
+      "degree_percentile": 72.16287545557371
+    },
+    "17652": {
+      "degree": 94,
+      "degree_percentile": 57.19492270956391
+    },
+    "17710": {
+      "degree": 1,
+      "degree_percentile": 34.447656151816005
+    },
+    "19160": {
+      "degree": 1187,
+      "degree_percentile": 90.05906748774663
+    },
+    "19161": {
+      "degree": 1,
+      "degree_percentile": 34.447656151816005
+    },
+    "20154": {
+      "degree": 750,
+      "degree_percentile": 78.59746135478196
+    },
+    "20169": {
+      "degree": 1604,
+      "degree_percentile": 96.51878848812366
+    },
+    "20192": {
+      "degree": 10,
+      "degree_percentile": 48.950609526203344
+    },
+    "20193": {
+      "degree": 66,
+      "degree_percentile": 56.05127560638432
+    },
+    "24242": {
+      "degree": 11,
+      "degree_percentile": 80.49115015348443
+    },
+    "27256": {
+      "degree": 52,
+      "degree_percentile": 91.38173302107728
+    },
+    "3294": {
+      "degree": 93,
+      "degree_percentile": 55.87076722922916
+    },
+    "574": {
+      "degree": 136,
+      "degree_percentile": 69.31444472552492
+    },
+    "6963": {
+      "degree": 184,
+      "degree_percentile": 85.69621625528532
+    },
+    "7618": {
+      "degree": 230,
+      "degree_percentile": 93.07216941924759
+    },
+    "9126": {
+      "degree": 150,
+      "degree_percentile": 74.64132123884211
+    },
+    "9441": {
+      "degree": 132,
+      "degree_percentile": 67.82552130389217
+    }
+  },
+  "numerators": {
+    "benchmark_f1": 2,
+    "benchmark_precision": 1,
+    "benchmark_recall": 1,
+    "off_question_rate": 97,
+    "question_valid_precision": 1,
+    "ungrounded_rate": 0,
+    "unresolved_rate": 0
+  },
+  "off_question_rate": 0.9897959183673469,
+  "pages_requested": 14,
+  "primary_reason_counts": {
+    "SHORTCUT": 0,
+    "WRONG_BRIDGE_TYPE": 0,
+    "WRONG_HOP_COUNT": 98,
+    "WRONG_RELATION_HOP1": 0,
+    "WRONG_RELATION_HOP2": 0,
+    "WRONG_TARGET_TYPE": 0
+  },
+  "query_id": "BH2_05793",
+  "question_valid_precision": 0.01020408163265306,
+  "reason_counts": {
+    "SHORTCUT": 0,
+    "WRONG_BRIDGE_TYPE": 0,
+    "WRONG_HOP_COUNT": 98,
+    "WRONG_RELATION_HOP1": 0,
+    "WRONG_RELATION_HOP2": 0,
+    "WRONG_TARGET_TYPE": 0
+  },
+  "resolved_count": 98,
+  "run_id": "expansion_v1",
+  "text_tool_call_count": 0,
+  "tool_calls_used": 28,
+  "undefined_counts": {
+    "benchmark_f1": 0,
+    "benchmark_precision": 0,
+    "benchmark_recall": 0,
+    "bridge_conditional_recall": 0,
+    "bridge_rank": 0,
+    "degree": 0,
+    "degree_percentile": 0,
+    "list_size": 0,
+    "off_question_rate": 0,
+    "primary_path_max_list_size": 0,
+    "question_valid_precision": 0,
+    "ungrounded_rate": 0,
+    "unresolved_rate": 0
+  },
+  "ungrounded_rate": 0.0,
+  "unresolved_rate": 0.0
+}

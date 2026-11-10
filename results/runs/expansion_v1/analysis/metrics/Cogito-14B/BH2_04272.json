@@ -1,0 +1,198 @@
+{
+  "agent_id": "Cogito-14B",
+  "answer_count": null,
+  "answers": [],
+  "attempt": 1,
+  "benchmark_f1": null,
+  "benchmark_precision": null,
+  "benchmark_recall": null,
+  "bridge_conditional_recall": {
+    "14186": null,
+    "14275": null,
+    "14612": null,
+    "14737": null,
+    "14792": null,
+    "14868": null,
+    "15134": null,
+    "15413": null,
+    "15481": null,
+    "20212": null,
+    "20434": null
+  },
+  "bridge_rank": {
+    "14186": 1,
+    "14275": 2,
+    "14612": 3,
+    "14737": 4,
+    "14792": 5,
+    "14868": 6,
+    "15134": 10,
+    "15413": 11,
+    "15481": 12,
+    "20212": 13,
+    "20434": 14
+  },
+  "bridge_recall_counts": {
+    "14186": {
+      "correct": null,
+      "total": 68
+    },
+    "14275": {
+      "correct": null,
+      "total": 211
+    },
+    "14612": {
+      "correct": null,
+      "total": 37
+    },
+    "14737": {
+      "correct": null,
+      "total": 52
+    },
+    "14792": {
+      "correct": null,
+      "total": 174
+    },
+    "14868": {
+      "correct": null,
+      "total": 85
+    },
+    "15134": {
+      "correct": null,
+      "total": 52
+    },
+    "15413": {
+      "correct": null,
+      "total": 77
+    },
+    "15481": {
+      "correct": null,
+      "total": 52
+    },
+    "20212": {
+      "correct": null,
+      "total": 54
+    },
+    "20434": {
+      "correct": null,
+      "total": 14
+    }
+  },
+  "bridges_explored": [
+    "14186",
+    "14275",
+    "14612",
+    "14737",
+    "14792",
+    "14868",
+    "15134",
+    "15413",
+    "15481",
+    "20212",
+    "20434"
+  ],
+  "budget_exhausted": true,
+  "cause": "CONNECTION",
+  "construction": "UNION",
+  "denominators": {
+    "benchmark_f1": null,
+    "benchmark_precision": null,
+    "benchmark_recall": 308,
+    "off_question_rate": null,
+    "question_valid_precision": null,
+    "ungrounded_rate": null,
+    "unresolved_rate": null
+  },
+  "early_stop": null,
+  "episode_status": "ERROR",
+  "found_r1": true,
+  "hop1_status": "H1_CLEAN",
+  "label_a_counts": null,
+  "label_b_counts": null,
+  "node_statistics": {
+    "14186": {
+      "degree": 1608,
+      "degree_percentile": 96.55649113987684
+    },
+    "14275": {
+      "degree": 1539,
+      "degree_percentile": 95.81500565539777
+    },
+    "14612": {
+      "degree": 1287,
+      "degree_percentile": 91.59230865904236
+    },
+    "14737": {
+      "degree": 1266,
+      "degree_percentile": 91.27811989443258
+    },
+    "14792": {
+      "degree": 1741,
+      "degree_percentile": 97.8886515018223
+    },
+    "14868": {
+      "degree": 1198,
+      "degree_percentile": 90.22244564534373
+    },
+    "15134": {
+      "degree": 791,
+      "degree_percentile": 80.26894558250596
+    },
+    "15413": {
+      "degree": 1395,
+      "degree_percentile": 93.82933266306397
+    },
+    "15481": {
+      "degree": 1550,
+      "degree_percentile": 95.99095136357924
+    },
+    "20212": {
+      "degree": 572,
+      "degree_percentile": 72.3136860625864
+    },
+    "20434": {
+      "degree": 554,
+      "degree_percentile": 72.15030790498932
+    },
+    "37423": {
+      "degree": 191,
+      "degree_percentile": 98.98126463700234
+    }
+  },
+  "numerators": {
+    "benchmark_f1": null,
+    "benchmark_precision": null,
+    "benchmark_recall": null,
+    "off_question_rate": null,
+    "question_valid_precision": null,
+    "ungrounded_rate": null,
+    "unresolved_rate": null
+  },
+  "off_question_rate": null,
+  "pages_requested": 15,
+  "primary_reason_counts": null,
+  "query_id": "BH2_04272",
+  "question_valid_precision": null,
+  "reason_counts": null,
+  "resolved_count": null,
+  "run_id": "expansion_v1",
+  "text_tool_call_count": 0,
+  "tool_calls_used": 30,
+  "undefined_counts": {
+    "benchmark_f1": 1,
+    "benchmark_precision": 1,
+    "benchmark_recall": 1,
+    "bridge_conditional_recall": 11,
+    "bridge_rank": 0,
+    "degree": 0,
+    "degree_percentile": 0,
+    "list_size": 0,
+    "off_question_rate": 1,
+    "primary_path_max_list_size": 0,
+    "question_valid_precision": 1,
+    "ungrounded_rate": 1,
+    "unresolved_rate": 1
+  },
+  "ungrounded_rate": null,
+  "unresolved_rate": null
+}

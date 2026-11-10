@@ -89,30 +89,68 @@ def latest_rows(metrics_dir: Path, agent_order: list[str]) -> dict[tuple[str, st
     return rows
 
 
-def load_run(run_id: str, manifest: str, root: Path = ROOT) -> dict:
+def _load_component(run_id: str, manifest: str, agents: list[str], root: Path) -> dict:
+    """Manifest rows, question sheet, latest-attempt metrics rows and episode records of one run."""
     run_dir = root / "results/runs" / run_id
-    analysis = run_dir / "analysis"
-    cof = json.loads((analysis / "cofailure.json").read_text(encoding="utf-8"))
-    nulls = json.loads((analysis / "nulls.json").read_text(encoding="utf-8"))
-    agents = cof["agent_order"]
-    if nulls["agent_order"] != agents:
-        raise ValueError("cofailure.json and nulls.json list different agent orders")
     man = _jsonl(root / "data/processed/manifests" / f"{manifest}.jsonl")
     sheet = {r["query_id"]: r for r in _jsonl(root / "data/agent_inputs" / f"{manifest}.jsonl")}
     query_ids = [r["query_id"] for r in man]
-    if sorted(query_ids) != sorted(sheet) or sorted(query_ids) != sorted(q["query_id"] for q in cof["queries"]):
-        raise ValueError("manifest, agent-input sheet and cofailure.json list different queries")
-    rows = latest_rows(analysis / "metrics", agents)
+    if sorted(query_ids) != sorted(sheet):
+        raise ValueError(f"{manifest}: manifest and agent-input sheet list different queries")
+    rows = latest_rows(run_dir / "analysis" / "metrics", agents)
     expected = {(a, q) for a in agents for q in query_ids}
     if set(rows) != expected:
-        raise ValueError(f"metrics rows: missing {sorted(expected - set(rows))[:5]}, "
+        raise ValueError(f"{run_id} metrics rows: missing {sorted(expected - set(rows))[:5]}, "
                          f"extra {sorted(set(rows) - expected)[:5]}")
     records = {}
     for (agent, q), row in rows.items():
         path = run_dir / f"{q}__{agent}__a{row['attempt']}.json"
         records[(agent, q)] = json.loads(path.read_text(encoding="utf-8"))
-    return {"run_id": run_id, "manifest": manifest, "agents": agents, "manifest_rows": man,
-            "sheet": sheet, "cofailure": cof, "nulls": nulls, "rows": rows, "records": records}
+    return {"manifest_rows": man, "sheet": sheet, "rows": rows, "records": records}
+
+
+def _check_analysis(cof: dict, nulls: dict, query_ids: list[str]) -> list[str]:
+    agents = cof["agent_order"]
+    if nulls["agent_order"] != agents:
+        raise ValueError("cofailure.json and nulls.json list different agent orders")
+    if sorted(query_ids) != sorted(q["query_id"] for q in cof["queries"]):
+        raise ValueError("manifest(s) and cofailure.json list different queries")
+    return agents
+
+
+def load_run(run_id: str, manifest: str, root: Path = ROOT) -> dict:
+    analysis = root / "results/runs" / run_id / "analysis"
+    cof = json.loads((analysis / "cofailure.json").read_text(encoding="utf-8"))
+    nulls = json.loads((analysis / "nulls.json").read_text(encoding="utf-8"))
+    comp = _load_component(run_id, manifest, cof["agent_order"], root)
+    agents = _check_analysis(cof, nulls, [r["query_id"] for r in comp["manifest_rows"]])
+    return {"run_id": run_id, "manifest": manifest, "agents": agents, "cofailure": cof, "nulls": nulls,
+            "gate": "D6", "source": f"results/runs/{run_id}/analysis/",
+            "title": f"Pilot report — run `{run_id}`", **comp}
+
+
+def load_combined(out_id: str, root: Path = ROOT) -> dict:
+    """Pilot + expansion (D7): combined analysis from scripts/30_combined_analysis.py, rows and records from
+    each component run (latest attempts, §19)."""
+    folder = root / "results/combined" / out_id
+    spec = json.loads((folder / "components.json").read_text(encoding="utf-8"))
+    cof = json.loads((folder / "cofailure.json").read_text(encoding="utf-8"))
+    nulls = json.loads((folder / "nulls.json").read_text(encoding="utf-8"))
+    merged: dict = {"manifest_rows": [], "sheet": {}, "rows": {}, "records": {}}
+    for run_id, comp_spec in sorted(spec["components"].items()):
+        comp = _load_component(run_id, comp_spec["manifest"], cof["agent_order"], root)
+        merged["manifest_rows"] += comp["manifest_rows"]
+        for key in ("sheet", "rows", "records"):
+            clash = set(merged[key]) & set(comp[key])
+            if clash:
+                raise ValueError(f"{run_id}: {key} entries also in another component: {sorted(clash)[:5]}")
+            merged[key].update(comp[key])
+    agents = _check_analysis(cof, nulls, [r["query_id"] for r in merged["manifest_rows"]])
+    manifests = " + ".join(c["manifest"] for _, c in sorted(spec["components"].items()))
+    return {"run_id": out_id, "manifest": manifests, "agents": agents, "cofailure": cof, "nulls": nulls,
+            "gate": "D7", "source": f"results/combined/{out_id}/",
+            "title": f"Pilot + expansion report — `{out_id}` (runs "
+                     + ", ".join(f"`{r}`" for r in sorted(spec["components"])) + ")", **merged}
 
 
 # ------------------------------------------------------------------------------------------- formatting
@@ -395,6 +433,50 @@ def d6_quantities(data: dict, tech: dict) -> dict:
     }
 
 
+# ------------------------------------------------------------------------- D7: candidate-rule flags
+
+MECHANISM_BY_STEP = {1: "WRONG_TURN_HOP1", 2: "WRONG_TURN_HOP2"}
+
+
+def _event_positions(case: dict, match) -> list[str]:
+    """§21 mechanism of a PCF event from the holders' primary paths: a one-step path is SHORTCUT, otherwise
+    the step (1 or 2) at which the matching edge sits. Every distinct value over holders is returned."""
+    found = set()
+    for answers in case["per_agent"].values():
+        for ans in answers:
+            path = ans["primary_path"] or []
+            for i, edge in enumerate(path):
+                if match(edge):
+                    found.add("SHORTCUT" if len(path) == 1 else MECHANISM_BY_STEP.get(i + 1, f"step {i + 1}"))
+    return sorted(found)
+
+
+def candidate_flags(cof: dict) -> list[dict]:
+    """Queries meeting the flag part of the §21 candidate rule (CF3^{Q,H1} = 1, or a PCF event shared by
+    >= 3 agents), with every shared event as stored in cofailure.json. The blockability and matched-control
+    parts of the rule need the KG and are not evaluated here."""
+    out = []
+    for q in sorted(cof["queries"], key=lambda q: q["query_id"]):
+        if not (q["hop1_clean"]["cf3"] or q["pcf_rel3"] or q["pcf_node3"] or q["pcf_shortcut3"]):
+            continue
+        events = []
+        for c in q["pcf_rel_cases"]:
+            if c["agent_count"] >= 3:
+                pos = _event_positions(c, lambda e, c=c: e["u"] == c["node_id"] and e["label"] == c["relation"])
+                events.append(f"REL ({c['node_id']}, {c['relation']}) × {c['agent_count']} [{', '.join(pos)}]")
+        for c in q["pcf_node_cases"]:
+            if c["agent_count"] >= 3:
+                events.append(f"NODE {c['node_id']} × {c['agent_count']} [OFF_PATH_NODE]")
+        for c in q["pcf_shortcut_cases"]:
+            if c["agent_count"] >= 3:
+                events.append(f"SHORTCUT ({c['node_id']}, {c['relation']}) × {c['agent_count']} [SHORTCUT]")
+        out.append({"query_id": q["query_id"], "relation_type": q["relation_type"],
+                    "ambiguity_tag": q["ambiguity_tag"], "cf3_h1": int(q["hop1_clean"]["cf3"]),
+                    "pcf_rel3": int(q["pcf_rel3"]), "pcf_node3": int(q["pcf_node3"]),
+                    "pcf_shortcut3": int(q["pcf_shortcut3"]), "events": events})
+    return out
+
+
 # ------------------------------------------------------------------------------------------- render
 
 def render(data: dict) -> str:
@@ -408,8 +490,8 @@ def render(data: dict) -> str:
     L: list[str] = []
     w = L.append
 
-    w(f"# Pilot report — run `{data['run_id']}`\n")
-    w(f"Generated by `scripts/28_pilot_report.py` from `results/runs/{data['run_id']}/analysis/` "
+    w(f"# {data['title']}\n")
+    w(f"Generated by `scripts/28_pilot_report.py` from `{data['source']}` "
       f"(manifest `{data['manifest']}`, {len(man)} queries × {len(agents)} agents, latest attempts, protocol §19). "
       "All numbers are descriptive. Agent order: " + ", ".join(agents) + ".\n")
     w(f"SOURCE_NAME_OVERLAP queries (§19.1): {', '.join(overlap) or 'none'}. Every co-failure table and "
@@ -599,7 +681,9 @@ def render(data: dict) -> str:
         w("No CF3^Q shared entity.")
     w("")
 
-    w("### D6 quantities (decision_rules.md D6; latest attempts) — outcome not stated here (S29)\n")
+    gate = data.get("gate", "D6")
+    w(f"### {gate} quantities (decision_rules.md {gate}; latest attempts) — outcome not stated here "
+      f"({'S29' if gate == 'D6' else 'the researcher applies D7'})\n")
     o = d6["O_H1"]
     w(table(["Quantity", "Value"], [
         ["E (technical failures / episodes)", frac(*d6["E"], digits=4)],
@@ -616,6 +700,19 @@ def render(data: dict) -> str:
       f"→ flag = **{'set' if d6['ordering_flag'] else 'not set'}**.")
     w(f"- Ambiguity flag (> 70% of the N queries in R1/R2/BOTH_AMBIGUOUS types): "
       f"{frac(*d6['ambiguity_share'])} → flag = **{'set' if d6['ambiguity_flag'] else 'not set'}**.\n")
+    if gate == "D7":
+        flags = candidate_flags(cof)
+        w("**C — queries meeting the flag part of the §21 candidate rule** (CF3^{Q,H1} = 1, or a PCF event "
+          "shared by ≥ 3 agents). `C` also requires that the shared feature can be blocked while a valid route "
+          "remains and that a matched control exists (§21); those checks need the KG and are not made in this "
+          "report. Events: (node, label) × holders [§21 mechanism from the holders' primary paths].\n")
+        w(table(["Query", "Relation type", "Ambiguity tag", "SOURCE_NAME_OVERLAP", "CF3^{Q,H1}", "PCF_REL3",
+                 "PCF_NODE3", "PCF_SHORTCUT3", "Shared events (≥ 3 agents)"],
+                [[f["query_id"], f["relation_type"], f["ambiguity_tag"],
+                  "yes" if f["query_id"] in set(overlap) else "no", f["cf3_h1"], f["pcf_rel3"], f["pcf_node3"],
+                  f["pcf_shortcut3"], "; ".join(f["events"]) or "—"] for f in flags]) if flags
+          else "No query meets the flag part of the rule.")
+        w(f"\nQueries meeting the flag part of the rule: {len(flags)} (an upper bound for C).\n")
 
     # ------------------------------------------------------------------ (C)
     w("## (C) Open questions\n")
@@ -649,10 +746,12 @@ def main(argv=None):
     parser = argparse.ArgumentParser(description=__doc__.splitlines()[0])
     parser.add_argument("--manifest", default="pilot")
     parser.add_argument("--run-id", default="pilot_v1")
-    parser.add_argument("--out", default=None, help="default: results/reports/<run_id>_report.md")
+    parser.add_argument("--combined", default=None, metavar="OUT_ID",
+                        help="report over results/combined/OUT_ID (scripts/30_combined_analysis.py) for D7")
+    parser.add_argument("--out", default=None, help="default: results/reports/<run_id or OUT_ID>_report.md")
     args = parser.parse_args(argv)
-    data = load_run(args.run_id, args.manifest)
-    out = Path(args.out) if args.out else ROOT / "results/reports" / f"{args.run_id}_report.md"
+    data = load_combined(args.combined) if args.combined else load_run(args.run_id, args.manifest)
+    out = Path(args.out) if args.out else ROOT / "results/reports" / f"{data['run_id']}_report.md"
     if out.exists():
         raise FileExistsError(f"{out} exists; reports are not overwritten (use --out for a new file)")
     out.parent.mkdir(parents=True, exist_ok=True)

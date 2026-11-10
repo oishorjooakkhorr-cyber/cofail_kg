@@ -1,0 +1,132 @@
+{
+  "agent_id": "Cogito-14B",
+  "answer_count": null,
+  "answers": [],
+  "attempt": 1,
+  "benchmark_f1": null,
+  "benchmark_precision": null,
+  "benchmark_recall": null,
+  "bridge_conditional_recall": {
+    "14783": null,
+    "14899": null,
+    "14993": null,
+    "15431": null,
+    "15458": null
+  },
+  "bridge_rank": {
+    "14783": 1,
+    "14899": 2,
+    "14993": 3,
+    "15431": 4,
+    "15458": 5
+  },
+  "bridge_recall_counts": {
+    "14783": {
+      "correct": null,
+      "total": 18
+    },
+    "14899": {
+      "correct": null,
+      "total": 146
+    },
+    "14993": {
+      "correct": null,
+      "total": 38
+    },
+    "15431": {
+      "correct": null,
+      "total": 57
+    },
+    "15458": {
+      "correct": null,
+      "total": 12
+    }
+  },
+  "bridges_explored": [
+    "14783",
+    "14899",
+    "14993",
+    "15431",
+    "15458"
+  ],
+  "budget_exhausted": false,
+  "cause": "CONNECTION",
+  "construction": "UNION",
+  "denominators": {
+    "benchmark_f1": null,
+    "benchmark_precision": null,
+    "benchmark_recall": 178,
+    "off_question_rate": null,
+    "question_valid_precision": null,
+    "ungrounded_rate": null,
+    "unresolved_rate": null
+  },
+  "early_stop": null,
+  "episode_status": "ERROR",
+  "found_r1": true,
+  "hop1_status": "H1_CLEAN",
+  "label_a_counts": null,
+  "label_b_counts": null,
+  "node_statistics": {
+    "14783": {
+      "degree": 898,
+      "degree_percentile": 83.7627246449667
+    },
+    "14899": {
+      "degree": 1992,
+      "degree_percentile": 99.18310921201457
+    },
+    "14993": {
+      "degree": 1981,
+      "degree_percentile": 99.1579741108458
+    },
+    "15431": {
+      "degree": 1660,
+      "degree_percentile": 96.99635541033052
+    },
+    "15458": {
+      "degree": 1709,
+      "degree_percentile": 97.48648988312178
+    },
+    "27770": {
+      "degree": 26,
+      "degree_percentile": 79.77166276346604
+    }
+  },
+  "numerators": {
+    "benchmark_f1": null,
+    "benchmark_precision": null,
+    "benchmark_recall": null,
+    "off_question_rate": null,
+    "question_valid_precision": null,
+    "ungrounded_rate": null,
+    "unresolved_rate": null
+  },
+  "off_question_rate": null,
+  "pages_requested": 6,
+  "primary_reason_counts": null,
+  "query_id": "BH2_04289",
+  "question_valid_precision": null,
+  "reason_counts": null,
+  "resolved_count": null,
+  "run_id": "expansion_v1",
+  "text_tool_call_count": 0,
+  "tool_calls_used": 12,
+  "undefined_counts": {
+    "benchmark_f1": 1,
+    "benchmark_precision": 1,
+    "benchmark_recall": 1,
+    "bridge_conditional_recall": 5,
+    "bridge_rank": 0,
+    "degree": 0,
+    "degree_percentile": 0,
+    "list_size": 0,
+    "off_question_rate": 1,
+    "primary_path_max_list_size": 0,
+    "question_valid_precision": 1,
+    "ungrounded_rate": 1,
+    "unresolved_rate": 1
+  },
+  "ungrounded_rate": null,
+  "unresolved_rate": null
+}
