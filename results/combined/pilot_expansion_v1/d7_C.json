@@ -1,0 +1,242 @@
+{
+  "C": 0,
+  "candidates": 8,
+  "combined": "pilot_expansion_v1",
+  "flagged_queries": 8,
+  "queries": [
+    {
+      "ambiguity_tag": "R2_AMBIGUOUS",
+      "candidate": true,
+      "cf3_h1": 1,
+      "controls": {
+        "closest": [],
+        "eligible": 0,
+        "slots": 0,
+        "slots_opened_by_an_agent": 0,
+        "treatment_branch_degree": 21,
+        "within_25pct": 0
+      },
+      "feature": {
+        "agent_count": 3,
+        "agents": [
+          "Cogito-14B",
+          "Granite41-8B",
+          "Ministral3-14B"
+        ],
+        "earliest_step": 2,
+        "mechanism": "WRONG_TURN_HOP2",
+        "r": "off-label use",
+        "u": "33618"
+      },
+      "has_matched_control": false,
+      "query_id": "BH2_03356",
+      "relation_type": "gene/protein:disease:drug",
+      "status": "CONSISTENT"
+    },
+    {
+      "ambiguity_tag": "R1_AMBIGUOUS",
+      "candidate": true,
+      "cf3_h1": 0,
+      "controls": {
+        "closest": [],
+        "eligible": 0,
+        "slots": 0,
+        "slots_opened_by_an_agent": 0,
+        "treatment_branch_degree": 5,
+        "within_25pct": 0
+      },
+      "feature": {
+        "agent_count": 3,
+        "agents": [
+          "Cogito-14B",
+          "Granite41-8B",
+          "Ministral3-14B"
+        ],
+        "earliest_step": 1,
+        "mechanism": "SHORTCUT",
+        "r": "drug_protein",
+        "u": "16843"
+      },
+      "has_matched_control": false,
+      "query_id": "BH2_04650",
+      "relation_type": "drug:disease:gene/protein",
+      "status": "CONSISTENT"
+    },
+    {
+      "ambiguity_tag": "R1_AMBIGUOUS",
+      "candidate": true,
+      "cf3_h1": 0,
+      "controls": {
+        "closest": [],
+        "eligible": 0,
+        "slots": 0,
+        "slots_opened_by_an_agent": 0,
+        "treatment_branch_degree": 2,
+        "within_25pct": 0
+      },
+      "feature": {
+        "agent_count": 3,
+        "agents": [
+          "Cogito-14B",
+          "Granite41-8B",
+          "Ministral3-14B"
+        ],
+        "earliest_step": 1,
+        "mechanism": "SHORTCUT",
+        "r": "drug_protein",
+        "u": "17226"
+      },
+      "has_matched_control": false,
+      "query_id": "BH2_04856",
+      "relation_type": "drug:disease:gene/protein",
+      "status": "CONSISTENT"
+    },
+    {
+      "ambiguity_tag": "R2_AMBIGUOUS",
+      "candidate": true,
+      "cf3_h1": 1,
+      "controls": {
+        "closest": [],
+        "eligible": 0,
+        "slots": 0,
+        "slots_opened_by_an_agent": 0,
+        "treatment_branch_degree": 2,
+        "within_25pct": 0
+      },
+      "feature": {
+        "agent_count": 3,
+        "agents": [
+          "Cogito-14B",
+          "Gemma4-12B",
+          "Granite41-8B"
+        ],
+        "earliest_step": 2,
+        "mechanism": "WRONG_TURN_HOP2",
+        "r": "off-label use",
+        "u": "14052"
+      },
+      "has_matched_control": false,
+      "query_id": "BH2_05290",
+      "relation_type": "gene/protein:drug:disease",
+      "status": "CONSISTENT"
+    },
+    {
+      "ambiguity_tag": "BOTH_AMBIGUOUS",
+      "candidate": true,
+      "cf3_h1": 1,
+      "controls": {
+        "closest": [],
+        "eligible": 0,
+        "slots": 0,
+        "slots_opened_by_an_agent": 0,
+        "treatment_branch_degree": 11,
+        "within_25pct": 0
+      },
+      "feature": {
+        "agent_count": 4,
+        "agents": [
+          "Cogito-14B",
+          "Gemma4-12B",
+          "Granite41-8B",
+          "Ministral3-14B"
+        ],
+        "earliest_step": 2,
+        "mechanism": "WRONG_TURN_HOP2",
+        "r": "off-label use",
+        "u": "29749"
+      },
+      "has_matched_control": false,
+      "query_id": "BH2_05778",
+      "relation_type": "effect/phenotype:disease:drug",
+      "status": "CONSISTENT"
+    },
+    {
+      "ambiguity_tag": "BOTH_AMBIGUOUS",
+      "candidate": true,
+      "cf3_h1": 1,
+      "controls": {
+        "closest": [],
+        "eligible": 0,
+        "slots": 1,
+        "slots_opened_by_an_agent": 1,
+        "treatment_branch_degree": 2,
+        "within_25pct": 0
+      },
+      "feature": {
+        "agent_count": 3,
+        "agents": [
+          "Cogito-14B",
+          "Gemma4-12B",
+          "Ministral3-14B"
+        ],
+        "earliest_step": 2,
+        "mechanism": "WRONG_TURN_HOP2",
+        "r": "off-label use",
+        "u": "32520"
+      },
+      "has_matched_control": false,
+      "query_id": "BH2_05890",
+      "relation_type": "effect/phenotype:disease:drug",
+      "status": "CONSISTENT"
+    },
+    {
+      "ambiguity_tag": "BOTH_AMBIGUOUS",
+      "candidate": true,
+      "cf3_h1": 1,
+      "controls": {
+        "closest": [],
+        "eligible": 0,
+        "slots": 0,
+        "slots_opened_by_an_agent": 0,
+        "treatment_branch_degree": 2,
+        "within_25pct": 0
+      },
+      "feature": {
+        "agent_count": 3,
+        "agents": [
+          "Cogito-14B",
+          "Granite41-8B",
+          "Ministral3-14B"
+        ],
+        "earliest_step": 2,
+        "mechanism": "WRONG_TURN_HOP2",
+        "r": "off-label use",
+        "u": "33228"
+      },
+      "has_matched_control": false,
+      "query_id": "BH2_05997",
+      "relation_type": "effect/phenotype:disease:drug",
+      "status": "CONSISTENT"
+    },
+    {
+      "ambiguity_tag": "BOTH_AMBIGUOUS",
+      "candidate": true,
+      "cf3_h1": 1,
+      "controls": {
+        "closest": [],
+        "eligible": 0,
+        "slots": 0,
+        "slots_opened_by_an_agent": 0,
+        "treatment_branch_degree": 8,
+        "within_25pct": 0
+      },
+      "feature": {
+        "agent_count": 4,
+        "agents": [
+          "Cogito-14B",
+          "Gemma4-12B",
+          "Granite41-8B",
+          "Ministral3-14B"
+        ],
+        "earliest_step": 2,
+        "mechanism": "WRONG_TURN_HOP2",
+        "r": "off-label use",
+        "u": "30800"
+      },
+      "has_matched_control": false,
+      "query_id": "BH2_06016",
+      "relation_type": "effect/phenotype:disease:drug",
+      "status": "CONSISTENT"
+    }
+  ]
+}

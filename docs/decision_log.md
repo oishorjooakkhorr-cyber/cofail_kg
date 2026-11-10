@@ -2913,3 +2913,26 @@ interrupted episode has no record, so it is not completed. The code-change rule 
 Data seen: run progress counts and failure statuses only; no co-failure or null results were seen
 before the run finished.
 This entry changes only docs/decision_log.md (not a pinned run source).
+
+## 2026-11-11 — S30 — Reading of protocol §21 for D7 quantity C; C computed
+Decision (researcher): how the frozen §21 matched-control rule is applied when computing D7's `C`.
+§21 text is unchanged; these are readings of wording §21 leaves open, applied by
+`scripts/30_candidates_c.py`.
+Answers on 2026-11-10 (before any C value was computed):
+1. Control location: same query, same mechanism, another node at the same hop position. For a feature
+   at s (SHORTCUT / step-1 wrong turn) s is the only node there, so the control is another label at s.
+2. "Not used by any agent": no agent of the original run called get_neighbors on that node with that label.
+3. Degree match: branch degree of (u, r); within ±25%, else the nearest (so any eligible control matches).
+4. Surgery: hide label r at node u.
+Follow-ups on 2026-11-11:
+A. Hop-1 nodes for a hop-2 feature are neighbours of s through an R1 label.
+B. "Same label where possible": same label only; no fallback to other labels.
+Data seen before the follow-ups: the 8 flagged queries and, as stated in the questions, which of them had
+an R1-reached hop-1 node and which had other labels only (structural facts). Claude Code had computed C
+under its own provisional readings before asking (draft kept outside the repository, not used); the
+per-reading C values were not shown in the questions.
+Result: C = 0 of 8 flagged queries (results/combined/pilot_expansion_v1/d7_C.json, d7_C.csv). All 8 meet
+the candidate rule (CONSISTENT; the blocked label is in neither R1 nor R2, so a valid route remains);
+none has a matched control: 7 have no same-label control slot, BH2_05890 has one, opened by an agent.
+Why: §21 does not define the control's location, "used", the degree compared or the label fallback.
+Changes to protocol or decision rules: none. D7 outcome: not stated here (researcher applies D7).
