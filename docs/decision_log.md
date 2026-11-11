@@ -2936,3 +2936,53 @@ the candidate rule (CONSISTENT; the blocked label is in neither R1 nor R2, so a 
 none has a matched control: 7 have no same-label control slot, BH2_05890 has one, opened by an agent.
 Why: §21 does not define the control's location, "used", the degree compared or the label fallback.
 Changes to protocol or decision rules: none. D7 outcome: not stated here (researcher applies D7).
+
+## 2026-11-11 — S39 (EXPLORATORY) — Full primary-population run `full_v1`; Gemma4-12B first
+Decision (researcher instruction, 2026-11-11: "just consider it as an exploratory and start and start
+with gemma and then stop to take my permission which model should go next"): run the frozen panel on
+the rest of the primary population, as an exploratory run. One model at a time; Gemma4-12B first;
+after each model finishes the run stops and the researcher chooses the next model.
+Status: EXPLORATORY (runbook §0.4, protocol §20). This is not the D8 scale-up: D8 allows scaling only
+after a CONFIRMATORY or EXPLORATORY D7, and no D7 outcome is logged. No gate is applied to this run.
+Population (proposed by Claude Code on 2026-11-11 and not changed by the researcher; to be confirmed):
+every query of data/processed/primary_population.csv that is in none of the screening, smoke, pilot
+and expansion manifests: 6,652 queries (6,444 SINGLE_BRIDGE / 208 MULTI_BRIDGE), 26,608 episodes for
+four agents. INCONSISTENT and LEAKY_QUESTION queries and the three D1-FAIL types stay out (§7.2).
+Everything frozen stays identical: panel `models_s21r2`, prompt P1, tools T1, §9.1 runtime.
+Departure from §9.2 to note: the order of the models after Gemma4-12B is chosen by the researcher at
+each stop and may differ from the frozen agent order. Episodes are independent fresh conversations.
+Compute estimate (mean episode seconds over the 2,000 pilot_v1 + expansion_v1 episodes): Gemma4-12B
+17.2 s (about 1.3 days for 6,652), Granite41-8B 64.4 s (5.0 days), Ministral3-14B 94.7 s (7.3 days),
+Cogito-14B 83.6 s (6.4 days); about 20 days in total, excluding server starts and interruptions.
+Engineering (scripts/39_*): one manifest `full`, lines ordered by SHA256("42" + query_id) so that an
+interrupted model covers a pseudo-random subset; its two hashes are written once to a new file
+configs/frozen_hashes_full.yaml (key `manifests_full`), not to configs/frozen_hashes.yaml, because that
+file is a pinned run source of pilot_v1 / expansion_v1 and a byte change would make their pinned-source
+check refuse a re-analysis. No existing frozen entry and no file pinned by those runs is changed.
+This departs from the CLAUDE.md rule that every frozen hash lives in configs/frozen_hashes.yaml; the
+researcher may move the entry there later.
+Data seen before deciding: pilot_v1 and expansion_v1 results and reports (all of them).
+Changes to protocol or decision rules: none.
+
+## 2026-11-11 — S39 (EXPLORATORY) — Leakage scan of the full-run candidates; 24 queries excluded
+Decision (researcher, 2026-11-11, answers to two questions before any episode ran): exclude from the
+full run (a) the 19 queries that fail the literal protocol §19.1(a) rule and (b) the 5 queries whose
+short gold-bridge name appears in the start entity's name. The run population is 6,628 queries
+(6,420 SINGLE_BRIDGE / 208 MULTI_BRIDGE), 26,512 episodes for four agents; this replaces the 6,652 /
+26,608 of the entry above.
+(a) 19 queries of type drug:disease:gene/protein whose gold answers include gene DNM1, PrimeKG ID 30.
+    The system prompt contains the number 30 (the tool budget), so the gold-ID whole-word match fails.
+    The system prompt is the same for every query.
+(b) BH2_01171 (PTH), BH2_06445 (C1S), BH2_06957 (LCK), BH2_06154 (ALK), BH2_06351 (C3): the gold
+    bridge is a gene whose name is shorter than 4 characters and occurs as a whole word inside the
+    canonical PrimeKG name of the start entity. Names under 4 characters are manual-review items in
+    §19.1(a) and are ignored by the §7.1 LEAKY_QUESTION flag.
+The 24 query IDs with their reasons: configs/full_run_exclusions.json. Scan of the 6,652 candidates:
+results/diagnostics/s39/leakage_candidates_6652.json. Scan of the final sheet
+(results/diagnostics/s39/leakage_full.json): 6,628 rows, 0 failures, check (c) four fields PASS,
+1 SOURCE_NAME_OVERLAP query (BH2_04235: "Nicotine", a non-gold B_q member, inside the start name
+"nicotine dependence"; kept and flagged as §19.1 requires), 2,146 short-name entries, none present in
+the system prompt or a starting-entity line.
+Not done: a by-hand review of the 2,146 short-name entries (the S15 review covered 34).
+Data seen before deciding: the leakage scan output only; no full-run episode existed.
+Changes to protocol or decision rules: none. The pilot and expansion sets are not re-examined here.

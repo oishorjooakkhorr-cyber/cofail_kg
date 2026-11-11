@@ -1,0 +1,53 @@
+{
+  "by_ambiguity_tag": {
+    "BOTH_AMBIGUOUS": 653,
+    "NONE": 3804,
+    "R1_AMBIGUOUS": 1157,
+    "R2_AMBIGUOUS": 1014
+  },
+  "by_multiplicity": {
+    "MULTI_BRIDGE": 208,
+    "SINGLE_BRIDGE": 6420
+  },
+  "by_relation_type": {
+    "disease:drug:effect/phenotype": 495,
+    "disease:drug:gene/protein": 368,
+    "disease:gene/protein:drug": 831,
+    "drug:disease:effect/phenotype": 207,
+    "drug:disease:gene/protein": 294,
+    "drug:gene/protein:disease": 2973,
+    "effect/phenotype:disease:drug": 446,
+    "gene/protein:disease:drug": 565,
+    "gene/protein:drug:disease": 449
+  },
+  "by_tq_size_bin": {
+    "101–1,000": 405,
+    "11–100": 2856,
+    "1–10": 3367
+  },
+  "drawn_earlier": {
+    "expansion": 400,
+    "pilot": 100,
+    "screening": 20,
+    "smoke": 4
+  },
+  "excluded_after_leakage_scan": 24,
+  "frozen_manifests_full": {
+    "data/agent_inputs/full.jsonl": "abfc3e5b751dfaa305dbdcc20611a8a8bfa9c60074eacafeaf886cd29b3ce61d",
+    "data/processed/manifests/full.jsonl": "0d17010058f06155019f93f2908dfe9b8c7a9d4968aab1f2a508fed6da1a56ac"
+  },
+  "git_commit": "00ec876fe63ea909af4a8cc5b817e5bbb0c8d0b2",
+  "order": "SHA256(seed + query_id) ascending, then query_id",
+  "primary_population": 7176,
+  "queries": 6628,
+  "seed": 42,
+  "sha256": {
+    "configs/full_run_exclusions.json": "d7de6f5b3462e1b82a4b74994c3c68b6a8385351a770e94dd516e6e0172ee725",
+    "data/cache/primekg_nodes.parquet": "ec43d05e4dd0570d73772a0289166360d90f3e1c79225f4ec840a5fd644dbb17",
+    "data/processed/primary_population.csv": "24a876a1bcca9e4e4fc5d273460212b47e38d95b0949c1770096fb46b79b41b8",
+    "data/processed/reference_queries.parquet": "7d3be769ac5abfa99e3da94a03a70b2ada03c3b8ca5a21a2b61184cc33e0ad07",
+    "scripts/39_make_full_manifest.py": "8aaa1572407f1cfc06991a1af9dc5f5b4bc3a14e569f41677327c78824dcd58a",
+    "src/cofail_kg/data/sampling.py": "37a895cd5d7c48876a567a716ab8cab768aacaac522809257faee25bd72367f8"
+  },
+  "status": "EXPLORATORY (decision log 2026-11-11, S39)"
+}

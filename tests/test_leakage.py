@@ -434,6 +434,8 @@ def audit_inputs():
         assert mapping["provenance"][key] == frozen[key]
     sheets = {}
     for path in sorted((ROOT / "data/agent_inputs").glob("*.jsonl")):
+        if path.relative_to(ROOT).as_posix() in read_frozen_hashes(ROOT / "configs/frozen_hashes_full.yaml").get("manifests_full", {}):
+            continue  # S39 exploratory full-run sheet: audited by scripts/39_leakage_full.py, not here
         assert sha256(path) == frozen["manifests"][path.relative_to(ROOT).as_posix()]
         sheets[path.stem] = read_sheet(path)
     assert set(sheets) == {"screening", "smoke", "pilot", "expansion"}
