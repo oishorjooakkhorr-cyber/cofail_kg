@@ -2936,3 +2936,149 @@ the candidate rule (CONSISTENT; the blocked label is in neither R1 nor R2, so a 
 none has a matched control: 7 have no same-label control slot, BH2_05890 has one, opened by an agent.
 Why: §21 does not define the control's location, "used", the degree compared or the label fallback.
 Changes to protocol or decision rules: none. D7 outcome: not stated here (researcher applies D7).
+
+## 2026-11-12 — S30 — Gate D7: DESCRIPTIVE
+Decision: Gate D7 outcome DESCRIPTIVE on pilot_v1 + expansion_v1 (500 queries, latest attempts).
+Quantities (results/reports/pilot_expansion_v1_report.md, D7 section; C from
+results/combined/pilot_expansion_v1/d7_C.json under the reading logged 2026-11-11):
+- E = 0.0540 (108/2000)
+- H = 0.992 (496/500)
+- N = 6 (BH2_03356, BH2_05290, BH2_05778, BH2_05890, BH2_05997, BH2_06016)
+- O > null: no (O_H1 = 6; N1-H1 mean 5.6236, p95 6.0, p = 0.6440)
+- P = 3 (effect/phenotype:disease:drug; gene/protein:disease:drug; gene/protein:drug:disease)
+- C = 0 (8 queries meet the flag part of the §21 candidate rule; none has a matched control)
+- Order 1, HOLD: not met (E ≤ 15%). Order 2, DESCRIPTIVE: met on all three conditions (N < 15; not O > null;
+  C < 8) → DESCRIPTIVE.
+Interpretation flags: ordering flag not set; ambiguity flag set (6/6 N queries R2_AMBIGUOUS or BOTH_AMBIGUOUS).
+BH2_05778 (SOURCE_NAME_OVERLAP) is counted, as protocol §19.1 requires; without it N = 5, which does not
+change the outcome.
+Action (decision_rules.md D7): no confirmatory surgery; up to 5 illustrative exploratory cases. D8 does not
+apply (scaling only after CONFIRMATORY or EXPLORATORY); S37 records this in one line.
+Why: D7 applied in the stated order to the S30 quantities.
+Data seen before deciding: the pilot_expansion_v1 report and analysis outputs (all of them), d7_C.json/.csv.
+Changes to protocol or decision rules: none.
+Supervisor: not consulted before this entry (researcher decision, 2026-11-12).
+
+## 2026-11-12 — S30 — Plan after D7: illustrative cases, exploratory analyses and a pre-registered follow-up
+Decision (researcher, 2026-11-12, adopting the recommendations Claude Code gave in chat): the work below.
+Everything in this entry is EXPLORATORY (protocol §20): it was chosen after seeing pilot and S30 results.
+Nothing here changes the D7 quantities, the 500-query tables or any gate. No protocol or decision-rules
+change. Each item states its rule here, before its output exists.
+
+Data seen before deciding: pilot_v1 report and analysis; pilot_expansion_v1 report, D7 quantities and C.
+Also, in chat only (not saved): an informal pilot-only count suggesting that accepting off-label answers
+would take pilot CF3^Q from 3 to 0; a permutation test on the pilot (queries with ≥ 3 agents wrong:
+p = 0.067 when shuffled within relation type); the hypergeometric probability that the 3 new CF3^{Q,H1}
+queries of the expansion all fall among its 59 queries with R2 = indication (≈ 0.003); a count of
+undrawn primary-population queries by relation type. No output of B1, B2, B5, B6, the repeat run or the
+follow-up existed when this entry was written.
+
+Definitions used below.
+- "Treat-final" queries: relation type with R2 = {indication}: effect/phenotype:disease:drug,
+  gene/protein:disease:drug, gene/protein:drug:disease (75 of the 500).
+- "Treat-first" queries: R1 = {indication}: disease:drug:effect/phenotype, disease:drug:gene/protein,
+  drug:disease:effect/phenotype, drug:disease:gene/protein (358 of the 500). "Other": the remaining 67.
+- Off-label answer: a retained answer whose primary path (§14.2) uses the label `off-label use` at the step
+  whose accepted set is {indication}.
+
+### A. Track A — illustrative cases (runbook S31–S36, DESCRIPTIVE form)
+1. Cases (5 of the 8 flagged queries), all treatment-only (C = 0, §21: "If none exists: treatment-only
+   exploratory"); surgery = hide label r at node u (reading of 2026-11-11):
+   | Query | u | r | Mechanism |
+   |---|---|---|---|
+   | BH2_03356 | 33618 | off-label use | WRONG_TURN_HOP2 |
+   | BH2_05290 | 14052 | off-label use | WRONG_TURN_HOP2 |
+   | BH2_06016 | 30800 | off-label use | WRONG_TURN_HOP2 |
+   | BH2_05997 | 33228 | off-label use | WRONG_TURN_HOP2 |
+   | BH2_04650 | 16843 | drug_protein | SHORTCUT |
+   Selection rule: one case per treat-final relation type, plus one SHORTCUT case for the second mechanism;
+   exclude SOURCE_NAME_OVERLAP queries (BH2_05778); within a type, prefer more holders (4 over 3), then
+   more shared entities, then the smaller query ID. This gives BH2_06016 and BH2_05997 for
+   effect/phenotype:disease:drug, and BH2_04650 over BH2_04856.
+2. No control tie-break is needed (no controls).
+3. S34 smoke: 1 case × 4 agents = 4 episodes, BH2_05290 (smallest branch degree, 2), run ID
+   `intervention_smoke`. S35: the 5 cases × 4 agents = 20 episodes, run ID `intervention_v1`.
+4. S36 reports per case only: CF3/CF4 and PCF before vs after, recovery share, no-answer change,
+   displacement per agent. No aggregate ΔCF and no τ_CF (both need a control). No causal claim: hiding the
+   label removes those answers by construction; the informative outcome is displacement.
+
+### B. Analyses on existing runs (no new episodes)
+B1. Opportunity and uptake. Population: SUCCESS episodes of pilot_v1 and expansion_v1 on the 75
+    treat-final queries (primary); treat-first queries reported separately, descriptive only.
+    Per episode:
+    - Opportunity: some node u that the agent reached from s through an R1 label, where an
+      `inspect_entity(u)` output listed `off-label use` with a Type_T neighbor type, or the agent called
+      `get_neighbors(u, "off-label use", …)`.
+    - Opened: the agent called `get_neighbors(u, "off-label use", …)` on such a u.
+    - Taken: the episode has ≥ 1 off-label answer.
+    Per agent: uptake = Taken / Opportunity; also Opened / Opportunity and Taken / Opened.
+    CLEAN (fixed now): at least 3 of the 4 agents have ≥ 5 opportunity episodes and uptake ≥ 0.50.
+    Otherwise NOT CLEAN. NOT CLEAN rules out section C; CLEAN allows it. Needs raw episode records
+    (teammate's PC).
+B2. Strict vs lenient answer key. Strict = the frozen labels. Lenient: wherever `indication` is in R1 or R2,
+    `off-label use` is also accepted at that step (R1⁺, R2⁺); T_q⁺ and hop-1 status are recomputed with
+    R1⁺/R2⁺, and an OFF_QUESTION answer in T_q⁺ is valid under the lenient key. `contraindication` is never
+    accepted; answers whose primary path uses it at an indication step are counted separately (answers and
+    queries, per agent). Report under both keys: CF3^Q, CF4^Q, CF3^{Q,H1} (= N), per-agent question-valid
+    precision. Strict results remain the results of record.
+B5. Treat concentration. Table of queries, CF3^Q, CF4^Q and CF3^{Q,H1} by group (treat-final, treat-first,
+    other), for pilot, expansion and both. Exact hypergeometric probability that the expansion's CF3^{Q,H1}
+    queries all fall in the treat-final group. Reported as a replication of a pattern seen in the pilot:
+    the pilot report was committed (44a2fdd, 2026-11-08) before the expansion run started; no prediction was
+    written before the expansion analysis.
+B6. Benchmark vs graph labels. CF3^BH vs CF3^Q by relation type; BH-only queries = CF3^BH = 1 and
+    CF3^Q = 0. Hand-check: 15 BH-only queries, the first 15 by SHA256("42" + query_id) ascending; for each,
+    the shared entity with the smallest node ID. Claude Code prints its graph path(s) s –r1→ b –r2→ t with
+    r1 ∈ R1, r2 ∈ R2, and the BioHopR gold list; the researcher marks each VALID / QUESTIONABLE / NOT_VALID in
+    results/exploratory/b6_handcheck.csv.
+
+### C. Follow-up study (new episodes; may be run only if B1 is CLEAN)
+If B1 is NOT CLEAN, the follow-up is not run. If B1 is CLEAN, the follow-up may be run: the decision to
+run or not is made and logged after B1, before any follow-up episode exists. "Not run" is logged in one
+line. If it is run, P1 and P2 are reported whatever the result. Results never enter the 500-query tables
+or any gate; this is a separate study and is not D8 scaling.
+1. Questions: 150 new treat-final queries, 50 per type. Pool: CONSISTENT primary-population queries of the
+   type not in any existing manifest (screening, smoke, pilot, expansion). Within each type, order by
+   SHA256("42" + query_id) ascending and take the first 50 (§8 step 3, without multiplicity quotas);
+   record multiplicity, ambiguity tag and T_q size bin (§8 step 4).
+2. Two agent-input sheets, identical except the question text:
+   - Original: BioHopR text verbatim (§9.3). Run ID `followup_orig_v1`.
+   - Approved: one fixed rewording per template, applied to every query of the template. Run ID
+     `followup_approved_v1`. This departs from §9.3 "question text verbatim" for this run only:
+     | Original template | Approved template |
+     |---|---|
+     | Name all drugs that can treat a disease that has phenotype X. | Name all drugs that are approved to treat a disease that has phenotype X. |
+     | Name all drugs that can treat a disease that is associated with gene/protein X. | Name all drugs that are approved to treat a disease that is associated with gene/protein X. |
+     | Name all diseases that are treated by a drug that is associated with gene/protein X. | Name all diseases for which a drug that is associated with gene/protein X is an approved treatment. |
+   Everything else frozen as in pilot_v1/expansion_v1: panel models_s21r2, P1, T1, runtime, budget, seed,
+   evaluation code and labels (R1, R2, T_q, A*_q unchanged by the rewording). 4 agents × 150 queries ×
+   2 wordings = 1,200 episodes.
+3. Predictions (fixed now, before any follow-up episode exists):
+   - P1 (original wording): (a) at least 5 of the 150 queries have CF3^{Q,H1} = 1; and (b) in at least 80%
+     of those queries, the shared feature chosen by the §21 candidate rule is (u, `off-label use`) with
+     mechanism WRONG_TURN_HOP2.
+   - P2 (approved vs original): per agent, X = number of queries (SUCCESS in both runs for that agent) with
+     ≥ 1 off-label answer. An agent is testable if X_orig ≥ 3. P2 holds if at least 3 agents are testable
+     and X_approved < X_orig for every testable agent.
+   - Also reported, not part of P2: CF3^{Q,H1} under each wording, per-agent question-valid precision,
+     benchmark recall, no-answer rate, answers per episode (to show whether the rewording only suppresses
+     answers in general).
+   Each prediction is reported as held or not held, whatever the result.
+4. New manifests and input sheets get write-once entries in configs/frozen_hashes.yaml before the runs.
+
+### D. Repeat run (new episodes; runs whatever B1 shows)
+The 8 flagged queries × 4 agents = 32 episodes, original sheet, everything identical, run ID `repeat_v1`.
+It never replaces the original records (pilot_v1/expansion_v1 remain the results of record; protocol §19
+reruns rule is not used). Report per query whether CF3^Q = 1 reproduces, and per agent-query the Jaccard
+overlap of answer ID sets and of OFF_QUESTION sets. Expectation (descriptive, not a test): at least 6 of
+the 8 queries reproduce CF3^Q = 1.
+
+### E. Not done
+No closed-book comparison (protocol §22 stays optional and is not used). No other changes.
+
+Why: D7 is DESCRIPTIVE. The shared failures found are all off-label answers on treat questions; these
+analyses measure that pattern, test the answer key, audit the benchmark, and test the pattern on new
+questions with predictions fixed before the data exist.
+Changes to protocol or decision rules: none. Deviation noted: the approved-wording run departs from §9.3
+("question text verbatim"); exploratory, this run only.
+Supervisor: not consulted before this entry (researcher decision, 2026-11-12).

@@ -169,11 +169,18 @@ Changes to protocol: <section numbers, or "none">
 | S27 | Run the 100-query pilot | — | — |
 | S28 | Pilot report | — | §15–17 |
 | S29 | Pilot decision | **D6** | — |
-| **Phase I — After the pilot (provisional)** | | | |
-| S30 | Expand to 500 | **D7** | — |
-| S31–S36 | Intervention study | — | §21 |
-| S37 | Final scale decision | **D8** | — |
+| **Phase I — After the pilot** | | | |
+| S30 | Expand to 500 | **D7** (DESCRIPTIVE, 2026-11-12) | — |
+| S31–S36 | Intervention study (DESCRIPTIVE: 5 illustrative treatment-only cases) | — | §21 |
+| S37 | Final scale decision | **D8** (not applicable after DESCRIPTIVE) | — |
 | S38 | Final analysis | — | — |
+| **Phase J — Exploratory analyses and follow-up (decision log 2026-11-12)** | | | |
+| B1 | Off-label opportunity and uptake | CLEAN / NOT CLEAN | §20 |
+| B2 | Strict vs lenient answer key | — | §20 |
+| B5 | Treat concentration (pilot vs expansion) | — | §20 |
+| B6 | Benchmark vs graph labels, 15-case hand-check | — | §20 |
+| RP | Repeat run of the 8 flagged queries | — | §19, §20 |
+| F1–F3 | Follow-up: 150 treat-final queries × 2 wordings (optional; only if B1 CLEAN) | — | §20 |
 
 ---
 
@@ -1391,10 +1398,27 @@ step (S30 expansion, or descriptive write-up). Discuss with your supervisor befo
 
 ---
 
-# Part 10 — Phase I: After the pilot (provisional)
+# Part 10 — Phase I: After the pilot
 
 These stages depend on the pilot. Protocol §21 is frozen at S29 (after D6, before S30); the
 prompts below are templates to be adjusted to that frozen version.
+
+**Route after D7.**
+
+| D7 | Stages |
+|---|---|
+| HOLD | Fix, rerun, re-apply D7 |
+| **DESCRIPTIVE** (taken, 2026-11-12) | S31 → 5 cases through S32–S36 (treatment-only) → S37 (no scaling) → S38 |
+| EXPLORATORY | S31–S36 on all candidates, labelled exploratory → S37 → S38 |
+| CONFIRMATORY | S31–S36 on all candidates → S37 → S38 |
+
+Phase J (Part 10b) runs alongside, under the decision-log entry of 2026-11-12.
+
+**Which PC.** Raw episode records (`results/runs/<run>/episodes`) are not in git; only `analysis/`,
+`audit_sheet.csv` and `progress.json` are. Model runs and anything that reads raw records run on the
+run PC (teammate). Code, tests, graph lookups and work on pushed analysis files can run on either PC.
+On the run PC: pull before a run, never pull or commit while a run is in progress or resumable, push
+results when it is finished. Back up the raw run folders; they exist only on the run PC.
 
 ## S30 — Run the expansion reserve → Gate D7
 
@@ -1420,6 +1444,9 @@ matching rule. Write results/interventions/candidates.csv. Do not select cases; 
 You choose one control per case: the closest by the §21 rule (if tied, the one with the smaller
 numeric node ID — written in the decision log before any intervention runs).
 
+**DESCRIPTIVE (2026-11-12):** list all 8 as above (the control columns will show none; C = 0). The 5
+cases, the selection rule and "no tie-break needed" are already in the decision log of 2026-11-12.
+
 ## S32 — Surgery overlay
 
 ```text
@@ -1437,6 +1464,12 @@ For each frozen candidate, build the treatment overlay and the control overlay f
 results/interventions/candidates.csv. Verify for both: a valid route (protocol §21) remains,
 only the intended edges are removed. Write results/interventions/manifest.jsonl.
 ```
+**DESCRIPTIVE:** use this prompt instead.
+```text
+For the 5 cases in the decision log of 2026-11-12 (section A), build treatment overlays only
+(hide label r at node u; there are no controls, C = 0). Verify for each: a valid route (protocol §21)
+remains and only the intended edges are hidden. Write results/interventions/manifest.jsonl.
+```
 
 ## S34 — Intervention smoke test
 
@@ -1448,12 +1481,15 @@ same queries.
 You check by hand: only the intended structure changed; agents can still navigate; a valid route
 exists.
 
+**DESCRIPTIVE:** run PC. 1 treatment overlay (BH2_05290) × 4 agents = 4 episodes, same run ID.
+
 ## S35 — Intervention runs
 
 ```text
 Run all treatment and control overlays with the frozen agents as run_id "intervention_v1",
 with the same resume and verification rules as the pilot.
 ```
+**DESCRIPTIVE:** run PC. The 5 treatment overlays × 4 agents = 20 episodes.
 
 ## S36 — Intervention evaluation
 
@@ -1464,11 +1500,16 @@ per agent (VALID_RELATION / SAME_WRONG_RELATION_OTHER_NEIGHBOR / OTHER_WRONG / N
 ΔCF and τ_CF. Report treatment-only cases separately as exploratory. No causal language in
 the "observed facts" section.
 ```
+**DESCRIPTIVE:** per case only, all labelled exploratory and treatment-only. No aggregate ΔCF and no
+τ_CF (both need a control). Needs raw records of intervention_v1 and the original runs: run PC.
 
 ## S37 — Final scale decision → Gate D8
 
 Apply D8; log it. If scaling, draw new sets with the protocol §8 algorithm from queries not yet
 drawn (D8), then repeat S30–S36.
+
+**DESCRIPTIVE:** D8 does not apply. Log one line: "S37 — D8 not applicable after D7 DESCRIPTIVE; no
+scaling." The Phase J follow-up (F1–F3) is a separate exploratory study, not D8 scaling.
 
 ## S38 — Final analysis and thesis tables
 
@@ -1482,6 +1523,97 @@ Produce the final tables:
 5. Counterfactual: before / after treatment / after control; ΔCF; τ_CF; recovery;
    displacement; no-answer change.
 Each table in results/reports/final/ as CSV and Markdown, with the commit hash that produced it.
+```
+**DESCRIPTIVE:** table 5 is per case, treatment-only (no control, ΔCF aggregate or τ_CF). Add, each
+marked EXPLORATORY with a pointer to the decision log of 2026-11-12:
+6. B1 opportunity and uptake. 7. B2 strict vs lenient key. 8. B5 treat concentration.
+9. B6 benchmark vs graph labels with the hand-check. 10. RP repeat run.
+11. Follow-up (if run): P1 and P2, each reported as held or not held, with the secondary measures.
+
+---
+
+# Part 10b — Phase J: Exploratory analyses and follow-up
+
+Every rule for these stages is fixed in the decision log of 2026-11-12. If a prompt and that entry
+disagree, the entry wins; report the conflict. Each stage: tests on tiny fixtures, the usual six-point
+report, then commit and push. Outputs go to `results/exploratory/<stage>/`.
+
+## B1 — Off-label opportunity and uptake (code: either PC; run: run PC)
+
+```text
+Implement B1 exactly as defined in docs/decision_log.md, entry 2026-11-12 "Plan after D7",
+section B1, as scripts/40_b1_uptake.py with tests on tiny synthetic traces. It reads raw episode
+records of pilot_v1 and expansion_v1, the evaluation-side manifests and the PrimeKG cache. Per agent:
+episodes, opportunity, opened, taken, and the three ratios; treat-final (primary) and treat-first
+(descriptive) separately. Write results/exploratory/b1/. State CLEAN or NOT CLEAN by the rule in the
+entry, mechanically. Do not interpret.
+```
+Write the code on either PC; run it on the run PC (raw records). You log: "B1: CLEAN / NOT CLEAN".
+NOT CLEAN: the follow-up is not run. CLEAN: you decide whether to run F1–F3 and log that decision
+before F1 (if run, both predictions are reported whatever the result).
+
+## B2 — Strict vs lenient answer key (either PC if the metrics files suffice)
+
+```text
+Implement B2 exactly as defined in the decision log entry 2026-11-12, section B2, as
+scripts/41_b2_lenient.py with tests. Use the pushed analysis files and the PrimeKG cache; if
+anything needs raw records, stop and tell me which. Report both keys side by side and the
+contraindication counts. Strict results stay the results of record.
+```
+
+## B5 — Treat concentration (either PC)
+
+```text
+Implement B5 exactly as defined in the decision log entry 2026-11-12, section B5, as
+scripts/42_b5_concentration.py with tests. Inputs: results/combined/pilot_expansion_v1 and the
+evaluation-side manifests. Write the table and the exact hypergeometric probability.
+```
+
+## B6 — Benchmark vs graph labels (either PC)
+
+```text
+Implement B6 exactly as defined in the decision log entry 2026-11-12, section B6, as
+scripts/43_b6_benchmark.py with tests. Write the table by relation type and
+results/exploratory/b6/b6_handcheck.csv with the 15 queries, the chosen entity, its graph
+path(s) and the BioHopR gold list, and an empty column for my mark.
+```
+You fill in VALID / QUESTIONABLE / NOT_VALID by hand, then commit.
+
+## RP — Repeat run (run PC)
+
+```text
+Build a manifest and agent-input sheet "repeat8" with the 8 flagged queries (decision log
+2026-11-12, section D), add their write-once hashes to configs/frozen_hashes.yaml, then repeat
+the S26 pre-run checks. Then run scripts/25_run_panel.py --manifest repeat8 --run-id repeat_v1.
+Everything frozen stays identical. Then report per section D. Never touch pilot_v1 or expansion_v1.
+```
+
+## F1 — Follow-up preparation (either PC; only if B1 is CLEAN and you logged "run")
+
+```text
+Implement section C items 1, 2 and 4 of the decision log entry 2026-11-12: draw the 150 queries,
+write the evaluation-side manifest and two agent-input sheets (followup_orig, followup_approved)
+with the exact rewording table, and add write-once hashes to configs/frozen_hashes.yaml. Tests:
+the draw is reproducible; no query from any existing manifest; 50 per type; the two sheets differ
+only in question_text; every approved text matches its template. Do not run any model.
+```
+Read 5 approved questions per template with your own eyes before committing.
+
+## F2 — Follow-up runs (run PC)
+
+```text
+Repeat the S26 pre-run checks with the follow-up hashes. Then run
+scripts/25_run_panel.py --manifest followup_orig --run-id followup_orig_v1, and after it
+finishes, scripts/25_run_panel.py --manifest followup_approved --run-id followup_approved_v1.
+Everything frozen stays identical. Do not analyse until both runs are complete.
+```
+
+## F3 — Follow-up evaluation (run PC)
+
+```text
+Analyse both follow-up runs with the frozen evaluation code, then evaluate P1 and P2 exactly as
+written in the decision log entry 2026-11-12, section C3, plus the secondary measures. State
+"held" or "not held" for each prediction mechanically. Do not interpret.
 ```
 
 ---
@@ -1499,6 +1631,8 @@ Each table in results/reports/final/ as CSV and Markdown, with the commit hash t
 | Tests pass but a real output looks wrong | Tests do not cover the case | Write a failing test from the real example first (bug-found prompt). |
 | Gate result you dislike | — | Follow `decision_rules.md`. Do not change thresholds. Anything extra is exploratory and logged first. |
 | You lost track of where you are | — | Session-start prompt; read `progress.md` and the last decision-log entries. |
+| A stage needs raw episode records on the PC without them | Raw records are not in git | Write and test the code here, push, run it on the run PC. |
+| A protocol edit is needed while a run's analysis is pending | Pinned-source check in `25_run_panel.py analyze` | Wait until that run's analysis outputs exist. |
 
 ---
 
@@ -1512,6 +1646,9 @@ Each table in results/reports/final/ as CSV and Markdown, with the commit hash t
 | Method: evaluation | Protocol §12–§17 |
 | Method: design and gates | Protocol §18, `decision_rules.md`, decision log |
 | Results: pilot | S28 report, S29 decision |
-| Results: interventions | S36, S38 |
+| Results: expansion and Gate D7 | S30 report, D7 decision (2026-11-12) |
+| Results: interventions (illustrative, treatment-only) | S36, S38 |
+| Results: exploratory analyses | B1, B2, B5, B6, RP; S38 tables 6–10 |
+| Results: follow-up study | F3; S38 table 11 |
 | Reproducibility statement | S26 commit hash, hashes, model digests |
 | AI-use disclosure | `provenance.md` AI-assistance log |
