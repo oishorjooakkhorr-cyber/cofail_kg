@@ -3082,3 +3082,19 @@ questions with predictions fixed before the data exist.
 Changes to protocol or decision rules: none. Deviation noted: the approved-wording run departs from §9.3
 ("question text verbatim"); exploratory, this run only.
 Supervisor: not consulted before this entry (researcher decision, 2026-11-12).
+
+## 2026-11-12 — S30 — Exploratory hypothesis H4 (formed after seeing pilot and S30 results)
+Decision: Record H4, an exploratory hypothesis. It does not replace or reword H1–H3 (protocol §1), which
+stay as frozen and are reported as tested.
+H4: Shared failures among independent KG-grounded agents occur where a question's verb matches more than
+one relation label in the graph, and the agents resolve that the same broad way. In this study: "treat"
+in the question; `indication` (accepted) and `off-label use` (not accepted) in PrimeKG; the agents return
+answers through both.
+Tests: B1 (opportunity and uptake, descriptive) and, if run, the follow-up predictions P1 and P2 (entry
+2026-11-12 "Plan after D7", sections B1 and C3). No new rule or threshold; H4 is judged only through those.
+If the follow-up is not run, H4 is reported as an untested explanation of the observed cases.
+Why: All 6 CF3^{Q,H1} queries of the 500 show this pattern; naming it before B1 and the follow-up exist
+fixes what those analyses are testing.
+Data seen before deciding: as in the entry "Plan after D7" (2026-11-12); no B1, B2, B5, B6, repeat-run or
+follow-up output existed.
+Changes to protocol or decision rules: none.
