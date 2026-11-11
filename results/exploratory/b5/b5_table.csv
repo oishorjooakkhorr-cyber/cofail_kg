@@ -1,0 +1,25 @@
+view,subset,group,queries,CF3^Q,CF4^Q,"CF3^{Q,H1}","CF3^{Q,H1} query IDs"
+all_queries,pilot,treat-final,16,3,1,3,BH2_03356;BH2_05290;BH2_05778
+all_queries,pilot,treat-first,73,0,0,0,
+all_queries,pilot,other,11,0,0,0,
+all_queries,pilot,total,100,3,1,3,BH2_03356;BH2_05290;BH2_05778
+all_queries,expansion,treat-final,59,3,1,3,BH2_05890;BH2_05997;BH2_06016
+all_queries,expansion,treat-first,285,2,0,0,
+all_queries,expansion,other,56,0,0,0,
+all_queries,expansion,total,400,5,1,3,BH2_05890;BH2_05997;BH2_06016
+all_queries,both,treat-final,75,6,2,6,BH2_03356;BH2_05290;BH2_05778;BH2_05890;BH2_05997;BH2_06016
+all_queries,both,treat-first,358,2,0,0,
+all_queries,both,other,67,0,0,0,
+all_queries,both,total,500,8,2,6,BH2_03356;BH2_05290;BH2_05778;BH2_05890;BH2_05997;BH2_06016
+without_source_name_overlap,pilot,treat-final,15,2,0,2,BH2_03356;BH2_05290
+without_source_name_overlap,pilot,treat-first,73,0,0,0,
+without_source_name_overlap,pilot,other,11,0,0,0,
+without_source_name_overlap,pilot,total,99,2,0,2,BH2_03356;BH2_05290
+without_source_name_overlap,expansion,treat-final,57,3,1,3,BH2_05890;BH2_05997;BH2_06016
+without_source_name_overlap,expansion,treat-first,285,2,0,0,
+without_source_name_overlap,expansion,other,56,0,0,0,
+without_source_name_overlap,expansion,total,398,5,1,3,BH2_05890;BH2_05997;BH2_06016
+without_source_name_overlap,both,treat-final,72,5,1,5,BH2_03356;BH2_05290;BH2_05890;BH2_05997;BH2_06016
+without_source_name_overlap,both,treat-first,358,2,0,0,
+without_source_name_overlap,both,other,67,0,0,0,
+without_source_name_overlap,both,total,497,7,1,5,BH2_03356;BH2_05290;BH2_05890;BH2_05997;BH2_06016
