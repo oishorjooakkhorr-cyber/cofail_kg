@@ -1,0 +1,17 @@
+view,group,agent_id,episodes,opportunity,opened,taken,taken_and_opportunity,taken_and_opened,taken_outside_opportunity,uptake,opened_per_opportunity,taken_per_opened
+all_queries,treat-final,Gemma4-12B,75,35,6,6,6,6,0,0.171429,0.171429,1.000000
+all_queries,treat-final,Granite41-8B,75,28,11,8,8,8,0,0.285714,0.392857,0.727273
+all_queries,treat-final,Ministral3-14B,66,30,19,18,18,18,0,0.600000,0.633333,0.947368
+all_queries,treat-final,Cogito-14B,74,33,29,25,25,25,0,0.757576,0.878788,0.862069
+all_queries,treat-first,Gemma4-12B,356,192,1,1,1,1,0,0.005208,0.005208,1.000000
+all_queries,treat-first,Granite41-8B,345,185,1,0,0,0,0,0.000000,0.005405,0.000000
+all_queries,treat-first,Ministral3-14B,324,168,6,4,4,4,0,0.023810,0.035714,0.666667
+all_queries,treat-first,Cogito-14B,323,166,17,3,3,3,0,0.018072,0.102410,0.176471
+without_source_name_overlap,treat-final,Gemma4-12B,72,34,5,5,5,5,0,0.147059,0.147059,1.000000
+without_source_name_overlap,treat-final,Granite41-8B,72,27,10,7,7,7,0,0.259259,0.370370,0.700000
+without_source_name_overlap,treat-final,Ministral3-14B,63,29,18,17,17,17,0,0.586207,0.620690,0.944444
+without_source_name_overlap,treat-final,Cogito-14B,71,32,28,24,24,24,0,0.750000,0.875000,0.857143
+without_source_name_overlap,treat-first,Gemma4-12B,356,192,1,1,1,1,0,0.005208,0.005208,1.000000
+without_source_name_overlap,treat-first,Granite41-8B,345,185,1,0,0,0,0,0.000000,0.005405,0.000000
+without_source_name_overlap,treat-first,Ministral3-14B,324,168,6,4,4,4,0,0.023810,0.035714,0.666667
+without_source_name_overlap,treat-first,Cogito-14B,323,166,17,3,3,3,0,0.018072,0.102410,0.176471
