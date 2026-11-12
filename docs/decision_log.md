@@ -3221,3 +3221,29 @@ these are readings of wording it leaves open. Exploratory, as all of B1.
 Data seen before deciding: none of B1 (no B1 count or output existed); the structure of episode records
 and the relation mapping (R1/R2 per type).
 Changes to protocol or decision rules: none.
+
+## 2026-11-12 — S39 — full_v1 is outside the post-D7 plan; correction to "data seen"
+Decision (researcher, 2026-11-12): S39 and its run `full_v1` (entries of 2026-11-11, commit 9e0397c,
+merged in d798a58) are not part of the plan logged on 2026-11-12 ("Plan after D7") or of H4.
+1. No planned analysis uses full_v1: not B1, B2, B5, B6, the repeat run (RP), Track A (S31–S36), the
+   follow-up (F1–F3) or the S38 tables. The 500-query results (pilot_v1 + expansion_v1) remain the
+   results of record.
+2. The follow-up pool is unchanged: CONSISTENT primary-population queries of the type that are not in the
+   screening, smoke, pilot or expansion manifests, as written in "Plan after D7", section C1. The S39
+   manifest `full` does not remove queries from that pool.
+3. Until the follow-up is finished (F3) or logged as not run, no full_v1 output on a treat-final query
+   (relation types effect/phenotype:disease:drug, gene/protein:disease:drug, gene/protein:drug:disease)
+   is opened or analysed, so that P1 and P2 stay untested by earlier data.
+4. Correction to the "Data seen" lines of "Plan after D7" and "Exploratory hypothesis H4" (both
+   2026-11-12): the S39 manifest and launcher existed on the run PC when those entries were written
+   (commit 9e0397c, 2026-11-11) but were not yet on GitHub; neither the researcher nor Claude Code had
+   seen any full_v1 output. Whether anyone on the run PC had opened full_v1 outputs is to be confirmed
+   by the teammate and logged.
+5. The 2026-11-11 S39 entries record the run as a "researcher instruction". The thesis researcher did
+   not request S39 for this plan; who gave that instruction and for what purpose is to be confirmed with
+   the teammate and logged. The S39 entries and files are kept as they are (old entries are never edited).
+Why: Keep the locked plan and its predictions independent of a separate exploratory run, without deleting
+any record.
+Data seen before deciding: the S39 commit (manifest, provenance, scripts, leakage scan, its two log
+entries); no full_v1 output.
+Changes to protocol or decision rules: none.
