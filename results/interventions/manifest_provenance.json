@@ -1,0 +1,23 @@
+{
+  "git_commit": "0647156d738e77d625c3034323c1b5c84911a53b",
+  "git_tracked_clean": true,
+  "inputs": {
+    "candidates": {
+      "path": "results/interventions/candidates.json",
+      "sha256": "34e94f25b4fb396e0a259ec53dbd1c00202bd5bd35df4518deac6cca4a25ca59"
+    },
+    "cofailure": {
+      "path": "results/combined/pilot_expansion_v1/cofailure.json",
+      "sha256": "198b9aa18770d1a815429361be8f79601330276642665feb025783dd5560f87d"
+    },
+    "reference_queries": {
+      "path": "data/processed/reference_queries.parquet",
+      "sha256": "7d3be769ac5abfa99e3da94a03a70b2ada03c3b8ca5a21a2b61184cc33e0ad07"
+    }
+  },
+  "kg_fingerprint": "bc5d3fd2f12aeb29398fe4684c83d8c65c7bd5c1edf704573322295bdc6b2e95",
+  "overlay_file": {
+    "path": "data/agent_inputs/intervention_overlays.jsonl",
+    "sha256": "e7d9a241c73ce5b2703a8844e715e1513954056b8302916f24fee538f83f1a44"
+  }
+}

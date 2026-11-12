@@ -1,0 +1,392 @@
+{
+  "group_relation_types": {
+    "other": [
+      "disease:gene/protein:drug",
+      "drug:gene/protein:disease"
+    ],
+    "treat-final": [
+      "effect/phenotype:disease:drug",
+      "gene/protein:disease:drug",
+      "gene/protein:drug:disease"
+    ],
+    "treat-first": [
+      "disease:drug:effect/phenotype",
+      "disease:drug:gene/protein",
+      "drug:disease:effect/phenotype",
+      "drug:disease:gene/protein"
+    ]
+  },
+  "hypergeometric": {
+    "all_queries": {
+      "CF3_Q_H1_queries": [
+        {
+          "group": "treat-final",
+          "query_id": "BH2_05890",
+          "relation_type": "effect/phenotype:disease:drug"
+        },
+        {
+          "group": "treat-final",
+          "query_id": "BH2_05997",
+          "relation_type": "effect/phenotype:disease:drug"
+        },
+        {
+          "group": "treat-final",
+          "query_id": "BH2_06016",
+          "relation_type": "effect/phenotype:disease:drug"
+        }
+      ],
+      "all_in_treat_final": true,
+      "draws_n_expansion_CF3_Q_H1_queries": 3,
+      "observed_in_treat_final": 3,
+      "population_N_expansion_queries": 400,
+      "probability_all_in_treat_final": {
+        "decimal": 0.0030707106963388372,
+        "denominator": 10586800,
+        "formula": "C(59,3) / C(400,3)",
+        "fraction_reduced": "1711/557200",
+        "numerator": 32509
+      },
+      "successes_K_expansion_treat_final_queries": 59
+    },
+    "without_source_name_overlap": {
+      "CF3_Q_H1_queries": [
+        {
+          "group": "treat-final",
+          "query_id": "BH2_05890",
+          "relation_type": "effect/phenotype:disease:drug"
+        },
+        {
+          "group": "treat-final",
+          "query_id": "BH2_05997",
+          "relation_type": "effect/phenotype:disease:drug"
+        },
+        {
+          "group": "treat-final",
+          "query_id": "BH2_06016",
+          "relation_type": "effect/phenotype:disease:drug"
+        }
+      ],
+      "all_in_treat_final": true,
+      "draws_n_expansion_CF3_Q_H1_queries": 3,
+      "observed_in_treat_final": 3,
+      "population_N_expansion_queries": 398,
+      "probability_all_in_treat_final": {
+        "decimal": 0.0028058006236050107,
+        "denominator": 10428396,
+        "formula": "C(57,3) / C(398,3)",
+        "fraction_reduced": "665/237009",
+        "numerator": 29260
+      },
+      "successes_K_expansion_treat_final_queries": 57
+    }
+  },
+  "note": "EXPLORATORY (protocol §20) — docs/decision_log.md, entry 2026-11-12 \"Plan after D7\", section B5. Reported as a replication of a pattern seen in the pilot: the pilot report was committed (44a2fdd, 2026-11-08) before the expansion run started; no prediction was written before the expansion analysis.",
+  "provenance": {
+    "combined_id": "pilot_expansion_v1",
+    "git_commit": "b14370871c0c5cc161ea167e42271aac548aa9e1",
+    "git_tracked_clean": true,
+    "inputs": {
+      "cofailure": {
+        "path": "results/combined/pilot_expansion_v1/cofailure.json",
+        "sha256": "198b9aa18770d1a815429361be8f79601330276642665feb025783dd5560f87d"
+      },
+      "manifests": {
+        "expansion": {
+          "path": "data/processed/manifests/expansion.jsonl",
+          "run_id": "expansion_v1",
+          "sha256": "2cfc09e132e77f5a4c9eeb3b4957692051f7c9fc32cc97ecd0cd37de0e602689"
+        },
+        "pilot": {
+          "path": "data/processed/manifests/pilot.jsonl",
+          "run_id": "pilot_v1",
+          "sha256": "102a1cb1133ae7ea3bf36972965101c3842b26b231739363b53e7250714a28d4"
+        }
+      }
+    }
+  },
+  "source_name_overlap_queries": [
+    "BH2_05778",
+    "BH2_05971",
+    "BH2_06099"
+  ],
+  "stage": "B5",
+  "status": "EXPLORATORY",
+  "tables": {
+    "all_queries": [
+      {
+        "CF3^Q": 3,
+        "CF3^{Q,H1}": 3,
+        "CF3^{Q,H1} query IDs": [
+          "BH2_03356",
+          "BH2_05290",
+          "BH2_05778"
+        ],
+        "CF4^Q": 1,
+        "group": "treat-final",
+        "queries": 16,
+        "subset": "pilot"
+      },
+      {
+        "CF3^Q": 0,
+        "CF3^{Q,H1}": 0,
+        "CF3^{Q,H1} query IDs": [],
+        "CF4^Q": 0,
+        "group": "treat-first",
+        "queries": 73,
+        "subset": "pilot"
+      },
+      {
+        "CF3^Q": 0,
+        "CF3^{Q,H1}": 0,
+        "CF3^{Q,H1} query IDs": [],
+        "CF4^Q": 0,
+        "group": "other",
+        "queries": 11,
+        "subset": "pilot"
+      },
+      {
+        "CF3^Q": 3,
+        "CF3^{Q,H1}": 3,
+        "CF3^{Q,H1} query IDs": [
+          "BH2_03356",
+          "BH2_05290",
+          "BH2_05778"
+        ],
+        "CF4^Q": 1,
+        "group": "total",
+        "queries": 100,
+        "subset": "pilot"
+      },
+      {
+        "CF3^Q": 3,
+        "CF3^{Q,H1}": 3,
+        "CF3^{Q,H1} query IDs": [
+          "BH2_05890",
+          "BH2_05997",
+          "BH2_06016"
+        ],
+        "CF4^Q": 1,
+        "group": "treat-final",
+        "queries": 59,
+        "subset": "expansion"
+      },
+      {
+        "CF3^Q": 2,
+        "CF3^{Q,H1}": 0,
+        "CF3^{Q,H1} query IDs": [],
+        "CF4^Q": 0,
+        "group": "treat-first",
+        "queries": 285,
+        "subset": "expansion"
+      },
+      {
+        "CF3^Q": 0,
+        "CF3^{Q,H1}": 0,
+        "CF3^{Q,H1} query IDs": [],
+        "CF4^Q": 0,
+        "group": "other",
+        "queries": 56,
+        "subset": "expansion"
+      },
+      {
+        "CF3^Q": 5,
+        "CF3^{Q,H1}": 3,
+        "CF3^{Q,H1} query IDs": [
+          "BH2_05890",
+          "BH2_05997",
+          "BH2_06016"
+        ],
+        "CF4^Q": 1,
+        "group": "total",
+        "queries": 400,
+        "subset": "expansion"
+      },
+      {
+        "CF3^Q": 6,
+        "CF3^{Q,H1}": 6,
+        "CF3^{Q,H1} query IDs": [
+          "BH2_03356",
+          "BH2_05290",
+          "BH2_05778",
+          "BH2_05890",
+          "BH2_05997",
+          "BH2_06016"
+        ],
+        "CF4^Q": 2,
+        "group": "treat-final",
+        "queries": 75,
+        "subset": "both"
+      },
+      {
+        "CF3^Q": 2,
+        "CF3^{Q,H1}": 0,
+        "CF3^{Q,H1} query IDs": [],
+        "CF4^Q": 0,
+        "group": "treat-first",
+        "queries": 358,
+        "subset": "both"
+      },
+      {
+        "CF3^Q": 0,
+        "CF3^{Q,H1}": 0,
+        "CF3^{Q,H1} query IDs": [],
+        "CF4^Q": 0,
+        "group": "other",
+        "queries": 67,
+        "subset": "both"
+      },
+      {
+        "CF3^Q": 8,
+        "CF3^{Q,H1}": 6,
+        "CF3^{Q,H1} query IDs": [
+          "BH2_03356",
+          "BH2_05290",
+          "BH2_05778",
+          "BH2_05890",
+          "BH2_05997",
+          "BH2_06016"
+        ],
+        "CF4^Q": 2,
+        "group": "total",
+        "queries": 500,
+        "subset": "both"
+      }
+    ],
+    "without_source_name_overlap": [
+      {
+        "CF3^Q": 2,
+        "CF3^{Q,H1}": 2,
+        "CF3^{Q,H1} query IDs": [
+          "BH2_03356",
+          "BH2_05290"
+        ],
+        "CF4^Q": 0,
+        "group": "treat-final",
+        "queries": 15,
+        "subset": "pilot"
+      },
+      {
+        "CF3^Q": 0,
+        "CF3^{Q,H1}": 0,
+        "CF3^{Q,H1} query IDs": [],
+        "CF4^Q": 0,
+        "group": "treat-first",
+        "queries": 73,
+        "subset": "pilot"
+      },
+      {
+        "CF3^Q": 0,
+        "CF3^{Q,H1}": 0,
+        "CF3^{Q,H1} query IDs": [],
+        "CF4^Q": 0,
+        "group": "other",
+        "queries": 11,
+        "subset": "pilot"
+      },
+      {
+        "CF3^Q": 2,
+        "CF3^{Q,H1}": 2,
+        "CF3^{Q,H1} query IDs": [
+          "BH2_03356",
+          "BH2_05290"
+        ],
+        "CF4^Q": 0,
+        "group": "total",
+        "queries": 99,
+        "subset": "pilot"
+      },
+      {
+        "CF3^Q": 3,
+        "CF3^{Q,H1}": 3,
+        "CF3^{Q,H1} query IDs": [
+          "BH2_05890",
+          "BH2_05997",
+          "BH2_06016"
+        ],
+        "CF4^Q": 1,
+        "group": "treat-final",
+        "queries": 57,
+        "subset": "expansion"
+      },
+      {
+        "CF3^Q": 2,
+        "CF3^{Q,H1}": 0,
+        "CF3^{Q,H1} query IDs": [],
+        "CF4^Q": 0,
+        "group": "treat-first",
+        "queries": 285,
+        "subset": "expansion"
+      },
+      {
+        "CF3^Q": 0,
+        "CF3^{Q,H1}": 0,
+        "CF3^{Q,H1} query IDs": [],
+        "CF4^Q": 0,
+        "group": "other",
+        "queries": 56,
+        "subset": "expansion"
+      },
+      {
+        "CF3^Q": 5,
+        "CF3^{Q,H1}": 3,
+        "CF3^{Q,H1} query IDs": [
+          "BH2_05890",
+          "BH2_05997",
+          "BH2_06016"
+        ],
+        "CF4^Q": 1,
+        "group": "total",
+        "queries": 398,
+        "subset": "expansion"
+      },
+      {
+        "CF3^Q": 5,
+        "CF3^{Q,H1}": 5,
+        "CF3^{Q,H1} query IDs": [
+          "BH2_03356",
+          "BH2_05290",
+          "BH2_05890",
+          "BH2_05997",
+          "BH2_06016"
+        ],
+        "CF4^Q": 1,
+        "group": "treat-final",
+        "queries": 72,
+        "subset": "both"
+      },
+      {
+        "CF3^Q": 2,
+        "CF3^{Q,H1}": 0,
+        "CF3^{Q,H1} query IDs": [],
+        "CF4^Q": 0,
+        "group": "treat-first",
+        "queries": 358,
+        "subset": "both"
+      },
+      {
+        "CF3^Q": 0,
+        "CF3^{Q,H1}": 0,
+        "CF3^{Q,H1} query IDs": [],
+        "CF4^Q": 0,
+        "group": "other",
+        "queries": 67,
+        "subset": "both"
+      },
+      {
+        "CF3^Q": 7,
+        "CF3^{Q,H1}": 5,
+        "CF3^{Q,H1} query IDs": [
+          "BH2_03356",
+          "BH2_05290",
+          "BH2_05890",
+          "BH2_05997",
+          "BH2_06016"
+        ],
+        "CF4^Q": 1,
+        "group": "total",
+        "queries": 497,
+        "subset": "both"
+      }
+    ]
+  }
+}

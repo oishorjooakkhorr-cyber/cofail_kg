@@ -820,3 +820,11 @@ median 51.2 -> 41.3 s; budget hits 0 -> 2 (BH2_03879, BH2_03881); 0 OOM. Timeout
 BH2_04425 now SUCCESS; new ERROR/CONNECTION on BH2_03619 (SUCCESS at f16). BH2_05366 reached the
 8192-token output cap (242 s), still SUCCESS, 1 OFF_QUESTION. Generation median 30.8 -> 40.7 tok/s,
 slowest 15.2 -> 25.4. Answer counts identical on 11/20 queries. Not committed.
+
+## S30 complete; Gate D7 DESCRIPTIVE; post-D7 plan locked — 2026-11-12
+expansion_v1 done (1600/1600; teammate's PC). Combined report: results/reports/pilot_expansion_v1_report.md.
+D7: E 0.054, N 6, not above chance (p 0.644), P 3, C 0 -> DESCRIPTIVE (decision log 2026-11-12).
+Plan (decision log 2026-11-12, exploratory): Track A = 5 treatment-only cases (S31-S36); B1, B2, B5, B6
+on existing runs; repeat run (RP); pre-registered follow-up F1-F3 (150 treat-final queries x 2 wordings)
+optional, allowed only if B1 is CLEAN (run / not run is logged after B1). Runbook Part 10 route table and Part 10b stage prompts added.
+Next action: S31 (either PC) and B1 code (run on the run PC). Raw run records exist only on the run PC.
