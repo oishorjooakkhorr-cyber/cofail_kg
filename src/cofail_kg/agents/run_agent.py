@@ -2,6 +2,7 @@
 
 The launcher supplies provenance/configuration. This module reads only the agent
 sheet and PrimeKG cache; evaluator data never enters its conversation or imports.
+In Phase 2 it also reads the run's overlay file of edge identities to hide (§10, §21).
 """
 
 from copy import deepcopy
@@ -13,7 +14,7 @@ from pathlib import Path
 import re
 import time
 
-from cofail_kg.agents.kg_env import BUDGET_EXHAUSTED, KGEnvironment, ToolConfig
+from cofail_kg.agents.kg_env import BUDGET_EXHAUSTED, KGEnvironment, ToolConfig, load_overlays
 from cofail_kg.agents.ollama_client import OllamaClient, OllamaError
 from cofail_kg.agents.prompts import P1_TEMPLATE, USER_TEMPLATE, PROMPT_VERSION, prompt_sha256
 from cofail_kg.agents.tool_schemas import TOOL_SCHEMAS, TOOL_VERSION
@@ -138,6 +139,14 @@ def run_episode(query_id, agent_config, run_config, attempt=1):
                "agent_inputs_sha256": config["agent_inputs_sha256"],
                "source_sha256": config.get("source_sha256", {}),
                "timeout_seconds": timeout, "request_timeout_seconds": config["request_timeout_seconds"]}]
+    overlay = None
+    if config.get("overlay_path") is not None:  # Phase 2 only; checked before any model call
+        overlay_bytes = Path(config["overlay_path"]).read_bytes()
+        if hashlib.sha256(overlay_bytes).hexdigest() != config.get("overlay_sha256"):
+            raise ValueError("Overlay file differs from the run's pinned overlay_sha256")
+        overlay = load_overlays(config["overlay_path"]).get(query_id)
+        events[0].update(overlay_sha256=config["overlay_sha256"],
+                         overlay=None if overlay is None else overlay.to_json())
     ignored = []
     counts = {"prompt": [], "completion": []}
     options = {key: config[key] for key in ("temperature", "seed", "num_ctx", "num_predict")}
@@ -168,7 +177,8 @@ def run_episode(query_id, agent_config, run_config, attempt=1):
         return remaining
 
     try:
-        environment = KGEnvironment(PrimeKGIndex(config["cache_dir"]), tool_config)
+        environment = KGEnvironment(PrimeKGIndex(config["cache_dir"]), tool_config,
+                                    overlay=overlay, query_id=query_id)
         while True:
             client.timeout_seconds = min(config["request_timeout_seconds"], check_time())
             response = client.chat(agent_config["tag"], deepcopy(messages),

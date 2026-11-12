@@ -94,6 +94,8 @@ def validate_completed(record: dict, agent: dict, config: dict, query_id: str, a
     wanted = {k: config[k] for k in ("source_sha256", "agent_inputs_sha256", "timeout_seconds",
                                      "request_timeout_seconds")}
     wanted["think"] = agent["think"]
+    if config.get("overlay_path") is not None:  # Phase 2: the same overlay file (§10, §21)
+        wanted["overlay_sha256"] = config["overlay_sha256"]
     if len(events) != 1 or any(events[0].get(k) != v for k, v in wanted.items()):
         raise ValueError(f"{query_id}/{agent['agent_id']}: saved episode config differs")
 
