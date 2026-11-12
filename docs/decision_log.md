@@ -3131,3 +3131,20 @@ Data seen before deciding: the B6 table and report, and the unmarked hand-check 
 all 15 rows. Row 1 (BH2_05964) was discussed as an example of how to mark. No source was looked up and
 no row was marked or given a proposed mark before this entry.
 Changes to protocol or decision rules: none.
+
+## 2026-11-12 — B6 — Outcome: hand-check NOT CLEAN (10 of 15 VALID)
+Decision: Record the B6 outcome under the rule of entry 2026-11-12 "B6 — Hand-check mark definitions"
+(commit 987a007). Exploratory, as all of B6.
+Table (results/exploratory/b6/, commit 318c0db): all queries, CF3^BH = 39, CF3^Q = 8, both = 8,
+BH-only = 31, Q-only = 0; without SOURCE_NAME_OVERLAP queries 38 / 7 / 7 / 31 / 0. All 31 BH-only
+queries are effect/phenotype:disease:drug.
+Hand-check (results/exploratory/b6_handcheck.csv and b6_handcheck_notes.md, commit e1cec7e): 10 VALID,
+5 QUESTIONABLE (BH2_05964, BH2_06040, BH2_05609, BH2_05838, BH2_05812), 0 NOT_VALID. Outcome: NOT CLEAN
+(the rule requires at least 12 of 15 VALID).
+Process: sources gathered and marks proposed by Claude Code; every final mark set by the researcher.
+The researcher changed 1 of the 15 proposals (BH2_05900, QUESTIONABLE → VALID). For BH2_05609 the
+researcher first entered VALID, then set QUESTIONABLE before commit to follow the logged source rule (the
+drug has an FDA label, so another regulator's label does not confirm step 2).
+Why: The outcome is recorded as it came out, with no change to the rule or the marks.
+Data seen before deciding: the B6 outputs and the hand-check sources and marks above.
+Changes to protocol or decision rules: none.
