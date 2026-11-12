@@ -3098,3 +3098,36 @@ fixes what those analyses are testing.
 Data seen before deciding: as in the entry "Plan after D7" (2026-11-12); no B1, B2, B5, B6, repeat-run or
 follow-up output existed.
 Changes to protocol or decision rules: none.
+
+## 2026-11-12 — B6 — Hand-check mark definitions (written before any mark)
+Decision: Fix what the three marks of the B6 hand-check mean, who marks, the outside sources and the
+CLEAN line (entry 2026-11-12 "Plan after D7", section B6, names the marks but defines none of these).
+Exploratory, as all of B6.
+What is judged: for each of the 15 rows of results/exploratory/b6_handcheck.csv, the printed graph path(s)
+s –r1→ b –r2→ t for the listed entity. Step 1 is s–b (the disease b has the phenotype s). Step 2 is b–t
+(the drug t is approved to treat the disease b).
+- VALID: for at least one printed path, both steps match the question as worded and each step is confirmed
+  as medically true in an outside source.
+- QUESTIONABLE: the path is in the graph, but for every printed path at least one step looks doubtful or
+  could not be confirmed in an outside source, and no step was found to be wrong.
+- NOT_VALID: for every printed path, at least one step is medically wrong according to an outside source.
+A row with two printed paths is marked by its best path.
+Outside sources. Step 2: the approved product label (FDA label; if the drug has no FDA label, another
+national regulator's label); DrugBank only if no label is found. Step 1: MedlinePlus or Orphanet; if
+neither covers the pair, another medical reference. The source used is named per row.
+Who marks: Claude Code looks up the sources and writes, per row, the source, what it says and a proposed
+mark in results/exploratory/b6_handcheck_notes.md. The researcher reads each row and confirms or changes
+the mark; only the researcher's marks go in the `mark` column of b6_handcheck.csv and only they are
+counted. Reported as: sources gathered and marks proposed by Claude Code (an LLM); every final mark
+confirmed or changed by the researcher; the number of proposed marks the researcher changed.
+Outcome: the count of each final mark out of 15. B6 hand-check is CLEAN if at least 12 of the 15 final
+marks are VALID; otherwise NOT CLEAN. Reported whatever the result. Marks are not changed after they are
+committed; a correction is a new log entry.
+Why: Without written meanings and a line fixed first, the marks could be read to fit the result. The
+researcher asked for the look-up work to be prepared (2026-11-12, limited time).
+Deviation noted: the "Plan after D7" entry says the researcher marks each row. Here Claude Code prepares
+the evidence and a proposed mark; the final mark stays the researcher's.
+Data seen before deciding: the B6 table and report, and the unmarked hand-check sheet (commit 318c0db),
+all 15 rows. Row 1 (BH2_05964) was discussed as an example of how to mark. No source was looked up and
+no row was marked or given a proposed mark before this entry.
+Changes to protocol or decision rules: none.
