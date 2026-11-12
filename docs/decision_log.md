@@ -3198,3 +3198,26 @@ drug has an FDA label, so another regulator's label does not confirm step 2).
 Why: The outcome is recorded as it came out, with no change to the rule or the marks.
 Data seen before deciding: the B6 outputs and the hand-check sources and marks above.
 Changes to protocol or decision rules: none.
+
+## 2026-11-12 — B1 — Readings of the B1 definitions (before any B1 output)
+Decision (researcher, 2026-11-12, answers to five questions from Claude Code): how the B1 rule of the entry
+2026-11-12 "Plan after D7", section B1, is applied by scripts/40_b1_uptake.py. The rule text is unchanged;
+these are readings of wording it leaves open. Exploratory, as all of B1.
+1. Reached: u is reached from s through an R1 label if u is listed in a successful
+   get_neighbors(s, r1 ∈ R1) result (any page, any neighbor_type), i.e. the trace-graph edge s –r1→ u.
+   For Opportunity and Opened, any get_neighbors(u, `off-label use`, …) call counts, successful or not (as
+   in the 2026-11-11 reading of "opened"). The order of calls within the episode is ignored.
+2. Taken (treat-final): an answer is off-label if its primary path (§14.2) has ≥ 2 edges and its second
+   edge has label `off-label use` (3-edge paths included).
+3. Treat-first (descriptive only), the rule mirrored at s, because there the indication step is step 1:
+   Opportunity: inspect_entity(s) listed `off-label use` with a Type_B neighbor type, or the agent called
+   get_neighbors(s, `off-label use`, …). Opened: that call. Taken: an answer whose primary path's first
+   edge has label `off-label use`.
+4. Ratios are nested: uptake = (Taken and Opportunity) / Opportunity; Opened / Opportunity;
+   Taken/Opened = (Taken and Opened) / Opened. Taken episodes outside Opportunity are counted and reported
+   in their own column.
+5. CLEAN / NOT CLEAN is judged on all queries (treat-final, primary). The view without SOURCE_NAME_OVERLAP
+   queries (§19.1) is also written, descriptive only.
+Data seen before deciding: none of B1 (no B1 count or output existed); the structure of episode records
+and the relation mapping (R1/R2 per type).
+Changes to protocol or decision rules: none.
