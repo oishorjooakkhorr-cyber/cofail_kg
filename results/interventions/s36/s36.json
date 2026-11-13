@@ -1,0 +1,957 @@
+{
+  "cases": [
+    {
+      "after": {
+        "denominator": 2,
+        "displacement": {
+          "NO_ANSWER": 0,
+          "OTHER_WRONG": 0,
+          "SAME_WRONG_RELATION_OTHER_NEIGHBOR": 0,
+          "VALID_RELATION": 2
+        },
+        "per_holder": {
+          "Cogito-14B": {
+            "answer_counts": {
+              "OTHER_WRONG": 0,
+              "SAME_WRONG_RELATION_OTHER_NEIGHBOR": 0,
+              "VALID_RELATION": 14
+            },
+            "category": "VALID_RELATION",
+            "recovered": true,
+            "resolved": 14,
+            "status": "SUCCESS"
+          },
+          "Granite41-8B": {
+            "answer_counts": {
+              "OTHER_WRONG": 0,
+              "SAME_WRONG_RELATION_OTHER_NEIGHBOR": 0,
+              "VALID_RELATION": 14
+            },
+            "category": "VALID_RELATION",
+            "recovered": true,
+            "resolved": 14,
+            "status": "SUCCESS"
+          },
+          "Ministral3-14B": {
+            "answer_counts": null,
+            "category": null,
+            "recovered": null,
+            "resolved": null,
+            "status": "PARSE_FAIL"
+          }
+        },
+        "recovered": 2,
+        "technical_failures": {
+          "Ministral3-14B": "PARSE_FAIL"
+        }
+      },
+      "before_holder_answers": {
+        "Cogito-14B": {
+          "OTHER_WRONG": 21,
+          "SAME_WRONG_RELATION_OTHER_NEIGHBOR": 0,
+          "VALID_RELATION": 14
+        },
+        "Granite41-8B": {
+          "OTHER_WRONG": 21,
+          "SAME_WRONG_RELATION_OTHER_NEIGHBOR": 0,
+          "VALID_RELATION": 14
+        },
+        "Ministral3-14B": {
+          "OTHER_WRONG": 20,
+          "SAME_WRONG_RELATION_OTHER_NEIGHBOR": 0,
+          "VALID_RELATION": 14
+        }
+      },
+      "cf": {
+        "CF3^Q": {
+          "after": 0,
+          "before": 1
+        },
+        "CF3^Q grounded": {
+          "after": 0,
+          "before": 1
+        },
+        "CF3^{Q,H1}": {
+          "after": 0,
+          "before": 1
+        },
+        "CF4^Q": {
+          "after": 0,
+          "before": 0
+        },
+        "CF4^Q grounded": {
+          "after": 0,
+          "before": 0
+        },
+        "CF4^{Q,H1}": {
+          "after": 0,
+          "before": 0
+        }
+      },
+      "holders": [
+        "Granite41-8B",
+        "Ministral3-14B",
+        "Cogito-14B"
+      ],
+      "mechanism": "WRONG_TURN_HOP2",
+      "no_answer": {
+        "after": {
+          "no_answer": 0,
+          "rate": 0.0,
+          "success_episodes": 3
+        },
+        "before": {
+          "no_answer": 0,
+          "rate": 0.0,
+          "success_episodes": 4
+        }
+      },
+      "pcf": {
+        "pcf_node3": {
+          "after": 0,
+          "before": 0
+        },
+        "pcf_node4": {
+          "after": 0,
+          "before": 0
+        },
+        "pcf_rel3": {
+          "after": 0,
+          "before": 1
+        },
+        "pcf_rel4": {
+          "after": 0,
+          "before": 0
+        },
+        "pcf_shortcut3": {
+          "after": 0,
+          "before": 0
+        }
+      },
+      "query_id": "BH2_03356",
+      "r": "off-label use",
+      "reference_repeat": {
+        "denominator": 2,
+        "displacement": {
+          "NO_ANSWER": 0,
+          "OTHER_WRONG": 2,
+          "SAME_WRONG_RELATION_OTHER_NEIGHBOR": 0,
+          "VALID_RELATION": 0
+        },
+        "per_holder": {
+          "Cogito-14B": {
+            "answer_counts": {
+              "OTHER_WRONG": 21,
+              "SAME_WRONG_RELATION_OTHER_NEIGHBOR": 0,
+              "VALID_RELATION": 14
+            },
+            "category": "OTHER_WRONG",
+            "recovered": false,
+            "resolved": 35,
+            "status": "SUCCESS"
+          },
+          "Granite41-8B": {
+            "answer_counts": {
+              "OTHER_WRONG": 21,
+              "SAME_WRONG_RELATION_OTHER_NEIGHBOR": 0,
+              "VALID_RELATION": 14
+            },
+            "category": "OTHER_WRONG",
+            "recovered": false,
+            "resolved": 35,
+            "status": "SUCCESS"
+          },
+          "Ministral3-14B": {
+            "answer_counts": null,
+            "category": null,
+            "recovered": null,
+            "resolved": null,
+            "status": "PARSE_FAIL"
+          }
+        },
+        "recovered": 0,
+        "technical_failures": {
+          "Ministral3-14B": "PARSE_FAIL"
+        }
+      },
+      "same_wrong_possible": true,
+      "step": 2,
+      "u": "33618"
+    },
+    {
+      "after": {
+        "denominator": 3,
+        "displacement": {
+          "NO_ANSWER": 0,
+          "OTHER_WRONG": 1,
+          "SAME_WRONG_RELATION_OTHER_NEIGHBOR": 0,
+          "VALID_RELATION": 2
+        },
+        "per_holder": {
+          "Cogito-14B": {
+            "answer_counts": {
+              "OTHER_WRONG": 0,
+              "SAME_WRONG_RELATION_OTHER_NEIGHBOR": 0,
+              "VALID_RELATION": 13
+            },
+            "category": "VALID_RELATION",
+            "recovered": true,
+            "resolved": 13,
+            "status": "SUCCESS"
+          },
+          "Granite41-8B": {
+            "answer_counts": {
+              "OTHER_WRONG": 7,
+              "SAME_WRONG_RELATION_OTHER_NEIGHBOR": 0,
+              "VALID_RELATION": 13
+            },
+            "category": "OTHER_WRONG",
+            "recovered": false,
+            "resolved": 20,
+            "status": "SUCCESS"
+          },
+          "Ministral3-14B": {
+            "answer_counts": {
+              "OTHER_WRONG": 0,
+              "SAME_WRONG_RELATION_OTHER_NEIGHBOR": 0,
+              "VALID_RELATION": 13
+            },
+            "category": "VALID_RELATION",
+            "recovered": true,
+            "resolved": 13,
+            "status": "SUCCESS"
+          }
+        },
+        "recovered": 2,
+        "technical_failures": {}
+      },
+      "before_holder_answers": {
+        "Cogito-14B": {
+          "OTHER_WRONG": 5,
+          "SAME_WRONG_RELATION_OTHER_NEIGHBOR": 0,
+          "VALID_RELATION": 0
+        },
+        "Granite41-8B": {
+          "OTHER_WRONG": 5,
+          "SAME_WRONG_RELATION_OTHER_NEIGHBOR": 0,
+          "VALID_RELATION": 0
+        },
+        "Ministral3-14B": {
+          "OTHER_WRONG": 5,
+          "SAME_WRONG_RELATION_OTHER_NEIGHBOR": 0,
+          "VALID_RELATION": 0
+        }
+      },
+      "cf": {
+        "CF3^Q": {
+          "after": 0,
+          "before": 1
+        },
+        "CF3^Q grounded": {
+          "after": 0,
+          "before": 1
+        },
+        "CF3^{Q,H1}": {
+          "after": 0,
+          "before": 0
+        },
+        "CF4^Q": {
+          "after": 0,
+          "before": 0
+        },
+        "CF4^Q grounded": {
+          "after": 0,
+          "before": 0
+        },
+        "CF4^{Q,H1}": {
+          "after": 0,
+          "before": 0
+        }
+      },
+      "holders": [
+        "Granite41-8B",
+        "Ministral3-14B",
+        "Cogito-14B"
+      ],
+      "mechanism": "SHORTCUT",
+      "no_answer": {
+        "after": {
+          "no_answer": 0,
+          "rate": 0.0,
+          "success_episodes": 4
+        },
+        "before": {
+          "no_answer": 0,
+          "rate": 0.0,
+          "success_episodes": 4
+        }
+      },
+      "pcf": {
+        "pcf_node3": {
+          "after": 0,
+          "before": 0
+        },
+        "pcf_node4": {
+          "after": 0,
+          "before": 0
+        },
+        "pcf_rel3": {
+          "after": 0,
+          "before": 1
+        },
+        "pcf_rel4": {
+          "after": 0,
+          "before": 0
+        },
+        "pcf_shortcut3": {
+          "after": 0,
+          "before": 1
+        }
+      },
+      "query_id": "BH2_04650",
+      "r": "drug_protein",
+      "reference_repeat": {
+        "denominator": 3,
+        "displacement": {
+          "NO_ANSWER": 0,
+          "OTHER_WRONG": 3,
+          "SAME_WRONG_RELATION_OTHER_NEIGHBOR": 0,
+          "VALID_RELATION": 0
+        },
+        "per_holder": {
+          "Cogito-14B": {
+            "answer_counts": {
+              "OTHER_WRONG": 5,
+              "SAME_WRONG_RELATION_OTHER_NEIGHBOR": 0,
+              "VALID_RELATION": 0
+            },
+            "category": "OTHER_WRONG",
+            "recovered": false,
+            "resolved": 5,
+            "status": "SUCCESS"
+          },
+          "Granite41-8B": {
+            "answer_counts": {
+              "OTHER_WRONG": 5,
+              "SAME_WRONG_RELATION_OTHER_NEIGHBOR": 0,
+              "VALID_RELATION": 0
+            },
+            "category": "OTHER_WRONG",
+            "recovered": false,
+            "resolved": 5,
+            "status": "SUCCESS"
+          },
+          "Ministral3-14B": {
+            "answer_counts": {
+              "OTHER_WRONG": 5,
+              "SAME_WRONG_RELATION_OTHER_NEIGHBOR": 0,
+              "VALID_RELATION": 0
+            },
+            "category": "OTHER_WRONG",
+            "recovered": false,
+            "resolved": 5,
+            "status": "SUCCESS"
+          }
+        },
+        "recovered": 0,
+        "technical_failures": {}
+      },
+      "same_wrong_possible": false,
+      "step": 1,
+      "u": "16843"
+    },
+    {
+      "after": {
+        "denominator": 3,
+        "displacement": {
+          "NO_ANSWER": 0,
+          "OTHER_WRONG": 0,
+          "SAME_WRONG_RELATION_OTHER_NEIGHBOR": 0,
+          "VALID_RELATION": 3
+        },
+        "per_holder": {
+          "Cogito-14B": {
+            "answer_counts": {
+              "OTHER_WRONG": 0,
+              "SAME_WRONG_RELATION_OTHER_NEIGHBOR": 0,
+              "VALID_RELATION": 2
+            },
+            "category": "VALID_RELATION",
+            "recovered": true,
+            "resolved": 2,
+            "status": "SUCCESS"
+          },
+          "Gemma4-12B": {
+            "answer_counts": {
+              "OTHER_WRONG": 0,
+              "SAME_WRONG_RELATION_OTHER_NEIGHBOR": 0,
+              "VALID_RELATION": 2
+            },
+            "category": "VALID_RELATION",
+            "recovered": true,
+            "resolved": 2,
+            "status": "SUCCESS"
+          },
+          "Granite41-8B": {
+            "answer_counts": {
+              "OTHER_WRONG": 0,
+              "SAME_WRONG_RELATION_OTHER_NEIGHBOR": 0,
+              "VALID_RELATION": 2
+            },
+            "category": "VALID_RELATION",
+            "recovered": true,
+            "resolved": 2,
+            "status": "SUCCESS"
+          }
+        },
+        "recovered": 3,
+        "technical_failures": {}
+      },
+      "before_holder_answers": {
+        "Cogito-14B": {
+          "OTHER_WRONG": 2,
+          "SAME_WRONG_RELATION_OTHER_NEIGHBOR": 0,
+          "VALID_RELATION": 2
+        },
+        "Gemma4-12B": {
+          "OTHER_WRONG": 2,
+          "SAME_WRONG_RELATION_OTHER_NEIGHBOR": 0,
+          "VALID_RELATION": 2
+        },
+        "Granite41-8B": {
+          "OTHER_WRONG": 2,
+          "SAME_WRONG_RELATION_OTHER_NEIGHBOR": 0,
+          "VALID_RELATION": 2
+        }
+      },
+      "cf": {
+        "CF3^Q": {
+          "after": 0,
+          "before": 1
+        },
+        "CF3^Q grounded": {
+          "after": 0,
+          "before": 1
+        },
+        "CF3^{Q,H1}": {
+          "after": 0,
+          "before": 1
+        },
+        "CF4^Q": {
+          "after": 0,
+          "before": 0
+        },
+        "CF4^Q grounded": {
+          "after": 0,
+          "before": 0
+        },
+        "CF4^{Q,H1}": {
+          "after": 0,
+          "before": 0
+        }
+      },
+      "holders": [
+        "Gemma4-12B",
+        "Granite41-8B",
+        "Cogito-14B"
+      ],
+      "mechanism": "WRONG_TURN_HOP2",
+      "no_answer": {
+        "after": {
+          "no_answer": 0,
+          "rate": 0.0,
+          "success_episodes": 3
+        },
+        "before": {
+          "no_answer": 0,
+          "rate": 0.0,
+          "success_episodes": 4
+        }
+      },
+      "pcf": {
+        "pcf_node3": {
+          "after": 0,
+          "before": 0
+        },
+        "pcf_node4": {
+          "after": 0,
+          "before": 0
+        },
+        "pcf_rel3": {
+          "after": 0,
+          "before": 1
+        },
+        "pcf_rel4": {
+          "after": 0,
+          "before": 0
+        },
+        "pcf_shortcut3": {
+          "after": 0,
+          "before": 0
+        }
+      },
+      "query_id": "BH2_05290",
+      "r": "off-label use",
+      "reference_repeat": {
+        "denominator": 3,
+        "displacement": {
+          "NO_ANSWER": 0,
+          "OTHER_WRONG": 3,
+          "SAME_WRONG_RELATION_OTHER_NEIGHBOR": 0,
+          "VALID_RELATION": 0
+        },
+        "per_holder": {
+          "Cogito-14B": {
+            "answer_counts": {
+              "OTHER_WRONG": 2,
+              "SAME_WRONG_RELATION_OTHER_NEIGHBOR": 0,
+              "VALID_RELATION": 2
+            },
+            "category": "OTHER_WRONG",
+            "recovered": false,
+            "resolved": 4,
+            "status": "SUCCESS"
+          },
+          "Gemma4-12B": {
+            "answer_counts": {
+              "OTHER_WRONG": 2,
+              "SAME_WRONG_RELATION_OTHER_NEIGHBOR": 0,
+              "VALID_RELATION": 2
+            },
+            "category": "OTHER_WRONG",
+            "recovered": false,
+            "resolved": 4,
+            "status": "SUCCESS"
+          },
+          "Granite41-8B": {
+            "answer_counts": {
+              "OTHER_WRONG": 2,
+              "SAME_WRONG_RELATION_OTHER_NEIGHBOR": 0,
+              "VALID_RELATION": 2
+            },
+            "category": "OTHER_WRONG",
+            "recovered": false,
+            "resolved": 4,
+            "status": "SUCCESS"
+          }
+        },
+        "recovered": 0,
+        "technical_failures": {}
+      },
+      "same_wrong_possible": true,
+      "step": 2,
+      "u": "14052"
+    },
+    {
+      "after": {
+        "denominator": 3,
+        "displacement": {
+          "NO_ANSWER": 0,
+          "OTHER_WRONG": 0,
+          "SAME_WRONG_RELATION_OTHER_NEIGHBOR": 0,
+          "VALID_RELATION": 3
+        },
+        "per_holder": {
+          "Cogito-14B": {
+            "answer_counts": {
+              "OTHER_WRONG": 0,
+              "SAME_WRONG_RELATION_OTHER_NEIGHBOR": 0,
+              "VALID_RELATION": 4
+            },
+            "category": "VALID_RELATION",
+            "recovered": true,
+            "resolved": 4,
+            "status": "SUCCESS"
+          },
+          "Granite41-8B": {
+            "answer_counts": {
+              "OTHER_WRONG": 0,
+              "SAME_WRONG_RELATION_OTHER_NEIGHBOR": 0,
+              "VALID_RELATION": 4
+            },
+            "category": "VALID_RELATION",
+            "recovered": true,
+            "resolved": 4,
+            "status": "SUCCESS"
+          },
+          "Ministral3-14B": {
+            "answer_counts": {
+              "OTHER_WRONG": 0,
+              "SAME_WRONG_RELATION_OTHER_NEIGHBOR": 0,
+              "VALID_RELATION": 4
+            },
+            "category": "VALID_RELATION",
+            "recovered": true,
+            "resolved": 4,
+            "status": "SUCCESS"
+          }
+        },
+        "recovered": 3,
+        "technical_failures": {}
+      },
+      "before_holder_answers": {
+        "Cogito-14B": {
+          "OTHER_WRONG": 2,
+          "SAME_WRONG_RELATION_OTHER_NEIGHBOR": 0,
+          "VALID_RELATION": 4
+        },
+        "Granite41-8B": {
+          "OTHER_WRONG": 4,
+          "SAME_WRONG_RELATION_OTHER_NEIGHBOR": 0,
+          "VALID_RELATION": 4
+        },
+        "Ministral3-14B": {
+          "OTHER_WRONG": 2,
+          "SAME_WRONG_RELATION_OTHER_NEIGHBOR": 0,
+          "VALID_RELATION": 4
+        }
+      },
+      "cf": {
+        "CF3^Q": {
+          "after": 0,
+          "before": 1
+        },
+        "CF3^Q grounded": {
+          "after": 0,
+          "before": 1
+        },
+        "CF3^{Q,H1}": {
+          "after": 0,
+          "before": 1
+        },
+        "CF4^Q": {
+          "after": 0,
+          "before": 0
+        },
+        "CF4^Q grounded": {
+          "after": 0,
+          "before": 0
+        },
+        "CF4^{Q,H1}": {
+          "after": 0,
+          "before": 0
+        }
+      },
+      "holders": [
+        "Granite41-8B",
+        "Ministral3-14B",
+        "Cogito-14B"
+      ],
+      "mechanism": "WRONG_TURN_HOP2",
+      "no_answer": {
+        "after": {
+          "no_answer": 0,
+          "rate": 0.0,
+          "success_episodes": 4
+        },
+        "before": {
+          "no_answer": 0,
+          "rate": 0.0,
+          "success_episodes": 4
+        }
+      },
+      "pcf": {
+        "pcf_node3": {
+          "after": 0,
+          "before": 0
+        },
+        "pcf_node4": {
+          "after": 0,
+          "before": 0
+        },
+        "pcf_rel3": {
+          "after": 0,
+          "before": 1
+        },
+        "pcf_rel4": {
+          "after": 0,
+          "before": 0
+        },
+        "pcf_shortcut3": {
+          "after": 0,
+          "before": 0
+        }
+      },
+      "query_id": "BH2_05997",
+      "r": "off-label use",
+      "reference_repeat": {
+        "denominator": 3,
+        "displacement": {
+          "NO_ANSWER": 0,
+          "OTHER_WRONG": 3,
+          "SAME_WRONG_RELATION_OTHER_NEIGHBOR": 0,
+          "VALID_RELATION": 0
+        },
+        "per_holder": {
+          "Cogito-14B": {
+            "answer_counts": {
+              "OTHER_WRONG": 2,
+              "SAME_WRONG_RELATION_OTHER_NEIGHBOR": 0,
+              "VALID_RELATION": 4
+            },
+            "category": "OTHER_WRONG",
+            "recovered": false,
+            "resolved": 6,
+            "status": "SUCCESS"
+          },
+          "Granite41-8B": {
+            "answer_counts": {
+              "OTHER_WRONG": 4,
+              "SAME_WRONG_RELATION_OTHER_NEIGHBOR": 0,
+              "VALID_RELATION": 4
+            },
+            "category": "OTHER_WRONG",
+            "recovered": false,
+            "resolved": 8,
+            "status": "SUCCESS"
+          },
+          "Ministral3-14B": {
+            "answer_counts": {
+              "OTHER_WRONG": 2,
+              "SAME_WRONG_RELATION_OTHER_NEIGHBOR": 0,
+              "VALID_RELATION": 4
+            },
+            "category": "OTHER_WRONG",
+            "recovered": false,
+            "resolved": 6,
+            "status": "SUCCESS"
+          }
+        },
+        "recovered": 0,
+        "technical_failures": {}
+      },
+      "same_wrong_possible": true,
+      "step": 2,
+      "u": "33228"
+    },
+    {
+      "after": {
+        "denominator": 4,
+        "displacement": {
+          "NO_ANSWER": 0,
+          "OTHER_WRONG": 0,
+          "SAME_WRONG_RELATION_OTHER_NEIGHBOR": 0,
+          "VALID_RELATION": 4
+        },
+        "per_holder": {
+          "Cogito-14B": {
+            "answer_counts": {
+              "OTHER_WRONG": 0,
+              "SAME_WRONG_RELATION_OTHER_NEIGHBOR": 0,
+              "VALID_RELATION": 24
+            },
+            "category": "VALID_RELATION",
+            "recovered": true,
+            "resolved": 24,
+            "status": "SUCCESS"
+          },
+          "Gemma4-12B": {
+            "answer_counts": {
+              "OTHER_WRONG": 0,
+              "SAME_WRONG_RELATION_OTHER_NEIGHBOR": 0,
+              "VALID_RELATION": 24
+            },
+            "category": "VALID_RELATION",
+            "recovered": true,
+            "resolved": 24,
+            "status": "SUCCESS"
+          },
+          "Granite41-8B": {
+            "answer_counts": {
+              "OTHER_WRONG": 0,
+              "SAME_WRONG_RELATION_OTHER_NEIGHBOR": 0,
+              "VALID_RELATION": 24
+            },
+            "category": "VALID_RELATION",
+            "recovered": true,
+            "resolved": 24,
+            "status": "SUCCESS"
+          },
+          "Ministral3-14B": {
+            "answer_counts": {
+              "OTHER_WRONG": 0,
+              "SAME_WRONG_RELATION_OTHER_NEIGHBOR": 0,
+              "VALID_RELATION": 24
+            },
+            "category": "VALID_RELATION",
+            "recovered": true,
+            "resolved": 24,
+            "status": "SUCCESS"
+          }
+        },
+        "recovered": 4,
+        "technical_failures": {}
+      },
+      "before_holder_answers": {
+        "Cogito-14B": {
+          "OTHER_WRONG": 8,
+          "SAME_WRONG_RELATION_OTHER_NEIGHBOR": 0,
+          "VALID_RELATION": 24
+        },
+        "Gemma4-12B": {
+          "OTHER_WRONG": 8,
+          "SAME_WRONG_RELATION_OTHER_NEIGHBOR": 0,
+          "VALID_RELATION": 24
+        },
+        "Granite41-8B": {
+          "OTHER_WRONG": 8,
+          "SAME_WRONG_RELATION_OTHER_NEIGHBOR": 0,
+          "VALID_RELATION": 24
+        },
+        "Ministral3-14B": {
+          "OTHER_WRONG": 8,
+          "SAME_WRONG_RELATION_OTHER_NEIGHBOR": 0,
+          "VALID_RELATION": 24
+        }
+      },
+      "cf": {
+        "CF3^Q": {
+          "after": 0,
+          "before": 1
+        },
+        "CF3^Q grounded": {
+          "after": 0,
+          "before": 1
+        },
+        "CF3^{Q,H1}": {
+          "after": 0,
+          "before": 1
+        },
+        "CF4^Q": {
+          "after": 0,
+          "before": 1
+        },
+        "CF4^Q grounded": {
+          "after": 0,
+          "before": 1
+        },
+        "CF4^{Q,H1}": {
+          "after": 0,
+          "before": 1
+        }
+      },
+      "holders": [
+        "Gemma4-12B",
+        "Granite41-8B",
+        "Ministral3-14B",
+        "Cogito-14B"
+      ],
+      "mechanism": "WRONG_TURN_HOP2",
+      "no_answer": {
+        "after": {
+          "no_answer": 0,
+          "rate": 0.0,
+          "success_episodes": 4
+        },
+        "before": {
+          "no_answer": 0,
+          "rate": 0.0,
+          "success_episodes": 4
+        }
+      },
+      "pcf": {
+        "pcf_node3": {
+          "after": 0,
+          "before": 0
+        },
+        "pcf_node4": {
+          "after": 0,
+          "before": 0
+        },
+        "pcf_rel3": {
+          "after": 0,
+          "before": 1
+        },
+        "pcf_rel4": {
+          "after": 0,
+          "before": 1
+        },
+        "pcf_shortcut3": {
+          "after": 0,
+          "before": 0
+        }
+      },
+      "query_id": "BH2_06016",
+      "r": "off-label use",
+      "reference_repeat": {
+        "denominator": 4,
+        "displacement": {
+          "NO_ANSWER": 0,
+          "OTHER_WRONG": 4,
+          "SAME_WRONG_RELATION_OTHER_NEIGHBOR": 0,
+          "VALID_RELATION": 0
+        },
+        "per_holder": {
+          "Cogito-14B": {
+            "answer_counts": {
+              "OTHER_WRONG": 8,
+              "SAME_WRONG_RELATION_OTHER_NEIGHBOR": 0,
+              "VALID_RELATION": 24
+            },
+            "category": "OTHER_WRONG",
+            "recovered": false,
+            "resolved": 32,
+            "status": "SUCCESS"
+          },
+          "Gemma4-12B": {
+            "answer_counts": {
+              "OTHER_WRONG": 8,
+              "SAME_WRONG_RELATION_OTHER_NEIGHBOR": 0,
+              "VALID_RELATION": 24
+            },
+            "category": "OTHER_WRONG",
+            "recovered": false,
+            "resolved": 32,
+            "status": "SUCCESS"
+          },
+          "Granite41-8B": {
+            "answer_counts": {
+              "OTHER_WRONG": 8,
+              "SAME_WRONG_RELATION_OTHER_NEIGHBOR": 0,
+              "VALID_RELATION": 24
+            },
+            "category": "OTHER_WRONG",
+            "recovered": false,
+            "resolved": 32,
+            "status": "SUCCESS"
+          },
+          "Ministral3-14B": {
+            "answer_counts": {
+              "OTHER_WRONG": 8,
+              "SAME_WRONG_RELATION_OTHER_NEIGHBOR": 0,
+              "VALID_RELATION": 24
+            },
+            "category": "OTHER_WRONG",
+            "recovered": false,
+            "resolved": 32,
+            "status": "SUCCESS"
+          }
+        },
+        "recovered": 0,
+        "technical_failures": {}
+      },
+      "same_wrong_possible": true,
+      "step": 2,
+      "u": "30800"
+    }
+  ],
+  "note": "DESCRIPTIVE, EXPLORATORY, TREATMENT-ONLY (D7 DESCRIPTIVE; decision log 2026-11-12 \"Plan after D7\", section A4; readings 2026-11-13 \"S36 — Readings of the §21 outcomes\"). Per case only; no aggregate ΔCF and no τ_CF (no control exists, C = 0).",
+  "provenance": {
+    "git_commit": "dcf51a84238c5ee491ff31b65387bbf80b729860",
+    "git_tracked_clean": true
+  },
+  "run_commits": {
+    "after": {
+      "intervention_v1": "c4b854ac946ed8283910120b6670a33cbc6cc89f"
+    },
+    "before": {
+      "expansion_v1": "b8209e6c80a3ee4b1c263bc1479879ca74029110",
+      "pilot_v1": "46902dccc533fff1e3c617251ce730d996df7e9d (Gemma4-12B); 5e69e2391fb8b3f4c7722a91917200febe59c556 (Cogito-14B, Granite41-8B, Ministral3-14B)"
+    },
+    "reference": {
+      "repeat_v1": "1b36d37aed6c20b1d272575c3322bb36eefff672"
+    }
+  },
+  "stage": "S36",
+  "status": "DESCRIPTIVE"
+}
