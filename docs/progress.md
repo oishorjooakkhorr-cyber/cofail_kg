@@ -828,3 +828,12 @@ Plan (decision log 2026-11-12, exploratory): Track A = 5 treatment-only cases (S
 on existing runs; repeat run (RP); pre-registered follow-up F1-F3 (150 treat-final queries x 2 wordings)
 optional, allowed only if B1 is CLEAN (run / not run is logged after B1). Runbook Part 10 route table and Part 10b stage prompts added.
 Next action: S31 (either PC) and B1 code (run on the run PC). Raw run records exist only on the run PC.
+
+## S31–S38 complete; writing — 2026-11-14
+Track A (S31–S36, DESCRIPTIVE, treatment-only): 5 cases, intervention_v1 20/20 (2 PARSE_FAIL); S36 per case only.
+Phase J: B1 NOT CLEAN (follow-up F1–F3 not run); B2, B5, B6 (hand-check NOT CLEAN, 10/15 VALID), RP (5 of 8
+reproduce), IC AGREES. S37: D8 not applicable (no scaling). S38: final tables in results/reports/final/
+(12 tables, Markdown + CSV, README), produced by scripts/38_final_tables.py at d6a0013 (outputs 9af1529).
+Open: teammate to confirm and log the full_v1 stop, who requested S39, and whether anyone opened full_v1
+outputs (decision log 2026-11-12 "S39", items 4–5).
+Next action: writing (runbook Part 12 maps stages and S38 tables to thesis sections).
