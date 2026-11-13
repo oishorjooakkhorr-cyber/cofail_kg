@@ -122,6 +122,8 @@ def main(argv=None) -> int:
     ap.add_argument("--combined", required=True)
     ap.add_argument("--run-id", required=True)
     ap.add_argument("--out", default="results/interventions/smoke")
+    ap.add_argument("--stage", default="S34", choices=("S34", "S35"),
+                    help="S35 reuses the same call-by-call check on intervention_v1")
     args = ap.parse_args(argv)
     report = _load("s28_report", "28_pilot_report.py")
     b5 = _load("b5_concentration", "42_b5_concentration.py")
@@ -157,11 +159,12 @@ def main(argv=None) -> int:
                    "hidden_edge_count": s33[q]["hidden_edge_count"]}
                for q in sorted({e["query_id"] for e in episodes})}
     commit, clean = b5.git_state()
-    payload = {"stage": "S34", "status": "DESCRIPTIVE", "note": NOTE, "run_id": args.run_id,
+    payload = {"stage": args.stage, "status": "DESCRIPTIVE", "note": NOTE, "run_id": args.run_id,
                "inference_commits": sorted(commits), "git_commit": commit, "git_tracked_clean": clean,
                "queries": queries, "episodes": episodes,
                "unexplained_differences": sum(len(e["different_and_not_explained_by_overlay"]) for e in episodes)}
-    lines = [f"# S34 — Intervention smoke test `{args.run_id}` (DESCRIPTIVE)\n", f"{NOTE}\n",
+    title = {"S34": "Intervention smoke test", "S35": "Intervention run: tool-output check"}[args.stage]
+    lines = [f"# {args.stage} — {title} `{args.run_id}` (DESCRIPTIVE)\n", f"{NOTE}\n",
              f"Produced by `scripts/47_s34_smoke_report.py` at commit `{commit}` (tracked files clean: {clean}); "
              f"inference commit(s): " + ", ".join(f"`{c}`" for c in sorted(commits)) + ".\n",
              f"**Differences from the original run not explained by the overlay: "
