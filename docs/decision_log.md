@@ -3312,3 +3312,17 @@ of the entry 2026-11-12 "Plan after D7", section A3 (BH2_05290 × 4 agents, run 
    compares each with the same call in the original run.
 Data seen before deciding: B1, B2 and RP outputs; no intervention episode existed.
 Changes to protocol or decision rules: none.
+
+## 2026-11-13 — S34 — Pre-run checks (S26 repeated, intervention inputs and overlay added): PASS on a6fb94e
+Checks run on **a6fb94e1c940285103ceee827d4f6fedfdcca2da** (S34 preparation commit):
+1. TBD/DEFAULT: PASS (the only `[TBD@Sx]` matches are the legend and the D5 rule text; the only
+   `[DEFAULT]` was confirmed at S10).
+2. Tests: PASS. 880 passed, 2 skipped, 0 failed (`--basetemp` in the session scratchpad).
+3. Clean tree: PASS.
+4. Frozen hashes: PASS, 19/19 equal: `manifests` (8), `manifests_repeat8` (2), `manifests_intervention` (4),
+   `intervention_overlays` (1, e7d9a241…), kg_fingerprint, tools, relation_mapping, prompt.
+5. BioHopR content (1adda2f2…) and installed digests (`scripts/21_freeze_models.py check`, all four equal
+   `models_s21r2`): PASS.
+Run: `scripts/25_run_panel.py run --manifest intervention_smoke --run-id intervention_smoke`
+(BH2_05290 × 4 agents = 4 episodes, overlay: hide `off-label use` at 14052).
+This entry changes only docs/decision_log.md (not a pinned run source); the run records the HEAD at run time.
