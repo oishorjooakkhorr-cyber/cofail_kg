@@ -3247,3 +3247,16 @@ any record.
 Data seen before deciding: the S39 commit (manifest, provenance, scripts, leakage scan, its two log
 entries); no full_v1 output.
 Changes to protocol or decision rules: none.
+
+## 2026-11-13 — B2 — Inputs and the contraindication step (before any B2 output)
+Decision (researcher, 2026-11-13, answers to two questions from Claude Code): how the B2 rule of the entry
+2026-11-12 "Plan after D7", section B2, is applied by scripts/41_b2_lenient.py. Exploratory, as all of B2.
+1. Raw records: the lenient hop-1 status (per-answer H1, hence CF3^{Q,H1}, and per-agent H1 status) needs
+   the trace graphs, so B2 reads the raw pilot_v1 and expansion_v1 records on the run PC. full_v1 is not
+   read (entry 2026-11-12 "S39 — full_v1 is outside the post-D7 plan").
+2. Contraindication "at an indication step": the same positions as the B1 readings (entry 2026-11-12
+   "B1 — Readings", items 2 and 3): treat-final, the second edge of a primary path with ≥ 2 edges;
+   treat-first, the first edge; other types have no indication step. All retained resolved answers are
+   counted; how many of them are in T_q⁺ is reported as well.
+Data seen before deciding: B1 outputs; no B2 output existed.
+Changes to protocol or decision rules: none.
