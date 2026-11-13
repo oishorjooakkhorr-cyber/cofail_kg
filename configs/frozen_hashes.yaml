@@ -11,6 +11,9 @@ manifests:
   data/processed/manifests/pilot.jsonl: 102a1cb1133ae7ea3bf36972965101c3842b26b231739363b53e7250714a28d4
   data/processed/manifests/screening.jsonl: 58421a410eb32413b7af7dfa157ef4a430b5ccf7e087dc1f8d60d597730c12b9
   data/processed/manifests/smoke.jsonl: f6295231dbbe9822ccb0254e0b0bdfac35f4be993abe0283eb3db124eb0d27a9
+manifests_repeat8:
+  data/agent_inputs/repeat8.jsonl: f42ebbdb1b73aa8a1f839ec521f1dd02f9da4942db02158884c63db38bed1de7
+  data/processed/manifests/repeat8.jsonl: 562929127b9dfe9c914ab460650de29936378d2d0887c55e57fbc7bc1b85d176
 models:
   Gemma4-E4B:
     digest: dc35e8d9c6061baa6f0fa870975ab6932e2542b579b13ea0f199fa4bb7300c9c

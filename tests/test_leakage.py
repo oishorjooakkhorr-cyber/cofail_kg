@@ -432,20 +432,27 @@ def audit_inputs():
         assert summary["provenance"][key] == frozen[frozen_key]
     for key in ("biohopr_revision", "kg_fingerprint"):
         assert mapping["provenance"][key] == frozen[key]
+    # Phase J RP: repeat8's write-once hashes are in their own key (scripts/44_make_repeat8.py).
+    entries = {**frozen["manifests"], **frozen.get("manifests_repeat8", {})}
+    assert len(entries) == len(frozen["manifests"]) + len(frozen.get("manifests_repeat8", {}))
     sheets = {}
     for path in sorted((ROOT / "data/agent_inputs").glob("*.jsonl")):
         if path.relative_to(ROOT).as_posix() in read_frozen_hashes(ROOT / "configs/frozen_hashes_full.yaml").get("manifests_full", {}):
             continue  # S39 exploratory full-run sheet: audited by scripts/39_leakage_full.py, not here
-        assert sha256(path) == frozen["manifests"][path.relative_to(ROOT).as_posix()]
+        if path.name == "intervention_overlays.jsonl":
+            continue  # S33 overlay (edge identities to hide), not a question sheet; hashed and audited at S34
+        assert sha256(path) == entries[path.relative_to(ROOT).as_posix()]
         sheets[path.stem] = read_sheet(path)
-    assert set(sheets) == {"screening", "smoke", "pilot", "expansion"}
-    assert len(sheets["screening"]) == 20 and len(sheets["smoke"]) == 4
+    assert set(sheets) == {"screening", "smoke", "pilot", "expansion", "repeat8"}
+    assert len(sheets["screening"]) == 20 and len(sheets["smoke"]) == 4 and len(sheets["repeat8"]) == 8
+    originals = {row["query_id"]: row for split in ("pilot", "expansion") for row in sheets[split]}
+    assert all(row == originals[row["query_id"]] for row in sheets["repeat8"])  # RP: original sheet rows
     refs = pq.read_table(ROOT / "data/processed/reference_queries.parquet").to_pylist()
     references = {q["query_id"]: q for q in refs}
     assert len(references) == len(refs)
     for split in sorted(sheets):
         path = ROOT / f"data/processed/manifests/{split}.jsonl"
-        assert sha256(path) == frozen["manifests"][path.relative_to(ROOT).as_posix()]
+        assert sha256(path) == entries[path.relative_to(ROOT).as_posix()]
         manifest = [json.loads(line) for line in path.read_text(encoding="utf-8").splitlines()]
         assert [q["query_id"] for q in manifest] == [q["query_id"] for q in sheets[split]]
         for row, selected in zip(sheets[split], manifest):
@@ -456,7 +463,7 @@ def audit_inputs():
     paths = [ROOT / "configs/frozen_hashes.yaml", mapping_path,
              ROOT / "data/processed/reference_queries.parquet",
              ROOT / "data/processed/reference_summary.json"]
-    paths.extend(ROOT / name for name in frozen["manifests"])
+    paths.extend(ROOT / name for name in entries)
     print("S15_PREFLIGHT=" + json.dumps({"hashes": {p.relative_to(ROOT).as_posix(): sha256(p) for p in paths},
                                         "frozen": frozen, "sheet_counts": {k: len(v) for k, v in sheets.items()}}, sort_keys=True))
     return frozen, mapping, sheets, references
@@ -568,13 +575,15 @@ def test_a_all_524_source_name_overlaps(audit_inputs, audited_index):
     report = dict(rows=sum(len(rows) for rows in sheets.values()), flagged_queries=overlaps, failures=failures,
                   per_split=split_counts, per_relation_type=type_counts, short_names=short_names)
     print("S15_SOURCE_NAME_OVERLAP=" + json.dumps(report, sort_keys=True))
-    assert report["rows"] == 524 and not failures, failures
+    # 524 S15 rows plus the 8 repeat8 rows (RP), which are byte copies of pilot/expansion rows.
+    assert report["rows"] == 524 + 8 and not failures, failures
     # Expected audit findings only; query IDs never participate in the exemption rule.
     assert {(q["split"], q["query_id"], m["node_id"]) for q in overlaps for m in q["matches"]} == {
         ("screening", "BH2_04007", "14678"), ("pilot", "BH2_05778", "29749"),
         ("expansion", "BH2_05971", "33562"), ("expansion", "BH2_06099", "33562"),
+        ("repeat8", "BH2_05778", "29749"),
     }
-    assert len(overlaps) == 4
+    assert len(overlaps) == 5
 
 
 def test_b_agent_import_isolation():
@@ -586,7 +595,7 @@ def test_b_agent_import_isolation():
 def test_c_all_agent_sheet_fields(audit_inputs):
     sheets = audit_inputs[2]
     print("S15_C=" + json.dumps({name: len(rows) for name, rows in sheets.items()}, sort_keys=True))
-    assert sum(map(len, sheets.values())) == 524
+    assert sum(map(len, sheets.values())) == 524 + 8  # S15 sheets + repeat8 (RP)
 
 
 def test_d_ten_real_neighbor_pairs(audited_index, monkeypatch):

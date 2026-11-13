@@ -39,7 +39,10 @@ from cofail_kg.utils.frozen_hashes import read_frozen_hashes
 
 ROOT = Path(__file__).resolve().parents[1]
 RUNS_ROOT = ROOT / "results/runs"
-MANIFESTS = ("smoke", "pilot", "expansion")
+MANIFESTS = ("smoke", "pilot", "expansion", "repeat8")
+# Phase J RP (decision log 2026-11-12, section D): repeat8's hashes live in their own write-once key,
+# because the `manifests` key is itself write-once (scripts/44_make_repeat8.py).
+EXTRA_MANIFEST_KEYS = ("manifests_repeat8",)
 OTHER_EXPERIMENTS = ("20_screen_models", "20_shared_resources", "run_model.py", "22_smoke_single")
 
 
@@ -58,7 +61,13 @@ def pinned_inputs(manifest):
     """Frozen hashes this manifest's run depends on (configs/frozen_hashes.yaml)."""
     frozen = read_frozen_hashes(ROOT / "configs/frozen_hashes.yaml")
     sheet, processed = f"data/agent_inputs/{manifest}.jsonl", f"data/processed/manifests/{manifest}.jsonl"
-    return frozen, {sheet: frozen["manifests"][sheet], processed: frozen["manifests"][processed],
+    entries = dict(frozen["manifests"])
+    for key in EXTRA_MANIFEST_KEYS:
+        clash = set(entries) & set(frozen.get(key, {}))
+        if clash:
+            raise ValueError(f"configs/frozen_hashes.yaml: {sorted(clash)} in both `manifests` and `{key}`")
+        entries.update(frozen.get(key, {}))
+    return frozen, {sheet: entries[sheet], processed: entries[processed],
                     "data/cache/primekg_metadata.json": frozen["kg_fingerprint"],
                     "src/cofail_kg/agents/tool_schemas.py": frozen["tools"],
                     "results/semantics/relation_mapping.json": frozen["relation_mapping"]}

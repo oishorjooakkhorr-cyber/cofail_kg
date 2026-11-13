@@ -3260,3 +3260,22 @@ Decision (researcher, 2026-11-13, answers to two questions from Claude Code): ho
    counted; how many of them are in T_q⁺ is reported as well.
 Data seen before deciding: B1 outputs; no B2 output existed.
 Changes to protocol or decision rules: none.
+
+## 2026-11-13 — RP — Repeat-run inputs: repeat8 manifest and sheet; leakage audit (before any repeat episode)
+Decision (researcher, 2026-11-13: "Fix audit in RP"; runbook RP): prepare the repeat run of the entry
+2026-11-12 "Plan after D7", section D. Exploratory.
+1. repeat8 = the 8 flagged queries of results/combined/pilot_expansion_v1/d7_C.json (BH2_03356, BH2_04650,
+   BH2_04856, BH2_05290, BH2_05778, BH2_05890, BH2_05997, BH2_06016). Each manifest line and agent-input
+   line is a byte copy of the original pilot/expansion line, ordered by query_id
+   (scripts/44_make_repeat8.py). Hashes: new write-once key `manifests_repeat8` in
+   configs/frozen_hashes.yaml (the `manifests` key is itself write-once and cannot gain entries);
+   scripts/25_run_panel.py and tests/test_leakage.py read both keys.
+2. Leakage audit (tests/test_leakage.py): repeat8 is audited with the other sheets (and checked to equal
+   the original rows); data/agent_inputs/intervention_overlays.jsonl (S33; edge identities, not a question
+   sheet) is skipped there until S34 hashes and audits it. No other audit rule changed.
+3. Inference code since expansion_v1 (b8209e6): S32 changed src/cofail_kg/agents/kg_env.py, run_agent.py
+   and panel_runner.py to add the Phase 2 overlay. With no overlay (as here), the tools take the unchanged
+   code path; prompt and tool schema are hash-checked as before. repeat_v1 is a new run ID (§19
+   code-change rule); pilot_v1 and expansion_v1 are not touched.
+Data seen before deciding: B1 and B2 outputs; no repeat_v1 episode existed.
+Changes to protocol or decision rules: none.
