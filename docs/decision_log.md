@@ -3417,3 +3417,33 @@ Why: D8 applied as written.
 Data seen before deciding: all Phase I and Phase J outputs to date (S30–S36, B1, B2, B5, B6, RP, IC).
 Changes to protocol or decision rules: none.
 Next step: S38 final tables.
+
+## 2026-11-14 — PW — Population-weighted co-failure rate (rule fixed before computing)
+Decision (researcher, 2026-11-14, adopting Claude Code's recommendation): add one exploratory, descriptive
+analysis, PW, that reweights the sample co-failure rate to the primary population. No new episode.
+Why: the 500 queries follow the §8 quotas (for example MULTI_BRIDGE is 75% of the sample and 8% of the
+primary population), so the sample rate is not a population rate. PW states the population rate openly.
+Population: the primary population, data/processed/primary_population.csv (7,176 queries, protocol §7.2).
+It is not all of BioHopR (D1-FAIL types, INCONSISTENT and LEAKY_QUESTION queries are excluded, §7.2).
+Strata: the §8 sampling strata, relation type × bridge multiplicity: 11 non-empty strata. Population
+and sample sizes per stratum were counted before this entry (no outcome looked at): every stratum has
+n_h ≥ 6 sampled queries (from 6 to 329); all 500 sampled queries are in the population.
+Sample and flags: the 500 queries of record (pilot + expansion manifests); per-query flags read from
+results/combined/pilot_expansion_v1/cofailure.json; all queries (gates use all queries, §19.1).
+Metrics: primary CF3^{Q,H1} (the gate's case definition, N); secondary CF3^Q and CF4^Q.
+Estimates.
+- Sample rate: y / 500, with the Wilson 95% interval (z = 1.959964).
+- Population-weighted rate: p_w = Σ_h (N_h / N) · (y_h / n_h).
+- Interval for p_w: 2.5th and 97.5th percentiles of 100,000 Monte Carlo draws of Σ_h (N_h / N) · θ_h, with
+  θ_h ~ Beta(y_h + 0.5, n_h − y_h + 0.5) drawn independently per stratum (Jeffreys distribution); NumPy
+  Generator(PCG64), seed 42. Strata with y_h = 0 add uncertainty to the interval but nothing to p_w.
+- Also reported: per stratum N_h, n_h, weight N_h / N and y_h for each metric.
+No threshold and no outcome: PW is descriptive. Use in writing, fixed now: "Y% (Wilson 95% a–b) in the
+sample; X% (95% interval c–d) weighted to the primary population."
+Limits, stated now: stratum rates rest on 6 to 51 sampled queries in 10 of 11 strata; most strata have no
+event; the interval is wide where strata are thin and large.
+Implementation: scripts/49_weighted_rate.py with tests; outputs in results/exploratory/pw/.
+Data seen before deciding: all S30 and Phase J outputs, including sample co-failure counts by relation
+type, ambiguity tag and multiplicity (Tables 1, 3e and the S30 report). In chat (2026-11-14), a rough
+reweighting by relation type only gave "roughly 2%"; it is not used. No PW output existed.
+Changes to protocol or decision rules: none.
