@@ -3335,3 +3335,32 @@ hashes PASS (19/19, including `manifests_intervention` and `intervention_overlay
 Run: `scripts/25_run_panel.py run --manifest intervention5 --run-id intervention_v1` (decision log 2026-11-12,
 section A3: the 5 treatment overlays × 4 agents = 20 episodes; DESCRIPTIVE, treatment-only).
 This entry changes only docs/decision_log.md (not a pinned run source); the run records the HEAD at run time.
+
+## 2026-11-13 — S36 — Readings of the §21 outcomes for the 5 treatment-only cases (before any S36 output)
+Decision (researcher, 2026-11-13, answers to five questions from Claude Code): how the §21 outcomes are
+computed by scripts/48_s36_evaluation.py for the DESCRIPTIVE Track A (entry 2026-11-12 "Plan after D7",
+section A4: per case only, treatment-only, no aggregate ΔCF, no τ_CF, no causal claim).
+1. Before = the original pilot_v1/expansion_v1 episodes (results of record). The blocked feature (u, r),
+   its step and its holders come only from them (results/interventions/candidates.csv, S31).
+   After = intervention_v1. repeat_v1 is shown beside "before" as a descriptive reference for run-to-run
+   variation: recovery and displacement for the same holders under the same rules; it never replaces
+   "before" and does not enter CF/PCF before vs after. The git commit of each run column is recorded.
+2. Recovery: denominator = holders whose after-episode is SUCCESS; a holder recovers if it has ≥ 1
+   resolved answer and every resolved answer is question-valid. A holder with a non-SUCCESS after-episode
+   is excluded from the recovery and displacement denominators and shown in a technical-failure column
+   with its status.
+3. Displacement, one category per holder (SUCCESS after-episode), in this order: NO_ANSWER (no resolved
+   answer); SAME_WRONG_RELATION_OTHER_NEIGHBOR (an OFF_QUESTION answer whose primary path uses label r at
+   the same step at a node ≠ u); OTHER_WRONG (any other OFF_QUESTION answer); VALID_RELATION (all resolved
+   answers question-valid). This single category is the result of record. Also reported, descriptive only:
+   per holder, the number of after-answers in VALID_RELATION / SAME_WRONG_RELATION_OTHER_NEIGHBOR /
+   OTHER_WRONG. For the SHORTCUT case (BH2_04650, u = s, step 1) SAME_WRONG_RELATION_OTHER_NEIGHBOR cannot
+   occur by construction; the report says so.
+4. No-answer change: per case, SUCCESS episodes with 0 resolved answers / SUCCESS episodes, all 4 agents,
+   before vs after.
+5. CF3/CF4 (question, grounded, hop-1-clean) and PCF (REL3/4, NODE3/4, SHORTCUT3) before vs after are read
+   from the frozen §16 analyses (results/combined/pilot_expansion_v1/cofailure.json and
+   results/runs/intervention_v1/analysis/cofailure.json).
+Data seen before deciding: S34 and S35 outputs (tool-output checks, run status, the S35 run's console
+co-failure totals); no S36 output existed.
+Changes to protocol or decision rules: none.
