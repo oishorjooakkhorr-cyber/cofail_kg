@@ -3447,3 +3447,25 @@ Data seen before deciding: all S30 and Phase J outputs, including sample co-fail
 type, ambiguity tag and multiplicity (Tables 1, 3e and the S30 report). In chat (2026-11-14), a rough
 reweighting by relation type only gave "roughly 2%"; it is not used. No PW output existed.
 Changes to protocol or decision rules: none.
+
+## 2026-11-14 — PW — Correction: coherent summary for the weighted interval (after seeing PW output)
+Decision (researcher, 2026-11-14): keep every PW number of entry 2026-11-14 "PW — Population-weighted
+co-failure rate" (outputs results/exploratory/pw/, commit 8fdd8e3) as logged, and add one summary.
+Problem found after seeing the output: the logged rule pairs a plug-in point estimate, Σ_h (N_h/N)·(y_h/n_h),
+with an interval from Jeffreys distributions, Beta(y_h + ½, n_h − y_h + ½). In strata with y_h = 0 the
+plug-in adds 0 while every Jeffreys draw adds a positive amount, so the interval sits above the plug-in:
+CF3^{Q,H1} 2.17% vs interval 2.14%–8.22%; CF4^Q 0.69% lies outside its interval 1.27%–6.44%. This is a
+design error in the logged rule (Claude Code's recommendation), not a code error (tests pass).
+Addition: report, for each metric, the median of the same 100,000 Monte Carlo draws (same seed, same order,
+so the logged interval is reproduced exactly) as the point summary that matches the interval. The plug-in
+estimate and the logged interval are kept and reported beside it. Nothing else changes.
+Use in writing, fixed now: "Y% in the sample (Wilson 95% a–b); weighted to the primary population, plug-in
+X%, and median M% with 95% interval c–d from per-stratum Jeffreys distributions." State that the median and
+the upper end rise above the plug-in because each stratum with no event still gets prior weight, and that
+the width comes mostly from thinly sampled large strata (for example drug:gene/protein:disease: 42% of the
+population, 51 sampled, 0 events), not from observed failures.
+Implementation: scripts/49_weighted_rate.py gains the median; the corrected outputs go to
+results/exploratory/pw_corrected/; results/exploratory/pw/ is left unchanged. The run must reproduce the
+logged sample rates, plug-in estimates and intervals exactly.
+Data seen before deciding: the PW outputs (commit 8fdd8e3). The median was not computed before this entry.
+Changes to protocol or decision rules: none.
