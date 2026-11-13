@@ -1,0 +1,182 @@
+{
+  "metrics": {
+    "CF3^Q": {
+      "population_N": 7176,
+      "sample_n": 500,
+      "sample_rate": 0.016,
+      "sample_wilson_95": [
+        0.008129252991443795,
+        0.03125110869088177
+      ],
+      "sample_y": 8,
+      "weighted_interval_95": [
+        0.029213072940779565,
+        0.09345300724422212
+      ],
+      "weighted_rate": 0.03292129219586686
+    },
+    "CF3^{Q,H1}": {
+      "population_N": 7176,
+      "sample_n": 500,
+      "sample_rate": 0.012,
+      "sample_wilson_95": [
+        0.005510995141744251,
+        0.025930361265228637
+      ],
+      "sample_y": 6,
+      "weighted_interval_95": [
+        0.021398498231721966,
+        0.08223708681264746
+      ],
+      "weighted_rate": 0.021738181827973886
+    },
+    "CF4^Q": {
+      "population_N": 7176,
+      "sample_n": 500,
+      "sample_rate": 0.004,
+      "sample_wilson_95": [
+        0.001097630512817676,
+        0.014465715343449847
+      ],
+      "sample_y": 2,
+      "weighted_interval_95": [
+        0.012692728162585086,
+        0.06441531643636776
+      ],
+      "weighted_rate": 0.006879143575740929
+    }
+  },
+  "provenance": {
+    "clean": true,
+    "commit": "7e8ef6de05af4dc47a7bc92efab9ade9ae8cf871",
+    "inputs": {
+      "data/processed/manifests/expansion.jsonl": "2cfc09e132e77f5a4c9eeb3b4957692051f7c9fc32cc97ecd0cd37de0e602689",
+      "data/processed/manifests/pilot.jsonl": "102a1cb1133ae7ea3bf36972965101c3842b26b231739363b53e7250714a28d4",
+      "data/processed/primary_population.csv": "24a876a1bcca9e4e4fc5d273460212b47e38d95b0949c1770096fb46b79b41b8",
+      "results/combined/pilot_expansion_v1/cofailure.json": "198b9aa18770d1a815429361be8f79601330276642665feb025783dd5560f87d"
+    }
+  },
+  "strata": [
+    {
+      "N": 528,
+      "bridge_multiplicity": "MULTI_BRIDGE",
+      "n": 329,
+      "relation_type": "disease:drug:effect/phenotype",
+      "y": {
+        "CF3^Q": 0,
+        "CF3^{Q,H1}": 0,
+        "CF4^Q": 0
+      }
+    },
+    {
+      "N": 319,
+      "bridge_multiplicity": "SINGLE_BRIDGE",
+      "n": 7,
+      "relation_type": "disease:drug:effect/phenotype",
+      "y": {
+        "CF3^Q": 0,
+        "CF3^{Q,H1}": 0,
+        "CF4^Q": 0
+      }
+    },
+    {
+      "N": 376,
+      "bridge_multiplicity": "SINGLE_BRIDGE",
+      "n": 8,
+      "relation_type": "disease:drug:gene/protein",
+      "y": {
+        "CF3^Q": 0,
+        "CF3^{Q,H1}": 0,
+        "CF4^Q": 0
+      }
+    },
+    {
+      "N": 852,
+      "bridge_multiplicity": "SINGLE_BRIDGE",
+      "n": 16,
+      "relation_type": "disease:gene/protein:drug",
+      "y": {
+        "CF3^Q": 0,
+        "CF3^{Q,H1}": 0,
+        "CF4^Q": 0
+      }
+    },
+    {
+      "N": 213,
+      "bridge_multiplicity": "SINGLE_BRIDGE",
+      "n": 6,
+      "relation_type": "drug:disease:effect/phenotype",
+      "y": {
+        "CF3^Q": 0,
+        "CF3^{Q,H1}": 0,
+        "CF4^Q": 0
+      }
+    },
+    {
+      "N": 321,
+      "bridge_multiplicity": "SINGLE_BRIDGE",
+      "n": 8,
+      "relation_type": "drug:disease:gene/protein",
+      "y": {
+        "CF3^Q": 2,
+        "CF3^{Q,H1}": 0,
+        "CF4^Q": 0
+      }
+    },
+    {
+      "N": 3028,
+      "bridge_multiplicity": "SINGLE_BRIDGE",
+      "n": 51,
+      "relation_type": "drug:gene/protein:disease",
+      "y": {
+        "CF3^Q": 0,
+        "CF3^{Q,H1}": 0,
+        "CF4^Q": 0
+      }
+    },
+    {
+      "N": 73,
+      "bridge_multiplicity": "MULTI_BRIDGE",
+      "n": 46,
+      "relation_type": "effect/phenotype:disease:drug",
+      "y": {
+        "CF3^Q": 3,
+        "CF3^{Q,H1}": 3,
+        "CF4^Q": 1
+      }
+    },
+    {
+      "N": 430,
+      "bridge_multiplicity": "SINGLE_BRIDGE",
+      "n": 9,
+      "relation_type": "effect/phenotype:disease:drug",
+      "y": {
+        "CF3^Q": 1,
+        "CF3^{Q,H1}": 1,
+        "CF4^Q": 1
+      }
+    },
+    {
+      "N": 577,
+      "bridge_multiplicity": "SINGLE_BRIDGE",
+      "n": 11,
+      "relation_type": "gene/protein:disease:drug",
+      "y": {
+        "CF3^Q": 1,
+        "CF3^{Q,H1}": 1,
+        "CF4^Q": 0
+      }
+    },
+    {
+      "N": 459,
+      "bridge_multiplicity": "SINGLE_BRIDGE",
+      "n": 9,
+      "relation_type": "gene/protein:drug:disease",
+      "y": {
+        "CF3^Q": 1,
+        "CF3^{Q,H1}": 1,
+        "CF4^Q": 0
+      }
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+relation_type,bridge_multiplicity,N_h,n_h,weight,y_h CF3^Q,"y_h CF3^{Q,H1}",y_h CF4^Q
+disease:drug:effect/phenotype,MULTI_BRIDGE,528,329,0.073579,0,0,0
+disease:drug:effect/phenotype,SINGLE_BRIDGE,319,7,0.044454,0,0,0
+disease:drug:gene/protein,SINGLE_BRIDGE,376,8,0.052397,0,0,0
+disease:gene/protein:drug,SINGLE_BRIDGE,852,16,0.118729,0,0,0
+drug:disease:effect/phenotype,SINGLE_BRIDGE,213,6,0.029682,0,0,0
+drug:disease:gene/protein,SINGLE_BRIDGE,321,8,0.044732,2,0,0
+drug:gene/protein:disease,SINGLE_BRIDGE,3028,51,0.421962,0,0,0
+effect/phenotype:disease:drug,MULTI_BRIDGE,73,46,0.010173,3,3,1
+effect/phenotype:disease:drug,SINGLE_BRIDGE,430,9,0.059922,1,1,1
+gene/protein:disease:drug,SINGLE_BRIDGE,577,11,0.080407,1,1,0
+gene/protein:drug:disease,SINGLE_BRIDGE,459,9,0.063963,1,1,0
