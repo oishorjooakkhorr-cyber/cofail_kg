@@ -1,6 +1,8 @@
 # Frozen hashes — protocol §3.4.
 # Each entry is written once, at its stage, by code. Never edit by hand.
 biohopr_revision: 08f06692c3900347e7405ba55ff6a6d330f55ddb
+intervention_overlays:
+  data/agent_inputs/intervention_overlays.jsonl: e7d9a241c73ce5b2703a8844e715e1513954056b8302916f24fee538f83f1a44
 kg_fingerprint: bc5d3fd2f12aeb29398fe4684c83d8c65c7bd5c1edf704573322295bdc6b2e95
 manifests:
   data/agent_inputs/expansion.jsonl: 290f4323fa80005a6ffc24c3077dd793566d82d4f3995dc26a39961f7306bc4b
@@ -11,6 +13,11 @@ manifests:
   data/processed/manifests/pilot.jsonl: 102a1cb1133ae7ea3bf36972965101c3842b26b231739363b53e7250714a28d4
   data/processed/manifests/screening.jsonl: 58421a410eb32413b7af7dfa157ef4a430b5ccf7e087dc1f8d60d597730c12b9
   data/processed/manifests/smoke.jsonl: f6295231dbbe9822ccb0254e0b0bdfac35f4be993abe0283eb3db124eb0d27a9
+manifests_intervention:
+  data/agent_inputs/intervention5.jsonl: c836e17a3ea5bab6b05225f4ba89fe2dfdcc0ac73bd5bb2e9cffc2902926a118
+  data/agent_inputs/intervention_smoke.jsonl: ee1b2c06e0c02f6b909268de8541d9c8aa7990f7722336bd9290c4bd99e62ed7
+  data/processed/manifests/intervention5.jsonl: acc8cabff50302a8f357cc2981e22b738b0962d027e674fc8960bf9c71bd3f1f
+  data/processed/manifests/intervention_smoke.jsonl: 289e229dad9a9f839e5125bf15b2cc7f77a8801d8887d149eb1d7e1554761de6
 manifests_repeat8:
   data/agent_inputs/repeat8.jsonl: f42ebbdb1b73aa8a1f839ec521f1dd02f9da4942db02158884c63db38bed1de7
   data/processed/manifests/repeat8.jsonl: 562929127b9dfe9c914ab460650de29936378d2d0887c55e57fbc7bc1b85d176

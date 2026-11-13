@@ -432,21 +432,26 @@ def audit_inputs():
         assert summary["provenance"][key] == frozen[frozen_key]
     for key in ("biohopr_revision", "kg_fingerprint"):
         assert mapping["provenance"][key] == frozen[key]
-    # Phase J RP: repeat8's write-once hashes are in their own key (scripts/44_make_repeat8.py).
-    entries = {**frozen["manifests"], **frozen.get("manifests_repeat8", {})}
-    assert len(entries) == len(frozen["manifests"]) + len(frozen.get("manifests_repeat8", {}))
+    # Phase J RP and Phase 2: these sheets' write-once hashes are in their own keys
+    # (scripts/44_make_repeat8.py, scripts/46_intervention_inputs.py).
+    extra = ("manifests_repeat8", "manifests_intervention")
+    entries = {**frozen["manifests"], **{k: v for key in extra for k, v in frozen.get(key, {}).items()}}
+    assert len(entries) == len(frozen["manifests"]) + sum(len(frozen.get(key, {})) for key in extra)
     sheets = {}
     for path in sorted((ROOT / "data/agent_inputs").glob("*.jsonl")):
         if path.relative_to(ROOT).as_posix() in read_frozen_hashes(ROOT / "configs/frozen_hashes_full.yaml").get("manifests_full", {}):
             continue  # S39 exploratory full-run sheet: audited by scripts/39_leakage_full.py, not here
         if path.name == "intervention_overlays.jsonl":
-            continue  # S33 overlay (edge identities to hide), not a question sheet; hashed and audited at S34
+            continue  # S33 overlay (edge identities, not a question sheet): audited in test_overlay_file below
         assert sha256(path) == entries[path.relative_to(ROOT).as_posix()]
         sheets[path.stem] = read_sheet(path)
-    assert set(sheets) == {"screening", "smoke", "pilot", "expansion", "repeat8"}
+    assert set(sheets) == {"screening", "smoke", "pilot", "expansion", "repeat8", "intervention_smoke",
+                           "intervention5"}
     assert len(sheets["screening"]) == 20 and len(sheets["smoke"]) == 4 and len(sheets["repeat8"]) == 8
+    assert len(sheets["intervention_smoke"]) == 1 and len(sheets["intervention5"]) == 5
     originals = {row["query_id"]: row for split in ("pilot", "expansion") for row in sheets[split]}
-    assert all(row == originals[row["query_id"]] for row in sheets["repeat8"])  # RP: original sheet rows
+    for split in ("repeat8", "intervention_smoke", "intervention5"):  # original sheet rows (§9.3 verbatim)
+        assert all(row == originals[row["query_id"]] for row in sheets[split])
     refs = pq.read_table(ROOT / "data/processed/reference_queries.parquet").to_pylist()
     references = {q["query_id"]: q for q in refs}
     assert len(references) == len(refs)
@@ -575,8 +580,8 @@ def test_a_all_524_source_name_overlaps(audit_inputs, audited_index):
     report = dict(rows=sum(len(rows) for rows in sheets.values()), flagged_queries=overlaps, failures=failures,
                   per_split=split_counts, per_relation_type=type_counts, short_names=short_names)
     print("S15_SOURCE_NAME_OVERLAP=" + json.dumps(report, sort_keys=True))
-    # 524 S15 rows plus the 8 repeat8 rows (RP), which are byte copies of pilot/expansion rows.
-    assert report["rows"] == 524 + 8 and not failures, failures
+    # 524 S15 rows plus the repeat8 (8) and intervention (1 + 5) rows, byte copies of pilot/expansion rows.
+    assert report["rows"] == 524 + 8 + 1 + 5 and not failures, failures
     # Expected audit findings only; query IDs never participate in the exemption rule.
     assert {(q["split"], q["query_id"], m["node_id"]) for q in overlaps for m in q["matches"]} == {
         ("screening", "BH2_04007", "14678"), ("pilot", "BH2_05778", "29749"),
@@ -595,7 +600,27 @@ def test_b_agent_import_isolation():
 def test_c_all_agent_sheet_fields(audit_inputs):
     sheets = audit_inputs[2]
     print("S15_C=" + json.dumps({name: len(rows) for name, rows in sheets.items()}, sort_keys=True))
-    assert sum(map(len, sheets.values())) == 524 + 8  # S15 sheets + repeat8 (RP)
+    assert sum(map(len, sheets.values())) == 524 + 8 + 1 + 5  # S15 sheets + repeat8 + intervention sheets
+
+
+def test_overlay_file():
+    """S34: the S33 overlay file is frozen, holds only edge identities to hide, and only for the 5 cases."""
+    frozen = read_frozen_hashes(ROOT / "configs/frozen_hashes.yaml")
+    path = ROOT / "data/agent_inputs/intervention_overlays.jsonl"
+    assert frozen["intervention_overlays"] == {"data/agent_inputs/intervention_overlays.jsonl": sha256(path)}
+    rows = [json.loads(line) for line in path.read_text(encoding="utf-8").splitlines() if line.strip()]
+    assert all(set(row) == {"query_id", "hide_labels", "hide_edges"} for row in rows)
+    cases = [json.loads(line)["query_id"] for line in
+             (ROOT / "data/agent_inputs/intervention5.jsonl").read_text(encoding="utf-8").splitlines()]
+    assert sorted(row["query_id"] for row in rows) == sorted(cases)
+    # Edge identities only: node IDs and PrimeKG relation labels, no names, questions or answer sets.
+    for row in rows:
+        for u, r in row["hide_labels"]:
+            assert u.isdigit() and r in {"off-label use", "drug_protein"}
+        assert row["hide_edges"] == []
+    # The overlay never reaches the model: prompts are built only from the sheet row (agents/prompts.py).
+    source = (ROOT / "src/cofail_kg/agents/prompts.py").read_text(encoding="utf-8")
+    assert "overlay" not in source
 
 
 def test_d_ten_real_neighbor_pairs(audited_index, monkeypatch):

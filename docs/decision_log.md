@@ -3292,3 +3292,23 @@ Checks run on **eac1514a3efc7f7d0f52c30e34bb5ee928e97173** (RP preparation commi
    (`scripts/21_freeze_models.py check`: all four equal `models_s21r2`): PASS.
 Run: `scripts/25_run_panel.py run --manifest repeat8 --run-id repeat_v1` (8 queries × 4 agents = 32 episodes).
 This entry changes only docs/decision_log.md (not a pinned run source); the run records the HEAD at run time.
+
+## 2026-11-13 — S34 — Intervention inputs and overlay wiring (before any intervention episode)
+Decision (runbook S34, researcher instruction "start S34", 2026-11-13): prepare the DESCRIPTIVE smoke test
+of the entry 2026-11-12 "Plan after D7", section A3 (BH2_05290 × 4 agents, run ID `intervention_smoke`).
+1. Inputs (scripts/46_intervention_inputs.py): sheets and manifests `intervention_smoke` (BH2_05290) and
+   `intervention5` (the 5 cases, for S35), byte copies of the original pilot/expansion lines (question text
+   verbatim, §9.3), ordered by query_id. Write-once keys in configs/frozen_hashes.yaml:
+   `manifests_intervention` (the four files) and `intervention_overlays`
+   (data/agent_inputs/intervention_overlays.jsonl, e7d9a241…, the SHA256 S33 recorded). The overlay file
+   must equal the S33 manifest for every case (one hidden (u, r) label; S33 checks passed).
+2. Runner (scripts/25_run_panel.py): for these two manifests only, the overlay file is a pinned input and
+   every episode gets `overlay_path` / `overlay_sha256` (S32 run_episode then saves the overlay with the
+   episode and refuses a changed file). Other manifests are unchanged.
+3. Leakage audit: the two sheets are audited with the others (equal to the original rows); the overlay file
+   is now hashed and audited (exact keys, only the 5 cases, node IDs and labels only, not in the prompt
+   module) instead of skipped.
+4. Report: scripts/47_s34_smoke_report.py replays every tool call with and without the overlay, and
+   compares each with the same call in the original run.
+Data seen before deciding: B1, B2 and RP outputs; no intervention episode existed.
+Changes to protocol or decision rules: none.

@@ -29,6 +29,7 @@ import subprocess
 import sys
 import time
 
+from cofail_kg.agents.kg_env import load_overlays
 from cofail_kg.agents.ollama_client import OllamaClient
 from cofail_kg.agents.panel_runner import (check_hashes, check_identity, episode_plan, manifest_query_ids,
                                            progress, run_agent_block, write_progress)
@@ -39,10 +40,14 @@ from cofail_kg.utils.frozen_hashes import read_frozen_hashes
 
 ROOT = Path(__file__).resolve().parents[1]
 RUNS_ROOT = ROOT / "results/runs"
-MANIFESTS = ("smoke", "pilot", "expansion", "repeat8")
-# Phase J RP (decision log 2026-11-12, section D): repeat8's hashes live in their own write-once key,
-# because the `manifests` key is itself write-once (scripts/44_make_repeat8.py).
-EXTRA_MANIFEST_KEYS = ("manifests_repeat8",)
+MANIFESTS = ("smoke", "pilot", "expansion", "repeat8", "intervention_smoke", "intervention5")
+# Phase J RP (decision log 2026-11-12, section D) and Phase 2 (section A): these manifests' hashes live in
+# their own write-once keys, because the `manifests` key is itself write-once (scripts/44_make_repeat8.py,
+# scripts/46_intervention_inputs.py).
+EXTRA_MANIFEST_KEYS = ("manifests_repeat8", "manifests_intervention")
+# Phase 2 runs (S34/S35): every episode uses the S33 overlay file, pinned by its frozen hash (§10, §21).
+OVERLAY_MANIFESTS = ("intervention_smoke", "intervention5")
+OVERLAY_FILE = "data/agent_inputs/intervention_overlays.jsonl"
 OTHER_EXPERIMENTS = ("20_screen_models", "20_shared_resources", "run_model.py", "22_smoke_single")
 
 
@@ -67,10 +72,13 @@ def pinned_inputs(manifest):
         if clash:
             raise ValueError(f"configs/frozen_hashes.yaml: {sorted(clash)} in both `manifests` and `{key}`")
         entries.update(frozen.get(key, {}))
-    return frozen, {sheet: entries[sheet], processed: entries[processed],
-                    "data/cache/primekg_metadata.json": frozen["kg_fingerprint"],
-                    "src/cofail_kg/agents/tool_schemas.py": frozen["tools"],
-                    "results/semantics/relation_mapping.json": frozen["relation_mapping"]}
+    required = {sheet: entries[sheet], processed: entries[processed],
+                "data/cache/primekg_metadata.json": frozen["kg_fingerprint"],
+                "src/cofail_kg/agents/tool_schemas.py": frozen["tools"],
+                "results/semantics/relation_mapping.json": frozen["relation_mapping"]}
+    if manifest in OVERLAY_MANIFESTS:
+        required[OVERLAY_FILE] = frozen["intervention_overlays"][OVERLAY_FILE]
+    return frozen, required
 
 
 def build_config(manifest, run_id, row, settings, identity):
@@ -101,6 +109,12 @@ def build_config(manifest, run_id, row, settings, identity):
                   tool_schema_sha256=frozen["tools"], kg_fingerprint=frozen["kg_fingerprint"],
                   biohopr_revision=frozen["biohopr_revision"], git_commit=commit + ("-dirty" if dirty else ""),
                   base_url=S22.BASE, source_sha256={p: file_hash(ROOT / p) for p in sources})
+    if manifest in OVERLAY_MANIFESTS:
+        overlays = load_overlays(ROOT / OVERLAY_FILE)
+        missing = [q for q in query_ids if q not in overlays]
+        if missing:
+            raise ValueError(f"{manifest}: no overlay for {missing}")
+        config.update(overlay_path=str(ROOT / OVERLAY_FILE), overlay_sha256=required[OVERLAY_FILE])
     agent = {**identity, "agent_id": row["agent_id"], "family": row["family"], "think": settings["think"]}
     runtime = {k: settings[k] for k in ("ollama_version", "kv_cache_type", "flash_attention_env", "num_parallel",
                                         "evidence_run_id", "gpu_layers")}
