@@ -3336,6 +3336,49 @@ Run: `scripts/25_run_panel.py run --manifest intervention5 --run-id intervention
 section A3: the 5 treatment overlays × 4 agents = 20 episodes; DESCRIPTIVE, treatment-only).
 This entry changes only docs/decision_log.md (not a pinned run source); the run records the HEAD at run time.
 
+## 2026-11-13 — B1 — Outcome NOT CLEAN; follow-up not run; no full run
+Decision (researcher, 2026-11-13): record the B1 outcome and what follows from the rule of 2026-11-12.
+1. B1 (results/exploratory/b1/, commit 5ea1abd): NOT CLEAN. 2 of 4 agents meet the rule (Ministral3-14B
+   uptake 0.600, 18/30; Cogito-14B 0.758, 25/33); Gemma4-12B 0.171 (6/35) and Granite41-8B 0.286 (8/28) do not.
+2. Follow-up (F1–F3): NOT RUN. Entry "Plan after D7", section C: "If B1 is NOT CLEAN, the follow-up is not
+   run." P1 and P2 are therefore untested; H4 is judged through B1, B2, B5 and the check below only.
+3. No run on the rest of the primary population for this plan (time). full_v1 stays outside the plan
+   (entry 2026-11-12 "S39").
+Data seen before deciding: B1 and B2 outputs.
+Changes to protocol or decision rules: none.
+
+## 2026-11-13 — IC — Independence check of off-label uptake (rule fixed before computing)
+Decision (researcher, 2026-11-13): add one exploratory analysis, IC, on the existing B1 per-episode file.
+Question: across the 75 treat-final queries, do agents take the off-label route together more (or less)
+often than four independent agents, each with its own B1 uptake rate, would?
+Input: results/exploratory/b1/b1_episodes.csv, rows with group = treat-final (SUCCESS episodes, latest
+attempts, as in B1). No new episode, no raw record, no full_v1 output.
+Definitions.
+- p_i: agent i's B1 uptake on all treat-final queries, (Taken ∧ Opportunity) / Opportunity (B1 Table 1).
+- A_q: the agents with Opportunity = True on query q. K_q: the number of agents in A_q with Taken = True.
+- Primary statistic T: the number of queries with K_q ≥ 3.
+- Null (independence with each agent's own rate): within each query, Taken for i ∈ A_q is an independent
+  Bernoulli(p_i); queries are independent. P(K_q ≥ 3) is exact (Poisson-binomial); the distribution of T is
+  the exact convolution over queries. Report E[T], its 2.5th and 97.5th percentiles, P(T ≥ T_obs) and
+  P(T ≤ T_obs).
+- Outcome, fixed now: AGREES if both P(T ≥ T_obs) > 0.025 and P(T ≤ T_obs) > 0.025; MORE CLUSTERED if
+  P(T ≥ T_obs) ≤ 0.025; LESS CLUSTERED if P(T ≤ T_obs) ≤ 0.025.
+- Secondary (descriptive, no outcome): pairs statistic S = Σ_q number of agent pairs in A_q that both took,
+  with its expected value Σ_q Σ_{i<j ∈ A_q} p_i p_j; per-query K_q next to CF3^{Q,H1}; the same computation
+  without SOURCE_NAME_OVERLAP queries (§19.1), with p_i recomputed on that subset.
+Limits, stated now: p_i is estimated from the same episodes; queries whose off-label lists are more
+tempting than others would also show up as MORE CLUSTERED, so that outcome does not by itself mean the
+agents depend on each other. Agents never share anything (§9.3); "independent" here means only that each
+agent's rate explains the pattern.
+Use in writing, fixed now: AGREES → headline "Independent LLM agents on a shared knowledge graph rarely fail
+together, and most apparent shared failure comes from the answer key." Otherwise → lead with the answer-key
+result (benchmark 39, strict graph key 8, lenient key 2) and state only that shared failures were rare.
+Implementation: scripts/44_independence_check.py with tests; outputs in results/exploratory/ic/.
+Data seen before deciding: B1 outputs, including the per-episode file (not tabulated per query); B2
+outputs. In chat (2026-11-13), a rough figure of "about 6 expected against 6 observed" was given from the
+B1 per-agent rates without any per-query count; it is not used. No IC output existed.
+Changes to protocol or decision rules: none.
+
 ## 2026-11-13 — S36 — Readings of the §21 outcomes for the 5 treatment-only cases (before any S36 output)
 Decision (researcher, 2026-11-13, answers to five questions from Claude Code): how the §21 outcomes are
 computed by scripts/48_s36_evaluation.py for the DESCRIPTIVE Track A (entry 2026-11-12 "Plan after D7",

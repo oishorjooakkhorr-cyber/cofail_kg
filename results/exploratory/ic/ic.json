@@ -1,0 +1,1748 @@
+{
+  "all_queries": {
+    "E_T": 5.5102040816326525,
+    "P_T_ge_obs": 0.48201497487861644,
+    "P_T_le_obs": 0.6939955749290759,
+    "S_expected": 32.05454545454547,
+    "S_obs": 40,
+    "T_2.5th": 2,
+    "T_97.5th": 10,
+    "T_obs": 6,
+    "agents": {
+      "Cogito-14B": {
+        "opportunity": 33,
+        "p": 0.7575757575757576,
+        "taken_and_opportunity": 25
+      },
+      "Gemma4-12B": {
+        "opportunity": 35,
+        "p": 0.17142857142857143,
+        "taken_and_opportunity": 6
+      },
+      "Granite41-8B": {
+        "opportunity": 28,
+        "p": 0.2857142857142857,
+        "taken_and_opportunity": 8
+      },
+      "Ministral3-14B": {
+        "opportunity": 30,
+        "p": 0.6,
+        "taken_and_opportunity": 18
+      }
+    },
+    "outcome": "AGREES",
+    "per_query": [
+      {
+        "A_q": [
+          "Cogito-14B",
+          "Gemma4-12B",
+          "Granite41-8B"
+        ],
+        "CF3_Q_H1": 0,
+        "K_q": 1,
+        "P_K_ge_3": 0.03710575139146567,
+        "query_id": "BH2_03076",
+        "takers": [
+          "Cogito-14B"
+        ]
+      },
+      {
+        "A_q": [],
+        "CF3_Q_H1": 0,
+        "K_q": 0,
+        "P_K_ge_3": 0,
+        "query_id": "BH2_03124",
+        "takers": []
+      },
+      {
+        "A_q": [],
+        "CF3_Q_H1": 0,
+        "K_q": 0,
+        "P_K_ge_3": 0,
+        "query_id": "BH2_03131",
+        "takers": []
+      },
+      {
+        "A_q": [],
+        "CF3_Q_H1": 0,
+        "K_q": 0,
+        "P_K_ge_3": 0,
+        "query_id": "BH2_03148",
+        "takers": []
+      },
+      {
+        "A_q": [],
+        "CF3_Q_H1": 0,
+        "K_q": 0,
+        "P_K_ge_3": 0,
+        "query_id": "BH2_03185",
+        "takers": []
+      },
+      {
+        "A_q": [],
+        "CF3_Q_H1": 0,
+        "K_q": 0,
+        "P_K_ge_3": 0,
+        "query_id": "BH2_03229",
+        "takers": []
+      },
+      {
+        "A_q": [
+          "Cogito-14B",
+          "Gemma4-12B",
+          "Granite41-8B",
+          "Ministral3-14B"
+        ],
+        "CF3_Q_H1": 0,
+        "K_q": 1,
+        "P_K_ge_3": 0.20749536178107605,
+        "query_id": "BH2_03329",
+        "takers": [
+          "Cogito-14B"
+        ]
+      },
+      {
+        "A_q": [
+          "Cogito-14B",
+          "Gemma4-12B",
+          "Granite41-8B",
+          "Ministral3-14B"
+        ],
+        "CF3_Q_H1": 1,
+        "K_q": 3,
+        "P_K_ge_3": 0.20749536178107605,
+        "query_id": "BH2_03356",
+        "takers": [
+          "Cogito-14B",
+          "Granite41-8B",
+          "Ministral3-14B"
+        ]
+      },
+      {
+        "A_q": [],
+        "CF3_Q_H1": 0,
+        "K_q": 0,
+        "P_K_ge_3": 0,
+        "query_id": "BH2_03443",
+        "takers": []
+      },
+      {
+        "A_q": [],
+        "CF3_Q_H1": 0,
+        "K_q": 0,
+        "P_K_ge_3": 0,
+        "query_id": "BH2_03469",
+        "takers": []
+      },
+      {
+        "A_q": [],
+        "CF3_Q_H1": 0,
+        "K_q": 0,
+        "P_K_ge_3": 0,
+        "query_id": "BH2_03582",
+        "takers": []
+      },
+      {
+        "A_q": [],
+        "CF3_Q_H1": 0,
+        "K_q": 0,
+        "P_K_ge_3": 0,
+        "query_id": "BH2_05162",
+        "takers": []
+      },
+      {
+        "A_q": [],
+        "CF3_Q_H1": 0,
+        "K_q": 0,
+        "P_K_ge_3": 0,
+        "query_id": "BH2_05209",
+        "takers": []
+      },
+      {
+        "A_q": [],
+        "CF3_Q_H1": 0,
+        "K_q": 0,
+        "P_K_ge_3": 0,
+        "query_id": "BH2_05243",
+        "takers": []
+      },
+      {
+        "A_q": [],
+        "CF3_Q_H1": 0,
+        "K_q": 0,
+        "P_K_ge_3": 0,
+        "query_id": "BH2_05265",
+        "takers": []
+      },
+      {
+        "A_q": [],
+        "CF3_Q_H1": 0,
+        "K_q": 0,
+        "P_K_ge_3": 0,
+        "query_id": "BH2_05289",
+        "takers": []
+      },
+      {
+        "A_q": [
+          "Cogito-14B",
+          "Gemma4-12B",
+          "Granite41-8B",
+          "Ministral3-14B"
+        ],
+        "CF3_Q_H1": 1,
+        "K_q": 3,
+        "P_K_ge_3": 0.20749536178107605,
+        "query_id": "BH2_05290",
+        "takers": [
+          "Cogito-14B",
+          "Gemma4-12B",
+          "Granite41-8B"
+        ]
+      },
+      {
+        "A_q": [],
+        "CF3_Q_H1": 0,
+        "K_q": 0,
+        "P_K_ge_3": 0,
+        "query_id": "BH2_05331",
+        "takers": []
+      },
+      {
+        "A_q": [],
+        "CF3_Q_H1": 0,
+        "K_q": 0,
+        "P_K_ge_3": 0,
+        "query_id": "BH2_05350",
+        "takers": []
+      },
+      {
+        "A_q": [],
+        "CF3_Q_H1": 0,
+        "K_q": 0,
+        "P_K_ge_3": 0,
+        "query_id": "BH2_05493",
+        "takers": []
+      },
+      {
+        "A_q": [],
+        "CF3_Q_H1": 0,
+        "K_q": 0,
+        "P_K_ge_3": 0,
+        "query_id": "BH2_05572",
+        "takers": []
+      },
+      {
+        "A_q": [
+          "Cogito-14B",
+          "Gemma4-12B",
+          "Granite41-8B",
+          "Ministral3-14B"
+        ],
+        "CF3_Q_H1": 0,
+        "K_q": 2,
+        "P_K_ge_3": 0.20749536178107605,
+        "query_id": "BH2_05576",
+        "takers": [
+          "Cogito-14B",
+          "Ministral3-14B"
+        ]
+      },
+      {
+        "A_q": [
+          "Cogito-14B",
+          "Gemma4-12B",
+          "Granite41-8B",
+          "Ministral3-14B"
+        ],
+        "CF3_Q_H1": 0,
+        "K_q": 1,
+        "P_K_ge_3": 0.20749536178107605,
+        "query_id": "BH2_05578",
+        "takers": [
+          "Ministral3-14B"
+        ]
+      },
+      {
+        "A_q": [
+          "Cogito-14B",
+          "Gemma4-12B",
+          "Granite41-8B",
+          "Ministral3-14B"
+        ],
+        "CF3_Q_H1": 0,
+        "K_q": 1,
+        "P_K_ge_3": 0.20749536178107605,
+        "query_id": "BH2_05587",
+        "takers": [
+          "Granite41-8B"
+        ]
+      },
+      {
+        "A_q": [],
+        "CF3_Q_H1": 0,
+        "K_q": 0,
+        "P_K_ge_3": 0,
+        "query_id": "BH2_05590",
+        "takers": []
+      },
+      {
+        "A_q": [
+          "Cogito-14B",
+          "Gemma4-12B",
+          "Granite41-8B",
+          "Ministral3-14B"
+        ],
+        "CF3_Q_H1": 0,
+        "K_q": 2,
+        "P_K_ge_3": 0.20749536178107605,
+        "query_id": "BH2_05595",
+        "takers": [
+          "Cogito-14B",
+          "Gemma4-12B"
+        ]
+      },
+      {
+        "A_q": [],
+        "CF3_Q_H1": 0,
+        "K_q": 0,
+        "P_K_ge_3": 0,
+        "query_id": "BH2_05604",
+        "takers": []
+      },
+      {
+        "A_q": [
+          "Cogito-14B",
+          "Gemma4-12B",
+          "Granite41-8B",
+          "Ministral3-14B"
+        ],
+        "CF3_Q_H1": 0,
+        "K_q": 2,
+        "P_K_ge_3": 0.20749536178107605,
+        "query_id": "BH2_05609",
+        "takers": [
+          "Cogito-14B",
+          "Ministral3-14B"
+        ]
+      },
+      {
+        "A_q": [],
+        "CF3_Q_H1": 0,
+        "K_q": 0,
+        "P_K_ge_3": 0,
+        "query_id": "BH2_05616",
+        "takers": []
+      },
+      {
+        "A_q": [
+          "Cogito-14B",
+          "Gemma4-12B",
+          "Ministral3-14B"
+        ],
+        "CF3_Q_H1": 0,
+        "K_q": 2,
+        "P_K_ge_3": 0.0779220779220779,
+        "query_id": "BH2_05627",
+        "takers": [
+          "Cogito-14B",
+          "Ministral3-14B"
+        ]
+      },
+      {
+        "A_q": [],
+        "CF3_Q_H1": 0,
+        "K_q": 0,
+        "P_K_ge_3": 0,
+        "query_id": "BH2_05634",
+        "takers": []
+      },
+      {
+        "A_q": [],
+        "CF3_Q_H1": 0,
+        "K_q": 0,
+        "P_K_ge_3": 0,
+        "query_id": "BH2_05643",
+        "takers": []
+      },
+      {
+        "A_q": [],
+        "CF3_Q_H1": 0,
+        "K_q": 0,
+        "P_K_ge_3": 0,
+        "query_id": "BH2_05645",
+        "takers": []
+      },
+      {
+        "A_q": [
+          "Cogito-14B",
+          "Gemma4-12B",
+          "Granite41-8B",
+          "Ministral3-14B"
+        ],
+        "CF3_Q_H1": 0,
+        "K_q": 2,
+        "P_K_ge_3": 0.20749536178107605,
+        "query_id": "BH2_05647",
+        "takers": [
+          "Granite41-8B",
+          "Ministral3-14B"
+        ]
+      },
+      {
+        "A_q": [
+          "Cogito-14B",
+          "Gemma4-12B",
+          "Granite41-8B",
+          "Ministral3-14B"
+        ],
+        "CF3_Q_H1": 0,
+        "K_q": 2,
+        "P_K_ge_3": 0.20749536178107605,
+        "query_id": "BH2_05680",
+        "takers": [
+          "Cogito-14B",
+          "Ministral3-14B"
+        ]
+      },
+      {
+        "A_q": [
+          "Cogito-14B",
+          "Gemma4-12B",
+          "Ministral3-14B"
+        ],
+        "CF3_Q_H1": 0,
+        "K_q": 1,
+        "P_K_ge_3": 0.0779220779220779,
+        "query_id": "BH2_05695",
+        "takers": [
+          "Cogito-14B"
+        ]
+      },
+      {
+        "A_q": [
+          "Cogito-14B",
+          "Gemma4-12B",
+          "Granite41-8B",
+          "Ministral3-14B"
+        ],
+        "CF3_Q_H1": 0,
+        "K_q": 0,
+        "P_K_ge_3": 0.20749536178107605,
+        "query_id": "BH2_05704",
+        "takers": []
+      },
+      {
+        "A_q": [
+          "Cogito-14B",
+          "Gemma4-12B",
+          "Granite41-8B",
+          "Ministral3-14B"
+        ],
+        "CF3_Q_H1": 0,
+        "K_q": 0,
+        "P_K_ge_3": 0.20749536178107605,
+        "query_id": "BH2_05716",
+        "takers": []
+      },
+      {
+        "A_q": [],
+        "CF3_Q_H1": 0,
+        "K_q": 0,
+        "P_K_ge_3": 0,
+        "query_id": "BH2_05741",
+        "takers": []
+      },
+      {
+        "A_q": [
+          "Cogito-14B",
+          "Gemma4-12B",
+          "Ministral3-14B"
+        ],
+        "CF3_Q_H1": 0,
+        "K_q": 1,
+        "P_K_ge_3": 0.0779220779220779,
+        "query_id": "BH2_05757",
+        "takers": [
+          "Cogito-14B"
+        ]
+      },
+      {
+        "A_q": [],
+        "CF3_Q_H1": 0,
+        "K_q": 0,
+        "P_K_ge_3": 0,
+        "query_id": "BH2_05760",
+        "takers": []
+      },
+      {
+        "A_q": [
+          "Cogito-14B",
+          "Gemma4-12B",
+          "Granite41-8B"
+        ],
+        "CF3_Q_H1": 0,
+        "K_q": 1,
+        "P_K_ge_3": 0.03710575139146567,
+        "query_id": "BH2_05770",
+        "takers": [
+          "Cogito-14B"
+        ]
+      },
+      {
+        "A_q": [
+          "Cogito-14B",
+          "Gemma4-12B",
+          "Granite41-8B",
+          "Ministral3-14B"
+        ],
+        "CF3_Q_H1": 0,
+        "K_q": 0,
+        "P_K_ge_3": 0.20749536178107605,
+        "query_id": "BH2_05771",
+        "takers": []
+      },
+      {
+        "A_q": [
+          "Cogito-14B",
+          "Gemma4-12B",
+          "Granite41-8B",
+          "Ministral3-14B"
+        ],
+        "CF3_Q_H1": 1,
+        "K_q": 4,
+        "P_K_ge_3": 0.20749536178107605,
+        "query_id": "BH2_05778",
+        "takers": [
+          "Cogito-14B",
+          "Gemma4-12B",
+          "Granite41-8B",
+          "Ministral3-14B"
+        ]
+      },
+      {
+        "A_q": [
+          "Cogito-14B",
+          "Gemma4-12B",
+          "Ministral3-14B"
+        ],
+        "CF3_Q_H1": 0,
+        "K_q": 2,
+        "P_K_ge_3": 0.0779220779220779,
+        "query_id": "BH2_05793",
+        "takers": [
+          "Cogito-14B",
+          "Ministral3-14B"
+        ]
+      },
+      {
+        "A_q": [
+          "Cogito-14B",
+          "Gemma4-12B"
+        ],
+        "CF3_Q_H1": 0,
+        "K_q": 2,
+        "P_K_ge_3": 0,
+        "query_id": "BH2_05812",
+        "takers": [
+          "Cogito-14B",
+          "Gemma4-12B"
+        ]
+      },
+      {
+        "A_q": [
+          "Cogito-14B",
+          "Gemma4-12B",
+          "Granite41-8B",
+          "Ministral3-14B"
+        ],
+        "CF3_Q_H1": 0,
+        "K_q": 2,
+        "P_K_ge_3": 0.20749536178107605,
+        "query_id": "BH2_05838",
+        "takers": [
+          "Cogito-14B",
+          "Ministral3-14B"
+        ]
+      },
+      {
+        "A_q": [],
+        "CF3_Q_H1": 0,
+        "K_q": 0,
+        "P_K_ge_3": 0,
+        "query_id": "BH2_05847",
+        "takers": []
+      },
+      {
+        "A_q": [
+          "Cogito-14B",
+          "Gemma4-12B",
+          "Granite41-8B",
+          "Ministral3-14B"
+        ],
+        "CF3_Q_H1": 0,
+        "K_q": 2,
+        "P_K_ge_3": 0.20749536178107605,
+        "query_id": "BH2_05852",
+        "takers": [
+          "Cogito-14B",
+          "Ministral3-14B"
+        ]
+      },
+      {
+        "A_q": [
+          "Cogito-14B",
+          "Gemma4-12B",
+          "Granite41-8B",
+          "Ministral3-14B"
+        ],
+        "CF3_Q_H1": 0,
+        "K_q": 2,
+        "P_K_ge_3": 0.20749536178107605,
+        "query_id": "BH2_05856",
+        "takers": [
+          "Cogito-14B",
+          "Ministral3-14B"
+        ]
+      },
+      {
+        "A_q": [],
+        "CF3_Q_H1": 0,
+        "K_q": 0,
+        "P_K_ge_3": 0,
+        "query_id": "BH2_05868",
+        "takers": []
+      },
+      {
+        "A_q": [
+          "Cogito-14B",
+          "Gemma4-12B",
+          "Granite41-8B",
+          "Ministral3-14B"
+        ],
+        "CF3_Q_H1": 0,
+        "K_q": 1,
+        "P_K_ge_3": 0.20749536178107605,
+        "query_id": "BH2_05874",
+        "takers": [
+          "Cogito-14B"
+        ]
+      },
+      {
+        "A_q": [
+          "Cogito-14B",
+          "Gemma4-12B",
+          "Granite41-8B",
+          "Ministral3-14B"
+        ],
+        "CF3_Q_H1": 1,
+        "K_q": 4,
+        "P_K_ge_3": 0.20749536178107605,
+        "query_id": "BH2_05890",
+        "takers": [
+          "Cogito-14B",
+          "Gemma4-12B",
+          "Granite41-8B",
+          "Ministral3-14B"
+        ]
+      },
+      {
+        "A_q": [
+          "Cogito-14B",
+          "Gemma4-12B",
+          "Granite41-8B",
+          "Ministral3-14B"
+        ],
+        "CF3_Q_H1": 0,
+        "K_q": 1,
+        "P_K_ge_3": 0.20749536178107605,
+        "query_id": "BH2_05900",
+        "takers": [
+          "Ministral3-14B"
+        ]
+      },
+      {
+        "A_q": [
+          "Cogito-14B",
+          "Gemma4-12B",
+          "Ministral3-14B"
+        ],
+        "CF3_Q_H1": 0,
+        "K_q": 0,
+        "P_K_ge_3": 0.0779220779220779,
+        "query_id": "BH2_05905",
+        "takers": []
+      },
+      {
+        "A_q": [],
+        "CF3_Q_H1": 0,
+        "K_q": 0,
+        "P_K_ge_3": 0,
+        "query_id": "BH2_05911",
+        "takers": []
+      },
+      {
+        "A_q": [],
+        "CF3_Q_H1": 0,
+        "K_q": 0,
+        "P_K_ge_3": 0,
+        "query_id": "BH2_05920",
+        "takers": []
+      },
+      {
+        "A_q": [
+          "Cogito-14B",
+          "Gemma4-12B",
+          "Granite41-8B"
+        ],
+        "CF3_Q_H1": 0,
+        "K_q": 1,
+        "P_K_ge_3": 0.03710575139146567,
+        "query_id": "BH2_05932",
+        "takers": [
+          "Cogito-14B"
+        ]
+      },
+      {
+        "A_q": [],
+        "CF3_Q_H1": 0,
+        "K_q": 0,
+        "P_K_ge_3": 0,
+        "query_id": "BH2_05933",
+        "takers": []
+      },
+      {
+        "A_q": [
+          "Gemma4-12B",
+          "Granite41-8B",
+          "Ministral3-14B"
+        ],
+        "CF3_Q_H1": 0,
+        "K_q": 0,
+        "P_K_ge_3": 0.029387755102040815,
+        "query_id": "BH2_05964",
+        "takers": []
+      },
+      {
+        "A_q": [],
+        "CF3_Q_H1": 0,
+        "K_q": 0,
+        "P_K_ge_3": 0,
+        "query_id": "BH2_05971",
+        "takers": []
+      },
+      {
+        "A_q": [
+          "Cogito-14B",
+          "Gemma4-12B",
+          "Granite41-8B",
+          "Ministral3-14B"
+        ],
+        "CF3_Q_H1": 0,
+        "K_q": 2,
+        "P_K_ge_3": 0.20749536178107605,
+        "query_id": "BH2_05989",
+        "takers": [
+          "Cogito-14B",
+          "Ministral3-14B"
+        ]
+      },
+      {
+        "A_q": [
+          "Cogito-14B",
+          "Gemma4-12B",
+          "Granite41-8B",
+          "Ministral3-14B"
+        ],
+        "CF3_Q_H1": 1,
+        "K_q": 3,
+        "P_K_ge_3": 0.20749536178107605,
+        "query_id": "BH2_05997",
+        "takers": [
+          "Cogito-14B",
+          "Granite41-8B",
+          "Ministral3-14B"
+        ]
+      },
+      {
+        "A_q": [],
+        "CF3_Q_H1": 0,
+        "K_q": 0,
+        "P_K_ge_3": 0,
+        "query_id": "BH2_05999",
+        "takers": []
+      },
+      {
+        "A_q": [],
+        "CF3_Q_H1": 0,
+        "K_q": 0,
+        "P_K_ge_3": 0,
+        "query_id": "BH2_06004",
+        "takers": []
+      },
+      {
+        "A_q": [
+          "Gemma4-12B"
+        ],
+        "CF3_Q_H1": 0,
+        "K_q": 0,
+        "P_K_ge_3": 0,
+        "query_id": "BH2_06012",
+        "takers": []
+      },
+      {
+        "A_q": [
+          "Cogito-14B",
+          "Gemma4-12B",
+          "Granite41-8B",
+          "Ministral3-14B"
+        ],
+        "CF3_Q_H1": 1,
+        "K_q": 4,
+        "P_K_ge_3": 0.20749536178107605,
+        "query_id": "BH2_06016",
+        "takers": [
+          "Cogito-14B",
+          "Gemma4-12B",
+          "Granite41-8B",
+          "Ministral3-14B"
+        ]
+      },
+      {
+        "A_q": [],
+        "CF3_Q_H1": 0,
+        "K_q": 0,
+        "P_K_ge_3": 0,
+        "query_id": "BH2_06031",
+        "takers": []
+      },
+      {
+        "A_q": [
+          "Cogito-14B",
+          "Gemma4-12B",
+          "Granite41-8B",
+          "Ministral3-14B"
+        ],
+        "CF3_Q_H1": 0,
+        "K_q": 2,
+        "P_K_ge_3": 0.20749536178107605,
+        "query_id": "BH2_06034",
+        "takers": [
+          "Cogito-14B",
+          "Ministral3-14B"
+        ]
+      },
+      {
+        "A_q": [],
+        "CF3_Q_H1": 0,
+        "K_q": 0,
+        "P_K_ge_3": 0,
+        "query_id": "BH2_06040",
+        "takers": []
+      },
+      {
+        "A_q": [],
+        "CF3_Q_H1": 0,
+        "K_q": 0,
+        "P_K_ge_3": 0,
+        "query_id": "BH2_06052",
+        "takers": []
+      },
+      {
+        "A_q": [],
+        "CF3_Q_H1": 0,
+        "K_q": 0,
+        "P_K_ge_3": 0,
+        "query_id": "BH2_06068",
+        "takers": []
+      },
+      {
+        "A_q": [],
+        "CF3_Q_H1": 0,
+        "K_q": 0,
+        "P_K_ge_3": 0,
+        "query_id": "BH2_06076",
+        "takers": []
+      },
+      {
+        "A_q": [],
+        "CF3_Q_H1": 0,
+        "K_q": 0,
+        "P_K_ge_3": 0,
+        "query_id": "BH2_06087",
+        "takers": []
+      },
+      {
+        "A_q": [],
+        "CF3_Q_H1": 0,
+        "K_q": 0,
+        "P_K_ge_3": 0,
+        "query_id": "BH2_06099",
+        "takers": []
+      }
+    ],
+    "queries": 75,
+    "queries_with_opportunity": 35
+  },
+  "provenance": {
+    "clean": true,
+    "cofailure": {
+      "path": "results/combined/pilot_expansion_v1/cofailure.json",
+      "sha256": "198b9aa18770d1a815429361be8f79601330276642665feb025783dd5560f87d"
+    },
+    "commit": "8131d088cc0ea937071cdca990a2d9c26ff7831b",
+    "episodes": {
+      "path": "results/exploratory/b1/b1_episodes.csv",
+      "sha256": "8d87f8de6c54f6c33176746cd066722162000b0c3fb4561b58fbae3aeed883de"
+    }
+  },
+  "without_source_name_overlap": {
+    "E_T": 4.555245661482983,
+    "P_T_ge_obs": 0.4878044552045779,
+    "P_T_le_obs": 0.7014399932656729,
+    "S_expected": 28.072233491097602,
+    "S_obs": 34,
+    "T_2.5th": 1,
+    "T_97.5th": 9,
+    "T_obs": 5,
+    "agents": {
+      "Cogito-14B": {
+        "opportunity": 32,
+        "p": 0.75,
+        "taken_and_opportunity": 24
+      },
+      "Gemma4-12B": {
+        "opportunity": 34,
+        "p": 0.14705882352941177,
+        "taken_and_opportunity": 5
+      },
+      "Granite41-8B": {
+        "opportunity": 27,
+        "p": 0.25925925925925924,
+        "taken_and_opportunity": 7
+      },
+      "Ministral3-14B": {
+        "opportunity": 29,
+        "p": 0.5862068965517241,
+        "taken_and_opportunity": 17
+      }
+    },
+    "outcome": "AGREES",
+    "per_query": [
+      {
+        "A_q": [
+          "Cogito-14B",
+          "Gemma4-12B",
+          "Granite41-8B"
+        ],
+        "CF3_Q_H1": 0,
+        "K_q": 1,
+        "P_K_ge_3": 0.028594771241830064,
+        "query_id": "BH2_03076",
+        "takers": [
+          "Cogito-14B"
+        ]
+      },
+      {
+        "A_q": [],
+        "CF3_Q_H1": 0,
+        "K_q": 0,
+        "P_K_ge_3": 0,
+        "query_id": "BH2_03124",
+        "takers": []
+      },
+      {
+        "A_q": [],
+        "CF3_Q_H1": 0,
+        "K_q": 0,
+        "P_K_ge_3": 0,
+        "query_id": "BH2_03131",
+        "takers": []
+      },
+      {
+        "A_q": [],
+        "CF3_Q_H1": 0,
+        "K_q": 0,
+        "P_K_ge_3": 0,
+        "query_id": "BH2_03148",
+        "takers": []
+      },
+      {
+        "A_q": [],
+        "CF3_Q_H1": 0,
+        "K_q": 0,
+        "P_K_ge_3": 0,
+        "query_id": "BH2_03185",
+        "takers": []
+      },
+      {
+        "A_q": [],
+        "CF3_Q_H1": 0,
+        "K_q": 0,
+        "P_K_ge_3": 0,
+        "query_id": "BH2_03229",
+        "takers": []
+      },
+      {
+        "A_q": [
+          "Cogito-14B",
+          "Gemma4-12B",
+          "Granite41-8B",
+          "Ministral3-14B"
+        ],
+        "CF3_Q_H1": 0,
+        "K_q": 1,
+        "P_K_ge_3": 0.17929719780632555,
+        "query_id": "BH2_03329",
+        "takers": [
+          "Cogito-14B"
+        ]
+      },
+      {
+        "A_q": [
+          "Cogito-14B",
+          "Gemma4-12B",
+          "Granite41-8B",
+          "Ministral3-14B"
+        ],
+        "CF3_Q_H1": 1,
+        "K_q": 3,
+        "P_K_ge_3": 0.17929719780632555,
+        "query_id": "BH2_03356",
+        "takers": [
+          "Cogito-14B",
+          "Granite41-8B",
+          "Ministral3-14B"
+        ]
+      },
+      {
+        "A_q": [],
+        "CF3_Q_H1": 0,
+        "K_q": 0,
+        "P_K_ge_3": 0,
+        "query_id": "BH2_03443",
+        "takers": []
+      },
+      {
+        "A_q": [],
+        "CF3_Q_H1": 0,
+        "K_q": 0,
+        "P_K_ge_3": 0,
+        "query_id": "BH2_03469",
+        "takers": []
+      },
+      {
+        "A_q": [],
+        "CF3_Q_H1": 0,
+        "K_q": 0,
+        "P_K_ge_3": 0,
+        "query_id": "BH2_03582",
+        "takers": []
+      },
+      {
+        "A_q": [],
+        "CF3_Q_H1": 0,
+        "K_q": 0,
+        "P_K_ge_3": 0,
+        "query_id": "BH2_05162",
+        "takers": []
+      },
+      {
+        "A_q": [],
+        "CF3_Q_H1": 0,
+        "K_q": 0,
+        "P_K_ge_3": 0,
+        "query_id": "BH2_05209",
+        "takers": []
+      },
+      {
+        "A_q": [],
+        "CF3_Q_H1": 0,
+        "K_q": 0,
+        "P_K_ge_3": 0,
+        "query_id": "BH2_05243",
+        "takers": []
+      },
+      {
+        "A_q": [],
+        "CF3_Q_H1": 0,
+        "K_q": 0,
+        "P_K_ge_3": 0,
+        "query_id": "BH2_05265",
+        "takers": []
+      },
+      {
+        "A_q": [],
+        "CF3_Q_H1": 0,
+        "K_q": 0,
+        "P_K_ge_3": 0,
+        "query_id": "BH2_05289",
+        "takers": []
+      },
+      {
+        "A_q": [
+          "Cogito-14B",
+          "Gemma4-12B",
+          "Granite41-8B",
+          "Ministral3-14B"
+        ],
+        "CF3_Q_H1": 1,
+        "K_q": 3,
+        "P_K_ge_3": 0.17929719780632555,
+        "query_id": "BH2_05290",
+        "takers": [
+          "Cogito-14B",
+          "Gemma4-12B",
+          "Granite41-8B"
+        ]
+      },
+      {
+        "A_q": [],
+        "CF3_Q_H1": 0,
+        "K_q": 0,
+        "P_K_ge_3": 0,
+        "query_id": "BH2_05331",
+        "takers": []
+      },
+      {
+        "A_q": [],
+        "CF3_Q_H1": 0,
+        "K_q": 0,
+        "P_K_ge_3": 0,
+        "query_id": "BH2_05350",
+        "takers": []
+      },
+      {
+        "A_q": [],
+        "CF3_Q_H1": 0,
+        "K_q": 0,
+        "P_K_ge_3": 0,
+        "query_id": "BH2_05493",
+        "takers": []
+      },
+      {
+        "A_q": [],
+        "CF3_Q_H1": 0,
+        "K_q": 0,
+        "P_K_ge_3": 0,
+        "query_id": "BH2_05572",
+        "takers": []
+      },
+      {
+        "A_q": [
+          "Cogito-14B",
+          "Gemma4-12B",
+          "Granite41-8B",
+          "Ministral3-14B"
+        ],
+        "CF3_Q_H1": 0,
+        "K_q": 2,
+        "P_K_ge_3": 0.17929719780632555,
+        "query_id": "BH2_05576",
+        "takers": [
+          "Cogito-14B",
+          "Ministral3-14B"
+        ]
+      },
+      {
+        "A_q": [
+          "Cogito-14B",
+          "Gemma4-12B",
+          "Granite41-8B",
+          "Ministral3-14B"
+        ],
+        "CF3_Q_H1": 0,
+        "K_q": 1,
+        "P_K_ge_3": 0.17929719780632555,
+        "query_id": "BH2_05578",
+        "takers": [
+          "Ministral3-14B"
+        ]
+      },
+      {
+        "A_q": [
+          "Cogito-14B",
+          "Gemma4-12B",
+          "Granite41-8B",
+          "Ministral3-14B"
+        ],
+        "CF3_Q_H1": 0,
+        "K_q": 1,
+        "P_K_ge_3": 0.17929719780632555,
+        "query_id": "BH2_05587",
+        "takers": [
+          "Granite41-8B"
+        ]
+      },
+      {
+        "A_q": [],
+        "CF3_Q_H1": 0,
+        "K_q": 0,
+        "P_K_ge_3": 0,
+        "query_id": "BH2_05590",
+        "takers": []
+      },
+      {
+        "A_q": [
+          "Cogito-14B",
+          "Gemma4-12B",
+          "Granite41-8B",
+          "Ministral3-14B"
+        ],
+        "CF3_Q_H1": 0,
+        "K_q": 2,
+        "P_K_ge_3": 0.17929719780632555,
+        "query_id": "BH2_05595",
+        "takers": [
+          "Cogito-14B",
+          "Gemma4-12B"
+        ]
+      },
+      {
+        "A_q": [],
+        "CF3_Q_H1": 0,
+        "K_q": 0,
+        "P_K_ge_3": 0,
+        "query_id": "BH2_05604",
+        "takers": []
+      },
+      {
+        "A_q": [
+          "Cogito-14B",
+          "Gemma4-12B",
+          "Granite41-8B",
+          "Ministral3-14B"
+        ],
+        "CF3_Q_H1": 0,
+        "K_q": 2,
+        "P_K_ge_3": 0.17929719780632555,
+        "query_id": "BH2_05609",
+        "takers": [
+          "Cogito-14B",
+          "Ministral3-14B"
+        ]
+      },
+      {
+        "A_q": [],
+        "CF3_Q_H1": 0,
+        "K_q": 0,
+        "P_K_ge_3": 0,
+        "query_id": "BH2_05616",
+        "takers": []
+      },
+      {
+        "A_q": [
+          "Cogito-14B",
+          "Gemma4-12B",
+          "Ministral3-14B"
+        ],
+        "CF3_Q_H1": 0,
+        "K_q": 2,
+        "P_K_ge_3": 0.0646551724137931,
+        "query_id": "BH2_05627",
+        "takers": [
+          "Cogito-14B",
+          "Ministral3-14B"
+        ]
+      },
+      {
+        "A_q": [],
+        "CF3_Q_H1": 0,
+        "K_q": 0,
+        "P_K_ge_3": 0,
+        "query_id": "BH2_05634",
+        "takers": []
+      },
+      {
+        "A_q": [],
+        "CF3_Q_H1": 0,
+        "K_q": 0,
+        "P_K_ge_3": 0,
+        "query_id": "BH2_05643",
+        "takers": []
+      },
+      {
+        "A_q": [],
+        "CF3_Q_H1": 0,
+        "K_q": 0,
+        "P_K_ge_3": 0,
+        "query_id": "BH2_05645",
+        "takers": []
+      },
+      {
+        "A_q": [
+          "Cogito-14B",
+          "Gemma4-12B",
+          "Granite41-8B",
+          "Ministral3-14B"
+        ],
+        "CF3_Q_H1": 0,
+        "K_q": 2,
+        "P_K_ge_3": 0.17929719780632555,
+        "query_id": "BH2_05647",
+        "takers": [
+          "Granite41-8B",
+          "Ministral3-14B"
+        ]
+      },
+      {
+        "A_q": [
+          "Cogito-14B",
+          "Gemma4-12B",
+          "Granite41-8B",
+          "Ministral3-14B"
+        ],
+        "CF3_Q_H1": 0,
+        "K_q": 2,
+        "P_K_ge_3": 0.17929719780632555,
+        "query_id": "BH2_05680",
+        "takers": [
+          "Cogito-14B",
+          "Ministral3-14B"
+        ]
+      },
+      {
+        "A_q": [
+          "Cogito-14B",
+          "Gemma4-12B",
+          "Ministral3-14B"
+        ],
+        "CF3_Q_H1": 0,
+        "K_q": 1,
+        "P_K_ge_3": 0.0646551724137931,
+        "query_id": "BH2_05695",
+        "takers": [
+          "Cogito-14B"
+        ]
+      },
+      {
+        "A_q": [
+          "Cogito-14B",
+          "Gemma4-12B",
+          "Granite41-8B",
+          "Ministral3-14B"
+        ],
+        "CF3_Q_H1": 0,
+        "K_q": 0,
+        "P_K_ge_3": 0.17929719780632555,
+        "query_id": "BH2_05704",
+        "takers": []
+      },
+      {
+        "A_q": [
+          "Cogito-14B",
+          "Gemma4-12B",
+          "Granite41-8B",
+          "Ministral3-14B"
+        ],
+        "CF3_Q_H1": 0,
+        "K_q": 0,
+        "P_K_ge_3": 0.17929719780632555,
+        "query_id": "BH2_05716",
+        "takers": []
+      },
+      {
+        "A_q": [],
+        "CF3_Q_H1": 0,
+        "K_q": 0,
+        "P_K_ge_3": 0,
+        "query_id": "BH2_05741",
+        "takers": []
+      },
+      {
+        "A_q": [
+          "Cogito-14B",
+          "Gemma4-12B",
+          "Ministral3-14B"
+        ],
+        "CF3_Q_H1": 0,
+        "K_q": 1,
+        "P_K_ge_3": 0.0646551724137931,
+        "query_id": "BH2_05757",
+        "takers": [
+          "Cogito-14B"
+        ]
+      },
+      {
+        "A_q": [],
+        "CF3_Q_H1": 0,
+        "K_q": 0,
+        "P_K_ge_3": 0,
+        "query_id": "BH2_05760",
+        "takers": []
+      },
+      {
+        "A_q": [
+          "Cogito-14B",
+          "Gemma4-12B",
+          "Granite41-8B"
+        ],
+        "CF3_Q_H1": 0,
+        "K_q": 1,
+        "P_K_ge_3": 0.028594771241830064,
+        "query_id": "BH2_05770",
+        "takers": [
+          "Cogito-14B"
+        ]
+      },
+      {
+        "A_q": [
+          "Cogito-14B",
+          "Gemma4-12B",
+          "Granite41-8B",
+          "Ministral3-14B"
+        ],
+        "CF3_Q_H1": 0,
+        "K_q": 0,
+        "P_K_ge_3": 0.17929719780632555,
+        "query_id": "BH2_05771",
+        "takers": []
+      },
+      {
+        "A_q": [
+          "Cogito-14B",
+          "Gemma4-12B",
+          "Ministral3-14B"
+        ],
+        "CF3_Q_H1": 0,
+        "K_q": 2,
+        "P_K_ge_3": 0.0646551724137931,
+        "query_id": "BH2_05793",
+        "takers": [
+          "Cogito-14B",
+          "Ministral3-14B"
+        ]
+      },
+      {
+        "A_q": [
+          "Cogito-14B",
+          "Gemma4-12B"
+        ],
+        "CF3_Q_H1": 0,
+        "K_q": 2,
+        "P_K_ge_3": 0,
+        "query_id": "BH2_05812",
+        "takers": [
+          "Cogito-14B",
+          "Gemma4-12B"
+        ]
+      },
+      {
+        "A_q": [
+          "Cogito-14B",
+          "Gemma4-12B",
+          "Granite41-8B",
+          "Ministral3-14B"
+        ],
+        "CF3_Q_H1": 0,
+        "K_q": 2,
+        "P_K_ge_3": 0.17929719780632555,
+        "query_id": "BH2_05838",
+        "takers": [
+          "Cogito-14B",
+          "Ministral3-14B"
+        ]
+      },
+      {
+        "A_q": [],
+        "CF3_Q_H1": 0,
+        "K_q": 0,
+        "P_K_ge_3": 0,
+        "query_id": "BH2_05847",
+        "takers": []
+      },
+      {
+        "A_q": [
+          "Cogito-14B",
+          "Gemma4-12B",
+          "Granite41-8B",
+          "Ministral3-14B"
+        ],
+        "CF3_Q_H1": 0,
+        "K_q": 2,
+        "P_K_ge_3": 0.17929719780632555,
+        "query_id": "BH2_05852",
+        "takers": [
+          "Cogito-14B",
+          "Ministral3-14B"
+        ]
+      },
+      {
+        "A_q": [
+          "Cogito-14B",
+          "Gemma4-12B",
+          "Granite41-8B",
+          "Ministral3-14B"
+        ],
+        "CF3_Q_H1": 0,
+        "K_q": 2,
+        "P_K_ge_3": 0.17929719780632555,
+        "query_id": "BH2_05856",
+        "takers": [
+          "Cogito-14B",
+          "Ministral3-14B"
+        ]
+      },
+      {
+        "A_q": [],
+        "CF3_Q_H1": 0,
+        "K_q": 0,
+        "P_K_ge_3": 0,
+        "query_id": "BH2_05868",
+        "takers": []
+      },
+      {
+        "A_q": [
+          "Cogito-14B",
+          "Gemma4-12B",
+          "Granite41-8B",
+          "Ministral3-14B"
+        ],
+        "CF3_Q_H1": 0,
+        "K_q": 1,
+        "P_K_ge_3": 0.17929719780632555,
+        "query_id": "BH2_05874",
+        "takers": [
+          "Cogito-14B"
+        ]
+      },
+      {
+        "A_q": [
+          "Cogito-14B",
+          "Gemma4-12B",
+          "Granite41-8B",
+          "Ministral3-14B"
+        ],
+        "CF3_Q_H1": 1,
+        "K_q": 4,
+        "P_K_ge_3": 0.17929719780632555,
+        "query_id": "BH2_05890",
+        "takers": [
+          "Cogito-14B",
+          "Gemma4-12B",
+          "Granite41-8B",
+          "Ministral3-14B"
+        ]
+      },
+      {
+        "A_q": [
+          "Cogito-14B",
+          "Gemma4-12B",
+          "Granite41-8B",
+          "Ministral3-14B"
+        ],
+        "CF3_Q_H1": 0,
+        "K_q": 1,
+        "P_K_ge_3": 0.17929719780632555,
+        "query_id": "BH2_05900",
+        "takers": [
+          "Ministral3-14B"
+        ]
+      },
+      {
+        "A_q": [
+          "Cogito-14B",
+          "Gemma4-12B",
+          "Ministral3-14B"
+        ],
+        "CF3_Q_H1": 0,
+        "K_q": 0,
+        "P_K_ge_3": 0.0646551724137931,
+        "query_id": "BH2_05905",
+        "takers": []
+      },
+      {
+        "A_q": [],
+        "CF3_Q_H1": 0,
+        "K_q": 0,
+        "P_K_ge_3": 0,
+        "query_id": "BH2_05911",
+        "takers": []
+      },
+      {
+        "A_q": [],
+        "CF3_Q_H1": 0,
+        "K_q": 0,
+        "P_K_ge_3": 0,
+        "query_id": "BH2_05920",
+        "takers": []
+      },
+      {
+        "A_q": [
+          "Cogito-14B",
+          "Gemma4-12B",
+          "Granite41-8B"
+        ],
+        "CF3_Q_H1": 0,
+        "K_q": 1,
+        "P_K_ge_3": 0.028594771241830064,
+        "query_id": "BH2_05932",
+        "takers": [
+          "Cogito-14B"
+        ]
+      },
+      {
+        "A_q": [],
+        "CF3_Q_H1": 0,
+        "K_q": 0,
+        "P_K_ge_3": 0,
+        "query_id": "BH2_05933",
+        "takers": []
+      },
+      {
+        "A_q": [
+          "Gemma4-12B",
+          "Granite41-8B",
+          "Ministral3-14B"
+        ],
+        "CF3_Q_H1": 0,
+        "K_q": 0,
+        "P_K_ge_3": 0.022349936143039588,
+        "query_id": "BH2_05964",
+        "takers": []
+      },
+      {
+        "A_q": [
+          "Cogito-14B",
+          "Gemma4-12B",
+          "Granite41-8B",
+          "Ministral3-14B"
+        ],
+        "CF3_Q_H1": 0,
+        "K_q": 2,
+        "P_K_ge_3": 0.17929719780632555,
+        "query_id": "BH2_05989",
+        "takers": [
+          "Cogito-14B",
+          "Ministral3-14B"
+        ]
+      },
+      {
+        "A_q": [
+          "Cogito-14B",
+          "Gemma4-12B",
+          "Granite41-8B",
+          "Ministral3-14B"
+        ],
+        "CF3_Q_H1": 1,
+        "K_q": 3,
+        "P_K_ge_3": 0.17929719780632555,
+        "query_id": "BH2_05997",
+        "takers": [
+          "Cogito-14B",
+          "Granite41-8B",
+          "Ministral3-14B"
+        ]
+      },
+      {
+        "A_q": [],
+        "CF3_Q_H1": 0,
+        "K_q": 0,
+        "P_K_ge_3": 0,
+        "query_id": "BH2_05999",
+        "takers": []
+      },
+      {
+        "A_q": [],
+        "CF3_Q_H1": 0,
+        "K_q": 0,
+        "P_K_ge_3": 0,
+        "query_id": "BH2_06004",
+        "takers": []
+      },
+      {
+        "A_q": [
+          "Gemma4-12B"
+        ],
+        "CF3_Q_H1": 0,
+        "K_q": 0,
+        "P_K_ge_3": 0,
+        "query_id": "BH2_06012",
+        "takers": []
+      },
+      {
+        "A_q": [
+          "Cogito-14B",
+          "Gemma4-12B",
+          "Granite41-8B",
+          "Ministral3-14B"
+        ],
+        "CF3_Q_H1": 1,
+        "K_q": 4,
+        "P_K_ge_3": 0.17929719780632555,
+        "query_id": "BH2_06016",
+        "takers": [
+          "Cogito-14B",
+          "Gemma4-12B",
+          "Granite41-8B",
+          "Ministral3-14B"
+        ]
+      },
+      {
+        "A_q": [],
+        "CF3_Q_H1": 0,
+        "K_q": 0,
+        "P_K_ge_3": 0,
+        "query_id": "BH2_06031",
+        "takers": []
+      },
+      {
+        "A_q": [
+          "Cogito-14B",
+          "Gemma4-12B",
+          "Granite41-8B",
+          "Ministral3-14B"
+        ],
+        "CF3_Q_H1": 0,
+        "K_q": 2,
+        "P_K_ge_3": 0.17929719780632555,
+        "query_id": "BH2_06034",
+        "takers": [
+          "Cogito-14B",
+          "Ministral3-14B"
+        ]
+      },
+      {
+        "A_q": [],
+        "CF3_Q_H1": 0,
+        "K_q": 0,
+        "P_K_ge_3": 0,
+        "query_id": "BH2_06040",
+        "takers": []
+      },
+      {
+        "A_q": [],
+        "CF3_Q_H1": 0,
+        "K_q": 0,
+        "P_K_ge_3": 0,
+        "query_id": "BH2_06052",
+        "takers": []
+      },
+      {
+        "A_q": [],
+        "CF3_Q_H1": 0,
+        "K_q": 0,
+        "P_K_ge_3": 0,
+        "query_id": "BH2_06068",
+        "takers": []
+      },
+      {
+        "A_q": [],
+        "CF3_Q_H1": 0,
+        "K_q": 0,
+        "P_K_ge_3": 0,
+        "query_id": "BH2_06076",
+        "takers": []
+      },
+      {
+        "A_q": [],
+        "CF3_Q_H1": 0,
+        "K_q": 0,
+        "P_K_ge_3": 0,
+        "query_id": "BH2_06087",
+        "takers": []
+      }
+    ],
+    "queries": 72,
+    "queries_with_opportunity": 34
+  }
+}
