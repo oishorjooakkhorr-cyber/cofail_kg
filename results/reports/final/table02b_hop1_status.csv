@@ -1,0 +1,36 @@
+Split,Agent,Episodes,H1_CLEAN,H1_MIXED,H1_WRONG,H1_NONE,Found R1 (CLEAN + MIXED)
+All,Gemma4-12B,500,498,2,0,0,500
+All,Granite41-8B,500,463,17,20,0,480
+All,Ministral3-14B,500,451,19,0,30,470
+All,Cogito-14B,500,465,34,1,0,499
+All,All agents,2000,1877,72,21,30,1949
+construction = BRIDGE,Gemma4-12B,164,163,1,0,0,164
+construction = BRIDGE,Granite41-8B,164,137,7,20,0,144
+construction = BRIDGE,Ministral3-14B,164,125,14,0,25,139
+construction = BRIDGE,Cogito-14B,164,152,11,1,0,163
+construction = BRIDGE,All agents,656,577,33,21,25,610
+construction = UNION,Gemma4-12B,336,335,1,0,0,336
+construction = UNION,Granite41-8B,336,326,10,0,0,336
+construction = UNION,Ministral3-14B,336,326,5,0,5,331
+construction = UNION,Cogito-14B,336,313,23,0,0,336
+construction = UNION,All agents,1344,1300,39,0,5,1339
+ambiguity tag = NONE,Gemma4-12B,67,67,0,0,0,67
+ambiguity tag = NONE,Granite41-8B,67,62,3,2,0,65
+ambiguity tag = NONE,Ministral3-14B,67,54,2,0,11,56
+ambiguity tag = NONE,Cogito-14B,67,66,1,0,0,67
+ambiguity tag = NONE,All agents,268,249,6,2,11,255
+ambiguity tag = R1_AMBIGUOUS,Gemma4-12B,352,350,2,0,0,352
+ambiguity tag = R1_AMBIGUOUS,Granite41-8B,352,328,12,12,0,340
+ambiguity tag = R1_AMBIGUOUS,Ministral3-14B,352,332,11,0,9,343
+ambiguity tag = R1_AMBIGUOUS,Cogito-14B,352,322,30,0,0,352
+ambiguity tag = R1_AMBIGUOUS,All agents,1408,1332,55,12,9,1387
+ambiguity tag = R2_AMBIGUOUS,Gemma4-12B,20,20,0,0,0,20
+ambiguity tag = R2_AMBIGUOUS,Granite41-8B,20,18,0,2,0,18
+ambiguity tag = R2_AMBIGUOUS,Ministral3-14B,20,13,2,0,5,15
+ambiguity tag = R2_AMBIGUOUS,Cogito-14B,20,19,1,0,0,20
+ambiguity tag = R2_AMBIGUOUS,All agents,80,70,3,2,5,73
+ambiguity tag = BOTH_AMBIGUOUS,Gemma4-12B,61,61,0,0,0,61
+ambiguity tag = BOTH_AMBIGUOUS,Granite41-8B,61,55,2,4,0,57
+ambiguity tag = BOTH_AMBIGUOUS,Ministral3-14B,61,52,4,0,5,56
+ambiguity tag = BOTH_AMBIGUOUS,Cogito-14B,61,58,2,1,0,60
+ambiguity tag = BOTH_AMBIGUOUS,All agents,244,226,8,5,5,234

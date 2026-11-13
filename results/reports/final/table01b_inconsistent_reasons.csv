@@ -1,0 +1,9 @@
+Reason code,Primary reason (queries),Recorded (queries),Recorded as NA,Relation types where recorded
+QUERY_NOT_FOUND,0,0,0,
+QUESTION_TEXT_MISMATCH,0,0,0,
+BRIDGE_NOT_FOUND,0,0,0,
+GOLD_BRIDGE_NOT_VALID,0,0,0,
+GOLD_UNMAPPED,0,0,0,
+GOLD_MISSING_FROM_KG,15,15,0,effect/phenotype:disease:drug;gene/protein:drug:disease
+EXTRA_TARGETS,0,3,0,gene/protein:drug:disease
+Queries INCONSISTENT,15,,,effect/phenotype:disease:drug;gene/protein:drug:disease

@@ -1,0 +1,35 @@
+View,Stratum,Value,Queries,PCF_SHORTCUT3,PCF_REL3,PCF_REL4,PCF_NODE3,PCF_NODE4
+All queries,Relation type,disease:drug:effect/phenotype,336,0,0,0,0,0
+All queries,Relation type,disease:drug:gene/protein,8,0,0,0,0,0
+All queries,Relation type,disease:gene/protein:drug,16,0,0,0,0,0
+All queries,Relation type,drug:disease:effect/phenotype,6,0,0,0,0,0
+All queries,Relation type,drug:disease:gene/protein,8,2,2,0,0,0
+All queries,Relation type,drug:gene/protein:disease,51,0,0,0,0,0
+All queries,Relation type,effect/phenotype:disease:drug,55,0,4,2,0,0
+All queries,Relation type,gene/protein:disease:drug,11,0,1,0,0,0
+All queries,Relation type,gene/protein:drug:disease,9,0,1,0,0,0
+All queries,Ambiguity tag,BOTH_AMBIGUOUS,61,0,4,2,0,0
+All queries,Ambiguity tag,NONE,67,0,0,0,0,0
+All queries,Ambiguity tag,R1_AMBIGUOUS,352,2,2,0,0,0
+All queries,Ambiguity tag,R2_AMBIGUOUS,20,0,2,0,0,0
+All queries,Construction,BRIDGE,164,2,8,2,0,0
+All queries,Construction,UNION,336,0,0,0,0,0
+All queries,Bridge multiplicity,MULTI_BRIDGE,375,0,3,1,0,0
+All queries,Bridge multiplicity,SINGLE_BRIDGE,125,2,5,1,0,0
+Without SOURCE_NAME_OVERLAP,Relation type,disease:drug:effect/phenotype,336,0,0,0,0,0
+Without SOURCE_NAME_OVERLAP,Relation type,disease:drug:gene/protein,8,0,0,0,0,0
+Without SOURCE_NAME_OVERLAP,Relation type,disease:gene/protein:drug,16,0,0,0,0,0
+Without SOURCE_NAME_OVERLAP,Relation type,drug:disease:effect/phenotype,6,0,0,0,0,0
+Without SOURCE_NAME_OVERLAP,Relation type,drug:disease:gene/protein,8,2,2,0,0,0
+Without SOURCE_NAME_OVERLAP,Relation type,drug:gene/protein:disease,51,0,0,0,0,0
+Without SOURCE_NAME_OVERLAP,Relation type,effect/phenotype:disease:drug,52,0,3,1,0,0
+Without SOURCE_NAME_OVERLAP,Relation type,gene/protein:disease:drug,11,0,1,0,0,0
+Without SOURCE_NAME_OVERLAP,Relation type,gene/protein:drug:disease,9,0,1,0,0,0
+Without SOURCE_NAME_OVERLAP,Ambiguity tag,BOTH_AMBIGUOUS,58,0,3,1,0,0
+Without SOURCE_NAME_OVERLAP,Ambiguity tag,NONE,67,0,0,0,0,0
+Without SOURCE_NAME_OVERLAP,Ambiguity tag,R1_AMBIGUOUS,352,2,2,0,0,0
+Without SOURCE_NAME_OVERLAP,Ambiguity tag,R2_AMBIGUOUS,20,0,2,0,0,0
+Without SOURCE_NAME_OVERLAP,Construction,BRIDGE,161,2,7,1,0,0
+Without SOURCE_NAME_OVERLAP,Construction,UNION,336,0,0,0,0,0
+Without SOURCE_NAME_OVERLAP,Bridge multiplicity,MULTI_BRIDGE,372,0,2,0,0,0
+Without SOURCE_NAME_OVERLAP,Bridge multiplicity,SINGLE_BRIDGE,125,2,5,1,0,0

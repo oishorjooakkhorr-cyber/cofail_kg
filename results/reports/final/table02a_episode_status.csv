@@ -1,0 +1,36 @@
+Split,Agent,Episodes,SUCCESS,PARSE_FAIL,ERROR,TIMEOUT,Technical failures,ERROR by §9.5 `cause` field
+All,Gemma4-12B,500,498,2,0,0,2,
+All,Granite41-8B,500,486,13,1,0,14,CONNECTION: 1
+All,Ministral3-14B,500,446,49,5,0,54,CONNECTION: 5
+All,Cogito-14B,500,462,2,36,0,38,CONNECTION: 33;RUNTIME: 3
+All,All agents,2000,1892,66,42,0,108,
+construction = BRIDGE,Gemma4-12B,164,164,0,0,0,0,
+construction = BRIDGE,Granite41-8B,164,163,1,0,0,1,
+construction = BRIDGE,Ministral3-14B,164,139,25,0,0,25,
+construction = BRIDGE,Cogito-14B,164,160,0,4,0,4,CONNECTION: 4
+construction = BRIDGE,All agents,656,626,26,4,0,30,
+construction = UNION,Gemma4-12B,336,334,2,0,0,2,
+construction = UNION,Granite41-8B,336,323,12,1,0,13,CONNECTION: 1
+construction = UNION,Ministral3-14B,336,307,24,5,0,29,CONNECTION: 5
+construction = UNION,Cogito-14B,336,302,2,32,0,34,CONNECTION: 29;RUNTIME: 3
+construction = UNION,All agents,1344,1266,40,38,0,78,
+ambiguity tag = NONE,Gemma4-12B,67,67,0,0,0,0,
+ambiguity tag = NONE,Granite41-8B,67,66,1,0,0,1,
+ambiguity tag = NONE,Ministral3-14B,67,56,11,0,0,11,
+ambiguity tag = NONE,Cogito-14B,67,65,0,2,0,2,CONNECTION: 2
+ambiguity tag = NONE,All agents,268,254,12,2,0,14,
+ambiguity tag = R1_AMBIGUOUS,Gemma4-12B,352,350,2,0,0,2,
+ambiguity tag = R1_AMBIGUOUS,Granite41-8B,352,339,12,1,0,13,CONNECTION: 1
+ambiguity tag = R1_AMBIGUOUS,Ministral3-14B,352,319,28,5,0,33,CONNECTION: 5
+ambiguity tag = R1_AMBIGUOUS,Cogito-14B,352,317,2,33,0,35,CONNECTION: 30;RUNTIME: 3
+ambiguity tag = R1_AMBIGUOUS,All agents,1408,1325,44,39,0,83,
+ambiguity tag = R2_AMBIGUOUS,Gemma4-12B,20,20,0,0,0,0,
+ambiguity tag = R2_AMBIGUOUS,Granite41-8B,20,20,0,0,0,0,
+ambiguity tag = R2_AMBIGUOUS,Ministral3-14B,20,15,5,0,0,5,
+ambiguity tag = R2_AMBIGUOUS,Cogito-14B,20,20,0,0,0,0,
+ambiguity tag = R2_AMBIGUOUS,All agents,80,75,5,0,0,5,
+ambiguity tag = BOTH_AMBIGUOUS,Gemma4-12B,61,61,0,0,0,0,
+ambiguity tag = BOTH_AMBIGUOUS,Granite41-8B,61,61,0,0,0,0,
+ambiguity tag = BOTH_AMBIGUOUS,Ministral3-14B,61,56,5,0,0,5,
+ambiguity tag = BOTH_AMBIGUOUS,Cogito-14B,61,60,0,1,0,1,CONNECTION: 1
+ambiguity tag = BOTH_AMBIGUOUS,All agents,244,238,5,1,0,6,

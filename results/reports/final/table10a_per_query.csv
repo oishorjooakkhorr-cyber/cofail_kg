@@ -1,0 +1,9 @@
+Query,Relation type,SOURCE_NAME_OVERLAP,CF3^Q original,CF3^Q repeat,CF3^Q reproduces,CF4^Q original,CF4^Q repeat,"CF3^{Q,H1} original","CF3^{Q,H1} repeat",Shared W^Q entities original,Shared W^Q entities repeat
+BH2_03356,gene/protein:disease:drug,False,1,0,False,0,0,1,0,14142;14162;14215;14255;14302;14308;14317;14369;14605;14835;14836;14846;15451;15762;15769;15836;16210;16687;16689;16690,
+BH2_04650,drug:disease:gene/protein,False,1,1,True,0,0,0,0,341;1494;1659;2472;8038,341;1494;1659;2472;8038
+BH2_04856,drug:disease:gene/protein,False,1,0,False,0,0,0,0,11356,
+BH2_05290,gene/protein:drug:disease,False,1,1,True,0,0,1,1,31820;36924,31820;36924
+BH2_05778,effect/phenotype:disease:drug,True,1,1,True,1,1,1,1,14231;14275;14604;14608;14715;14737;14793;14955;15413;15481;20336,14231;14275;14604;14608;14715;14737;14793;14955;15413;15481;20336
+BH2_05890,effect/phenotype:disease:drug,False,1,0,False,0,0,1,0,14606,
+BH2_05997,effect/phenotype:disease:drug,False,1,1,True,0,0,1,1,15438;15982,15438;15982
+BH2_06016,effect/phenotype:disease:drug,False,1,1,True,1,1,1,1,14175;14191;14206;14262;14274;14340;14347;15438,14175;14191;14206;14262;14274;14340;14347;15438

@@ -1,0 +1,14 @@
+Relation type,BioHopR rows,Gate D1,Construction,R1,R2,Ambiguity tag,Queries validated,CONSISTENT,INCONSISTENT,LEAKY_QUESTION,SATURATED,Primary population,Primary SINGLE_BRIDGE,Primary MULTI_BRIDGE,Pilot,Expansion
+disease:drug:effect/phenotype,949,PASS,UNION,indication,drug_effect,R1_AMBIGUOUS,949,949,0,102,0,847,319,528,67,269
+disease:drug:gene/protein,381,PASS,BRIDGE,indication,drug_protein,R1_AMBIGUOUS,381,381,0,5,0,376,376,0,2,6
+disease:effect/phenotype:drug,36,FAIL,,,,,,,,,,,,,,
+disease:gene/protein:drug,899,PASS,BRIDGE,disease_protein,drug_protein,NONE,899,899,0,47,0,852,852,0,3,13
+drug:disease:effect/phenotype,213,PASS,BRIDGE,indication,disease_phenotype_positive,BOTH_AMBIGUOUS,213,213,0,0,0,213,213,0,2,4
+drug:disease:gene/protein,321,PASS,BRIDGE,indication,disease_protein,R1_AMBIGUOUS,321,321,0,0,0,321,321,0,2,6
+drug:effect/phenotype:disease,5,FAIL,,,,,,,,,,,,,,
+drug:gene/protein:disease,3029,PASS,BRIDGE,drug_protein,disease_protein,NONE,3029,3029,0,1,0,3028,3028,0,8,43
+effect/phenotype:disease:drug,546,PASS,BRIDGE,disease_phenotype_positive,indication,BOTH_AMBIGUOUS,546,534,12,31,0,503,430,73,12,43
+effect/phenotype:drug:disease,215,FAIL,,,,,,,,,,,,,,
+gene/protein:disease:drug,577,PASS,BRIDGE,disease_protein,indication,R2_AMBIGUOUS,577,577,0,0,0,577,577,0,2,9
+gene/protein:drug:disease,462,PASS,BRIDGE,drug_protein,indication,R2_AMBIGUOUS,462,459,3,0,0,459,459,0,2,7
+Total,7633,9 PASS / 3 FAIL,,,,,7377,7362,15,186,0,7176,6575,601,100,400

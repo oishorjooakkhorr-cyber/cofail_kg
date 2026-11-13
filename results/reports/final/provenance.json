@@ -1,0 +1,237 @@
+{
+  "code": {
+    "scripts/28_pilot_report.py": {
+      "last_commit": "02e0182f404610727741a6407169dbbe201671e7",
+      "tracked": true,
+      "unchanged_at_HEAD": true
+    },
+    "scripts/38_final_tables.py": {
+      "last_commit": "d6a00137dc22cbec6f9d537432a0166f5d0f9c6b",
+      "tracked": true,
+      "unchanged_at_HEAD": true
+    }
+  },
+  "code_committed": true,
+  "commit": "d6a00137dc22cbec6f9d537432a0166f5d0f9c6b",
+  "cross_checks": [
+    "cofailure.json per-query flags add up to its stored totals (both views)",
+    "manifest relation type and ambiguity tag equal cofailure.json for all 500 queries",
+    "B1, B2, B5, B6, RP and IC were computed on the current cofailure.json (SHA256)",
+    "B2 strict, B5 both/total and B6 total equal the cofailure.json totals (both views)",
+    "RP original flags, IC CF3^{Q,H1} and S36 'before' flags equal cofailure.json per query",
+    "S31 candidates.csv lists exactly the queries meeting the flag part of the \u00a721 candidate rule"
+  ],
+  "inputs": {
+    "data/processed/manifests/expansion.jsonl": {
+      "last_commit": "a0c586781ba30484b9589fd2cc96b79d4e2a5afc",
+      "sha256": "2cfc09e132e77f5a4c9eeb3b4957692051f7c9fc32cc97ecd0cd37de0e602689",
+      "tracked": true,
+      "unchanged_at_HEAD": true
+    },
+    "data/processed/manifests/pilot.jsonl": {
+      "last_commit": "a0c586781ba30484b9589fd2cc96b79d4e2a5afc",
+      "sha256": "102a1cb1133ae7ea3bf36972965101c3842b26b231739363b53e7250714a28d4",
+      "tracked": true,
+      "unchanged_at_HEAD": true
+    },
+    "data/processed/primary_population.csv": {
+      "last_commit": "ef113fb54bf2150f9694cf315e8aff4b4a9136a7",
+      "sha256": "24a876a1bcca9e4e4fc5d273460212b47e38d95b0949c1770096fb46b79b41b8",
+      "tracked": true,
+      "unchanged_at_HEAD": true
+    },
+    "data/processed/primary_population_summary.json": {
+      "last_commit": "ef113fb54bf2150f9694cf315e8aff4b4a9136a7",
+      "sha256": "e8053027a3c8bc77d36fd8801700260e8225b80f4c33a197e38d74f07fb1be1e",
+      "tracked": true,
+      "unchanged_at_HEAD": true
+    },
+    "docs/decision_log.md": {
+      "last_commit": "e7e844962e02a5908d785747d8dece5e4d21ab11",
+      "sha256": "7c19c74e3cb13d63a9972bdc700af308628e2038d5bdc2babcf315ee3098d2fc",
+      "tracked": true,
+      "unchanged_at_HEAD": true
+    },
+    "results/combined/pilot_expansion_v1/cofailure.json": {
+      "last_commit": "02e0182f404610727741a6407169dbbe201671e7",
+      "sha256": "198b9aa18770d1a815429361be8f79601330276642665feb025783dd5560f87d",
+      "tracked": true,
+      "unchanged_at_HEAD": true
+    },
+    "results/combined/pilot_expansion_v1/components.json": {
+      "last_commit": "02e0182f404610727741a6407169dbbe201671e7",
+      "sha256": "d48e34181930d100e8dfcef9699fc932d678de944d6fb6384f64efd2abed6025",
+      "tracked": true,
+      "unchanged_at_HEAD": true
+    },
+    "results/combined/pilot_expansion_v1/nulls.json": {
+      "last_commit": "02e0182f404610727741a6407169dbbe201671e7",
+      "sha256": "f390a81147abef7ad288d9b56bfee74b948e18cb5fd92fd97b2896c8cead93d4",
+      "tracked": true,
+      "unchanged_at_HEAD": true
+    },
+    "results/diagnostics/biohopr/relation_types.csv": {
+      "last_commit": "c2c6ffd07cda1f7da8c9995462d32a513e1426f2",
+      "sha256": "a48b2a1ebdb84855aeeb16fa2519c64f23d540a38ef815550c9b84db6dca9d81",
+      "tracked": true,
+      "unchanged_at_HEAD": true
+    },
+    "results/diagnostics/query_validation.csv": {
+      "last_commit": "58c113dff59dbbd5b30c75612c47e9f39aeb49f7",
+      "sha256": "44c5f7d27886d36562d0b2621396f13bc30c45210f02f22c89b662d62c995619",
+      "tracked": true,
+      "unchanged_at_HEAD": true
+    },
+    "results/exploratory/b1/b1.json": {
+      "last_commit": "5ea1abd32253df9e8d8e4b31ef0d0221bb7b9796",
+      "sha256": "6a1a5e59e387cfb90235e8d1c02fbfa6dd613d4da6939b02504cad1d63a6230d",
+      "tracked": true,
+      "unchanged_at_HEAD": true
+    },
+    "results/exploratory/b1/b1_table.csv": {
+      "last_commit": "5ea1abd32253df9e8d8e4b31ef0d0221bb7b9796",
+      "sha256": "c77cb5a1a8983ee4283acb163d45d8024d4fd8a6169d96f5192ae629c9b5af36",
+      "tracked": true,
+      "unchanged_at_HEAD": true
+    },
+    "results/exploratory/b2/b2.json": {
+      "last_commit": "dd0e748d1cdd79dd6a7a067eb3a493eb3a6c8dc3",
+      "sha256": "0d760bb6937b71738f50f0f04385370b7cce1080a9b04312628d963b6b2bce70",
+      "tracked": true,
+      "unchanged_at_HEAD": true
+    },
+    "results/exploratory/b5/b5.json": {
+      "last_commit": "752a078ad00657c12d0a73ac2874f7ce42578019",
+      "sha256": "2ad5f4c53a20f936fb6ed6bfb7e4c45b74257b3bc7d513a35534408182dced64",
+      "tracked": true,
+      "unchanged_at_HEAD": true
+    },
+    "results/exploratory/b5/b5_table.csv": {
+      "last_commit": "752a078ad00657c12d0a73ac2874f7ce42578019",
+      "sha256": "9aa35033f08363db58653cacb3d78fb08071bda1a6bfdf80c22bbdcfe120fc20",
+      "tracked": true,
+      "unchanged_at_HEAD": true
+    },
+    "results/exploratory/b6/b6.json": {
+      "last_commit": "318c0db47ac28329383dab98868c1a478d8e1542",
+      "sha256": "edc813cdd8f620a1b1683f0994767861e028ab284e54a74ac5fe7ce0df90e2d8",
+      "tracked": true,
+      "unchanged_at_HEAD": true
+    },
+    "results/exploratory/b6/b6_table.csv": {
+      "last_commit": "318c0db47ac28329383dab98868c1a478d8e1542",
+      "sha256": "44a0cb962c00cc4246f0d070929cb3d907f958e178907a570646efb33607e588",
+      "tracked": true,
+      "unchanged_at_HEAD": true
+    },
+    "results/exploratory/b6_handcheck.csv": {
+      "last_commit": "e1cec7e8958347aaf7d3ff72bfde746d3f9d0d54",
+      "sha256": "1e95f75012af7e7bd6e66ec7f6628b01b13dd9a5bb2df84929ef2f1335ef2944",
+      "tracked": true,
+      "unchanged_at_HEAD": true
+    },
+    "results/exploratory/ic/ic.json": {
+      "last_commit": "afdc00c2da1c8f06b3298b120c83a4eab4d4a984",
+      "sha256": "e7daeb13b1f20b30b8b02acd5dc04b13761dd1c02b9cb1eb462e59b6588d42a9",
+      "tracked": true,
+      "unchanged_at_HEAD": true
+    },
+    "results/exploratory/rp/rp.json": {
+      "last_commit": "bf5f57c7dc8e71f175376db052e35f873a3e76c0",
+      "sha256": "78ca80f7bf21643164050d61ac716ad24b25c5401cee1e6da55e12c5dd46924e",
+      "tracked": true,
+      "unchanged_at_HEAD": true
+    },
+    "results/interventions/candidates.csv": {
+      "last_commit": "52d5c885699a4827078f1bc504fcf05f2a902830",
+      "sha256": "4862f7753d4f2c9799eb51f587d501e4441fa8375def98b808720b46d0fb7383",
+      "tracked": true,
+      "unchanged_at_HEAD": true
+    },
+    "results/interventions/s36/s36.json": {
+      "last_commit": "d4e49446babc6666fdf2cf004328fb13b00206f0",
+      "sha256": "2a756dfbdee09823ffbeb80f63dc0860e83328fb5ead4827482ca99ebb590283",
+      "tracked": true,
+      "unchanged_at_HEAD": true
+    },
+    "results/runs/expansion_v1/analysis/metrics": {
+      "last_commit": "02e0182f404610727741a6407169dbbe201671e7",
+      "sha256": "dc9201b97e131681b648198036c2cf7372f9eedff9327af6be2d5f8cb7712e8c",
+      "tracked": true,
+      "unchanged_at_HEAD": true
+    },
+    "results/runs/pilot_v1/analysis/metrics": {
+      "last_commit": "d43af3085a82a5d3706b97f6ad5de6441d5d0b69",
+      "sha256": "8b47f8cde84235c76c9226656687f45ed02cc7780618f9d857fa0b8d74828f3d",
+      "tracked": true,
+      "unchanged_at_HEAD": true
+    },
+    "results/semantics/relation_mapping.json": {
+      "last_commit": "ab67cf1593bd6068b60ee2842909d089a31836f1",
+      "sha256": "2d609332b6a4ff48423bd7b2f1cb98d8d2d9cafc2fe80c20f7cee8184b8bb8c0",
+      "tracked": true,
+      "unchanged_at_HEAD": true
+    }
+  },
+  "outputs": {
+    "README.md": "340019e52c2dd900cb30944af011ee16f5df71148d0416503c40bdf1141d8207",
+    "table01_dataset.md": "77025e366473bf2900f4f7495bb258cb08002aa899ff30ef730490b90fc43b9c",
+    "table01a_relation_types.csv": "5d86a66b8d9e3e88dbe86e7282c5457bbe0c20ef9ac0f6b8826462f83f57a55d",
+    "table01b_inconsistent_reasons.csv": "35817cd5e618610b807520070730ece79cf2f1683ae67ee7e7c1e8088956b3de",
+    "table01c_bridge_multiplicity.csv": "744c3ce1261fcb84d8cc6ca816fd3f5efc47428b1212e83c4868f9108a285b5f",
+    "table01d_ambiguity_tags.csv": "ce785624206af2cbd73ad1fd24baae8c05c3acfc2c43a585fd496a31559ddbb3",
+    "table01e_construction.csv": "605d949fa858fd7ad212ec9231ddb1b4ebc99c99866b264bb60cc6275a75d5d2",
+    "table01f_saturation.csv": "afa26f5d8af503371f0953cb5bb073c943846441b75cdc7ddcc255014baaf69e",
+    "table01g_inclusion.csv": "b87269591ff82115dc8c3fd178908e5386bd80d998e0f969c7e233fbc974865f",
+    "table02_agent_behaviour.md": "db9432222f3c2984a4ab45d8a344dddf3c888f9293f76a980638c81147e72002",
+    "table02a_episode_status.csv": "6de6232d2fae83e7b422395fc8aab6bfa6fa6d5c0a08816b30ccbaa5a61ffec7",
+    "table02b_hop1_status.csv": "f3f314e1e72d9b9fe79e21e52c6d74e82378eac4ae81c96fb8c3433e45b9919e",
+    "table02c_bridge_ranks.csv": "e0a910aebda293a5bd6d8a1d68e4adac8a90ec923ddfa20a946a3e4262d69246",
+    "table02d_label_a.csv": "bb5eb73bfb2a65f3db220235f0b80aaf50cb75f7a27270cbcf4f8f95a354ca1e",
+    "table02e_label_b.csv": "645de5a8a2de9b3bf862029cdaae327965dbd4e998de988f8c85df5e9d257200",
+    "table02f_ratio_metrics.csv": "23af6ebddf46ace645e1e44594dd446853eb86188897f36acc6569e87f029ca1",
+    "table03_cofailure.md": "1905e7dec004a027f19585fdeb3e0f199370fd42c3718bf11e0d372cd8b9625a",
+    "table03a_cofailure_totals.csv": "77d5b5d77b5ce645e0b5ed2053519843d3bc7d2a3e36940437041e6d21bacd0a",
+    "table03b_flagged_queries.csv": "111924fdd534a777e4cc5a4270aa4cd999cd5bc606cd67a367cc5371a3f3eae6",
+    "table03c_pairwise_agreement.csv": "710f9558619c7d2d3f6a76b370bcb931ebce0001a3bafe0e2f246a5ecbb63d20",
+    "table03d_chance_baselines.csv": "98bd2ca568f62e3f8b01cc267333902a377ff328f7bb843691d11490e66856c4",
+    "table03e_cofailure_by_stratum.csv": "31075bc502491c075de90766d272a98dc93f5869abb9f0281f52342ef7a215a7",
+    "table04_mechanisms.md": "77a77c15b826966ee89650a85e4329b987486429900ad2390fe4cc416606c63c",
+    "table04a_reason_codes_by_stratum.csv": "d4296d50963058adb2dfb4e49c4ac6dc9797ed5264e14ff45a7944e6ed35a255",
+    "table04b_reason_codes_by_agent.csv": "ff59a0c08d29d23c65a26a4dfa033a6a09faa96d7593f89c393c6814359e98e2",
+    "table04c_path_cofailure_by_stratum.csv": "4d3c57dbbb3a48a7fa86922ed66726c2796221fada1c994ac0f61a9ae5b89bdb",
+    "table04d_flagged_query_mechanisms.csv": "93c167ac557e2ef0d7a1c324c5f95fa283d2d21cdcf6068f51f248b127f05abb",
+    "table05_counterfactual.md": "aa06b750fa08a4212660292d94b2f76f8fc75e7ba35f0b8b9d6d28ecc54f94ee",
+    "table05a_cofailure_before_after.csv": "95ee49b90e953842a028758f388f1d6dd2596c457ec69be5b425b02841654aaa",
+    "table05b_recovery_no_answer.csv": "764f6033b4a95c56a12312e58f3c89f623b2820e2edf92ba5b555a15e4d2dad4",
+    "table05c_displacement_per_holder.csv": "d155b1f4dac93af5cf3921e3c7632c8c794012c0c9edb23644ab6f26fa829bdf",
+    "table05d_displacement_per_case.csv": "a0820295b51d49de6c875b227b00dd412f8429c0f90da116f50be18d71aeeb20",
+    "table06_b1_offlabel_uptake.md": "b5b31fcc126cecd8d62cb21802bf990e7cfabe06dabba2e77db9da2c38f09ff3",
+    "table06a_uptake.csv": "b39599497a1950477ac0fe399d6ba5110075566d8bd23434303d7fd1097e0857",
+    "table06b_outcome.csv": "d4b2efdefb48f5cfc9a91cb0d17d767ffe8d9f0806222a756dd34598bb41216a",
+    "table06c_excluded_episodes.csv": "e2aa3843c8241b0d4ddcc06d9214ac76d604a23fbdeb46e6858af5427800e887",
+    "table07_b2_strict_vs_lenient.md": "2bcccd90f00f3658b3fb3e4e0f36369bc90432e6791bbb8e3845391eab10ecf9",
+    "table07a_cofailure.csv": "347b81a89f662a2794d14c5137d2bd2648d0b46b95c8bd3834540360af240563",
+    "table07b_precision_hop1.csv": "5c972f178a007af5a380b3083f1623563b02beda83a51314ba8262ae623935ed",
+    "table07c_contraindication.csv": "6e5445f8107565136a32a56e0094ea3c3b40e918339ec722c651f69355a63cea",
+    "table08_b5_treat_concentration.md": "6e03f38766d28967a901b4f4eb81e1217bc4ed4694f72d972eebaf789eb57199",
+    "table08a_groups.csv": "e797a69004bcdcf98129cdfa7e4295aa7c5d8c96a4bb5014c9d94a8366ebf0d3",
+    "table08b_hypergeometric.csv": "2eb0072a3e28b9c4e26830e9e0a6534212c325d747509633f1fd79dec39f330e",
+    "table09_b6_benchmark_vs_graph.md": "3407bf622cb5f9f971b5374aa9676702f98374f453b900741f7a8a941e5abb45",
+    "table09a_by_relation_type.csv": "db88b9923001c31ab8872db635fd33c652934eeaae16c48ca3ab9066a8666408",
+    "table09b_handcheck.csv": "93a31a0a94f287ba889091fb22246930498df190341a90c3cf1f810d7fe5fe1b",
+    "table09c_handcheck_outcome.csv": "2de4ea60fc62863104965b36823dabfdca465d172ce1015febe199f4229ab014",
+    "table10_rp_repeat_run.md": "5fffc6961ac933aaed30ea17ebfb9efa411c79ac9dc23fc28bd88cafe39e5f41",
+    "table10a_per_query.csv": "e939a8f075fedf9a854a2c3093863dca3107ab193d10e75f9dcdf2a6a47704fb",
+    "table10b_summary.csv": "331ef5843c47bbc6b03f010099ab69151b4846e68a408ea4fa4c560e66dbe58d",
+    "table10c_jaccard.csv": "7762f287e5c7fcf03f9e2c13f90f41336c66c50468cde0905ea0e8352f8d5df9",
+    "table11_followup.md": "91e2cc953ea5b399aff26a691d12cc22318d0dc5106582da1f7553b16b8de5a9",
+    "table11a_predictions.csv": "167dd0f2f905330a71ab24bc1c349225bf4eef20afbedad8ca1b7aace83f7c10",
+    "table12_ic_independence_check.md": "57f87f0fe5c6d3b7c9712d5b73a847bbcf6c7525543e32d6ad27489e750b9bca",
+    "table12a_summary.csv": "27e0065ce7779fa19406b21cf3653bf492fcf8334c8a9329f15f6b973f92f88f",
+    "table12b_rates.csv": "5006b56cda1fb45489fbbbe86087dc1c8c31d6fcc6aee96ede033d7b8ebde41b",
+    "table12c_per_query.csv": "605a9bd8931439044cb271c23380d692c95d60675e377658f353150a71a3da9d"
+  },
+  "script": "scripts/38_final_tables.py",
+  "tracked_clean": true
+}

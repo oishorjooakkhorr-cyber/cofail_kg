@@ -1,0 +1,9 @@
+Query,Relation type,Ambiguity tag,SOURCE_NAME_OVERLAP,CF3^Q,"CF3^{Q,H1}",Mechanism,u,u name,r,Step,Holders,Holder agents,Valid route after block,Matched control
+BH2_03356,gene/protein:disease:drug,R2_AMBIGUOUS,False,1,1,WRONG_TURN_HOP2,33618,atrial fibrillation (disease),off-label use,2,3,Cogito-14B;Granite41-8B;Ministral3-14B,True,False
+BH2_04650,drug:disease:gene/protein,R1_AMBIGUOUS,False,1,0,SHORTCUT,16843,Dipivefrin,drug_protein,1,3,Cogito-14B;Granite41-8B;Ministral3-14B,True,False
+BH2_04856,drug:disease:gene/protein,R1_AMBIGUOUS,False,1,0,SHORTCUT,17226,Tirofiban,drug_protein,1,3,Cogito-14B;Granite41-8B;Ministral3-14B,True,False
+BH2_05290,gene/protein:drug:disease,R2_AMBIGUOUS,False,1,1,WRONG_TURN_HOP2,14052,Vitamin A,off-label use,2,3,Cogito-14B;Gemma4-12B;Granite41-8B,True,False
+BH2_05778,effect/phenotype:disease:drug,BOTH_AMBIGUOUS,True,1,1,WRONG_TURN_HOP2,29749,Ewing sarcoma,off-label use,2,4,Cogito-14B;Gemma4-12B;Granite41-8B;Ministral3-14B,True,False
+BH2_05890,effect/phenotype:disease:drug,BOTH_AMBIGUOUS,False,1,1,WRONG_TURN_HOP2,32520,graft versus host disease,off-label use,2,3,Cogito-14B;Gemma4-12B;Ministral3-14B,True,False
+BH2_05997,effect/phenotype:disease:drug,BOTH_AMBIGUOUS,False,1,1,WRONG_TURN_HOP2,33228,localized scleroderma,off-label use,2,3,Cogito-14B;Granite41-8B;Ministral3-14B,True,False
+BH2_06016,effect/phenotype:disease:drug,BOTH_AMBIGUOUS,False,1,1,WRONG_TURN_HOP2,30800,juvenile arthritis due to defect in LACC1,off-label use,2,4,Cogito-14B;Gemma4-12B;Granite41-8B;Ministral3-14B,True,False

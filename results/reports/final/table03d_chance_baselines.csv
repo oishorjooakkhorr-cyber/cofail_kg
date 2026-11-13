@@ -1,0 +1,19 @@
+View,Null,Observed,Version,Queries,Observed total,Null mean,Null median,Null p95,p,Observed above p95
+All queries,N1,O_N1,≥ 3 agents,500,8,7.619900,8.000000,8.000000,0.641236,False
+All queries,N1,O_N1,all 4 agents,500,2,2.076200,2.000000,3.000000,1.000000,False
+All queries,N1-H1,O_H1,≥ 3 agents,500,6,5.623600,6.000000,6.000000,0.644036,False
+All queries,N1-H1,O_H1,all 4 agents,500,2,2.074100,2.000000,3.000000,1.000000,False
+All queries,N2,O_N2,≥ 3 agents,500,8,7.610100,8.000000,8.000000,0.635236,False
+All queries,N2,O_N2,all 4 agents,500,2,2.075400,2.000000,3.000000,1.000000,False
+Without SOURCE_NAME_OVERLAP,N1,O_N1,≥ 3 agents,497,7,6.619900,7.000000,7.000000,0.641236,False
+Without SOURCE_NAME_OVERLAP,N1,O_N1,all 4 agents,497,1,1.076200,1.000000,2.000000,1.000000,False
+Without SOURCE_NAME_OVERLAP,N1-H1,O_H1,≥ 3 agents,497,5,4.623600,5.000000,5.000000,0.644036,False
+Without SOURCE_NAME_OVERLAP,N1-H1,O_H1,all 4 agents,497,1,1.074100,1.000000,2.000000,1.000000,False
+Without SOURCE_NAME_OVERLAP,N2,O_N2,≥ 3 agents,497,7,6.610100,7.000000,7.000000,0.635236,False
+Without SOURCE_NAME_OVERLAP,N2,O_N2,all 4 agents,497,1,1.075400,1.000000,2.000000,1.000000,False
+Excluding queries with a technical failure,N1,O_N1,≥ 3 agents,399,8,7.619900,8.000000,8.000000,0.641236,False
+Excluding queries with a technical failure,N1,O_N1,all 4 agents,399,2,2.076200,2.000000,3.000000,1.000000,False
+Excluding queries with a technical failure,N1-H1,O_H1,≥ 3 agents,399,6,5.623600,6.000000,6.000000,0.644036,False
+Excluding queries with a technical failure,N1-H1,O_H1,all 4 agents,399,2,2.074100,2.000000,3.000000,1.000000,False
+Excluding queries with a technical failure,N2,O_N2,≥ 3 agents,399,8,7.610100,8.000000,8.000000,0.635236,False
+Excluding queries with a technical failure,N2,O_N2,all 4 agents,399,2,2.075400,2.000000,3.000000,1.000000,False

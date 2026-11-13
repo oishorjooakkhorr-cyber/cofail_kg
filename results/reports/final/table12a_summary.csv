@@ -1,0 +1,3 @@
+View,Queries,Queries with ≥ 1 agent in A_q,T_obs,E[T],T 2.5th,T 97.5th,P(T ≥ T_obs),P(T ≤ T_obs),Outcome,Use,Pairs S_obs,Pairs expected
+All queries,75,35,6,5.510204,2,10,0.482015,0.693996,AGREES,outcome,40,32.054545
+Without SOURCE_NAME_OVERLAP,72,34,5,4.555246,1,9,0.487804,0.701440,AGREES,descriptive only,34,28.072233

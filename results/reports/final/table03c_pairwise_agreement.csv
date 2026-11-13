@@ -1,0 +1,13 @@
+View,Agent i,Agent j,Intersecting,Both non-empty,Agreement
+All queries,Gemma4-12B,Granite41-8B,3,5,0.600000
+All queries,Gemma4-12B,Ministral3-14B,3,3,1.000000
+All queries,Gemma4-12B,Cogito-14B,6,6,1.000000
+All queries,Granite41-8B,Ministral3-14B,14,19,0.736842
+All queries,Granite41-8B,Cogito-14B,12,22,0.545455
+All queries,Ministral3-14B,Cogito-14B,17,18,0.944444
+Without SOURCE_NAME_OVERLAP,Gemma4-12B,Granite41-8B,2,4,0.500000
+Without SOURCE_NAME_OVERLAP,Gemma4-12B,Ministral3-14B,2,2,1.000000
+Without SOURCE_NAME_OVERLAP,Gemma4-12B,Cogito-14B,5,5,1.000000
+Without SOURCE_NAME_OVERLAP,Granite41-8B,Ministral3-14B,13,18,0.722222
+Without SOURCE_NAME_OVERLAP,Granite41-8B,Cogito-14B,11,21,0.523810
+Without SOURCE_NAME_OVERLAP,Ministral3-14B,Cogito-14B,16,17,0.941176

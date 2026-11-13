@@ -1,0 +1,5 @@
+Ambiguity tag,Relation types,Relation type names,Queries validated,CONSISTENT,INCONSISTENT,Primary population,Pilot,Expansion
+NONE,2,disease:gene/protein:drug;drug:gene/protein:disease,3928,3928,0,3880,11,56
+R1_AMBIGUOUS,3,disease:drug:effect/phenotype;disease:drug:gene/protein;drug:disease:gene/protein,1651,1651,0,1544,71,281
+R2_AMBIGUOUS,2,gene/protein:disease:drug;gene/protein:drug:disease,1039,1036,3,1036,4,16
+BOTH_AMBIGUOUS,2,drug:disease:effect/phenotype;effect/phenotype:disease:drug,759,747,12,716,14,47

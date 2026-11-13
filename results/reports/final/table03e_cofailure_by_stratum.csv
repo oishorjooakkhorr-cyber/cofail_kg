@@ -1,0 +1,35 @@
+View,Stratum,Value,Queries,CF3^Q,CF4^Q,CF3^Q grounded,CF4^Q grounded,"CF3^{Q,H1}","CF4^{Q,H1}",CF3^BH,CF4^BH,PCF_REL3,PCF_REL4,PCF_NODE3,PCF_NODE4,PCF_SHORTCUT3
+All queries,Relation type,disease:drug:effect/phenotype,336,0,0,0,0,0,0,0,0,0,0,0,0,0
+All queries,Relation type,disease:drug:gene/protein,8,0,0,0,0,0,0,0,0,0,0,0,0,0
+All queries,Relation type,disease:gene/protein:drug,16,0,0,0,0,0,0,0,0,0,0,0,0,0
+All queries,Relation type,drug:disease:effect/phenotype,6,0,0,0,0,0,0,0,0,0,0,0,0,0
+All queries,Relation type,drug:disease:gene/protein,8,2,0,2,0,0,0,2,0,2,0,0,0,2
+All queries,Relation type,drug:gene/protein:disease,51,0,0,0,0,0,0,0,0,0,0,0,0,0
+All queries,Relation type,effect/phenotype:disease:drug,55,4,2,4,2,4,2,35,23,4,2,0,0,0
+All queries,Relation type,gene/protein:disease:drug,11,1,0,1,0,1,0,1,0,1,0,0,0,0
+All queries,Relation type,gene/protein:drug:disease,9,1,0,1,0,1,0,1,0,1,0,0,0,0
+All queries,Ambiguity tag,BOTH_AMBIGUOUS,61,4,2,4,2,4,2,35,23,4,2,0,0,0
+All queries,Ambiguity tag,NONE,67,0,0,0,0,0,0,0,0,0,0,0,0,0
+All queries,Ambiguity tag,R1_AMBIGUOUS,352,2,0,2,0,0,0,2,0,2,0,0,0,2
+All queries,Ambiguity tag,R2_AMBIGUOUS,20,2,0,2,0,2,0,2,0,2,0,0,0,0
+All queries,Construction,BRIDGE,164,8,2,8,2,6,2,39,23,8,2,0,0,2
+All queries,Construction,UNION,336,0,0,0,0,0,0,0,0,0,0,0,0,0
+All queries,Bridge multiplicity,MULTI_BRIDGE,375,3,1,3,1,3,1,34,22,3,1,0,0,0
+All queries,Bridge multiplicity,SINGLE_BRIDGE,125,5,1,5,1,3,1,5,1,5,1,0,0,2
+Without SOURCE_NAME_OVERLAP,Relation type,disease:drug:effect/phenotype,336,0,0,0,0,0,0,0,0,0,0,0,0,0
+Without SOURCE_NAME_OVERLAP,Relation type,disease:drug:gene/protein,8,0,0,0,0,0,0,0,0,0,0,0,0,0
+Without SOURCE_NAME_OVERLAP,Relation type,disease:gene/protein:drug,16,0,0,0,0,0,0,0,0,0,0,0,0,0
+Without SOURCE_NAME_OVERLAP,Relation type,drug:disease:effect/phenotype,6,0,0,0,0,0,0,0,0,0,0,0,0,0
+Without SOURCE_NAME_OVERLAP,Relation type,drug:disease:gene/protein,8,2,0,2,0,0,0,2,0,2,0,0,0,2
+Without SOURCE_NAME_OVERLAP,Relation type,drug:gene/protein:disease,51,0,0,0,0,0,0,0,0,0,0,0,0,0
+Without SOURCE_NAME_OVERLAP,Relation type,effect/phenotype:disease:drug,52,3,1,3,1,3,1,34,22,3,1,0,0,0
+Without SOURCE_NAME_OVERLAP,Relation type,gene/protein:disease:drug,11,1,0,1,0,1,0,1,0,1,0,0,0,0
+Without SOURCE_NAME_OVERLAP,Relation type,gene/protein:drug:disease,9,1,0,1,0,1,0,1,0,1,0,0,0,0
+Without SOURCE_NAME_OVERLAP,Ambiguity tag,BOTH_AMBIGUOUS,58,3,1,3,1,3,1,34,22,3,1,0,0,0
+Without SOURCE_NAME_OVERLAP,Ambiguity tag,NONE,67,0,0,0,0,0,0,0,0,0,0,0,0,0
+Without SOURCE_NAME_OVERLAP,Ambiguity tag,R1_AMBIGUOUS,352,2,0,2,0,0,0,2,0,2,0,0,0,2
+Without SOURCE_NAME_OVERLAP,Ambiguity tag,R2_AMBIGUOUS,20,2,0,2,0,2,0,2,0,2,0,0,0,0
+Without SOURCE_NAME_OVERLAP,Construction,BRIDGE,161,7,1,7,1,5,1,38,22,7,1,0,0,2
+Without SOURCE_NAME_OVERLAP,Construction,UNION,336,0,0,0,0,0,0,0,0,0,0,0,0,0
+Without SOURCE_NAME_OVERLAP,Bridge multiplicity,MULTI_BRIDGE,372,2,0,2,0,2,0,33,21,2,0,0,0,0
+Without SOURCE_NAME_OVERLAP,Bridge multiplicity,SINGLE_BRIDGE,125,5,1,5,1,3,1,5,1,5,1,0,0,2

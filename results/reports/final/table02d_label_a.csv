@@ -1,0 +1,36 @@
+Split,Agent,SUCCESS episodes,Answers,GOLD,GOLD_BRIDGE_EXTRA,ALT_VALID,OFF_QUESTION,UNRESOLVED
+All,Gemma4-12B,498,27385,26968,0,308,109,0
+All,Granite41-8B,486,22524,21224,0,220,1080,0
+All,Ministral3-14B,446,29543,28928,0,251,364,0
+All,Cogito-14B,462,21809,21105,0,256,448,0
+All,All agents,1892,101261,98225,0,1035,2001,0
+construction = BRIDGE,Gemma4-12B,164,2336,1997,0,308,31,0
+construction = BRIDGE,Granite41-8B,163,2642,1606,0,220,816,0
+construction = BRIDGE,Ministral3-14B,139,2002,1544,0,251,207,0
+construction = BRIDGE,Cogito-14B,160,2264,1663,0,256,345,0
+construction = BRIDGE,All agents,626,9244,6810,0,1035,1399,0
+construction = UNION,Gemma4-12B,334,25049,24971,0,0,78,0
+construction = UNION,Granite41-8B,323,19882,19618,0,0,264,0
+construction = UNION,Ministral3-14B,307,27541,27384,0,0,157,0
+construction = UNION,Cogito-14B,302,19545,19442,0,0,103,0
+construction = UNION,All agents,1266,92017,91415,0,0,602,0
+ambiguity tag = NONE,Gemma4-12B,67,1209,1209,0,0,0,0
+ambiguity tag = NONE,Granite41-8B,66,1095,1050,0,0,45,0
+ambiguity tag = NONE,Ministral3-14B,56,990,987,0,0,3,0
+ambiguity tag = NONE,Cogito-14B,65,1053,1053,0,0,0,0
+ambiguity tag = NONE,All agents,254,4347,4299,0,0,48,0
+ambiguity tag = R1_AMBIGUOUS,Gemma4-12B,350,25202,25124,0,0,78,0
+ambiguity tag = R1_AMBIGUOUS,Granite41-8B,339,19988,19638,0,0,350,0
+ambiguity tag = R1_AMBIGUOUS,Ministral3-14B,319,27652,27474,0,0,178,0
+ambiguity tag = R1_AMBIGUOUS,Cogito-14B,317,19621,19503,0,0,118,0
+ambiguity tag = R1_AMBIGUOUS,All agents,1325,92463,91739,0,0,724,0
+ambiguity tag = R2_AMBIGUOUS,Gemma4-12B,20,310,308,0,0,2,0
+ambiguity tag = R2_AMBIGUOUS,Granite41-8B,20,357,272,0,0,85,0
+ambiguity tag = R2_AMBIGUOUS,Ministral3-14B,15,281,199,0,0,82,0
+ambiguity tag = R2_AMBIGUOUS,Cogito-14B,20,303,272,0,0,31,0
+ambiguity tag = R2_AMBIGUOUS,All agents,75,1251,1051,0,0,200,0
+ambiguity tag = BOTH_AMBIGUOUS,Gemma4-12B,61,664,327,0,308,29,0
+ambiguity tag = BOTH_AMBIGUOUS,Granite41-8B,61,1084,264,0,220,600,0
+ambiguity tag = BOTH_AMBIGUOUS,Ministral3-14B,56,620,268,0,251,101,0
+ambiguity tag = BOTH_AMBIGUOUS,Cogito-14B,60,832,277,0,256,299,0
+ambiguity tag = BOTH_AMBIGUOUS,All agents,238,3200,1136,0,1035,1029,0

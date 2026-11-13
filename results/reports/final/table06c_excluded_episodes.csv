@@ -1,0 +1,9 @@
+Group,Agent,Excluded,By status
+treat-final,Gemma4-12B,0,
+treat-final,Granite41-8B,0,
+treat-final,Ministral3-14B,9,PARSE_FAIL: 9
+treat-final,Cogito-14B,1,ERROR: 1
+treat-first,Gemma4-12B,2,PARSE_FAIL: 2
+treat-first,Granite41-8B,13,ERROR: 1;PARSE_FAIL: 12
+treat-first,Ministral3-14B,34,ERROR: 5;PARSE_FAIL: 29
+treat-first,Cogito-14B,35,ERROR: 33;PARSE_FAIL: 2

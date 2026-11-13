@@ -1,0 +1,36 @@
+Split,Agent,Explored bridges,1,2–10,11–50,51–100,>100,NA,Median,Max
+All,Gemma4-12B,844,431,406,7,0,0,0,1.000000,18
+All,Granite41-8B,1741,422,1127,192,0,0,0,3.000000,42
+All,Ministral3-14B,1704,405,1175,124,0,0,0,3.000000,42
+All,Cogito-14B,1646,408,1128,110,0,0,0,3.000000,21
+All,All agents,5935,1666,3836,433,0,0,0,3.000000,42
+construction = BRIDGE,Gemma4-12B,224,142,79,3,0,0,0,1.000000,16
+construction = BRIDGE,Granite41-8B,173,116,57,0,0,0,0,1.000000,7
+construction = BRIDGE,Ministral3-14B,183,111,69,3,0,0,0,1.000000,16
+construction = BRIDGE,Cogito-14B,207,131,74,2,0,0,0,1.000000,16
+construction = BRIDGE,All agents,787,500,279,8,0,0,0,1.000000,16
+construction = UNION,Gemma4-12B,620,289,327,4,0,0,0,2.000000,18
+construction = UNION,Granite41-8B,1568,306,1070,192,0,0,0,4.000000,42
+construction = UNION,Ministral3-14B,1521,294,1106,121,0,0,0,3.000000,42
+construction = UNION,Cogito-14B,1439,277,1054,108,0,0,0,3.000000,21
+construction = UNION,All agents,5148,1166,3557,425,0,0,0,3.000000,42
+ambiguity tag = NONE,Gemma4-12B,67,67,0,0,0,0,0,1.000000,1
+ambiguity tag = NONE,Granite41-8B,63,63,0,0,0,0,0,1.000000,1
+ambiguity tag = NONE,Ministral3-14B,56,56,0,0,0,0,0,1.000000,1
+ambiguity tag = NONE,Cogito-14B,65,65,0,0,0,0,0,1.000000,1
+ambiguity tag = NONE,All agents,251,251,0,0,0,0,0,1.000000,1
+ambiguity tag = R1_AMBIGUOUS,Gemma4-12B,636,305,327,4,0,0,0,2.000000,18
+ambiguity tag = R1_AMBIGUOUS,Granite41-8B,1572,310,1070,192,0,0,0,4.000000,42
+ambiguity tag = R1_AMBIGUOUS,Ministral3-14B,1531,304,1106,121,0,0,0,3.000000,42
+ambiguity tag = R1_AMBIGUOUS,Cogito-14B,1451,289,1054,108,0,0,0,3.000000,21
+ambiguity tag = R1_AMBIGUOUS,All agents,5190,1208,3557,425,0,0,0,3.000000,42
+ambiguity tag = R2_AMBIGUOUS,Gemma4-12B,20,20,0,0,0,0,0,1.000000,1
+ambiguity tag = R2_AMBIGUOUS,Granite41-8B,18,18,0,0,0,0,0,1.000000,1
+ambiguity tag = R2_AMBIGUOUS,Ministral3-14B,14,14,0,0,0,0,0,1.000000,1
+ambiguity tag = R2_AMBIGUOUS,Cogito-14B,19,19,0,0,0,0,0,1.000000,1
+ambiguity tag = R2_AMBIGUOUS,All agents,71,71,0,0,0,0,0,1.000000,1
+ambiguity tag = BOTH_AMBIGUOUS,Gemma4-12B,121,39,79,3,0,0,0,2.000000,16
+ambiguity tag = BOTH_AMBIGUOUS,Granite41-8B,88,31,57,0,0,0,0,2.000000,7
+ambiguity tag = BOTH_AMBIGUOUS,Ministral3-14B,103,31,69,3,0,0,0,2.000000,16
+ambiguity tag = BOTH_AMBIGUOUS,Cogito-14B,111,35,74,2,0,0,0,2.000000,16
+ambiguity tag = BOTH_AMBIGUOUS,All agents,423,136,279,8,0,0,0,2.000000,16

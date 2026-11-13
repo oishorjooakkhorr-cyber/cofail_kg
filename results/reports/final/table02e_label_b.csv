@@ -1,0 +1,36 @@
+Split,Agent,SUCCESS episodes,SUPPORTED,PATH_INVALID,KG_UNSUPPORTED,UNGROUNDED,NOT_APPLICABLE
+All,Gemma4-12B,498,27276,108,0,1,0
+All,Granite41-8B,486,21374,1149,0,1,0
+All,Ministral3-14B,446,29143,385,0,15,0
+All,Cogito-14B,462,21353,357,0,99,0
+All,All agents,1892,99146,1999,0,116,0
+construction = BRIDGE,Gemma4-12B,164,2305,31,0,0,0
+construction = BRIDGE,Granite41-8B,163,1805,837,0,0,0
+construction = BRIDGE,Ministral3-14B,139,1793,209,0,0,0
+construction = BRIDGE,Cogito-14B,160,1912,352,0,0,0
+construction = BRIDGE,All agents,626,7815,1429,0,0,0
+construction = UNION,Gemma4-12B,334,24971,77,0,1,0
+construction = UNION,Granite41-8B,323,19569,312,0,1,0
+construction = UNION,Ministral3-14B,307,27350,176,0,15,0
+construction = UNION,Cogito-14B,302,19441,5,0,99,0
+construction = UNION,All agents,1266,91331,570,0,116,0
+ambiguity tag = NONE,Gemma4-12B,67,1209,0,0,0,0
+ambiguity tag = NONE,Granite41-8B,66,1048,47,0,0,0
+ambiguity tag = NONE,Ministral3-14B,56,987,3,0,0,0
+ambiguity tag = NONE,Cogito-14B,65,1053,0,0,0,0
+ambiguity tag = NONE,All agents,254,4297,50,0,0,0
+ambiguity tag = R1_AMBIGUOUS,Gemma4-12B,350,25124,77,0,1,0
+ambiguity tag = R1_AMBIGUOUS,Granite41-8B,339,19584,403,0,1,0
+ambiguity tag = R1_AMBIGUOUS,Ministral3-14B,319,27439,198,0,15,0
+ambiguity tag = R1_AMBIGUOUS,Cogito-14B,317,19501,21,0,99,0
+ambiguity tag = R1_AMBIGUOUS,All agents,1325,91648,699,0,116,0
+ambiguity tag = R2_AMBIGUOUS,Gemma4-12B,20,308,2,0,0,0
+ambiguity tag = R2_AMBIGUOUS,Granite41-8B,20,272,85,0,0,0
+ambiguity tag = R2_AMBIGUOUS,Ministral3-14B,15,199,82,0,0,0
+ambiguity tag = R2_AMBIGUOUS,Cogito-14B,20,272,31,0,0,0
+ambiguity tag = R2_AMBIGUOUS,All agents,75,1051,200,0,0,0
+ambiguity tag = BOTH_AMBIGUOUS,Gemma4-12B,61,635,29,0,0,0
+ambiguity tag = BOTH_AMBIGUOUS,Granite41-8B,61,470,614,0,0,0
+ambiguity tag = BOTH_AMBIGUOUS,Ministral3-14B,56,518,102,0,0,0
+ambiguity tag = BOTH_AMBIGUOUS,Cogito-14B,60,527,305,0,0,0
+ambiguity tag = BOTH_AMBIGUOUS,All agents,238,2150,1050,0,0,0

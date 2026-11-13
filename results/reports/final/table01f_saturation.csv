@@ -1,0 +1,11 @@
+Relation type,Type_T,Type_T nodes,Queries validated,Share min,Share median,Share max,SATURATED (share > 0.5)
+disease:drug:effect/phenotype,effect/phenotype,15311,949,0.000065,0.008099,0.029848,0
+disease:drug:gene/protein,gene/protein,27671,381,0.000036,0.000217,0.011059,0
+disease:gene/protein:drug,drug,7957,899,0.000126,0.000377,0.051527,0
+drug:disease:effect/phenotype,effect/phenotype,15311,213,0.000065,0.000588,0.017896,0
+drug:disease:gene/protein,gene/protein,27671,321,0.000036,0.000289,0.032164,0
+drug:gene/protein:disease,disease,17080,3029,0.000059,0.000937,0.015984,0
+effect/phenotype:disease:drug,drug,7957,546,0.000126,0.000377,0.013322,0
+gene/protein:disease:drug,drug,7957,577,0.000126,0.001759,0.008546,0
+gene/protein:drug:disease,disease,17080,462,0.000059,0.000059,0.004977,0
+All validated queries,,,7377,0.000036,0.000820,0.051527,0

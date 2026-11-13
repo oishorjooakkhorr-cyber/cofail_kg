@@ -1,0 +1,3 @@
+View,Group,Rule,Agents meeting,Count,Outcome,Use
+All queries,treat-final,at least 3 of the 4 agents have >= 5 opportunity episodes and uptake >= 0.50,Ministral3-14B;Cogito-14B,2,NOT CLEAN,outcome (primary)
+Without SOURCE_NAME_OVERLAP,treat-final,at least 3 of the 4 agents have >= 5 opportunity episodes and uptake >= 0.50,Ministral3-14B;Cogito-14B,2,NOT CLEAN,descriptive only

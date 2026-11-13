@@ -1,0 +1,37 @@
+View,Stratum,Value,Queries,SUCCESS episodes,PATH_INVALID answers,SHORTCUT,WRONG_RELATION_HOP1,WRONG_RELATION_HOP2,WRONG_BRIDGE_TYPE,WRONG_TARGET_TYPE,WRONG_HOP_COUNT,Early-stop episodes,Early stop defined,Early-stop share
+All queries,All,All,500,1892,1999,977,264,398,6,133,360,670,1892,0.354123
+All queries,Relation type,disease:drug:effect/phenotype,336,1266,570,165,258,0,0,126,147,666,1266,0.526066
+All queries,Relation type,disease:drug:gene/protein,8,30,64,57,6,0,6,7,1,0,30,0.000000
+All queries,Relation type,disease:gene/protein:drug,16,63,22,22,0,0,0,0,0,0,63,0.000000
+All queries,Relation type,drug:disease:effect/phenotype,6,23,340,340,0,0,0,0,0,0,23,0.000000
+All queries,Relation type,drug:disease:gene/protein,8,29,65,65,0,0,0,0,0,0,29,0.000000
+All queries,Relation type,drug:gene/protein:disease,51,191,28,28,0,0,0,0,0,0,191,0.000000
+All queries,Relation type,effect/phenotype:disease:drug,55,215,710,176,0,322,0,0,212,4,215,0.018605
+All queries,Relation type,gene/protein:disease:drug,11,41,176,106,0,70,0,0,0,0,41,0.000000
+All queries,Relation type,gene/protein:drug:disease,9,34,24,18,0,6,0,0,0,0,34,0.000000
+All queries,Ambiguity tag,BOTH_AMBIGUOUS,61,238,1050,516,0,322,0,0,212,4,238,0.016807
+All queries,Ambiguity tag,NONE,67,254,50,50,0,0,0,0,0,0,254,0.000000
+All queries,Ambiguity tag,R1_AMBIGUOUS,352,1325,699,287,264,0,6,133,148,666,1325,0.502642
+All queries,Ambiguity tag,R2_AMBIGUOUS,20,75,200,124,0,76,0,0,0,0,75,0.000000
+All queries,Construction,BRIDGE,164,626,1429,812,6,398,6,7,213,4,626,0.006390
+All queries,Construction,UNION,336,1266,570,165,258,0,0,126,147,666,1266,0.526066
+All queries,Bridge multiplicity,MULTI_BRIDGE,375,1420,989,341,146,241,0,126,261,665,1420,0.468310
+All queries,Bridge multiplicity,SINGLE_BRIDGE,125,472,1010,636,118,157,6,7,99,5,472,0.010593
+Without SOURCE_NAME_OVERLAP,All,All,497,1880,1956,977,264,355,6,133,360,670,1880,0.356383
+Without SOURCE_NAME_OVERLAP,Relation type,disease:drug:effect/phenotype,336,1266,570,165,258,0,0,126,147,666,1266,0.526066
+Without SOURCE_NAME_OVERLAP,Relation type,disease:drug:gene/protein,8,30,64,57,6,0,6,7,1,0,30,0.000000
+Without SOURCE_NAME_OVERLAP,Relation type,disease:gene/protein:drug,16,63,22,22,0,0,0,0,0,0,63,0.000000
+Without SOURCE_NAME_OVERLAP,Relation type,drug:disease:effect/phenotype,6,23,340,340,0,0,0,0,0,0,23,0.000000
+Without SOURCE_NAME_OVERLAP,Relation type,drug:disease:gene/protein,8,29,65,65,0,0,0,0,0,0,29,0.000000
+Without SOURCE_NAME_OVERLAP,Relation type,drug:gene/protein:disease,51,191,28,28,0,0,0,0,0,0,191,0.000000
+Without SOURCE_NAME_OVERLAP,Relation type,effect/phenotype:disease:drug,52,203,667,176,0,279,0,0,212,4,203,0.019704
+Without SOURCE_NAME_OVERLAP,Relation type,gene/protein:disease:drug,11,41,176,106,0,70,0,0,0,0,41,0.000000
+Without SOURCE_NAME_OVERLAP,Relation type,gene/protein:drug:disease,9,34,24,18,0,6,0,0,0,0,34,0.000000
+Without SOURCE_NAME_OVERLAP,Ambiguity tag,BOTH_AMBIGUOUS,58,226,1007,516,0,279,0,0,212,4,226,0.017699
+Without SOURCE_NAME_OVERLAP,Ambiguity tag,NONE,67,254,50,50,0,0,0,0,0,0,254,0.000000
+Without SOURCE_NAME_OVERLAP,Ambiguity tag,R1_AMBIGUOUS,352,1325,699,287,264,0,6,133,148,666,1325,0.502642
+Without SOURCE_NAME_OVERLAP,Ambiguity tag,R2_AMBIGUOUS,20,75,200,124,0,76,0,0,0,0,75,0.000000
+Without SOURCE_NAME_OVERLAP,Construction,BRIDGE,161,614,1386,812,6,355,6,7,213,4,614,0.006515
+Without SOURCE_NAME_OVERLAP,Construction,UNION,336,1266,570,165,258,0,0,126,147,666,1266,0.526066
+Without SOURCE_NAME_OVERLAP,Bridge multiplicity,MULTI_BRIDGE,372,1408,946,341,146,198,0,126,261,665,1408,0.472301
+Without SOURCE_NAME_OVERLAP,Bridge multiplicity,SINGLE_BRIDGE,125,472,1010,636,118,157,6,7,99,5,472,0.010593
