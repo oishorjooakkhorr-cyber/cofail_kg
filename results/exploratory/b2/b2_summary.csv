@@ -1,0 +1,225 @@
+view,section,key,item,value
+all_queries,cofailure,strict,CF3^Q,8
+all_queries,cofailure,strict,CF4^Q,2
+all_queries,cofailure,strict,"CF3^{Q,H1}",6
+all_queries,cofailure,strict,"CF4^{Q,H1}",2
+all_queries,per_agent:Gemma4-12B,strict,episodes,500
+all_queries,per_agent:Gemma4-12B,strict,defined,497
+all_queries,per_agent:Gemma4-12B,strict,na,3
+all_queries,per_agent:Gemma4-12B,strict,qv_precision_mean,0.994180
+all_queries,per_agent:Gemma4-12B,strict,qv_pooled_num,27276
+all_queries,per_agent:Gemma4-12B,strict,qv_pooled_den,27385
+all_queries,per_agent:Gemma4-12B,strict,qv_precision_pooled,0.996020
+all_queries,per_agent:Gemma4-12B,strict,H1_CLEAN,498
+all_queries,per_agent:Gemma4-12B,strict,H1_MIXED,2
+all_queries,per_agent:Gemma4-12B,strict,H1_WRONG,0
+all_queries,per_agent:Gemma4-12B,strict,H1_NONE,0
+all_queries,per_agent:Granite41-8B,strict,episodes,500
+all_queries,per_agent:Granite41-8B,strict,defined,481
+all_queries,per_agent:Granite41-8B,strict,na,19
+all_queries,per_agent:Granite41-8B,strict,qv_precision_mean,0.866485
+all_queries,per_agent:Granite41-8B,strict,qv_pooled_num,21444
+all_queries,per_agent:Granite41-8B,strict,qv_pooled_den,22524
+all_queries,per_agent:Granite41-8B,strict,qv_precision_pooled,0.952051
+all_queries,per_agent:Granite41-8B,strict,H1_CLEAN,463
+all_queries,per_agent:Granite41-8B,strict,H1_MIXED,17
+all_queries,per_agent:Granite41-8B,strict,H1_WRONG,20
+all_queries,per_agent:Granite41-8B,strict,H1_NONE,0
+all_queries,per_agent:Ministral3-14B,strict,episodes,500
+all_queries,per_agent:Ministral3-14B,strict,defined,444
+all_queries,per_agent:Ministral3-14B,strict,na,56
+all_queries,per_agent:Ministral3-14B,strict,qv_precision_mean,0.966170
+all_queries,per_agent:Ministral3-14B,strict,qv_pooled_num,29179
+all_queries,per_agent:Ministral3-14B,strict,qv_pooled_den,29543
+all_queries,per_agent:Ministral3-14B,strict,qv_precision_pooled,0.987679
+all_queries,per_agent:Ministral3-14B,strict,H1_CLEAN,451
+all_queries,per_agent:Ministral3-14B,strict,H1_MIXED,19
+all_queries,per_agent:Ministral3-14B,strict,H1_WRONG,0
+all_queries,per_agent:Ministral3-14B,strict,H1_NONE,30
+all_queries,per_agent:Cogito-14B,strict,episodes,500
+all_queries,per_agent:Cogito-14B,strict,defined,430
+all_queries,per_agent:Cogito-14B,strict,na,70
+all_queries,per_agent:Cogito-14B,strict,qv_precision_mean,0.960247
+all_queries,per_agent:Cogito-14B,strict,qv_pooled_num,21361
+all_queries,per_agent:Cogito-14B,strict,qv_pooled_den,21809
+all_queries,per_agent:Cogito-14B,strict,qv_precision_pooled,0.979458
+all_queries,per_agent:Cogito-14B,strict,H1_CLEAN,465
+all_queries,per_agent:Cogito-14B,strict,H1_MIXED,34
+all_queries,per_agent:Cogito-14B,strict,H1_WRONG,1
+all_queries,per_agent:Cogito-14B,strict,H1_NONE,0
+all_queries,cofailure,lenient,CF3^Q,2
+all_queries,cofailure,lenient,CF4^Q,0
+all_queries,cofailure,lenient,"CF3^{Q,H1}",0
+all_queries,cofailure,lenient,"CF4^{Q,H1}",0
+all_queries,per_agent:Gemma4-12B,lenient,episodes,500
+all_queries,per_agent:Gemma4-12B,lenient,defined,497
+all_queries,per_agent:Gemma4-12B,lenient,na,3
+all_queries,per_agent:Gemma4-12B,lenient,qv_precision_mean,0.999968
+all_queries,per_agent:Gemma4-12B,lenient,qv_pooled_num,27384
+all_queries,per_agent:Gemma4-12B,lenient,qv_pooled_den,27385
+all_queries,per_agent:Gemma4-12B,lenient,qv_precision_pooled,0.999963
+all_queries,per_agent:Gemma4-12B,lenient,H1_CLEAN,499
+all_queries,per_agent:Gemma4-12B,lenient,H1_MIXED,1
+all_queries,per_agent:Gemma4-12B,lenient,H1_WRONG,0
+all_queries,per_agent:Gemma4-12B,lenient,H1_NONE,0
+all_queries,per_agent:Granite41-8B,lenient,episodes,500
+all_queries,per_agent:Granite41-8B,lenient,defined,481
+all_queries,per_agent:Granite41-8B,lenient,na,19
+all_queries,per_agent:Granite41-8B,lenient,qv_precision_mean,0.874606
+all_queries,per_agent:Granite41-8B,lenient,qv_pooled_num,21535
+all_queries,per_agent:Granite41-8B,lenient,qv_pooled_den,22524
+all_queries,per_agent:Granite41-8B,lenient,qv_precision_pooled,0.956091
+all_queries,per_agent:Granite41-8B,lenient,H1_CLEAN,463
+all_queries,per_agent:Granite41-8B,lenient,H1_MIXED,17
+all_queries,per_agent:Granite41-8B,lenient,H1_WRONG,20
+all_queries,per_agent:Granite41-8B,lenient,H1_NONE,0
+all_queries,per_agent:Ministral3-14B,lenient,episodes,500
+all_queries,per_agent:Ministral3-14B,lenient,defined,444
+all_queries,per_agent:Ministral3-14B,lenient,na,56
+all_queries,per_agent:Ministral3-14B,lenient,qv_precision_mean,0.985840
+all_queries,per_agent:Ministral3-14B,lenient,qv_pooled_num,29433
+all_queries,per_agent:Ministral3-14B,lenient,qv_pooled_den,29543
+all_queries,per_agent:Ministral3-14B,lenient,qv_precision_pooled,0.996277
+all_queries,per_agent:Ministral3-14B,lenient,H1_CLEAN,456
+all_queries,per_agent:Ministral3-14B,lenient,H1_MIXED,14
+all_queries,per_agent:Ministral3-14B,lenient,H1_WRONG,0
+all_queries,per_agent:Ministral3-14B,lenient,H1_NONE,30
+all_queries,per_agent:Cogito-14B,lenient,episodes,500
+all_queries,per_agent:Cogito-14B,lenient,defined,430
+all_queries,per_agent:Cogito-14B,lenient,na,70
+all_queries,per_agent:Cogito-14B,lenient,qv_precision_mean,0.982884
+all_queries,per_agent:Cogito-14B,lenient,qv_pooled_num,21527
+all_queries,per_agent:Cogito-14B,lenient,qv_pooled_den,21809
+all_queries,per_agent:Cogito-14B,lenient,qv_precision_pooled,0.987070
+all_queries,per_agent:Cogito-14B,lenient,H1_CLEAN,478
+all_queries,per_agent:Cogito-14B,lenient,H1_MIXED,21
+all_queries,per_agent:Cogito-14B,lenient,H1_WRONG,1
+all_queries,per_agent:Cogito-14B,lenient,H1_NONE,0
+all_queries,contraindication:Gemma4-12B,strict paths,answers,0
+all_queries,contraindication:Gemma4-12B,strict paths,queries,0
+all_queries,contraindication:Gemma4-12B,strict paths,answers_in_T_q,0
+all_queries,contraindication:Gemma4-12B,strict paths,answers_in_T_q_plus,0
+all_queries,contraindication:Granite41-8B,strict paths,answers,34
+all_queries,contraindication:Granite41-8B,strict paths,queries,8
+all_queries,contraindication:Granite41-8B,strict paths,answers_in_T_q,0
+all_queries,contraindication:Granite41-8B,strict paths,answers_in_T_q_plus,0
+all_queries,contraindication:Ministral3-14B,strict paths,answers,1
+all_queries,contraindication:Ministral3-14B,strict paths,queries,1
+all_queries,contraindication:Ministral3-14B,strict paths,answers_in_T_q,0
+all_queries,contraindication:Ministral3-14B,strict paths,answers_in_T_q_plus,0
+all_queries,contraindication:Cogito-14B,strict paths,answers,21
+all_queries,contraindication:Cogito-14B,strict paths,queries,4
+all_queries,contraindication:Cogito-14B,strict paths,answers_in_T_q,0
+all_queries,contraindication:Cogito-14B,strict paths,answers_in_T_q_plus,0
+without_source_name_overlap,cofailure,strict,CF3^Q,7
+without_source_name_overlap,cofailure,strict,CF4^Q,1
+without_source_name_overlap,cofailure,strict,"CF3^{Q,H1}",5
+without_source_name_overlap,cofailure,strict,"CF4^{Q,H1}",1
+without_source_name_overlap,per_agent:Gemma4-12B,strict,episodes,497
+without_source_name_overlap,per_agent:Gemma4-12B,strict,defined,494
+without_source_name_overlap,per_agent:Gemma4-12B,strict,na,3
+without_source_name_overlap,per_agent:Gemma4-12B,strict,qv_precision_mean,0.995858
+without_source_name_overlap,per_agent:Gemma4-12B,strict,qv_pooled_num,27272
+without_source_name_overlap,per_agent:Gemma4-12B,strict,qv_pooled_den,27370
+without_source_name_overlap,per_agent:Gemma4-12B,strict,qv_precision_pooled,0.996419
+without_source_name_overlap,per_agent:Gemma4-12B,strict,H1_CLEAN,495
+without_source_name_overlap,per_agent:Gemma4-12B,strict,H1_MIXED,2
+without_source_name_overlap,per_agent:Gemma4-12B,strict,H1_WRONG,0
+without_source_name_overlap,per_agent:Gemma4-12B,strict,H1_NONE,0
+without_source_name_overlap,per_agent:Granite41-8B,strict,episodes,497
+without_source_name_overlap,per_agent:Granite41-8B,strict,defined,478
+without_source_name_overlap,per_agent:Granite41-8B,strict,na,19
+without_source_name_overlap,per_agent:Granite41-8B,strict,qv_precision_mean,0.867565
+without_source_name_overlap,per_agent:Granite41-8B,strict,qv_pooled_num,21441
+without_source_name_overlap,per_agent:Granite41-8B,strict,qv_pooled_den,22510
+without_source_name_overlap,per_agent:Granite41-8B,strict,qv_precision_pooled,0.952510
+without_source_name_overlap,per_agent:Granite41-8B,strict,H1_CLEAN,460
+without_source_name_overlap,per_agent:Granite41-8B,strict,H1_MIXED,17
+without_source_name_overlap,per_agent:Granite41-8B,strict,H1_WRONG,20
+without_source_name_overlap,per_agent:Granite41-8B,strict,H1_NONE,0
+without_source_name_overlap,per_agent:Ministral3-14B,strict,episodes,497
+without_source_name_overlap,per_agent:Ministral3-14B,strict,defined,441
+without_source_name_overlap,per_agent:Ministral3-14B,strict,na,56
+without_source_name_overlap,per_agent:Ministral3-14B,strict,qv_precision_mean,0.968001
+without_source_name_overlap,per_agent:Ministral3-14B,strict,qv_pooled_num,29176
+without_source_name_overlap,per_agent:Ministral3-14B,strict,qv_pooled_den,29530
+without_source_name_overlap,per_agent:Ministral3-14B,strict,qv_precision_pooled,0.988012
+without_source_name_overlap,per_agent:Ministral3-14B,strict,H1_CLEAN,448
+without_source_name_overlap,per_agent:Ministral3-14B,strict,H1_MIXED,19
+without_source_name_overlap,per_agent:Ministral3-14B,strict,H1_WRONG,0
+without_source_name_overlap,per_agent:Ministral3-14B,strict,H1_NONE,30
+without_source_name_overlap,per_agent:Cogito-14B,strict,episodes,497
+without_source_name_overlap,per_agent:Cogito-14B,strict,defined,427
+without_source_name_overlap,per_agent:Cogito-14B,strict,na,70
+without_source_name_overlap,per_agent:Cogito-14B,strict,qv_precision_mean,0.961949
+without_source_name_overlap,per_agent:Cogito-14B,strict,qv_pooled_num,21357
+without_source_name_overlap,per_agent:Cogito-14B,strict,qv_pooled_den,21794
+without_source_name_overlap,per_agent:Cogito-14B,strict,qv_precision_pooled,0.979949
+without_source_name_overlap,per_agent:Cogito-14B,strict,H1_CLEAN,462
+without_source_name_overlap,per_agent:Cogito-14B,strict,H1_MIXED,34
+without_source_name_overlap,per_agent:Cogito-14B,strict,H1_WRONG,1
+without_source_name_overlap,per_agent:Cogito-14B,strict,H1_NONE,0
+without_source_name_overlap,cofailure,lenient,CF3^Q,2
+without_source_name_overlap,cofailure,lenient,CF4^Q,0
+without_source_name_overlap,cofailure,lenient,"CF3^{Q,H1}",0
+without_source_name_overlap,cofailure,lenient,"CF4^{Q,H1}",0
+without_source_name_overlap,per_agent:Gemma4-12B,lenient,episodes,497
+without_source_name_overlap,per_agent:Gemma4-12B,lenient,defined,494
+without_source_name_overlap,per_agent:Gemma4-12B,lenient,na,3
+without_source_name_overlap,per_agent:Gemma4-12B,lenient,qv_precision_mean,0.999967
+without_source_name_overlap,per_agent:Gemma4-12B,lenient,qv_pooled_num,27369
+without_source_name_overlap,per_agent:Gemma4-12B,lenient,qv_pooled_den,27370
+without_source_name_overlap,per_agent:Gemma4-12B,lenient,qv_precision_pooled,0.999963
+without_source_name_overlap,per_agent:Gemma4-12B,lenient,H1_CLEAN,496
+without_source_name_overlap,per_agent:Gemma4-12B,lenient,H1_MIXED,1
+without_source_name_overlap,per_agent:Gemma4-12B,lenient,H1_WRONG,0
+without_source_name_overlap,per_agent:Gemma4-12B,lenient,H1_NONE,0
+without_source_name_overlap,per_agent:Granite41-8B,lenient,episodes,497
+without_source_name_overlap,per_agent:Granite41-8B,lenient,defined,478
+without_source_name_overlap,per_agent:Granite41-8B,lenient,na,19
+without_source_name_overlap,per_agent:Granite41-8B,lenient,qv_precision_mean,0.873819
+without_source_name_overlap,per_agent:Granite41-8B,lenient,qv_pooled_num,21521
+without_source_name_overlap,per_agent:Granite41-8B,lenient,qv_pooled_den,22510
+without_source_name_overlap,per_agent:Granite41-8B,lenient,qv_precision_pooled,0.956064
+without_source_name_overlap,per_agent:Granite41-8B,lenient,H1_CLEAN,460
+without_source_name_overlap,per_agent:Granite41-8B,lenient,H1_MIXED,17
+without_source_name_overlap,per_agent:Granite41-8B,lenient,H1_WRONG,20
+without_source_name_overlap,per_agent:Granite41-8B,lenient,H1_NONE,0
+without_source_name_overlap,per_agent:Ministral3-14B,lenient,episodes,497
+without_source_name_overlap,per_agent:Ministral3-14B,lenient,defined,441
+without_source_name_overlap,per_agent:Ministral3-14B,lenient,na,56
+without_source_name_overlap,per_agent:Ministral3-14B,lenient,qv_precision_mean,0.985743
+without_source_name_overlap,per_agent:Ministral3-14B,lenient,qv_pooled_num,29420
+without_source_name_overlap,per_agent:Ministral3-14B,lenient,qv_pooled_den,29530
+without_source_name_overlap,per_agent:Ministral3-14B,lenient,qv_precision_pooled,0.996275
+without_source_name_overlap,per_agent:Ministral3-14B,lenient,H1_CLEAN,453
+without_source_name_overlap,per_agent:Ministral3-14B,lenient,H1_MIXED,14
+without_source_name_overlap,per_agent:Ministral3-14B,lenient,H1_WRONG,0
+without_source_name_overlap,per_agent:Ministral3-14B,lenient,H1_NONE,30
+without_source_name_overlap,per_agent:Cogito-14B,lenient,episodes,497
+without_source_name_overlap,per_agent:Cogito-14B,lenient,defined,427
+without_source_name_overlap,per_agent:Cogito-14B,lenient,na,70
+without_source_name_overlap,per_agent:Cogito-14B,lenient,qv_precision_mean,0.982763
+without_source_name_overlap,per_agent:Cogito-14B,lenient,qv_pooled_num,21512
+without_source_name_overlap,per_agent:Cogito-14B,lenient,qv_pooled_den,21794
+without_source_name_overlap,per_agent:Cogito-14B,lenient,qv_precision_pooled,0.987061
+without_source_name_overlap,per_agent:Cogito-14B,lenient,H1_CLEAN,475
+without_source_name_overlap,per_agent:Cogito-14B,lenient,H1_MIXED,21
+without_source_name_overlap,per_agent:Cogito-14B,lenient,H1_WRONG,1
+without_source_name_overlap,per_agent:Cogito-14B,lenient,H1_NONE,0
+without_source_name_overlap,contraindication:Gemma4-12B,strict paths,answers,0
+without_source_name_overlap,contraindication:Gemma4-12B,strict paths,queries,0
+without_source_name_overlap,contraindication:Gemma4-12B,strict paths,answers_in_T_q,0
+without_source_name_overlap,contraindication:Gemma4-12B,strict paths,answers_in_T_q_plus,0
+without_source_name_overlap,contraindication:Granite41-8B,strict paths,answers,34
+without_source_name_overlap,contraindication:Granite41-8B,strict paths,queries,8
+without_source_name_overlap,contraindication:Granite41-8B,strict paths,answers_in_T_q,0
+without_source_name_overlap,contraindication:Granite41-8B,strict paths,answers_in_T_q_plus,0
+without_source_name_overlap,contraindication:Ministral3-14B,strict paths,answers,1
+without_source_name_overlap,contraindication:Ministral3-14B,strict paths,queries,1
+without_source_name_overlap,contraindication:Ministral3-14B,strict paths,answers_in_T_q,0
+without_source_name_overlap,contraindication:Ministral3-14B,strict paths,answers_in_T_q_plus,0
+without_source_name_overlap,contraindication:Cogito-14B,strict paths,answers,21
+without_source_name_overlap,contraindication:Cogito-14B,strict paths,queries,4
+without_source_name_overlap,contraindication:Cogito-14B,strict paths,answers_in_T_q,0
+without_source_name_overlap,contraindication:Cogito-14B,strict paths,answers_in_T_q_plus,0
