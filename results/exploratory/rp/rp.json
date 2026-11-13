@@ -1,0 +1,1297 @@
+{
+  "counts": {
+    "all_queries": {
+      "expectation_at_least": 6,
+      "expectation_met": false,
+      "original_cf3_q": 8,
+      "queries": 8,
+      "repeat_cf3_q": 5,
+      "repeat_cf3_q_h1": 4,
+      "repeat_cf4_q": 2,
+      "reproduced": 5
+    },
+    "without_source_name_overlap": {
+      "original_cf3_q": 7,
+      "queries": 7,
+      "repeat_cf3_q": 4,
+      "repeat_cf3_q_h1": 3,
+      "repeat_cf4_q": 1,
+      "reproduced": 4
+    }
+  },
+  "note": "EXPLORATORY (protocol §20) — docs/decision_log.md, entry 2026-11-12 \"Plan after D7\", section D. repeat_v1 never replaces pilot_v1/expansion_v1, which remain the results of record.",
+  "pairs": [
+    {
+      "agent_id": "Gemma4-12B",
+      "jaccard_answers": {
+        "intersection": 14,
+        "union": 14,
+        "value": 1.0
+      },
+      "jaccard_off_question": {
+        "intersection": 0,
+        "union": 0,
+        "value": null
+      },
+      "original_answers": 14,
+      "original_off_question": [],
+      "original_status": "SUCCESS",
+      "query_id": "BH2_03356",
+      "repeat_answers": 14,
+      "repeat_off_question": [],
+      "repeat_status": "SUCCESS"
+    },
+    {
+      "agent_id": "Granite41-8B",
+      "jaccard_answers": {
+        "intersection": 35,
+        "union": 35,
+        "value": 1.0
+      },
+      "jaccard_off_question": {
+        "intersection": 21,
+        "union": 21,
+        "value": 1.0
+      },
+      "original_answers": 35,
+      "original_off_question": [
+        "14142",
+        "14162",
+        "14215",
+        "14255",
+        "14282",
+        "14302",
+        "14308",
+        "14317",
+        "14369",
+        "14605",
+        "14835",
+        "14836",
+        "14846",
+        "15451",
+        "15762",
+        "15769",
+        "15836",
+        "16210",
+        "16687",
+        "16689",
+        "16690"
+      ],
+      "original_status": "SUCCESS",
+      "query_id": "BH2_03356",
+      "repeat_answers": 35,
+      "repeat_off_question": [
+        "14142",
+        "14162",
+        "14215",
+        "14255",
+        "14282",
+        "14302",
+        "14308",
+        "14317",
+        "14369",
+        "14605",
+        "14835",
+        "14836",
+        "14846",
+        "15451",
+        "15762",
+        "15769",
+        "15836",
+        "16210",
+        "16687",
+        "16689",
+        "16690"
+      ],
+      "repeat_status": "SUCCESS"
+    },
+    {
+      "agent_id": "Ministral3-14B",
+      "jaccard_answers": {
+        "intersection": 0,
+        "union": 34,
+        "value": 0.0
+      },
+      "jaccard_off_question": {
+        "intersection": 0,
+        "union": 20,
+        "value": 0.0
+      },
+      "original_answers": 34,
+      "original_off_question": [
+        "14142",
+        "14162",
+        "14215",
+        "14255",
+        "14302",
+        "14308",
+        "14317",
+        "14369",
+        "14605",
+        "14835",
+        "14836",
+        "14846",
+        "15451",
+        "15762",
+        "15769",
+        "15836",
+        "16210",
+        "16687",
+        "16689",
+        "16690"
+      ],
+      "original_status": "SUCCESS",
+      "query_id": "BH2_03356",
+      "repeat_answers": 0,
+      "repeat_off_question": [],
+      "repeat_status": "PARSE_FAIL"
+    },
+    {
+      "agent_id": "Cogito-14B",
+      "jaccard_answers": {
+        "intersection": 35,
+        "union": 35,
+        "value": 1.0
+      },
+      "jaccard_off_question": {
+        "intersection": 21,
+        "union": 21,
+        "value": 1.0
+      },
+      "original_answers": 35,
+      "original_off_question": [
+        "14142",
+        "14162",
+        "14215",
+        "14255",
+        "14282",
+        "14302",
+        "14308",
+        "14317",
+        "14369",
+        "14605",
+        "14835",
+        "14836",
+        "14846",
+        "15451",
+        "15762",
+        "15769",
+        "15836",
+        "16210",
+        "16687",
+        "16689",
+        "16690"
+      ],
+      "original_status": "SUCCESS",
+      "query_id": "BH2_03356",
+      "repeat_answers": 35,
+      "repeat_off_question": [
+        "14142",
+        "14162",
+        "14215",
+        "14255",
+        "14282",
+        "14302",
+        "14308",
+        "14317",
+        "14369",
+        "14605",
+        "14835",
+        "14836",
+        "14846",
+        "15451",
+        "15762",
+        "15769",
+        "15836",
+        "16210",
+        "16687",
+        "16689",
+        "16690"
+      ],
+      "repeat_status": "SUCCESS"
+    },
+    {
+      "agent_id": "Gemma4-12B",
+      "jaccard_answers": {
+        "intersection": 13,
+        "union": 13,
+        "value": 1.0
+      },
+      "jaccard_off_question": {
+        "intersection": 0,
+        "union": 0,
+        "value": null
+      },
+      "original_answers": 13,
+      "original_off_question": [],
+      "original_status": "SUCCESS",
+      "query_id": "BH2_04650",
+      "repeat_answers": 13,
+      "repeat_off_question": [],
+      "repeat_status": "SUCCESS"
+    },
+    {
+      "agent_id": "Granite41-8B",
+      "jaccard_answers": {
+        "intersection": 5,
+        "union": 5,
+        "value": 1.0
+      },
+      "jaccard_off_question": {
+        "intersection": 5,
+        "union": 5,
+        "value": 1.0
+      },
+      "original_answers": 5,
+      "original_off_question": [
+        "341",
+        "1494",
+        "1659",
+        "2472",
+        "8038"
+      ],
+      "original_status": "SUCCESS",
+      "query_id": "BH2_04650",
+      "repeat_answers": 5,
+      "repeat_off_question": [
+        "341",
+        "1494",
+        "1659",
+        "2472",
+        "8038"
+      ],
+      "repeat_status": "SUCCESS"
+    },
+    {
+      "agent_id": "Ministral3-14B",
+      "jaccard_answers": {
+        "intersection": 5,
+        "union": 5,
+        "value": 1.0
+      },
+      "jaccard_off_question": {
+        "intersection": 5,
+        "union": 5,
+        "value": 1.0
+      },
+      "original_answers": 5,
+      "original_off_question": [
+        "341",
+        "1494",
+        "1659",
+        "2472",
+        "8038"
+      ],
+      "original_status": "SUCCESS",
+      "query_id": "BH2_04650",
+      "repeat_answers": 5,
+      "repeat_off_question": [
+        "341",
+        "1494",
+        "1659",
+        "2472",
+        "8038"
+      ],
+      "repeat_status": "SUCCESS"
+    },
+    {
+      "agent_id": "Cogito-14B",
+      "jaccard_answers": {
+        "intersection": 5,
+        "union": 5,
+        "value": 1.0
+      },
+      "jaccard_off_question": {
+        "intersection": 5,
+        "union": 5,
+        "value": 1.0
+      },
+      "original_answers": 5,
+      "original_off_question": [
+        "341",
+        "1494",
+        "1659",
+        "2472",
+        "8038"
+      ],
+      "original_status": "SUCCESS",
+      "query_id": "BH2_04650",
+      "repeat_answers": 5,
+      "repeat_off_question": [
+        "341",
+        "1494",
+        "1659",
+        "2472",
+        "8038"
+      ],
+      "repeat_status": "SUCCESS"
+    },
+    {
+      "agent_id": "Gemma4-12B",
+      "jaccard_answers": {
+        "intersection": 33,
+        "union": 33,
+        "value": 1.0
+      },
+      "jaccard_off_question": {
+        "intersection": 0,
+        "union": 0,
+        "value": null
+      },
+      "original_answers": 33,
+      "original_off_question": [],
+      "original_status": "SUCCESS",
+      "query_id": "BH2_04856",
+      "repeat_answers": 33,
+      "repeat_off_question": [],
+      "repeat_status": "SUCCESS"
+    },
+    {
+      "agent_id": "Granite41-8B",
+      "jaccard_answers": {
+        "intersection": 2,
+        "union": 2,
+        "value": 1.0
+      },
+      "jaccard_off_question": {
+        "intersection": 1,
+        "union": 1,
+        "value": 1.0
+      },
+      "original_answers": 2,
+      "original_off_question": [
+        "11356"
+      ],
+      "original_status": "SUCCESS",
+      "query_id": "BH2_04856",
+      "repeat_answers": 2,
+      "repeat_off_question": [
+        "11356"
+      ],
+      "repeat_status": "SUCCESS"
+    },
+    {
+      "agent_id": "Ministral3-14B",
+      "jaccard_answers": {
+        "intersection": 1,
+        "union": 34,
+        "value": 0.029411764705882353
+      },
+      "jaccard_off_question": {
+        "intersection": 0,
+        "union": 1,
+        "value": 0.0
+      },
+      "original_answers": 2,
+      "original_off_question": [
+        "11356"
+      ],
+      "original_status": "SUCCESS",
+      "query_id": "BH2_04856",
+      "repeat_answers": 33,
+      "repeat_off_question": [],
+      "repeat_status": "SUCCESS"
+    },
+    {
+      "agent_id": "Cogito-14B",
+      "jaccard_answers": {
+        "intersection": 2,
+        "union": 2,
+        "value": 1.0
+      },
+      "jaccard_off_question": {
+        "intersection": 1,
+        "union": 1,
+        "value": 1.0
+      },
+      "original_answers": 2,
+      "original_off_question": [
+        "11356"
+      ],
+      "original_status": "SUCCESS",
+      "query_id": "BH2_04856",
+      "repeat_answers": 2,
+      "repeat_off_question": [
+        "11356"
+      ],
+      "repeat_status": "SUCCESS"
+    },
+    {
+      "agent_id": "Gemma4-12B",
+      "jaccard_answers": {
+        "intersection": 4,
+        "union": 4,
+        "value": 1.0
+      },
+      "jaccard_off_question": {
+        "intersection": 2,
+        "union": 2,
+        "value": 1.0
+      },
+      "original_answers": 4,
+      "original_off_question": [
+        "31820",
+        "36924"
+      ],
+      "original_status": "SUCCESS",
+      "query_id": "BH2_05290",
+      "repeat_answers": 4,
+      "repeat_off_question": [
+        "31820",
+        "36924"
+      ],
+      "repeat_status": "SUCCESS"
+    },
+    {
+      "agent_id": "Granite41-8B",
+      "jaccard_answers": {
+        "intersection": 4,
+        "union": 4,
+        "value": 1.0
+      },
+      "jaccard_off_question": {
+        "intersection": 2,
+        "union": 2,
+        "value": 1.0
+      },
+      "original_answers": 4,
+      "original_off_question": [
+        "31820",
+        "36924"
+      ],
+      "original_status": "SUCCESS",
+      "query_id": "BH2_05290",
+      "repeat_answers": 4,
+      "repeat_off_question": [
+        "31820",
+        "36924"
+      ],
+      "repeat_status": "SUCCESS"
+    },
+    {
+      "agent_id": "Ministral3-14B",
+      "jaccard_answers": {
+        "intersection": 2,
+        "union": 2,
+        "value": 1.0
+      },
+      "jaccard_off_question": {
+        "intersection": 0,
+        "union": 0,
+        "value": null
+      },
+      "original_answers": 2,
+      "original_off_question": [],
+      "original_status": "SUCCESS",
+      "query_id": "BH2_05290",
+      "repeat_answers": 2,
+      "repeat_off_question": [],
+      "repeat_status": "SUCCESS"
+    },
+    {
+      "agent_id": "Cogito-14B",
+      "jaccard_answers": {
+        "intersection": 4,
+        "union": 4,
+        "value": 1.0
+      },
+      "jaccard_off_question": {
+        "intersection": 2,
+        "union": 2,
+        "value": 1.0
+      },
+      "original_answers": 4,
+      "original_off_question": [
+        "31820",
+        "36924"
+      ],
+      "original_status": "SUCCESS",
+      "query_id": "BH2_05290",
+      "repeat_answers": 4,
+      "repeat_off_question": [
+        "31820",
+        "36924"
+      ],
+      "repeat_status": "SUCCESS"
+    },
+    {
+      "agent_id": "Gemma4-12B",
+      "jaccard_answers": {
+        "intersection": 13,
+        "union": 13,
+        "value": 1.0
+      },
+      "jaccard_off_question": {
+        "intersection": 11,
+        "union": 11,
+        "value": 1.0
+      },
+      "original_answers": 13,
+      "original_off_question": [
+        "14231",
+        "14275",
+        "14604",
+        "14608",
+        "14715",
+        "14737",
+        "14793",
+        "14955",
+        "15413",
+        "15481",
+        "20336"
+      ],
+      "original_status": "SUCCESS",
+      "query_id": "BH2_05778",
+      "repeat_answers": 13,
+      "repeat_off_question": [
+        "14231",
+        "14275",
+        "14604",
+        "14608",
+        "14715",
+        "14737",
+        "14793",
+        "14955",
+        "15413",
+        "15481",
+        "20336"
+      ],
+      "repeat_status": "SUCCESS"
+    },
+    {
+      "agent_id": "Granite41-8B",
+      "jaccard_answers": {
+        "intersection": 12,
+        "union": 12,
+        "value": 1.0
+      },
+      "jaccard_off_question": {
+        "intersection": 11,
+        "union": 11,
+        "value": 1.0
+      },
+      "original_answers": 12,
+      "original_off_question": [
+        "14231",
+        "14275",
+        "14604",
+        "14608",
+        "14715",
+        "14737",
+        "14793",
+        "14955",
+        "15413",
+        "15481",
+        "20336"
+      ],
+      "original_status": "SUCCESS",
+      "query_id": "BH2_05778",
+      "repeat_answers": 12,
+      "repeat_off_question": [
+        "14231",
+        "14275",
+        "14604",
+        "14608",
+        "14715",
+        "14737",
+        "14793",
+        "14955",
+        "15413",
+        "15481",
+        "20336"
+      ],
+      "repeat_status": "SUCCESS"
+    },
+    {
+      "agent_id": "Ministral3-14B",
+      "jaccard_answers": {
+        "intersection": 11,
+        "union": 11,
+        "value": 1.0
+      },
+      "jaccard_off_question": {
+        "intersection": 10,
+        "union": 10,
+        "value": 1.0
+      },
+      "original_answers": 11,
+      "original_off_question": [
+        "14231",
+        "14275",
+        "14604",
+        "14608",
+        "14737",
+        "14793",
+        "14955",
+        "15413",
+        "15481",
+        "20336"
+      ],
+      "original_status": "SUCCESS",
+      "query_id": "BH2_05778",
+      "repeat_answers": 11,
+      "repeat_off_question": [
+        "14231",
+        "14275",
+        "14604",
+        "14608",
+        "14737",
+        "14793",
+        "14955",
+        "15413",
+        "15481",
+        "20336"
+      ],
+      "repeat_status": "SUCCESS"
+    },
+    {
+      "agent_id": "Cogito-14B",
+      "jaccard_answers": {
+        "intersection": 13,
+        "union": 13,
+        "value": 1.0
+      },
+      "jaccard_off_question": {
+        "intersection": 11,
+        "union": 11,
+        "value": 1.0
+      },
+      "original_answers": 13,
+      "original_off_question": [
+        "14231",
+        "14275",
+        "14604",
+        "14608",
+        "14715",
+        "14737",
+        "14793",
+        "14955",
+        "15413",
+        "15481",
+        "20336"
+      ],
+      "original_status": "SUCCESS",
+      "query_id": "BH2_05778",
+      "repeat_answers": 13,
+      "repeat_off_question": [
+        "14231",
+        "14275",
+        "14604",
+        "14608",
+        "14715",
+        "14737",
+        "14793",
+        "14955",
+        "15413",
+        "15481",
+        "20336"
+      ],
+      "repeat_status": "SUCCESS"
+    },
+    {
+      "agent_id": "Gemma4-12B",
+      "jaccard_answers": {
+        "intersection": 4,
+        "union": 4,
+        "value": 1.0
+      },
+      "jaccard_off_question": {
+        "intersection": 1,
+        "union": 1,
+        "value": 1.0
+      },
+      "original_answers": 4,
+      "original_off_question": [
+        "14606"
+      ],
+      "original_status": "SUCCESS",
+      "query_id": "BH2_05890",
+      "repeat_answers": 4,
+      "repeat_off_question": [
+        "14606"
+      ],
+      "repeat_status": "SUCCESS"
+    },
+    {
+      "agent_id": "Granite41-8B",
+      "jaccard_answers": {
+        "intersection": 11,
+        "union": 13,
+        "value": 0.8461538461538461
+      },
+      "jaccard_off_question": {
+        "intersection": 8,
+        "union": 10,
+        "value": 0.8
+      },
+      "original_answers": 13,
+      "original_off_question": [
+        "14589",
+        "14848",
+        "15461",
+        "20254",
+        "20313",
+        "20314",
+        "20352",
+        "20353",
+        "20566",
+        "20567"
+      ],
+      "original_status": "SUCCESS",
+      "query_id": "BH2_05890",
+      "repeat_answers": 11,
+      "repeat_off_question": [
+        "15461",
+        "20254",
+        "20313",
+        "20314",
+        "20352",
+        "20353",
+        "20566",
+        "20567"
+      ],
+      "repeat_status": "SUCCESS"
+    },
+    {
+      "agent_id": "Ministral3-14B",
+      "jaccard_answers": {
+        "intersection": 4,
+        "union": 4,
+        "value": 1.0
+      },
+      "jaccard_off_question": {
+        "intersection": 1,
+        "union": 1,
+        "value": 1.0
+      },
+      "original_answers": 4,
+      "original_off_question": [
+        "14606"
+      ],
+      "original_status": "SUCCESS",
+      "query_id": "BH2_05890",
+      "repeat_answers": 4,
+      "repeat_off_question": [
+        "14606"
+      ],
+      "repeat_status": "SUCCESS"
+    },
+    {
+      "agent_id": "Cogito-14B",
+      "jaccard_answers": {
+        "intersection": 3,
+        "union": 19,
+        "value": 0.15789473684210525
+      },
+      "jaccard_off_question": {
+        "intersection": 0,
+        "union": 16,
+        "value": 0.0
+      },
+      "original_answers": 19,
+      "original_off_question": [
+        "14229",
+        "14271",
+        "14274",
+        "14589",
+        "14606",
+        "14848",
+        "15461",
+        "16802",
+        "20254",
+        "20296",
+        "20313",
+        "20314",
+        "20352",
+        "20353",
+        "20566",
+        "20567"
+      ],
+      "original_status": "SUCCESS",
+      "query_id": "BH2_05890",
+      "repeat_answers": 3,
+      "repeat_off_question": [],
+      "repeat_status": "SUCCESS"
+    },
+    {
+      "agent_id": "Gemma4-12B",
+      "jaccard_answers": {
+        "intersection": 4,
+        "union": 4,
+        "value": 1.0
+      },
+      "jaccard_off_question": {
+        "intersection": 0,
+        "union": 0,
+        "value": null
+      },
+      "original_answers": 4,
+      "original_off_question": [],
+      "original_status": "SUCCESS",
+      "query_id": "BH2_05997",
+      "repeat_answers": 4,
+      "repeat_off_question": [],
+      "repeat_status": "SUCCESS"
+    },
+    {
+      "agent_id": "Granite41-8B",
+      "jaccard_answers": {
+        "intersection": 8,
+        "union": 8,
+        "value": 1.0
+      },
+      "jaccard_off_question": {
+        "intersection": 4,
+        "union": 4,
+        "value": 1.0
+      },
+      "original_answers": 8,
+      "original_off_question": [
+        "14966",
+        "15438",
+        "15503",
+        "15982"
+      ],
+      "original_status": "SUCCESS",
+      "query_id": "BH2_05997",
+      "repeat_answers": 8,
+      "repeat_off_question": [
+        "14966",
+        "15438",
+        "15503",
+        "15982"
+      ],
+      "repeat_status": "SUCCESS"
+    },
+    {
+      "agent_id": "Ministral3-14B",
+      "jaccard_answers": {
+        "intersection": 6,
+        "union": 6,
+        "value": 1.0
+      },
+      "jaccard_off_question": {
+        "intersection": 2,
+        "union": 2,
+        "value": 1.0
+      },
+      "original_answers": 6,
+      "original_off_question": [
+        "15438",
+        "15982"
+      ],
+      "original_status": "SUCCESS",
+      "query_id": "BH2_05997",
+      "repeat_answers": 6,
+      "repeat_off_question": [
+        "15438",
+        "15982"
+      ],
+      "repeat_status": "SUCCESS"
+    },
+    {
+      "agent_id": "Cogito-14B",
+      "jaccard_answers": {
+        "intersection": 6,
+        "union": 6,
+        "value": 1.0
+      },
+      "jaccard_off_question": {
+        "intersection": 2,
+        "union": 2,
+        "value": 1.0
+      },
+      "original_answers": 6,
+      "original_off_question": [
+        "15438",
+        "15982"
+      ],
+      "original_status": "SUCCESS",
+      "query_id": "BH2_05997",
+      "repeat_answers": 6,
+      "repeat_off_question": [
+        "15438",
+        "15982"
+      ],
+      "repeat_status": "SUCCESS"
+    },
+    {
+      "agent_id": "Gemma4-12B",
+      "jaccard_answers": {
+        "intersection": 32,
+        "union": 32,
+        "value": 1.0
+      },
+      "jaccard_off_question": {
+        "intersection": 8,
+        "union": 8,
+        "value": 1.0
+      },
+      "original_answers": 32,
+      "original_off_question": [
+        "14175",
+        "14191",
+        "14206",
+        "14262",
+        "14274",
+        "14340",
+        "14347",
+        "15438"
+      ],
+      "original_status": "SUCCESS",
+      "query_id": "BH2_06016",
+      "repeat_answers": 32,
+      "repeat_off_question": [
+        "14175",
+        "14191",
+        "14206",
+        "14262",
+        "14274",
+        "14340",
+        "14347",
+        "15438"
+      ],
+      "repeat_status": "SUCCESS"
+    },
+    {
+      "agent_id": "Granite41-8B",
+      "jaccard_answers": {
+        "intersection": 32,
+        "union": 32,
+        "value": 1.0
+      },
+      "jaccard_off_question": {
+        "intersection": 8,
+        "union": 8,
+        "value": 1.0
+      },
+      "original_answers": 32,
+      "original_off_question": [
+        "14175",
+        "14191",
+        "14206",
+        "14262",
+        "14274",
+        "14340",
+        "14347",
+        "15438"
+      ],
+      "original_status": "SUCCESS",
+      "query_id": "BH2_06016",
+      "repeat_answers": 32,
+      "repeat_off_question": [
+        "14175",
+        "14191",
+        "14206",
+        "14262",
+        "14274",
+        "14340",
+        "14347",
+        "15438"
+      ],
+      "repeat_status": "SUCCESS"
+    },
+    {
+      "agent_id": "Ministral3-14B",
+      "jaccard_answers": {
+        "intersection": 32,
+        "union": 32,
+        "value": 1.0
+      },
+      "jaccard_off_question": {
+        "intersection": 8,
+        "union": 8,
+        "value": 1.0
+      },
+      "original_answers": 32,
+      "original_off_question": [
+        "14175",
+        "14191",
+        "14206",
+        "14262",
+        "14274",
+        "14340",
+        "14347",
+        "15438"
+      ],
+      "original_status": "SUCCESS",
+      "query_id": "BH2_06016",
+      "repeat_answers": 32,
+      "repeat_off_question": [
+        "14175",
+        "14191",
+        "14206",
+        "14262",
+        "14274",
+        "14340",
+        "14347",
+        "15438"
+      ],
+      "repeat_status": "SUCCESS"
+    },
+    {
+      "agent_id": "Cogito-14B",
+      "jaccard_answers": {
+        "intersection": 32,
+        "union": 32,
+        "value": 1.0
+      },
+      "jaccard_off_question": {
+        "intersection": 8,
+        "union": 8,
+        "value": 1.0
+      },
+      "original_answers": 32,
+      "original_off_question": [
+        "14175",
+        "14191",
+        "14206",
+        "14262",
+        "14274",
+        "14340",
+        "14347",
+        "15438"
+      ],
+      "original_status": "SUCCESS",
+      "query_id": "BH2_06016",
+      "repeat_answers": 32,
+      "repeat_off_question": [
+        "14175",
+        "14191",
+        "14206",
+        "14262",
+        "14274",
+        "14340",
+        "14347",
+        "15438"
+      ],
+      "repeat_status": "SUCCESS"
+    }
+  ],
+  "provenance": {
+    "combined_id": "pilot_expansion_v1",
+    "git_commit": "1b36d37aed6c20b1d272575c3322bb36eefff672",
+    "git_tracked_clean": true,
+    "inputs": {
+      "original_cofailure": {
+        "path": "results/combined/pilot_expansion_v1/cofailure.json",
+        "sha256": "198b9aa18770d1a815429361be8f79601330276642665feb025783dd5560f87d"
+      },
+      "repeat_cofailure": {
+        "path": "results/runs/repeat_v1/analysis/cofailure.json",
+        "sha256": "0195e5f354e0f35db136771da955823df7ebe98b0c0fa1baed37734b902da24c"
+      }
+    },
+    "repeat_inference_commits": [
+      "1b36d37aed6c20b1d272575c3322bb36eefff672"
+    ],
+    "run_id": "repeat_v1"
+  },
+  "queries": [
+    {
+      "original_cf3_q": 1,
+      "original_cf3_q_h1": 1,
+      "original_cf4_q": 0,
+      "original_shared_q": [
+        "14142",
+        "14162",
+        "14215",
+        "14255",
+        "14302",
+        "14308",
+        "14317",
+        "14369",
+        "14605",
+        "14835",
+        "14836",
+        "14846",
+        "15451",
+        "15762",
+        "15769",
+        "15836",
+        "16210",
+        "16687",
+        "16689",
+        "16690"
+      ],
+      "query_id": "BH2_03356",
+      "relation_type": "gene/protein:disease:drug",
+      "repeat_cf3_q": 0,
+      "repeat_cf3_q_h1": 0,
+      "repeat_cf4_q": 0,
+      "repeat_shared_q": [],
+      "reproduces_cf3_q": false,
+      "source_name_overlap": false
+    },
+    {
+      "original_cf3_q": 1,
+      "original_cf3_q_h1": 0,
+      "original_cf4_q": 0,
+      "original_shared_q": [
+        "341",
+        "1494",
+        "1659",
+        "2472",
+        "8038"
+      ],
+      "query_id": "BH2_04650",
+      "relation_type": "drug:disease:gene/protein",
+      "repeat_cf3_q": 1,
+      "repeat_cf3_q_h1": 0,
+      "repeat_cf4_q": 0,
+      "repeat_shared_q": [
+        "341",
+        "1494",
+        "1659",
+        "2472",
+        "8038"
+      ],
+      "reproduces_cf3_q": true,
+      "source_name_overlap": false
+    },
+    {
+      "original_cf3_q": 1,
+      "original_cf3_q_h1": 0,
+      "original_cf4_q": 0,
+      "original_shared_q": [
+        "11356"
+      ],
+      "query_id": "BH2_04856",
+      "relation_type": "drug:disease:gene/protein",
+      "repeat_cf3_q": 0,
+      "repeat_cf3_q_h1": 0,
+      "repeat_cf4_q": 0,
+      "repeat_shared_q": [],
+      "reproduces_cf3_q": false,
+      "source_name_overlap": false
+    },
+    {
+      "original_cf3_q": 1,
+      "original_cf3_q_h1": 1,
+      "original_cf4_q": 0,
+      "original_shared_q": [
+        "31820",
+        "36924"
+      ],
+      "query_id": "BH2_05290",
+      "relation_type": "gene/protein:drug:disease",
+      "repeat_cf3_q": 1,
+      "repeat_cf3_q_h1": 1,
+      "repeat_cf4_q": 0,
+      "repeat_shared_q": [
+        "31820",
+        "36924"
+      ],
+      "reproduces_cf3_q": true,
+      "source_name_overlap": false
+    },
+    {
+      "original_cf3_q": 1,
+      "original_cf3_q_h1": 1,
+      "original_cf4_q": 1,
+      "original_shared_q": [
+        "14231",
+        "14275",
+        "14604",
+        "14608",
+        "14715",
+        "14737",
+        "14793",
+        "14955",
+        "15413",
+        "15481",
+        "20336"
+      ],
+      "query_id": "BH2_05778",
+      "relation_type": "effect/phenotype:disease:drug",
+      "repeat_cf3_q": 1,
+      "repeat_cf3_q_h1": 1,
+      "repeat_cf4_q": 1,
+      "repeat_shared_q": [
+        "14231",
+        "14275",
+        "14604",
+        "14608",
+        "14715",
+        "14737",
+        "14793",
+        "14955",
+        "15413",
+        "15481",
+        "20336"
+      ],
+      "reproduces_cf3_q": true,
+      "source_name_overlap": true
+    },
+    {
+      "original_cf3_q": 1,
+      "original_cf3_q_h1": 1,
+      "original_cf4_q": 0,
+      "original_shared_q": [
+        "14606"
+      ],
+      "query_id": "BH2_05890",
+      "relation_type": "effect/phenotype:disease:drug",
+      "repeat_cf3_q": 0,
+      "repeat_cf3_q_h1": 0,
+      "repeat_cf4_q": 0,
+      "repeat_shared_q": [],
+      "reproduces_cf3_q": false,
+      "source_name_overlap": false
+    },
+    {
+      "original_cf3_q": 1,
+      "original_cf3_q_h1": 1,
+      "original_cf4_q": 0,
+      "original_shared_q": [
+        "15438",
+        "15982"
+      ],
+      "query_id": "BH2_05997",
+      "relation_type": "effect/phenotype:disease:drug",
+      "repeat_cf3_q": 1,
+      "repeat_cf3_q_h1": 1,
+      "repeat_cf4_q": 0,
+      "repeat_shared_q": [
+        "15438",
+        "15982"
+      ],
+      "reproduces_cf3_q": true,
+      "source_name_overlap": false
+    },
+    {
+      "original_cf3_q": 1,
+      "original_cf3_q_h1": 1,
+      "original_cf4_q": 1,
+      "original_shared_q": [
+        "14175",
+        "14191",
+        "14206",
+        "14262",
+        "14274",
+        "14340",
+        "14347",
+        "15438"
+      ],
+      "query_id": "BH2_06016",
+      "relation_type": "effect/phenotype:disease:drug",
+      "repeat_cf3_q": 1,
+      "repeat_cf3_q_h1": 1,
+      "repeat_cf4_q": 1,
+      "repeat_shared_q": [
+        "14175",
+        "14191",
+        "14206",
+        "14262",
+        "14274",
+        "14340",
+        "14347",
+        "15438"
+      ],
+      "reproduces_cf3_q": true,
+      "source_name_overlap": false
+    }
+  ],
+  "stage": "RP",
+  "status": "EXPLORATORY"
+}
