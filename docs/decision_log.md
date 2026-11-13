@@ -3326,3 +3326,12 @@ Checks run on **a6fb94e1c940285103ceee827d4f6fedfdcca2da** (S34 preparation comm
 Run: `scripts/25_run_panel.py run --manifest intervention_smoke --run-id intervention_smoke`
 (BH2_05290 × 4 agents = 4 episodes, overlay: hide `off-label use` at 14052).
 This entry changes only docs/decision_log.md (not a pinned run source); the run records the HEAD at run time.
+
+## 2026-11-13 — S35 — Pre-run checks (S26 repeated): PASS on 4ae5947
+Checks run on **4ae5947ddeb22ade53a42525de9e962be83022d4** (S34 outputs commit; no pinned source changed since
+the S34 checks): TBD/DEFAULT PASS; tests PASS (880 passed, 2 skipped, 0 failed); clean tree PASS; frozen
+hashes PASS (19/19, including `manifests_intervention` and `intervention_overlays`); BioHopR content
+(1adda2f2…) and installed digests (all four equal `models_s21r2`) PASS.
+Run: `scripts/25_run_panel.py run --manifest intervention5 --run-id intervention_v1` (decision log 2026-11-12,
+section A3: the 5 treatment overlays × 4 agents = 20 episodes; DESCRIPTIVE, treatment-only).
+This entry changes only docs/decision_log.md (not a pinned run source); the run records the HEAD at run time.
