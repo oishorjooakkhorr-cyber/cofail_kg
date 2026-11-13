@@ -1,0 +1,128 @@
+{
+  "episodes": [
+    {
+      "agent_id": "Gemma4-12B",
+      "asked_u_for_hidden_label": [],
+      "attempt": 1,
+      "calls": 4,
+      "calls_changed_by_overlay": [
+        {
+          "call_index": 2,
+          "description": "inspect_entity(14052): label `off-label use` removed (2 neighbours)"
+        }
+      ],
+      "different_and_not_explained_by_overlay": [],
+      "different_from_original": [
+        2
+      ],
+      "hidden": [
+        "14052",
+        "off-label use"
+      ],
+      "identical_to_original": 3,
+      "original_status": "SUCCESS",
+      "query_id": "BH2_05290",
+      "reached_u_from_s_via_R1": true,
+      "same_calls_as_original": 4,
+      "status": "SUCCESS"
+    },
+    {
+      "agent_id": "Granite41-8B",
+      "asked_u_for_hidden_label": [],
+      "attempt": 1,
+      "calls": 6,
+      "calls_changed_by_overlay": [
+        {
+          "call_index": 3,
+          "description": "inspect_entity(14052): label `off-label use` removed (2 neighbours)"
+        }
+      ],
+      "different_and_not_explained_by_overlay": [],
+      "different_from_original": [
+        3
+      ],
+      "hidden": [
+        "14052",
+        "off-label use"
+      ],
+      "identical_to_original": 4,
+      "original_status": "SUCCESS",
+      "query_id": "BH2_05290",
+      "reached_u_from_s_via_R1": true,
+      "same_calls_as_original": 5,
+      "status": "SUCCESS"
+    },
+    {
+      "agent_id": "Ministral3-14B",
+      "asked_u_for_hidden_label": [],
+      "attempt": 1,
+      "calls": 5,
+      "calls_changed_by_overlay": [
+        {
+          "call_index": 3,
+          "description": "inspect_entity(14052): label `off-label use` removed (2 neighbours)"
+        }
+      ],
+      "different_and_not_explained_by_overlay": [],
+      "different_from_original": [
+        3
+      ],
+      "hidden": [
+        "14052",
+        "off-label use"
+      ],
+      "identical_to_original": 4,
+      "original_status": "SUCCESS",
+      "query_id": "BH2_05290",
+      "reached_u_from_s_via_R1": true,
+      "same_calls_as_original": 5,
+      "status": "SUCCESS"
+    },
+    {
+      "agent_id": "Cogito-14B",
+      "asked_u_for_hidden_label": [],
+      "attempt": 1,
+      "calls": 9,
+      "calls_changed_by_overlay": [
+        {
+          "call_index": 2,
+          "description": "inspect_entity(14052): label `off-label use` removed (2 neighbours)"
+        }
+      ],
+      "different_and_not_explained_by_overlay": [],
+      "different_from_original": [
+        2
+      ],
+      "hidden": [
+        "14052",
+        "off-label use"
+      ],
+      "identical_to_original": 4,
+      "original_status": "SUCCESS",
+      "query_id": "BH2_05290",
+      "reached_u_from_s_via_R1": true,
+      "same_calls_as_original": 5,
+      "status": "SUCCESS"
+    }
+  ],
+  "git_commit": "7a8e082e7b2c95892bd5b2312ed5f4f111e53b56",
+  "git_tracked_clean": true,
+  "inference_commits": [
+    "7a8e082e7b2c95892bd5b2312ed5f4f111e53b56"
+  ],
+  "note": "DESCRIPTIVE (D7 DESCRIPTIVE; decision log 2026-11-12 \"Plan after D7\", section A). Treatment-only smoke test; not used in any gate.",
+  "queries": {
+    "BH2_05290": {
+      "hidden_edge_count": 2,
+      "only_intended_edges_hidden": true,
+      "valid_bridges_after": [
+        "14052"
+      ],
+      "valid_route_after": true
+    }
+  },
+  "run_id": "intervention_smoke",
+  "stage": "S34",
+  "status": "DESCRIPTIVE",
+  "unexplained_differences": 0
+}
