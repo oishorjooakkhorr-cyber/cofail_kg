@@ -210,11 +210,13 @@ def to_csv(result: list[dict]) -> str:
 
 
 def run_commits(run_dir: Path) -> str:
-    commits = {json.loads(p.read_text(encoding="utf-8"))["config"]["git_commit"]
-               for p in (run_dir / "configs").glob("*.config.json")}
-    if len(commits) != 1:
-        raise ValueError(f"{run_dir}: agents ran on different commits {sorted(commits)}")
-    return commits.pop()
+    """The inference commit(s) of a run, from its pinned agent configs; several are listed with their agents."""
+    by_agent = {p.name.split(".config.json")[0]: json.loads(p.read_text(encoding="utf-8"))["config"]["git_commit"]
+                for p in sorted((run_dir / "configs").glob("*.config.json"))}
+    commits = sorted(set(by_agent.values()))
+    if len(commits) == 1:
+        return commits[0]
+    return "; ".join(f"{c} ({', '.join(a for a, x in by_agent.items() if x == c)})" for c in commits)
 
 
 def main(argv=None) -> int:
