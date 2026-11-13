@@ -15,6 +15,9 @@ PW output existed):
   - Interval for p_w: 2.5th / 97.5th percentiles of 100,000 draws of Σ_h (N_h / N) · θ_h,
     θ_h ~ Beta(y_h + 0.5, n_h − y_h + 0.5) independently; NumPy Generator(PCG64), seed 42.
   No threshold, no outcome.
+Correction (decision log 2026-11-14 "PW — Correction", after seeing the logged output): also report the
+median of the same draws, the summary that matches the interval. Outputs go to
+results/exploratory/pw_corrected/; results/exploratory/pw/ (the logged run) is left unchanged.
 
 Engineering conventions (documented, not protocol):
 * Strata and metrics are processed in sorted order. For the Monte Carlo, the draws for each metric
@@ -91,6 +94,7 @@ def estimate(strata: dict, metric: str, draws: int = DRAWS, seed: int = SEED) ->
     q_lo, q_hi = np.quantile(total, [0.025, 0.975])
     return {"sample_y": y_samp, "sample_n": n_samp, "sample_rate": y_samp / n_samp,
             "sample_wilson_95": [lo, hi], "weighted_rate": p_w,
+            "weighted_median": float(np.median(total)),
             "weighted_interval_95": [float(q_lo), float(q_hi)], "population_N": n_pop}
 
 
@@ -113,18 +117,22 @@ def report(result: dict, provenance: dict) -> str:
            + ", ".join(f"`{k}` `{v}`" for k, v in sorted(provenance["inputs"].items())) + ".\n",
            "Population: the primary population (7,176 queries, protocol §7.2), not all of BioHopR. Strata: "
            "relation type × bridge multiplicity (§8). Sample: the 500 queries of record, all queries (§19.1).\n",
+           "Correction (decision log 2026-11-14 \"PW — Correction\"): the median of the same Monte Carlo draws is "
+           "added as the summary that matches the interval. The plug-in estimate and the interval are unchanged "
+           "from the logged run (results/exploratory/pw/, commit 8fdd8e3).\n",
            "## Rates\n",
-           "| Metric | Sample | Sample rate (Wilson 95%) | Weighted to primary population (95% interval) |",
-           "|---|---|---|---|"]
+           "| Metric | Sample | Sample rate (Wilson 95%) | Weighted: plug-in | Weighted: median (95% interval) |",
+           "|---|---|---|---|---|"]
     for m, e in result["metrics"].items():
         tag = " (primary)" if m == PRIMARY else ""
         out.append(f"| {m}{tag} | {e['sample_y']}/{e['sample_n']} | {pct(e['sample_rate'])} "
                    f"({pct(e['sample_wilson_95'][0])}–{pct(e['sample_wilson_95'][1])}) | "
-                   f"{pct(e['weighted_rate'])} ({pct(e['weighted_interval_95'][0])}–"
-                   f"{pct(e['weighted_interval_95'][1])}) |")
-    out += ["\nWeighted interval: Monte Carlo, 100,000 draws of Σ_h (N_h/N)·θ_h with θ_h ~ Beta(y_h+½, n_h−y_h+½) "
-            "per stratum (Jeffreys), seed 42. Strata with no event add width to the interval, nothing to the "
-            "point estimate.\n",
+                   f"{pct(e['weighted_rate'])} | {pct(e['weighted_median'])} "
+                   f"({pct(e['weighted_interval_95'][0])}–{pct(e['weighted_interval_95'][1])}) |")
+    out += ["\nWeighted median and interval: Monte Carlo, 100,000 draws of Σ_h (N_h/N)·θ_h with "
+            "θ_h ~ Beta(y_h+½, n_h−y_h+½) per stratum (Jeffreys), seed 42. The plug-in adds nothing for strata "
+            "with no event; every draw adds a positive amount for them, so the median and the interval sit above "
+            "the plug-in. The width comes mostly from thinly sampled large strata, not from observed failures.\n",
             "## Strata\n",
             "| Relation type | Multiplicity | N_h (population) | n_h (sample) | Weight N_h/N | "
             + " | ".join(f"y_h {m}" for m in sorted(METRICS)) + " |",
@@ -156,7 +164,8 @@ def sha256(path: Path) -> str:
 def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--combined", default="pilot_expansion_v1")
-    ap.add_argument("--out", default="results/exploratory/pw")
+    # The logged run wrote results/exploratory/pw/ (commit 8fdd8e3); the correction writes a new folder.
+    ap.add_argument("--out", default="results/exploratory/pw_corrected")
     args = ap.parse_args()
     pop_path = ROOT / "data/processed/primary_population.csv"
     man_paths = [ROOT / f"data/processed/manifests/{m}.jsonl" for m in ("pilot", "expansion")]

@@ -52,6 +52,19 @@ def test_interval_contains_estimate_and_is_deterministic():
     assert 0.0 <= lo < hi <= 1.0
 
 
+def test_median_lies_inside_interval_and_above_plugin_for_zero_strata():
+    population = {f"A{i}": ("tA", "SINGLE_BRIDGE") for i in range(100)}
+    population.update({f"B{i}": ("tB", "SINGLE_BRIDGE") for i in range(100)})
+    sample = [f"A{i}" for i in range(10)] + [f"B{i}" for i in range(10)]
+    flags = {q: flag() for q in sample}
+    flags["A0"] = flag(1, 1, 1)
+    e = pw.compute(population, sample, flags)["metrics"]["CF3^{Q,H1}"]
+    lo, hi = e["weighted_interval_95"]
+    assert lo <= e["weighted_median"] <= hi
+    assert e["weighted_rate"] == pytest.approx(0.5 * 0.1)
+    assert e["weighted_median"] > e["weighted_rate"]
+
+
 def test_zero_strata_widen_interval_but_not_estimate():
     population = {f"A{i}": ("tA", "SINGLE_BRIDGE") for i in range(100)}
     sample = [f"A{i}" for i in range(10)]
