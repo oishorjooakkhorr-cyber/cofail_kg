@@ -3279,3 +3279,16 @@ Decision (researcher, 2026-11-13: "Fix audit in RP"; runbook RP): prepare the re
    code-change rule); pilot_v1 and expansion_v1 are not touched.
 Data seen before deciding: B1 and B2 outputs; no repeat_v1 episode existed.
 Changes to protocol or decision rules: none.
+
+## 2026-11-13 — RP — Pre-run checks (S26 repeated, repeat8 added): PASS on eac1514
+Checks run on **eac1514a3efc7f7d0f52c30e34bb5ee928e97173** (RP preparation commit):
+1. TBD/DEFAULT: PASS. No `[TBD@Sx]` remains; the only `[DEFAULT]` (§8 pilot 25/75) was confirmed at S10.
+2. Tests: PASS. 872 passed, 2 skipped (real-BioHopR loader tests, as at S26/S30), 0 failed. Run with
+   `--basetemp` in the session scratchpad (the default pytest temp root is not accessible in this sandbox).
+3. Clean tree: PASS (0 tracked changes).
+4. Frozen hashes: PASS. 14/14 equal: the 8 `manifests` entries, the 2 `manifests_repeat8` entries
+   (manifest 56292912…, agent-input sheet f42ebbdb…), kg_fingerprint, tools, relation_mapping, prompt.
+5. BioHopR revision (by content: BioHopR.json SHA256 1adda2f2…527d, as at S26/S30) and installed digests
+   (`scripts/21_freeze_models.py check`: all four equal `models_s21r2`): PASS.
+Run: `scripts/25_run_panel.py run --manifest repeat8 --run-id repeat_v1` (8 queries × 4 agents = 32 episodes).
+This entry changes only docs/decision_log.md (not a pinned run source); the run records the HEAD at run time.
