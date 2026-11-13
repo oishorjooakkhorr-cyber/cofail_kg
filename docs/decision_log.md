@@ -3407,3 +3407,13 @@ section A4: per case only, treatment-only, no aggregate ΔCF, no τ_CF, no causa
 Data seen before deciding: S34 and S35 outputs (tool-output checks, run status, the S35 run's console
 co-failure totals); no S36 output existed.
 Changes to protocol or decision rules: none.
+
+## 2026-11-14 — S37 — D8 not applicable after D7 DESCRIPTIVE; no scaling
+Decision (researcher, 2026-11-14): D8 does not apply. decision_rules.md D8 allows scaling only after a
+CONFIRMATORY or EXPLORATORY D7; D7 was DESCRIPTIVE (entry 2026-11-12). No new sets are drawn. The 500-query
+results (pilot_v1 + expansion_v1) remain the results of record. The follow-up (F1–F3) was not run (entry
+2026-11-13 "B1 — Outcome NOT CLEAN"), and full_v1 stays outside the plan (entry 2026-11-12 "S39").
+Why: D8 applied as written.
+Data seen before deciding: all Phase I and Phase J outputs to date (S30–S36, B1, B2, B5, B6, RP, IC).
+Changes to protocol or decision rules: none.
+Next step: S38 final tables.
